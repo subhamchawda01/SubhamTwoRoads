@@ -1,0 +1,14 @@
+</tbody>
+</table>
+</div>
+</body>
+<script>
+$(document).ready(function(){
+    $('#myTable').dataTable({
+          stateSave: true,
+          "aLengthMenu": [[25, 50, 75, -1], [25, 50, 75, "All"]],
+          "iDisplayLength": 25
+    });
+});
+</script>
+</html>
