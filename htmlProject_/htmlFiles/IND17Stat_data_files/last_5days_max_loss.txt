@@ -1,0 +1,15 @@
+<tr><td><a href=2020/07/IND17Stat_daily_files/IND17Stat.20200727.html style=color:blue>20200727</a></td><td>ALKALI</td><td>700.29847</td><td>76.1373</td><td>-3214</td></tr>
+<tr><td><a href=2020/07/IND17Stat_daily_files/IND17Stat.20200728.html style=color:blue>20200728</a></td><td>ROSSARI</td><td>470522.50225</td><td>13.4774</td><td>-5093</td></tr>
+<tr><td><a href=2020/07/IND17Stat_daily_files/IND17Stat.20200729.html style=color:blue>20200729</a></td><td>TEXRAIL</td><td>367.81269</td><td>53.4633</td><td>-4519</td></tr>
+<tr><td><a href=2020/07/IND17Stat_daily_files/IND17Stat.20200730.html style=color:blue>20200730</a></td><td>TEXRAIL</td><td>346.01305</td><td>68.0048</td><td>-4853</td></tr>
+<tr><td><a href=2020/07/IND17Stat_daily_files/IND17Stat.20200731.html style=color:blue>20200731</a></td><td>FILATEX</td><td>330.6609</td><td>94.8609</td><td>-4053</td></tr>
+<tr><td><a href=2020/08/IND17Stat_daily_files/IND17Stat.20200803.html style=color:blue>20200803</a></td><td>MAXVIL</td><td>233.848941</td><td>90.1763</td><td>-5154</td></tr>
+<tr><td><a href=2020/08/IND17Stat_daily_files/IND17Stat.20200804.html style=color:blue>20200804</a></td><td>ROSSARI</td><td>33508.4332</td><td>12.5379</td><td>-6572</td></tr>
+<tr><td><a href=2020/08/IND17Stat_daily_files/IND17Stat.20200805.html style=color:blue>20200805</a></td><td>FILATEX</td><td>511.298055</td><td>88.5379</td><td>-5041</td></tr>
+<tr><td><a href=2020/08/IND17Stat_daily_files/IND17Stat.20200806.html style=color:blue>20200806</a></td><td>FILATEX</td><td>320.02227</td><td>88.4163</td><td>-4753</td></tr>
+<tr><td><a href=2020/08/IND17Stat_daily_files/IND17Stat.20200807.html style=color:blue>20200807</a></td><td>MAXVIL</td><td>85.326202</td><td>50.4353</td><td>-1779</td></tr>
+<tr><td><a href=2020/08/IND17Stat_daily_files/IND17Stat.20200810.html style=color:blue>20200810</a></td><td>ABB</td><td>5447.97522</td><td>10.5473</td><td>-1502</td></tr>
+<tr><td><a href=2020/08/IND17Stat_daily_files/IND17Stat.20200811.html style=color:blue>20200811</a></td><td>PHILIPCARB</td><td>1145.746845</td><td>12.754</td><td>-984</td></tr>
+<tr><td><a href=2020/08/IND17Stat_daily_files/IND17Stat.20200812.html style=color:blue>20200812</a></td><td>PFS</td><td>33.698901</td><td>1.84147e+07</td><td>-7187</td></tr>
+<tr><td><a href=2020/08/IND17Stat_daily_files/IND17Stat.20200813.html style=color:blue>20200813</a></td><td>FORTIS</td><td>2720.25254</td><td>18.2186</td><td>-2177</td></tr>
+<tr><td><a href=2020/08/IND17Stat_daily_files/IND17Stat.20200814.html style=color:blue>20200814</a></td><td>INDIACEM</td><td>994.237916</td><td>10.5848</td><td>-1121</td></tr>

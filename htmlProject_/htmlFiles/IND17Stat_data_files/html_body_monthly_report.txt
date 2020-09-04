@@ -1,0 +1,2 @@
+<tr><td><a href=2020/07/IND17_mean_median_stddeviation.html style=color:blue>202007</a></td><td><a href=2020/07/IND17_max_loss.html style=color:blue>202007</a></td></tr>
+<tr><td><a href=2020/08/IND17_mean_median_stddeviation.html style=color:blue>202008</a></td><td><a href=2020/08/IND17_max_loss.html style=color:blue>202008</a></td></tr>

@@ -1,0 +1,10 @@
+<tr><td><a href=IND17Stat_daily_files/IND17Stat.20200803.html style=color:blue>20200803</a></td><td>-1779</td><td>-1056</td><td>1397.23</td></tr>
+<tr><td><a href=IND17Stat_daily_files/IND17Stat.20200804.html style=color:blue>20200804</a></td><td>-2547</td><td>-880</td><td>2328.11</td></tr>
+<tr><td><a href=IND17Stat_daily_files/IND17Stat.20200805.html style=color:blue>20200805</a></td><td>-1655</td><td>-910</td><td>1374.84</td></tr>
+<tr><td><a href=IND17Stat_daily_files/IND17Stat.20200806.html style=color:blue>20200806</a></td><td>-1380</td><td>-1026</td><td>1075.04</td></tr>
+<tr><td><a href=IND17Stat_daily_files/IND17Stat.20200807.html style=color:blue>20200807</a></td><td>-1084</td><td>-940</td><td>331.844</td></tr>
+<tr><td><a href=IND17Stat_daily_files/IND17Stat.20200810.html style=color:blue>20200810</a></td><td>-930</td><td>-880</td><td>219.673</td></tr>
+<tr><td><a href=IND17Stat_daily_files/IND17Stat.20200811.html style=color:blue>20200811</a></td><td>-845</td><td>-768</td><td>88.0329</td></tr>
+<tr><td><a href=IND17Stat_daily_files/IND17Stat.20200812.html style=color:blue>20200812</a></td><td>-1845</td><td>-1031</td><td>1629.35</td></tr>
+<tr><td><a href=IND17Stat_daily_files/IND17Stat.20200813.html style=color:blue>20200813</a></td><td>-1296</td><td>-897</td><td>527.931</td></tr>
+<tr><td><a href=IND17Stat_daily_files/IND17Stat.20200814.html style=color:blue>20200814</a></td><td>-1061</td><td>-1002</td><td>59.5021</td></tr>

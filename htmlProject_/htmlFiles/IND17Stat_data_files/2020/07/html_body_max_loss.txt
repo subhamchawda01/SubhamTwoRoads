@@ -1,0 +1,5 @@
+<tr><td><a href=IND17Stat_daily_files/IND17Stat.20200727.html style=color:blue>20200727</a></td><td>ALKALI</td><td>700.29847</td><td>76.1373</td><td>-3214</td></tr>
+<tr><td><a href=IND17Stat_daily_files/IND17Stat.20200728.html style=color:blue>20200728</a></td><td>ROSSARI</td><td>470522.50225</td><td>13.4774</td><td>-5093</td></tr>
+<tr><td><a href=IND17Stat_daily_files/IND17Stat.20200729.html style=color:blue>20200729</a></td><td>TEXRAIL</td><td>367.81269</td><td>53.4633</td><td>-4519</td></tr>
+<tr><td><a href=IND17Stat_daily_files/IND17Stat.20200730.html style=color:blue>20200730</a></td><td>TEXRAIL</td><td>346.01305</td><td>68.0048</td><td>-4853</td></tr>
+<tr><td><a href=IND17Stat_daily_files/IND17Stat.20200731.html style=color:blue>20200731</a></td><td>FILATEX</td><td>330.6609</td><td>94.8609</td><td>-4053</td></tr>
