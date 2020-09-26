@@ -1,7 +1,7 @@
 #!/bin/bash
 
 today=`date +"%Y%m%d"`;
-#today="20200903";
+#today="20200904";
 yyyy=${today:0:4}
 mm=${today:4:2}
 IND17Stat_project_path="/home/subham/subham/htmlProject"
@@ -35,12 +35,16 @@ copy_log_file() {
 delete_last_30th_day_entries() {
 
 	last_30days_date="$html_files_path/last_30days_date.txt"
+	temp_file="$html_files_paht/tempfile"
 	day_30th=`tac $last_30days_date | sed -n 30p`
 
 	if [ ! -z "$day_30th" ]; then
-		sed '/$30th_day/d' $IND17Stat_30days_data_file > $IND17Stat_30days_data_file
-		sed '/$30th_day/d' $last_30days_date > $last_30days_date
-		echo "old entry deleted"
+		sed "/$day_30th/d" $IND17Stat_30days_data_file > $temp_file
+		cat $temp_file > $IND17Stat_30days_data_file
+		sed "/$day_30th/d" $last_30days_date > $temp_file
+		cat $temp_file > $last_30days_date
+		rm -f $temp_file
+		echo "old entry deleted date : $day_30th"
 	fi
 
 }
