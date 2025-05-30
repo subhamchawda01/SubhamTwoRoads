@@ -1,0 +1,1188 @@
+use-project /PDVCC : ../libdvccode ;
+
+lib boost_program_options : : <name>boost_program_options <search>$(BOOST_LIB_INSTALL) ;
+
+project : requirements <library>boost_program_options
+        : usage-requirements <include>$(PROJECT_INSTALL)
+        <library>/spare/local/lib/tcpdirect/libonload_zf_static.a
+        ;
+
+use-project /Plwfixfast : ../lwfixfast ;
+use-project /Plwfixfast2 : ../lwfixfast2 ;
+use-project /PBSEMD : ../BSEMD ;
+use-project /PBasicOrderRoutingServer : ../BasicOrderRoutingServer ;
+use-project /PBMFEP : ../BMFEP ;
+use-project /PNSET : ../NSET ;
+use-project /PBSE : ../BSE ;
+use-project /PCBOE : ../CBOE ;
+use-project /PSimEngine : ../SimEngine ;
+
+use-project /PORSUtils : ../ORSUtilsCode ; 
+
+lib z : : <name>z <search>/apps/zlib/lib ;
+
+exe drop_packet_test
+    : drop_packet_test.cpp live_products_manager.cpp 
+      /PDVCC//CDef
+      /PDVCC//CommonDataStructures
+      /PDVCC//Utils 
+      /PDVCC//TradingInfo 
+      /PDVCC//CommonTradeUtils
+      /PDVCC//ExternalData
+      /PDVCC//Profiler
+    :
+    : <variant>debug <variant>release
+      <linkflags>-lpthread 
+    ;
+
+exe curr_portfolio_check 
+    : curr_portfolio_check.cpp 
+      /PDVCC//Utils
+      /PDVCC//CDef
+      /PDVCC//IBUtils
+      /PDVCC//CommonDataStructures
+      /PDVCC//CommonTradeUtils
+      /PBasicOrderRoutingServer//libBasicOrderRoutingServer
+      /PDVCC//TradingInfo
+      /PBMFEP//libBMFEP
+      /PNSET//libNSET
+      /PBSE//libBSE
+      /PCBOE//libCBOE   
+      /PORSUtils//libORSUtils
+      /PSimEngine//libSimEngine
+      /PDVCC//Profiler
+      z
+    :
+    : <variant>debug <variant>release
+      <linkflags>-lpthread 
+      <linkflags>-lrt
+      <linkflags>-lonload_ext
+      <linkflags>-lTwsSocketClient
+      <linkflags>-lbid
+      <linkflags>-lssl
+    ;
+
+exe combo_data_requestor
+    : combo_data_requestor.cpp
+      /PDVCC//CDef
+      /PDVCC//CommonDataStructures
+      /PDVCC//CommonTradeUtils
+      /PDVCC//IBUtils
+      /PDVCC//Utils 
+      /PDVCC//TradingInfo
+      /PBasicOrderRoutingServer//libBasicOrderRoutingServer
+      z
+    :
+    : <variant>debug <variant>release
+      <linkflags>-lpthread 
+      <linkflags>-lrt
+      <linkflags>-lonload_ext
+      <linkflags>-lTwsSocketClient
+      <linkflags>-lbid
+      <linkflags>-lssl
+;
+exe testComboProductReq
+    : testComboProductReq.cpp
+      /PDVCC//IBUtils
+      /PDVCC//Utils 
+      /PDVCC//TradingInfo
+      /PBasicOrderRoutingServer//libBasicOrderRoutingServer
+      z
+    :
+    : <variant>debug <variant>release
+      <linkflags>-lpthread 
+      <linkflags>-lrt
+      <linkflags>-lonload_ext
+      <linkflags>-lTwsSocketClient
+      <linkflags>-lbid
+      <linkflags>-lssl
+;
+
+exe log_Bcast_raw_data_multiple_channels
+    :  log_Bcast_raw_data_multiple_channels.cpp
+          /Plwfixfast//liblwfixfast
+          /Plwfixfast2//liblwfixfast2
+          /PDVCC//CDef
+          /PDVCC//ExternalData
+          /PDVCC//Utils
+          /PDVCC//CommonDataStructures
+          /PDVCC//Profiler
+          /PDVCC//TradingInfo
+          /PDVCC//CommonTradeUtils
+    :
+    : <variant>debug <variant>release
+      <linkflags>-lpthread
+;
+
+exe simple_multicast_receiver
+    : simple_multicast_receiver.cpp
+      /PDVCC//Utils
+      /PDVCC//CDef
+      /PDVCC//CommonDataStructures
+      /PDVCC//Profiler
+      /PDVCC//CommonTradeUtils
+    :
+    : <variant>debug <variant>release
+    ;
+
+exe simple_multicast_receiver_drops_checker_bse
+    : simple_multicast_receiver_drops_checker_bse.cpp
+     /PDVCC//Utils
+      /PDVCC//CDef
+      /PDVCC//CommonDataStructures
+      /PDVCC//Profiler
+      /PDVCC//TradingInfo
+      /PDVCC//CommonTradeUtils
+      /PDVCC//ExternalData
+      /spare/local/lib/tcpdirect/libonload_zf_static.a
+    :
+    : <variant>debug <variant>release
+    ;
+
+exe nse_audit_in_parse
+ : nse_audit_in_parse.cpp
+		 /PDVCC//CommonTradeUtils
+		 /PDVCC//CDef
+		 /PDVCC//CommonDataStructures
+		 /PDVCC//Utils
+		 /Plwfixfast//liblwfixfast
+		 /PDVCC//ExternalData
+		 /PDVCC//TradingInfo
+		 /PNSET//libNSET	
+ :
+ : <variant>debug <variant>release
+ <linkflags>-lpthread
+ ;
+
+exe bse_audit_in_parse
+ : bse_audit_in_parse.cpp
+		 /PDVCC//CommonTradeUtils
+		 /PDVCC//CDef
+		 /PDVCC//CommonDataStructures
+		 /PDVCC//Utils
+		 /Plwfixfast//liblwfixfast
+		 /PDVCC//ExternalData
+		 /PDVCC//TradingInfo
+		 /PNSET//libNSET	
+ :
+ : <variant>debug <variant>release
+ <linkflags>-lpthread
+ ;
+
+exe zftcppingpong
+  : zftcppingpong.cpp
+      /PDVCC//Utils
+      /PDVCC//CDef
+      /PDVCC//CommonDataStructures
+      /PDVCC//Profiler
+      z
+    :
+    : <variant>debug <variant>release
+      <linkflags>-lpthread
+      <linkflags>-lrt
+      <linkflags>-lonload_ext
+    ;
+
+
+exe nse_audit_log_reader
+ : nse_audit_log_reader.cpp
+		 /PDVCC//CommonTradeUtils
+		 /PDVCC//CDef
+		 /PDVCC//CommonDataStructures
+		 /PDVCC//Utils
+		 /Plwfixfast//liblwfixfast
+		 /PDVCC//ExternalData
+		 /PDVCC//TradingInfo
+		 /PNSET//libNSET	
+ :
+ : <variant>debug <variant>release
+ <linkflags>-lpthread
+ ;
+exe bse_audit_log_reader
+ : bse_audit_log_reader.cpp
+                 /PDVCC//CommonTradeUtils
+                 /PDVCC//CDef
+                 /PDVCC//CommonDataStructures
+                 /PDVCC//Utils
+        #         /Plwfixfast//liblwfixfast
+                 /PDVCC//ExternalData
+                 /PDVCC//TradingInfo
+                 /PNSET//libNSET
+ :
+ : <variant>debug <variant>release
+ <linkflags>-lpthread
+ ;
+exe simple_multicast_sender
+    : simple_multicast_sender.cpp
+      /PDVCC//Utils
+      /PDVCC//CDef
+      /PDVCC//CommonDataStructures
+      /PDVCC//Profiler
+    :
+    : <variant>debug <variant>release
+    ;
+
+exe tcp_server_instance
+    : tcp_server_instance.cpp
+      /PDVCC//Utils
+      /PDVCC//CDef
+      /PDVCC//CommonDataStructures
+      /PDVCC//Profiler
+    :
+    : <variant>debug <variant>release
+      <linkflags>-lpthread
+    ;
+
+exe get_shortcodes_for_exchange
+    : get_shortcodes_for_exchange.cpp
+      /PDVCC//CDef
+      /PDVCC//Utils
+      /PDVCC//CommonDataStructures
+      /PDVCC//CommonTradeUtils
+      /PDVCC//Profiler
+    :
+    : <variant>debug <variant>release
+    ;
+
+exe get_expiry_from_exchange_symbol
+    : get_expiry_from_exchange_symbol.cpp
+      /PDVCC//CDef
+      /PDVCC//Utils
+      /PDVCC//CommonDataStructures
+      /PDVCC//CommonTradeUtils
+      /PDVCC//Profiler
+    :
+    : <variant>debug <variant>release
+    ;
+
+exe fix_bin_reader
+    : fix_binary_reader.cpp
+      /PDVCC//CDef
+      /PDVCC//CommonDataStructures
+      /PDVCC//CommonTradeUtils
+      /PDVCC//Profiler
+    :
+    : <variant>debug <variant>release
+    ;
+
+
+
+
+exe get_numbers_to_dollars
+    : get_numbers_to_dollars.cpp
+      /PDVCC//CDef
+      /PDVCC//Utils
+      /PDVCC//CommonDataStructures
+      /PDVCC//CommonTradeUtils
+      /PDVCC//Profiler
+    :
+    : <variant>debug <variant>release
+    ;
+
+exe get_min_price_increment
+    : get_min_price_increment.cpp
+      /PDVCC//CDef
+      /PDVCC//Utils
+      /PDVCC//CommonDataStructures
+      /PDVCC//CommonTradeUtils
+      /PDVCC//Profiler
+    :
+    : <variant>debug <variant>release
+    ;
+
+exe get_utc_hhmm_str
+    : get_utc_hhmm_str.cpp
+      /PDVCC//CDef
+      /PDVCC//CommonDataStructures
+      /PDVCC//CommonTradeUtils
+      /PDVCC//Profiler
+    :
+    : <variant>debug <variant>release
+    ;
+
+exe ors_broadcast_logger
+    : ors_broadcast_logger.cpp
+      /PDVCC//CDef
+      /PDVCC//CommonDataStructures
+      /PDVCC//Profiler
+      /PDVCC//TradingInfo
+      /PDVCC//CommonTradeUtils
+      /PDVCC//TradingInfo
+    :
+    : <variant>debug <variant>release
+      <linkflags>-lpthread
+    ;
+
+
+exe ors_binary_logger
+    : ors_binary_logger.cpp
+      /PDVCC//CDef
+      /PDVCC//CommonDataStructures
+      /PDVCC//Profiler
+      /PDVCC//CommonTradeUtils
+      /PDVCC//TradingInfo
+    ;
+
+exe ors_data_broadcast_simulator
+    : ors_data_broadcast_simulator.cpp
+      /PDVCC//CDef
+      /PDVCC//Utils
+      /PDVCC//CommonDataStructures
+      /PDVCC//Profiler
+      /PDVCC//CommonTradeUtils
+    ;
+
+
+exe ors_rejection_stats
+    : ors_rejection_stats.cpp
+      /PDVCC//CDef
+      /PDVCC//Utils
+      /PDVCC//CommonDataStructures
+      /PDVCC//Profiler
+      /PDVCC//CommonTradeUtils
+    ;
+
+exe ors_binary_reader_volumes
+    : ors_binary_reader_volumes.cpp
+      /PDVCC//CDef
+      /PDVCC//CommonDataStructures
+      /PDVCC//Profiler
+      /PDVCC//CommonTradeUtils
+    ;
+
+
+
+exe dump_raw_data
+    : dump_raw_data.cpp
+      /PDVCC//CDef
+      /PDVCC//CommonDataStructures
+      /PDVCC//Utils
+      /PDVCC//TradingInfo
+      /PDVCC//CommonTradeUtils
+      /PDVCC//Profiler
+    :
+    : <variant>debug <variant>release
+      <linkflags>-lpthread
+    ;
+
+exe log_Bcast_raw_data
+    : log_Bcast_raw_data.cpp
+      /PDVCC//CDef
+      /PDVCC//CommonDataStructures
+      /PDVCC//Utils
+      /PDVCC//TradingInfo
+      /PDVCC//CommonTradeUtils
+      /PDVCC//Profiler
+    :
+    : <variant>debug <variant>release
+      <linkflags>-lpthread
+    ;
+
+exe convert_bcast_OI_bardata
+    : convert_bcast_OI_bardata.cpp
+      /PDVCC//CDef
+      /PDVCC//CommonDataStructures
+      /PDVCC//Utils
+      /PDVCC//TradingInfo
+      /PDVCC//CommonTradeUtils
+      /PDVCC//Profiler
+    :
+    : <variant>debug <variant>release
+      <linkflags>-lpthread
+    ;
+
+    
+exe nse_generic_to_dotex_offline_converter
+	: nse_generic_to_dotex_offline_converter.cpp
+	  /PDVCC//CDef
+	  /PDVCC//Utils
+	  /PDVCC//CommonTradeUtils
+	  /PDVCC//CommonDataStructures
+	:
+    : <variant>debug <variant>release
+      <linkflags>-lpthread
+    ;
+
+exe bse_generic_to_dotex_offline_converter
+        : bse_generic_to_dotex_offline_converter.cpp
+          /PDVCC//CDef
+          /PDVCC//Utils
+          /PDVCC//CommonTradeUtils
+          /PDVCC//CommonDataStructures
+        :
+    : <variant>debug <variant>release
+      <linkflags>-lpthread
+    ;
+
+exe bse_generic_to_dotex_offline_converter_between_old_to_new
+        : bse_generic_to_dotex_offline_converter_between_old_to_new.cpp
+          /PDVCC//CDef
+          /PDVCC//Utils
+          /PDVCC//CommonTradeUtils
+          /PDVCC//CommonDataStructures
+        :
+    : <variant>debug <variant>release
+      <linkflags>-lpthread
+    ;
+
+exe mktDD
+    : FastDataDaemon.cpp live_products_manager.cpp 
+      /Plwfixfast//liblwfixfast
+      /PDVCC//CommonDataStructures
+      /Plwfixfast2//liblwfixfast2
+      /PDVCC//CDef
+      /PDVCC//Utils
+      /PDVCC//TradingInfo
+      /PDVCC//CommonTradeUtils
+      /PDVCC//ExternalData
+      /PDVCC//Profiler
+    :
+    : <variant>debug <variant>release
+      <linkflags>-lpthread
+    ;
+
+exe integDD
+    : IntegratedDataDaemon.cpp live_products_manager.cpp
+      /Plwfixfast//liblwfixfast
+      /PDVCC//CommonDataStructures
+      /Plwfixfast2//liblwfixfast2
+      /PDVCC//CDef
+      /PDVCC//Utils
+      /PDVCC//TradingInfo
+      /PDVCC//CommonTradeUtils
+      /PDVCC//ExternalData
+      /PDVCC//Profiler
+    :
+    : <variant>debug <variant>release
+      <linkflags>-lpthread
+    ;
+
+
+exe cpu_affinity_mgr
+    : cpu_affinity_mgr.cpp
+      /PDVCC//CDef
+      /PDVCC//CommonDataStructures
+      /PDVCC//Utils
+      /PDVCC//CommonTradeUtils
+    :
+    : <variant>debug <variant>release
+      <linkflags>-lpthread
+    ;
+
+exe combined_user_msg
+    : combined_user_msg.cpp
+      /PDVCC//Utils
+      /PDVCC//CDef
+      /PDVCC//CommonDataStructures
+      /PDVCC//TradingInfo
+      /PDVCC//CommonTradeUtils
+      /PDVCC//ExternalData
+    :
+    : <variant>debug <variant>release
+    ;
+
+
+exe send_slack_notification
+    : send_slack_notification.cpp
+      /PDVCC//CDef
+      /PDVCC//CommonDataStructures
+      /PDVCC//Utils
+    :
+    : <variant>debug <variant>release
+    ;
+
+exe get_event_line
+    : get_event_line.cpp
+      /PDVCC//CDef
+      /PDVCC//CommonDataStructures
+      /PDVCC//CommonTradeUtils
+    :
+    : <variant>debug <variant>release
+    ;
+
+
+exe live_source_simulator
+    : live_source_simulator.cpp
+      /PDVCC//CDef
+      /PDVCC//CommonDataStructures
+      /PDVCC//Utils
+      /PDVCC//TradingInfo
+      /PDVCC//CommonTradeUtils
+      /PDVCC//ExternalData
+      /PDVCC//Profiler
+    :
+    : <variant>debug <variant>release
+      <linkflags>-lpthread
+    ;
+
+
+exe get_pnl_for_shortcode_bytime_stats
+    : get_pnl_for_shortcode_bytime_stats.cpp
+      /PDVCC//CDef
+      /PDVCC//Utils
+      /PDVCC//CommonDataStructures
+      /PDVCC//Profiler
+      /PDVCC//CommonTradeUtils
+    ;
+
+exe get_pnl_for_shortcode_bytime_stats_v2
+    : get_pnl_for_shortcode_bytime_stats_v2.cpp
+      /PDVCC//CDef
+      /PDVCC//Utils
+      /PDVCC//CommonDataStructures
+      /PDVCC//Profiler
+      /PDVCC//CommonTradeUtils
+    ;
+
+exe artificial_mds_live_source_simulator
+    : artificial_mds_live_source_simulator.cpp
+      /PDVCC//CDef
+      /PDVCC//CommonDataStructures
+      /PDVCC//Utils
+      /PDVCC//TradingInfo
+      /PDVCC//CommonTradeUtils
+      /PDVCC//ExternalData
+      /PDVCC//Profiler
+    :
+    : <variant>debug <variant>release
+      <linkflags>-lpthread
+    ;
+
+
+exe all_exchange_ors_binary_capture
+    : all_exchange_ors_binary_capture.cpp
+      /PDVCC//CDef
+      /PDVCC//Utils
+      /PDVCC//CommonDataStructures
+      /PDVCC//Profiler
+      /PDVCC//TradingInfo
+      /PDVCC//CommonTradeUtils
+    :
+    : <variant>debug <variant>release
+      <linkflags>-lpthread
+    ;
+
+exe CombinedShmWriter
+    : CombinedShmWriter.cpp live_products_manager.cpp 
+      /Plwfixfast//liblwfixfast
+      /Plwfixfast2//liblwfixfast2
+      /PDVCC//CDef
+      /PDVCC//CommonDataStructures
+      /PDVCC//Utils 
+      /PDVCC//TradingInfo 
+      /PDVCC//CommonTradeUtils
+      /PDVCC//ExternalData
+      /PDVCC//Profiler
+      /spare/local/lib/tcpdirect/libonload_zf_static.a
+    :
+    : <variant>debug <variant>release
+      <linkflags>-lpthread 
+    ; 
+
+exe multicast_forwarder
+    : multicast_forwarder.cpp
+      /PDVCC//CDef
+      /PDVCC//CommonDataStructures
+      /PDVCC//Utils 
+      /PDVCC//ExternalData
+    :
+    : <variant>debug <variant>release
+      <linkflags>-lpthread 
+    ; 
+
+exe CombinedShmMulticaster
+    : CombinedShmMulticaster.cpp
+      /PDVCC//CDef
+      /PDVCC//Utils
+      /PDVCC//CommonDataStructures
+      /PDVCC//CommonTradeUtils
+      /PDVCC//Profiler
+      /PDVCC//TradingInfo
+      :
+      : <variant>debug <variant>release
+        <linkflags>-lpthread
+    ;
+
+
+
+exe CombinedShmLogger
+    : CombinedShmLogger.cpp 
+      /PDVCC//CDef
+      /PDVCC//Utils
+      /PDVCC//CommonDataStructures
+      /PDVCC//CommonTradeUtils
+      /PDVCC//Profiler
+      :
+      : <variant>debug <variant>release
+        <linkflags>-lpthread 
+    ;
+
+exe generic_data_converter
+    : generic_data_converter.cpp 
+      /PDVCC//CDef
+      /PDVCC//CommonDataStructures
+      /PDVCC//Utils
+      /PDVCC//TradingInfo
+      /PDVCC//CommonTradeUtils
+      /PDVCC//ExternalData
+      /PDVCC//Profiler
+    :
+    : <variant>debug <variant>release
+      <linkflags>-lpthread
+    ;
+    
+exe live_struct_to_sim_struct_converter
+    : live_struct_to_sim_struct_converter.cpp 
+      /PDVCC//CDef
+      /PDVCC//CommonDataStructures
+      /PDVCC//Utils
+      /PDVCC//TradingInfo
+      /PDVCC//CommonTradeUtils
+      /PDVCC//ExternalData
+      /PDVCC//Profiler
+    :
+    : <variant>debug <variant>release
+      <linkflags>-lpthread
+    ;
+
+exe all_live_volumes_on_day_from_generic_data 
+    : all_live_volumes_on_day_from_generic_data.cpp
+      /PDVCC//CDef
+      /PDVCC//CommonDataStructures
+      /PDVCC//CommonTradeUtils
+      /PDVCC//Profiler
+    :
+    : <variant>debug <variant>release
+    ;
+
+
+exe centralized_logging_manager 
+    : centralized_logging_manager.cpp
+      /PDVCC//CommonTradeUtils
+      /PDVCC//CDef
+      /PDVCC//CommonTradeUtils
+      /PDVCC//Utils
+      /PDVCC//CommonDataStructures
+    :
+    : <variant>debug <variant>release
+      <linkflags>-lpthread
+    ;
+
+exe logging_client_test
+    : logging_client_test.cpp 
+      /PDVCC//CDef
+      /PDVCC//Utils
+      /PDVCC//CommonDataStructures
+    :
+    : <variant>debug <variant>release
+      <linkflags>-lpthread
+    ;
+
+exe get_approximate_ors_exchange_message_count 
+    : get_approximate_ors_exchange_message_count.cpp
+      /PDVCC//CDef
+      /PDVCC//Utils
+      /PDVCC//CommonDataStructures
+      /PDVCC//Profiler
+      /PDVCC//CommonTradeUtils
+    ;
+
+exe BMFMultiDropcopy
+    : BMFMultiDropcopy.cpp
+      /Plwfixfast//liblwfixfast
+      /Plwfixfast2//liblwfixfast2
+      /PDVCC//CDef
+      /PDVCC//CommonDataStructures
+      /PDVCC//Utils
+      /PDVCC//TradingInfo
+      /PDVCC//CommonTradeUtils
+      /PDVCC//ExternalData
+      /PDVCC//Profiler
+      /PBMFEP//libBMFEP
+      /PBasicOrderRoutingServer//libBasicOrderRoutingServer
+    :
+    : <variant>debug <variant>release
+      <linkflags>-lpthread
+    ;
+
+
+exe dump_raw_data_new
+	: dump_raw_data_new.cpp
+		/PDVCC//CDef
+		/PDVCC//TradingInfo
+		/PDVCC//CommonDataStructures
+        /PDVCC//Utils
+        /PDVCC//CommonTradeUtils
+        /PDVCC//Profiler
+        /PDVCC//ExternalData
+	:
+	: <variant>debug <variant>release
+      <linkflags>-lpthread
+    ;
+
+exe nse_tbt_recovery_manager
+    : nse_tbt_recovery_manager.cpp live_products_manager.cpp
+      /Plwfixfast//liblwfixfast
+      /Plwfixfast2//liblwfixfast2
+      /PDVCC//CDef
+      /PDVCC//CommonDataStructures
+      /PDVCC//Utils 
+      /PDVCC//TradingInfo 
+      /PDVCC//CommonTradeUtils
+      /PDVCC//ExternalData
+      /PDVCC//Profiler
+      /spare/local/lib/tcpdirect/libonload_zf_static.a
+    :
+    : <variant>debug <variant>release
+      <linkflags>-lpthread
+    ;
+    
+ exe ors_messages_analyser
+ : ors_messages_analyser.cpp ors_message_reader.cpp positions_and_orders_calculator_all_saci.cpp positions_and_orders_calculator.cpp
+ /PDVCC//CommonTradeUtils
+ /PDVCC//CDef
+ /PDVCC//CommonDataStructures
+ /PDVCC//Utils
+ /Plwfixfast//liblwfixfast
+ /PDVCC//ExternalData
+ /PDVCC//TradingInfo
+ :
+ : <variant>debug <variant>release
+ <linkflags>-lpthread
+ ;
+ 
+ 
+exe smart_ors_data_logger
+    : smart_ors_data_logger.cpp
+      /PDVCC//CDef
+      /PDVCC//CommonDataStructures
+      /PDVCC//Profiler
+      /PDVCC//CommonTradeUtils
+      /PDVCC//Utils
+      /PDVCC//TradingInfo
+      /PDVCC//ExternalData
+   :
+   : <variant>debug <variant>release
+   <linkflags>-lpthread
+   ;
+
+exe timetest
+    : timetest.cpp
+      /PDVCC//CDef
+      /PDVCC//CommonDataStructures
+      /PDVCC//Profiler
+      /PDVCC//CommonTradeUtils
+      /PDVCC//Utils
+      /PDVCC//TradingInfo
+      /PDVCC//ExternalData
+   :
+   : <variant>debug <variant>release
+   <linkflags>-lpthread
+   ;
+
+exe NSEShmWriter
+    : NSEShmWriter.cpp live_products_manager.cpp 
+      /Plwfixfast//liblwfixfast
+      /Plwfixfast2//liblwfixfast2
+      /PDVCC//CDef
+      /PDVCC//CommonDataStructures
+      /PDVCC//Utils 
+      /PDVCC//TradingInfo 
+      /PDVCC//CommonTradeUtils
+      /PDVCC//ExternalData
+      /PDVCC//Profiler
+      /spare/local/lib/tcpdirect/libonload_zf_static.a
+    :
+    : <variant>debug <variant>release
+      <linkflags>-lpthread 
+    ; 
+
+exe NSEBardataWriter
+    : NSEBardataWriter.cpp live_products_manager.cpp 
+      /Plwfixfast//liblwfixfast
+      /Plwfixfast2//liblwfixfast2
+      /PDVCC//CDef
+      /PDVCC//CommonDataStructures
+      /PDVCC//Utils
+      /PDVCC//TradingInfo
+      /PDVCC//CommonTradeUtils
+      /PDVCC//ExternalData
+      /PDVCC//Profiler
+      /spare/local/lib/tcpdirect/libonload_zf_static.a
+      :
+    : <variant>debug <variant>release
+      <linkflags>-lpthread
+    ;
+
+exe BSEShmWriter
+    : BSEShmWriter.cpp live_products_manager.cpp 
+      #/Plwfixfast//liblwfixfast
+      #/Plwfixfast2//liblwfixfast2
+    #  /PBSEMD//libBSEMD
+      /PDVCC//CDef
+      /PDVCC//CommonDataStructures
+      /PDVCC//Utils 
+      /PDVCC//TradingInfo 
+      /PDVCC//CommonTradeUtils
+      /PDVCC//ExternalData
+      /PDVCC//Profiler
+      /spare/local/lib/tcpdirect/libonload_zf_static.a
+    :
+    : <variant>debug <variant>release
+      <linkflags>-lpthread 
+    ; 
+
+exe NSEShmWriterExalib
+    : NSEShmWriterExalib.cpp live_products_manager.cpp
+      /Plwfixfast//liblwfixfast
+      /Plwfixfast2//liblwfixfast2
+      /PDVCC//CDef
+      /PDVCC//CommonDataStructures
+      /PDVCC//Utils
+      /PDVCC//TradingInfo
+      /PDVCC//CommonTradeUtils
+      /PDVCC//ExternalData
+      /PDVCC//Profiler
+      /spare/local/lib/tcpdirect/libonload_zf_static.a
+    :
+    : <variant>debug <variant>release
+      <linkflags>-lpthread 
+    ; 
+
+exe get_trade_export_file
+    : get_trade_export_file.cpp
+      /PDVCC//CDef
+      /PDVCC//CommonDataStructures
+      /PDVCC//Utils 
+      /PDVCC//TradingInfo 
+      /PDVCC//CommonTradeUtils
+      /PDVCC//ExternalData
+      /PDVCC//Profiler
+    :
+    : <variant>debug <variant>release
+      <linkflags>-lpthread 
+    ; 
+
+exe NSEShmWriterUDPDirect
+    : NSEShmWriterUDPDirect.cpp live_products_manager.cpp
+      /PDVCC//CDef
+      /PDVCC//CommonDataStructures
+      /PDVCC//Utils 
+      /PDVCC//TradingInfo 
+      /PDVCC//CommonTradeUtils
+      /PDVCC//ExternalData
+      /PDVCC//Profiler
+      /spare/local/lib/tcpdirect/libonload_zf_static.a
+    :
+    : <variant>debug <variant>release
+      <linkflags>-lpthread 
+    ; 
+
+exe BSEShmWriterUDPDirect
+    : BSEShmWriterUDPDirect.cpp live_products_manager.cpp
+      /PDVCC//CDef
+      /PDVCC//CommonDataStructures
+      /PDVCC//Utils 
+      /PDVCC//TradingInfo 
+      /PDVCC//CommonTradeUtils
+      /PDVCC//ExternalData
+      /PDVCC//Profiler
+      /spare/local/lib/tcpdirect/libonload_zf_static.a
+    :
+    : <variant>debug <variant>release
+      <linkflags>-lpthread 
+    ; 
+
+exe BSENSEShmWriterUDPDirect
+    : BSENSEShmWriterUDPDirect.cpp live_products_manager.cpp
+      /PDVCC//CDef
+      /PDVCC//CommonDataStructures
+      /PDVCC//Utils 
+      /PDVCC//TradingInfo 
+      /PDVCC//CommonTradeUtils
+      /PDVCC//ExternalData
+      /PDVCC//Profiler
+      /spare/local/lib/tcpdirect/libonload_zf_static.a
+    :
+    : <variant>debug <variant>release
+      <linkflags>-lpthread 
+    ; 
+
+exe control_msg_shm_writer
+    : control_msg_shm_writer.cpp
+      /PDVCC//CDef
+      /PDVCC//Utils 
+      /PDVCC//TradingInfo 
+      /PDVCC//CommonTradeUtils
+      /PDVCC//Utils
+      /PDVCC//TradingInfo
+      /PDVCC//CommonTradeUtils
+      /PDVCC//ExternalData
+      /PDVCC//Profiler
+      /spare/local/lib/tcpdirect/libonload_zf_static.a
+    :
+    : <variant>debug <variant>release
+      <linkflags>-lpthread
+    ;
+
+exe compute_positions
+    : compute_positions.cpp
+      /PDVCC//CommonDataStructures
+      /PDVCC//CDef
+    :
+    : <variant>debug <variant>release
+      <linkflags>-lpthread
+    ;
+
+exe bse_reply_audit_reader
+    : bse_reply_audit_reader.cpp
+      /PDVCC//CDef
+      /PDVCC//CommonDataStructures
+      /PDVCC//Utils
+      /PDVCC//CommonTradeUtils
+      /PDVCC//ExternalData
+      /PDVCC//Profiler
+    :
+    : <variant>debug <variant>release
+      <linkflags>-lpthread
+    ;
+
+exe reply_audit_reader
+    : reply_audit_reader.cpp
+      /PDVCC//CDef
+      /PDVCC//CommonDataStructures
+      /PDVCC//Utils 
+      /PDVCC//CommonTradeUtils
+      /PDVCC//ExternalData
+      /PDVCC//Profiler
+    :
+    : <variant>debug <variant>release
+      <linkflags>-lpthread 
+    ; 
+
+exe control_and_signal_msg_shm_writer
+    : control_and_signal_msg_shm_writer.cpp
+      /PDVCC//CDef
+      /PDVCC//Utils
+      /PDVCC//TradingInfo
+      /PDVCC//CommonTradeUtils
+      /PDVCC//Utils
+      /PDVCC//TradingInfo
+      /PDVCC//CommonTradeUtils
+      /PDVCC//ExternalData
+      /PDVCC//Profiler
+      /spare/local/lib/tcpdirect/libonload_zf_static.a
+    :
+    : <variant>debug <variant>release
+      <linkflags>-lpthread
+    ;
+
+exe nse_bardata_recovery_manager
+    : nse_bardata_recovery_manager.cpp live_products_manager.cpp
+      /Plwfixfast//liblwfixfast
+      /Plwfixfast2//liblwfixfast2
+      /PDVCC//CDef
+      /PDVCC//CommonDataStructures
+      /PDVCC//Utils
+      /PDVCC//TradingInfo
+      /PDVCC//CommonTradeUtils
+      /PDVCC//ExternalData
+      /PDVCC//Profiler
+      /spare/local/lib/tcpdirect/libonload_zf_static.a
+    :
+    : <variant>debug <variant>release
+      <linkflags>-lpthread
+    ;
+
+      
+exe BSEBardataWriter
+    : BSEBardataWriter.cpp live_products_manager.cpp 
+      /Plwfixfast//liblwfixfast
+      /Plwfixfast2//liblwfixfast2
+      /PDVCC//CDef
+      /PDVCC//CommonDataStructures
+      /PDVCC//Utils 
+      /PDVCC//TradingInfo 
+      /PDVCC//CommonTradeUtils
+      /PDVCC//ExternalData
+      /PDVCC//Profiler
+      /spare/local/lib/tcpdirect/libonload_zf_static.a
+    :
+    : <variant>debug <variant>release
+      <linkflags>-lpthread 
+    ;
+
+exe BSENSEShmWriter
+    : BSENSEShmWriter.cpp live_products_manager.cpp
+      /Plwfixfast//liblwfixfast
+      /Plwfixfast2//liblwfixfast2
+      /PDVCC//CDef
+      /PDVCC//CommonDataStructures
+      /PDVCC//Utils
+      /PDVCC//TradingInfo
+      /PDVCC//CommonTradeUtils
+      /PDVCC//ExternalData
+      /PDVCC//Profiler
+      /spare/local/lib/tcpdirect/libonload_zf_static.a
+    :
+    : <variant>debug <variant>release
+      <linkflags>-lpthread
+    ;
+
+exe bse_bardata_recovery_manager
+    : bse_bardata_recovery_manager.cpp live_products_manager.cpp
+      /Plwfixfast//liblwfixfast
+      /Plwfixfast2//liblwfixfast2
+      /PDVCC//CDef
+      /PDVCC//CommonDataStructures
+      /PDVCC//Utils
+      /PDVCC//TradingInfo
+      /PDVCC//CommonTradeUtils
+      /PDVCC//ExternalData
+      /PDVCC//Profiler
+      /spare/local/lib/tcpdirect/libonload_zf_static.a
+    :
+    : <variant>debug <variant>release
+      <linkflags>-lpthread
+    ;
+
+exe test_md5
+    : test_md5.cpp
+      /Plwfixfast//liblwfixfast
+      /Plwfixfast2//liblwfixfast2
+      /PDVCC//CDef
+      /PDVCC//CommonDataStructures
+      /PDVCC//Utils 
+      /PDVCC//TradingInfo 
+      /PDVCC//CommonTradeUtils
+      /PDVCC//ExternalData
+      /PDVCC//Profiler
+    :
+    : <variant>debug <variant>release
+      <linkflags>-lpthread 
+    ; 
+
+exe CBOEBardataWriter
+    : CBOEBardataWriter.cpp live_products_manager.cpp 
+      /PDVCC//CDef
+      /PDVCC//CommonDataStructures
+      /PDVCC//Utils 
+      /PDVCC//TradingInfo 
+      /PDVCC//CommonTradeUtils
+      /PDVCC//ExternalData
+      /PDVCC//Profiler
+    :
+    : <variant>debug <variant>release
+      <linkflags>-lpthread 
+    ;
+
+exe cboe_bardata_recovery_manager
+    : cboe_bardata_recovery_manager.cpp live_products_manager.cpp 
+      /PDVCC//CDef
+      /PDVCC//CommonDataStructures
+      /PDVCC//Utils 
+      /PDVCC//TradingInfo 
+      /PDVCC//CommonTradeUtils
+      /PDVCC//ExternalData
+      /PDVCC//Profiler
+    :
+    : <variant>debug <variant>release
+      <linkflags>-lpthread 
+    ;
+
+exe NSEBardataWriterUDPDirect
+    : NSEBardataWriterUDPDirect.cpp live_products_manager.cpp
+      /PDVCC//CDef
+      /PDVCC//CommonDataStructures
+      /PDVCC//Utils 
+      /PDVCC//TradingInfo 
+      /PDVCC//CommonTradeUtils
+      /PDVCC//ExternalData
+      /PDVCC//Profiler
+      /spare/local/lib/tcpdirect/libonload_zf_static.a
+    :
+    : <variant>debug <variant>release
+      <linkflags>-lpthread 
+    ;
+
+install install-bin
+	:
+        log_Bcast_raw_data_multiple_channels 
+	dump_raw_data_new
+        log_Bcast_raw_data
+        zftcppingpong
+	convert_bcast_OI_bardata
+	get_numbers_to_dollars  
+	get_min_price_increment  get_utc_hhmm_str
+        get_expiry_from_exchange_symbol
+	dump_raw_data
+	nse_audit_log_reader
+	bse_audit_log_reader
+        bse_audit_in_parse
+	ors_binary_logger 
+	ors_rejection_stats
+	ors_binary_reader_volumes
+	ors_broadcast_logger
+	fix_bin_reader 
+	mktDD
+	integDD
+        cpu_affinity_mgr
+        ors_data_broadcast_simulator
+        send_slack_notification
+        live_source_simulator
+	get_pnl_for_shortcode_bytime_stats_v2
+        artificial_mds_live_source_simulator
+        all_exchange_ors_binary_capture
+        CombinedShmWriter
+        CombinedShmMulticaster
+        CombinedShmLogger 
+        generic_data_converter
+        live_struct_to_sim_struct_converter
+        all_live_volumes_on_day_from_generic_data 
+        centralized_logging_manager
+        logging_client_test
+        get_approximate_ors_exchange_message_count
+        BMFMultiDropcopy
+        get_event_line
+        nse_tbt_recovery_manager
+        ors_messages_analyser
+	combined_user_msg
+        smart_ors_data_logger
+        nse_generic_to_dotex_offline_converter
+        bse_generic_to_dotex_offline_converter
+        bse_generic_to_dotex_offline_converter_between_old_to_new
+        simple_multicast_receiver
+        simple_multicast_sender
+        simple_multicast_receiver_drops_checker_bse
+        NSEShmWriter
+        NSEBardataWriter
+        BSEShmWriter
+        BSENSEShmWriter
+        BSEBardataWriter
+        bse_bardata_recovery_manager
+        NSEShmWriterUDPDirect
+	NSEShmWriterExalib
+        tcp_server_instance
+        multicast_forwarder
+        timetest
+        control_msg_shm_writer
+        control_and_signal_msg_shm_writer
+        nse_bardata_recovery_manager
+        compute_positions
+        bse_reply_audit_reader
+        get_trade_export_file
+        reply_audit_reader
+        BSEShmWriterUDPDirect
+        BSENSEShmWriterUDPDirect
+        test_md5
+        CBOEBardataWriter
+        testComboProductReq
+        combo_data_requestor
+        cboe_bardata_recovery_manager
+        curr_portfolio_check
+        drop_packet_test
+        NSEBardataWriterUDPDirect
+	: <variant>release:<location>"$(PROJECT_INSTALL)/bin"
+    	  <variant>debug:<location>"$(PROJECT_INSTALL)/bindebug"
+  	: release debug
+	;

@@ -1,0 +1,1415 @@
+Date Time,,,,Event,,Survey,Actual,Prior,Revised,Relevance,Ticker
+01/03/2012 10:00,US,1341),,Construction Spending MoM,Nov,0.50%,1.20%,0.80%,0.70%,78.5047,CNSTTMOM Index
+01/03/2012 10:00,US,1342),,ISM Manufacturing,Dec,53.5,53.9,52.7,52.2,94.3925,NAPMPMI Index
+01/03/2012 10:00,US,1343),,ISM Prices Paid,Dec,48,47.5,45,--,68.2243,NAPMPRIC Index
+01/03/2012 14:00,US,1344),,Minutes of FOMC Meeting,,,,,,0,
+01/04/2012 07:00,US,1345),,MBA Mortgage Applications,30-Dec,--,-4.10%,--,0.30%,94.4444,MBAVCHNG Index
+01/04/2012 10:00,US,1346),,Factory Orders,Nov,2.00%,1.80%,-0.40%,-0.40%,82.243,TMNOCHNG Index
+01/04/2012 19:10,US,1347),,Total Vehicle Sales,Dec,13.50M,13.48M,13.59M,13.50M,38.3178,SAARTOTL Index
+01/04/2012 19:10,US,1348),,Domestic Vehicle Sales,Dec,10.42M,10.49M,10.53M,10.46M,30.8411,SAARDTOT Index
+01/05/2012 07:30,US,1349),,Challenger Job Cuts YoY,Dec,--,30.60%,-12.80%,--,28.972,CHALYOY% Index
+01/05/2012 08:00,US,1350),,RBC Consumer Outlook Index,Jan,--,45.8,40.3,--,8.41121,ICSHNATL Index
+01/05/2012 08:15,US,1351),,ADP Employment Change,Dec,178K,325K,206K,226K,76.6355,ADP CHNG Index
+01/05/2012 08:30,US,1352),,Initial Jobless Claims,31-Dec,375K,372K,381K,387K,99.0654,INJCJC Index
+01/05/2012 08:30,US,1353),,Continuing Claims,24-Dec,3570K,3595K,3601K,3616K,69.3458,INJCSP Index
+01/05/2012 09:45,US,1354),,Bloomberg Consumer Comfort,1-Jan,-46,-44.8,-47.5,--,60.7477,COMFCOMF Index
+01/05/2012 10:00,US,1355),,ISM Non-Manf. Composite,Dec,53,52.6,52,52.6,70.0935,NAPMNMI Index
+01/05/2012 11:35,US,1356),,ICSC Chain Store Sales YoY,Dec,4.00%,3.50%,3.20%,2.80%,18.6916,MBRXYOYW Index
+01/06/2012 08:30,US,1357),,Revisions: Household Employment Survey Annual Revisions,,,,,,0,
+01/06/2012 08:30,US,1358),,Change in Nonfarm Payrolls,Dec,155K,200K,120K,157K,98.1308,NFP TCH Index
+01/06/2012 08:30,US,1359),,Change in Private Payrolls,Dec,175K,212K,140K,178K,17.757,NFP PCH Index
+01/06/2012 08:30,US,1360),,Change in Manufact. Payrolls,Dec,6K,23K,2K,3K,68.6916,USMMMNCH Index
+01/06/2012 08:30,US,1361),,Unemployment Rate,Dec,8.70%,8.50%,8.60%,8.70%,88.3178,USURTOT Index
+01/06/2012 08:30,US,1362),,Underemployment Rate (U6),Dec,--,15.20%,15.60%,--,7.47664,USUDMAER Index
+01/06/2012 08:30,US,1363),,Avg Hourly Earning MOM All Emp,Dec,0.20%,0.20%,-0.10%,0.00%,14.0187,AHE MOM% Index
+01/06/2012 08:30,US,1364),,Avg Hourly Earning YOY All Emp,Dec,2.10%,2.10%,1.80%,2.10%,13.0841,AHE YOY% Index
+01/06/2012 08:30,US,1365),,Avg Weekly Hours All Employees,Dec,34.3,34.4,34.3,34.4,12.1495,AWH TOTL Index
+01/06/2012 08:30,US,1366),,Change in Household Employment,Dec,--,176,278,317,9.34579,USEMNCHG Index
+01/09/2012 15:00,US,1367),,Consumer Credit,Nov,$7.000B,$20.374B,$7.645B,$3.775B,37.3832,CICRTOT Index
+01/10/2012 07:30,US,1368),,NFIB Small Business Optimism,Dec,93.8,93.8,92,--,56.0748,SBOITOTL Index
+01/10/2012 10:00,US,1369),,IBD/TIPP Economic Optimism,Jan,45,47.5,42.8,--,0,ECONUSIB Index
+01/10/2012 10:00,US,1370),,JOLTs Job Openings,Nov,--,3161,3267,3224,10.2804,JOLTTOTL Index
+01/10/2012 10:00,US,1371),,Wholesale Inventories,Nov,0.50%,0.10%,1.60%,1.40%,79.4393,MWINCHNG Index
+01/11/2012 07:00,US,1372),,MBA Mortgage Applications,6-Jan,--,4.50%,-4.10%,--,94.4444,MBAVCHNG Index
+01/11/2012 14:00,US,1373),,Fed's Beige Book,,,,,,0,
+01/12/2012 08:30,US,1374),,Advance Retail Sales,Dec,0.30%,0.10%,0.20%,0.50%,88.785,RSTAMOM Index
+01/12/2012 08:30,US,1375),,Retail Sales Less Autos,Dec,0.30%,-0.20%,0.20%,0.40%,62.1495,RSTAXMOM Index
+01/12/2012 08:30,US,1376),,Retail Sales Ex Auto & Gas,Dec,0.40%,0.00%,0.20%,0.20%,58.8785,RSTAXAG% Index
+01/12/2012 08:30,US,1377),,"Retail Sales ""Control Group""",Dec,0.30%,-0.20%,0.20%,0.30%,4.6729,RSTAXAGM Index
+01/12/2012 08:30,US,1378),,Initial Jobless Claims,7-Jan,375K,399K,372K,375K,99.0654,INJCJC Index
+01/12/2012 08:30,US,1379),,Continuing Claims,31-Dec,3595K,3628K,3595K,3609K,69.3458,INJCSP Index
+01/12/2012 09:45,US,1380),,Bloomberg Consumer Comfort,8-Jan,--,-44.7,-44.8,--,60.7477,COMFCOMF Index
+01/12/2012 10:00,US,1381),,Revisions: Philadelphia Fed Business Outlook Survey,,,,,,0,
+01/12/2012 10:00,US,1382),,Business Inventories,Nov,0.40%,0.30%,0.80%,--,34.5794,MTIBCHNG Index
+01/12/2012 14:00,US,1383),,Monthly Budget Statement,Dec,-$83.7B,-$86.0B,-$78.1B,-$137.3B,73.8318,FDDSSD Index
+01/13/2012 08:30,US,1384),,Import Price Index (MoM),Dec,-0.10%,-0.10%,0.70%,0.70%,75.7009,IMP1CHNG Index
+01/13/2012 08:30,US,1385),,Import Price Index (YoY),Dec,8.40%,8.50%,9.90%,10.10%,27.1028,IMP1YOY% Index
+01/13/2012 08:30,US,1386),,Trade Balance,Nov,-$45.0B,-$47.8B,-$43.5B,-$45.7B,81.3084,USTBTOT Index
+01/13/2012 09:55,US,1387),,U. of Michigan Confidence,Jan P,71.5,74,69.9,--,92.5234,CONSSENT Index
+01/17/2012 08:30,US,1388),,Revisions: Empire State Manufacturing Activity Index,,,,,,0,
+01/17/2012 08:30,US,1389),,Empire Manufacturing,Jan,11,13.48,9.53,8.19,80.3738,EMPRGBCI Index
+01/18/2012 07:00,US,1390),,MBA Mortgage Applications,13-Jan,--,23.10%,4.50%,--,94.4444,MBAVCHNG Index
+01/18/2012 08:30,US,1391),,Producer Price Index (MoM),Dec,0.10%,-0.10%,0.30%,0.10%,85.0467,PPI CHNG Index
+01/18/2012 08:30,US,1392),,PPI Ex Food & Energy (MoM),Dec,0.10%,0.30%,0.10%,0.10%,68.0374,PXFECHNG Index
+01/18/2012 08:30,US,1393),,Producer Price Index (YoY),Dec,5.10%,4.80%,5.70%,5.60%,66.3551,PPI YOY Index
+01/18/2012 08:30,US,1394),,PPI Ex Food & Energy (YoY),Dec,2.80%,3.00%,2.90%,3.00%,64.486,PPI XYOY Index
+01/18/2012 09:00,US,1395),,Total Net TIC Flows,Nov,$50.0B,$48.6B,-$48.8B,-$37.9B,63.5514,FRNTTNET Index
+01/18/2012 09:00,US,1396),,Net Long-term TIC Flows,Nov,$40.0B,$59.8B,$4.8B,$14.3B,71.9626,FRNTTOTL Index
+01/18/2012 09:15,US,1397),,Industrial Production,Dec,0.50%,0.40%,-0.20%,0.20%,85.9813,IP CHNG Index
+01/18/2012 09:15,US,1398),,Capacity Utilization,Dec,78.10%,78.10%,77.80%,77.70%,60.1869,CPTICHNG Index
+01/18/2012 10:00,US,1399),,NAHB Housing Market Index,Jan,22,25,21,--,36.4486,USHBMIDX Index
+01/19/2012 08:30,US,1400),,Consumer Price Index (MoM),Dec,0.10%,0.00%,0.00%,0.10%,93.4579,CPI CHNG Index
+01/19/2012 08:30,US,1401),,CPI Ex Food & Energy (MoM),Dec,0.10%,0.10%,0.20%,--,74.7664,CPUPXCHG Index
+01/19/2012 08:30,US,1402),,Consumer Price Index (YoY),Dec,3.00%,3.00%,3.40%,--,55.1402,CPI YOY Index
+01/19/2012 08:30,US,1403),,CPI Ex Food & Energy (YoY),Dec,2.20%,2.20%,2.20%,--,44.8598,CPI XYOY Index
+01/19/2012 08:30,US,1404),,Consumer Price Index NSA,Dec,225.782,225.672,226.23,--,26.1682,CPURNSA Index
+01/19/2012 08:30,US,1405),,CPI Core Index SA,Dec,--,227.166,226.836,226.856,29.9065,CPUPAXFE Index
+01/19/2012 08:30,US,1406),,Housing Starts,Dec,680K,657K,685K,708K,87.8505,NHSPSTOT Index
+01/19/2012 08:30,US,1407),,Housing Starts MOM%,Dec,-0.70%,-4.10%,9.30%,9.10%,16.8224,NHCHSTCH Index
+01/19/2012 08:30,US,1408),,Building Permits,Dec,679K,679K,681K,709K,61.4953,NHSPATOT Index
+01/19/2012 08:30,US,1409),,Building Permits MOM%,Dec,-0.20%,-0.10%,5.70%,5.60%,14.9533,NHCHATCH Index
+01/19/2012 08:30,US,1410),,Initial Jobless Claims,14-Jan,384K,352K,399K,402K,99.0654,INJCJC Index
+01/19/2012 08:30,US,1411),,Continuing Claims,7-Jan,3590K,3432K,3628K,3647K,69.3458,INJCSP Index
+01/19/2012 09:45,US,1412),,Bloomberg Consumer Comfort,15-Jan,--,-47.4,-44.7,--,60.7477,COMFCOMF Index
+01/19/2012 09:45,US,1413),,Bloomberg Economic Expectations,Jan,--,-19,-17,--,21.4953,COMFBTWR Index
+01/19/2012 10:00,US,1414),,Philadelphia Fed.,Jan,10.3,7.3,10.3,6.8,74.7664,OUTFGAF Index
+01/20/2012 10:00,US,1415),,Existing Home Sales,Dec,4.65M,4.61M,4.42M,4.40M,86.9159,ETSLTOTL Index
+01/20/2012 10:00,US,1416),,Existing Home Sales MoM,Dec,5.20%,5.00%,4.00%,1.90%,50.4673,ETSLMOM Index
+01/24/2012 10:00,US,1417),,Richmond Fed Manufact. Index,Jan,6,12,3,--,67.2897,RCHSINDX Index
+01/24/2012 21:00,US,1418),,2012 State of the Union Address,,,,,,0,
+01/25/2012 07:00,US,1419),,MBA Mortgage Applications,20-Jan,--,-5.00%,23.10%,--,94.4444,MBAVCHNG Index
+01/25/2012 10:00,US,1420),,House Price Index MoM,Nov,0.00%,1.00%,-0.20%,-0.90%,65.4206,HPIMMOM% Index
+01/25/2012 10:00,US,1421),,Pending Home Sales MoM,Dec,-1.00%,-3.50%,7.30%,4.60%,72.8972,USPHTMOM Index
+01/25/2012 10:00,US,1422),,Pending Home Sales YoY,Dec,--,4.40%,6.90%,6.90%,22.2222,USPHTYOY Index
+01/25/2012 12:30,US,1423),,FOMC Rate Decision,25-Jan,0.25%,0.25%,0.25%,--,97.1963,FDTR Index
+01/26/2012 08:30,US,1424),,Chicago Fed Nat Activity Index,Dec,-0.12,0.17,-0.37,-0.27,59.8131,CFNAI Index
+01/26/2012 08:30,US,1425),,Durable Goods Orders,Dec,2.00%,3.00%,3.80%,3.40%,90.6542,DGNOCHNG Index
+01/26/2012 08:30,US,1426),,Durables Ex Transportation,Dec,0.90%,2.10%,0.30%,-0.70%,72.5234,DGNOXTCH Index
+01/26/2012 08:30,US,1427),,Cap Goods Orders Nondef Ex Air,Dec,1.00%,2.90%,-1.20%,--,49.5327,CGNOXAI% Index
+01/26/2012 08:30,US,1428),,Cap Goods Ship Nondef Ex Air,Dec,1.00%,2.90%,-1.00%,--,42.9907,CGSHXAI% Index
+01/26/2012 08:30,US,1429),,Initial Jobless Claims,21-Jan,370K,377K,352K,355K,99.0654,INJCJC Index
+01/26/2012 08:30,US,1430),,Continuing Claims,14-Jan,3500K,3554K,3432K,3459K,69.3458,INJCSP Index
+01/26/2012 09:45,US,1431),,Revisions: Chicago Purchasing Managers Index,,,,,,0,
+01/26/2012 09:45,US,1432),,Bloomberg Consumer Comfort,22-Jan,-46,-46.4,-47.4,--,60.7477,COMFCOMF Index
+01/26/2012 10:00,US,1433),,Revisions: Leading Indicators,,,,,,0,
+01/26/2012 10:00,US,1434),,Leading Indicators,Dec,0.70%,0.40%,0.50%,0.30%,84.1121,LEI CHNG Index
+01/26/2012 10:00,US,1435),,New Home Sales,Dec,321K,307K,315K,327K,89.7196,NHSLTOT Index
+01/26/2012 10:00,US,1436),,New Home Sales MoM,Dec,1.90%,-2.20%,1.60%,4.10%,47.6636,NHSLCHNG Index
+01/26/2012 11:00,US,1437),,Revisions: Kansas City Fed. Manf. Activity,,,,,,0,
+01/26/2012 11:00,US,1438),,Kansas City Fed Manf. Activity,Jan,2,7,-4,-2,6.54206,KCLSSACI Index
+01/27/2012 08:30,US,1439),,GDP QoQ (Annualized),4Q A,3.00%,2.80%,1.80%,--,96.2617,GDP CQOQ Index
+01/27/2012 08:30,US,1440),,Personal Consumption,4Q A,2.40%,2.00%,1.70%,--,67.3832,GDPCTOT% Index
+01/27/2012 08:30,US,1441),,GDP Price Index,4Q A,1.90%,0.40%,2.60%,--,77.0093,GDP PIQQ Index
+01/27/2012 08:30,US,1442),,Core PCE QoQ,4Q A,0.90%,1.10%,2.10%,--,67.3832,GDPCPCEC Index
+01/27/2012 09:55,US,1443),,U. of Michigan Confidence,Jan F,74,75,74,--,92.5234,CONSSENT Index
+01/30/2012 08:30,US,1444),,Personal Income,Dec,0.40%,0.50%,0.10%,-0.20%,83.1776,PITLCHNG Index
+01/30/2012 08:30,US,1445),,Personal Spending,Dec,0.10%,0.00%,0.10%,0.10%,83.1776,PCE CRCH Index
+01/30/2012 08:30,US,1446),,PCE Deflator (YoY),Dec,2.30%,2.40%,2.50%,2.60%,32.7103,PCE DEFY Index
+01/30/2012 08:30,US,1447),,PCE Core (MoM),Dec,0.10%,0.20%,0.10%,--,58.2243,PCE CMOM Index
+01/30/2012 08:30,US,1448),,PCE Core (YoY),Dec,1.80%,1.80%,1.70%,1.70%,33.6449,PCE CYOY Index
+01/30/2012 10:30,US,1449),,Dallas Fed Manf. Activity,Jan,1.5,15.3,-3,-0.3,61.6822,DFEDGBA Index
+01/31/2012 08:30,US,1450),,Employment Cost Index,4Q,0.40%,0.40%,0.30%,--,71.028,ECI SA% Index
+01/31/2012 09:00,US,1451),,S&P/CaseShiller Home Price Ind,Nov,--,138.49,140.3,140.05,54.2056,SPCS20 Index
+01/31/2012 09:00,US,1452),,S&P/CS 20 City MoM% SA,Nov,-0.50%,-0.70%,-0.62%,-0.63%,15.8879,SPCS20SM Index
+01/31/2012 09:00,US,1453),,S&P/CS Composite-20 YoY,Nov,-3.30%,-3.67%,-3.40%,-3.57%,46.729,SPCS20Y% Index
+01/31/2012 09:45,US,1454),,Chicago Purchasing Manager,Jan,63,60.2,62.2,--,77.5701,CHPMINDX Index
+01/31/2012 10:00,US,1455),,Revisions: ISM's 2012 Seasonal Adjustments,,,,,,0,
+01/31/2012 10:00,US,1456),,Consumer Confidence,Jan,68,61.1,64.5,64.8,95.3271,CONCCONF Index
+02/01/2012 07:00,US,1457),,MBA Mortgage Applications,27-Jan,--,-2.90%,-5.00%,--,94.4444,MBAVCHNG Index
+02/01/2012 08:00,US,1458),,NAPM-Milwaukee,Jan,57.5,58.4,57.8,--,25.2336,MAPMINDX Index
+02/01/2012 08:15,US,1459),,ADP Employment Change,Jan,182K,170K,325K,267K,76.6355,ADP CHNG Index
+02/01/2012 10:00,US,1460),,Construction Spending MoM,Dec,0.50%,1.50%,1.20%,1.00%,78.5047,CNSTTMOM Index
+02/01/2012 10:00,US,1461),,ISM Manufacturing,Jan,54.5,54.1,53.9,53.1,94.3925,NAPMPMI Index
+02/01/2012 10:00,US,1462),,ISM Prices Paid,Jan,50,55.5,47.5,--,68.2243,NAPMPRIC Index
+02/01/2012 15:37,US,1463),,Total Vehicle Sales,Jan,13.50M,14.13M,13.52M,13.50M,38.3178,SAARTOTL Index
+02/01/2012 16:00,US,1464),,Domestic Vehicle Sales,Jan,10.50M,11.05M,10.45M,10.59M,30.8411,SAARDTOT Index
+02/02/2012 07:30,US,1465),,Challenger Job Cuts YoY,Jan,--,38.90%,30.60%,--,28.972,CHALYOY% Index
+02/02/2012 08:00,US,1466),,RBC Consumer Outlook Index,Feb,--,45.1,45.8,--,8.41121,ICSHNATL Index
+02/02/2012 08:30,US,1467),,Nonfarm Productivity,4Q P,0.80%,0.70%,2.30%,1.90%,35.514,PRODNFR% Index
+02/02/2012 08:30,US,1468),,Unit Labor Costs,4Q P,0.80%,1.20%,-2.50%,-2.10%,28.0374,COSTNFR% Index
+02/02/2012 08:30,US,1469),,Initial Jobless Claims,28-Jan,371K,367K,377K,379K,99.0654,INJCJC Index
+02/02/2012 08:30,US,1470),,Continuing Claims,21-Jan,3535K,3437K,3554K,3567K,69.3458,INJCSP Index
+02/02/2012 09:45,US,1471),,Revisions: ISM NY,,,,,,0,
+02/02/2012 09:45,US,1472),,ISM New York,Jan,--,60.1,51.1,51.7,5.60748,NYPMCURR Index
+02/02/2012 09:45,US,1473),,Bloomberg Consumer Comfort,29-Jan,-45,-44.8,-46.4,--,60.7477,COMFCOMF Index
+02/02/2012 12:04,US,1474),,ICSC Chain Store Sales YoY,Jan,--,4.80%,3.50%,--,18.6916,MBRXYOYW Index
+02/03/2012 08:30,US,1475),,Revisions: Establishment Employment Survey Annual Revisions,,,,,,0,
+02/03/2012 08:30,US,1476),,Change in Nonfarm Payrolls,Jan,140K,243K,200K,223K,98.1308,NFP TCH Index
+02/03/2012 08:30,US,1477),,Change in Private Payrolls,Jan,160K,257K,212K,234K,17.757,NFP PCH Index
+02/03/2012 08:30,US,1478),,Change in Manufact. Payrolls,Jan,12K,50K,23K,28K,68.6916,USMMMNCH Index
+02/03/2012 08:30,US,1479),,Unemployment Rate,Jan,8.50%,8.30%,8.50%,--,88.3178,USURTOT Index
+02/03/2012 08:30,US,1480),,Avg Hourly Earning MOM All Emp,Jan,0.20%,0.20%,0.20%,0.10%,14.0187,AHE MOM% Index
+02/03/2012 08:30,US,1481),,Avg Hourly Earning YOY All Emp,Jan,1.90%,1.90%,2.10%,--,13.0841,AHE YOY% Index
+02/03/2012 08:30,US,1482),,Avg Weekly Hours All Employees,Jan,34.4,34.5,34.4,34.4,12.1495,AWH TOTL Index
+02/03/2012 08:30,US,1483),,Change in Household Employment,Jan,--,847,176,--,9.34579,USEMNCHG Index
+02/03/2012 08:30,US,1484),,Underemployment Rate (U6),Jan,--,15.10%,15.20%,--,7.47664,USUDMAER Index
+02/03/2012 10:00,US,1485),,ISM Non-Manf. Composite,Jan,53.2,56.8,52.6,53,70.0935,NAPMNMI Index
+02/03/2012 10:00,US,1486),,Factory Orders,Dec,1.50%,1.10%,1.80%,1.70%,82.243,TMNOCHNG Index
+02/07/2012 10:00,US,1487),,IBD/TIPP Economic Optimism,Feb,48.6,49.4,47.5,--,0,ECONUSIB Index
+02/07/2012 10:00,US,1488),,JOLTs Job Openings,Dec,3250,3376,3161,3118,10.2804,JOLTTOTL Index
+02/07/2012 15:00,US,1489),,Consumer Credit,Dec,$7.000B,$19.308B,$20.374B,$17.972B,37.3832,CICRTOT Index
+02/08/2012 07:00,US,1490),,MBA Mortgage Applications,3-Feb,--,7.50%,-2.90%,--,94.4444,MBAVCHNG Index
+02/09/2012 08:30,US,1491),,Initial Jobless Claims,4-Feb,370K,358K,367K,373K,99.0654,INJCJC Index
+02/09/2012 08:30,US,1492),,Continuing Claims,28-Jan,3500K,3515K,3437K,3451K,69.3458,INJCSP Index
+02/09/2012 09:45,US,1493),,Bloomberg Consumer Comfort,5-Feb,--,-41.7,-44.8,--,60.7477,COMFCOMF Index
+02/09/2012 10:00,US,1494),,Wholesale Inventories,Dec,0.40%,1.00%,0.10%,0.10%,79.4393,MWINCHNG Index
+02/10/2012 08:30,US,1495),,Trade Balance,Dec,-$48.5B,-$48.8B,-$47.8B,-$48.8B,81.3084,USTBTOT Index
+02/10/2012 09:55,US,1496),,U. of Michigan Confidence,Feb P,74.8,72.5,75,--,92.5234,CONSSENT Index
+02/10/2012 14:00,US,1497),,Monthly Budget Statement,Jan,-$31.6B,-$27.4B,-$49.8B,-$86.0B,73.8318,FDDSSD Index
+02/14/2012 07:30,US,1498),,NFIB Small Business Optimism,Jan,95,93.9,93.8,--,56.0748,SBOITOTL Index
+02/14/2012 08:30,US,1499),,Import Price Index (MoM),Jan,0.30%,0.30%,-0.10%,0.00%,75.7009,IMP1CHNG Index
+02/14/2012 08:30,US,1500),,Import Price Index (YoY),Jan,7.20%,7.10%,8.50%,--,27.1028,IMP1YOY% Index
+02/14/2012 08:30,US,1501),,Advance Retail Sales,Jan,0.80%,0.40%,0.10%,0.00%,88.785,RSTAMOM Index
+02/14/2012 08:30,US,1502),,Retail Sales Less Autos,Jan,0.50%,0.70%,-0.20%,-0.30%,62.1495,RSTAXMOM Index
+02/14/2012 08:30,US,1503),,Retail Sales Ex Auto & Gas,Jan,0.50%,0.60%,0.00%,0.00%,58.8785,RSTAXAG% Index
+02/14/2012 08:30,US,1504),,"Retail Sales ""Control Group""",Jan,0.40%,0.70%,--,-0.30%,4.6729,RSTAXAGM Index
+02/14/2012 10:00,US,1505),,Business Inventories,Dec,0.50%,0.40%,0.30%,--,34.5794,MTIBCHNG Index
+02/14/2012,US,1506),,Revisions: Producer Price Index,,,,,,0,
+02/15/2012 07:00,US,1507),,MBA Mortgage Applications,10-Feb,--,-1.00%,7.50%,--,94.4444,MBAVCHNG Index
+02/15/2012 08:30,US,1508),,Empire Manufacturing,Feb,15,19.53,13.48,--,80.3738,EMPRGBCI Index
+02/15/2012 08:30,US,1509),,Revisions: Consumer Price Index,,,,,,0,
+02/15/2012 09:00,US,1510),,Total Net TIC Flows,Dec,--,$87.1B,$48.6B,$49.0B,63.5514,FRNTTNET Index
+02/15/2012 09:00,US,1511),,Net Long-term TIC Flows,Dec,$45.0B,$17.9B,$59.8B,$68.0B,71.9626,FRNTTOTL Index
+02/15/2012 09:15,US,1512),,Industrial Production,Jan,0.70%,0.00%,0.40%,0.90%,85.9813,IP CHNG Index
+02/15/2012 09:15,US,1513),,Capacity Utilization,Jan,78.60%,78.50%,78.10%,78.30%,60.1869,CPTICHNG Index
+02/15/2012 10:00,US,1514),,NAHB Housing Market Index,Feb,26,29,25,--,36.4486,USHBMIDX Index
+02/15/2012 14:00,US,1515),,Minutes of FOMC Meeting,,,,,,0,
+02/16/2012 08:30,US,1516),,Producer Price Index (MoM),Jan,0.40%,0.10%,-0.10%,-0.10%,85.0467,PPI CHNG Index
+02/16/2012 08:30,US,1517),,PPI Ex Food & Energy (MoM),Jan,0.20%,0.40%,0.30%,0.20%,68.0374,PXFECHNG Index
+02/16/2012 08:30,US,1518),,Producer Price Index (YoY),Jan,4.10%,4.10%,4.80%,4.70%,66.3551,PPI YOY Index
+02/16/2012 08:30,US,1519),,PPI Ex Food & Energy (YoY),Jan,2.70%,3.00%,3.00%,--,64.486,PPI XYOY Index
+02/16/2012 08:30,US,1520),,Initial Jobless Claims,11-Feb,365K,348K,358K,361K,99.0654,INJCJC Index
+02/16/2012 08:30,US,1521),,Continuing Claims,4-Feb,3495K,3426K,3515K,3526K,69.3458,INJCSP Index
+02/16/2012 08:30,US,1522),,Housing Starts,Jan,675K,699K,657K,697K,87.8505,NHSPSTOT Index
+02/16/2012 08:30,US,1523),,Housing Starts MOM%,Jan,-3.40%,1.50%,-4.10%,-1.90%,16.8224,NHCHSTCH Index
+02/16/2012 08:30,US,1524),,Building Permits,Jan,680K,676K,679K,701K,61.4953,NHSPATOT Index
+02/16/2012 08:30,US,1525),,Building Permits MOM%,Jan,0.60%,0.70%,-0.10%,-1.30%,14.9533,NHCHATCH Index
+02/16/2012 09:45,US,1526),,Bloomberg Consumer Comfort,12-Feb,-42,-39.8,-41.7,--,60.7477,COMFCOMF Index
+02/16/2012 09:45,US,1527),,Bloomberg Economic Expectations,Feb,--,-7,-19,--,21.4953,COMFBTWR Index
+02/16/2012 10:00,US,1528),,Mortgage Delinquencies,4Q,--,7.58%,7.99%,--,33.3333,DLQTDLQT Index
+02/16/2012 10:00,US,1529),,MBA Mortgage Foreclosures,4Q,--,4.38%,4.43%,--,11.215,FORLTOTL Index
+02/16/2012 10:00,US,1530),,Philadelphia Fed.,Feb,9,10.2,7.3,--,74.7664,OUTFGAF Index
+02/17/2012 08:30,US,1531),,Consumer Price Index (MoM),Jan,0.30%,0.20%,0.00%,--,93.4579,CPI CHNG Index
+02/17/2012 08:30,US,1532),,CPI Ex Food & Energy (MoM),Jan,0.20%,0.20%,0.10%,--,74.7664,CPUPXCHG Index
+02/17/2012 08:30,US,1533),,Consumer Price Index (YoY),Jan,2.90%,2.90%,3.00%,--,55.1402,CPI YOY Index
+02/17/2012 08:30,US,1534),,CPI Ex Food & Energy (YoY),Jan,2.20%,2.30%,2.20%,--,44.8598,CPI XYOY Index
+02/17/2012 08:30,US,1535),,Consumer Price Index NSA,Jan,226.573,226.665,225.672,--,26.1682,CPURNSA Index
+02/17/2012 08:30,US,1536),,CPI Core Index SA,Jan,--,227.684,227.166,227.188,29.9065,CPUPAXFE Index
+02/17/2012 10:00,US,1537),,Leading Indicators,Jan,0.50%,0.40%,0.40%,0.60%,84.1121,LEI CHNG Index
+02/21/2012 08:30,US,1538),,Chicago Fed Nat Activity Index,Jan,0.21,0.22,0.17,0.65,59.8131,CFNAI Index
+02/22/2012 07:00,US,1539),,MBA Mortgage Applications,17-Feb,--,-4.50%,-1.00%,--,94.4444,MBAVCHNG Index
+02/22/2012 10:00,US,1540),,Revisions: Existing Home Sales,,,,,,0,
+02/22/2012 10:00,US,1541),,Existing Home Sales,Jan,4.66M,4.57M,4.61M,4.38M,86.9159,ETSLTOTL Index
+02/22/2012 10:00,US,1542),,Existing Home Sales MoM,Jan,1.10%,4.30%,5.00%,-0.50%,50.4673,ETSLMOM Index
+02/23/2012 08:30,US,1543),,Initial Jobless Claims,18-Feb,355K,351K,348K,351K,99.0654,INJCJC Index
+02/23/2012 08:30,US,1544),,Continuing Claims,11-Feb,3455K,3392K,3426K,3444K,69.3458,INJCSP Index
+02/23/2012 09:45,US,1545),,Bloomberg Consumer Comfort,19-Feb,--,-38.4,-39.8,--,60.7477,COMFCOMF Index
+02/23/2012 10:00,US,1546),,House Price Index MoM,Dec,0.10%,0.70%,1.00%,0.70%,65.4206,HPIMMOM% Index
+02/23/2012 10:00,US,1547),,House Price Purchase Index QoQ,4Q,0.20%,-0.10%,0.20%,0.40%,20.5607,HPI PURQ Index
+02/23/2012 11:00,US,1548),,Kansas City Fed Manf. Activity,Feb,9,13,7,--,6.54206,KCLSSACI Index
+02/24/2012 09:55,US,1549),,U. of Michigan Confidence,Feb F,73,75.3,72.5,--,92.5234,CONSSENT Index
+02/24/2012 10:00,US,1550),,New Home Sales,Jan,315K,321K,307K,339K,89.7196,NHSLTOT Index
+02/24/2012 10:00,US,1551),,New Home Sales MoM,Jan,2.60%,-0.90%,-2.20%,3.70%,47.6636,NHSLCHNG Index
+02/27/2012 10:00,US,1552),,Pending Home Sales MoM,Jan,1.00%,2.00%,-3.50%,-1.90%,72.8972,USPHTMOM Index
+02/27/2012 10:00,US,1553),,Pending Home Sales YoY,Jan,10.70%,10.30%,4.40%,--,22.2222,USPHTYOY Index
+02/27/2012 10:30,US,1554),,Dallas Fed Manf. Activity,Feb,15.8,17.8,15.3,--,61.6822,DFEDGBA Index
+02/28/2012 08:30,US,1555),,Durable Goods Orders,Jan,-1.00%,-4.00%,3.00%,5.10%,90.6542,DGNOCHNG Index
+02/28/2012 08:30,US,1556),,Durables Ex Transportation,Jan,0.00%,-3.20%,2.10%,4.10%,72.5234,DGNOXTCH Index
+02/28/2012 08:30,US,1557),,Cap Goods Orders Nondef Ex Air,Jan,-1.30%,-4.50%,2.90%,3.40%,49.5327,CGNOXAI% Index
+02/28/2012 08:30,US,1558),,Cap Goods Ship Nondef Ex Air,Jan,-0.90%,-3.10%,2.90%,2.80%,42.9907,CGSHXAI% Index
+02/28/2012 09:00,US,1559),,S&P/CS 20 City MoM% SA,Dec,-0.35%,-0.50%,-0.70%,-0.67%,15.8879,SPCS20SM Index
+02/28/2012 09:00,US,1560),,S&P/CS Composite-20 YoY,Dec,-3.65%,-3.99%,-3.67%,-3.88%,46.729,SPCS20Y% Index
+02/28/2012 09:00,US,1561),,S&P/Case-Shiller US HPI YOY%,4Q,-4.30%,-4.03%,-3.90%,-3.49%,23.3645,SPCSUSAY Index
+02/28/2012 09:00,US,1562),,S&P/CaseShiller Home Price Ind,Dec,137.11,136.71,138.49,138.19,54.2056,SPCS20 Index
+02/28/2012 09:00,US,1563),,S&P/Case-Shiller US HPI,4Q,--,125.67,130.39,130.95,27.7778,SPCSUSA Index
+02/28/2012 10:00,US,1564),,Consumer Confidence,Feb,63,70.8,61.1,61.1,95.3271,CONCCONF Index
+02/28/2012 10:00,US,1565),,Richmond Fed Manufact. Index,Feb,14,20,12,9,67.2897,RCHSINDX Index
+02/29/2012 07:00,US,1566),,MBA Mortgage Applications,24-Feb,--,-0.30%,-4.50%,--,94.4444,MBAVCHNG Index
+02/29/2012 08:30,US,1567),,GDP QoQ (Annualized),4Q S,2.80%,3.00%,2.80%,4.10%,96.2617,GDP CQOQ Index
+02/29/2012 08:30,US,1568),,Personal Consumption,4Q S,1.90%,2.10%,2.00%,2.00%,67.3832,GDPCTOT% Index
+02/29/2012 08:30,US,1569),,GDP Price Index,4Q S,0.40%,0.90%,0.40%,0.40%,77.0093,GDP PIQQ Index
+02/29/2012 08:30,US,1570),,Core PCE QoQ,4Q S,1.10%,1.30%,1.10%,1.30%,67.3832,GDPCPCEC Index
+02/29/2012 09:45,US,1571),,Chicago Purchasing Manager,Feb,61,64,60.2,--,77.5701,CHPMINDX Index
+02/29/2012 10:15,US,1572),,NAPM-Milwaukee,Feb,58.8,58.6,58.4,--,25.2336,MAPMINDX Index
+02/29/2012 14:00,US,1573),,Fed's Beige Book,,,,,,0,
+03/01/2012 08:30,US,1574),,Personal Income,Jan,0.50%,0.30%,0.50%,0.30%,83.1776,PITLCHNG Index
+03/01/2012 08:30,US,1575),,Personal Spending,Jan,0.40%,0.20%,0.00%,0.10%,83.1776,PCE CRCH Index
+03/01/2012 08:30,US,1576),,PCE Deflator (YoY),Jan,2.30%,2.40%,2.40%,2.40%,32.7103,PCE DEFY Index
+03/01/2012 08:30,US,1577),,PCE Core (MoM),Jan,0.20%,0.20%,0.20%,0.20%,58.2243,PCE CMOM Index
+03/01/2012 08:30,US,1578),,PCE Core (YoY),Jan,1.80%,1.90%,1.80%,1.90%,33.6449,PCE CYOY Index
+03/01/2012 08:30,US,1579),,Initial Jobless Claims,25-Feb,355K,351K,351K,353K,99.0654,INJCJC Index
+03/01/2012 08:30,US,1580),,Continuing Claims,18-Feb,3418K,3402K,3392K,3404K,69.3458,INJCSP Index
+03/01/2012 09:45,US,1581),,Bloomberg Consumer Comfort,26-Feb,--,-38.8,-38.4,--,60.7477,COMFCOMF Index
+03/01/2012 10:00,US,1582),,Construction Spending MoM,Jan,1.00%,-0.10%,1.50%,2.10%,78.5047,CNSTTMOM Index
+03/01/2012 10:00,US,1583),,ISM Manufacturing,Feb,54.5,52.4,54.1,--,94.3925,NAPMPMI Index
+03/01/2012 10:00,US,1584),,ISM Prices Paid,Feb,58,61.5,55.5,--,68.2243,NAPMPRIC Index
+03/01/2012 10:54,US,1585),,ICSC Chain Store Sales YoY,Feb,3.50%,4.10%,4.80%,2.70%,18.6916,MBRXYOYW Index
+03/01/2012 17:00,US,1586),,Total Vehicle Sales,Feb,14.00M,15.03M,14.13M,13.90M,38.3178,SAARTOTL Index
+03/01/2012 17:00,US,1587),,Domestic Vehicle Sales,Feb,11.00M,11.70M,11.05M,10.88M,30.8411,SAARDTOT Index
+03/02/2012 09:45,US,1588),,ISM New York,Feb,--,63.1,60.1,--,5.60748,NYPMCURR Index
+03/05/2012 10:00,US,1589),,ISM Non-Manf. Composite,Feb,56,57.3,56.8,--,70.0935,NAPMNMI Index
+03/05/2012 10:00,US,1590),,Factory Orders,Jan,-1.50%,-1.00%,1.10%,2.10%,82.243,TMNOCHNG Index
+03/07/2012 07:00,US,1591),,MBA Mortgage Applications,2-Mar,--,-1.20%,-0.30%,--,94.4444,MBAVCHNG Index
+03/07/2012 08:15,US,1592),,ADP Employment Change,Feb,215K,216K,170K,182K,76.6355,ADP CHNG Index
+03/07/2012 08:30,US,1593),,Nonfarm Productivity,4Q F,0.80%,0.90%,0.70%,2.80%,35.514,PRODNFR% Index
+03/07/2012 08:30,US,1594),,Unit Labor Costs,4Q F,1.20%,2.80%,1.20%,-3.30%,28.0374,COSTNFR% Index
+03/07/2012 15:00,US,1595),,Consumer Credit,Jan,$10.450B,$17.776B,$19.308B,$16.240B,37.3832,CICRTOT Index
+03/07/2012,US,1596),,Revisions: ADP national Employment Report,,,,,,0,
+03/08/2012 07:30,US,1597),,Challenger Job Cuts YoY,Feb,--,2.00%,38.90%,--,28.972,CHALYOY% Index
+03/08/2012 08:00,US,1598),,RBC Consumer Outlook Index,Mar,--,47.5,45.1,--,8.41121,ICSHNATL Index
+03/08/2012 08:30,US,1599),,Initial Jobless Claims,3-Mar,352K,362K,351K,354K,99.0654,INJCJC Index
+03/08/2012 08:30,US,1600),,Continuing Claims,25-Feb,3400K,3416K,3402K,3406K,69.3458,INJCSP Index
+03/08/2012 09:45,US,1601),,Bloomberg Consumer Comfort,4-Mar,-39,-36.7,-38.8,--,60.7477,COMFCOMF Index
+03/09/2012 08:30,US,1602),,Trade Balance,Jan,-$49.0B,-$52.6B,-$48.8B,-$51.7B,81.3084,USTBTOT Index
+03/09/2012 08:30,US,1603),,Change in Nonfarm Payrolls,Feb,210K,227K,243K,275K,98.1308,NFP TCH Index
+03/09/2012 08:30,US,1604),,Change in Private Payrolls,Feb,225K,233K,257K,277K,17.757,NFP PCH Index
+03/09/2012 08:30,US,1605),,Change in Manufact. Payrolls,Feb,24K,31K,50K,52K,68.6916,USMMMNCH Index
+03/09/2012 08:30,US,1606),,Unemployment Rate,Feb,8.30%,8.30%,8.30%,--,88.3178,USURTOT Index
+03/09/2012 08:30,US,1607),,Avg Hourly Earning MOM All Emp,Feb,0.20%,0.10%,0.20%,0.10%,14.0187,AHE MOM% Index
+03/09/2012 08:30,US,1608),,Avg Hourly Earning YOY All Emp,Feb,2.00%,1.90%,1.90%,1.80%,13.0841,AHE YOY% Index
+03/09/2012 08:30,US,1609),,Avg Weekly Hours All Employees,Feb,34.5,34.5,34.5,--,12.1495,AWH TOTL Index
+03/09/2012 08:30,US,1610),,Change in Household Employment,Feb,--,428,847,--,9.34579,USEMNCHG Index
+03/09/2012 08:30,US,1611),,Underemployment Rate (U6),Feb,--,14.90%,15.10%,--,7.47664,USUDMAER Index
+03/09/2012 10:00,US,1612),,Wholesale Inventories,Jan,0.60%,0.40%,1.00%,1.20%,79.4393,MWINCHNG Index
+03/12/2012 14:00,US,1613),,Monthly Budget Statement,Feb,-$229.0B,-$231.7B,-$222.5B,-$27.4B,73.8318,FDDSSD Index
+03/13/2012 07:30,US,1614),,NFIB Small Business Optimism,Feb,94.5,94.3,93.9,--,56.0748,SBOITOTL Index
+03/13/2012 08:30,US,1615),,Advance Retail Sales,Feb,1.10%,1.10%,0.40%,0.60%,88.785,RSTAMOM Index
+03/13/2012 08:30,US,1616),,Retail Sales Less Autos,Feb,0.70%,0.90%,0.70%,1.10%,62.1495,RSTAXMOM Index
+03/13/2012 08:30,US,1617),,Retail Sales Ex Auto & Gas,Feb,0.50%,0.60%,0.60%,1.00%,58.8785,RSTAXAG% Index
+03/13/2012 08:30,US,1618),,"Retail Sales ""Control Group""",Feb,0.50%,0.50%,0.70%,1.00%,4.6729,RSTAXAGM Index
+03/13/2012 10:00,US,1619),,IBD/TIPP Economic Optimism,Mar,50,47.5,49.4,--,0,ECONUSIB Index
+03/13/2012 10:00,US,1620),,JOLTs Job Openings,Jan,3334,3459,3376,3540,10.2804,JOLTTOTL Index
+03/13/2012 10:00,US,1621),,Business Inventories,Jan,0.50%,0.70%,0.40%,0.50%,34.5794,MTIBCHNG Index
+03/13/2012 14:15,US,1622),,FOMC Rate Decision,13-Mar,0.25%,0.25%,0.25%,--,97.1963,FDTR Index
+03/14/2012 07:00,US,1623),,MBA Mortgage Applications,9-Mar,--,-2.40%,-1.20%,--,94.4444,MBAVCHNG Index
+03/14/2012 08:30,US,1624),,Import Price Index (MoM),Feb,0.60%,0.40%,0.30%,0.00%,75.7009,IMP1CHNG Index
+03/14/2012 08:30,US,1625),,Import Price Index (YoY),Feb,5.80%,5.50%,7.10%,6.90%,27.1028,IMP1YOY% Index
+03/14/2012 08:30,US,1626),,Current Account Balance,4Q,-$115.0B,-$124.1B,-$110.3B,-$108.2B,69.1589,USCABAL Index
+03/15/2012 08:30,US,1627),,Empire Manufacturing,Mar,17.5,20.21,19.53,--,80.3738,EMPRGBCI Index
+03/15/2012 08:30,US,1628),,Producer Price Index (MoM),Feb,0.50%,0.40%,0.10%,0.30%,85.0467,PPI CHNG Index
+03/15/2012 08:30,US,1629),,PPI Ex Food & Energy (MoM),Feb,0.20%,0.20%,0.40%,0.60%,68.0374,PXFECHNG Index
+03/15/2012 08:30,US,1630),,Producer Price Index (YoY),Feb,3.30%,3.30%,4.10%,--,66.3551,PPI YOY Index
+03/15/2012 08:30,US,1631),,PPI Ex Food & Energy (YoY),Feb,2.90%,3.00%,3.00%,3.10%,64.486,PPI XYOY Index
+03/15/2012 08:30,US,1632),,Initial Jobless Claims,10-Mar,357K,351K,362K,365K,99.0654,INJCJC Index
+03/15/2012 08:30,US,1633),,Continuing Claims,3-Mar,3405K,3343K,3416K,3424K,69.3458,INJCSP Index
+03/15/2012 09:00,US,1634),,Total Net TIC Flows,Jan,$40.0B,$18.8B,$87.1B,$100.3B,63.5514,FRNTTNET Index
+03/15/2012 09:00,US,1635),,Net Long-term TIC Flows,Jan,$38.5B,$101.0B,$17.9B,$20.9B,71.9626,FRNTTOTL Index
+03/15/2012 09:45,US,1636),,Bloomberg Consumer Comfort,11-Mar,-36,-33.7,-36.7,--,60.7477,COMFCOMF Index
+03/15/2012 10:00,US,1637),,Philadelphia Fed.,Mar,12,12.5,10.2,--,74.7664,OUTFGAF Index
+03/16/2012 08:30,US,1638),,Consumer Price Index (MoM),Feb,0.40%,0.40%,0.20%,--,93.4579,CPI CHNG Index
+03/16/2012 08:30,US,1639),,CPI Ex Food & Energy (MoM),Feb,0.20%,0.10%,0.20%,--,74.7664,CPUPXCHG Index
+03/16/2012 08:30,US,1640),,Consumer Price Index (YoY),Feb,2.90%,2.90%,2.90%,--,55.1402,CPI YOY Index
+03/16/2012 08:30,US,1641),,CPI Ex Food & Energy (YoY),Feb,2.20%,2.20%,2.30%,--,44.8598,CPI XYOY Index
+03/16/2012 08:30,US,1642),,Consumer Price Index NSA,Feb,227.954,227.663,226.665,--,26.1682,CPURNSA Index
+03/16/2012 08:30,US,1643),,CPI Core Index SA,Feb,--,227.907,227.684,--,29.9065,CPUPAXFE Index
+03/16/2012 09:15,US,1644),,Industrial Production,Feb,0.40%,0.00%,0.00%,0.70%,85.9813,IP CHNG Index
+03/16/2012 09:15,US,1645),,Capacity Utilization,Feb,78.80%,78.70%,78.50%,78.70%,60.1869,CPTICHNG Index
+03/16/2012 09:55,US,1646),,U. of Michigan Confidence,Mar P,76,74.3,75.3,--,92.5234,CONSSENT Index
+03/19/2012 10:00,US,1647),,NAHB Housing Market Index,Mar,30,28,29,28,36.4486,USHBMIDX Index
+03/20/2012 08:30,US,1648),,Housing Starts,Feb,700K,698K,699K,720K,87.8505,NHSPSTOT Index
+03/20/2012 08:30,US,1649),,Housing Starts MOM%,Feb,0.10%,-1.10%,1.50%,3.70%,16.8224,NHCHSTCH Index
+03/20/2012 08:30,US,1650),,Building Permits,Feb,686K,717K,676K,684K,61.4953,NHSPATOT Index
+03/20/2012 08:30,US,1651),,Building Permits MOM%,Feb,0.60%,5.10%,0.70%,1.60%,14.9533,NHCHATCH Index
+03/21/2012 07:00,US,1652),,MBA Mortgage Applications,16-Mar,--,-7.40%,-2.40%,--,94.4444,MBAVCHNG Index
+03/21/2012 10:00,US,1653),,Existing Home Sales,Feb,4.61M,4.59M,4.57M,4.63M,86.9159,ETSLTOTL Index
+03/21/2012 10:00,US,1654),,Existing Home Sales MoM,Feb,0.90%,-0.90%,4.30%,5.70%,50.4673,ETSLMOM Index
+03/22/2012 08:30,US,1655),,Initial Jobless Claims,17-Mar,350K,348K,351K,353K,99.0654,INJCJC Index
+03/22/2012 08:30,US,1656),,Continuing Claims,10-Mar,3380K,3352K,3343K,3361K,69.3458,INJCSP Index
+03/22/2012 09:45,US,1657),,Bloomberg Consumer Comfort,18-Mar,--,-34.9,-33.7,--,60.7477,COMFCOMF Index
+03/22/2012 09:45,US,1658),,Bloomberg Economic Expectations,Mar,--,1,-7,--,21.4953,COMFBTWR Index
+03/22/2012 10:00,US,1659),,House Price Index MoM,Jan,0.30%,0.00%,0.70%,0.20%,65.4206,HPIMMOM% Index
+03/22/2012 10:00,US,1660),,Leading Indicators,Feb,0.60%,0.70%,0.40%,0.00%,84.1121,LEI CHNG Index
+03/23/2012 10:00,US,1661),,New Home Sales,Feb,325K,313K,321K,339K,89.7196,NHSLTOT Index
+03/23/2012 10:00,US,1662),,New Home Sales MoM,Feb,1.30%,-1.60%,-0.90%,0.00%,47.6636,NHSLCHNG Index
+03/26/2012 08:30,US,1663),,Chicago Fed Nat Activity Index,Feb,0,-0.09,0.22,0.38,59.8131,CFNAI Index
+03/26/2012 10:00,US,1664),,Pending Home Sales MoM,Feb,1.00%,-0.50%,2.00%,--,72.8972,USPHTMOM Index
+03/26/2012 10:00,US,1665),,Pending Home Sales YoY,Feb,9.70%,13.90%,10.30%,--,22.2222,USPHTYOY Index
+03/26/2012 10:30,US,1666),,Dallas Fed Manf. Activity,Mar,17,10.8,17.8,--,61.6822,DFEDGBA Index
+03/27/2012 09:00,US,1667),,S&P/CS 20 City MoM% SA,Jan,-0.30%,-0.04%,-0.50%,-0.48%,15.8879,SPCS20SM Index
+03/27/2012 09:00,US,1668),,S&P/CS Composite-20 YoY,Jan,-3.80%,-3.78%,-3.99%,-4.07%,46.729,SPCS20Y% Index
+03/27/2012 09:00,US,1669),,S&P/CaseShiller Home Price Ind,Jan,135.8,135.46,136.71,136.6,54.2056,SPCS20 Index
+03/27/2012 10:00,US,1670),,Consumer Confidence,Mar,70,70.2,70.8,71.6,95.3271,CONCCONF Index
+03/27/2012 10:00,US,1671),,Richmond Fed Manufact. Index,Mar,18,7,20,12,67.2897,RCHSINDX Index
+03/28/2012 07:00,US,1672),,MBA Mortgage Applications,23-Mar,--,-2.70%,-7.40%,--,94.4444,MBAVCHNG Index
+03/28/2012 08:30,US,1673),,Durable Goods Orders,Feb,3.00%,2.20%,-4.00%,-4.90%,90.6542,DGNOCHNG Index
+03/28/2012 08:30,US,1674),,Durables Ex Transportation,Feb,1.70%,1.60%,-3.20%,-4.10%,72.5234,DGNOXTCH Index
+03/28/2012 08:30,US,1675),,Cap Goods Orders Nondef Ex Air,Feb,1.50%,1.20%,-4.50%,-3.70%,49.5327,CGNOXAI% Index
+03/28/2012 08:30,US,1676),,Cap Goods Ship Nondef Ex Air,Feb,0.90%,1.40%,-3.10%,-3.00%,42.9907,CGSHXAI% Index
+03/29/2012 08:30,US,1677),,GDP QoQ (Annualized),4Q T,3.00%,3.00%,3.00%,--,96.2617,GDP CQOQ Index
+03/29/2012 08:30,US,1678),,Personal Consumption,4Q T,2.10%,2.10%,2.10%,--,67.3832,GDPCTOT% Index
+03/29/2012 08:30,US,1679),,GDP Price Index,4Q T,0.90%,0.90%,0.90%,--,77.0093,GDP PIQQ Index
+03/29/2012 08:30,US,1680),,Core PCE QoQ,4Q T,1.30%,1.30%,1.30%,--,67.3832,GDPCPCEC Index
+03/29/2012 08:30,US,1681),,Initial Jobless Claims,24-Mar,350K,359K,348K,364K,99.0654,INJCJC Index
+03/29/2012 08:30,US,1682),,Continuing Claims,17-Mar,3350K,3340K,3352K,3381K,69.3458,INJCSP Index
+03/29/2012 09:45,US,1683),,Bloomberg Consumer Comfort,25-Mar,--,-34.7,-34.9,--,60.7477,COMFCOMF Index
+03/29/2012 11:00,US,1684),,Kansas City Fed Manf. Activity,Mar,13,9,13,--,6.54206,KCLSSACI Index
+03/30/2012 08:30,US,1685),,Personal Income,Feb,0.40%,0.20%,0.30%,0.90%,83.1776,PITLCHNG Index
+03/30/2012 08:30,US,1686),,Personal Spending,Feb,0.60%,0.80%,0.20%,0.50%,83.1776,PCE CRCH Index
+03/30/2012 08:30,US,1687),,PCE Deflator (MoM),Feb,0.30%,0.30%,0.20%,--,3.73832,PCE DEFM Index
+03/30/2012 08:30,US,1688),,PCE Deflator (YoY),Feb,2.30%,2.30%,2.40%,--,32.7103,PCE DEFY Index
+03/30/2012 08:30,US,1689),,PCE Core (MoM),Feb,0.10%,0.10%,0.20%,0.30%,58.2243,PCE CMOM Index
+03/30/2012 08:30,US,1690),,PCE Core (YoY),Feb,1.90%,1.90%,1.90%,1.90%,33.6449,PCE CYOY Index
+03/30/2012 09:45,US,1691),,Chicago Purchasing Manager,Mar,63,62.2,64,--,77.5701,CHPMINDX Index
+03/30/2012 09:55,US,1692),,U. of Michigan Confidence,Mar F,74.5,76.2,74.3,--,92.5234,CONSSENT Index
+03/30/2012 10:00,US,1693),,"Revisions: Wholesale Trade Sales, Inventories",,,,,,0,
+03/30/2012 10:23,US,1694),,NAPM-Milwaukee,Mar,58,51.8,58.6,--,25.2336,MAPMINDX Index
+03/30/2012 12:00,US,1695),,Revisions: Industrial Production,,,,,,0,
+04/02/2012 10:00,US,1696),,Construction Spending MoM,Feb,0.60%,-1.10%,-0.10%,0.50%,78.5047,CNSTTMOM Index
+04/02/2012 10:00,US,1697),,ISM Manufacturing,Mar,53,53.4,52.4,--,94.3925,NAPMPMI Index
+04/02/2012 10:00,US,1698),,ISM Prices Paid,Mar,63,61,61.5,--,68.2243,NAPMPRIC Index
+04/03/2012 09:45,US,1699),,ISM New York,Mar,--,67.4,63.1,--,5.60748,NYPMCURR Index
+04/03/2012 10:00,US,1700),,Factory Orders,Feb,1.50%,1.30%,-1.00%,-2.00%,82.243,TMNOCHNG Index
+04/03/2012 14:00,US,1701),,Minutes of FOMC Meeting,,,,,,0,
+04/03/2012 17:00,US,1702),,Total Vehicle Sales,Mar,14.60M,14.32M,15.03M,14.40M,38.3178,SAARTOTL Index
+04/03/2012 17:00,US,1703),,Domestic Vehicle Sales,Mar,11.30M,11.09M,11.70M,11.18M,30.8411,SAARDTOT Index
+04/04/2012 07:00,US,1704),,MBA Mortgage Applications,30-Mar,--,4.80%,-2.70%,--,94.4444,MBAVCHNG Index
+04/04/2012 08:15,US,1705),,ADP Employment Change,Mar,206K,209K,216K,228K,76.6355,ADP CHNG Index
+04/04/2012 10:00,US,1706),,ISM Non-Manf. Composite,Mar,56.8,56,57.3,--,70.0935,NAPMNMI Index
+04/05/2012 07:30,US,1707),,Challenger Job Cuts YoY,Mar,--,-8.80%,2.00%,--,28.972,CHALYOY% Index
+04/05/2012 08:00,US,1708),,RBC Consumer Outlook Index,Apr,--,46.6,47.5,--,8.41121,ICSHNATL Index
+04/05/2012 08:30,US,1709),,Initial Jobless Claims,31-Mar,355K,357K,359K,363K,99.0654,INJCJC Index
+04/05/2012 08:30,US,1710),,Continuing Claims,24-Mar,3350K,3338K,3340K,3354K,69.3458,INJCSP Index
+04/05/2012 09:45,US,1711),,Bloomberg Consumer Comfort,1-Apr,--,-31.4,-34.7,--,60.7477,COMFCOMF Index
+04/05/2012 10:51,US,1712),,ICSC Chain Store Sales YoY,Mar,--,4.10%,6.70%,4.10%,18.6916,MBRXYOYW Index
+04/06/2012 08:30,US,1713),,Change in Nonfarm Payrolls,Mar,205K,120K,227K,259K,98.1308,NFP TCH Index
+04/06/2012 08:30,US,1714),,Change in Private Payrolls,Mar,218K,121K,233K,254K,17.757,NFP PCH Index
+04/06/2012 08:30,US,1715),,Change in Manufact. Payrolls,Mar,20K,37K,31K,30K,68.6916,USMMMNCH Index
+04/06/2012 08:30,US,1716),,Unemployment Rate,Mar,8.30%,8.20%,8.30%,--,88.3178,USURTOT Index
+04/06/2012 08:30,US,1717),,Avg Hourly Earning MOM All Emp,Mar,0.20%,0.20%,0.10%,0.30%,14.0187,AHE MOM% Index
+04/06/2012 08:30,US,1718),,Avg Hourly Earning YOY All Emp,Mar,1.90%,2.10%,1.90%,2.00%,13.0841,AHE YOY% Index
+04/06/2012 08:30,US,1719),,Avg Weekly Hours All Employees,Mar,34.5,34.5,34.5,34.6,12.1495,AWH TOTL Index
+04/06/2012 08:30,US,1720),,Change in Household Employment,Mar,--,-31,428,--,9.34579,USEMNCHG Index
+04/06/2012 08:30,US,1721),,Underemployment Rate (U6),Mar,--,14.50%,14.90%,--,7.47664,USUDMAER Index
+04/06/2012 15:00,US,1722),,Consumer Credit,Feb,$12.000B,$8.735B,$17.776B,$14.634B,37.3832,CICRTOT Index
+04/10/2012 07:30,US,1723),,NFIB Small Business Optimism,Mar,95,92.5,94.3,--,56.0748,SBOITOTL Index
+04/10/2012 10:00,US,1724),,IBD/TIPP Economic Optimism,Apr,48.5,49.3,47.5,--,0,ECONUSIB Index
+04/10/2012 10:00,US,1725),,JOLTs Job Openings,Feb,--,3498,3459,3477,10.2804,JOLTTOTL Index
+04/10/2012 10:00,US,1726),,Wholesale Inventories,Feb,0.50%,0.90%,0.40%,0.60%,79.4393,MWINCHNG Index
+04/11/2012 07:00,US,1727),,MBA Mortgage Applications,6-Apr,--,-2.40%,4.80%,--,94.4444,MBAVCHNG Index
+04/11/2012 08:30,US,1728),,Import Price Index (MoM),Mar,0.80%,1.30%,0.40%,0.00%,75.7009,IMP1CHNG Index
+04/11/2012 08:30,US,1729),,Import Price Index (YoY),Mar,3.40%,3.40%,5.50%,5.10%,27.1028,IMP1YOY% Index
+04/11/2012 14:00,US,1730),,Fed's Beige Book,,,,,,0,
+04/11/2012 14:00,US,1731),,Monthly Budget Statement,Mar,-$196.0B,-$198.2B,-$188.2B,-$231.7B,73.8318,FDDSSD Index
+04/12/2012 08:30,US,1732),,Trade Balance,Feb,-$51.8B,-$46.0B,-$52.6B,-$52.2B,81.3084,USTBTOT Index
+04/12/2012 08:30,US,1733),,Producer Price Index (MoM),Mar,0.30%,0.00%,0.40%,0.40%,85.0467,PPI CHNG Index
+04/12/2012 08:30,US,1734),,PPI Ex Food & Energy (MoM),Mar,0.20%,0.30%,0.20%,0.10%,68.0374,PXFECHNG Index
+04/12/2012 08:30,US,1735),,Producer Price Index (YoY),Mar,3.10%,2.80%,3.30%,3.40%,66.3551,PPI YOY Index
+04/12/2012 08:30,US,1736),,PPI Ex Food & Energy (YoY),Mar,2.80%,2.90%,3.00%,3.10%,64.486,PPI XYOY Index
+04/12/2012 08:30,US,1737),,Initial Jobless Claims,7-Apr,355K,380K,357K,367K,99.0654,INJCJC Index
+04/12/2012 08:30,US,1738),,Continuing Claims,31-Mar,3335K,3251K,3338K,3349K,69.3458,INJCSP Index
+04/12/2012 09:45,US,1739),,Bloomberg Consumer Comfort,8-Apr,--,-32.8,-31.4,--,60.7477,COMFCOMF Index
+04/13/2012 08:30,US,1740),,Redesign of Consumer Price Index Press Release tables,,,,,,0,
+04/13/2012 08:30,US,1741),,Consumer Price Index (MoM),Mar,0.30%,0.30%,0.40%,--,93.4579,CPI CHNG Index
+04/13/2012 08:30,US,1742),,CPI Ex Food & Energy (MoM),Mar,0.20%,0.20%,0.10%,--,74.7664,CPUPXCHG Index
+04/13/2012 08:30,US,1743),,Consumer Price Index (YoY),Mar,2.70%,2.70%,2.90%,--,55.1402,CPI YOY Index
+04/13/2012 08:30,US,1744),,CPI Ex Food & Energy (YoY),Mar,2.20%,2.30%,2.20%,--,44.8598,CPI XYOY Index
+04/13/2012 08:30,US,1745),,Consumer Price Index NSA,Mar,229.254,229.392,227.663,--,26.1682,CPURNSA Index
+04/13/2012 08:30,US,1746),,CPI Core Index SA,Mar,--,228.432,227.907,--,29.9065,CPUPAXFE Index
+04/13/2012 09:55,US,1747),,U. of Michigan Confidence,Apr P,76.2,75.7,76.2,--,92.5234,CONSSENT Index
+04/16/2012 08:30,US,1748),,Empire Manufacturing,Apr,18,6.56,20.21,--,80.3738,EMPRGBCI Index
+04/16/2012 08:30,US,1749),,Advance Retail Sales,Mar,0.30%,0.80%,1.10%,1.00%,88.785,RSTAMOM Index
+04/16/2012 08:30,US,1750),,Retail Sales Less Autos,Mar,0.60%,0.80%,0.90%,1.00%,62.1495,RSTAXMOM Index
+04/16/2012 08:30,US,1751),,Retail Sales Ex Auto & Gas,Mar,0.50%,0.70%,0.60%,0.60%,58.8785,RSTAXAG% Index
+04/16/2012 08:30,US,1752),,"Retail Sales ""Control Group""",Mar,0.50%,0.40%,0.50%,0.60%,4.6729,RSTAXAGM Index
+04/16/2012 09:00,US,1753),,Total Net TIC Flows,Feb,$30.0B,$107.7B,$18.8B,$10.5B,63.5514,FRNTTNET Index
+04/16/2012 09:00,US,1754),,Net Long-term TIC Flows,Feb,$42.5B,$10.1B,$101.0B,$109.3B,71.9626,FRNTTOTL Index
+04/16/2012 10:00,US,1755),,Business Inventories,Feb,0.60%,0.60%,0.70%,0.80%,34.5794,MTIBCHNG Index
+04/16/2012 10:00,US,1756),,NAHB Housing Market Index,Apr,28,25,28,--,36.4486,USHBMIDX Index
+04/17/2012 08:30,US,1757),,Housing Starts,Mar,705K,654K,698K,718K,87.8505,NHSPSTOT Index
+04/17/2012 08:30,US,1758),,Housing Starts MOM%,Mar,1.00%,-5.80%,-1.10%,-2.80%,16.8224,NHCHSTCH Index
+04/17/2012 08:30,US,1759),,Building Permits,Mar,710K,747K,717K,707K,61.4953,NHSPATOT Index
+04/17/2012 08:30,US,1760),,Building Permits MOM%,Mar,-0.70%,4.50%,5.10%,4.80%,14.9533,NHCHATCH Index
+04/17/2012 09:15,US,1761),,Industrial Production,Mar,0.30%,0.00%,0.00%,0.50%,85.9813,IP CHNG Index
+04/17/2012 09:15,US,1762),,Capacity Utilization,Mar,78.50%,78.60%,78.70%,79.00%,60.1869,CPTICHNG Index
+04/17/2012 09:15,US,1763),,Manufacturing (SIC) Production,Mar,--,-0.20%,0.30%,0.80%,2.80374,IPMGCHNG Index
+04/18/2012 07:00,US,1764),,MBA Mortgage Applications,13-Apr,--,6.90%,-2.40%,--,94.4444,MBAVCHNG Index
+04/19/2012 08:30,US,1765),,Initial Jobless Claims,14-Apr,370K,386K,380K,388K,99.0654,INJCJC Index
+04/19/2012 08:30,US,1766),,Continuing Claims,7-Apr,3300K,3297K,3251K,3271K,69.3458,INJCSP Index
+04/19/2012 09:45,US,1767),,Bloomberg Consumer Comfort,15-Apr,--,-31.4,-32.8,--,60.7477,COMFCOMF Index
+04/19/2012 09:45,US,1768),,Bloomberg Economic Expectations,Apr,--,-3,1,--,21.4953,COMFBTWR Index
+04/19/2012 10:00,US,1769),,Philadelphia Fed.,Apr,12,8.5,12.5,--,74.7664,OUTFGAF Index
+04/19/2012 10:00,US,1770),,Existing Home Sales,Mar,4.61M,4.48M,4.59M,4.60M,86.9159,ETSLTOTL Index
+04/19/2012 10:00,US,1771),,Existing Home Sales MoM,Mar,0.50%,-2.60%,-0.90%,-0.60%,50.4673,ETSLMOM Index
+04/19/2012 10:00,US,1772),,Leading Indicators,Mar,0.20%,0.30%,0.70%,--,84.1121,LEI CHNG Index
+04/24/2012 09:00,US,1773),,S&P/CS 20 City MoM% SA,Feb,0.20%,0.15%,-0.04%,-0.15%,15.8879,SPCS20SM Index
+04/24/2012 09:00,US,1774),,S&P/CS Composite-20 YoY,Feb,-3.40%,-3.49%,-3.78%,-3.94%,46.729,SPCS20Y% Index
+04/24/2012 09:00,US,1775),,S&P/CaseShiller Home Price Ind,Feb,134.68,134.2,135.46,135.23,54.2056,SPCS20 Index
+04/24/2012 10:00,US,1776),,Consumer Confidence,Apr,69.6,69.2,70.2,69.5,95.3271,CONCCONF Index
+04/24/2012 10:00,US,1777),,Richmond Fed Manufact. Index,Apr,6,14,7,--,67.2897,RCHSINDX Index
+04/24/2012 10:00,US,1778),,House Price Index MoM,Feb,0.10%,0.30%,0.00%,-0.50%,65.4206,HPIMMOM% Index
+04/24/2012 10:00,US,1779),,New Home Sales,Mar,319K,328K,313K,366K,89.7196,NHSLTOT Index
+04/24/2012 10:00,US,1780),,New Home Sales MoM,Mar,1.90%,-7.10%,-1.60%,8.00%,47.6636,NHSLCHNG Index
+04/25/2012 07:00,US,1781),,MBA Mortgage Applications,20-Apr,--,-3.80%,6.90%,--,94.4444,MBAVCHNG Index
+04/25/2012 08:30,US,1782),,Durable Goods Orders,Mar,-1.70%,-4.20%,2.20%,2.00%,90.6542,DGNOCHNG Index
+04/25/2012 08:30,US,1783),,Durables Ex Transportation,Mar,0.50%,-1.10%,1.60%,1.80%,72.5234,DGNOXTCH Index
+04/25/2012 08:30,US,1784),,Cap Goods Orders Nondef Ex Air,Mar,1.00%,-0.80%,1.20%,2.80%,49.5327,CGNOXAI% Index
+04/25/2012 08:30,US,1785),,Cap Goods Ship Nondef Ex Air,Mar,1.40%,2.60%,1.40%,--,42.9907,CGSHXAI% Index
+04/25/2012 12:30,US,1786),,FOMC Rate Decision,25-Apr,0.25%,0.25%,0.25%,--,97.1963,FDTR Index
+04/26/2012 08:30,US,1788),,Chicago Fed Nat Activity Index,Mar,--,-0.29,-0.09,0.07,59.8131,CFNAI Index
+04/26/2012 08:30,US,1789),,Initial Jobless Claims,21-Apr,375K,388K,386K,389K,99.0654,INJCJC Index
+04/26/2012 08:30,US,1790),,Continuing Claims,14-Apr,3293K,3315K,3297K,3312K,69.3458,INJCSP Index
+04/26/2012 09:45,US,1791),,Bloomberg Consumer Comfort,22-Apr,--,-35.8,-31.4,--,60.7477,COMFCOMF Index
+04/26/2012 10:00,US,1792),,Pending Home Sales MoM,Mar,1.00%,4.10%,-0.50%,0.40%,72.8972,USPHTMOM Index
+04/26/2012 10:00,US,1793),,Pending Home Sales YoY,Mar,7.30%,10.80%,13.90%,14.90%,22.2222,USPHTYOY Index
+04/26/2012 11:00,US,1794),,Kansas City Fed Manf. Activity,Apr,7,3,9,--,6.54206,KCLSSACI Index
+04/27/2012 08:30,US,1795),,Employment Cost Index,1Q,0.50%,0.40%,0.40%,0.50%,71.028,ECI SA% Index
+04/27/2012 08:30,US,1796),,GDP QoQ (Annualized),1Q A,2.50%,2.20%,3.00%,--,96.2617,GDP CQOQ Index
+04/27/2012 08:30,US,1797),,Personal Consumption,1Q A,2.30%,2.90%,2.10%,--,67.3832,GDPCTOT% Index
+04/27/2012 08:30,US,1798),,GDP Price Index,1Q A,2.10%,1.50%,0.90%,--,77.0093,GDP PIQQ Index
+04/27/2012 08:30,US,1799),,Core PCE QoQ,1Q A,2.10%,2.10%,1.30%,--,67.3832,GDPCPCEC Index
+04/27/2012 09:55,US,1800),,U. of Michigan Confidence,Apr F,75.7,76.4,75.7,--,92.5234,CONSSENT Index
+04/30/2012 08:00,US,1801),,NAPM-Milwaukee,Apr,53,52.9,51.8,--,25.2336,MAPMINDX Index
+04/30/2012 08:30,US,1802),,Personal Income,Mar,0.30%,0.40%,0.20%,0.70%,83.1776,PITLCHNG Index
+04/30/2012 08:30,US,1803),,Personal Spending,Mar,0.40%,0.30%,0.80%,0.80%,83.1776,PCE CRCH Index
+04/30/2012 08:30,US,1804),,PCE Deflator (MoM),Mar,0.30%,0.20%,0.30%,--,3.73832,PCE DEFM Index
+04/30/2012 08:30,US,1805),,PCE Deflator (YoY),Mar,2.20%,2.10%,2.30%,2.40%,32.7103,PCE DEFY Index
+04/30/2012 08:30,US,1806),,PCE Core (MoM),Mar,0.20%,0.20%,0.10%,0.10%,58.2243,PCE CMOM Index
+04/30/2012 08:30,US,1807),,PCE Core (YoY),Mar,2.00%,2.00%,1.90%,1.90%,33.6449,PCE CYOY Index
+04/30/2012 09:45,US,1808),,Chicago Purchasing Manager,Apr,60,56.2,62.2,--,77.5701,CHPMINDX Index
+04/30/2012 10:00,US,1809),,Revisions: Retail Sales,,,,,,0,
+04/30/2012 10:30,US,1810),,Dallas Fed Manf. Activity,Apr,8,-3.4,10.8,--,61.6822,DFEDGBA Index
+05/01/2012 10:00,US,1811),,Construction Spending MoM,Mar,0.50%,0.10%,-1.10%,-0.50%,78.5047,CNSTTMOM Index
+05/01/2012 10:00,US,1812),,ISM Manufacturing,Apr,53,54.8,53.4,--,94.3925,NAPMPMI Index
+05/01/2012 10:00,US,1813),,ISM Prices Paid,Apr,59,61,61,--,68.2243,NAPMPRIC Index
+05/01/2012 16:10,US,1814),,Total Vehicle Sales,Apr,14.40M,14.38M,14.32M,14.10M,38.3178,SAARTOTL Index
+05/01/2012 16:10,US,1815),,Domestic Vehicle Sales,Apr,11.10M,11.12M,11.09M,10.94M,30.8411,SAARDTOT Index
+05/02/2012 07:00,US,1816),,MBA Mortgage Applications,27-Apr,--,0.10%,-3.80%,--,94.4444,MBAVCHNG Index
+05/02/2012 08:15,US,1817),,ADP Employment Change,Apr,170K,119K,209K,204K,76.6355,ADP CHNG Index
+05/02/2012 09:45,US,1818),,ISM New York,Apr,--,61.2,67.4,--,5.60748,NYPMCURR Index
+05/02/2012 10:00,US,1819),,Factory Orders,Mar,-1.60%,-1.50%,1.30%,1.50%,82.243,TMNOCHNG Index
+05/03/2012 07:30,US,1820),,Challenger Job Cuts YoY,Apr,--,11.20%,-8.80%,--,28.972,CHALYOY% Index
+05/03/2012 08:00,US,1821),,RBC Consumer Outlook Index,May,--,47.6,46.6,--,8.41121,ICSHNATL Index
+05/03/2012 08:30,US,1822),,Nonfarm Productivity,1Q P,-0.60%,-0.50%,0.90%,1.20%,35.514,PRODNFR% Index
+05/03/2012 08:30,US,1823),,Unit Labor Costs,1Q P,2.70%,2.00%,2.80%,2.70%,28.0374,COSTNFR% Index
+05/03/2012 08:30,US,1824),,Initial Jobless Claims,28-Apr,379K,365K,388K,392K,99.0654,INJCJC Index
+05/03/2012 08:30,US,1825),,Continuing Claims,21-Apr,3311K,3276K,3315K,3329K,69.3458,INJCSP Index
+05/03/2012 09:45,US,1826),,Bloomberg Consumer Comfort,29-Apr,--,-37.6,-35.8,--,60.7477,COMFCOMF Index
+05/03/2012 10:00,US,1827),,ISM Non-Manf. Composite,Apr,55.3,53.5,56,--,70.0935,NAPMNMI Index
+05/03/2012 11:40,US,1828),,ICSC Chain Store Sales YoY,Apr,--,0.60%,4.10%,--,18.6916,MBRXYOYW Index
+05/04/2012 08:30,US,1829),,Change in Nonfarm Payrolls,Apr,160K,115K,120K,143K,98.1308,NFP TCH Index
+05/04/2012 08:30,US,1830),,Change in Private Payrolls,Apr,165K,130K,121K,147K,17.757,NFP PCH Index
+05/04/2012 08:30,US,1831),,Change in Manufact. Payrolls,Apr,20K,16K,37K,42K,68.6916,USMMMNCH Index
+05/04/2012 08:30,US,1832),,Unemployment Rate,Apr,8.20%,8.10%,8.20%,--,88.3178,USURTOT Index
+05/04/2012 08:30,US,1833),,Avg Hourly Earning MOM All Emp,Apr,0.20%,0.00%,0.20%,0.10%,14.0187,AHE MOM% Index
+05/04/2012 08:30,US,1834),,Avg Hourly Earning YOY All Emp,Apr,2.00%,1.80%,2.10%,2.00%,13.0841,AHE YOY% Index
+05/04/2012 08:30,US,1835),,Avg Weekly Hours All Employees,Apr,34.5,34.5,34.5,--,12.1495,AWH TOTL Index
+05/04/2012 08:30,US,1836),,Change in Household Employment,Apr,--,-169,-31,--,9.34579,USEMNCHG Index
+05/04/2012 08:30,US,1837),,Underemployment Rate (U6),Apr,--,14.50%,14.50%,--,7.47664,USUDMAER Index
+05/07/2012 15:00,US,1838),,Consumer Credit,Mar,$9.800B,$21.355B,$8.735B,$8.916B,37.3832,CICRTOT Index
+05/08/2012 07:30,US,1839),,NFIB Small Business Optimism,Apr,93,94.5,92.5,--,56.0748,SBOITOTL Index
+05/08/2012 10:00,US,1840),,IBD/TIPP Economic Optimism,May,48,48.5,49.3,--,0,ECONUSIB Index
+05/08/2012 10:00,US,1841),,JOLTs Job Openings,Mar,--,3737,3498,3565,10.2804,JOLTTOTL Index
+05/09/2012 07:00,US,1842),,MBA Mortgage Applications,4-May,--,1.70%,0.10%,--,94.4444,MBAVCHNG Index
+05/09/2012 10:00,US,1843),,Wholesale Inventories,Mar,0.60%,0.30%,0.90%,--,79.4393,MWINCHNG Index
+05/10/2012 08:30,US,1844),,Import Price Index (MoM),Apr,-0.20%,-0.50%,1.30%,1.40%,75.7009,IMP1CHNG Index
+05/10/2012 08:30,US,1845),,Import Price Index (YoY),Apr,0.80%,0.50%,3.40%,3.50%,27.1028,IMP1YOY% Index
+05/10/2012 08:30,US,1846),,Trade Balance,Mar,-$50.0B,-$51.8B,-$46.0B,-$44.5B,81.3084,USTBTOT Index
+05/10/2012 08:30,US,1847),,Initial Jobless Claims,5-May,368K,367K,365K,368K,99.0654,INJCJC Index
+05/10/2012 08:30,US,1848),,Continuing Claims,28-Apr,3275K,3229K,3276K,3290K,69.3458,INJCSP Index
+05/10/2012 09:45,US,1849),,Bloomberg Consumer Comfort,6-May,--,-40.4,-37.6,--,60.7477,COMFCOMF Index
+05/10/2012 14:00,US,1850),,Monthly Budget Statement,Apr,$35.0B,$59.1B,-$40.4B,-$198.2B,73.8318,FDDSSD Index
+05/11/2012 08:30,US,1851),,Producer Price Index (MoM),Apr,0.00%,-0.20%,0.00%,-0.20%,85.0467,PPI CHNG Index
+05/11/2012 08:30,US,1852),,PPI Ex Food & Energy (MoM),Apr,0.20%,0.20%,0.30%,0.20%,68.0374,PXFECHNG Index
+05/11/2012 08:30,US,1853),,Producer Price Index (YoY),Apr,2.10%,1.90%,2.80%,--,66.3551,PPI YOY Index
+05/11/2012 08:30,US,1854),,PPI Ex Food & Energy (YoY),Apr,2.80%,2.70%,2.90%,--,64.486,PPI XYOY Index
+05/11/2012 09:55,US,1855),,U. of Michigan Confidence,May P,76,77.8,76.4,--,92.5234,CONSSENT Index
+05/15/2012 08:30,US,1856),,Consumer Price Index (MoM),Apr,0.00%,0.00%,0.30%,--,93.4579,CPI CHNG Index
+05/15/2012 08:30,US,1857),,CPI Ex Food & Energy (MoM),Apr,0.20%,0.20%,0.20%,--,74.7664,CPUPXCHG Index
+05/15/2012 08:30,US,1858),,Consumer Price Index (YoY),Apr,2.30%,2.30%,2.70%,--,55.1402,CPI YOY Index
+05/15/2012 08:30,US,1859),,CPI Ex Food & Energy (YoY),Apr,2.30%,2.30%,2.30%,--,44.8598,CPI XYOY Index
+05/15/2012 08:30,US,1860),,Consumer Price Index NSA,Apr,229.904,230.085,229.392,--,26.1682,CPURNSA Index
+05/15/2012 08:30,US,1861),,CPI Core Index SA,Apr,--,228.984,228.432,--,29.9065,CPUPAXFE Index
+05/15/2012 08:30,US,1862),,Empire Manufacturing,May,9,17.09,6.56,--,80.3738,EMPRGBCI Index
+05/15/2012 08:30,US,1863),,Advance Retail Sales,Apr,0.10%,0.10%,0.80%,0.40%,88.785,RSTAMOM Index
+05/15/2012 08:30,US,1864),,Retail Sales Less Autos,Apr,0.20%,0.10%,0.80%,0.50%,62.1495,RSTAXMOM Index
+05/15/2012 08:30,US,1865),,Retail Sales Ex Auto & Gas,Apr,0.30%,0.10%,0.70%,0.50%,58.8785,RSTAXAG% Index
+05/15/2012 08:30,US,1866),,"Retail Sales ""Control Group""",Apr,0.30%,0.40%,0.40%,0.30%,4.6729,RSTAXAGM Index
+05/15/2012 09:00,US,1867),,Total Net TIC Flows,Mar,--,-$49.9B,$107.7B,$101.5B,63.5514,FRNTTNET Index
+05/15/2012 09:00,US,1868),,Net Long-term TIC Flows,Mar,$32.5B,$36.2B,$10.1B,$16.2B,71.9626,FRNTTOTL Index
+05/15/2012 10:00,US,1869),,Business Inventories,Mar,0.40%,0.30%,0.60%,--,34.5794,MTIBCHNG Index
+05/15/2012 10:00,US,1870),,NAHB Housing Market Index,May,26,29,25,24,36.4486,USHBMIDX Index
+05/16/2012 07:00,US,1871),,MBA Mortgage Applications,11-May,--,9.20%,1.70%,--,94.4444,MBAVCHNG Index
+05/16/2012 08:30,US,1872),,Housing Starts,Apr,685K,717K,654K,706K,87.8505,NHSPSTOT Index
+05/16/2012 08:30,US,1873),,Housing Starts MOM%,Apr,4.70%,2.60%,-5.80%,-2.60%,16.8224,NHCHSTCH Index
+05/16/2012 08:30,US,1874),,Building Permits,Apr,730K,715K,747K,769K,61.4953,NHSPATOT Index
+05/16/2012 08:30,US,1875),,Building Permits MOM%,Apr,-4.50%,-7.00%,4.50%,8.80%,14.9533,NHCHATCH Index
+05/16/2012 09:15,US,1876),,Industrial Production,Apr,0.60%,1.10%,0.00%,-0.70%,85.9813,IP CHNG Index
+05/16/2012 09:15,US,1877),,Capacity Utilization,Apr,79.00%,79.20%,78.60%,78.40%,60.1869,CPTICHNG Index
+05/16/2012 09:15,US,1878),,Manufacturing (SIC) Production,Apr,--,0.60%,-0.20%,-0.50%,2.80374,IPMGCHNG Index
+05/16/2012 10:00,US,1879),,Mortgage Delinquencies,1Q,--,7.40%,7.58%,--,33.3333,DLQTDLQT Index
+05/16/2012 10:00,US,1880),,MBA Mortgage Foreclosures,1Q,--,4.39%,4.38%,--,11.215,FORLTOTL Index
+05/16/2012 14:00,US,1881),,Minutes of FOMC Meeting,,,,,,0,
+05/17/2012 08:30,US,1882),,Initial Jobless Claims,12-May,365K,370K,367K,370K,99.0654,INJCJC Index
+05/17/2012 08:30,US,1883),,Continuing Claims,5-May,3225K,3265K,3229K,3247K,69.3458,INJCSP Index
+05/17/2012 09:45,US,1884),,Bloomberg Consumer Comfort,13-May,-38,-43.6,-40.4,--,60.7477,COMFCOMF Index
+05/17/2012 09:45,US,1885),,Bloomberg Economic Expectations,May,--,-1,-3,--,21.4953,COMFBTWR Index
+05/17/2012 10:00,US,1886),,Philadelphia Fed.,May,10,-5.8,8.5,--,74.7664,OUTFGAF Index
+05/17/2012 10:00,US,1887),,Leading Indicators,Apr,0.10%,-0.10%,0.30%,0.20%,84.1121,LEI CHNG Index
+05/18/2012 10:00,US,1888),,Revisions: Factory Orders,,,,,,0,
+05/21/2012 08:30,US,1889),,Chicago Fed Nat Activity Index,Apr,--,0.11,-0.29,-0.29,59.8131,CFNAI Index
+05/22/2012 10:00,US,1890),,Richmond Fed Manufact. Index,May,11,4,14,10,67.2897,RCHSINDX Index
+05/22/2012 10:00,US,1891),,Existing Home Sales,Apr,4.61M,4.62M,4.48M,4.47M,86.9159,ETSLTOTL Index
+05/22/2012 10:00,US,1892),,Existing Home Sales MoM,Apr,2.90%,3.40%,-2.60%,-2.80%,50.4673,ETSLMOM Index
+05/23/2012 07:00,US,1893),,MBA Mortgage Applications,18-May,--,3.80%,9.20%,--,94.4444,MBAVCHNG Index
+05/23/2012 10:00,US,1894),,House Price Index MoM,Mar,0.30%,1.80%,0.30%,--,65.4206,HPIMMOM% Index
+05/23/2012 10:00,US,1895),,House Price Purchase Index QoQ,1Q,0.10%,0.60%,-0.10%,--,20.5607,HPI PURQ Index
+05/23/2012 10:00,US,1896),,New Home Sales,Apr,335K,343K,328K,352K,89.7196,NHSLTOT Index
+05/23/2012 10:00,US,1897),,New Home Sales MoM,Apr,2.10%,3.30%,-7.10%,-3.80%,47.6636,NHSLCHNG Index
+05/24/2012 08:30,US,1898),,Durable Goods Orders,Apr,0.20%,0.20%,-4.20%,-3.70%,90.6542,DGNOCHNG Index
+05/24/2012 08:30,US,1899),,Durables Ex Transportation,Apr,0.80%,-0.60%,-1.10%,-0.80%,72.5234,DGNOXTCH Index
+05/24/2012 08:30,US,1900),,Cap Goods Orders Nondef Ex Air,Apr,0.80%,-1.90%,-0.80%,-2.20%,49.5327,CGNOXAI% Index
+05/24/2012 08:30,US,1901),,Cap Goods Ship Nondef Ex Air,Apr,-1.00%,-1.40%,2.60%,1.90%,42.9907,CGSHXAI% Index
+05/24/2012 08:30,US,1902),,Initial Jobless Claims,19-May,370K,370K,370K,372K,99.0654,INJCJC Index
+05/24/2012 08:30,US,1903),,Continuing Claims,12-May,3250K,3260K,3265K,3289K,69.3458,INJCSP Index
+05/24/2012 08:58,US,1904),,Markit US PMI Preliminary,May,--,53.9,--,--,1.86916,ECONMUS Index
+05/24/2012 09:45,US,1905),,Bloomberg Consumer Comfort,20-May,--,-42,-43.6,--,60.7477,COMFCOMF Index
+05/24/2012 11:00,US,1906),,Kansas City Fed Manf. Activity,May,5,9,3,--,6.54206,KCLSSACI Index
+05/25/2012 09:55,US,1907),,U. of Michigan Confidence,May F,77.8,79.3,77.8,--,92.5234,CONSSENT Index
+05/29/2012 09:00,US,1908),,S&P/CS 20 City MoM% SA,Mar,0.20%,0.09%,0.15%,0.14%,15.8879,SPCS20SM Index
+05/29/2012 09:00,US,1909),,S&P/CS Composite-20 YoY,Mar,-2.60%,-2.57%,-3.49%,-3.57%,46.729,SPCS20Y% Index
+05/29/2012 09:00,US,1910),,S&P/Case-Shiller US HPI YOY%,1Q,-3.05%,-1.92%,-4.03%,-3.90%,23.3645,SPCSUSAY Index
+05/29/2012 09:00,US,1911),,S&P/CaseShiller Home Price Ind,Mar,134.4,134.1,134.2,134.1,54.2056,SPCS20 Index
+05/29/2012 09:00,US,1912),,S&P/Case-Shiller US HPI,1Q,--,123.33,125.67,125.87,27.7778,SPCSUSA Index
+05/29/2012 10:00,US,1913),,Consumer Confidence,May,69.6,64.9,69.2,68.7,95.3271,CONCCONF Index
+05/29/2012 10:30,US,1914),,Dallas Fed Manf. Activity,May,3,-5.1,-3.4,--,61.6822,DFEDGBA Index
+05/30/2012 07:00,US,1915),,MBA Mortgage Applications,25-May,--,-1.30%,3.80%,--,94.4444,MBAVCHNG Index
+05/30/2012 10:00,US,1916),,Pending Home Sales MoM,Apr,0.00%,-5.50%,4.10%,3.80%,72.8972,USPHTMOM Index
+05/30/2012 10:00,US,1917),,Pending Home Sales YoY,Apr,22.00%,14.70%,10.80%,10.50%,22.2222,USPHTYOY Index
+05/31/2012 07:30,US,1918),,Challenger Job Cuts YoY,May,--,66.70%,11.20%,--,28.972,CHALYOY% Index
+05/31/2012 08:03,US,1919),,NAPM-Milwaukee,May,53.4,57.7,52.9,--,25.2336,MAPMINDX Index
+05/31/2012 08:15,US,1920),,ADP Employment Change,May,150K,133K,119K,112K,76.6355,ADP CHNG Index
+05/31/2012 08:30,US,1921),,GDP QoQ (Annualized),1Q S,1.90%,1.90%,2.20%,2.00%,96.2617,GDP CQOQ Index
+05/31/2012 08:30,US,1922),,Personal Consumption,1Q S,2.90%,2.70%,2.90%,2.40%,67.3832,GDPCTOT% Index
+05/31/2012 08:30,US,1923),,GDP Price Index,1Q S,1.50%,1.70%,1.50%,2.00%,77.0093,GDP PIQQ Index
+05/31/2012 08:30,US,1924),,Core PCE QoQ,1Q S,2.10%,2.10%,2.10%,2.20%,67.3832,GDPCPCEC Index
+05/31/2012 08:30,US,1925),,Initial Jobless Claims,26-May,370K,383K,370K,373K,99.0654,INJCJC Index
+05/31/2012 08:30,US,1926),,Continuing Claims,19-May,3250K,3242K,3260K,3278K,69.3458,INJCSP Index
+05/31/2012 09:45,US,1927),,Chicago Purchasing Manager,May,56.8,52.7,56.2,--,77.5701,CHPMINDX Index
+05/31/2012 09:45,US,1928),,Bloomberg Consumer Comfort,27-May,--,-39.3,-42,--,60.7477,COMFCOMF Index
+05/31/2012 10:00,US,1929),,ICSC Chain Store Sales ex Drug Stores Rose 4% in May,,,,,,0,
+06/01/2012 08:30,US,1930),,Change in Nonfarm Payrolls,May,150K,69K,115K,68K,98.1308,NFP TCH Index
+06/01/2012 08:30,US,1931),,Change in Private Payrolls,May,164K,82K,130K,85K,17.757,NFP PCH Index
+06/01/2012 08:30,US,1932),,Change in Manufact. Payrolls,May,15K,12K,16K,10K,68.6916,USMMMNCH Index
+06/01/2012 08:30,US,1933),,Unemployment Rate,May,8.10%,8.20%,8.10%,--,88.3178,USURTOT Index
+06/01/2012 08:30,US,1934),,Avg Hourly Earning MOM All Emp,May,0.20%,0.10%,0.00%,0.10%,14.0187,AHE MOM% Index
+06/01/2012 08:30,US,1935),,Avg Hourly Earning YOY All Emp,May,1.80%,1.70%,1.80%,1.90%,13.0841,AHE YOY% Index
+06/01/2012 08:30,US,1936),,Avg Weekly Hours All Employees,May,34.5,34.4,34.5,--,12.1495,AWH TOTL Index
+06/01/2012 08:30,US,1937),,Change in Household Employment,May,--,422,-169,--,9.34579,USEMNCHG Index
+06/01/2012 08:30,US,1938),,Underemployment Rate (U6),May,--,14.80%,14.50%,--,7.47664,USUDMAER Index
+06/01/2012 08:30,US,1939),,Personal Income,Apr,0.30%,0.20%,0.40%,0.50%,83.1776,PITLCHNG Index
+06/01/2012 08:30,US,1940),,Personal Spending,Apr,0.30%,0.30%,0.30%,0.30%,83.1776,PCE CRCH Index
+06/01/2012 08:30,US,1941),,PCE Deflator (MoM),Apr,0.10%,0.00%,0.20%,--,3.73832,PCE DEFM Index
+06/01/2012 08:30,US,1942),,PCE Deflator (YoY),Apr,1.90%,1.80%,2.10%,2.20%,32.7103,PCE DEFY Index
+06/01/2012 08:30,US,1943),,PCE Core (MoM),Apr,0.20%,0.10%,0.20%,--,58.2243,PCE CMOM Index
+06/01/2012 08:30,US,1944),,PCE Core (YoY),Apr,1.90%,1.90%,2.00%,--,33.6449,PCE CYOY Index
+06/01/2012 08:58,US,1945),,Markit US PMI Final,May,--,54,53.9,--,0.934579,ECONMUSF Index
+06/01/2012 10:00,US,1946),,ISM Manufacturing,May,53.8,53.5,54.8,--,94.3925,NAPMPMI Index
+06/01/2012 10:00,US,1947),,ISM Prices Paid,May,57,47.5,61,--,68.2243,NAPMPRIC Index
+06/01/2012 10:00,US,1948),,Construction Spending MoM,Apr,0.40%,0.30%,0.10%,-0.30%,78.5047,CNSTTMOM Index
+06/01/2012 17:00,US,1949),,Total Vehicle Sales,May,14.50M,13.73M,14.38M,14.10M,38.3178,SAARTOTL Index
+06/01/2012 17:00,US,1950),,Domestic Vehicle Sales,May,11.20M,10.75M,11.12M,10.95M,30.8411,SAARDTOT Index
+06/04/2012 09:45,US,1951),,ISM New York,May,--,49.9,61.2,--,5.60748,NYPMCURR Index
+06/04/2012 10:00,US,1952),,Factory Orders,Apr,0.20%,-0.60%,-1.50%,-2.10%,82.243,TMNOCHNG Index
+06/05/2012 10:00,US,1953),,ISM Non-Manf. Composite,May,53.4,53.7,53.5,--,70.0935,NAPMNMI Index
+06/06/2012 07:00,US,1954),,MBA Mortgage Applications,1-Jun,--,1.30%,-1.30%,--,94.4444,MBAVCHNG Index
+06/06/2012 08:30,US,1955),,Nonfarm Productivity,1Q F,-0.80%,-0.90%,-0.50%,--,35.514,PRODNFR% Index
+06/06/2012 08:30,US,1956),,Unit Labor Costs,1Q F,2.10%,1.30%,2.00%,6.40%,28.0374,COSTNFR% Index
+06/06/2012 14:00,US,1957),,Fed's Beige Book,,,,,,0,
+06/07/2012 08:30,US,1958),,Initial Jobless Claims,2-Jun,378K,377K,383K,389K,99.0654,INJCJC Index
+06/07/2012 08:30,US,1959),,Continuing Claims,26-May,3250K,3293K,3242K,3259K,69.3458,INJCSP Index
+06/07/2012 09:45,US,1960),,Bloomberg Consumer Comfort,3-Jun,--,-37.6,-39.3,--,60.7477,COMFCOMF Index
+06/07/2012 09:49,US,1961),,RBC Consumer Outlook Index,Jun,--,46.1,47.6,--,8.41121,ICSHNATL Index
+06/07/2012 11:41,US,1962),,ICSC Chain Store Sales YoY,May,--,1.70%,0.60%,--,18.6916,MBRXYOYW Index
+06/07/2012 15:00,US,1963),,Consumer Credit,Apr,$11.000B,$6.515B,$21.355B,$13.645B,37.3832,CICRTOT Index
+06/08/2012 08:30,US,1964),,Annual Revisions: Trade,,,,,,0,
+06/08/2012 08:30,US,1965),,Trade Balance,Apr,-$49.5B,-$50.1B,-$51.8B,-$51.6B,81.3084,USTBTOT Index
+06/08/2012 10:00,US,1966),,Wholesale Inventories,Apr,0.40%,0.60%,0.30%,--,79.4393,MWINCHNG Index
+06/12/2012 07:30,US,1967),,NFIB Small Business Optimism,May,94,94.4,94.5,--,56.0748,SBOITOTL Index
+06/12/2012 08:30,US,1968),,Import Price Index (MoM),May,-1.00%,-1.00%,-0.50%,-0.10%,75.7009,IMP1CHNG Index
+06/12/2012 08:30,US,1969),,Import Price Index (YoY),May,-0.60%,-0.30%,0.50%,0.80%,27.1028,IMP1YOY% Index
+06/12/2012 10:00,US,1970),,IBD/TIPP Economic Optimism,Jun,47.3,46.7,48.5,--,0,ECONUSIB Index
+06/12/2012 14:00,US,1971),,Monthly Budget Statement,May,-$125.0B,-$124.6B,-$57.6B,$59.1B,73.8318,FDDSSD Index
+06/13/2012 07:00,US,1972),,MBA Mortgage Applications,8-Jun,--,18.00%,1.30%,--,94.4444,MBAVCHNG Index
+06/13/2012 08:30,US,1973),,Producer Price Index (MoM),May,-0.60%,-1.00%,-0.20%,--,85.0467,PPI CHNG Index
+06/13/2012 08:30,US,1974),,PPI Ex Food & Energy (MoM),May,0.20%,0.20%,0.20%,0.10%,68.0374,PXFECHNG Index
+06/13/2012 08:30,US,1975),,Producer Price Index (YoY),May,1.20%,0.70%,1.90%,--,66.3551,PPI YOY Index
+06/13/2012 08:30,US,1976),,PPI Ex Food & Energy (YoY),May,2.80%,2.70%,2.70%,--,64.486,PPI XYOY Index
+06/13/2012 08:30,US,1977),,Advance Retail Sales,May,-0.20%,-0.20%,0.10%,-0.50%,88.785,RSTAMOM Index
+06/13/2012 08:30,US,1978),,Retail Sales Less Autos,May,0.00%,-0.40%,0.10%,-0.60%,62.1495,RSTAXMOM Index
+06/13/2012 08:30,US,1979),,Retail Sales Ex Auto & Gas,May,0.40%,-0.10%,0.10%,-0.40%,58.8785,RSTAXAG% Index
+06/13/2012 08:30,US,1980),,"Retail Sales ""Control Group""",May,0.30%,0.00%,0.40%,-0.10%,4.6729,RSTAXAGM Index
+06/13/2012 10:00,US,1981),,Business Inventories,Apr,0.30%,0.40%,0.30%,--,34.5794,MTIBCHNG Index
+06/14/2012 08:30,US,1982),,Annual Revisions: Current Account,,,,,,0,
+06/14/2012 08:30,US,1983),,Current Account Balance,1Q,-$131.9B,-$137.3B,-$124.1B,-$118.7B,69.1589,USCABAL Index
+06/14/2012 08:30,US,1984),,Consumer Price Index (MoM),May,-0.20%,-0.30%,0.00%,--,93.4579,CPI CHNG Index
+06/14/2012 08:30,US,1985),,CPI Ex Food & Energy (MoM),May,0.20%,0.20%,0.20%,--,74.7664,CPUPXCHG Index
+06/14/2012 08:30,US,1986),,Consumer Price Index (YoY),May,1.80%,1.70%,2.30%,--,55.1402,CPI YOY Index
+06/14/2012 08:30,US,1987),,CPI Ex Food & Energy (YoY),May,2.20%,2.30%,2.30%,--,44.8598,CPI XYOY Index
+06/14/2012 08:30,US,1988),,Consumer Price Index NSA,May,229.8,229.815,230.085,--,26.1682,CPURNSA Index
+06/14/2012 08:30,US,1989),,CPI Core Index SA,May,229.328,229.446,228.984,--,29.9065,CPUPAXFE Index
+06/14/2012 08:30,US,1990),,Initial Jobless Claims,9-Jun,375K,386K,377K,380K,99.0654,INJCJC Index
+06/14/2012 08:30,US,1991),,Continuing Claims,2-Jun,3270K,3278K,3293K,3311K,69.3458,INJCSP Index
+06/14/2012 09:45,US,1992),,Bloomberg Consumer Comfort,10-Jun,--,-36.4,-37.6,--,60.7477,COMFCOMF Index
+06/15/2012 08:30,US,1993),,Empire Manufacturing,Jun,12.5,2.29,17.09,--,80.3738,EMPRGBCI Index
+06/15/2012 09:00,US,1994),,Total Net TIC Flows,Apr,--,-$20.5B,-$49.9B,-$47.5B,63.5514,FRNTTNET Index
+06/15/2012 09:00,US,1995),,Net Long-term TIC Flows,Apr,$45.0B,$25.6B,$36.2B,$36.0B,71.9626,FRNTTOTL Index
+06/15/2012 09:15,US,1996),,Industrial Production,May,0.10%,-0.10%,1.10%,0.80%,85.9813,IP CHNG Index
+06/15/2012 09:15,US,1997),,Capacity Utilization,May,79.20%,79.00%,79.20%,78.90%,60.1869,CPTICHNG Index
+06/15/2012 09:15,US,1998),,Manufacturing (SIC) Production,May,-0.10%,-0.40%,0.60%,0.70%,2.80374,IPMGCHNG Index
+06/15/2012 09:55,US,1999),,U. of Michigan Confidence,Jun P,77.5,74.1,79.3,--,92.5234,CONSSENT Index
+06/18/2012 10:00,US,2000),,NAHB Housing Market Index,Jun,28,29,29,28,36.4486,USHBMIDX Index
+06/19/2012 08:30,US,2001),,Housing Starts,May,722K,708K,717K,747K,87.8505,NHSPSTOT Index
+06/19/2012 08:30,US,2002),,Housing Starts MOM%,May,0.70%,-4.80%,2.60%,5.40%,16.8224,NHCHSTCH Index
+06/19/2012 08:30,US,2003),,Building Permits,May,730K,780K,715K,723K,61.4953,NHSPATOT Index
+06/19/2012 08:30,US,2004),,Building Permits MOM%,May,1.00%,7.90%,-7.00%,-6.00%,14.9533,NHCHATCH Index
+06/19/2012 10:00,US,2005),,JOLTs Job Openings,Apr,3685,3416,3737,3741,10.2804,JOLTTOTL Index
+06/20/2012 07:00,US,2006),,MBA Mortgage Applications,15-Jun,--,-0.80%,18.00%,--,94.4444,MBAVCHNG Index
+06/20/2012 12:30,US,2007),,FOMC Rate Decision,20-Jun,0.25%,0.25%,0.25%,--,97.1963,FDTR Index
+06/21/2012 08:30,US,2008),,Initial Jobless Claims,16-Jun,383K,387K,386K,389K,99.0654,INJCJC Index
+06/21/2012 08:30,US,2009),,Continuing Claims,9-Jun,3278K,3299K,3278K,3299K,69.3458,INJCSP Index
+06/21/2012 08:58,US,2010),,Markit US PMI Preliminary,Jun,53.3,52.9,54,--,1.86916,ECONMUS Index
+06/21/2012 09:45,US,2011),,Bloomberg Consumer Comfort,17-Jun,--,-37.9,-36.4,--,60.7477,COMFCOMF Index
+06/21/2012 09:45,US,2012),,Bloomberg Economic Expectations,Jun,--,-11,-1,--,21.4953,COMFBTWR Index
+06/21/2012 10:00,US,2013),,Philadelphia Fed.,Jun,0,-16.6,-5.8,--,74.7664,OUTFGAF Index
+06/21/2012 10:00,US,2014),,Existing Home Sales,May,4.57M,4.55M,4.62M,--,86.9159,ETSLTOTL Index
+06/21/2012 10:00,US,2015),,Existing Home Sales MoM,May,-1.10%,-1.50%,3.40%,--,50.4673,ETSLMOM Index
+06/21/2012 10:00,US,2016),,House Price Index MoM,Apr,0.40%,0.80%,1.80%,1.60%,65.4206,HPIMMOM% Index
+06/21/2012 10:00,US,2017),,Leading Indicators,May,0.10%,0.30%,-0.10%,--,84.1121,LEI CHNG Index
+06/25/2012 08:30,US,2018),,Chicago Fed Nat Activity Index,May,-0.3,-0.45,0.11,-0.02,59.8131,CFNAI Index
+06/25/2012 10:00,US,2019),,New Home Sales,May,347K,369K,343K,358K,89.7196,NHSLTOT Index
+06/25/2012 10:00,US,2020),,New Home Sales MoM,May,1.00%,7.60%,3.30%,1.70%,47.6636,NHSLCHNG Index
+06/25/2012 10:30,US,2021),,Dallas Fed Manf. Activity,Jun,-2,5.8,-5.1,--,61.6822,DFEDGBA Index
+06/26/2012 09:00,US,2022),,S&P/CS 20 City MoM% SA,Apr,0.30%,0.67%,0.09%,0.68%,15.8879,SPCS20SM Index
+06/26/2012 09:00,US,2023),,S&P/CS Composite-20 YoY,Apr,-2.50%,-1.90%,-2.57%,-2.57%,46.729,SPCS20Y% Index
+06/26/2012 09:00,US,2024),,S&P/CaseShiller Home Price Ind,Apr,134.85,135.8,134.1,134.1,54.2056,SPCS20 Index
+06/26/2012 10:00,US,2025),,Consumer Confidence,Jun,63,62,64.9,64.4,95.3271,CONCCONF Index
+06/26/2012 10:00,US,2026),,Richmond Fed Manufact. Index,Jun,2,-3,4,3,67.2897,RCHSINDX Index
+06/27/2012 07:00,US,2027),,MBA Mortgage Applications,22-Jun,--,-7.10%,-0.80%,--,94.4444,MBAVCHNG Index
+06/27/2012 08:30,US,2028),,Durable Goods Orders,May,0.50%,1.10%,0.20%,-0.30%,90.6542,DGNOCHNG Index
+06/27/2012 08:30,US,2029),,Durables Ex Transportation,May,0.70%,0.40%,-0.60%,-0.70%,72.5234,DGNOXTCH Index
+06/27/2012 08:30,US,2030),,Cap Goods Orders Nondef Ex Air,May,1.90%,1.60%,-1.90%,-1.40%,49.5327,CGNOXAI% Index
+06/27/2012 08:30,US,2031),,Cap Goods Ship Nondef Ex Air,May,--,0.40%,-1.40%,-1.50%,42.9907,CGSHXAI% Index
+06/27/2012 10:00,US,2032),,Pending Home Sales MoM,May,1.50%,5.90%,-5.50%,--,72.8972,USPHTMOM Index
+06/27/2012 10:00,US,2033),,Pending Home Sales YoY,May,9.90%,15.30%,14.70%,--,22.2222,USPHTYOY Index
+06/28/2012 08:30,US,2034),,GDP QoQ (Annualized),1Q T,1.90%,1.90%,1.90%,--,96.2617,GDP CQOQ Index
+06/28/2012 08:30,US,2035),,Personal Consumption,1Q T,2.70%,2.50%,2.70%,--,67.3832,GDPCTOT% Index
+06/28/2012 08:30,US,2036),,GDP Price Index,1Q T,1.70%,2.00%,1.70%,--,77.0093,GDP PIQQ Index
+06/28/2012 08:30,US,2037),,Core PCE QoQ,1Q T,2.10%,2.30%,2.10%,--,67.3832,GDPCPCEC Index
+06/28/2012 08:30,US,2038),,Initial Jobless Claims,23-Jun,385K,386K,387K,392K,99.0654,INJCJC Index
+06/28/2012 08:30,US,2039),,Continuing Claims,16-Jun,3280K,3296K,3299K,3311K,69.3458,INJCSP Index
+06/28/2012 09:45,US,2040),,Bloomberg Consumer Comfort,24-Jun,--,-36.1,-37.9,--,60.7477,COMFCOMF Index
+06/28/2012 11:00,US,2041),,Kansas City Fed Manf. Activity,Jun,4,3,9,--,6.54206,KCLSSACI Index
+06/29/2012 08:01,US,2042),,NAPM-Milwaukee,Jun,55.1,60.2,57.7,--,25.2336,MAPMINDX Index
+06/29/2012 08:30,US,2043),,Personal Income,May,0.20%,0.20%,0.20%,--,83.1776,PITLCHNG Index
+06/29/2012 08:30,US,2044),,Personal Spending,May,0.00%,0.00%,0.30%,0.30%,83.1776,PCE CRCH Index
+06/29/2012 08:30,US,2045),,PCE Deflator (MoM),May,-0.20%,-0.20%,0.00%,--,3.73832,PCE DEFM Index
+06/29/2012 08:30,US,2046),,PCE Deflator (YoY),May,1.50%,1.50%,1.80%,1.90%,32.7103,PCE DEFY Index
+06/29/2012 08:30,US,2047),,PCE Core (MoM),May,0.20%,0.10%,0.10%,--,58.2243,PCE CMOM Index
+06/29/2012 08:30,US,2048),,PCE Core (YoY),May,1.80%,1.80%,1.90%,1.90%,33.6449,PCE CYOY Index
+06/29/2012 09:45,US,2049),,Chicago Purchasing Manager,Jun,52.3,52.9,52.7,--,77.5701,CHPMINDX Index
+06/29/2012 09:55,US,2050),,U. of Michigan Confidence,Jun F,74.1,73.2,74.1,--,92.5234,CONSSENT Index
+07/02/2012 08:58,US,2051),,Markit US PMI Final,Jun,52.9,52.5,52.9,--,0.934579,ECONMUSF Index
+07/02/2012 10:00,US,2052),,ISM Manufacturing,Jun,52,49.7,53.5,--,94.3925,NAPMPMI Index
+07/02/2012 10:00,US,2053),,ISM Prices Paid,Jun,45.8,37,47.5,--,68.2243,NAPMPRIC Index
+07/02/2012 10:00,US,2054),,Construction Spending MoM,May,0.20%,0.90%,0.30%,0.90%,78.5047,CNSTTMOM Index
+07/03/2012 09:45,US,2055),,ISM New York,Jun,--,49.7,49.9,--,5.60748,NYPMCURR Index
+07/03/2012 10:00,US,2056),,Factory Orders,May,0.10%,0.70%,-0.60%,-0.70%,82.243,TMNOCHNG Index
+07/03/2012 16:10,US,2057),,Total Vehicle Sales,Jun,13.90M,14.05M,13.73M,13.90M,38.3178,SAARTOTL Index
+07/03/2012 16:10,US,2058),,Domestic Vehicle Sales,Jun,10.89M,11.05M,10.75M,10.88M,30.8411,SAARDTOT Index
+07/05/2012 07:00,US,2059),,MBA Mortgage Applications,29-Jun,--,-6.70%,-7.10%,--,94.4444,MBAVCHNG Index
+07/05/2012 07:30,US,2060),,Challenger Job Cuts YoY,Jun,--,-9.40%,66.70%,--,28.972,CHALYOY% Index
+07/05/2012 08:00,US,2061),,RBC Consumer Outlook Index,Jul,--,47,46.1,--,8.41121,ICSHNATL Index
+07/05/2012 08:15,US,2062),,ADP Employment Change,Jun,100K,176K,133K,131K,76.6355,ADP CHNG Index
+07/05/2012 08:30,US,2063),,Initial Jobless Claims,30-Jun,385K,374K,386K,388K,99.0654,INJCJC Index
+07/05/2012 08:30,US,2064),,Continuing Claims,23-Jun,3300K,3306K,3296K,3302K,69.3458,INJCSP Index
+07/05/2012 09:45,US,2065),,Bloomberg Consumer Comfort,1-Jul,--,-37.5,-36.1,--,60.7477,COMFCOMF Index
+07/05/2012 10:00,US,2066),,ISM Non-Manf. Composite,Jun,53,52.1,53.7,--,70.0935,NAPMNMI Index
+07/05/2012 10:31,US,2067),,ICSC Chain Store Sales YoY,Jun,--,0.20%,1.70%,--,18.6916,MBRXYOYW Index
+07/06/2012 08:30,US,2068),,Change in Nonfarm Payrolls,Jun,100K,80K,69K,87K,98.1308,NFP TCH Index
+07/06/2012 08:30,US,2069),,Change in Private Payrolls,Jun,106K,84K,82K,116K,17.757,NFP PCH Index
+07/06/2012 08:30,US,2070),,Change in Manufact. Payrolls,Jun,7K,11K,12K,13K,68.6916,USMMMNCH Index
+07/06/2012 08:30,US,2071),,Unemployment Rate,Jun,8.20%,8.20%,8.20%,--,88.3178,USURTOT Index
+07/06/2012 08:30,US,2072),,Avg Hourly Earning MOM All Emp,Jun,0.20%,0.30%,0.10%,0.10%,14.0187,AHE MOM% Index
+07/06/2012 08:30,US,2073),,Avg Hourly Earning YOY All Emp,Jun,1.70%,2.00%,1.70%,1.80%,13.0841,AHE YOY% Index
+07/06/2012 08:30,US,2074),,Avg Weekly Hours All Employees,Jun,34.4,34.5,34.4,--,12.1495,AWH TOTL Index
+07/06/2012 08:30,US,2075),,Change in Household Employment,Jun,--,128,422,--,9.34579,USEMNCHG Index
+07/06/2012 08:30,US,2076),,Underemployment Rate (U6),Jun,--,14.90%,14.80%,--,7.47664,USUDMAER Index
+07/09/2012 15:00,US,2077),,Consumer Credit,May,$8.500B,$17.117B,$6.515B,$10.436B,37.3832,CICRTOT Index
+07/10/2012 07:30,US,2078),,NFIB Small Business Optimism,Jun,93.3,91.4,94.4,--,56.0748,SBOITOTL Index
+07/10/2012 10:00,US,2079),,IBD/TIPP Economic Optimism,Jul,46.9,47,46.7,--,0,ECONUSIB Index
+07/10/2012 10:00,US,2080),,JOLTs Job Openings,May,3588,3642,3416,3447,10.2804,JOLTTOTL Index
+07/11/2012 07:00,US,2081),,MBA Mortgage Applications,6-Jul,--,-2.10%,-6.70%,--,94.4444,MBAVCHNG Index
+07/11/2012 08:30,US,2082),,Trade Balance,May,-$48.6B,-$48.7B,-$50.1B,-$49.8B,81.3084,USTBTOT Index
+07/11/2012 10:00,US,2083),,Wholesale Inventories,May,0.30%,0.30%,0.60%,0.50%,79.4393,MWINCHNG Index
+07/11/2012 14:00,US,2084),,Minutes of FOMC Meeting,,,,,,0,
+07/12/2012 08:30,US,2085),,Import Price Index (MoM),Jun,-1.80%,-2.70%,-1.00%,-1.50%,75.7009,IMP1CHNG Index
+07/12/2012 08:30,US,2086),,Import Price Index (YoY),Jun,-1.50%,-2.60%,-0.30%,-0.80%,27.1028,IMP1YOY% Index
+07/12/2012 08:30,US,2087),,Initial Jobless Claims,7-Jul,372K,350K,374K,376K,99.0654,INJCJC Index
+07/12/2012 08:30,US,2088),,Continuing Claims,30-Jun,3300K,3304K,3306K,3318K,69.3458,INJCSP Index
+07/12/2012 09:45,US,2089),,Bloomberg Consumer Comfort,8-Jul,--,-37.5,-37.5,--,60.7477,COMFCOMF Index
+07/12/2012 14:00,US,2090),,Monthly Budget Statement,Jun,-$60.0B,-$59.7B,-$43.1B,-$124.6B,73.8318,FDDSSD Index
+07/13/2012 08:30,US,2091),,Producer Price Index (MoM),Jun,-0.40%,0.10%,-1.00%,--,85.0467,PPI CHNG Index
+07/13/2012 08:30,US,2092),,PPI Ex Food & Energy (MoM),Jun,0.20%,0.20%,0.20%,--,68.0374,PXFECHNG Index
+07/13/2012 08:30,US,2093),,Producer Price Index (YoY),Jun,0.20%,0.70%,0.70%,--,66.3551,PPI YOY Index
+07/13/2012 08:30,US,2094),,PPI Ex Food & Energy (YoY),Jun,2.60%,2.60%,2.70%,--,64.486,PPI XYOY Index
+07/13/2012 09:55,US,2095),,U. of Michigan Confidence,Jul P,73.5,72,73.2,--,92.5234,CONSSENT Index
+07/16/2012 08:30,US,2096),,Empire Manufacturing,Jul,4,7.39,2.29,--,80.3738,EMPRGBCI Index
+07/16/2012 08:30,US,2097),,Advance Retail Sales,Jun,0.20%,-0.50%,-0.20%,-0.10%,88.785,RSTAMOM Index
+07/16/2012 08:30,US,2098),,Retail Sales Less Autos,Jun,0.00%,-0.40%,-0.40%,-0.30%,62.1495,RSTAXMOM Index
+07/16/2012 08:30,US,2099),,Retail Sales Ex Auto & Gas,Jun,0.20%,-0.20%,-0.10%,0.00%,58.8785,RSTAXAG% Index
+07/16/2012 08:30,US,2100),,"Retail Sales ""Control Group""",Jun,0.20%,-0.10%,0.00%,0.10%,4.6729,RSTAXAGM Index
+07/16/2012 10:00,US,2101),,Business Inventories,May,0.20%,0.30%,0.40%,0.30%,34.5794,MTIBCHNG Index
+07/17/2012 08:30,US,2102),,Consumer Price Index (MoM),Jun,0.00%,0.00%,-0.30%,--,93.4579,CPI CHNG Index
+07/17/2012 08:30,US,2103),,CPI Ex Food & Energy (MoM),Jun,0.20%,0.20%,0.20%,--,74.7664,CPUPXCHG Index
+07/17/2012 08:30,US,2104),,Consumer Price Index (YoY),Jun,1.60%,1.70%,1.70%,--,55.1402,CPI YOY Index
+07/17/2012 08:30,US,2105),,CPI Ex Food & Energy (YoY),Jun,2.20%,2.20%,2.30%,--,44.8598,CPI XYOY Index
+07/17/2012 08:30,US,2106),,Consumer Price Index NSA,Jun,229.547,229.478,229.815,--,26.1682,CPURNSA Index
+07/17/2012 08:30,US,2107),,CPI Core Index SA,Jun,--,229.916,229.446,--,29.9065,CPUPAXFE Index
+07/17/2012 09:00,US,2108),,Total Net TIC Flows,May,--,$101.7B,-$20.5B,-$8.3B,63.5514,FRNTTNET Index
+07/17/2012 09:00,US,2109),,Net Long-term TIC Flows,May,$41.3B,$55.0B,$25.6B,$27.2B,71.9626,FRNTTOTL Index
+07/17/2012 09:15,US,2110),,Industrial Production,Jun,0.30%,0.40%,-0.10%,0.10%,85.9813,IP CHNG Index
+07/17/2012 09:15,US,2111),,Capacity Utilization,Jun,79.20%,78.90%,79.00%,78.90%,60.1869,CPTICHNG Index
+07/17/2012 09:15,US,2112),,Manufacturing (SIC) Production,Jun,--,0.70%,-0.40%,-0.70%,2.80374,IPMGCHNG Index
+07/17/2012 10:00,US,2113),,NAHB Housing Market Index,Jul,30,35,29,--,36.4486,USHBMIDX Index
+07/18/2012 07:00,US,2114),,MBA Mortgage Applications,13-Jul,--,16.90%,-2.10%,--,94.4444,MBAVCHNG Index
+07/18/2012 08:30,US,2115),,Housing Starts,Jun,745K,760K,708K,706K,87.8505,NHSPSTOT Index
+07/18/2012 08:30,US,2116),,Housing Starts MOM%,Jun,5.20%,6.90%,-4.80%,--,16.8224,NHCHSTCH Index
+07/18/2012 08:30,US,2117),,Building Permits,Jun,765K,755K,780K,784K,61.4953,NHSPATOT Index
+07/18/2012 08:30,US,2118),,Building Permits MOM%,Jun,-2.40%,-3.70%,7.90%,8.40%,14.9533,NHCHATCH Index
+07/18/2012 14:00,US,2119),,Fed's Beige Book,,,,,,0,
+07/19/2012 08:30,US,2120),,Initial Jobless Claims,14-Jul,365K,386K,350K,352K,99.0654,INJCJC Index
+07/19/2012 08:30,US,2121),,Continuing Claims,7-Jul,3300K,3314K,3304K,3313K,69.3458,INJCSP Index
+07/19/2012 09:45,US,2122),,Bloomberg Consumer Comfort,15-Jul,--,-37.9,-37.5,--,60.7477,COMFCOMF Index
+07/19/2012 09:45,US,2123),,Bloomberg Economic Expectations,Jul,--,-11,-11,--,21.4953,COMFBTWR Index
+07/19/2012 10:00,US,2124),,Philadelphia Fed.,Jul,-8,-12.9,-16.6,--,74.7664,OUTFGAF Index
+07/19/2012 10:00,US,2125),,Existing Home Sales,Jun,4.62M,4.37M,4.55M,4.62M,86.9159,ETSLTOTL Index
+07/19/2012 10:00,US,2126),,Existing Home Sales MoM,Jun,1.50%,-5.40%,-1.50%,0.00%,50.4673,ETSLMOM Index
+07/19/2012 10:00,US,2127),,Leading Indicators,Jun,-0.10%,-0.30%,0.30%,0.30%,84.1121,LEI CHNG Index
+07/23/2012 08:30,US,2128),,Chicago Fed Nat Activity Index,Jun,--,-0.15,-0.45,-0.17,59.8131,CFNAI Index
+07/24/2012 08:58,US,2129),,Markit US PMI Preliminary,Jul,52,51.8,52.5,--,1.86916,ECONMUS Index
+07/24/2012 10:00,US,2130),,Richmond Fed Manufact. Index,Jul,-1,-17,-3,-1,67.2897,RCHSINDX Index
+07/24/2012 10:00,US,2131),,House Price Index MoM,May,0.40%,0.80%,0.80%,0.70%,65.4206,HPIMMOM% Index
+07/25/2012 07:00,US,2132),,MBA Mortgage Applications,20-Jul,--,0.90%,16.90%,--,94.4444,MBAVCHNG Index
+07/25/2012 10:00,US,2133),,New Home Sales,Jun,372K,350K,369K,372K,89.7196,NHSLTOT Index
+07/25/2012 10:00,US,2134),,New Home Sales MoM,Jun,0.70%,-8.40%,7.60%,3.90%,47.6636,NHSLCHNG Index
+07/26/2012 08:30,US,2135),,Durable Goods Orders,Jun,0.30%,1.60%,1.10%,1.50%,90.6542,DGNOCHNG Index
+07/26/2012 08:30,US,2136),,Durables Ex Transportation,Jun,0.10%,-1.10%,0.40%,0.70%,72.5234,DGNOXTCH Index
+07/26/2012 08:30,US,2137),,Cap Goods Orders Nondef Ex Air,Jun,0.10%,-1.40%,1.60%,2.70%,49.5327,CGNOXAI% Index
+07/26/2012 08:30,US,2138),,Cap Goods Ship Nondef Ex Air,Jun,0.60%,1.20%,0.40%,1.10%,42.9907,CGSHXAI% Index
+07/26/2012 08:30,US,2139),,Initial Jobless Claims,21-Jul,380K,353K,386K,388K,99.0654,INJCJC Index
+07/26/2012 08:30,US,2140),,Continuing Claims,14-Jul,3300K,3287K,3314K,3317K,69.3458,INJCSP Index
+07/26/2012 09:45,US,2141),,Bloomberg Consumer Comfort,22-Jul,--,-38.5,-37.9,--,60.7477,COMFCOMF Index
+07/26/2012 10:00,US,2142),,Pending Home Sales MoM,Jun,0.30%,-1.40%,5.90%,5.40%,72.8972,USPHTMOM Index
+07/26/2012 10:00,US,2143),,Pending Home Sales YoY,Jun,12.10%,8.40%,15.30%,14.70%,22.2222,USPHTYOY Index
+07/26/2012 11:00,US,2144),,Kansas City Fed Manf. Activity,Jul,4,5,3,--,6.54206,KCLSSACI Index
+07/27/2012 08:30,US,2145),,Annual Revisions: Gross Domestic Product,,,,,,0,
+07/27/2012 08:30,US,2146),,GDP QoQ (Annualized),2Q A,1.40%,1.50%,1.90%,2.00%,96.2617,GDP CQOQ Index
+07/27/2012 08:30,US,2147),,Personal Consumption,2Q A,1.30%,1.50%,2.50%,2.40%,67.3832,GDPCTOT% Index
+07/27/2012 08:30,US,2148),,GDP Price Index,2Q A,1.50%,1.60%,2.00%,--,77.0093,GDP PIQQ Index
+07/27/2012 08:30,US,2149),,Core PCE QoQ,2Q A,1.80%,1.80%,2.30%,2.20%,67.3832,GDPCPCEC Index
+07/27/2012 09:55,US,2150),,U. of Michigan Confidence,Jul F,72,72.3,72,--,92.5234,CONSSENT Index
+07/30/2012 10:30,US,2151),,Dallas Fed Manf. Activity,Jul,2,-13.2,5.8,--,61.6822,DFEDGBA Index
+07/31/2012 08:00,US,2152),,NAPM-Milwaukee,Jul,--,46.7,60.2,--,25.2336,MAPMINDX Index
+07/31/2012 08:30,US,2153),,Annual Revisions: Personal Income and Spending,,,,,,0,
+07/31/2012 08:30,US,2154),,Personal Income,Jun,0.40%,0.50%,0.20%,0.30%,83.1776,PITLCHNG Index
+07/31/2012 08:30,US,2155),,Personal Spending,Jun,0.10%,0.00%,0.00%,-0.20%,83.1776,PCE CRCH Index
+07/31/2012 08:30,US,2156),,PCE Deflator (MoM),Jun,0.00%,0.10%,-0.20%,--,3.73832,PCE DEFM Index
+07/31/2012 08:30,US,2157),,PCE Deflator (YoY),Jun,1.70%,1.50%,1.50%,--,32.7103,PCE DEFY Index
+07/31/2012 08:30,US,2158),,PCE Core (MoM),Jun,0.20%,0.20%,0.10%,--,58.2243,PCE CMOM Index
+07/31/2012 08:30,US,2159),,PCE Core (YoY),Jun,1.80%,1.80%,1.80%,--,33.6449,PCE CYOY Index
+07/31/2012 08:30,US,2160),,Employment Cost Index,2Q,0.50%,0.50%,0.40%,--,71.028,ECI SA% Index
+07/31/2012 09:00,US,2161),,S&P/CS 20 City MoM% SA,May,0.40%,0.91%,0.67%,0.79%,15.8879,SPCS20SM Index
+07/31/2012 09:00,US,2162),,S&P/CS Composite-20 YoY,May,-1.40%,-0.66%,-1.90%,-1.82%,46.729,SPCS20Y% Index
+07/31/2012 09:00,US,2163),,S&P/CaseShiller Home Price Ind,May,137.55,138.96,135.8,135.91,54.2056,SPCS20 Index
+07/31/2012 09:45,US,2164),,Chicago Purchasing Manager,Jul,52.5,53.7,52.9,--,77.5701,CHPMINDX Index
+07/31/2012 10:00,US,2165),,Consumer Confidence,Jul,61.5,65.9,62,62.7,95.3271,CONCCONF Index
+08/01/2012 07:00,US,2166),,MBA Mortgage Applications,27-Jul,--,0.20%,0.90%,--,94.4444,MBAVCHNG Index
+08/01/2012 08:15,US,2167),,ADP Employment Change,Jul,120K,163K,176K,173K,76.6355,ADP CHNG Index
+08/01/2012 08:58,US,2168),,Markit US PMI Final,Jul,51.8,51.4,51.8,--,0.934579,ECONMUSF Index
+08/01/2012 10:00,US,2169),,ISM Manufacturing,Jul,50.2,49.8,49.7,--,94.3925,NAPMPMI Index
+08/01/2012 10:00,US,2170),,ISM Prices Paid,Jul,40,39.5,37,--,68.2243,NAPMPRIC Index
+08/01/2012 10:00,US,2171),,Construction Spending MoM,Jun,0.40%,0.40%,0.90%,1.70%,78.5047,CNSTTMOM Index
+08/01/2012 14:15,US,2172),,FOMC Rate Decision,1-Aug,0.25%,0.25%,0.25%,--,97.1963,FDTR Index
+08/01/2012 16:05,US,2173),,Total Vehicle Sales,Jul,14.00M,14.05M,14.05M,14.30M,38.3178,SAARTOTL Index
+08/01/2012 16:05,US,2174),,Domestic Vehicle Sales,Jul,11.00M,11.00M,11.05M,11.27M,30.8411,SAARDTOT Index
+08/02/2012 07:30,US,2175),,Challenger Job Cuts YoY,Jul,--,-44.50%,-9.40%,--,28.972,CHALYOY% Index
+08/02/2012 08:00,US,2176),,RBC Consumer Outlook Index,Aug,--,46.4,47,--,8.41121,ICSHNATL Index
+08/02/2012 08:30,US,2177),,Initial Jobless Claims,28-Jul,370K,365K,353K,357K,99.0654,INJCJC Index
+08/02/2012 08:30,US,2178),,Continuing Claims,21-Jul,3288K,3272K,3287K,3291K,69.3458,INJCSP Index
+08/02/2012 09:45,US,2179),,ISM New York,Jul,--,55.2,49.7,--,5.60748,NYPMCURR Index
+08/02/2012 09:45,US,2180),,Bloomberg Consumer Comfort,29-Jul,--,-39.7,-38.5,--,60.7477,COMFCOMF Index
+08/02/2012 09:50,US,2181),,ICSC Chain Store Sales ex Drug Stores Rose 4.6% in July,,,,,,0,
+08/02/2012 10:00,US,2182),,Factory Orders,Jun,0.50%,-0.50%,0.70%,0.50%,82.243,TMNOCHNG Index
+08/03/2012 08:30,US,2183),,Change in Nonfarm Payrolls,Jul,100K,163K,80K,45K,98.1308,NFP TCH Index
+08/03/2012 08:30,US,2184),,Change in Private Payrolls,Jul,110K,172K,84K,63K,17.757,NFP PCH Index
+08/03/2012 08:30,US,2185),,Change in Manufact. Payrolls,Jul,10K,25K,11K,7K,68.6916,USMMMNCH Index
+08/03/2012 08:30,US,2186),,Unemployment Rate,Jul,8.20%,8.30%,8.20%,--,88.3178,USURTOT Index
+08/03/2012 08:30,US,2187),,Avg Hourly Earning MOM All Emp,Jul,0.20%,0.10%,0.30%,--,14.0187,AHE MOM% Index
+08/03/2012 08:30,US,2188),,Avg Hourly Earning YOY All Emp,Jul,1.70%,1.70%,2.00%,--,13.0841,AHE YOY% Index
+08/03/2012 08:30,US,2189),,Avg Weekly Hours All Employees,Jul,34.5,34.5,34.5,--,12.1495,AWH TOTL Index
+08/03/2012 08:30,US,2190),,Change in Household Employment,Jul,--,-195,128,--,9.34579,USEMNCHG Index
+08/03/2012 08:30,US,2191),,Underemployment Rate (U6),Jul,--,15.00%,14.90%,--,7.47664,USUDMAER Index
+08/03/2012 10:00,US,2192),,ISM Non-Manf. Composite,Jul,52.1,52.6,52.1,--,70.0935,NAPMNMI Index
+08/03/2012 10:57,US,2193),,ICSC Chain Store Sales YoY,Jul,--,1.90%,0.20%,--,18.6916,MBRXYOYW Index
+08/07/2012 10:00,US,2194),,JOLTs Job Openings,Jun,3717,3762,3642,3657,10.2804,JOLTTOTL Index
+08/07/2012 15:00,US,2195),,Consumer Credit,Jun,$10.250B,$6.459B,$17.117B,$19.336B,37.3832,CICRTOT Index
+08/08/2012 07:00,US,2196),,MBA Mortgage Applications,3-Aug,--,-1.80%,0.20%,--,94.4444,MBAVCHNG Index
+08/08/2012 08:30,US,2197),,Nonfarm Productivity,2Q P,1.40%,1.60%,-0.90%,-0.50%,35.514,PRODNFR% Index
+08/08/2012 08:30,US,2198),,Unit Labor Costs,2Q P,0.50%,1.70%,1.30%,5.60%,28.0374,COSTNFR% Index
+08/09/2012 08:30,US,2199),,Trade Balance,Jun,-$47.5B,-$42.9B,-$48.7B,-$47.6B,81.3084,USTBTOT Index
+08/09/2012 08:30,US,2200),,Initial Jobless Claims,4-Aug,370K,361K,365K,367K,99.0654,INJCJC Index
+08/09/2012 08:30,US,2201),,Continuing Claims,28-Jul,3275K,3332K,3272K,3279K,69.3458,INJCSP Index
+08/09/2012 09:45,US,2202),,Bloomberg Consumer Comfort,5-Aug,--,-41.9,-39.7,--,60.7477,COMFCOMF Index
+08/09/2012 10:00,US,2203),,Mortgage Delinquencies,2Q,--,7.58%,7.40%,--,33.3333,DLQTDLQT Index
+08/09/2012 10:00,US,2204),,MBA Mortgage Foreclosures,2Q,--,4.27%,4.39%,--,11.215,FORLTOTL Index
+08/09/2012 10:00,US,2205),,Wholesale Inventories,Jun,0.30%,-0.20%,0.30%,0.00%,79.4393,MWINCHNG Index
+08/10/2012 08:30,US,2206),,Import Price Index (MoM),Jul,0.20%,-0.60%,-2.70%,-2.30%,75.7009,IMP1CHNG Index
+08/10/2012 08:30,US,2207),,Import Price Index (YoY),Jul,-2.50%,-3.20%,-2.60%,-2.40%,27.1028,IMP1YOY% Index
+08/10/2012 14:00,US,2208),,Monthly Budget Statement,Jul,-$90.0B,-$69.6B,-$129.4B,-$59.7B,73.8318,FDDSSD Index
+08/14/2012 07:30,US,2209),,NFIB Small Business Optimism,Jul,91.6,91.2,91.4,--,56.0748,SBOITOTL Index
+08/14/2012 08:30,US,2210),,Producer Price Index (MoM),Jul,0.20%,0.30%,0.10%,--,85.0467,PPI CHNG Index
+08/14/2012 08:30,US,2211),,PPI Ex Food & Energy (MoM),Jul,0.20%,0.40%,0.20%,--,68.0374,PXFECHNG Index
+08/14/2012 08:30,US,2212),,Producer Price Index (YoY),Jul,0.50%,0.50%,0.70%,--,66.3551,PPI YOY Index
+08/14/2012 08:30,US,2213),,PPI Ex Food & Energy (YoY),Jul,2.30%,2.50%,2.60%,--,64.486,PPI XYOY Index
+08/14/2012 08:30,US,2214),,Advance Retail Sales,Jul,0.30%,0.80%,-0.50%,-0.70%,88.785,RSTAMOM Index
+08/14/2012 08:30,US,2215),,Retail Sales Less Autos,Jul,0.40%,0.80%,-0.40%,-0.80%,62.1495,RSTAXMOM Index
+08/14/2012 08:30,US,2216),,Retail Sales Ex Auto & Gas,Jul,0.50%,0.90%,-0.20%,-0.40%,58.8785,RSTAXAG% Index
+08/14/2012 08:30,US,2217),,"Retail Sales ""Control Group""",Jul,0.50%,0.90%,-0.10%,-0.20%,4.6729,RSTAXAGM Index
+08/14/2012 10:00,US,2218),,IBD/TIPP Economic Optimism,Aug,46.9,45.6,47,--,0,ECONUSIB Index
+08/14/2012 10:00,US,2219),,Business Inventories,Jun,0.20%,0.10%,0.30%,--,34.5794,MTIBCHNG Index
+08/15/2012 07:00,US,2220),,MBA Mortgage Applications,10-Aug,--,-4.50%,-1.80%,--,94.4444,MBAVCHNG Index
+08/15/2012 08:30,US,2221),,Consumer Price Index (MoM),Jul,0.20%,0.00%,0.00%,--,93.4579,CPI CHNG Index
+08/15/2012 08:30,US,2222),,CPI Ex Food & Energy (MoM),Jul,0.20%,0.10%,0.20%,--,74.7664,CPUPXCHG Index
+08/15/2012 08:30,US,2223),,Consumer Price Index (YoY),Jul,1.60%,1.40%,1.70%,--,55.1402,CPI YOY Index
+08/15/2012 08:30,US,2224),,CPI Ex Food & Energy (YoY),Jul,2.20%,2.10%,2.20%,--,44.8598,CPI XYOY Index
+08/15/2012 08:30,US,2225),,Consumer Price Index NSA,Jul,229.505,229.104,229.478,--,26.1682,CPURNSA Index
+08/15/2012 08:30,US,2226),,CPI Core Index SA,Jul,--,230.124,229.916,--,29.9065,CPUPAXFE Index
+08/15/2012 08:30,US,2227),,Empire Manufacturing,Aug,7,-5.85,7.39,--,80.3738,EMPRGBCI Index
+08/15/2012 09:00,US,2228),,Total Net TIC Flows,Jun,--,$16.7B,$101.7B,$121.3B,63.5514,FRNTTNET Index
+08/15/2012 09:00,US,2229),,Net Long-term TIC Flows,Jun,$40.0B,$9.3B,$55.0B,$55.9B,71.9626,FRNTTOTL Index
+08/15/2012 09:15,US,2230),,Industrial Production,Jul,0.50%,0.60%,0.40%,0.10%,85.9813,IP CHNG Index
+08/15/2012 09:15,US,2231),,Capacity Utilization,Jul,79.20%,79.30%,78.90%,--,60.1869,CPTICHNG Index
+08/15/2012 09:15,US,2232),,Manufacturing (SIC) Production,Jul,0.50%,0.50%,0.70%,0.50%,2.80374,IPMGCHNG Index
+08/15/2012 10:00,US,2233),,NAHB Housing Market Index,Aug,35,37,35,--,36.4486,USHBMIDX Index
+08/16/2012 08:30,US,2234),,Initial Jobless Claims,11-Aug,365K,366K,361K,364K,99.0654,INJCJC Index
+08/16/2012 08:30,US,2235),,Continuing Claims,4-Aug,3300K,3305K,3332K,3336K,69.3458,INJCSP Index
+08/16/2012 08:30,US,2236),,Housing Starts,Jul,756K,746K,760K,754K,87.8505,NHSPSTOT Index
+08/16/2012 08:30,US,2237),,Housing Starts MOM%,Jul,-0.50%,-1.10%,6.90%,6.80%,16.8224,NHCHSTCH Index
+08/16/2012 08:30,US,2238),,Building Permits,Jul,769K,812K,755K,760K,61.4953,NHSPATOT Index
+08/16/2012 08:30,US,2239),,Building Permits MOM%,Jul,1.20%,6.80%,-3.70%,-3.10%,14.9533,NHCHATCH Index
+08/16/2012 09:45,US,2240),,Bloomberg Consumer Comfort,12-Aug,--,-44.4,-41.9,--,60.7477,COMFCOMF Index
+08/16/2012 09:45,US,2241),,Bloomberg Economic Expectations,Aug,--,-22,-11,--,21.4953,COMFBTWR Index
+08/16/2012 10:00,US,2242),,Philadelphia Fed.,Aug,-5,-7.1,-12.9,--,74.7664,OUTFGAF Index
+08/17/2012 09:55,US,2243),,U. of Michigan Confidence,Aug P,72.2,73.6,72.3,--,92.5234,CONSSENT Index
+08/17/2012 10:00,US,2244),,Leading Indicators,Jul,0.20%,0.40%,-0.30%,-0.40%,84.1121,LEI CHNG Index
+08/20/2012 08:30,US,2245),,Chicago Fed Nat Activity Index,Jul,-0.05,-0.13,-0.15,-0.34,59.8131,CFNAI Index
+08/22/2012 07:00,US,2246),,MBA Mortgage Applications,17-Aug,--,-7.40%,-4.50%,--,94.4444,MBAVCHNG Index
+08/22/2012 10:00,US,2247),,Existing Home Sales,Jul,4.51M,4.47M,4.37M,--,86.9159,ETSLTOTL Index
+08/22/2012 10:00,US,2248),,Existing Home Sales MoM,Jul,3.20%,2.30%,-5.40%,--,50.4673,ETSLMOM Index
+08/22/2012 14:00,US,2249),,Minutes of FOMC Meeting,,,,,,0,
+08/23/2012 08:30,US,2250),,Initial Jobless Claims,18-Aug,365K,372K,366K,368K,99.0654,INJCJC Index
+08/23/2012 08:30,US,2251),,Continuing Claims,11-Aug,3300K,3317K,3305K,3313K,69.3458,INJCSP Index
+08/23/2012 08:58,US,2252),,Markit US PMI Preliminary,Aug,51.5,51.9,51.4,--,1.86916,ECONMUS Index
+08/23/2012 09:45,US,2253),,Bloomberg Consumer Comfort,19-Aug,--,-47.4,-44.4,--,60.7477,COMFCOMF Index
+08/23/2012 10:00,US,2254),,New Home Sales,Jul,365K,372K,350K,359K,89.7196,NHSLTOT Index
+08/23/2012 10:00,US,2255),,New Home Sales MoM,Jul,4.30%,3.60%,-8.40%,-3.50%,47.6636,NHSLCHNG Index
+08/23/2012 10:00,US,2256),,House Price Index MoM,Jun,0.60%,0.70%,0.80%,0.60%,65.4206,HPIMMOM% Index
+08/23/2012 10:00,US,2257),,House Price Purchase Index QoQ,2Q,2.60%,1.80%,0.60%,0.90%,20.5607,HPI PURQ Index
+08/24/2012 08:30,US,2258),,Durable Goods Orders,Jul,2.50%,4.20%,1.60%,1.60%,90.6542,DGNOCHNG Index
+08/24/2012 08:30,US,2259),,Durables Ex Transportation,Jul,0.50%,-0.40%,-1.10%,-2.20%,72.5234,DGNOXTCH Index
+08/24/2012 08:30,US,2260),,Cap Goods Orders Nondef Ex Air,Jul,-0.20%,-3.40%,-1.40%,-2.70%,49.5327,CGNOXAI% Index
+08/24/2012 08:30,US,2261),,Cap Goods Ship Nondef Ex Air,Jul,-0.10%,0.00%,1.20%,1.50%,42.9907,CGSHXAI% Index
+08/27/2012 10:30,US,2262),,Dallas Fed Manf. Activity,Aug,-6.5,-1.6,-13.2,--,61.6822,DFEDGBA Index
+08/28/2012 09:00,US,2263),,S&P/CS 20 City MoM% SA,Jun,0.45%,0.94%,0.91%,0.97%,15.8879,SPCS20SM Index
+08/28/2012 09:00,US,2264),,S&P/CS Composite-20 YoY,Jun,-0.05%,0.50%,-0.66%,-0.65%,46.729,SPCS20Y% Index
+08/28/2012 09:00,US,2265),,S&P/Case-Shiller US HPI YOY%,2Q,--,1.22%,-1.92%,-1.38%,23.3645,SPCSUSAY Index
+08/28/2012 09:00,US,2266),,S&P/CaseShiller Home Price Ind,Jun,--,142.21,138.96,138.97,54.2056,SPCS20 Index
+08/28/2012 09:00,US,2267),,S&P/Case-Shiller US HPI,2Q,--,132.54,123.33,124.03,27.7778,SPCSUSA Index
+08/28/2012 10:00,US,2268),,Consumer Confidence,Aug,66,60.6,65.9,65.4,95.3271,CONCCONF Index
+08/28/2012 10:00,US,2269),,Richmond Fed Manufact. Index,Aug,-10,-9,-17,--,67.2897,RCHSINDX Index
+08/29/2012 07:00,US,2270),,MBA Mortgage Applications,24-Aug,--,-4.30%,-7.40%,--,94.4444,MBAVCHNG Index
+08/29/2012 08:30,US,2271),,GDP QoQ (Annualized),2Q S,1.70%,1.70%,1.50%,--,96.2617,GDP CQOQ Index
+08/29/2012 08:30,US,2272),,Personal Consumption,2Q S,1.50%,1.70%,1.50%,--,67.3832,GDPCTOT% Index
+08/29/2012 08:30,US,2273),,GDP Price Index,2Q S,1.60%,1.60%,1.60%,--,77.0093,GDP PIQQ Index
+08/29/2012 08:30,US,2274),,Core PCE QoQ,2Q S,1.80%,1.80%,1.80%,--,67.3832,GDPCPCEC Index
+08/29/2012 10:00,US,2275),,Pending Home Sales MoM,Jul,1.00%,2.40%,-1.40%,--,72.8972,USPHTMOM Index
+08/29/2012 10:00,US,2276),,Pending Home Sales YoY,Jul,11.10%,15.00%,8.40%,--,22.2222,USPHTYOY Index
+08/29/2012 14:00,US,2277),,Fed's Beige Book,,,,,,0,
+08/30/2012 08:30,US,2278),,Personal Income,Jul,0.30%,0.30%,0.50%,0.30%,83.1776,PITLCHNG Index
+08/30/2012 08:30,US,2279),,Personal Spending,Jul,0.50%,0.40%,0.00%,--,83.1776,PCE CRCH Index
+08/30/2012 08:30,US,2280),,PCE Deflator (MoM),Jul,0.10%,0.00%,0.10%,--,3.73832,PCE DEFM Index
+08/30/2012 08:30,US,2281),,PCE Deflator (YoY),Jul,1.40%,1.30%,1.50%,--,32.7103,PCE DEFY Index
+08/30/2012 08:30,US,2282),,PCE Core (MoM),Jul,0.10%,0.00%,0.20%,--,58.2243,PCE CMOM Index
+08/30/2012 08:30,US,2283),,PCE Core (YoY),Jul,1.70%,1.60%,1.80%,--,33.6449,PCE CYOY Index
+08/30/2012 08:30,US,2284),,Initial Jobless Claims,25-Aug,370K,374K,372K,374K,99.0654,INJCJC Index
+08/30/2012 08:30,US,2285),,Continuing Claims,18-Aug,3307K,3316K,3317K,3321K,69.3458,INJCSP Index
+08/30/2012 09:45,US,2286),,Bloomberg Consumer Comfort,26-Aug,--,-47.3,-47.4,--,60.7477,COMFCOMF Index
+08/30/2012 11:00,US,2287),,ICSC Chain Store Sales ex Drug Stores Rose 6% in August,,,,,,0,
+08/30/2012 11:00,US,2288),,Kansas City Fed Manf. Activity,Aug,3,8,5,--,6.54206,KCLSSACI Index
+08/31/2012 08:00,US,2289),,NAPM-Milwaukee,Aug,49,42.9,46.7,--,25.2336,MAPMINDX Index
+08/31/2012 09:45,US,2290),,Chicago Purchasing Manager,Aug,53.2,53,53.7,--,77.5701,CHPMINDX Index
+08/31/2012 09:55,US,2291),,U. of Michigan Confidence,Aug F,73.6,74.3,73.6,--,92.5234,CONSSENT Index
+08/31/2012 10:00,US,2292),,Factory Orders,Jul,2.00%,2.80%,-0.50%,--,82.243,TMNOCHNG Index
+09/04/2012 08:58,US,2293),,Markit US PMI Final,Aug,51.9,51.5,51.9,--,0.934579,ECONMUSF Index
+09/04/2012 10:00,US,2294),,ISM Manufacturing,Aug,50,49.6,49.8,--,94.3925,NAPMPMI Index
+09/04/2012 10:00,US,2295),,ISM Prices Paid,Aug,46,54,39.5,--,68.2243,NAPMPRIC Index
+09/04/2012 10:00,US,2296),,Construction Spending MoM,Jul,0.40%,-0.90%,0.40%,--,78.5047,CNSTTMOM Index
+09/04/2012 15:34,US,2297),,Total Vehicle Sales,Aug,14.20M,14.46M,14.05M,--,38.3178,SAARTOTL Index
+09/04/2012 15:35,US,2298),,Domestic Vehicle Sales,Aug,11.03M,11.54M,11.00M,--,30.8411,SAARDTOT Index
+09/05/2012 07:00,US,2299),,MBA Mortgage Applications,31-Aug,--,-2.50%,-4.30%,--,94.4444,MBAVCHNG Index
+09/05/2012 08:30,US,2300),,Nonfarm Productivity,2Q F,1.80%,2.20%,1.60%,--,35.514,PRODNFR% Index
+09/05/2012 08:30,US,2301),,Unit Labor Costs,2Q F,1.40%,1.50%,1.70%,--,28.0374,COSTNFR% Index
+09/05/2012 09:45,US,2302),,ISM New York,Aug,--,51.4,55.2,--,5.60748,NYPMCURR Index
+09/06/2012 07:30,US,2303),,Challenger Job Cuts YoY,Aug,--,-36.90%,-44.50%,--,28.972,CHALYOY% Index
+09/06/2012 08:15,US,2304),,ADP Employment Change,Aug,140K,201K,163K,173K,76.6355,ADP CHNG Index
+09/06/2012 08:30,US,2305),,Initial Jobless Claims,1-Sep,370K,365K,374K,377K,99.0654,INJCJC Index
+09/06/2012 08:30,US,2306),,Continuing Claims,25-Aug,3315K,3322K,3316K,3328K,69.3458,INJCSP Index
+09/06/2012 09:45,US,2307),,Bloomberg Consumer Comfort,2-Sep,--,-46.5,-47.3,--,60.7477,COMFCOMF Index
+09/06/2012 10:00,US,2308),,ISM Non-Manf. Composite,Aug,52.5,53.7,52.6,--,70.0935,NAPMNMI Index
+09/06/2012 10:30,US,2309),,ICSC Chain Store Sales YoY,Aug,--,2.60%,1.90%,--,18.6916,MBRXYOYW Index
+09/07/2012 08:30,US,2310),,Change in Nonfarm Payrolls,Aug,130K,96K,163K,141K,98.1308,NFP TCH Index
+09/07/2012 08:30,US,2311),,Change in Private Payrolls,Aug,142K,103K,172K,162K,17.757,NFP PCH Index
+09/07/2012 08:30,US,2312),,Change in Manufact. Payrolls,Aug,10K,-15K,25K,23K,68.6916,USMMMNCH Index
+09/07/2012 08:30,US,2313),,Unemployment Rate,Aug,8.30%,8.10%,8.30%,--,88.3178,USURTOT Index
+09/07/2012 08:30,US,2314),,Avg Hourly Earning MOM All Emp,Aug,0.20%,0.00%,0.10%,--,14.0187,AHE MOM% Index
+09/07/2012 08:30,US,2315),,Avg Hourly Earning YOY All Emp,Aug,1.90%,1.70%,1.70%,--,13.0841,AHE YOY% Index
+09/07/2012 08:30,US,2316),,Avg Weekly Hours All Employees,Aug,34.5,34.4,34.5,34.4,12.1495,AWH TOTL Index
+09/07/2012 08:30,US,2317),,Change in Household Employment,Aug,--,-119,-195,--,9.34579,USEMNCHG Index
+09/07/2012 08:30,US,2318),,Underemployment Rate (U6),Aug,--,14.70%,15.00%,--,7.47664,USUDMAER Index
+09/10/2012 15:00,US,2319),,Consumer Credit,Jul,$9.200B,-$3.276B,$6.459B,$9.823B,37.3832,CICRTOT Index
+09/11/2012 07:30,US,2320),,NFIB Small Business Optimism,Aug,91.4,92.9,91.2,--,56.0748,SBOITOTL Index
+09/11/2012 08:30,US,2321),,Trade Balance,Jul,-$44.0B,-$42.0B,-$42.9B,-$41.9B,81.3084,USTBTOT Index
+09/11/2012 10:00,US,2322),,IBD/TIPP Economic Optimism,Sep,46.4,51.8,45.6,--,0,ECONUSIB Index
+09/11/2012 10:00,US,2323),,JOLTs Job Openings,Jul,3740,3664,3762,3722,10.2804,JOLTTOTL Index
+09/12/2012 07:00,US,2324),,MBA Mortgage Applications,7-Sep,--,11.10%,-2.50%,-2.40%,94.4444,MBAVCHNG Index
+09/12/2012 08:30,US,2325),,Import Price Index (MoM),Aug,1.50%,0.70%,-0.60%,-0.70%,75.7009,IMP1CHNG Index
+09/12/2012 08:30,US,2326),,Import Price Index (YoY),Aug,-1.50%,-2.20%,-3.20%,--,27.1028,IMP1YOY% Index
+09/12/2012 10:00,US,2327),,Wholesale Inventories,Jul,0.30%,0.70%,-0.20%,--,79.4393,MWINCHNG Index
+09/13/2012 08:00,US,2328),,RBC Consumer Outlook Index,Sep,--,--,46.4,--,8.41121,ICSHNATL Index
+09/13/2012 08:30,US,2329),,Producer Price Index (MoM),Aug,1.20%,--,0.30%,--,85.0467,PPI CHNG Index
+09/13/2012 08:30,US,2330),,PPI Ex Food & Energy (MoM),Aug,0.20%,--,0.40%,--,68.0374,PXFECHNG Index
+09/13/2012 08:30,US,2331),,Producer Price Index (YoY),Aug,1.60%,--,0.50%,--,66.3551,PPI YOY Index
+09/13/2012 08:30,US,2332),,PPI Ex Food & Energy (YoY),Aug,2.60%,--,2.50%,--,64.486,PPI XYOY Index
+09/13/2012 08:30,US,2333),,Initial Jobless Claims,8-Sep,370K,--,365K,--,99.0654,INJCJC Index
+09/13/2012 08:30,US,2334),,Continuing Claims,1-Sep,3318K,--,3322K,--,69.3458,INJCSP Index
+09/13/2012 09:45,US,2335),,Bloomberg Consumer Comfort,9-Sep,--,--,-46.5,--,60.7477,COMFCOMF Index
+09/13/2012 12:30,US,2336),,FOMC Rate Decision,13-Sep,0.25%,--,0.25%,--,97.1963,FDTR Index
+09/13/2012 14:00,US,2337),,FOMC_Economic_Projections,13-Sep,0.25%,--,0.25%,--,97.1963,FDTR Index
+09/13/2012 14:00,US,2337),,Monthly Budget Statement,Aug,-$170.0B,--,-$134.1B,--,73.8318,FDDSSD Index
+09/13/2012 14:15,US,2337),,Fed's_Press_Conference,13-Sep,0.25%,--,0.25%,--,97.1963,FDTR Index
+09/14/2012 08:30,US,2338),,Consumer Price Index (MoM),Aug,0.60%,--,0.00%,--,93.4579,CPI CHNG Index
+09/14/2012 08:30,US,2339),,CPI Ex Food & Energy (MoM),Aug,0.20%,--,0.10%,--,74.7664,CPUPXCHG Index
+09/14/2012 08:30,US,2340),,Consumer Price Index (YoY),Aug,1.70%,--,1.40%,--,55.1402,CPI YOY Index
+09/14/2012 08:30,US,2341),,CPI Ex Food & Energy (YoY),Aug,2.00%,--,2.10%,--,44.8598,CPI XYOY Index
+09/14/2012 08:30,US,2342),,Consumer Price Index NSA,Aug,230.626,--,229.104,--,26.1682,CPURNSA Index
+09/14/2012 08:30,US,2343),,CPI Core Index SA,Aug,--,--,230.124,--,29.9065,CPUPAXFE Index
+09/14/2012 08:30,US,2344),,Advance Retail Sales,Aug,0.80%,--,0.80%,--,88.785,RSTAMOM Index
+09/14/2012 08:30,US,2345),,Retail Sales Less Autos,Aug,0.70%,--,0.80%,--,62.1495,RSTAXMOM Index
+09/14/2012 08:30,US,2346),,Retail Sales Ex Auto & Gas,Aug,0.40%,--,0.90%,--,58.8785,RSTAXAG% Index
+09/14/2012 08:30,US,2347),,"Retail Sales ""Control Group""",Aug,0.40%,--,0.90%,--,4.6729,RSTAXAGM Index
+09/14/2012 09:15,US,2348),,Industrial Production,Aug,-0.10%,--,0.60%,--,85.9813,IP CHNG Index
+09/14/2012 09:15,US,2349),,Capacity Utilization,Aug,79.20%,--,79.30%,--,60.1869,CPTICHNG Index
+09/14/2012 09:15,US,2350),,Manufacturing (SIC) Production,Aug,-0.30%,--,0.50%,--,2.80374,IPMGCHNG Index
+09/14/2012 09:55,US,2351),,U. of Michigan Confidence,Sep P,74,--,74.3,--,92.5234,CONSSENT Index
+09/14/2012 10:00,US,2352),,Business Inventories,Jul,0.30%,--,0.10%,--,34.5794,MTIBCHNG Index
+09/17/2012 08:30,US,2353),,Empire Manufacturing,Sep,-1.75,--,-5.85,--,80.3738,EMPRGBCI Index
+09/18/2012 08:30,US,2354),,Current Account Balance,2Q,-$127.5B,--,-$137.3B,--,69.1589,USCABAL Index
+09/18/2012 09:00,US,2355),,Total Net TIC Flows,Jul,--,--,$16.7B,--,63.5514,FRNTTNET Index
+09/18/2012 09:00,US,2356),,Net Long-term TIC Flows,Jul,--,--,$9.3B,--,71.9626,FRNTTOTL Index
+09/18/2012 10:00,US,2357),,NAHB Housing Market Index,Sep,38,--,37,--,36.4486,USHBMIDX Index
+09/19/2012 07:00,US,2358),,MBA Mortgage Applications,14-Sep,--,--,11.10%,--,94.4444,MBAVCHNG Index
+09/19/2012 08:30,US,2359),,Housing Starts,Aug,765K,--,746K,--,87.8505,NHSPSTOT Index
+09/19/2012 08:30,US,2360),,Housing Starts MOM%,Aug,2.60%,--,-1.10%,--,16.8224,NHCHSTCH Index
+09/19/2012 08:30,US,2361),,Building Permits,Aug,792K,--,812K,811K,61.4953,NHSPATOT Index
+09/19/2012 08:30,US,2362),,Building Permits MOM%,Aug,-2.30%,--,6.80%,--,14.9533,NHCHATCH Index
+09/19/2012 10:00,US,2363),,Existing Home Sales,Aug,4.55M,--,4.47M,--,86.9159,ETSLTOTL Index
+09/19/2012 10:00,US,2364),,Existing Home Sales MoM,Aug,1.80%,--,2.30%,--,50.4673,ETSLMOM Index
+09/20/2012 08:30,US,2365),,Initial Jobless Claims,15-Sep,--,--,365K,--,99.0654,INJCJC Index
+09/20/2012 08:30,US,2366),,Continuing Claims,8-Sep,--,--,3322K,--,69.3458,INJCSP Index
+09/20/2012 08:58,US,2367),,Markit US PMI Preliminary,Sep,--,--,--,--,1.86916,ECONMUS Index
+09/20/2012 09:45,US,2368),,Bloomberg Consumer Comfort,16-Sep,--,--,--,--,60.7477,COMFCOMF Index
+09/20/2012 09:45,US,2369),,Bloomberg Economic Expectations,Sep,--,--,-22,--,21.4953,COMFBTWR Index
+09/20/2012 10:00,US,2370),,Philadelphia Fed.,Sep,-3,--,-7.1,--,74.7664,OUTFGAF Index
+09/20/2012 10:00,US,2371),,Leading Indicators,Aug,-0.10%,--,0.40%,--,84.1121,LEI CHNG Index
+09/20/2012 12:00,US,2372),,Federal Reserve Flow of Funds Report,,,,,,0,
+09/24/2012 08:30,US,2373),,Chicago Fed Nat Activity Index,Aug,--,--,-0.13,--,59.8131,CFNAI Index
+09/24/2012 10:30,US,2374),,Dallas Fed Manf. Activity,Sep,--,--,-1.6,--,61.6822,DFEDGBA Index
+09/25/2012 09:00,US,2375),,S&P/CS 20 City MoM% SA,Jul,--,--,0.94%,--,15.8879,SPCS20SM Index
+09/25/2012 09:00,US,2376),,S&P/CS Composite-20 YoY,Jul,--,--,0.50%,--,46.729,SPCS20Y% Index
+09/25/2012 09:00,US,2377),,S&P/CaseShiller Home Price Ind,Jul,--,--,142.21,--,54.2056,SPCS20 Index
+09/25/2012 10:00,US,2378),,Consumer Confidence,Sep,--,--,60.6,--,95.3271,CONCCONF Index
+09/25/2012 10:00,US,2379),,Richmond Fed Manufact. Index,Sep,--,--,-9,--,67.2897,RCHSINDX Index
+09/25/2012 10:00,US,2380),,House Price Index MoM,Jul,--,--,0.70%,--,65.4206,HPIMMOM% Index
+09/26/2012 07:00,US,2381),,MBA Mortgage Applications,21-Sep,--,--,--,--,94.4444,MBAVCHNG Index
+09/26/2012 10:00,US,2382),,New Home Sales,Aug,--,--,372K,--,89.7196,NHSLTOT Index
+09/26/2012 10:00,US,2383),,New Home Sales MoM,Aug,--,--,3.60%,--,47.6636,NHSLCHNG Index
+09/27/2012 08:30,US,2384),,GDP QoQ (Annualized),2Q T,--,--,1.70%,--,96.2617,GDP CQOQ Index
+09/27/2012 08:30,US,2385),,Durable Goods Orders,Aug,--,--,4.20%,4.10%,90.6542,DGNOCHNG Index
+09/27/2012 08:30,US,2386),,Personal Consumption,2Q T,--,--,1.70%,--,67.3832,GDPCTOT% Index
+09/27/2012 08:30,US,2387),,Durables Ex Transportation,Aug,--,--,-0.40%,-0.60%,72.5234,DGNOXTCH Index
+09/27/2012 08:30,US,2388),,GDP Price Index,2Q T,--,--,1.60%,--,77.0093,GDP PIQQ Index
+09/27/2012 08:30,US,2389),,Cap Goods Orders Nondef Ex Air,Aug,--,--,-3.40%,--,49.5327,CGNOXAI% Index
+09/27/2012 08:30,US,2390),,Core PCE QoQ,2Q T,--,--,1.80%,--,67.3832,GDPCPCEC Index
+09/27/2012 08:30,US,2391),,Cap Goods Ship Nondef Ex Air,Aug,--,--,0.00%,--,42.9907,CGSHXAI% Index
+09/27/2012 08:30,US,2392),,Initial Jobless Claims,22-Sep,--,--,--,--,99.0654,INJCJC Index
+09/27/2012 08:30,US,2393),,Continuing Claims,15-Sep,--,--,--,--,69.3458,INJCSP Index
+09/27/2012 09:45,US,2394),,Bloomberg Consumer Comfort,23-Sep,--,--,--,--,60.7477,COMFCOMF Index
+09/27/2012 10:00,US,2395),,Pending Home Sales MoM,Aug,--,--,2.40%,--,72.8972,USPHTMOM Index
+09/27/2012 10:00,US,2396),,Pending Home Sales YoY,Aug,--,--,15.00%,--,22.2222,USPHTYOY Index
+09/27/2012 11:00,US,2397),,Kansas City Fed Manf. Activity,Sep,--,--,8,--,6.54206,KCLSSACI Index
+09/28/2012 08:30,US,2398),,Personal Income,Aug,--,--,0.30%,--,83.1776,PITLCHNG Index
+09/28/2012 08:30,US,2399),,Personal Spending,Aug,--,--,0.40%,--,83.1776,PCE CRCH Index
+09/28/2012 08:30,US,2400),,PCE Deflator (MoM),Aug,--,--,0.00%,--,3.73832,PCE DEFM Index
+09/28/2012 08:30,US,2401),,PCE Deflator (YoY),Aug,--,--,1.30%,--,32.7103,PCE DEFY Index
+09/28/2012 08:30,US,2402),,PCE Core (MoM),Aug,--,--,0.00%,--,58.2243,PCE CMOM Index
+09/28/2012 08:30,US,2403),,PCE Core (YoY),Aug,--,--,1.60%,--,33.6449,PCE CYOY Index
+09/28/2012 09:00,US,2404),,NAPM-Milwaukee,Sep,--,--,42.9,--,25.2336,MAPMINDX Index
+09/28/2012 09:45,US,2405),,Chicago Purchasing Manager,Sep,--,--,53,--,77.5701,CHPMINDX Index
+09/28/2012 09:55,US,2406),,U. of Michigan Confidence,Sep F,--,--,--,--,92.5234,CONSSENT Index
+10/01/2012 08:58,US,2407),,Markit US PMI Final,Sep,--,--,--,--,0.934579,ECONMUSF Index
+10/01/2012 10:00,US,2408),,ISM Manufacturing,Sep,--,--,49.6,--,94.3925,NAPMPMI Index
+10/01/2012 10:00,US,2409),,ISM Prices Paid,Sep,--,--,54,--,68.2243,NAPMPRIC Index
+10/01/2012 10:00,US,2410),,Construction Spending MoM,Aug,--,--,-0.90%,--,78.5047,CNSTTMOM Index
+10/02/2012 09:45,US,2411),,ISM New York,Sep,--,--,51.4,--,5.60748,NYPMCURR Index
+10/02/2012 17:00,US,2412),,Total Vehicle Sales,Sep,--,--,14.46M,--,38.3178,SAARTOTL Index
+10/02/2012 17:00,US,2413),,Domestic Vehicle Sales,Sep,--,--,11.54M,--,30.8411,SAARDTOT Index
+10/03/2012 07:00,US,2414),,MBA Mortgage Applications,28-Sep,--,--,--,--,94.4444,MBAVCHNG Index
+10/03/2012 08:15,US,2415),,ADP Employment Change,Sep,--,--,201K,--,76.6355,ADP CHNG Index
+10/03/2012 10:00,US,2416),,ISM Non-Manf. Composite,Sep,--,--,53.7,--,70.0935,NAPMNMI Index
+10/04/2012 07:30,US,2418),,Challenger Job Cuts YoY,Sep,--,--,-36.90%,--,28.972,CHALYOY% Index
+10/04/2012 08:00,US,2419),,RBC Consumer Outlook Index,Oct,--,--,--,--,8.41121,ICSHNATL Index
+10/04/2012 08:30,US,2420),,Initial Jobless Claims,29-Sep,--,--,--,--,99.0654,INJCJC Index
+10/04/2012 08:30,US,2421),,Continuing Claims,22-Sep,--,--,--,--,69.3458,INJCSP Index
+10/04/2012 09:45,US,2422),,Bloomberg Consumer Comfort,30-Sep,--,--,--,--,60.7477,COMFCOMF Index
+10/04/2012 10:00,US,2423),,Factory Orders,Aug,--,--,2.80%,--,82.243,TMNOCHNG Index
+10/04/2012 14:00,US,2417),,Minutes of FOMC Meeting,,,,,,0,
+10/05/2012 08:30,US,2424),,Change in Nonfarm Payrolls,Sep,--,--,96K,--,98.1308,NFP TCH Index
+10/05/2012 08:30,US,2425),,Change in Private Payrolls,Sep,--,--,103K,--,17.757,NFP PCH Index
+10/05/2012 08:30,US,2426),,Change in Manufact. Payrolls,Sep,--,--,-15K,--,68.6916,USMMMNCH Index
+10/05/2012 08:30,US,2427),,Unemployment Rate,Sep,--,--,8.10%,--,88.3178,USURTOT Index
+10/05/2012 08:30,US,2428),,Avg Hourly Earning MOM All Emp,Sep,--,--,0.00%,--,14.0187,AHE MOM% Index
+10/05/2012 08:30,US,2429),,Avg Hourly Earning YOY All Emp,Sep,--,--,1.70%,--,13.0841,AHE YOY% Index
+10/05/2012 08:30,US,2430),,Avg Weekly Hours All Employees,Sep,--,--,34.4,--,12.1495,AWH TOTL Index
+10/05/2012 08:30,US,2431),,Change in Household Employment,Sep,--,--,-119,--,9.34579,USEMNCHG Index
+10/05/2012 08:30,US,2432),,Underemployment Rate (U6),Sep,--,--,14.70%,--,7.47664,USUDMAER Index
+10/05/2012 15:00,US,2433),,Consumer Credit,Aug,--,--,-$3.276B,--,37.3832,CICRTOT Index
+10/09/2012 07:30,US,2434),,NFIB Small Business Optimism,Sep,--,--,92.9,--,56.0748,SBOITOTL Index
+10/09/2012 10:00,US,2435),,IBD/TIPP Economic Optimism,Oct,--,--,51.8,--,0,ECONUSIB Index
+10/10/2012 07:00,US,2436),,MBA Mortgage Applications,5-Oct,--,--,--,--,94.4444,MBAVCHNG Index
+10/10/2012 10:00,US,2437),,JOLTs Job Openings,Aug,--,--,3664,--,10.2804,JOLTTOTL Index
+10/10/2012 10:00,US,2438),,Wholesale Inventories,Aug,--,--,0.70%,--,79.4393,MWINCHNG Index
+10/10/2012 14:00,US,2439),,Fed's Beige Book,,,,,,0,
+10/11/2012 08:30,US,2440),,Import Price Index (MoM),Sep,--,--,0.70%,--,75.7009,IMP1CHNG Index
+10/11/2012 08:30,US,2441),,Import Price Index (YoY),Sep,--,--,-2.20%,--,27.1028,IMP1YOY% Index
+10/11/2012 08:30,US,2442),,Trade Balance,Aug,--,--,-$42.0B,--,81.3084,USTBTOT Index
+10/11/2012 08:30,US,2443),,Initial Jobless Claims,6-Oct,--,--,--,--,99.0654,INJCJC Index
+10/11/2012 08:30,US,2444),,Continuing Claims,29-Sep,--,--,--,--,69.3458,INJCSP Index
+10/11/2012 09:45,US,2445),,Bloomberg Consumer Comfort,7-Oct,--,--,--,--,60.7477,COMFCOMF Index
+10/11/2012 14:00,US,2446),,Monthly Budget Statement,Sep,--,--,--,--,73.8318,FDDSSD Index
+10/12/2012 08:30,US,2447),,Producer Price Index (MoM),Sep,--,--,0.30%,--,85.0467,PPI CHNG Index
+10/12/2012 08:30,US,2448),,PPI Ex Food & Energy (MoM),Sep,--,--,--,--,68.0374,PXFECHNG Index
+10/12/2012 08:30,US,2449),,Producer Price Index (YoY),Sep,--,--,--,--,66.3551,PPI YOY Index
+10/12/2012 08:30,US,2450),,PPI Ex Food & Energy (YoY),Sep,--,--,--,--,64.486,PPI XYOY Index
+10/12/2012 09:55,US,2451),,U. of Michigan Confidence,Oct P,--,--,--,--,92.5234,CONSSENT Index
+10/15/2012 08:30,US,2452),,Empire Manufacturing,Oct,--,--,--,--,80.3738,EMPRGBCI Index
+10/15/2012 08:30,US,2453),,Advance Retail Sales,Sep,--,--,0.80%,--,88.785,RSTAMOM Index
+10/15/2012 08:30,US,2454),,Retail Sales Less Autos,Sep,--,--,--,--,62.1495,RSTAXMOM Index
+10/15/2012 08:30,US,2455),,Retail Sales Ex Auto & Gas,Sep,--,--,--,--,58.8785,RSTAXAG% Index
+10/15/2012 08:30,US,2456),,"Retail Sales ""Control Group""",Sep,--,--,--,--,4.6729,RSTAXAGM Index
+10/15/2012 10:00,US,2457),,Business Inventories,Aug,--,--,--,--,34.5794,MTIBCHNG Index
+10/16/2012 08:30,US,2458),,Consumer Price Index (MoM),Sep,--,--,--,--,93.4579,CPI CHNG Index
+10/16/2012 08:30,US,2459),,CPI Ex Food & Energy (MoM),Sep,--,--,0.10%,--,74.7664,CPUPXCHG Index
+10/16/2012 08:30,US,2460),,Consumer Price Index (YoY),Sep,--,--,--,--,55.1402,CPI YOY Index
+10/16/2012 08:30,US,2461),,CPI Ex Food & Energy (YoY),Sep,--,--,--,--,44.8598,CPI XYOY Index
+10/16/2012 08:30,US,2462),,Consumer Price Index NSA,Sep,--,--,--,--,26.1682,CPURNSA Index
+10/16/2012 08:30,US,2463),,CPI Core Index SA,Sep,--,--,--,--,29.9065,CPUPAXFE Index
+10/16/2012 09:00,US,2464),,Total Net TIC Flows,Aug,--,--,--,--,63.5514,FRNTTNET Index
+10/16/2012 09:00,US,2465),,Net Long-term TIC Flows,Aug,--,--,--,--,71.9626,FRNTTOTL Index
+10/16/2012 09:15,US,2466),,Industrial Production,Sep,--,--,--,--,85.9813,IP CHNG Index
+10/16/2012 09:15,US,2467),,Capacity Utilization,Sep,--,--,--,--,60.1869,CPTICHNG Index
+10/16/2012 09:15,US,2468),,Manufacturing (SIC) Production,Sep,--,--,--,--,2.80374,IPMGCHNG Index
+10/16/2012 10:00,US,2469),,NAHB Housing Market Index,Oct,--,--,--,--,36.4486,USHBMIDX Index
+10/17/2012 07:00,US,2470),,MBA Mortgage Applications,12-Oct,--,--,--,--,94.4444,MBAVCHNG Index
+10/17/2012 08:30,US,2471),,Housing Starts,Sep,--,--,--,--,87.8505,NHSPSTOT Index
+10/17/2012 08:30,US,2472),,Housing Starts MOM%,Sep,--,--,--,--,16.8224,NHCHSTCH Index
+10/17/2012 08:30,US,2473),,Building Permits,Sep,--,--,--,--,61.4953,NHSPATOT Index
+10/17/2012 08:30,US,2474),,Building Permits MOM%,Sep,--,--,--,--,14.9533,NHCHATCH Index
+10/18/2012 08:30,US,2475),,Initial Jobless Claims,13-Oct,--,--,--,--,99.0654,INJCJC Index
+10/18/2012 08:30,US,2476),,Continuing Claims,6-Oct,--,--,--,--,69.3458,INJCSP Index
+10/18/2012 09:45,US,2477),,Bloomberg Consumer Comfort,14-Oct,--,--,--,--,60.7477,COMFCOMF Index
+10/18/2012 09:45,US,2478),,Bloomberg Economic Expectations,Oct,--,--,--,--,21.4953,COMFBTWR Index
+10/18/2012 10:00,US,2479),,Philadelphia Fed.,Oct,--,--,--,--,74.7664,OUTFGAF Index
+10/18/2012 10:00,US,2480),,Leading Indicators,Sep,--,--,--,--,84.1121,LEI CHNG Index
+10/19/2012 10:00,US,2481),,Existing Home Sales,Sep,--,--,--,--,86.9159,ETSLTOTL Index
+10/19/2012 10:00,US,2482),,Existing Home Sales MoM,Sep,--,--,--,--,50.4673,ETSLMOM Index
+10/23/2012 10:00,US,2483),,Richmond Fed Manufact. Index,Oct,--,--,--,--,67.2897,RCHSINDX Index
+10/24/2012 07:00,US,2484),,MBA Mortgage Applications,19-Oct,--,--,--,--,94.4444,MBAVCHNG Index
+10/24/2012 08:58,US,2485),,Markit US PMI Preliminary,Oct,--,--,--,--,1.86916,ECONMUS Index
+10/24/2012 10:00,US,2486),,New Home Sales,Sep,--,--,372K,--,89.7196,NHSLTOT Index
+10/24/2012 10:00,US,2487),,New Home Sales MoM,Sep,--,--,--,--,47.6636,NHSLCHNG Index
+10/24/2012 10:00,US,2488),,House Price Index MoM,Aug,--,--,--,--,65.4206,HPIMMOM% Index
+10/24/2012 14:15,US,2489),,FOMC Rate Decision,24-Oct,--,--,--,--,97.1963,FDTR Index
+10/25/2012 08:30,US,2490),,Chicago Fed Nat Activity Index,Sep,--,--,--,--,59.8131,CFNAI Index
+10/25/2012 08:30,US,2491),,Durable Goods Orders,Sep,--,--,--,--,90.6542,DGNOCHNG Index
+10/25/2012 08:30,US,2492),,Durables Ex Transportation,Sep,--,--,--,--,72.5234,DGNOXTCH Index
+10/25/2012 08:30,US,2493),,Cap Goods Orders Nondef Ex Air,Sep,--,--,--,--,49.5327,CGNOXAI% Index
+10/25/2012 08:30,US,2494),,Cap Goods Ship Nondef Ex Air,Sep,--,--,--,--,42.9907,CGSHXAI% Index
+10/25/2012 08:30,US,2495),,Initial Jobless Claims,20-Oct,--,--,--,--,99.0654,INJCJC Index
+10/25/2012 08:30,US,2496),,Continuing Claims,13-Oct,--,--,--,--,69.3458,INJCSP Index
+10/25/2012 09:45,US,2497),,Bloomberg Consumer Comfort,21-Oct,--,--,--,--,60.7477,COMFCOMF Index
+10/25/2012 10:00,US,2498),,Pending Home Sales MoM,Sep,--,--,--,--,72.8972,USPHTMOM Index
+10/25/2012 10:00,US,2499),,Pending Home Sales YoY,Sep,--,--,--,--,22.2222,USPHTYOY Index
+10/25/2012 11:00,US,2500),,Kansas City Fed Manf. Activity,Oct,--,--,--,--,6.54206,KCLSSACI Index
+10/26/2012 08:30,US,2501),,GDP QoQ (Annualized),3Q A,--,--,--,--,96.2617,GDP CQOQ Index
+10/26/2012 08:30,US,2502),,Personal Consumption,3Q A,--,--,--,--,67.3832,GDPCTOT% Index
+10/26/2012 08:30,US,2503),,GDP Price Index,3Q A,--,--,1.60%,--,77.0093,GDP PIQQ Index
+10/26/2012 08:30,US,2504),,Core PCE QoQ,3Q A,--,--,--,--,67.3832,GDPCPCEC Index
+10/26/2012 09:55,US,2505),,U. of Michigan Confidence,Oct F,--,--,--,--,92.5234,CONSSENT Index
+10/29/2012 08:30,US,2506),,Personal Income,Sep,--,--,--,--,83.1776,PITLCHNG Index
+10/29/2012 08:30,US,2507),,Personal Spending,Sep,--,--,--,--,83.1776,PCE CRCH Index
+10/29/2012 08:30,US,2508),,PCE Deflator (MoM),Sep,--,--,--,--,3.73832,PCE DEFM Index
+10/29/2012 08:30,US,2509),,PCE Deflator (YoY),Sep,--,--,--,--,32.7103,PCE DEFY Index
+10/29/2012 08:30,US,2510),,PCE Core (MoM),Sep,--,--,--,--,58.2243,PCE CMOM Index
+10/29/2012 08:30,US,2511),,PCE Core (YoY),Sep,--,--,--,--,33.6449,PCE CYOY Index
+10/29/2012 10:30,US,2512),,Dallas Fed Manf. Activity,Oct,--,--,--,--,61.6822,DFEDGBA Index
+10/30/2012 09:00,US,2513),,S&P/CS 20 City MoM% SA,Aug,--,--,--,--,15.8879,SPCS20SM Index
+10/30/2012 09:00,US,2514),,S&P/CS Composite-20 YoY,Aug,--,--,--,--,46.729,SPCS20Y% Index
+10/30/2012 09:00,US,2515),,S&P/CaseShiller Home Price Ind,Aug,--,--,--,--,54.2056,SPCS20 Index
+10/30/2012 10:00,US,2516),,Consumer Confidence,Oct,--,--,--,--,95.3271,CONCCONF Index
+10/31/2012 07:00,US,2517),,MBA Mortgage Applications,26-Oct,--,--,--,--,94.4444,MBAVCHNG Index
+10/31/2012 08:15,US,2518),,ADP Employment Change,Oct,--,--,--,--,76.6355,ADP CHNG Index
+10/31/2012 08:30,US,2519),,Employment Cost Index,3Q,--,--,0.50%,--,71.028,ECI SA% Index
+10/31/2012 09:00,US,2520),,NAPM-Milwaukee,Oct,--,--,--,--,25.2336,MAPMINDX Index
+10/31/2012 09:45,US,2521),,Chicago Purchasing Manager,Oct,--,--,--,--,77.5701,CHPMINDX Index
+11/01/2012 07:30,US,2522),,Challenger Job Cuts YoY,Oct,--,--,--,--,28.972,CHALYOY% Index
+11/01/2012 08:00,US,2523),,RBC Consumer Outlook Index,Nov,--,--,--,--,8.41121,ICSHNATL Index
+11/01/2012 08:30,US,2524),,Nonfarm Productivity,3Q P,--,--,2.20%,--,35.514,PRODNFR% Index
+11/01/2012 08:30,US,2525),,Unit Labor Costs,3Q P,--,--,1.50%,--,28.0374,COSTNFR% Index
+11/01/2012 08:30,US,2526),,Initial Jobless Claims,27-Oct,--,--,--,--,99.0654,INJCJC Index
+11/01/2012 08:30,US,2527),,Continuing Claims,20-Oct,--,--,--,--,69.3458,INJCSP Index
+11/01/2012 08:58,US,2528),,Markit US PMI Final,Oct,--,--,--,--,0.934579,ECONMUSF Index
+11/01/2012 09:45,US,2529),,Bloomberg Consumer Comfort,28-Oct,--,--,--,--,60.7477,COMFCOMF Index
+11/01/2012 10:00,US,2530),,ISM Manufacturing,Oct,--,--,--,--,94.3925,NAPMPMI Index
+11/01/2012 10:00,US,2531),,ISM Prices Paid,Oct,--,--,--,--,68.2243,NAPMPRIC Index
+11/01/2012 10:00,US,2532),,Construction Spending MoM,Sep,--,--,-0.90%,--,78.5047,CNSTTMOM Index
+11/01/2012 17:00,US,2533),,Total Vehicle Sales,Oct,--,--,--,--,38.3178,SAARTOTL Index
+11/01/2012 17:00,US,2534),,Domestic Vehicle Sales,Oct,--,--,--,--,30.8411,SAARDTOT Index
+11/02/2012 08:30,US,2535),,Change in Nonfarm Payrolls,Oct,--,--,--,--,98.1308,NFP TCH Index
+11/02/2012 08:30,US,2536),,Change in Private Payrolls,Oct,--,--,--,--,17.757,NFP PCH Index
+11/02/2012 08:30,US,2537),,Change in Manufact. Payrolls,Oct,--,--,--,--,68.6916,USMMMNCH Index
+11/02/2012 08:30,US,2538),,Unemployment Rate,Oct,--,--,--,--,88.3178,USURTOT Index
+11/02/2012 08:30,US,2539),,Avg Hourly Earning MOM All Emp,Oct,--,--,--,--,14.0187,AHE MOM% Index
+11/02/2012 08:30,US,2540),,Avg Hourly Earning YOY All Emp,Oct,--,--,--,--,13.0841,AHE YOY% Index
+11/02/2012 08:30,US,2541),,Avg Weekly Hours All Employees,Oct,--,--,--,--,12.1495,AWH TOTL Index
+11/02/2012 08:30,US,2542),,Change in Household Employment,Oct,--,--,--,--,9.34579,USEMNCHG Index
+11/02/2012 08:30,US,2543),,Underemployment Rate (U6),Oct,--,--,--,--,7.47664,USUDMAER Index
+11/02/2012 09:45,US,2544),,ISM New York,Oct,--,--,--,--,5.60748,NYPMCURR Index
+11/02/2012 10:00,US,2545),,Factory Orders,Sep,--,--,2.80%,--,82.243,TMNOCHNG Index
+11/05/2012 10:00,US,2546),,ISM Non-Manf. Composite,Oct,--,--,--,--,70.0935,NAPMNMI Index
+11/06/2012 10:00,US,2547),,JOLTs Job Openings,Sep,--,--,--,--,10.2804,JOLTTOTL Index
+11/07/2012 07:00,US,2548),,MBA Mortgage Applications,2-Nov,--,--,--,--,94.4444,MBAVCHNG Index
+11/07/2012 15:00,US,2549),,Consumer Credit,Sep,--,--,--,--,37.3832,CICRTOT Index
+11/08/2012 08:30,US,2550),,Trade Balance,Sep,--,--,-$42.0B,--,81.3084,USTBTOT Index
+11/08/2012 08:30,US,2551),,Initial Jobless Claims,3-Nov,--,--,--,--,99.0654,INJCJC Index
+11/08/2012 08:30,US,2552),,Continuing Claims,27-Oct,--,--,--,--,69.3458,INJCSP Index
+11/08/2012 09:45,US,2553),,Bloomberg Consumer Comfort,4-Nov,--,--,--,--,60.7477,COMFCOMF Index
+11/09/2012 08:30,US,2554),,Import Price Index (MoM),Oct,--,--,0.70%,--,75.7009,IMP1CHNG Index
+11/09/2012 08:30,US,2555),,Import Price Index (YoY),Oct,--,--,--,--,27.1028,IMP1YOY% Index
+11/09/2012 09:55,US,2556),,U. of Michigan Confidence,Nov P,--,--,--,--,92.5234,CONSSENT Index
+11/09/2012 10:00,US,2557),,Wholesale Inventories,Sep,--,--,0.70%,--,79.4393,MWINCHNG Index
+11/13/2012 07:30,US,2558),,NFIB Small Business Optimism,Oct,--,--,--,--,56.0748,SBOITOTL Index
+11/13/2012 10:00,US,2559),,IBD/TIPP Economic Optimism,Nov,--,--,--,--,0,ECONUSIB Index
+11/13/2012 14:00,US,2560),,Monthly Budget Statement,Oct,--,--,--,--,73.8318,FDDSSD Index
+13-16 NOV,US,2561),,Mortgage Delinquencies,3Q,--,--,7.58%,--,33.3333,DLQTDLQT Index
+13-16 NOV,US,2562),,MBA Mortgage Foreclosures,3Q,--,--,4.27%,--,11.215,FORLTOTL Index
+11/14/2012 07:00,US,2563),,MBA Mortgage Applications,9-Nov,--,--,--,--,94.4444,MBAVCHNG Index
+11/14/2012 08:30,US,2564),,Producer Price Index (MoM),Oct,--,--,--,--,85.0467,PPI CHNG Index
+11/14/2012 08:30,US,2565),,PPI Ex Food & Energy (MoM),Oct,--,--,--,--,68.0374,PXFECHNG Index
+11/14/2012 08:30,US,2566),,Producer Price Index (YoY),Oct,--,--,--,--,66.3551,PPI YOY Index
+11/14/2012 08:30,US,2567),,PPI Ex Food & Energy (YoY),Oct,--,--,--,--,64.486,PPI XYOY Index
+11/14/2012 08:30,US,2568),,Advance Retail Sales,Oct,--,--,--,--,88.785,RSTAMOM Index
+11/14/2012 08:30,US,2569),,Retail Sales Less Autos,Oct,--,--,--,--,62.1495,RSTAXMOM Index
+11/14/2012 08:30,US,2570),,Retail Sales Ex Auto & Gas,Oct,--,--,--,--,58.8785,RSTAXAG% Index
+11/14/2012 08:30,US,2571),,"Retail Sales ""Control Group""",Oct,--,--,--,--,4.6729,RSTAXAGM Index
+11/14/2012 10:00,US,2572),,Business Inventories,Sep,--,--,--,--,34.5794,MTIBCHNG Index
+11/14/2012 14:00,US,2573),,Minutes of FOMC Meeting,,,,,,0,
+11/15/2012 08:30,US,2574),,Consumer Price Index (MoM),Oct,--,--,--,--,93.4579,CPI CHNG Index
+11/15/2012 08:30,US,2575),,CPI Ex Food & Energy (MoM),Oct,--,--,--,--,74.7664,CPUPXCHG Index
+11/15/2012 08:30,US,2576),,Consumer Price Index (YoY),Oct,--,--,--,--,55.1402,CPI YOY Index
+11/15/2012 08:30,US,2577),,CPI Ex Food & Energy (YoY),Oct,--,--,--,--,44.8598,CPI XYOY Index
+11/15/2012 08:30,US,2578),,Consumer Price Index NSA,Oct,--,--,--,--,26.1682,CPURNSA Index
+11/15/2012 08:30,US,2579),,CPI Core Index SA,Oct,--,--,--,--,29.9065,CPUPAXFE Index
+11/15/2012 08:30,US,2580),,Empire Manufacturing,Nov,--,--,--,--,80.3738,EMPRGBCI Index
+11/15/2012 08:30,US,2581),,Initial Jobless Claims,10-Nov,--,--,--,--,99.0654,INJCJC Index
+11/15/2012 08:30,US,2582),,Continuing Claims,3-Nov,--,--,--,--,69.3458,INJCSP Index
+11/15/2012 09:45,US,2583),,Bloomberg Consumer Comfort,11-Nov,--,--,--,--,60.7477,COMFCOMF Index
+11/15/2012 10:00,US,2584),,Philadelphia Fed.,Nov,--,--,--,--,74.7664,OUTFGAF Index
+11/16/2012 09:00,US,2585),,Total Net TIC Flows,Sep,--,--,--,--,63.5514,FRNTTNET Index
+11/16/2012 09:00,US,2586),,Net Long-term TIC Flows,Sep,--,--,--,--,71.9626,FRNTTOTL Index
+11/16/2012 09:15,US,2587),,Industrial Production,Oct,--,--,--,--,85.9813,IP CHNG Index
+11/16/2012 09:15,US,2588),,Capacity Utilization,Oct,--,--,--,--,60.1869,CPTICHNG Index
+11/16/2012 09:15,US,2589),,Manufacturing (SIC) Production,Oct,--,--,--,--,2.80374,IPMGCHNG Index
+11/19/2012 10:00,US,2590),,NAHB Housing Market Index,Nov,--,--,--,--,36.4486,USHBMIDX Index
+11/19/2012 10:00,US,2591),,Existing Home Sales,Oct,--,--,--,--,86.9159,ETSLTOTL Index
+11/19/2012 10:00,US,2592),,Existing Home Sales MoM,Oct,--,--,--,--,50.4673,ETSLMOM Index
+11/20/2012 08:30,US,2593),,Housing Starts,Oct,--,--,--,--,87.8505,NHSPSTOT Index
+11/20/2012 08:30,US,2594),,Housing Starts MOM%,Oct,--,--,--,--,16.8224,NHCHSTCH Index
+11/20/2012 08:30,US,2595),,Building Permits,Oct,--,--,--,--,61.4953,NHSPATOT Index
+11/20/2012 08:30,US,2596),,Building Permits MOM%,Oct,--,--,--,--,14.9533,NHCHATCH Index
+11/21/2012 07:00,US,2597),,MBA Mortgage Applications,16-Nov,--,--,--,--,94.4444,MBAVCHNG Index
+11/21/2012 08:30,US,2598),,Initial Jobless Claims,17-Nov,--,--,--,--,99.0654,INJCJC Index
+11/21/2012 08:30,US,2599),,Continuing Claims,10-Nov,--,--,--,--,69.3458,INJCSP Index
+11/21/2012 09:45,US,2600),,Bloomberg Consumer Comfort,18-Nov,--,--,--,--,60.7477,COMFCOMF Index
+11/21/2012 09:45,US,2601),,Bloomberg Economic Expectations,Nov,--,--,--,--,21.4953,COMFBTWR Index
+11/21/2012 09:55,US,2602),,U. of Michigan Confidence,Nov F,--,--,--,--,92.5234,CONSSENT Index
+11/21/2012 10:00,US,2603),,Leading Indicators,Oct,--,--,--,--,84.1121,LEI CHNG Index
+11/22/2012 08:58,US,2604),,Markit US PMI Preliminary,Nov,--,--,--,--,1.86916,ECONMUS Index
+11/26/2012 08:30,US,2605),,Chicago Fed Nat Activity Index,Oct,--,--,--,--,59.8131,CFNAI Index
+11/26/2012 10:30,US,2606),,Dallas Fed Manf. Activity,Nov,--,--,--,--,61.6822,DFEDGBA Index
+11/27/2012 08:30,US,2607),,Durable Goods Orders,Oct,--,--,--,--,90.6542,DGNOCHNG Index
+11/27/2012 08:30,US,2608),,Durables Ex Transportation,Oct,--,--,--,--,72.5234,DGNOXTCH Index
+11/27/2012 08:30,US,2609),,Cap Goods Orders Nondef Ex Air,Oct,--,--,--,--,49.5327,CGNOXAI% Index
+11/27/2012 08:30,US,2610),,Cap Goods Ship Nondef Ex Air,Oct,--,--,--,--,42.9907,CGSHXAI% Index
+11/27/2012 09:00,US,2611),,S&P/CS 20 City MoM% SA,Sep,--,--,--,--,15.8879,SPCS20SM Index
+11/27/2012 09:00,US,2612),,S&P/CS Composite-20 YoY,Sep,--,--,--,--,46.729,SPCS20Y% Index
+11/27/2012 09:00,US,2613),,S&P/Case-Shiller US HPI YOY%,3Q,--,--,1.22%,--,23.3645,SPCSUSAY Index
+11/27/2012 09:00,US,2614),,S&P/CaseShiller Home Price Ind,Sep,--,--,--,--,54.2056,SPCS20 Index
+11/27/2012 09:00,US,2615),,S&P/Case-Shiller US HPI,3Q,--,--,132.54,--,27.7778,SPCSUSA Index
+11/27/2012 10:00,US,2616),,Consumer Confidence,Nov,--,--,--,--,95.3271,CONCCONF Index
+11/27/2012 10:00,US,2617),,Richmond Fed Manufact. Index,Nov,--,--,--,--,67.2897,RCHSINDX Index
+11/27/2012 10:00,US,2618),,House Price Index MoM,Sep,--,--,--,--,65.4206,HPIMMOM% Index
+11/27/2012 10:00,US,2619),,House Price Purchase Index QoQ,3Q,--,--,1.80%,--,20.5607,HPI PURQ Index
+11/27/2012 14:00,US,2620),,Fed's Beige Book,,,,,,0,
+11/28/2012 07:00,US,2621),,MBA Mortgage Applications,23-Nov,--,--,--,--,94.4444,MBAVCHNG Index
+11/28/2012 10:00,US,2622),,New Home Sales,Oct,--,--,--,--,89.7196,NHSLTOT Index
+11/28/2012 10:00,US,2623),,New Home Sales MoM,Oct,--,--,--,--,47.6636,NHSLCHNG Index
+11/29/2012 08:30,US,2624),,GDP QoQ (Annualized),3Q S,--,--,--,--,96.2617,GDP CQOQ Index
+11/29/2012 08:30,US,2625),,Personal Consumption,3Q S,--,--,--,--,67.3832,GDPCTOT% Index
+11/29/2012 08:30,US,2626),,GDP Price Index,3Q S,--,--,--,--,77.0093,GDP PIQQ Index
+11/29/2012 08:30,US,2627),,Core PCE QoQ,3Q S,--,--,--,--,67.3832,GDPCPCEC Index
+11/29/2012 08:30,US,2628),,Initial Jobless Claims,24-Nov,--,--,--,--,99.0654,INJCJC Index
+11/29/2012 08:30,US,2629),,Continuing Claims,17-Nov,--,--,--,--,69.3458,INJCSP Index
+11/29/2012 09:45,US,2630),,Bloomberg Consumer Comfort,25-Nov,--,--,--,--,60.7477,COMFCOMF Index
+11/29/2012 10:00,US,2631),,Pending Home Sales MoM,Oct,--,--,--,--,72.8972,USPHTMOM Index
+11/29/2012 10:00,US,2632),,Pending Home Sales YoY,Oct,--,--,--,--,22.2222,USPHTYOY Index
+11/29/2012 11:00,US,2633),,Kansas City Fed Manf. Activity,Nov,--,--,--,--,6.54206,KCLSSACI Index
+11/30/2012 08:30,US,2634),,Personal Income,Oct,--,--,--,--,83.1776,PITLCHNG Index
+11/30/2012 08:30,US,2635),,Personal Spending,Oct,--,--,--,--,83.1776,PCE CRCH Index
+11/30/2012 08:30,US,2636),,PCE Deflator (MoM),Oct,--,--,--,--,3.73832,PCE DEFM Index
+11/30/2012 08:30,US,2637),,PCE Deflator (YoY),Oct,--,--,--,--,32.7103,PCE DEFY Index
+11/30/2012 08:30,US,2638),,PCE Core (MoM),Oct,--,--,--,--,58.2243,PCE CMOM Index
+11/30/2012 08:30,US,2639),,PCE Core (YoY),Oct,--,--,--,--,33.6449,PCE CYOY Index
+11/30/2012 09:00,US,2640),,NAPM-Milwaukee,Nov,--,--,--,--,25.2336,MAPMINDX Index
+11/30/2012 09:45,US,2641),,Chicago Purchasing Manager,Nov,--,--,--,--,77.5701,CHPMINDX Index
+12/03/2012 08:58,US,2642),,Markit US PMI Final,Nov,--,--,--,--,0.934579,ECONMUSF Index
+12/03/2012 10:00,US,2643),,ISM Manufacturing,Nov,--,--,--,--,94.3925,NAPMPMI Index
+12/03/2012 10:00,US,2644),,ISM Prices Paid,Nov,--,--,--,--,68.2243,NAPMPRIC Index
+12/03/2012 10:00,US,2645),,Construction Spending MoM,Oct,--,--,--,--,78.5047,CNSTTMOM Index
+12/03/2012 17:00,US,2646),,Total Vehicle Sales,Nov,--,--,--,--,38.3178,SAARTOTL Index
+12/03/2012 17:00,US,2647),,Domestic Vehicle Sales,Nov,--,--,--,--,30.8411,SAARDTOT Index
+12/04/2012 09:45,US,2648),,ISM New York,Nov,--,--,--,--,5.60748,NYPMCURR Index
+12/05/2012 07:00,US,2649),,MBA Mortgage Applications,30-Nov,--,--,--,--,94.4444,MBAVCHNG Index
+12/05/2012 08:15,US,2650),,ADP Employment Change,Nov,--,--,--,--,76.6355,ADP CHNG Index
+12/05/2012 08:30,US,2651),,Nonfarm Productivity,3Q F,--,--,2.20%,--,35.514,PRODNFR% Index
+12/05/2012 08:30,US,2652),,Unit Labor Costs,3Q F,--,--,--,--,28.0374,COSTNFR% Index
+12/05/2012 10:00,US,2653),,ISM Non-Manf. Composite,Nov,--,--,--,--,70.0935,NAPMNMI Index
+12/05/2012 10:00,US,2654),,Factory Orders,Oct,--,--,--,--,82.243,TMNOCHNG Index
+12/06/2012 07:30,US,2655),,Challenger Job Cuts YoY,Nov,--,--,--,--,28.972,CHALYOY% Index
+12/06/2012 08:00,US,2656),,RBC Consumer Outlook Index,Dec,--,--,--,--,8.41121,ICSHNATL Index
+12/06/2012 08:30,US,2657),,Initial Jobless Claims,1-Dec,--,--,--,--,99.0654,INJCJC Index
+12/06/2012 08:30,US,2658),,Continuing Claims,24-Nov,--,--,--,--,69.3458,INJCSP Index
+12/06/2012 09:45,US,2659),,Bloomberg Consumer Comfort,2-Dec,--,--,--,--,60.7477,COMFCOMF Index
+12/07/2012 08:30,US,2660),,Change in Nonfarm Payrolls,Nov,--,--,--,--,98.1308,NFP TCH Index
+12/07/2012 08:30,US,2661),,Change in Private Payrolls,Nov,--,--,--,--,17.757,NFP PCH Index
+12/07/2012 08:30,US,2662),,Change in Manufact. Payrolls,Nov,--,--,--,--,68.6916,USMMMNCH Index
+12/07/2012 08:30,US,2663),,Unemployment Rate,Nov,--,--,--,--,88.3178,USURTOT Index
+12/07/2012 08:30,US,2664),,Avg Hourly Earning MOM All Emp,Nov,--,--,--,--,14.0187,AHE MOM% Index
+12/07/2012 08:30,US,2665),,Avg Hourly Earning YOY All Emp,Nov,--,--,--,--,13.0841,AHE YOY% Index
+12/07/2012 08:30,US,2666),,Avg Weekly Hours All Employees,Nov,--,--,--,--,12.1495,AWH TOTL Index
+12/07/2012 08:30,US,2667),,Change in Household Employment,Nov,--,--,--,--,9.34579,USEMNCHG Index
+12/07/2012 08:30,US,2668),,Underemployment Rate (U6),Nov,--,--,--,--,7.47664,USUDMAER Index
+12/07/2012 09:55,US,2669),,U. of Michigan Confidence,Dec P,--,--,--,--,92.5234,CONSSENT Index
+12/07/2012 15:00,US,2670),,Consumer Credit,Oct,--,--,--,--,37.3832,CICRTOT Index
+12/11/2012 07:30,US,2671),,NFIB Small Business Optimism,Nov,--,--,--,--,56.0748,SBOITOTL Index
+12/11/2012 08:30,US,2672),,Trade Balance,Oct,--,--,--,--,81.3084,USTBTOT Index
+12/11/2012 10:00,US,2673),,IBD/TIPP Economic Optimism,Dec,--,--,--,--,0,ECONUSIB Index
+12/11/2012 10:00,US,2674),,JOLTs Job Openings,Oct,--,--,--,--,10.2804,JOLTTOTL Index
+12/11/2012 10:00,US,2675),,Wholesale Inventories,Oct,--,--,0.70%,--,79.4393,MWINCHNG Index
+12/12/2012 07:00,US,2676),,MBA Mortgage Applications,7-Dec,--,--,--,--,94.4444,MBAVCHNG Index
+12/12/2012 08:30,US,2677),,Import Price Index (MoM),Nov,--,--,--,--,75.7009,IMP1CHNG Index
+12/12/2012 08:30,US,2678),,Import Price Index (YoY),Nov,--,--,--,--,27.1028,IMP1YOY% Index
+12/12/2012 12:30,US,2679),,FOMC Rate Decision,12-Dec,--,--,--,--,97.1963,FDTR Index
+12/12/2012 14:00,US,2680),,Monthly Budget Statement,Nov,--,--,--,--,73.8318,FDDSSD Index
+12/13/2012 08:30,US,2681),,Producer Price Index (MoM),Nov,--,--,--,--,85.0467,PPI CHNG Index
+12/13/2012 08:30,US,2682),,PPI Ex Food & Energy (MoM),Nov,--,--,--,--,68.0374,PXFECHNG Index
+12/13/2012 08:30,US,2683),,Producer Price Index (YoY),Nov,--,--,--,--,66.3551,PPI YOY Index
+12/13/2012 08:30,US,2684),,PPI Ex Food & Energy (YoY),Nov,--,--,--,--,64.486,PPI XYOY Index
+12/13/2012 08:30,US,2685),,Initial Jobless Claims,8-Dec,--,--,--,--,99.0654,INJCJC Index
+12/13/2012 08:30,US,2686),,Continuing Claims,1-Dec,--,--,--,--,69.3458,INJCSP Index
+12/13/2012 08:30,US,2687),,Advance Retail Sales,Nov,--,--,--,--,88.785,RSTAMOM Index
+12/13/2012 08:30,US,2688),,Retail Sales Less Autos,Nov,--,--,--,--,62.1495,RSTAXMOM Index
+12/13/2012 08:30,US,2689),,Retail Sales Ex Auto & Gas,Nov,--,--,--,--,58.8785,RSTAXAG% Index
+12/13/2012 08:30,US,2690),,"Retail Sales ""Control Group""",Nov,--,--,--,--,4.6729,RSTAXAGM Index
+12/13/2012 09:45,US,2691),,Bloomberg Consumer Comfort,9-Dec,--,--,--,--,60.7477,COMFCOMF Index
+12/13/2012 10:00,US,2692),,Business Inventories,Oct,--,--,--,--,34.5794,MTIBCHNG Index
+12/14/2012 08:30,US,2693),,Consumer Price Index (MoM),Nov,--,--,--,--,93.4579,CPI CHNG Index
+12/14/2012 08:30,US,2694),,CPI Ex Food & Energy (MoM),Nov,--,--,--,--,74.7664,CPUPXCHG Index
+12/14/2012 08:30,US,2695),,Consumer Price Index (YoY),Nov,--,--,--,--,55.1402,CPI YOY Index
+12/14/2012 08:30,US,2696),,CPI Ex Food & Energy (YoY),Nov,--,--,--,--,44.8598,CPI XYOY Index
+12/14/2012 08:30,US,2697),,Consumer Price Index NSA,Nov,--,--,--,--,26.1682,CPURNSA Index
+12/14/2012 08:30,US,2698),,CPI Core Index SA,Nov,--,--,--,--,29.9065,CPUPAXFE Index
+12/14/2012 09:15,US,2699),,Industrial Production,Nov,--,--,--,--,85.9813,IP CHNG Index
+12/14/2012 09:15,US,2700),,Capacity Utilization,Dec,--,--,--,--,60.1869,CPTICHNG Index
+12/14/2012 09:15,US,2701),,Manufacturing (SIC) Production,Nov,--,--,--,--,2.80374,IPMGCHNG Index
+12/17/2012 08:30,US,2702),,Empire Manufacturing,Dec,--,--,--,--,80.3738,EMPRGBCI Index
+12/17/2012 09:00,US,2703),,Total Net TIC Flows,Oct,--,--,--,--,63.5514,FRNTTNET Index
+12/17/2012 09:00,US,2704),,Net Long-term TIC Flows,Oct,--,--,--,--,71.9626,FRNTTOTL Index
+12/18/2012 08:30,US,2705),,Current Account Balance,3Q,--,--,--,--,69.1589,USCABAL Index
+12/18/2012 10:00,US,2706),,NAHB Housing Market Index,Dec,--,--,--,--,36.4486,USHBMIDX Index
+12/19/2012 07:00,US,2707),,MBA Mortgage Applications,14-Dec,--,--,--,--,94.4444,MBAVCHNG Index
+12/19/2012 08:30,US,2708),,Housing Starts,Dec,--,--,--,--,87.8505,NHSPSTOT Index
+12/19/2012 08:30,US,2709),,Housing Starts MOM%,Nov,--,--,--,--,16.8224,NHCHSTCH Index
+12/19/2012 08:30,US,2710),,Building Permits,Dec,--,--,--,--,61.4953,NHSPATOT Index
+12/19/2012 08:30,US,2711),,Building Permits MOM%,Nov,--,--,--,--,14.9533,NHCHATCH Index
+12/20/2012 08:30,US,2712),,GDP QoQ (Annualized),3Q T,--,--,--,--,96.2617,GDP CQOQ Index
+12/20/2012 08:30,US,2713),,Personal Consumption,3Q T,--,--,--,--,67.3832,GDPCTOT% Index
+12/20/2012 08:30,US,2714),,GDP Price Index,3Q T,--,--,--,--,77.0093,GDP PIQQ Index
+12/20/2012 08:30,US,2715),,Core PCE QoQ,3Q T,--,--,--,--,67.3832,GDPCPCEC Index
+12/20/2012 08:30,US,2716),,Initial Jobless Claims,15-Dec,--,--,--,--,99.0654,INJCJC Index
+12/20/2012 08:30,US,2717),,Continuing Claims,8-Dec,--,--,--,--,69.3458,INJCSP Index
+12/20/2012 09:45,US,2718),,Bloomberg Consumer Comfort,16-Dec,--,--,--,--,60.7477,COMFCOMF Index
+12/20/2012 09:45,US,2719),,Bloomberg Economic Expectations,Dec,--,--,--,--,21.4953,COMFBTWR Index
+12/20/2012 10:00,US,2720),,Philadelphia Fed.,Dec,--,--,--,--,74.7664,OUTFGAF Index
+12/20/2012 10:00,US,2721),,Existing Home Sales,Nov,--,--,--,--,86.9159,ETSLTOTL Index
+12/20/2012 10:00,US,2722),,Existing Home Sales MoM,Nov,--,--,--,--,50.4673,ETSLMOM Index
+12/20/2012 10:00,US,2723),,House Price Index MoM,Oct,--,--,--,--,65.4206,HPIMMOM% Index
+12/20/2012 10:00,US,2724),,Leading Indicators,Nov,--,--,--,--,84.1121,LEI CHNG Index
+12/21/2012 08:30,US,2725),,Chicago Fed Nat Activity Index,Nov,--,--,--,--,59.8131,CFNAI Index
+12/21/2012 08:30,US,2726),,Personal Income,Nov,--,--,--,--,83.1776,PITLCHNG Index
+12/21/2012 08:30,US,2727),,Personal Spending,Nov,--,--,--,--,83.1776,PCE CRCH Index
+12/21/2012 08:30,US,2728),,PCE Deflator (MoM),Nov,--,--,--,--,3.73832,PCE DEFM Index
+12/21/2012 08:30,US,2729),,PCE Deflator (YoY),Nov,--,--,--,--,32.7103,PCE DEFY Index
+12/21/2012 08:30,US,2730),,PCE Core (MoM),Nov,--,--,--,--,58.2243,PCE CMOM Index
+12/21/2012 08:30,US,2731),,PCE Core (YoY),Nov,--,--,--,--,33.6449,PCE CYOY Index
+12/21/2012 09:55,US,2732),,U. of Michigan Confidence,Dec F,--,--,--,--,92.5234,CONSSENT Index
+12/21/2012 11:00,US,2733),,Kansas City Fed Manf. Activity,Dec,--,--,--,--,6.54206,KCLSSACI Index
+12/24/2012 08:30,US,2734),,Durable Goods Orders,Nov,--,--,--,--,90.6542,DGNOCHNG Index
+12/24/2012 08:30,US,2735),,Durables Ex Transportation,Nov,--,--,--,--,72.5234,DGNOXTCH Index
+12/24/2012 08:30,US,2736),,Cap Goods Orders Nondef Ex Air,Nov,--,--,--,--,49.5327,CGNOXAI% Index
+12/24/2012 08:30,US,2737),,Cap Goods Ship Nondef Ex Air,Nov,--,--,--,--,42.9907,CGSHXAI% Index
+12/24/2012 09:00,US,2738),,S&P/CS 20 City MoM% SA,Oct,--,--,--,--,15.8879,SPCS20SM Index
+12/24/2012 09:00,US,2739),,S&P/CS Composite-20 YoY,Oct,--,--,--,--,46.729,SPCS20Y% Index
+12/24/2012 09:00,US,2740),,S&P/CaseShiller Home Price Ind,Oct,--,--,--,--,54.2056,SPCS20 Index
+12/26/2012 07:00,US,2741),,MBA Mortgage Applications,21-Dec,--,--,--,--,94.4444,MBAVCHNG Index
+12/26/2012 10:00,US,2742),,Richmond Fed Manufact. Index,Dec,--,--,--,--,67.2897,RCHSINDX Index
+12/27/2012 08:30,US,2743),,Initial Jobless Claims,22-Dec,--,--,--,--,99.0654,INJCJC Index
+12/27/2012 08:30,US,2744),,Continuing Claims,15-Dec,--,--,--,--,69.3458,INJCSP Index
+12/27/2012 09:45,US,2745),,Bloomberg Consumer Comfort,23-Dec,--,--,--,--,60.7477,COMFCOMF Index
+12/27/2012 10:00,US,2746),,Consumer Confidence,Dec,--,--,--,--,95.3271,CONCCONF Index
+12/27/2012 10:00,US,2747),,New Home Sales,Nov,--,--,--,--,89.7196,NHSLTOT Index
+12/27/2012 10:00,US,2748),,New Home Sales MoM,Nov,--,--,--,--,47.6636,NHSLCHNG Index
+12/28/2012 09:45,US,2749),,Chicago Purchasing Manager,Dec,--,--,--,--,77.5701,CHPMINDX Index
+12/28/2012 10:00,US,2750),,Pending Home Sales MoM,Nov,--,--,--,--,72.8972,USPHTMOM Index
+12/28/2012 10:00,US,2751),,Pending Home Sales YoY,Nov,--,--,--,--,22.2222,USPHTYOY Index
+12/31/2012 09:00,US,2752),,NAPM-Milwaukee,Dec,--,--,--,--,25.2336,MAPMINDX Index
+12/31/2012 10:30,US,2753),,Dallas Fed Manf. Activity,Dec,--,--,--,--,61.6822,DFEDGBA Index

@@ -1,0 +1,4 @@
+0000000000000000000000000000000000000000 3a4338aa27124e899da650921b6bb4f90d084c9a subhamchawda01 <subham.chawda@tworoads-trading.co.in> 1716882885 +0000	branch: Created from HEAD
+3a4338aa27124e899da650921b6bb4f90d084c9a 25d1b4bc37e135f438de07038be8cd19e5c2b62e subhamchawda01 <subham.chawda@tworoads-trading.co.in> 1716883103 +0000	commit: nse CM tick size 0.01 changes
+25d1b4bc37e135f438de07038be8cd19e5c2b62e abefdbf3eec6d70e51cd416a9a49bb4715d16d7a subhamchawda01 <subham.chawda@tworoads-trading.co.in> 1717662217 +0000	merge origin/master: Merge made by the 'recursive' strategy.
+abefdbf3eec6d70e51cd416a9a49bb4715d16d7a 20891895d3a1807162df06451f38e2eb5e101072 subhamchawda01 <subham.chawda@tworoads-trading.co.in> 1718084676 +0000	pull: Fast-forward

@@ -1,0 +1,18 @@
+# We will need this project to have dependencies.
+
+use-project /PDVCC : ../../libdvccode ;
+use-project /PCDef : ../../CDefCode ;
+
+project : usage-requirements 
+;
+
+lib CDefTests
+: # sources
+[ glob *.cpp ] 
+: # requirements
+<link>static <use>/PCDef//CDef 
+: 
+: # usage requirements
+<library>/PDVCC//boost_filesystem
+<library>/PCDef//CDef 
+; 

@@ -1,0 +1,10 @@
+0000000000000000000000000000000000000000 e7ba7d7b78b0bd82eeba649a47f8914fb7f536bd subhamchawda01 <subham.chawda@tworoads-trading.co.in> 1684323151 +0000	branch: Created from HEAD
+e7ba7d7b78b0bd82eeba649a47f8914fb7f536bd b67134dce0797e8e55bfd6bcb52f941c9c2ab5b0 subhamchawda01 <subham.chawda@tworoads-trading.co.in> 1684323177 +0000	commit: added handling for bardata recovery
+b67134dce0797e8e55bfd6bcb52f941c9c2ab5b0 ee9a65b2c8d1fd4e417a4e0069c9c8e4d60b4abb subhamchawda01 <subham.chawda@tworoads-trading.co.in> 1684741493 +0000	merge origin/nishit_mm_barsmm: Merge made by the 'recursive' strategy.
+ee9a65b2c8d1fd4e417a4e0069c9c8e4d60b4abb f9e61c268c2c457f51536ec7371392eb18660463 subhamchawda01 <subham.chawda@tworoads-trading.co.in> 1685002152 +0000	commit: bardata recovery send request changes
+f9e61c268c2c457f51536ec7371392eb18660463 f6a761d6f9b90778a353564a4760f91b2a8c3790 subhamchawda01 <subham.chawda@tworoads-trading.co.in> 1687156075 +0000	commit: live bardata recovery build fix
+f6a761d6f9b90778a353564a4760f91b2a8c3790 c572de8606bfe4885d4c0e1f69b86b7a014f7ff3 subhamchawda01 <subham.chawda@tworoads-trading.co.in> 1687854271 +0000	commit: recovery live bardata for FO change working
+c572de8606bfe4885d4c0e1f69b86b7a014f7ff3 4fc14ebb86214bc422f9b7686492b1ac446e991c subhamchawda01 <subham.chawda@tworoads-trading.co.in> 1687854580 +0000	merge origin/master: Merge made by the 'recursive' strategy.
+4fc14ebb86214bc422f9b7686492b1ac446e991c c572de8606bfe4885d4c0e1f69b86b7a014f7ff3 subhamchawda01 <subham.chawda@tworoads-trading.co.in> 1687864951 +0000	reset: moving to HEAD~1
+c572de8606bfe4885d4c0e1f69b86b7a014f7ff3 1ce6cc75c6e75cb08abc07e4057cbbf319889c20 subhamchawda01 <subham.chawda@tworoads-trading.co.in> 1688104415 +0000	commit: added handling for live bardata if tradeengine starts before market open
+1ce6cc75c6e75cb08abc07e4057cbbf319889c20 aab690694823eac1457aab3e1b0f228c10310818 raghunandan95 <raghunandan.sharma@tworoads-trading.co.in> 1705987902 +0000	pull: Fast-forward

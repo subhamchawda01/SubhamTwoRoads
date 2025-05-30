@@ -1,0 +1,160 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!--
+ 
+   NYSE Liffe
+   External Data Publisher (XDP) FAST Templates
+   Version 1.3.0
+   ____________________________________
+ 
+  References:
+   - Detailed message description in 'XDP for NYSE Liffe Client Spec v1.3'
+ 
+   - Templates according to 'FAST Specification Version 1.x.1' (20060-12-20):
+http://www.fixprotocol.org/documents/3066/FAST%20Specification%201%20x%201.pdf
+
+Template Control:
+    Added strategy code field to 702 message type
+ 
+-->        
+
+<templates>
+
+  <template name="ExchangeMsg" id="16">
+    <uInt32 name="MsgType" id="0" presence="mandatory"> <constant value="761"/> </uInt32>
+    <uInt32 name="SourceTime" id="1" presence="mandatory"> <delta/> </uInt32>
+    <uInt32 name="InfoBlockType" id="2" presence="mandatory"> <default value="1"/> </uInt32>
+    <string name="InfoBlock" id="3" presence="mandatory"> </string>
+    <sequence name="ExchangeMsgSubMsg"> <length name="NewsCount" id="4"> <default value="0"/> </length>
+    <string name="ExchangeMsgType" id="5" presence="mandatory"> <default value="T"/> </string>
+    <uInt32 name="Importance" id="6" presence="mandatory"> </uInt32>
+    <uInt32 name="TextFormat" id="7" presence="mandatory"> <default value="1"/> </uInt32>
+    <string name="Text" id="8" presence="mandatory"> </string>
+    </sequence>
+  </template>
+  <template name="MarketStatus" id="15">
+    <uInt32 name="MsgType" id="0" presence="mandatory"> <constant value="752"/> </uInt32>
+    <uInt32 name="SourceTime" id="1" presence="mandatory"> <delta/> </uInt32>
+    <uInt32 name="SymbolIndex" id="2" presence="mandatory"> <default value="0"/> </uInt32>
+    <uInt32 name="SecurityIDSource" id="3" presence="mandatory"> <default value="0"/> </uInt32>
+    <string name="SecurityID" id="4" presence="mandatory"> <default value="               "/> </string>
+    <sequence name="MarketStatusSubMsg"> <length name="NoUpdates" id="5"/>
+    <uInt32 name="MarketMode" id="6" presence="mandatory"> </uInt32>
+    </sequence>
+  </template>
+  <template name="MarketUpdate" id="1">
+    <uInt32 name="MsgType" id="0" presence="mandatory"> <constant value="702"/> </uInt32>
+    <uInt32 name="SymbolIndex" id="1" presence="mandatory"> <default value="0"/> </uInt32>
+    <uInt32 name="SecurityIDSource" id="2" presence="mandatory"> <default value="0"/> </uInt32>
+    <string name="SecurityID" id="3" presence="mandatory"> <default value="               "/> </string>
+    <uInt32 name="SourceTime" id="4" presence="mandatory"> <delta/> </uInt32>
+    <uInt32 name="SeriesSequenceNumber" id="5" presence="mandatory"> </uInt32>
+    <uInt32 name="SnapshotFlag" id="6" presence="mandatory"> <default value="0"/> </uInt32>
+    <sequence name="UpdateSubMsg"> <length name="UpdateCount" id="7"> <default value="1"/> </length>
+    <uInt32 name="UpdateType" id="8" presence="mandatory"> </uInt32>
+    <string name="StrategyCode" id="9" presence="optional"> </string>
+    <int32 name="Price" id="10" presence="optional"> <delta/> </int32>
+    <uInt32 name="Volume" id="11" presence="mandatory"> </uInt32>
+    </sequence>
+  </template>
+  <template name="OpenInterest" id="20">
+    <uInt32 name="MsgType" id="0" presence="mandatory"> <constant value="782"/> </uInt32>
+    <uInt32 name="SourceTime" id="1" presence="mandatory"> <delta/> </uInt32>
+    <uInt32 name="InfoBlockType" id="2" presence="mandatory"> <default value="1"/> </uInt32>
+    <string name="InfoBlock" id="3" presence="mandatory"> </string>
+    <sequence name="OpenIntSubMsg"> <length name="UpdateCount" id="4"/>
+    <uInt32 name="SymbolIndex" id="5" presence="mandatory"> <default value="0"/> </uInt32>
+    <uInt32 name="SecurityIDSource" id="6" presence="mandatory"> <default value="0"/> </uInt32>
+    <string name="SecurityID" id="7" presence="mandatory"> <default value="               "/> </string>
+    <uInt32 name="OpenInterest" id="8" presence="mandatory"> </uInt32>
+    <uInt32 name="OpenInterestDate" id="9" presence="mandatory"> <copy/> </uInt32>
+    </sequence>
+  </template>
+  <template name="OptionValuation" id="21">
+    <uInt32 name="MsgType" id="0" presence="mandatory"> <constant value="792"/> </uInt32>
+    <uInt32 name="SymbolIndex" id="1" presence="mandatory"> <default value="0"/> </uInt32>
+    <uInt32 name="SecurityIDSource" id="2" presence="mandatory"> <default value="0"/> </uInt32>
+    <string name="SecurityID" id="3" presence="mandatory"> <default value="               "/> </string>
+    <uInt32 name="SourceTime" id="4" presence="mandatory"> <delta/> </uInt32>
+    <uInt32 name="TheoreticalBidPrice" id="5" presence="mandatory"> </uInt32>
+    <uInt32 name="TheoreticalAskPrice" id="6" presence="mandatory"> </uInt32>
+    <int32 name="Delta" id="7" presence="mandatory"> </int32>
+    <int32 name="Vega" id="8" presence="mandatory"> </int32>
+    <uInt32 name="DeltaScaleCode" id="9" presence="mandatory"> </uInt32>
+    <uInt32 name="VegaScaleCode" id="10" presence="mandatory"> </uInt32>
+  </template>
+  <template name="OutrightStandingData" id="12">
+    <uInt32 name="MsgType" id="0" presence="mandatory"> <constant value="722"/> </uInt32>
+    <uInt32 name="SourceTime" id="1" presence="mandatory"> <delta/> </uInt32>
+    <uInt32 name="SymbolIndex" id="2" presence="mandatory"> <default value="0"/> </uInt32>
+    <string name="ExchangeCode" id="3" presence="mandatory"> <copy/> </string>
+    <string name="ProductCode" id="4" presence="mandatory"> <copy/> </string>
+    <uInt32 name="ExpiryDate" id="5" presence="mandatory"> <copy/> </uInt32>
+    <uInt32 name="ExercisePrice" id="6" presence="optional"> <delta/> </uInt32>
+    <uInt32 name="LotSize" id="7" presence="mandatory"> <copy/> </uInt32>
+    <string name="ContractType" id="8" presence="mandatory"> <copy/> </string>
+    <string name="OptionType" id="9" presence="optional"> <copy/> </string>
+    <sequence name="SecurityIdSubMsg"> <length name="NoSecurityIDs" id="10"> <default value="0"/> </length>
+    <uInt32 name="SecurityIDSource" id="11" presence="mandatory"> </uInt32>
+    <string name="SecurityID" id="12" presence="mandatory"> </string>
+    </sequence>
+  </template>
+  <template name="ProductAvailbility" id="14">
+    <uInt32 name="MsgType" id="0" presence="mandatory"> <constant value="741"/> </uInt32>
+    <uInt32 name="SourceTime" id="1" presence="mandatory"> <delta/> </uInt32>
+    <uInt32 name="InfoBlockType" id="2" presence="mandatory"> <default value="1"/> </uInt32>
+    <string name="InfoBlock" id="3" presence="mandatory"> </string>
+    <uInt32 name="TradingDay" id="4" presence="mandatory"> <copy/> </uInt32>
+    <uInt32 name="TradingAvailableFlag" id="5" presence="mandatory"> <copy/> </uInt32>
+    <uInt32 name="ThrottleSize" id="6" presence="mandatory"> <copy/> </uInt32>
+  </template>
+  <template name="SettlementPrices" id="11">
+    <uInt32 name="MsgType" id="0" presence="mandatory"> <constant value="712"/> </uInt32>
+    <uInt32 name="SourceTime" id="1" presence="mandatory"> <delta/> </uInt32>
+    <uInt32 name="InfoBlockType" id="2" presence="mandatory"> <default value="1"/> </uInt32>
+    <string name="InfoBlock" id="3" presence="mandatory"> </string>
+    <uInt32 name="UpdateType" id="4" presence="mandatory"> </uInt32>
+    <sequence name="SettlementPricesSubMsg"> <length name="UpdateCount" id="5"/>
+    <uInt32 name="SymbolIndex" id="6" presence="mandatory"> <default value="0"/> </uInt32>
+    <uInt32 name="SecurityIDSource" id="7" presence="mandatory"> <default value="0"/> </uInt32>
+    <string name="SecurityID" id="8" presence="mandatory"> <default value="               "/> </string>
+    <int32 name="Price" id="9" presence="optional"> <delta/> </int32>
+    </sequence>
+  </template>
+  <template name="StrategyStandingData" id="13">
+    <uInt32 name="MsgType" id="0" presence="mandatory"> <constant value="732"/> </uInt32>
+    <uInt32 name="SourceTime" id="1" presence="mandatory"> <delta/> </uInt32>
+    <uInt32 name="SymbolIndex" id="2" presence="mandatory"> <default value="0"/> </uInt32>
+    <string name="ExchangeCode" id="3" presence="mandatory"> <copy/> </string>
+    <string name="ProductCode" id="4" presence="mandatory"> <copy/> </string>
+    <uInt32 name="ExpiryDate" id="5" presence="mandatory"> <copy/> </uInt32>
+    <string name="ContractType" id="6" presence="mandatory"> <copy/> </string>
+    <string name="StrategyCode" id="7" presence="mandatory"> <copy/> </string>
+    <sequence name="SecurityIdSubMsg"> <length name="NoSecurityIDs" id="8"> <default value="0"/> </length>
+    <uInt32 name="SecurityIDSource" id="9" presence="mandatory"> </uInt32>
+    <string name="SecurityID" id="10" presence="mandatory"> </string>
+    </sequence>
+    <sequence name="StrategyLegSubMsg"> <length name="NumLegs" id="11"/>
+    <uInt32 name="LegSymbolIndex" id="12" presence="mandatory"> <default value="0"/> </uInt32>
+    <uInt32 name="LegPrice" id="13" presence="mandatory"> <copy/> </uInt32>
+    <uInt32 name="LegRatio" id="14" presence="mandatory"> <copy/> </uInt32>
+    <uInt32 name="LegRatioScaleCode" id="15" presence="mandatory"> <copy/> </uInt32>
+    <string name="LegBuySell" id="16" presence="mandatory"> <copy/> </string>
+    <sequence name="SecurityIdLegSubMsg"> <length name="NoLegSecurityIDs" id="17"> <default value="0"/> </length>
+    <uInt32 name="LegSecurityIDSource" id="18" presence="mandatory"> </uInt32>
+    <string name="LegSecurityID" id="19" presence="mandatory"> </string>
+    </sequence>
+    </sequence>
+  </template>
+  <template name="ValueAddParams" id="17">
+    <uInt32 name="MsgType" id="0" presence="mandatory"> <constant value="772"/> </uInt32>
+    <uInt32 name="SymbolIndex" id="1" presence="mandatory"> <default value="0"/> </uInt32>
+    <uInt32 name="SecurityIDSource" id="2" presence="mandatory"> <default value="0"/> </uInt32>
+    <string name="SecurityID" id="3" presence="mandatory"> <default value="               "/> </string>
+    <uInt32 name="SourceTime" id="4" presence="mandatory"> <delta/> </uInt32>
+    <sequence name="ValueAddParamsSubMsg"> <length name="UpdateCount" id="5"> <default value="3"/> </length>
+    <uInt32 name="UpdateType" id="6" presence="mandatory"> <default value="13"/> </uInt32>
+    <int32 name="Price" id="7" presence="optional"> <delta/> </int32>
+    <uInt32 name="Volume" id="8" presence="mandatory"> <default value="0"/> </uInt32>
+    </sequence>
+  </template>
+</templates>

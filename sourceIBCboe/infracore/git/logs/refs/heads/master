@@ -1,0 +1,44 @@
+0000000000000000000000000000000000000000 ad320a69a22ff9c3ac0be3d83ebe947d837be734 subham <subham@sdv-ny4-srv50.dvcap.local> 1596623044 +0000	clone: from https://github.com/two-roads-trading-pvt-ltd/infracore.git
+ad320a69a22ff9c3ac0be3d83ebe947d837be734 1ca68ee0f4fcc03d42cd357fb2b229f6563c1372 subhamchawda01 <subham.chawda@tworoads-trading.co.in> 1602831400 +0000	pull: Fast-forward
+1ca68ee0f4fcc03d42cd357fb2b229f6563c1372 cc2a0cd7a92f6dcb5a0105f99ed27537ba1e746f subhamchawda01 <subham.chawda@tworoads-trading.co.in> 1605760934 +0000	pull: Fast-forward
+cc2a0cd7a92f6dcb5a0105f99ed27537ba1e746f ec9a51c79ab47acb9cd815d3e79511bd7ba5b4bd subhamchawda01 <subham.chawda@tworoads-trading.co.in> 1606131781 +0000	pull: Fast-forward
+ec9a51c79ab47acb9cd815d3e79511bd7ba5b4bd 1b81c420fa33cc8bce694c6d0da7c573a7df13e9 subhamchawda01 <subham.chawda@tworoads-trading.co.in> 1608680283 +0000	pull: Fast-forward
+1b81c420fa33cc8bce694c6d0da7c573a7df13e9 7a5d5381af9de579bdf4444fca70596970ed9a15 subhamchawda01 <subham.chawda@tworoads-trading.co.in> 1611284258 +0000	pull: Fast-forward
+7a5d5381af9de579bdf4444fca70596970ed9a15 6b4b2081cd9d077e2b3f9bc1e724484d26cb0c9a subhamchawda01 <subham.chawda@tworoads-trading.co.in> 1615789838 +0000	pull: Fast-forward
+6b4b2081cd9d077e2b3f9bc1e724484d26cb0c9a d1719a947deb1ae679438ba27d107bb93e59cfb2 subhamchawda01 <subham.chawda@tworoads-trading.co.in> 1616233110 +0000	pull: Fast-forward
+d1719a947deb1ae679438ba27d107bb93e59cfb2 d2ed58900decf98d4b937537984b419a7ef905c9 subhamchawda01 <subham.chawda@tworoads-trading.co.in> 1618509125 +0000	pull: Fast-forward
+d2ed58900decf98d4b937537984b419a7ef905c9 d1d2b46830c44b7f627f8fdaf1b79f2714eaab41 subhamchawda01 <subham.chawda@tworoads-trading.co.in> 1620157112 +0000	pull: Fast-forward
+d1d2b46830c44b7f627f8fdaf1b79f2714eaab41 da90415ad9eaa9a37c7c0961b81ef680efeb4a9e subhamchawda01 <subham.chawda@tworoads-trading.co.in> 1622303848 +0000	pull: Fast-forward
+da90415ad9eaa9a37c7c0961b81ef680efeb4a9e 709f4549842241a70ad3450ace8f1eccc4fc48a7 subhamchawda01 <subham.chawda@tworoads-trading.co.in> 1626347514 +0000	pull: Fast-forward
+709f4549842241a70ad3450ace8f1eccc4fc48a7 9788b6a235d5bb7494dd7f15fc7472853d1c10b9 subhamchawda01 <subham.chawda@tworoads-trading.co.in> 1629462176 +0000	pull: Fast-forward
+9788b6a235d5bb7494dd7f15fc7472853d1c10b9 29051e8093725a0e8e5566972945ae0888a05c00 subhamchawda01 <subham.chawda@tworoads-trading.co.in> 1633671671 +0000	pull: Fast-forward
+29051e8093725a0e8e5566972945ae0888a05c00 7458da258f893b16178725526b1d27e67637072e subhamchawda01 <subham.chawda@tworoads-trading.co.in> 1634111295 +0000	commit: setup new server steps
+7458da258f893b16178725526b1d27e67637072e 29051e8093725a0e8e5566972945ae0888a05c00 subhamchawda01 <subham.chawda@tworoads-trading.co.in> 1634112441 +0000	reset: moving to HEAD~1
+29051e8093725a0e8e5566972945ae0888a05c00 bbbd58ca8329b8dff3197a9ec234c592652c6dde subhamchawda01 <subham.chawda@tworoads-trading.co.in> 1634112590 +0000	reset: moving to HEAD~1
+bbbd58ca8329b8dff3197a9ec234c592652c6dde 29051e8093725a0e8e5566972945ae0888a05c00 subhamchawda01 <subham.chawda@tworoads-trading.co.in> 1634112654 +0000	pull: Fast-forward
+29051e8093725a0e8e5566972945ae0888a05c00 365cf8a50a4ce9b5686966a4379d6d04e6dc7c45 subhamchawda01 <subham.chawda@tworoads-trading.co.in> 1642671010 +0000	pull: Fast-forward
+365cf8a50a4ce9b5686966a4379d6d04e6dc7c45 4ceae85596d7dab4f7de559b2564b0898bae59f4 subhamchawda01 <subham.chawda@tworoads-trading.co.in> 1650561122 +0000	pull: Fast-forward
+4ceae85596d7dab4f7de559b2564b0898bae59f4 d1a58d8fd1b23f126533bc28f55f918438cf465d subhamchawda01 <subham.chawda@tworoads-trading.co.in> 1656311618 +0000	pull: Fast-forward
+d1a58d8fd1b23f126533bc28f55f918438cf465d 1b296945c40056ca4d82956c2911d77fc8021105 subhamchawda01 <subham.chawda@tworoads-trading.co.in> 1658292200 +0000	pull: Fast-forward
+1b296945c40056ca4d82956c2911d77fc8021105 4c350e42cf7154767752bf21617192db801bc446 subhamchawda01 <subham.chawda@tworoads-trading.co.in> 1658294574 +0000	pull: Fast-forward
+4c350e42cf7154767752bf21617192db801bc446 2e3ac5de6dbef2bcd82facf8e08339c257f2e88d subhamchawda01 <subham.chawda@tworoads-trading.co.in> 1659423051 +0000	pull: Fast-forward
+2e3ac5de6dbef2bcd82facf8e08339c257f2e88d 17b39589a8e34bb1720ecbe8da8bc4ecc63c8a80 subhamchawda01 <subham.chawda@tworoads-trading.co.in> 1661750080 +0000	pull: Fast-forward
+17b39589a8e34bb1720ecbe8da8bc4ecc63c8a80 a95ab53e2480ebc95a73cdf766eb82aa1f745bef subhamchawda01 <subham.chawda@tworoads-trading.co.in> 1669013883 +0000	pull: Fast-forward
+a95ab53e2480ebc95a73cdf766eb82aa1f745bef 0b460a3a0fb737cb8e3c8fff539dc65f6623006c subhamchawda01 <subham.chawda@tworoads-trading.co.in> 1671614630 +0000	pull: Fast-forward
+0b460a3a0fb737cb8e3c8fff539dc65f6623006c 5ea50fe14b6861a189e8691b0deb851640245c1d subhamchawda01 <subham.chawda@tworoads-trading.co.in> 1673854161 +0000	pull: Fast-forward
+5ea50fe14b6861a189e8691b0deb851640245c1d d457fdbe17cffbde37cc49319f45d50c902a1bee subhamchawda01 <subham.chawda@tworoads-trading.co.in> 1684740773 +0000	pull: Fast-forward
+d457fdbe17cffbde37cc49319f45d50c902a1bee be76071fce4365114eaa87de7251de0235e3b1cf raghunandan95 <raghunandan.sharma@tworoads-trading.co.in> 1707213561 +0000	pull: Fast-forward
+be76071fce4365114eaa87de7251de0235e3b1cf 24ae49a5749428461a69241abe5b1f9a404618a6 subhamchawda01 <subham.chawda@tworoads-trading.co.in> 1712043391 +0000	pull: Fast-forward
+24ae49a5749428461a69241abe5b1f9a404618a6 26003cddbd2802b4ff817e2210c5e70a4e12ff30 subhamchawda01 <subham.chawda@tworoads-trading.co.in> 1715579589 +0000	pull: Fast-forward
+26003cddbd2802b4ff817e2210c5e70a4e12ff30 eb2c4e89c83ee9df6d7634ecadc19dcedd24fcef subhamchawda01 <subham.chawda@tworoads-trading.co.in> 1716779321 +0000	pull: Fast-forward
+eb2c4e89c83ee9df6d7634ecadc19dcedd24fcef 13c6ee22f1ec5fe49e6eac4c915cef98846b0e59 subhamchawda01 <subham.chawda@tworoads-trading.co.in> 1716889149 +0000	pull: Fast-forward
+13c6ee22f1ec5fe49e6eac4c915cef98846b0e59 7a95a4694ede02bb84bc5193829a17ebe982643d subhamchawda01 <subham.chawda@tworoads-trading.co.in> 1718871090 +0000	pull: Fast-forward
+7a95a4694ede02bb84bc5193829a17ebe982643d e494a26e9ba5d7d0da342b1688740c6ab27abb1f subhamchawda01 <subham.chawda@tworoads-trading.co.in> 1719474497 +0000	pull: Fast-forward
+e494a26e9ba5d7d0da342b1688740c6ab27abb1f 2a51e7273e7d673c22486e3c3795cbf91cdf81f0 subhamchawda01 <subham.chawda@tworoads-trading.co.in> 1723627584 +0000	pull: Fast-forward
+2a51e7273e7d673c22486e3c3795cbf91cdf81f0 5a12b5d81c0103a96049c9964d834d45755d4aff subhamchawda01 <subham.chawda@tworoads-trading.co.in> 1724651527 +0000	pull: Fast-forward
+5a12b5d81c0103a96049c9964d834d45755d4aff a9081af97e52bfc1a72d06296e8928f28e7fc582 subhamchawda01 <subham.chawda@tworoads-trading.co.in> 1725439625 +0000	pull: Fast-forward
+a9081af97e52bfc1a72d06296e8928f28e7fc582 bba39603c5fb0fc7cb54a924b7dfdc012ac199df subhamchawda01 <subham.chawda@tworoads-trading.co.in> 1726652436 +0000	pull: Fast-forward
+bba39603c5fb0fc7cb54a924b7dfdc012ac199df 107445c9f723b6cf6279960dc9abbca6fbd5d446 subhamchawda01 <subham.chawda@tworoads-trading.co.in> 1729575652 +0000	pull: Fast-forward
+107445c9f723b6cf6279960dc9abbca6fbd5d446 96f51cd4a12823906ec2d162179b4064c38d8bbd subhamchawda01 <subham.chawda@tworoads-trading.co.in> 1736404758 +0000	pull: Fast-forward
+96f51cd4a12823906ec2d162179b4064c38d8bbd f8a5c1a7e7c16648adcffa316ec828c87102cfe4 subhamchawda01 <subham.chawda@tworoads-trading.co.in> 1740127299 +0000	pull: Fast-forward
+f8a5c1a7e7c16648adcffa316ec828c87102cfe4 673c04492b4530a6179e550aab07384d6f20d802 subhamchawda01 <subham.chawda@tworoads-trading.co.in> 1742380177 +0000	pull: Fast-forward

@@ -1,0 +1,21 @@
+# APP name
+# MD = raw_mkt_data_receiver   , low_latency
+# MM = processed_mkt_data_mcast_sender , low_latency
+# LS = Live_data or processed_mkt_data_mcast_receiver , low_latency
+# CONTROL
+# ORS = ors bcast, (exchange replies etc..)
+# ORS_LS = ors_livesource, 
+#LOCATION  EXCHANGE  APP_NAME  INTERFACE  
+#OTK
+OTK     RTS       MD       eth1.102
+OTK     MICEX_CR          MD       eth1.722
+OTK     MICEX_EQ          MD       eth1.722
+OTK     MICEX_FO          MD       eth1.722
+OTK     LSE       MD       eth1.722
+OTK     ORS_LS eth1.722
+M1     RTS       MD       eth0
+M1     MICEX_CR          MD       eth0
+M1     MICEX_EQ          MD       eth0
+M1     MICEX_FO          MD       eth0
+M1     LSE       MD       eth0
+M1     ORS_LS eth0

@@ -1,0 +1,1 @@
+aws autoscaling describe-auto-scaling-groups --auto-scaling-group-namesaws autoscaling describe-auto-scaling-groups --auto-scaling-group-namesaws autoscaling describe-auto-scaling-groups --auto-scaling-group-names

@@ -1,0 +1,5 @@
+0000000000000000000000000000000000000000 c2f81bc5fdaca628eb2b6b4d5f7cf2248d7bc98a subhamchawda01 <subham.chawda@tworoads-trading.co.in> 1599735270 +0000	branch: Created from HEAD
+c2f81bc5fdaca628eb2b6b4d5f7cf2248d7bc98a b3d52d02c25ae6a2aa5872af2e205f4eed8b21be subhamchawda01 <subham.chawda@tworoads-trading.co.in> 1599735355 +0000	commit: trade log summary script
+b3d52d02c25ae6a2aa5872af2e205f4eed8b21be 7b71d7d805d59c6c86e1dc4e1ac8e4ace2c50230 subhamchawda01 <subham.chawda@tworoads-trading.co.in> 1599810606 +0000	commit: generate trade log summary NSE holiday
+7b71d7d805d59c6c86e1dc4e1ac8e4ace2c50230 51cc5887e48862a28d6119577552f9a148fbcf6a subhamchawda01 <subham.chawda@tworoads-trading.co.in> 1600244533 +0000	commit: tab space changes
+51cc5887e48862a28d6119577552f9a148fbcf6a 822d9e1fa6cae0aed3036f5d4baf0a641480f227 subhamchawda01 <subham.chawda@tworoads-trading.co.in> 1600320346 +0000	commit: log file path check changes

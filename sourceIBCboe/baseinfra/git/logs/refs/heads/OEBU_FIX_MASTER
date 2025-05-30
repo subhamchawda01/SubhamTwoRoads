@@ -1,0 +1,8 @@
+0000000000000000000000000000000000000000 f38fb4629d1a39c7c6e85432930efeaa7e4bfbe2 subhamchawda01 <subham.chawda@tworoads-trading.co.in> 1599656938 +0000	branch: Created from refs/remotes/origin/OEBU_FIX_MASTER
+f38fb4629d1a39c7c6e85432930efeaa7e4bfbe2 57ba527f80b28df4abd425f3f3a806ee16aaffc2 subhamchawda01 <subham.chawda@tworoads-trading.co.in> 1622120253 +0000	commit: bug fix
+57ba527f80b28df4abd425f3f3a806ee16aaffc2 d76f6c73bc380359ecde1bc00747b32deeab1bd2 subhamchawda01 <subham.chawda@tworoads-trading.co.in> 1637808040 +0000	pull: Fast-forward
+d76f6c73bc380359ecde1bc00747b32deeab1bd2 754b6e2476eaddcda496721023910f71c4fd1f78 subhamchawda01 <subham.chawda@tworoads-trading.co.in> 1649132434 +0000	pull: Fast-forward
+754b6e2476eaddcda496721023910f71c4fd1f78 0b83683da57214c2c5a0f27a3fe02e4975eeaac8 subhamchawda01 <subham.chawda@tworoads-trading.co.in> 1649139838 +0000	reset: moving to HEAD~1
+0b83683da57214c2c5a0f27a3fe02e4975eeaac8 d76f6c73bc380359ecde1bc00747b32deeab1bd2 subhamchawda01 <subham.chawda@tworoads-trading.co.in> 1649140010 +0000	reset: moving to HEAD~1
+d76f6c73bc380359ecde1bc00747b32deeab1bd2 7718583cb7aa24268d2f4d22df565751d9e52b8b subhamchawda01 <subham.chawda@tworoads-trading.co.in> 1650560928 +0000	pull: Fast-forward
+7718583cb7aa24268d2f4d22df565751d9e52b8b 0541fc20e4d7b2bcb116348ea9ab614256cb623c subhamchawda01 <subham.chawda@tworoads-trading.co.in> 1650884587 +0000	commit: commented logging

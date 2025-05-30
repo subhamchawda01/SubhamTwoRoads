@@ -1,0 +1,137 @@
+Use_SHM yes
+UseAffinity Y
+UseDropCopy Y
+Exchange BMFEP
+Control_Port 16227
+Client_Port 17207
+Client_Base 115
+BCast_IP 239.23.0.165
+BCast_Port 34560
+DC_MCASTIP 239.23.0.191
+DC_MCASTPORT 32320
+SenderCompID 0
+TargetCompID 0
+AccountName 0
+Password 0
+SenderLocation COLO0
+EnteringTrader DVC
+EnteringFirm 98
+SocketConnectHost 0
+SocketConnectPort 0
+HeartBtInt 30 
+OptimizeAssumptions N
+ORSThrottleLimit 100
+Multisessions 76,77,78 
+
+SenderCompID-76 XALP0076
+TargetCompID-76 OE189
+Password-76  IWRHGM
+SocketConnectPort-76  61189
+SocketConnectHost-76  200.19.51.134
+AccountName-76  4994
+
+SenderCompID-77 XALP0077
+TargetCompID-77 OE189
+Password-77  JBNYDW
+SocketConnectPort-77  61189
+SocketConnectHost-77  200.19.51.134
+AccountName-77  4994
+
+SenderCompID-78 XALP0078
+TargetCompID-78 OE189
+Password-78  LWFHNQ
+SocketConnectPort-78  61189
+SocketConnectHost-78  200.19.51.134
+AccountName-78  4994
+
+SenderCompID-79 XALP0079
+TargetCompID-79 OE189
+Password-79  KXMNTE
+SocketConnectPort-79  61189
+SocketConnectHost-79  200.19.51.134
+AccountName-79  4994
+
+SenderCompID-80 XALP0080
+TargetCompID-80 OE189
+Password-80 BENTHL
+SocketConnectPort-80 61189
+SocketConnectHost-80 200.19.51.134
+AccountName-80 4994
+
+SenderCompID-81 XALP0081
+TargetCompID-81 OE189
+Password-81 PTBANW
+SocketConnectPort-81 61189
+SocketConnectHost-81 200.19.51.134
+AccountName-81 4994
+
+SenderCompID-82 XALP0082
+TargetCompID-82 OE189
+Password-82 TKCMGP
+SocketConnectPort-82 61189
+SocketConnectHost-82 200.19.51.134
+AccountName-82 4994
+
+SenderCompID-83 XALP0083
+TargetCompID-83 OE189
+Password-83 LRFQKA
+SocketConnectPort-83 61189
+SocketConnectHost-83 200.19.51.134
+AccountName-83 4994
+
+SenderCompID-84 XALP0084
+TargetCompID-84 OE189
+Password-84 ENDUMY
+SocketConnectPort-84 61189
+SocketConnectHost-84 200.19.51.134
+AccountName-84 4994
+
+SenderCompID-85 XALP0085
+TargetCompID-85 OE189
+Password-85 DRNTOK
+SocketConnectPort-85 61189
+SocketConnectHost-85 200.19.51.134
+AccountName-85 4994
+
+SenderCompID-86 XALP0086
+TargetCompID-86 OE189
+Password-86 AEPQUH
+SocketConnectPort-86 61189
+SocketConnectHost-86 200.19.51.134
+AccountName-86 4994
+
+SenderCompID-87 XALP0087
+TargetCompID-87 OE189
+Password-87 SRJFDT
+SocketConnectPort-87 61189
+SocketConnectHost-87 200.19.51.134
+AccountName-87 4994
+
+SenderCompID-88 XALP0088
+TargetCompID-88 OE189
+Password-88 PTMFSD
+SocketConnectPort-88 61189
+SocketConnectHost-88 200.19.51.134
+AccountName-88 4994
+
+SenderCompID-89 XALP0089
+TargetCompID-89 OE189
+Password-89 OYRHXF
+SocketConnectPort-89 61189
+SocketConnectHost-89 200.19.51.134
+AccountName-89 4994
+
+SenderCompID-90 XALP0090
+TargetCompID-90 OE189
+Password-90 YDJTFA
+SocketConnectPort-90 61189
+SocketConnectHost-90 200.19.51.134
+AccountName-90 4994
+
+SenderCompID-91 XALP0091
+TargetCompID-91 OE189
+Password-91 XDOLYN
+SocketConnectPort-91 61189
+SocketConnectHost-91 200.19.51.134
+AccountName-91 4994
+

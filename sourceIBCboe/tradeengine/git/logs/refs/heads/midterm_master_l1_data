@@ -1,0 +1,8 @@
+0000000000000000000000000000000000000000 c989c1307028acde828b6661f1deb9c0a017d4cd subhamchawda01 <subham.chawda@tworoads-trading.co.in> 1719902966 +0000	branch: Created from HEAD
+c989c1307028acde828b6661f1deb9c0a017d4cd 7d81a1e3547ac5117fb3366e466d6d9adfe76b61 subhamchawda01 <subham.chawda@tworoads-trading.co.in> 1719914819 +0000	commit (merge): master and l1 changes pull to midterm_master
+7d81a1e3547ac5117fb3366e466d6d9adfe76b61 7e9bb976e7d559bb8f37f608874eb10cb1422303 subhamchawda01 <subham.chawda@tworoads-trading.co.in> 1724651963 +0000	commit: added use_l1 argument in trade_engine
+7e9bb976e7d559bb8f37f608874eb10cb1422303 a8041f83e2f2f5730729a41de1e6424c50c2c4c8 subhamchawda01 <subham.chawda@tworoads-trading.co.in> 1724665332 +0000	commit (merge): midterm master pull to l1 branch
+a8041f83e2f2f5730729a41de1e6424c50c2c4c8 d8362c2e7a44074581c0d731dc7948fedbfa2aad subhamchawda01 <subham.chawda@tworoads-trading.co.in> 1724829744 +0000	commit: mkt trade logger for l1 market data
+d8362c2e7a44074581c0d731dc7948fedbfa2aad 0bcdcf04c637d974d7ec217708614a35c98329e2 subhamchawda01 <subham.chawda@tworoads-trading.co.in> 1724995648 +0000	commit: l1 code optimization
+0bcdcf04c637d974d7ec217708614a35c98329e2 4163327d2140fcd486366043ddc5cc1e1e9e1c97 subhamchawda01 <subham.chawda@tworoads-trading.co.in> 1725439734 +0000	commit: added handling for L1 spot in mkt_trade_logger
+4163327d2140fcd486366043ddc5cc1e1e9e1c97 d480c3bd47cf98c7ea6ba929dce850c6561c1499 subhamchawda01 <subham.chawda@tworoads-trading.co.in> 1726823797 +0000	commit (merge): midterm master pull abhishek changes to midterm_master_l1_data

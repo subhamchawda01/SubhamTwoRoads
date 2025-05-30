@@ -1,0 +1,92 @@
+project : usage-requirements <include>$(PROJECT_INSTALL) ;
+
+use-project /PCDef : ../CDefCode ;
+use-project /PCommonDataStructures : ../CommonDataStructuresCode ;
+#use-project /PTradeUtils : ../TradeUtilsCode ;
+use-project /PUtils : ../UtilsCode ;
+use-project /PCommonTradeUtils : ../CommonTradeUtilsCode ;
+
+use-project /PCDefTests : CDef ;
+use-project /PCommonDataStructuresTests : CommonDataStructures ;
+use-project /PUtilsTests : Utils ;
+use-project /PCommonTradeUtilsTests : CommonTradeUtils ;
+use-project /PExchangeSymbolManager : ExchangeSymbolManager ;
+use-project /PSecurityDefinitions : SecurityDefinitions ;
+
+# lib ncurses : : <name>ncurses <search>/usr/lib64 ;
+
+lib libcppunit
+:
+: # requirements
+  <name>cppunit 
+  <search>/usr/lib64
+:
+: 
+; 
+
+
+exe run_tests
+    : # sources
+    [ glob *.cpp ]
+     /PCDefTests//CDefTests
+     /PCommonDataStructuresTests//CommonDataStructuresTests
+     /PUtilsTests//UtilsTests
+     /PCommonTradeUtilsTests//CommonTradeUtilsTests
+     /PCommonTradeUtils//CommonTradeUtils
+     /PCDef//CDef
+     /PUtils//Utils
+     /PCommonDataStructures//CommonDataStructures
+     /PExchangeSymbolManager//ExchangeSymbolManager
+     /PSecurityDefinitions//SecurityDefinitions
+     
+#     libcppunit # disable static for now
+    : # requirements
+    : # build options 
+      <variant>release
+      <linkflags>-lcppunit
+      <linkflags>-lpthread
+      <linkflags>-ldl
+      <linkflags>-Wl,--no-as-needed
+      <linkflags>-fno-lto # trying to disable lto to fix linking problem
+    : # usage requirements
+    ;
+
+install install-bin
+	: run_tests
+	: <variant>release:<location>"$(PROJECT_INSTALL)/bin"
+      	<variant>debug:<location>"$(PROJECT_INSTALL)/bindebug"
+  	: release
+	;
+
+install libCDefTests
+  : /PCDefTests//CDefTests
+  : <install-type>LIB
+    <variant>release:<location>"$(PROJECT_INSTALL)/lib"
+    <variant>debug:<location>"$(PROJECT_INSTALL)/libdebug"
+  : release debug
+  ;
+
+install libCommonDataStructuresTests
+  : /PCommonDataStructuresTests//CommonDataStructuresTests
+  : <install-type>LIB
+    <variant>release:<location>"$(PROJECT_INSTALL)/lib"
+    <variant>debug:<location>"$(PROJECT_INSTALL)/libdebug"
+  : release debug
+  ;
+
+install libUtilsTests
+  : /PUtilsTests//UtilsTests
+  : <install-type>LIB
+    <variant>release:<location>"$(PROJECT_INSTALL)/lib"
+    <variant>debug:<location>"$(PROJECT_INSTALL)/libdebug"
+  : release debug
+  ;
+
+install libCommonTradeUtilsTests
+  : /PCommonTradeUtilsTests//CommonTradeUtilsTests
+  : <install-type>LIB
+    <variant>release:<location>"$(PROJECT_INSTALL)/lib"
+    <variant>debug:<location>"$(PROJECT_INSTALL)/libdebug"
+  : release debug
+  ;
+

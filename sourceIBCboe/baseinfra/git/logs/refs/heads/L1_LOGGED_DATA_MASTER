@@ -1,0 +1,6 @@
+0000000000000000000000000000000000000000 aad4c8881ba34a8a67c51d0744f34dc5e5658425 subhamchawda01 <subham.chawda@tworoads-trading.co.in> 1719902222 +0000	branch: Created from refs/remotes/origin/L1_LOGGED_DATA_MASTER
+aad4c8881ba34a8a67c51d0744f34dc5e5658425 afc06d74cd01bde29d639ca4dc1e1a312e11ca91 subhamchawda01 <subham.chawda@tworoads-trading.co.in> 1719902258 +0000	merge origin/master: Merge made by the 'recursive' strategy.
+afc06d74cd01bde29d639ca4dc1e1a312e11ca91 40b3ee3e1a41ca928590417f2ed0bd321f91b4af subhamchawda01 <subham.chawda@tworoads-trading.co.in> 1724651837 +0000	merge origin/master: Merge made by the 'recursive' strategy.
+40b3ee3e1a41ca928590417f2ed0bd321f91b4af 8ea2bf678450d5dcb11959c0bc3140efad132ce2 subhamchawda01 <subham.chawda@tworoads-trading.co.in> 1725439655 +0000	commit: added handling for spot NSE L1
+8ea2bf678450d5dcb11959c0bc3140efad132ce2 7112f0d7facccaeb729745428a41c64cf5b6bc05 subhamchawda01 <subham.chawda@tworoads-trading.co.in> 1726653356 +0000	commit: l1 invalid book resulting to HARD Stop loss bug fix
+7112f0d7facccaeb729745428a41c64cf5b6bc05 164710de446ebff732c5575009f299cc1ca9c061 subhamchawda01 <subham.chawda@tworoads-trading.co.in> 1726741892 +0000	merge origin/master: Merge made by the 'recursive' strategy.

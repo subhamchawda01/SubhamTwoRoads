@@ -1,0 +1,142 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<?xml-stylesheet type="text/xsl" href="./ClientHTML.xsl"?><protocol>
+<version>351</version>
+<revisions>
+    <revision type="Final" version="351" author="MNI News" date="03/13/2017"/>
+  </revisions>
+<category name="Heartbeat">
+<description>System heartbeat message</description>
+<country>ANY</country>
+<category_id>1</category_id>
+<data>
+<datum>
+<short_description>heartbeat timestamp</short_description>
+<description>Time heartbeat was sent, in milliseconds from epoch</description>
+<datum_type>units</datum_type>
+<datum_id>1</datum_id>
+</datum>
+</data>
+<messages>
+<message>
+<message_type>system</message_type>
+<message_version>1</message_version>
+<multicast_group>SYSTEM_HEARTBEAT</multicast_group>
+<fields>
+<field>
+<datum_id>1</datum_id>
+<field_type>float</field_type>
+<example_value>1218047346773</example_value>
+</field>
+</fields>
+</message>
+</messages>
+</category>
+<category name="Test">
+<description>System test message used to check connectivity</description>
+<country>ANY</country>
+<category_id>2</category_id>
+<data>
+<datum>
+<short_description>System Test Value</short_description>
+<description>System Test Value</description>
+<datum_type>units</datum_type>
+<datum_id>1</datum_id>
+</datum>
+</data>
+<messages>
+<message>
+<message_type>system</message_type>
+<message_version>1</message_version>
+<multicast_group>*ANY*</multicast_group>
+<fields>
+<field>
+<datum_id>1</datum_id>
+<field_type>float</field_type>
+<example_value>0.5</example_value>
+</field>
+</fields>
+</message>
+</messages>
+</category>
+<category name="Test_Ack">
+<description>System test message used to check connectivity and acknowledgements</description>
+<country>ANY</country>
+<category_id>3</category_id>
+<data>
+<datum>
+<short_description>System Test Value</short_description>
+<description>System Test Value</description>
+<datum_type>units</datum_type>
+<datum_id>1</datum_id>
+</datum>
+</data>
+<messages>
+<message>
+<message_type>system</message_type>
+<message_version>1</message_version>
+<multicast_group>*ANY*</multicast_group>
+<fields>
+<field>
+<datum_id>1</datum_id>
+<field_type>float</field_type>
+<example_value>12345</example_value>
+</field>
+</fields>
+</message>
+</messages>
+</category>
+<category name="Test_Ack_Opt1">
+<description>System test message used to check connectivity and acknowledgements</description>
+<country>ANY</country>
+<category_id>4</category_id>
+<data>
+<datum>
+<short_description>System Test Value</short_description>
+<description>System Test Value</description>
+<datum_type>units</datum_type>
+<datum_id>1</datum_id>
+</datum>
+</data>
+<messages>
+<message>
+<message_type>system</message_type>
+<message_version>1</message_version>
+<multicast_group>*ANY*</multicast_group>
+<fields>
+<field>
+<datum_id>1</datum_id>
+<field_type>float</field_type>
+<example_value>12345</example_value>
+</field>
+</fields>
+</message>
+</messages>
+</category>
+<category name="Test_Ack_Opt2">
+<description>System test message used to check connectivity and acknowledgements</description>
+<country>ANY</country>
+<category_id>5</category_id>
+<data>
+<datum>
+<short_description>System Test Value</short_description>
+<description>System Test Value</description>
+<datum_type>units</datum_type>
+<datum_id>1</datum_id>
+</datum>
+</data>
+<messages>
+<message>
+<message_type>system</message_type>
+<message_version>1</message_version>
+<multicast_group>*ANY*</multicast_group>
+<fields>
+<field>
+<datum_id>1</datum_id>
+<field_type>float</field_type>
+<example_value>12345</example_value>
+</field>
+</fields>
+</message>
+</messages>
+</category>
+</protocol>

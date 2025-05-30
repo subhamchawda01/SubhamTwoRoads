@@ -1,0 +1,250 @@
+#ifndef _BSE_SECURITY_DEF_
+#define _BSE_SECURITY_DEF_
+
+/**
+   \file dvccode/CDef/nse_security_definition.hpp
+
+   \author: (c) Copyright Two Roads Technological Solutions Pvt Ltd 2011
+   Address:
+   Suite No 354, Evoma, #14, Bhattarhalli,
+   Old Madras Road, Near Garden City College,
+   KR Puram, Bangalore 560049, India
+   +91 80 4190 3551
+*/
+
+#include <map>
+#include <sstream>
+#include <string>
+#include <vector>
+
+#include "dvccode/CDef/common_security_definition_structs.hpp"
+
+namespace HFSAT {
+
+enum BSEOptionType { OPT_INVALID = 0, OPT_CE, OPT_PE };
+
+enum BSEMonth_t {
+  BSE_INVALID_MM = 0,
+  BSE_JAN,
+  BSE_FEB,
+  BSE_MAR,
+  BSE_APR,
+  BSE_MAY,
+  BSE_JUN,
+  BSE_JUL,
+  BSE_AUG,
+  BSE_SEP,
+  BSE_OCT,
+  BSE_NOV,
+  BSE_DEC,
+};
+
+enum BSEInstrumentType_t {
+  BSE_INVALID = 0,
+  BSE_IDXFUT,
+  BSE_STKFUT,
+  BSE_IDXOPT,
+  BSE_STKOPT,
+  BSE_IRFFUT,
+  BSE_CURFUT,
+  BSE_CUROPT,
+  BSE_IRDFUT,
+  BSE_IRTFUT,
+  BSE_EQ,
+};
+
+typedef struct {
+  BSEInstrumentType_t inst_type_;
+  char underlying_[16];
+  char name[27];
+  double last_close_;
+  int lot_size_;
+  double min_tick_;
+  int expiry_;  // YYYYMMDD format
+  // only applicable for options
+  uint32_t num_itm_;  // num_otm is symmetric
+  double step_value_;
+  double step_value_prev_;
+  uint32_t prev_num_itm_;
+  short int precision;
+  int lot_size_multiplier;
+} BSEInstrumentParams_t;
+
+// using string instead of char* because of the < comparator, which would compare char pointers
+struct BSEOPtionsIdentifier_t {
+  BSEInstrumentType_t inst_type_;
+  std::string underlying_;
+  int expiry_;  // YYYYMMDD format
+  double strike_price_;
+  std::string call_or_put_;
+
+  bool operator<(const BSEOPtionsIdentifier_t& param) const {
+    return std::tie(inst_type_, underlying_, expiry_, strike_price_, call_or_put_) <
+           std::tie(param.inst_type_, param.underlying_, param.expiry_, param.strike_price_, param.call_or_put_);
+  }
+};
+
+struct BSEOptionMetaInfo {
+  std::string shortcode;
+  double strike;
+  bool is_call;
+  bool is_curr_stk_scheme;
+  int strike_num;
+  bool is_in_the_money;
+  double unbounded_intrinsic_value_;
+
+  BSEOptionMetaInfo(std::string shc, double strike_px, bool call, bool is_curr_sos, int stk_num, bool is_itm,
+                    double in_value_) {
+    shortcode = shc;
+    strike = strike_px;
+    is_call = call;
+    is_curr_stk_scheme = is_curr_sos;
+    strike_num = stk_num;
+    is_in_the_money = is_itm;
+    unbounded_intrinsic_value_ = in_value_;
+  }
+
+  bool operator==(const BSEOptionMetaInfo& info) { return (shortcode == info.shortcode); }
+
+  // ascending order for call & descending order puts
+  // returns calls and then puts
+  bool operator<(const BSEOptionMetaInfo& info) const {
+    if (is_call && info.is_call) {
+      return (strike < info.strike);
+    } else if (is_call && (!info.is_call)) {
+      return (true);
+    } else if ((!is_call) && (info.is_call)) {
+      return (false);
+    } else if ((!is_call) && (!info.is_call)) {
+      return (strike > info.strike);
+    } else {
+      return true;
+    }
+  }
+};
+
+struct BSETradingLimit_t {
+  int lower_limit_;
+  int upper_limit_;
+  double lower_limit_fraction_;
+  double upper_limit_fraction_;
+  int base_limit_;
+  double min_tick_size_;
+
+  BSETradingLimit_t(int _lower_limit_, int _upper_limit_, int _base_limit_, double _min_tick_size_) {
+    lower_limit_ = _lower_limit_;
+    upper_limit_ = _upper_limit_;
+    base_limit_ = _base_limit_;
+    min_tick_size_ = _min_tick_size_;
+
+    // This is the initial fraction on which limits are decided. These will be used when we have
+    // to increase the limits. Since that will be happen in case of FO and FO stocks for which the
+    // initial limits are 10% (0.1), so keeping these values as same
+    lower_limit_fraction_ = 0.1;
+    upper_limit_fraction_ = 0.1;
+  }
+};
+
+class BSESecurityDefinitions {
+ public:
+  static BSESecurityDefinitions& GetUniqueInstance(int date);
+  void AddContractSpecifications(ShortcodeContractSpecificationMap& contract_spec_map);
+
+  const std::string GetShortcodeFromInstrumentCode(const int instrument_code);
+  const std::string GetDataSourceSymbolFromInstrumentCode(const int instrument_code);
+  const std::string GetDataSourceSymbolFromShortcode(const std::string& shortcode);
+  const std::string GetDataSourceSymbolFromExchSymbol(const std::string& exch_symbol);
+  const std::string GetExchSymbolFromShortcode(const std::string& shortcode);
+  const std::string GetExchangeSymbolFromInstumentCode(int instrument_code);
+  short int GetPrecisionFromInstrumentCode(const int instrument_code);
+  bool IsExpiryValid(const int expiry, const BSEInstrumentType_t type);
+  bool IsExpiryValidForInstrument(int instrument_code);
+  inline bool IsInstrumentValid(int instrument_code);
+  double GetLastClose(const std::string& shortcode);
+  double GetContractMultiplier(const std::string& shortcode);
+  double GetBSECommission(const std::string& shortcode);
+
+ private:
+  BSESecurityDefinitions(const BSESecurityDefinitions&) : intdate_(0), max_exch_sym_id_(0) {}
+  explicit BSESecurityDefinitions(int date);
+  BSESecurityDefinitions& operator=(const BSESecurityDefinitions&) { return *this; }
+
+  void LoadInstrumentParams();
+  void ReadWriteDataSourceSymbolToExchSymbolMap();
+
+  void PopulateExpiryMap();
+  void PopulateCurrencyExpiryMap();
+  int ComputeExpiryDate(const int contract_number, bool is_currency = false);
+  int ComputeNextExpiry(const int date);
+  int ComputeNextExpiryCurrency(const int date);
+  int GetContractNumberFromExpiry(const int date, const BSEInstrumentType_t type);
+  double GetLastCloseFromInstrumentCode(const int instrument_code);
+  double GetContractMultiplierFromInstrumentCode(const int instrument_code);
+
+  int GetInstrumentCodeFromShortcode(const std::string& shortcode);
+  BSEInstrumentType_t GetInstrumentTypeFromShortcode(const std::string& shortcode);
+  inline bool IsShortcodeValid(const std::string& shortcode);
+  inline bool IsDataSourceSymbolValid(const std::string& data_source_symbol);
+  inline bool IsExchSymbolValid(const std::string& exch_symbol);
+
+ public:
+  static BSESecurityDefinitions& GetUniqueInstance();  // Hack. Avoid Using It.
+
+ private:
+  static BSESecurityDefinitions* uniqueinstance_;
+  int intdate_;
+  long long int max_exch_sym_id_;
+  std::vector<BSEInstrumentParams> instrument_params_;
+  std::map<uint32_t, int> contractnumber_cf_2_expirydate_;
+  std::map<int, uint32_t> expirydate_2_contractnumber_cf_;
+  std::map<uint32_t, int> contractnumber_2_expirydate_;
+  std::map<int, uint32_t> expirydate_2_contractnumber_;
+  std::map<int, uint32_t> instrument_code_2_params_;
+  std::map<std::string, int> shortcode_2_instrument_code;
+  std::map<std::string, std::string> datasource_sym_2_exch_sym_;
+  std::map<std::string, std::string> exch_sym_2_datasource_sym_;
+  std::map<std::string, double> shortcode_2_commissions_;
+};
+
+inline bool BSESecurityDefinitions::IsInstrumentValid(int instrument_code) {
+  return instrument_code_2_params_.find(instrument_code) != instrument_code_2_params_.end();
+}
+
+inline bool BSESecurityDefinitions::IsShortcodeValid(const std::string& shortcode) {
+  return (shortcode_2_instrument_code.find(shortcode) != shortcode_2_instrument_code.end());
+}
+
+inline bool BSESecurityDefinitions::IsDataSourceSymbolValid(const std::string& data_source_symbol) {
+  return (datasource_sym_2_exch_sym_.find(data_source_symbol) != datasource_sym_2_exch_sym_.end());
+}
+
+inline bool BSESecurityDefinitions::IsExchSymbolValid(const std::string& exch_symbol) {
+  return (exch_sym_2_datasource_sym_.find(exch_symbol) != exch_sym_2_datasource_sym_.end());
+}
+
+inline BSESecurityDefinitions& BSESecurityDefinitions::GetUniqueInstance(int date) {
+  if (uniqueinstance_ == nullptr) {
+    uniqueinstance_ = new BSESecurityDefinitions(date);
+  }
+  return *(uniqueinstance_);
+}
+
+static void AddDataSourceSymbolFromBhavCopy(BSEInstrumentType_t inst_type_, std::string underlying_, int exp_date_,
+                                              double strike_px_, std::string call_or_put_, double last_close_px_,
+                                              int _open_int_);
+// convert string to enum
+  static BSEInstrumentType_t StringToInst(const char* str);
+
+// This is a hack. This is required because all classes which call GetUniqueInstance() of BSESECURITYDEFINITIONS class
+// do not have date with them. They rely upon the fact that the class object has already been created. AVOID USING AS
+// FAR AS POSSIBLE. Always try to use this version : " BSESecurityDefinitions& GetUniqueInstance(int date) "
+inline BSESecurityDefinitions& BSESecurityDefinitions::GetUniqueInstance() {
+  if (uniqueinstance_ == nullptr) {
+    std::cerr << "Can't create an instance of BSESecurityDefinition class without trading_date. Exiting.\n";
+    exit(1);
+  }
+  return *(uniqueinstance_);
+}
+}
+
+#endif

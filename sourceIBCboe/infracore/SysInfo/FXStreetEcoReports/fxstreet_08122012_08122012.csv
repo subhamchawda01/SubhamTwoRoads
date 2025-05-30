@@ -1,0 +1,5 @@
+"country","date","name","actual","consensus","previous","volatility"
+"New Zealand","20120812 22:45:00","Food Price Index (MoM)","","","1.400  %","1"
+"Japan","20120812 23:50:00","Gross Domestic Product (QoQ)","","0.600  %","1.200  %","2"
+"Japan","20120812 23:50:00","Gross Domestic Product Annualized","","2.500  %","4.700  %","2"
+"Japan","20120812 23:50:00","Gross Domestic Product Deflator (YoY)","","","-1.300  %","1"

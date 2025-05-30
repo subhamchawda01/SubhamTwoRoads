@@ -1,0 +1,6 @@
+"country","date","name","actual","consensus","previous","volatility"
+"Australia","20121231 00:30:00","Private Sector Credit (YoY)","","","3.800  %","2"
+"Australia","20121231 00:30:00","Private Sector Credit (MoM)","","0.300  %","0.100  %","2"
+"China","20121231 01:45:00","HSBC Manufacturing PMI","",""," 50.500 ","2"
+"South Africa","20121231 12:00:00","Trade Balance (in Rands)","",""," -21.200 ","1"
+"United States","20121231 15:30:00","Dallas Fed Manufacturing Business Index","",""," -2.800 ","1"

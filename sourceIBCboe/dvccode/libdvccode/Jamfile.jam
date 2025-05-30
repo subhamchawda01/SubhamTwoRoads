@@ -1,0 +1,100 @@
+# This variable is being created to allow multiple search paths.
+local boost-lib-search-path =
+		<search>$(BOOST_LIB_INSTALL) # this variable can be used to override the default search path
+		<search>/apps/boost/boost-install/lib # the default library search path.
+		;
+
+local boost-include-path =
+		<include>$(BOOST_INCLUDE_BASE) # this variable can be used to override the default search path
+		<include>/apps/boost/boost-install/include # the default search path for header files.
+	;
+
+# Header only boost libraries - start
+lib boost_lockfree 
+: # no sources 
+: # no libpath
+: # default build 
+: # usage requirements
+$(boost-include-path) 
+;
+
+lib boost_algorithm 
+: # no sources 
+: # no libpath
+: # default build 
+: # usage requirements
+$(boost-include-path) 
+;
+# Header only boost libraries - end
+
+# Non header only boost libraries - start
+lib boost_program_options 
+: # no sources 
+: # requirements
+<name>boost_program_options $(boost-lib-search-path) 
+: # building options ... non needed
+: # usage requirements
+$(boost-include-path) 
+;
+
+lib boost_chrono
+: # no sources 
+: <name>boost_chrono $(boost-lib-search-path)
+:
+: # usage requirements
+$(boost-include-path)
+;
+
+lib boost_atomic : : <name>boost_atomic $(boost-lib-search-path) : : $(boost-include-path)
+;
+
+lib boost_thread : : <name>boost_thread $(boost-lib-search-path) : : $(boost-include-path)
+;
+
+lib boost_system : : <name>boost_system $(boost-lib-search-path) : : $(boost-include-path)
+;
+
+lib boost_date_time : : <name>boost_date_time $(boost-lib-search-path) : : $(boost-include-path)
+;
+
+lib boost_iostreams : : <name>boost_iostreams $(boost-lib-search-path) : : $(boost-include-path)
+;
+
+lib boost_filesystem : : <name>boost_filesystem $(boost-lib-search-path) : : $(boost-include-path)
+;
+
+lib boost_serialization : : <name>boost_serialization $(boost-lib-search-path) : : $(boost-include-path)
+;
+# Non header only boost libraries end
+
+lib libmysqlcppconn
+:
+: <name>mysqlcppconn-static <search>$(MYSQLCPP_LIB_PATH)
+:
+: # Needed to add <linkflags>-lmysqlclient but it failed reference: http://stackoverflow.com/questions/27310835/mysql-c-connector
+; 
+
+# Libraries created by us
+# This variable is being created to allow multiple search paths.
+local dvccode-lib-search-path =
+		<search>$(DVCCODE_LIB_INSTALL)
+		# Add /apps later
+		;
+
+# This variable is being created to allow multiple search paths.
+local dvctrade-lib-search-path =
+		<search>$(DVCTRADE_LIB_INSTALL)
+		# Add /apps later
+		;
+
+# This variable is being created to allow multiple search paths.
+local basetrade-lib-search-path =
+		<search>$(BASETRADE_LIB_INSTALL)
+		# Add /apps later
+		;
+
+
+# dvccode libraries - start
+# dvccode libraries - end
+# dvctrade libraries - start
+# dvctrade libraries - end

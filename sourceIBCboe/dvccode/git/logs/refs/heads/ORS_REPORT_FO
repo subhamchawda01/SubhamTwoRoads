@@ -1,0 +1,15 @@
+0000000000000000000000000000000000000000 644d0d6ea70ec7064eeb0a0ad9164ea15da38fb7 subhamchawda01 <subham.chawda@tworoads-trading.co.in> 1617779553 +0000	branch: Created from HEAD
+644d0d6ea70ec7064eeb0a0ad9164ea15da38fb7 27a21a544f7f4a991008714f0c566e33073c447b subhamchawda01 <subham.chawda@tworoads-trading.co.in> 1617779576 +0000	commit: ors report for fo
+27a21a544f7f4a991008714f0c566e33073c447b 92b7989c19b5f2a90a1b860f0b5f1f2007452253 subhamchawda01 <subham.chawda@tworoads-trading.co.in> 1618402038 +0000	pull: Fast-forward
+92b7989c19b5f2a90a1b860f0b5f1f2007452253 eb6d47cc2a6b636424bbfd615eef38dad585cd8f subhamchawda01 <subham.chawda@tworoads-trading.co.in> 1626339467 +0000	commit: ors report FO changes
+eb6d47cc2a6b636424bbfd615eef38dad585cd8f 759b8adb09c9fbee94234fd2f00d0399b155dfcd subhamchawda01 <subham.chawda@tworoads-trading.co.in> 1626339972 +0000	commit: add mds_fast_first_trade_read_Volume_Machince_fo in jam
+759b8adb09c9fbee94234fd2f00d0399b155dfcd d3466937ac3d4d26ed47d2b06efcd04e82a09342 subhamchawda01 <subham.chawda@tworoads-trading.co.in> 1626340426 +0000	commit (merge): master merge
+d3466937ac3d4d26ed47d2b06efcd04e82a09342 c4e0bc1173ab0af62f1898414b5dbcb787e5a774 subhamchawda01 <subham.chawda@tworoads-trading.co.in> 1626341755 +0000	commit: master merge mds_fast_first_trade_read_Volume_Machince.cpp
+c4e0bc1173ab0af62f1898414b5dbcb787e5a774 17b7c04d9635e8a0a4ce7fc71d01a8c354565bf3 subhamchawda01 <subham.chawda@tworoads-trading.co.in> 1626342292 +0000	commit: jam file changes
+17b7c04d9635e8a0a4ce7fc71d01a8c354565bf3 c4e0bc1173ab0af62f1898414b5dbcb787e5a774 subhamchawda01 <subham.chawda@tworoads-trading.co.in> 1626342898 +0000	reset: moving to HEAD~1
+c4e0bc1173ab0af62f1898414b5dbcb787e5a774 d3466937ac3d4d26ed47d2b06efcd04e82a09342 subhamchawda01 <subham.chawda@tworoads-trading.co.in> 1626343240 +0000	reset: moving to HEAD~1
+d3466937ac3d4d26ed47d2b06efcd04e82a09342 c4e0bc1173ab0af62f1898414b5dbcb787e5a774 subhamchawda01 <subham.chawda@tworoads-trading.co.in> 1626343263 +0000	pull: Fast-forward
+c4e0bc1173ab0af62f1898414b5dbcb787e5a774 9605a0fe29b232886fd333aadcadc9274c068972 subhamchawda01 <subham.chawda@tworoads-trading.co.in> 1626344797 +0000	commit: jam file changes
+9605a0fe29b232886fd333aadcadc9274c068972 72ae743b4fbcb635858518be37d082747e02e58e subhamchawda01 <subham.chawda@tworoads-trading.co.in> 1659423310 +0000	commit: add extra column for total_price_change_msgs
+72ae743b4fbcb635858518be37d082747e02e58e 1735c28517f9d394a1cd6a6f4f41669afeeac094 subhamchawda01 <subham.chawda@tworoads-trading.co.in> 1659423383 +0000	merge origin/master: Merge made by the 'recursive' strategy.
+1735c28517f9d394a1cd6a6f4f41669afeeac094 1b284856ad528d875f0a6a250142d7d64e2b52fb subhamchawda01 <subham.chawda@tworoads-trading.co.in> 1660884586 +0000	merge origin/master: Merge made by the 'recursive' strategy.

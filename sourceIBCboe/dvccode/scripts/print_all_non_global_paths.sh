@@ -1,0 +1,1 @@
+for name in `grep -h \#include */*pp */*/*pp | sort | uniq | grep -v \< | awk -F\" '{print $2}'`; do ls ../$name > /dev/null ; done 2>&1 | awk '{ print $2 }' | replace ":" "" | replace "../" ""

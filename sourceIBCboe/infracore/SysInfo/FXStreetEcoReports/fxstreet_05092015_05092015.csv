@@ -1,0 +1,4 @@
+"country","date","name","actual","consensus","previous","volatility"
+"China","20150509 01:30:00","Consumer Price Index (MoM)","","0.000  %","-0.500  %","3"
+"China","20150509 01:30:00","Consumer Price Index (YoY)","","1.600  %","1.400  %","3"
+"China","20150509 01:30:00","Producer Price Index (YoY)","","-4.400  %","-4.600  %","3"

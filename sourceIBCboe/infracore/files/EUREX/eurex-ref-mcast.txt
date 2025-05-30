@@ -1,0 +1,5 @@
+##StreamType:   Address:        Port:   
+#Production SS B
+0               224.0.30.255    50099
+#Simulation SS B
+#0              233.49.81.255   50199

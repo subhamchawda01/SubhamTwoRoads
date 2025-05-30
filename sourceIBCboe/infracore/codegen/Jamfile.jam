@@ -1,0 +1,17 @@
+project : usage-requirements <include>$(PROJECT_INSTALL) 
+	;
+
+exe fixfast-codegen 
+    : CodeGen.cpp 
+      DecimalField.cpp  GroupField.cpp  SequenceField.cpp
+    :
+    : <variant>debug <variant>release
+    ;
+
+install install-bin
+    :
+      fixfast-codegen
+    : <variant>release:<location>"$(PROJECT_INSTALL)/bin"
+      <variant>debug:<location>"$(PROJECT_INSTALL)/bindebug"
+    : release debug
+    ; 

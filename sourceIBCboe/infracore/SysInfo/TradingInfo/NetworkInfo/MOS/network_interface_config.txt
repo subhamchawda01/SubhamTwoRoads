@@ -1,0 +1,52 @@
+# APP name
+# MD = raw_mkt_data_receiver   , low_latency
+# MM = processed_mkt_data_mcast_sender , low_latency
+# LS = Live_data or processed_mkt_data_mcast_receiver , low_latency
+# CONTROL
+# ORS = ors bcast, (exchange replies etc..)
+# ORS_LS = ors_livesource, 
+#LOCATION  EXCHANGE  APP_NAME  INTERFACE  
+#CHI
+M1     RTS              MD_A       eth1.398
+M1     RTS              MD_B       eth1.399
+M1     MICEX_CR MD_A       eth1.398
+M1     MICEX_CR MD_B       eth1.399
+M1     MICEX_EQ        MD_A       eth1.398
+M1     MICEX_EQ        MD_B       eth1.399
+M1     MICEX_FO        MD_A       eth1.398
+M1     MICEX_FO        MD_B       eth1.399
+M1     MICEX_CR MD       eth1.398
+M1     RTS              MD         eth1.398
+M1     MICEX_EQ        MD       eth1.398
+M1     MICEX_FO        MD       eth1.398
+M1     MICEX_CR        MD       eth1.398
+MOS     RTS             MD_A       eth1.398
+MOS     RTS             MD_B       eth1.399
+MOS     MICEX_CR        MD_A       eth1.291
+MOS     MICEX_CR        MD_B       eth1.291
+MOS     MICEX_EQ        MD_A       eth1.291
+MOS     MICEX_EQ        MD_B       eth1.291
+MOS     MICEX_FO        MD_A       eth1.291
+MOS     MICEX_FO        MD_B       eth1.291
+MOS     MICEX_CR        MD_R       eth1.291
+MOS     MICEX_EQ        MD_R       eth1.291
+MOS     RTS             MD         eth1.398
+MOS     MICEX_EQ        MD       eth1.398
+MOS     MICEX_FO        MD       eth1.398
+MOS     MICEX_CR        MD       eth1.398
+MOS     EUREX           LS       p5p1.1100
+MOS     EBS             LS       p5p1.1100
+MOS     ICE             LS       p5p1.1100
+MOS     NASDAQ          LS       p5p1.1100
+MOS     LIFFE           LS       p5p1.1100
+M1     LIFFE           LS       p5p1.1100
+M1     CME             LS       p5p1.1100
+MOS     LIFFE           MD       p5p1.1100
+MOS     QUINCY           LS       p5p1.1100
+MOS     CME           LS       p5p1.1100
+MOS     CME           MD       p5p1.1100
+MOS     ORS                  eth1
+MOS     ORS_LS      eth1
+M1     ORS                  eth1
+MOS     CONTROL                  eth1
+M1     CONTROL                  eth1

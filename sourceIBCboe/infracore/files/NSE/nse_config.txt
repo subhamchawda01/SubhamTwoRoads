@@ -1,0 +1,2 @@
+#cumulative_open_order_value #overall_turnover #exposure_limit #net_margin
+200000 500000 150000 300000

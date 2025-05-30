@@ -1,0 +1,7 @@
+export RDMAV_HUGEPAGES_SAFE=1
+export VMA_TRACELEVEL=3;
+export VMA_LOG_DETAILS=3;
+export VMA_LOG_FILE=/spare/local/logs/alllogs/vma_debug.log
+export VMA_QP_LOGIC=0;
+export VMA_RX_POLL=-1;
+export VMA_SELECT_POLL=-1;

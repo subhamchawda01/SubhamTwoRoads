@@ -1,0 +1,4 @@
+#EXCHANGE	START_TIME	END_TIME	TIMEZONE	TOLERANCE(SEC)
+HONGKONG        0400            0430            UTC             60000
+HONGKONG        0815            0900            UTC             60000
+

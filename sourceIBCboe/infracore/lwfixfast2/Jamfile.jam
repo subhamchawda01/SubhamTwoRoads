@@ -1,0 +1,15 @@
+project : usage-requirements <include>$(PROJECT_INSTALL) 
+	;
+
+use-project /PDVCC : ../libdvccode ;
+
+lib lwfixfast2 : [ glob fields/*.cpp *.cpp ] : <link>static ;
+
+install liblwfixfast2
+  : lwfixfast2
+  : <install-type>LIB
+    <variant>release:<location>"$(PROJECT_INSTALL)/lib"
+    <variant>debug:<location>"$(PROJECT_INSTALL)/libdebug"
+  : release debug
+  ;
+

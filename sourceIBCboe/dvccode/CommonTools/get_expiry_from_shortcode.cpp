@@ -1,0 +1,49 @@
+/**
+    \file Tools/get_exchange_symbol.cpp
+
+    \author: (c) Copyright Two Roads Technological Solutions Pvt Ltd 2011
+     Address:
+         Suite 217, Level 2, Prestige Omega,
+         No 104, EPIP Zone, Whitefield,
+         Bangalore - 560066, India
+         +91 80 4060 0717
+
+*/
+
+#include <iostream>
+#include <stdlib.h>
+#include "dvccode/CDef/exchange_symbol_manager.hpp"
+#include "dvccode/CDef/security_definitions.hpp"
+
+void ParseCommandLineParams(const int argc, const char **argv, std::string &shortcode_, int &input_date_) {
+  // expect :
+  // 1. $0 shortcode date_YYYYMMDD
+  if (argc < 3) {
+    std::cerr << "Usage: " << argv[0] << " shortcode input_date_YYYYMMDD" << std::endl;
+    exit(0);
+  } else {
+    shortcode_ = argv[1];
+    input_date_ = atoi(argv[2]);
+  }
+}
+
+/// input arguments : input_date
+int main(int argc, char **argv) {
+  std::string shortcode_ = "";
+  int input_date_ = 20110101;
+  ParseCommandLineParams(argc, (const char **)argv, shortcode_, input_date_);
+  int expiry_  = -1;
+  if (strncmp(shortcode_.c_str(), "NSE_", 4) == 0) {
+    HFSAT::SecurityDefinitions::GetUniqueInstance(input_date_).LoadNSESecurityDefinitions();
+    HFSAT::ExchangeSymbolManager::SetUniqueInstance(input_date_);
+    expiry_ = HFSAT::NSESecurityDefinitions::GetExpiryFromShortCode(shortcode_);
+  } else if (shortcode_.substr(0, 3) == "HK_") {
+    HFSAT::SecurityDefinitions::GetUniqueInstance(input_date_).LoadHKStocksSecurityDefinitions();
+    HFSAT::ExchangeSymbolManager::SetUniqueInstance(input_date_);
+  } else if (strncmp(shortcode_.c_str(), "BSE_", 4) == 0) {
+    HFSAT::SecurityDefinitions::GetUniqueInstance(input_date_).LoadBSESecurityDefinitions();
+    HFSAT::ExchangeSymbolManager::SetUniqueInstance(input_date_);
+    expiry_ = HFSAT::BSESecurityDefinitions::GetExpiryFromShortCode(shortcode_);
+  }
+  printf("%d", expiry_);
+}

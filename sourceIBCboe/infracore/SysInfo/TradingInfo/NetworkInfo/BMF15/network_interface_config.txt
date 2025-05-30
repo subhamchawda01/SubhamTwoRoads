@@ -1,0 +1,24 @@
+# APP name
+# MD = raw_mkt_data_receiver   , low_latency
+# MM = processed_mkt_data_mcast_sender , low_latency
+# LS = Live_data or processed_mkt_data_mcast_receiver , low_latency
+# CONTROL
+# ORS = ors bcast, (exchange replies etc..)
+# ORS_LS = ors_livesource, 
+#LOCATION  EXCHANGE  APP_NAME  INTERFACE  
+#BMF
+BRZ        EUREX     LS       p5p1.199
+BRZ        LIFFE     LS       p5p1.199
+BRZ        ICE       LS       p5p1.199
+BRZ        CME       LS       p5p1.199
+BRZ        AFLASH    LS       p5p1.199
+BRZ        RETAIL    LS       p5p1.199
+BRZ        QUINCY    LS       p5p1.199
+BRZ        BMF       LS       p5p1.199
+BRZ        BMF       MM       p5p1.199
+BRZ        BMF       MD       p5p1.3
+BRZ        PUMA      MD       p5p1.3
+BRZ        NTP       MD       p5p1.3
+BRZ                  CONTROL  p5p1.199
+BRZ                  ORS      p5p1.199
+BRZ                  ORS_LS   p5p1.199

@@ -1,0 +1,4 @@
+0000000000000000000000000000000000000000 0f348a7387515036ec253da9ae82c2aaea801eaf subhamchawda01 <subham.chawda@tworoads-trading.co.in> 1629494567 +0000	branch: Created from HEAD
+0f348a7387515036ec253da9ae82c2aaea801eaf 513a45c1893a8173d9a476a53856c670d1dfeb50 subhamchawda01 <subham.chawda@tworoads-trading.co.in> 1629494588 +0000	commit: moved tool user_msg
+513a45c1893a8173d9a476a53856c670d1dfeb50 0f348a7387515036ec253da9ae82c2aaea801eaf subhamchawda01 <subham.chawda@tworoads-trading.co.in> 1629494763 +0000	reset: moving to HEAD~1
+0f348a7387515036ec253da9ae82c2aaea801eaf b10c7594b2659443daf283c016555839e510bedd subhamchawda01 <subham.chawda@tworoads-trading.co.in> 1629494785 +0000	commit: moved tool console_trader

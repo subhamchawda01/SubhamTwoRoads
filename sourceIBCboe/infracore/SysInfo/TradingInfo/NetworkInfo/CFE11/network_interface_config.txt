@@ -1,0 +1,26 @@
+# APP name
+# MD = raw_mkt_data_receiver   , low_latency
+# MM = processed_mkt_data_mcast_sender , low_latency
+# LS = Live_data or processed_mkt_data_mcast_receiver , low_latency
+# CONTROL
+# ORS = ors bcast, (exchange replies etc..)
+# ORS_LS = ors_livesource, 
+#LOCATION  EXCHANGE  APP_NAME  INTERFACE  
+CFE        CME       MD       p1p1.2230
+CFE        CMEMDP    MD       p1p1.2230
+CFE        CME       MD_A     p1p1.2230
+CFE        CME       MD_B     p1p1.2230
+CFE        CME       MD_C     p1p1.2230
+CFE        CSM       MD       p1p1.2045
+CFE        CSM       MM       p1p1.2483
+CFE        CFE       MD       p1p1.2045
+CFE        CFE       MM       p1p1.2483
+CFE        QUINCY    MM       p1p1.2483
+CFE        QUINCY    LS       p1p1.2483
+CFE        QUINCY    MD       p1p2
+CFE        EUREX     LS       p1p1.2483
+CFE        LIFFE     MD       p1p1.2293
+CFE        ICE       MD       p1p1.2293
+CFE                  CONTROL  em1.2482
+CFE                  ORS_LS   em1.2482
+CFE                  ORS      em1.2482

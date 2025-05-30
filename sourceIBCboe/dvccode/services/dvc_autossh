@@ -1,0 +1,101 @@
+#! /bin/bash
+#
+# chkconfig: 2345 95 20
+# description: This application was developed by me and is tested on this server
+# processname: dvc_autossh
+# dvcservice Bring up/down custom services 
+# Author : Ravi Parikh (c)
+#
+# description: Custom execs/scripts enabled as service 
+#
+### BEGIN INIT INFO
+# Provides: custom functionality 
+### END INIT INFO
+
+# Source function library.
+. /etc/init.d/functions
+
+PIDFILE="/tmp/autossh.pid"
+RETVAL=0 
+
+start () {
+
+  echo "Starting Up AutoSSH..." 
+  sudo runuser -l dvcinfra -c 'autossh -M 0 -q -f -N -o "ServerAliveInterval 60" -o "ServerAliveCountMax 3" -o "ExitOnForwardFailure=yes" -L 8181:127.0.0.1:8181 10.23.74.55 >/dev/null 2>/dev/null &' 
+  PID=`ps -ef | grep autossh | grep -v grep | grep -v "dvc_" | awk '{print $2}'` ; 
+  echo $PID > $PIDFILE ; 
+  is_alive=`ps -ef |grep $PID | grep -v grep | wc -l` ; 
+  action "Checking If Daemon Was Brought Up" [ "$is_alive" != "0" ]
+  return $RETVAL ;
+
+}
+
+stop () {
+
+  echo "Shutting Down AutoSSH..."
+
+  PID=`ps -ef |grep autossh | grep -v grep | awk '{print $2}'` 
+
+  if [ -f $PIDFILE ] ; then 
+
+    kill -s SIGINT `cat $PIDFILE` >/dev/null 2>/dev/null
+
+  else 
+
+    #unusual, but we could make sure to terminate all instances 
+    killall -SIGINT autossh >/dev/null 2>/dev/null 
+
+  fi 
+  
+  sleep 5 ; 
+
+  is_alive=`ps -ef |grep autossh | grep -v grep | wc -l` ; 
+
+  if [ $is_alive -gt 0 ] ; then 
+    kill -9 `ps -ef |grep autossh | grep -v grep | awk '{print $2}'` ; 
+  fi 
+
+  is_alive=`ps -ef |grep autossh | grep -v grep | wc -l` ; 
+
+  action "Checking If Daemon Has Been Brought Down" [ "$is_alive" == "0" ]
+  rm -rf $PIDFILE ; 
+  return $RETVAL 
+
+}
+
+dostatus () {
+
+  if [ -f "/etc/init.d/functions" ]; then
+    status autossh
+  fi
+   
+}
+
+restart () {
+
+  stop 
+  start 
+
+}
+
+# See how we were called.
+case "$1" in
+  start)
+        start
+        ;;
+  stop)
+        stop
+        ;;
+  restart)
+    restart
+    ;;
+  status)
+        dostatus
+        ;;
+  *)
+        echo "Usage: autossh {start|stop|restart|status}"
+        exit 1
+esac
+
+exit $RETVAL
+

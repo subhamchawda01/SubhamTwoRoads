@@ -1,0 +1,101 @@
+use-project /PDVCC : ../libdvccode ;
+
+lib boost_program_options : : <name>boost_program_options <search>$(BOOST_LIB_INSTALL) ;
+
+project : requirements <library>boost_program_options
+	: usage-requirements <include>$(PROJECT_INSTALL)
+	  <library>/spare/local/lib/tcpdirect/libonload_zf_static.a
+	;
+  
+use-project /PBasicOrderRoutingServer : ../BasicOrderRoutingServer ;
+use-project /PBMFEP : ../BMFEP ;
+use-project /PNSET : ../NSET ;
+use-project /PBSE : ../BSE ;
+use-project /PCBOE : ../CBOE ;
+use-project /PSimEngine : ../SimEngine ;
+
+use-project /PORSUtils : ../ORSUtilsCode ; 
+
+lib z : : <name>z <search>/apps/zlib/lib ;
+
+exe cme_ilink_ors 
+    : cme_ilink_ors.cpp 
+      /PDVCC//Utils
+      /PDVCC//CDef
+      /PDVCC//IBUtils
+      /PDVCC//CommonDataStructures
+      /PDVCC//CommonTradeUtils
+      /PBasicOrderRoutingServer//libBasicOrderRoutingServer
+      /PDVCC//TradingInfo
+      /PBMFEP//libBMFEP
+      /PNSET//libNSET
+      /PBSE//libBSE
+      /PCBOE//libCBOE   
+      /PORSUtils//libORSUtils
+      /PSimEngine//libSimEngine
+      /PDVCC//Profiler
+      z
+    :
+    : <variant>debug <variant>release
+      <linkflags>-lpthread 
+      <linkflags>-lrt
+      <linkflags>-lonload_ext
+      <linkflags>-lTwsSocketClient
+      <linkflags>-lbid
+      <linkflags>-lssl
+    ;
+
+exe IBKRDataManagerWithListenReq 
+    : IBKRDataManagerWithListenReq.cpp 
+      /PDVCC//Utils
+      /PDVCC//CDef
+      /PDVCC//IBUtils
+      /PDVCC//CommonDataStructures
+      /PDVCC//CommonTradeUtils
+      /PBasicOrderRoutingServer//libBasicOrderRoutingServer
+      /PDVCC//TradingInfo
+      /PBMFEP//libBMFEP
+      /PNSET//libNSET
+      /PBSE//libBSE
+      /PCBOE//libCBOE   
+      /PORSUtils//libORSUtils
+      /PSimEngine//libSimEngine
+      /PDVCC//Profiler
+      z
+    :
+    : <variant>debug <variant>release
+      <linkflags>-lpthread 
+      <linkflags>-lrt
+      <linkflags>-lonload_ext
+      <linkflags>-lTwsSocketClient
+      <linkflags>-lbid
+      <linkflags>-lssl
+    ;
+
+exe ors_control_exec 
+    : ors_control_exec.cpp 
+      /PBasicOrderRoutingServer//libBasicOrderRoutingServer 
+      /PDVCC//Utils 
+      /PDVCC//CDef 
+      /PDVCC//CommonDataStructures
+    :
+    : <variant>debug <variant>release
+      <linkflags>-lpthread 
+    ;
+exe ors_control_exec_grt
+    : ors_control_exec_grt.cpp
+      /PBasicOrderRoutingServer//libBasicOrderRoutingServer
+      /PDVCC//Utils
+      /PDVCC//CDef
+      /PDVCC//CommonDataStructures
+    :
+    : <variant>debug <variant>release
+      <linkflags>-lpthread
+    ;
+
+install install-bin 
+	: cme_ilink_ors ors_control_exec ors_control_exec_grt IBKRDataManagerWithListenReq
+	: <variant>release:<location>"$(PROJECT_INSTALL)/bin"
+    	  <variant>debug:<location>"$(PROJECT_INSTALL)/bindebug"
+  	: release debug
+	;

@@ -1,0 +1,32 @@
+# APP name
+# MD = raw_mkt_data_receiver   , low_latency
+# MM = processed_mkt_data_mcast_sender , low_latency
+# LS = Live_data or processed_mkt_data_mcast_receiver , low_latency
+# CONTROL
+# ORS = ors bcast, (exchange replies etc..)
+# ORS_LS = ors_livesource, 
+#LOCATION  EXCHANGE  APP_NAME  INTERFACE  
+#CHI
+#BSL
+#
+#BSL
+BSL        LIFFE     MD       p2p2.1143
+BSL        ICE       MD       p2p2.646
+BSL        LIFFE     MM       p2p2.2495
+BSL        ICE       MM       p2p2.2495
+BSL        CME       MD       p2p2.1141
+BSL        CME       MD_A     p2p2.1141
+BSL        CME       MD_B     p2p2.1141
+BSL        CME       MD_C     p2p2.2495
+BSL        CMEMDP    MD       p2p2.1141
+BSL        CME       LS       p2p2.2495
+BSL        EUREX     LS       p2p2.2495
+BSL        QUINCY    LS       p2p2.2495
+BSL        EUREX     MD       p2p2.2495
+BSL        CHIX      MD       p2p2.2235
+BSL        CHIX      LS       p2p2.2495
+BSL        CHIX      MM       p2p2.2495
+BSL        AFLASH    LS       p2p2.2495
+BSL                  ORS      em2.2494
+BSL                  ORS_LS   em2.2494
+BSL                  CONTROL  em2.2494

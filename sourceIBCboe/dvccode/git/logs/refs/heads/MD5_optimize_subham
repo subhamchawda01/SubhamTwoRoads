@@ -1,0 +1,10 @@
+0000000000000000000000000000000000000000 d84097887f61768f0719de5842eef00dd6189f71 subhamchawda01 <subham.chawda@tworoads-trading.co.in> 1712908556 +0000	branch: Created from HEAD
+d84097887f61768f0719de5842eef00dd6189f71 d076b2bdeaa0f62da5e115cf496258d24bb61f07 subhamchawda01 <subham.chawda@tworoads-trading.co.in> 1712908576 +0000	commit: md5 optimization testing
+d076b2bdeaa0f62da5e115cf496258d24bb61f07 7fdfc3d59e00e12707d027a00d7a067a35aa32a9 subhamchawda01 <subham.chawda@tworoads-trading.co.in> 1713253353 +0000	commit: md5sum AVX512VL optimized code changes working fine in testing
+7fdfc3d59e00e12707d027a00d7a067a35aa32a9 fc3a4192da18941ac47b61d5d6ee8dce370d6d57 subhamchawda01 <subham.chawda@tworoads-trading.co.in> 1713255369 +0000	commit: ~
+fc3a4192da18941ac47b61d5d6ee8dce370d6d57 e529af459bf914fe2fb2c2b7c9c0cb5c528481a1 subhamchawda01 <subham.chawda@tworoads-trading.co.in> 1713264350 +0000	commit: ~
+e529af459bf914fe2fb2c2b7c9c0cb5c528481a1 c3723acb411f7a80b5c0b0f684dc5da56298ac77 subhamchawda01 <subham.chawda@tworoads-trading.co.in> 1714467227 +0000	merge origin/master: Merge made by the 'recursive' strategy.
+c3723acb411f7a80b5c0b0f684dc5da56298ac77 0523cda9294ecc1736a460fb5dc260489a751a1b subhamchawda01 <subham.chawda@tworoads-trading.co.in> 1715079904 +0000	commit: removed memcpy from md5 optimized code
+0523cda9294ecc1736a460fb5dc260489a751a1b c1c6315615bdd55a9ecaa8928f86fa4479302727 subhamchawda01 <subham.chawda@tworoads-trading.co.in> 1715331038 +0000	commit: added md5 handling for machine having AVX512 and not
+c1c6315615bdd55a9ecaa8928f86fa4479302727 6b689f23cb110dc0aef174c233e818cdc5be0bb7 subhamchawda01 <subham.chawda@tworoads-trading.co.in> 1715579528 +0000	merge origin/master: Merge made by the 'recursive' strategy.
+6b689f23cb110dc0aef174c233e818cdc5be0bb7 4f244903f811a26337ba5e2ad5071b26dddd4cde subhamchawda01 <subham.chawda@tworoads-trading.co.in> 1716357147 +0000	merge origin/master: Merge made by the 'recursive' strategy.

@@ -1,0 +1,67 @@
+use-project /PDVCC : ../libdvccode ;
+
+lib boost_program_options : : <name>boost_program_options <search>$(BOOST_LIB_INSTALL) ;
+
+project : requirements <library>boost_program_options
+	: usage-requirements <include>$(PROJECT_INSTALL) 
+          <library>/spare/local/lib/tcpdirect/libonload_zf_static.a
+	;
+  
+use-project /PBasicOrderRoutingServer : ../BasicOrderRoutingServer ;
+use-project /PBMFEP : ../BMFEP ;
+use-project /PNSET : ../NSET ;
+use-project /PSimEngine : ../SimEngine ;
+
+use-project /PORSUtils : ../ORSUtilsCode ; 
+
+lib z : : <name>z <search>/apps/zlib/lib ;
+lib xml2 : : <name>xml2 <search>/apps/libxml2/lib ;
+
+exe cpptest_shm34Producer
+    : cpptest_shm34Producer.cpp 
+      /PDVCC//Utils 
+      /PDVCC//CDef 
+      /PDVCC//CommonDataStructures
+      /PDVCC//CommonTradeUtils 
+      /PDVCC//TradingInfo
+      /PBMFEP//libBMFEP
+      /PNSET//libNSET
+      /PORSUtils//libORSUtils
+      /PSimEngine//libSimEngine
+      /PDVCC//Profiler
+      z
+      xml2
+    :
+    : <variant>debug <variant>release
+      <linkflags>-lpthread 
+      <linkflags>-lrt
+      <linkflags>-lonload_ext
+    ;
+
+exe cpptest_shm34Consumer
+    : cpptest_shm34Consumer.cpp
+      /PDVCC//Utils
+      /PDVCC//CDef
+      /PDVCC//CommonDataStructures
+      /PDVCC//CommonTradeUtils
+      /PDVCC//TradingInfo
+      /PBMFEP//libBMFEP
+      /PNSET//libNSET
+      /PORSUtils//libORSUtils
+      /PSimEngine//libSimEngine
+      /PDVCC//Profiler
+      z
+      xml2
+    :
+    : <variant>debug <variant>release
+      <linkflags>-lpthread
+      <linkflags>-lrt
+      <linkflags>-lonload_ext
+    ;
+
+install install-bin 
+	: cpptest_shm34Producer cpptest_shm34Consumer 
+	: <variant>release:<location>"$(PROJECT_INSTALL)/bin"
+    	  <variant>debug:<location>"$(PROJECT_INSTALL)/bindebug"
+  	: release debug
+	;

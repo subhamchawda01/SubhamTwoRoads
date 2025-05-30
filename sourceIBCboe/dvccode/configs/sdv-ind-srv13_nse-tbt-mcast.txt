@@ -1,0 +1,17 @@
+#1 - CURRENCY 
+#2 - NIFTY OPTIONS
+#3 - NIFTY FUT and all OTHER INDEX FUT/OPTIONS EXCEPT BNF
+#4 - S-Z stock fut & opt
+#5 - I-L stock fut & opt
+#6 - BankNifty Fut & opt
+#7 - A-B stock fut & opt
+#8 - C-H stock fut & opt
+#9 - M-R stock fut & opt
+#10 - A-D stocks
+#11 - E-J stocks
+#12 - K-R stocks
+#13 - S-Z stocks
+#
+#
+4 239.70.70.43 17743
+5 239.70.70.44 17744

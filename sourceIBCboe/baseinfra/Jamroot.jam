@@ -1,0 +1,214 @@
+import modules ;
+import set ;
+import stage ;
+import package ;
+import path ;
+import common ;
+import os ;
+import regex ;
+import errors ;
+import "class" : new ;
+import common ;
+import sequence ;
+import pch ;
+
+local only_target = "all" ;
+local install_loc = "../cvquant_install" ;
+
+# Extract build requirements from command line options
+for option in [ modules.peek : ARGV ] {
+  local temporary = [ MATCH ([^=]+)= : $(option) ] ;
+
+  if $(temporary) {
+    value  = [ MATCH [^=]+=([^=]+)$ : $(option) ] ;
+    if $(value) && $(temporary) = "--only_target" {
+       if $(value) != "all" {
+           only_target = $(value) ;
+           ECHO "only target $(only_target)" ;
+       }
+    }
+    if $(value) && $(temporary) = "--mysqlclient" {
+       if $(value) = "needed" {
+           path-constant build-mysqlclient : true ;
+           ECHO "building sql execs too" ;
+       }
+    }
+    if $(value) && $(temporary) = "--install_loc" {
+       install_loc = $(value) ;
+       ECHO "Install location changed to $(value)" ;
+    }    
+  }
+}
+using gcc ;
+
+path-constant BASEINFRA_PROJECT_ROOT : . ;
+path-constant PROJECT_ROOT : $(BASEINFRA_PROJECT_ROOT) ;
+
+path-constant CVQUANT_INSTALL : $(install_loc) ;
+# If we are building our own copy of baseinfra then
+# they will be installed in ../cvquant_install/baseinfra
+# Or else we should use it from /apps/cvquant_install/baseinfra
+# This requires that people will include dvccode headers as
+# `#include "baseinfra/MarketAdapter/abc.hpp"` and not `#include "MarketAdapter/abc.hpp"`
+path-constant DVCCODE_INSTALL : $(CVQUANT_INSTALL)/dvccode ;
+path-constant DVCCODE_LIB_INSTALL : $(DVCCODE_INSTALL)/lib ;
+path-constant DVCCODE_LIB_INSTALL_DEBUG : $(DVCCODE_INSTALL)/libdebug ;
+path-constant BASEINFRA_INSTALL : $(CVQUANT_INSTALL)/baseinfra ;
+path-constant BASEINFRA_LIB_INSTALL : $(BASEINFRA_INSTALL)/lib ;
+path-constant BASEINFRA_LIB_INSTALL_DEBUG : $(BASEINFRA_INSTALL)/libdebug ;
+
+# This variable PROJECT_INSTALL is primarily used to get the location
+# of where to install headers, libraries and execs
+path-constant PROJECT_INSTALL : $(BASEINFRA_INSTALL) ;
+path-constant PROJECT_BIN_INSTALL : $(PROJECT_INSTALL)/bin ;
+path-constant PROJECT_BIN_INSTALL_DEBUG : $(PROJECT_INSTALL)/bindebug ;
+path-constant PROJECT_LIB_INSTALL : $(PROJECT_INSTALL)/lib ;
+path-constant PROJECT_LIB_INSTALL_DEBUG : $(PROJECT_INSTALL)/libdebug ;
+
+BOOST_LIB_INSTALL = [ modules.peek : BOOST_LIB_INSTALL ] ;
+if ! $(BOOST_LIB_INSTALL) {
+   path-constant BOOST_LIB_INSTALL : /apps/boost/boost-install/lib ;
+} else {
+   path-constant BOOST_LIB_INSTALL : $(BOOST_LIB_INSTALL) ;
+}
+ 
+BOOST_INCLUDE_BASE = [ modules.peek : BOOST_INCLUDE_DIR ] ;
+if ! $(BOOST_INCLUDE_BASE) {
+   path-constant BOOST_INCLUDE_BASE : /apps/boost/boost-install/include ;
+} else {
+   path-constant BOOST_INCLUDE_BASE : $(BOOST_INCLUDE_BASE) ;
+}
+
+path-constant xerces_root_ : /apps/xerces ;
+path-constant XERCES_INCLUDE_BASE : $(xerces_root_)/include/ ;
+path-constant XERCES_LIB_BASE : $(xerces_root_)/lib/ ;
+
+path-constant bzip2_root_ : /apps/bzip2 ;
+path-constant BZIP2_INCLUDE_BASE : $(bzip2_root_)/include ;
+path-constant BZIP2_LIB_BASE : $(bzip2_root_)/lib ;
+
+path-constant MYSQLCPP_BASE : /apps/mysqlcpp/mysql-connector-c++-1.1.5_install ;
+path-constant MYSQLCPP_INCLUDE_PATH : $(MYSQLCPP_BASE)/include ;
+path-constant MYSQLCPP_LIB_PATH : $(MYSQLCPP_BASE)/lib ;
+path-constant EXANIC_INCLUDE_BASE : /apps/exanic/libs/ ;
+
+path-constant MBOCHIP_FPGA_BASE : /apps/SiliconBharatMD_v1/api ;
+path-constant MBOCHIP_NSE_BASE : $(MBOCHIP_FPGA_BASE)/nse ;
+path-constant MBOCHIP_CME_BASE : $(MBOCHIP_FPGA_BASE)/cme ;
+# .cfg files
+local configfiles = [ path.glob-tree $(BASEINFRA_PROJECT_ROOT) : *.cfg ] ;
+
+install configfiles
+    : $(configfiles)
+    : <location>$(PROJECT_INSTALL)/Configs <install-source-root>$(BASEINFRA_PROJECT_ROOT)
+    ;
+
+local pythonscripts = [ path.glob-tree $(BASEINFRA_PROJECT_ROOT) : *.py ] ;
+
+install pythonscripts
+    : $(pythonscripts)
+    : <location>$(BASEINFRA_INSTALL) <install-source-root>$(BASEINFRA_PROJECT_ROOT)
+    ;
+
+local shellscripts = [ path.glob-tree $(BASEINFRA_PROJECT_ROOT) : *.sh ] ;
+
+install shellscripts
+    : $(shellscripts)
+    : <location>$(BASEINFRA_INSTALL) <install-source-root>$(BASEINFRA_PROJECT_ROOT)
+    ;
+
+local perlscripts = [ path.glob-tree $(BASEINFRA_PROJECT_ROOT) : *.pl ] ;
+
+install perlscripts
+    : $(perlscripts)
+    : <location>$(BASEINFRA_INSTALL) <install-source-root>$(BASEINFRA_PROJECT_ROOT)
+    ;
+
+local headers = [ path.glob-tree $(BASEINFRA_PROJECT_ROOT) : *.hpp ] ;
+
+install headers
+    : $(headers)
+    : <location>$(BASEINFRA_INSTALL) <install-source-root>$(BASEINFRA_PROJECT_ROOT)
+    ;
+
+local Rscripts = [ path.glob-tree $(BASEINFRA_PROJECT_ROOT) : *.R ] ;
+
+install Rscripts
+    : $(Rscripts)
+    : <location>$(BASEINFRA_INSTALL) <install-source-root>$(BASEINFRA_PROJECT_ROOT)
+    ;
+
+local OfflineConfigs = [ path.glob-tree $(BASEINFRA_PROJECT_ROOT)/OfflineConfigs : *.txt ] ;
+
+install OfflineConfigs
+    : $(OfflineConfigs)
+    : <location>$(BASEINFRA_INSTALL) <install-source-root>$(BASEINFRA_PROJECT_ROOT)
+    ;
+
+project baseinfra
+	: requirements 
+	  <include>$(CVQUANT_INSTALL) # removed the individual includes since we will be including all files like "basetrade/InitLogic/blah.hpp"
+	  <include>$(BOOST_INCLUDE_BASE)
+	  <include>$(XERCES_INCLUDE_BASE)
+          <include>$(MYSQLCPP_INCLUDE_PATH)
+	  <include>$(EXANIC_INCLUDE_BASE)
+          <include>$(MBOCHIP_FPGA_BASE)
+          <include>$(MBOCHIP_NSE_BASE)
+          <include>$(MBOCHIP_CME_BASE)
+	  <architecture>x86
+	  <address-model>64
+	  <variant>debug:<inlining>off
+	  <variant>debug:<debug-symbols>on
+	  <variant>debug:<optimization>off
+	  <variant>debug:<warnings>on
+	  <variant>debug:<warnings-as-errors>on
+	  <variant>release:<warnings>on
+	  <variant>release:<warnings-as-errors>on
+	  <library-path>$(BZIP2_LIB_BASE)
+	  <library-path>$(BOOST_LIB_INSTALL)
+          <library-path>/apps/nsmsg/ 
+	  #	  <library-path>$(PROJECT_INSTALL)/lib # commented this since I think we don't need this any more
+	  <library-path>/apps/exanic/libs/exanic
+          <linkflags>-lcurl
+          <linkflags>-lcrypto
+          <linkflags>-lz
+          <linkflags>-llzo2
+	  <linkflags>-lsiliconmd_nse_event
+#          <linkflags>-lmysqlcppconn
+	        <linkflags>-lexanic
+          <toolset>gcc:<cxxflags>-std=gnu++14 # changed to this from -std=gnu++0x to work with C++14
+          <toolset>gcc:<cxxflags>-fdiagnostics-color=always
+          #<toolset>gcc:<cxxflags>-fprofile-generate
+          #<toolset>gcc:<cxxflags>-fprofile-generate=/spare/local/ProfileInfo/basetrade
+          #<toolset>gcc:<cxxflags>-fprofile-use
+          #<toolset>gcc:<cxxflags>-fprofile-use=/spare/local/ProfileInfo/basetrade
+          #<toolset>gcc:<linkflags>-lgcov # This was uncommented by Diwakar in the branch 'pgo' when trying to do profile guided optimization. @diwakarchauhan, @psarthy I suggest adding a profile-guided-optimization.md file in docs directory showing how a person can do pgo in future.
+          #<toolset>gcc:<cxxflags>-Wcoverage-mismatch
+          <toolset>clang:<cxxflags>-std=c++11
+          <toolset>clang:<linkflags>-lpthread
+          <toolset>clang:<cflags>-fcolor-diagnostics # clang colors
+          <toolset>clang:<cxxflags>-fcolor-diagnostics # clang colors
+	  <cflags>-isystem$(BOOST_INCLUDE_BASE)
+	  <cflags>-Wunused-local-typedefs
+          <cflags>-Wno-class-memaccess
+	  <variant>release:<cflags>-flto # Link time optimization has been enabled I think
+          <link>static
+	: default-build release
+	;
+
+build-project BaseUtilsCode ; 
+build-project MarketAdapterCode ; 
+build-project OrderRoutingCode ;
+build-project SmartOrderRoutingCode ;
+build-project OptionsUtilsCode ;
+build-project TradeUtilsCode ;
+build-project VolatileTradingInfo ;
+build-project MinuteBarCode ;
+build-project LoggedSourcesCode ;
+build-project SimMarketMakerCode ;
+build-project SimPnlsCode ;
+build-project LivePnlsCode ;
+build-project FPGA ;
+#build-project Tests ;
+build-project Tools ;
+build-project DbHandleCode ;

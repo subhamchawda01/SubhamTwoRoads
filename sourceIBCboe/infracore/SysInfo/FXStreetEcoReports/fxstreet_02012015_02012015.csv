@@ -1,0 +1,6 @@
+"country","date","name","actual","consensus","previous","volatility"
+"China","20150201 01:00:00","NBS Manufacturing PMI","",""," 50.100 ","2"
+"China","20150201 01:05:00","Non-manufacturing PMI","",""," 54.100 ","2"
+"Australia","20150201 23:30:00","AiG Performance of Mfg Index","",""," 46.900 ","2"
+"Australia","20150201 23:30:00","TD Securities Inflation (YoY)","","","1.500  %","1"
+"Australia","20150201 23:30:00","TD Securities Inflation (MoM)","","","0.000  %","1"

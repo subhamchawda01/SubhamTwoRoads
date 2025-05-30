@@ -1,0 +1,31 @@
+# We will need this project to have dependencies.
+use-project /PDVCC : ../libdvccode ;
+use-project /PLoggedSources : ../LoggedSourcesCode ;
+use-project /PTradeUtils : ../TradeUtilsCode ;
+use-project /PBaseUtils : ../BaseUtilsCode ;
+
+project : usage-requirements <include>$(PROJECT_INSTALL)
+;
+
+lib SimMarketMaker 
+: # sources
+[ glob *.cpp ] 
+: # requirements
+<link>static <use>/PDVCC//CDef <use>/PDVCC//CommonDataStructures <use>/PTradeUtils//TradeUtils <use>/PDVCC//Utils 
+: 
+: # usage requirements
+<library>/PDVCC//boost_filesystem
+<library>/PDVCC//CDef 
+<library>/PDVCC//CommonDataStructures 
+<library>/PBaseUtils//BaseUtils 
+<library>/PTradeUtils//TradeUtils 
+<library>/PLoggedSources//LoggedSources
+; 
+
+install libSimMarketMaker
+  : SimMarketMaker
+  : <install-type>LIB
+    <variant>release:<location>"$(PROJECT_INSTALL)/lib"
+    <variant>debug:<location>"$(PROJECT_INSTALL)/libdebug"
+  : release debug
+  ;

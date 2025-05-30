@@ -1,0 +1,631 @@
+<templates xmlns="http://www.fixprotocol.org/ns/fast/td/1.1">
+  <template name="FAST Logon" id="1" dictionary="FAST Logon">
+    <string name="FAST MsgType" id="35" presence="mandatory">
+    </string>
+    <string name="FAST SendingTime" id="52" presence="mandatory">
+    </string>
+    <string name="FAST ApplId" id="1180" presence="optional">
+    </string>
+    <uInt32 name="FAST HeartBtInt" id="108" presence="mandatory">
+    </uInt32>
+    <string name="FAST Username" id="553" presence="optional">
+    </string>
+    <string name="FAST Password" id="554" presence="optional">
+    </string>
+    <string name="FAST NewPassword" id="925" presence="optional">
+    </string>
+    <uInt32 name="FAST SessionStatus" id="1409" presence="optional">
+    </uInt32>
+  </template>
+  <template name="FAST Logout" id="2" dictionary="FAST Logout">
+    <string name="FAST MsgType" id="35" presence="mandatory">
+    </string>
+    <string name="FAST SendingTime" id="52" presence="mandatory">
+    </string>
+    <string name="FAST AppId" id="1180" presence="optional">
+    </string>
+    <uInt32 name="FAST SessionStatus" id="1409" presence="optional">
+    </uInt32>
+    <string name="FAST Text" id="58" presence="optional">
+    </string>
+  </template>
+  <template name="FAST Heartbeat" id="3" dictionary="FAST Heartbeat"
+            xmlns="http://www.fixprotocol.org/ns/fast/td/1.1">
+    <string name="MsgType" id="35" presence="mandatory">
+    </string>
+    <string name="FAST SendingTime" id="52" presence="mandatory">
+    </string>
+    <string name="FAST ApplID" id="1180" presence="mandatory">
+    </string>
+  </template>
+  <template name="FAST Security Definition Request" id="4" dictionary="FAST Security Definition Request">
+    <string name="FAST MsgType" id="35" presence ="mandatory">
+    </string>
+    <string name="FAST SendingTime" id="52" presence="mandatory">
+    </string>
+    <string name="FAST SecurityReqID" id="320" presence="mandatory">
+    </string>
+    <uInt32 name="FAST SubscriptionRequestType" id="263" presence="mandatory">
+    </uInt32>
+    <uInt32 name="FAST SecurityRequestType" id="321" presence="optional">
+    </uInt32>
+    <string name="FAST MarketSegmentID" id="1300" presence="optional">
+    </string>
+  </template>
+  <template name="FAST RelatedSym" id="5" dictionary="FAST RelatedSym">
+    <string name="LSEG FAST SecurityID" id="48" presence="optional">
+    </string>
+    <string name="LSEG FAST SecurityIDSource" id="22" presence="optional">
+    </string>
+    <string name="FAST ProductComplex" id="1227" presence="optional">
+    </string>
+  </template>
+  <template name="FAST MDEntryType" id="6" dictionary="FAST MDEntryType">
+    <string name="FAST MDEntryType" id="269" presence="optional">
+    </string>
+    <string name="FAST MDEntryTime" id="273" presence="optional">
+    </string>
+    <string name="LSEG FAST QuoteCondition" id="276" presence="optional">
+    </string>
+  </template>
+  <template name="FAST Market Data Request" id="7" dictionary="FAST Market Data Request">
+    <string name="FAST MsgType" id="35" presence="mandatory">
+    </string>
+    <string name="FAST SendingTime" id="52" presence="mandatory">
+    </string>
+    <string name="FAST MDReqID" id="262" presence="mandatory">
+    </string>
+    <uInt32 name="FAST SubscriptionRequestType" id="263" presence="mandatory">
+    </uInt32>
+    <uInt32 name="FAST NumberMDEntryTypes" id="267" presence="optional">
+    </uInt32>
+    <sequence name="FAST MDEntryTypes" id="" presence="optional">
+      <length name="FAST NoMDEntryTypes" id="267">
+      </length>
+      <uInt32 name="TemplateID" id="9999">
+        <copy dictionary="global" value="6" />
+      </uInt32>
+      <templateRef name="FAST MDEntryType" />
+    </sequence>
+    <uInt32 name="FAST NumberRelatedSym" id="146" presence="optional">
+    </uInt32>
+    <sequence name="FAST RelatedSyms" presence="optional">
+      <length name="FAST NoRelatedSyms" id="146">
+      </length>
+      <uInt32 name="TemplateID" id="9999">
+        <copy dictionary="global" value="5"/>
+      </uInt32>
+      <templateRef name="FAST RelatedSym" />
+    </sequence>
+  </template>
+  <template name="FAST ApplID" id="8" dictionary="FAST ApplID">
+    <string name="FAST RefApplIDs" id="1355" presence="optional">
+    </string>
+    <uInt32 name="FAST ApplBegSeqNum" id="1182" presence="optional">
+    </uInt32>
+    <uInt32 name="FAST ApplEndSeqNum" id="1183" presence="optional">
+    </uInt32>
+  </template>
+  <template name="FAST Application Message Request" id="9" dictionary="FAST Application Message Request">
+    <string name="FAST MsgType" id="35" presence="mandatory">
+    </string>
+    <string name="FAST SendingTime" id="52" presence="mandatory">
+    </string>
+    <string name="FAST ApplReqId" id="1346" presence="mandatory">
+    </string>
+    <uInt32 name="FAST ApplReqType" id="1347" presence="mandatory">
+    </uInt32>
+    <uInt32 name="FAST NumberApplIDs" id="1351" presence="optional">
+    </uInt32>
+    <sequence name="FAST ApplIDs" presence="optional">
+      <length name="FAST NoAppIDs" id="1351">
+      </length>
+      <uInt32 name="TemplateID" id="9999">
+        <copy dictionary="global" value="8"/>
+      </uInt32>
+      <templateRef name="FAST ApplID"/>
+    </sequence>
+  </template>
+  <template name="FAST SecurityAltID" id="10" dictionary="FAST SecurityAltID">
+    <string name="FAST SecurityAltID" id="455" presence="optional">
+      <copy value="" dictionary="template"/>
+    </string>
+    <string name="FAST SecurityAltIDSource" id="456" presence="optional">
+      <copy value="" dictionary="template"/>
+    </string>
+  </template>
+  <template name="FAST UnderlyingSymbol" id="11" dictionary="FAST UnderlyingSymbol">
+    <string name="LSEG FAST SecurityID" id="311" presence="optional">
+    </string>
+  </template>
+  <template name="FAST MarketSegment" id="13" dictionary="FAST MarketSegment">
+    <string name="FAST MarketSegmentID" id="1300" presence="mandatory">
+      <copy value="" dictionary="template"/>
+    </string>
+  </template>
+  <template name="FAST Security Definition" id="14" dictionary="FAST Security Definition">
+    <string name="MsgType" id="35" presence="mandatory">
+    </string>
+    <string name="FAST SendingTime" id="52" presence="mandatory">
+    </string>
+    <string name="FAST ApplID" id="1180" presence="mandatory">
+      <default value="1"/>
+    </string>
+    <uInt32 name="FAST ApplSeqNum" id="1181" presence="optional">
+      <increment dictionary="template"/>
+    </uInt32>
+    <string name="FAST SecurityReqID" id="320" presence="optional">
+      <copy value="" dictionary="template"/>
+    </string>
+    <uInt32 name="FAST SecurityResponeType" id="323" presence="optional">
+    </uInt32>
+    <string name="FAST LastRptRequested" id="912" presence="optional">
+      <default value=""/>
+    </string>
+    <string name="FAST Sercurity Status" id="965" presence="optional">
+      <copy value="" dictionary="template"/>
+    </string>
+    <uInt32 name="FAST NumberSecurityAltID" id="454" presence="optional">
+      <default value="3"/>
+    </uInt32>
+    <sequence name="FAST SecurityAltIDs" presence="optional">
+      <length name="FAST NoSecurityAltIDs" id="454">
+      </length>
+      <uInt32 name ="TemplateID" id="9999">
+        <copy dictionary="template" value="10"/>
+      </uInt32>
+      <templateRef name="FAST SecurityAltID"/>
+    </sequence>
+    <uInt32 name="FAST NumberUnderlyings" id="711" presence="optional">
+      <default value="1"/>
+    </uInt32>
+    <sequence name="FAST UnderlyingSymbols" presence="optional">
+      <length name="FAST NoUnderlying" id="711">
+      </length>
+      <uInt32 name="TemplateID" id="9999">
+        <copy value="11" dictionary="global"/>
+      </uInt32>
+      <templateRef name="FAST UnderlyingSymbol"/>
+    </sequence>
+    <uInt32 name="FAST PriceType" id="423" presence="optional">
+      <copy dictionary="template" value="0"/>
+    </uInt32>
+    <string name="LSEG FAST Currency" id="15" presence="optional">
+      <copy value="" dictionary="template"/>
+    </string>
+    <uInt32 name="FAST NumberMarketSegments" id="1310" presence="optional">
+      <constant value="1"/>
+    </uInt32>
+    <sequence name="FAST MarketSegments" presence="optional">
+      <length name="FAST NoMarketSegments" id="1310">
+      </length>
+      <uInt32 name="TemplateID" id="9999">
+        <copy dictionary="global" value="13"/>
+      </uInt32>
+      <templateRef name="FAST MarketSegment"/>
+    </sequence>
+  </template>
+  <template name="FAST Security Status" id="15" dictionary="FAST Security Status">
+    <string name ="MsgType" id="35" presence="mandatory">
+    </string>
+    <string name="FAST SendingTime" id="52" presence="mandatory">
+    </string>
+    <string name="FAST ApplID" id="1180" presence="mandatory">
+      <default value="1"/>
+    </string>
+    <uInt32 name="FAST ApplSeqNum" id="1181" presence="mandatory">
+      <increment dictionary="template"/>
+    </uInt32>
+    <uInt32 name="FAST MDQuoteType" id="1070" presence="optional">
+    </uInt32>
+    <string name="LSEG FAST SecurityID" id="48" presence="mandatory">
+      <copy value="" dictionary="template"/>
+    </string>
+    <string name="LSEG FAST SecurityIDSource" id="22" presence="optional">
+      <constant value="8"/>
+    </string>
+    <uInt32 name="FAST SecurityTradingStatus" id="326" presence ="mandatory">
+      <copy dictionary="template" value="0"/>
+    </uInt32>
+    <uInt32 name="FAST SecurityTradingEvent" id="1174" presence="optional">
+      <copy dictionary="template" value="0"/>
+    </uInt32>
+    <uInt32 name="LSEG FAST MDSubBookType" id="1173" presence="optional">
+      <default value="1"/>
+    </uInt32>
+    <string name="FAST Text" id="58" presence="optional">
+      <copy value="" dictionary="template"/>
+    </string>
+    <uInt32 name="FAST HaltReason" id="327" presence="optional">
+      <copy dictionary="template" value="0"/>
+    </uInt32>
+  </template>
+  <template name="FAST Party ID" id="16" dictionary="FAST Party ID">
+    <string name="FAST PartyID" id="448" presence="optional">
+      <copy dictionary="template" value=""/>
+    </string>
+    <string name="FAST PartyIDSource" id="447" presence="optional">
+      <copy dictionary="template" value=""/>
+    </string>
+    <uInt32 name="FAST PartyRole" id="452" presence="optional">
+      <copy dictionary="template" value="0"/>
+    </uInt32>
+  </template>
+  <template name="FAST MD Snapshot Entry" id="17" dictionary ="FAST Snapshot Entry">
+    <string name="FAST MDEntryType" id="269" presence ="mandatory">
+      <copy value="" dictionary="template"/>
+    </string>
+    <string name="FAST MDEntryID" id="278" presence="optional">
+      <copy value="" dictionary="template"/>
+    </string>
+    <decimal name="FAST MDEntryPX" id="270" presence="optional">
+      <copy dictionary="template" value="0.0"/>
+    </decimal>
+    <decimal name="FAST MDEntrySize" id="271" presence="optional">
+      <copy dictionary="template" value="0.0"/>
+    </decimal>
+    <string name="LSEG FAST QuoteCondition" id="276" presence="optional">
+      <copy value="" dictionary="template"/>
+    </string>
+    <uInt32 name="FAST NumberOfOrders" id="346" presence="optional">
+      <copy dictionary="template" value="0"/>
+    </uInt32>
+    <uInt32 name="FAST MDEntryPositionNo" id="290" presence="optional">
+      <copy dictionary="template" value="0"/>
+    </uInt32>
+    <uInt32 name="FAST MDPriceLevel" id="1023" presence ="optional">
+      <copy dictionary="template" value="0"/>
+    </uInt32>
+    <uInt32 name="LSEG FAST MDOriginType" id="1024" presence="optional">
+      <copy dictionary="template" value="0"/>
+    </uInt32>
+    <uInt32 name="FAST MDQuoteType" id="1070" presence="optional">
+      <copy dictionary="template" value="0"/>
+    </uInt32>
+    <uInt32 name="FAST NoPartyIDs" id="453" presence="optional">
+      <constant value="1" />
+    </uInt32>
+    <sequence name="FAST Party IDs" presence="optional">
+      <length name="FAST NoPartyIDs" id="453">
+      </length>
+      <uInt32 name="TemplateID" id="9999">
+        <copy dictionary="global" value="16"/>
+      </uInt32>
+      <templateRef name="FAST Party ID"/>
+    </sequence>
+    <uInt32 name="LSEG FAST Open_ClosePriceIndicator" id="1759" presence="optional">
+      <copy dictionary="template" value="0"/>
+    </uInt32>
+  </template>
+  <template name="FAST Market Data Snapshot" id="18" dictionary="FAST Market Data Snapshot">
+    <string name ="MsgType" id="35" presence="mandatory">
+    </string>
+    <string name="FAST SendingTime" id="52" presence="mandatory">
+    </string>
+    <string name="FAST ApplID" id="1180" presence="mandatory">
+      <default value="1"/>
+    </string>
+    <uInt32 name="FAST ApplSeqNum" id="1181" presence="optional">
+      <increment dictionary="template"/>
+    </uInt32>
+    <string name="FAST LastFragment" id="893" presence="optional">
+      <copy dictionary="template" value="Y" />
+    </string>
+    <string name="FAST MDReqID" id="262" presence="optional">
+      <copy dictionary="template" value=""/>
+    </string>
+    <uInt32 name="FAST LastMsgSeqNumProcessed" id="369" presence="optional">
+    </uInt32>
+    <string name="FAST LastRptRequested" id="912" presence="optional">
+      <default value="" />
+    </string>    
+    <string name="LSEG FAST SecurityID" id="48" presence="mandatory">
+      <copy dictionary="template" value=""/>
+    </string>
+    <string name="LSEG FAST SecurityIDSource" id="22" presence="optional">
+      <constant value="8" />
+    </string>    
+    <uInt32 name="FAST RptSeq" id="83" presence="mandatory">
+    </uInt32>
+    <uInt32 name="FAST MDSecurityTradingStatus" id="1682" presence="optional">
+      <copy dictionary="template" value="0"/>
+    </uInt32>
+    <uInt32 name="FAST MDHaltReason" id="1684" presence="optional">
+      <copy dictionary="template" value="0"/>
+    </uInt32>
+    <uInt32 name="LSEG FAST MDSubBookType" id="1173" presence="optional">
+      <default value="1"/>
+    </uInt32>
+    <uInt32 name="FAST NumberMDEntries" id="268" presence="mandatory">
+      <default value="1"/>
+    </uInt32>
+    <sequence name="FAST MD Entries" presence="mandatory">
+      <length name="FAST NoMDEntries" id="268">
+      </length>
+      <uInt32 name="TemplateID" id="9999">
+        <copy dictionary="global" value="17"/>
+      </uInt32>
+      <templateRef name="FAST MD Snapshot Entry"/>
+    </sequence>
+  </template>
+  <template name="FAST MD INC Entry" id="19" dictionary="FAST MD INC Entry">
+    <uInt32 name="FAST MDUpdateAction" id="279" presence="mandatory">
+      <copy dictionary="template" value="0"/>
+    </uInt32>
+    <string name="FAST MDEntryType" id="269" presence="mandatory">
+      <copy value="" dictionary="template"/>
+    </string>
+    <string name="FAST MDEntryID" id="278" presence="optional">
+      <copy value="" dictionary="template"/>
+    </string>
+    <string name="LSEG FAST SecurityID" id="48" presence="mandatory">
+      <copy value="" dictionary="template"/>
+    </string>
+    <string name="LSEG FAST SecurityIDSource" id="22" presence="optional">
+      <constant value="8"/>
+    </string>
+    <decimal name="FAST MDEntryPX" id="270" presence="optional">
+      <copy dictionary="template" value="0.0"/>
+    </decimal>
+    <string name="LSEG FAST SettlCurrency" id="120" presence="optional">
+      <copy value="" dictionary="template"/>
+    </string>
+    <decimal name="FAST MDEntrySize" id="271" presence="optional">
+      <copy dictionary="template" value="0.0"/>
+    </decimal>
+    <string name="FAST MDEntryDate" id="272" presence="optional">
+      <tail dictionary="template"/>
+    </string>
+    <string name="FAST MDEntryTime" id="273" presence="optional">
+      <tail dictionary="template"/>
+    </string>
+    <string name="LSEG FAST MDMkt" id="275" presence="optional">
+      <copy value="" dictionary="template"/>
+    </string>
+    <string name="LSEG FAST QuoteCondition" id="276" presence="optional">
+      <copy value="" dictionary="template"/>
+    </string>
+    <string name="FAST TradeCondition" id="277" presence="optional">
+      <copy value="" dictionary="template"/>
+    </string>
+    <uInt32 name="LSEG FAST TrdType" id="828" presence="optional">
+      <copy dictionary="template" value="0"/>
+    </uInt32>
+    <string name="FAST MatchType" id="574" presence="optional">
+      <copy value="" dictionary ="template"/>
+    </string>
+    <uInt32 name="FAST NumberOfOrders" id="346" presence="optional">
+      <copy dictionary="template" value="0"/>
+    </uInt32>
+    <uInt32 name="FAST MDEntryPositionNo" id="290" presence="optional">
+      <default value="1"/>
+    </uInt32>
+    <uInt32 name="FAST MDPriceLevel" id="1023" presence="optional">
+      <copy dictionary="template" value="0"/>
+    </uInt32>
+    <uInt32 name="LSEG FAST MDOriginType" id="1024" presence="optional">
+      <copy dictionary="template" value="0"/>
+    </uInt32>
+    <uInt32 name="FAST MDQuoteType" id="1070" presence="optional">
+      <copy dictionary="template" value="0"/>
+    </uInt32>
+    <uInt32 name="FAST RptSeq" id="83" presence="optional">
+      <increment dictionary="template" value="0"/>
+    </uInt32>
+    <uInt32 name="FAST NumberPartyIDs" id="453" presence="optional">
+      <constant value="1"/>
+    </uInt32>
+    <sequence name="FAST Party IDs" presence="optional">
+      <length name="FAST NoPartyIDs" id="453">
+      </length>
+      <uInt32 name="TemplateID" id="9999" presence="optional">
+        <copy dictionary="template" value="16"/>
+      </uInt32>
+      <templateRef name="FAST Party ID"/>
+    </sequence>
+    <uInt32 name="LSEG FAST TrdSubType" id="829" presence="optional">
+      <copy dictionary="template" value="0"/>
+    </uInt32>
+    <uInt32 name="LSEG FAST AggressorSide" id="5797" presence="optional">
+      <copy dictionary="template" value="0"/>
+    </uInt32>
+    <string name="LSEG FAST VenueIdentificationCode" id="9999" presence="optional">
+      <copy value="" dictionary="template"/>
+    </string>
+    <decimal name="LSEG FAST OriginalPrice" id="1769" presence="optional">
+      <copy dictionary="template" value="0.0"/>
+    </decimal>
+    <uInt32 name="LSEG FAST Open_ClosePriceIndicator" id="1759" presence="optional">
+      <copy dictionary="template" value="0"/>
+    </uInt32>
+  </template>
+  <template name="FAST Market Data Incremental Refresh" id="20" dictionary="FAST Market Data Incremental Refresh">
+    <string name ="MsgType" id="35" presence="mandatory">
+    </string>
+    <string name="FAST SendingTime" id="52" presence="mandatory">
+    </string>
+    <string name="FAST ApplID" id="1180" presence="mandatory">
+      <default value="1"/>
+    </string>
+    <uInt32 name="FAST ApplSeqNum" id="1181" presence="optional">
+      <increment dictionary="template"/>
+    </uInt32>
+    <string name="FAST MDReqID" id="262" presence="optional">
+      <copy value="" dictionary="template" />
+    </string>
+    <string name="FAST LastRptRequested" id="912" presence="optional">
+      <default value="" />
+    </string>
+    <uInt32 name="FAST NumberMDEntries" id="268" presence="mandatory">
+      <default value="1"/>
+    </uInt32>
+    <sequence name="FAST MD Entries" presence="optional">
+      <length name="FAST NoMDEntries" id="268">
+      </length>
+      <uInt32 name="TemplateID" id="9999">
+        <copy dictionary="global" value="19"/>
+      </uInt32>
+      <templateRef name="FAST MD INC Entry"/>
+    </sequence>
+    <string name="LSEG FAST TZTransactTime" id="1132" presence="optional">
+      <copy dictionary="template" value="" />
+    </string>
+  </template>
+  <template name="FAST Quote Request" id="21" dictionary="FAST Quote Request">
+    <string name="FAST MsgType" id="35" presence="mandatory">
+      <default value=""/>
+    </string>
+    <string name="FAST SendingTime" id="52" presence="mandatory">
+      <default value="" />
+    </string>
+    <string name="FAST AppId" id="1180" presence="mandatory">
+      <default value="LSE" />
+    </string>
+    <uInt32 name="FAST ApplSeqNum" id="1181" presence="optional">
+      <increment dictionary="template"/>
+    </uInt32>
+    <string name="FAST QuoteReqID" id="131" presence="mandatory">
+      <default value="" />
+    </string>
+    <uInt32 name="FAST NumberRelatedSym" id="146" presence="mandatory">
+      <default value="1" />
+    </uInt32>
+    <sequence name="FAST RelatedSyms" presence="optional">
+      <length name ="FAST NoRelatedSyms" id="146">
+      </length>
+      <uInt32 name="TemplateID" id="9999">
+        <copy dictionary="global" value="5"/>
+      </uInt32>
+      <templateRef name="FAST RelatedSym"/>
+    </sequence>
+    <string name="FAST Side" id="54" presence="optional">
+      <copy value="" dictionary="template" />
+    </string>
+    <decimal name="FAST OrderQty" id="38" presence="optional">
+      <copy dictionary="template" value="0.0"/>
+    </decimal>
+  </template>
+  <template name="FAST Text" id="22" dictionary="FAST Text">
+    <string name="FAST Text" id="58" presence="mandatory">
+    </string>
+  </template>
+  <template name="FAST Symbol" id="23" dictionary="FAST Symbol">
+    <string name="FAST Symbol" id="55" presence="optional">
+      <default value="" />
+    </string>
+  </template>
+  <template name="FAST NewsRelatedSym" id="29" dictionary="FAST NewsRelatedSym">
+    <string name="LSEG FAST SecurityID" id="48" presence="optional">
+      <copy dictionary="template" value=""/>
+    </string>
+    <string name="LSEG FAST SecurityIDSource" id="22" presence="optional">
+      <constant value="8" />
+    </string>
+  </template>
+  <template name="FAST News" id="24" dictionary="FAST News">
+    <string name="FAST MsgType" id="35" presence="mandatory">
+    </string>
+    <string name="FAST SendingTime" id="52" presence="mandatory">
+    </string>
+    <string name="FAST AppId" id="1180" presence="mandatory">
+      <default value="1" />
+    </string>
+    <uInt32 name="FAST ApplSeqNum" id="1181" presence="optional">
+      <increment dictionary="template" />
+    </uInt32>
+    <string name="FAST OrigTime" id="42" presence="mandatory">
+      <tail dictionary="template" value =""/>
+    </string>
+    <uInt32 name="FAST Urgency" id="61" presence="mandatory">
+      <default value="0" />
+    </uInt32>
+    <string name="FAST Headline" id="148" presence="mandatory">
+    </string>
+    <uInt32 name="FAST NumberLinesOfText" id="33" presence="mandatory">
+      <constant value="1"/>
+    </uInt32>
+    <sequence name="FAST TextArray" presence="optional">
+      <length name="FAST NoLinesOfText" id="33">
+      </length>
+      <uInt32 name="TemplateID" id="9999">
+        <copy dictionary="global" value="22"/>
+      </uInt32>
+      <templateRef name="FAST Text"/>
+    </sequence>
+    <uInt32 name="FAST NumberRelatedSym" id="146" presence="optional">
+      <default value="1" />
+    </uInt32>
+    <sequence name="LSEG FASTNewsRelatedSyms" presence="optional">
+      <length name="LSEG NoFASTNewsRelatedSyms" id="146">
+      </length>
+      <uInt32 name="TemplateID" id="9999">
+        <copy dictionary="global" value="23"/>
+      </uInt32>
+      <templateRef name="FAST NewsRelatedSym"/>
+    </sequence>
+    <uInt32 name="FAST NumberUnderlyings" id="711" presence="optional">
+    </uInt32>
+    <sequence name="FAST UnderlyingSymbols" presence="optional">
+      <length name="FAST NoUnderlyingSymbols" id="711">
+      </length>
+      <uInt32 name="TemplateID" id="9999">
+        <copy dictionary="global" value="11"/>
+      </uInt32>
+      <templateRef name="FAST UnderlyingSymbol" />
+    </sequence>
+  </template>
+  <template name="FAST Market data Request Reject" id="25" dictionary="FAST Market Data Request Reject">
+    <string name="FAST MsgType" id="35" presence="mandatory">
+    </string>
+    <string name="FAST SendingTime" id="52" presence="mandatory">
+    </string>
+    <string name="FAST MDReqID" id="262" presence="mandatory">
+    </string>
+    <string name="FAST MDReqRejReason" id="281" presence="mandatory">
+    </string>
+    <string name="FAST Text" id="58" presence="optional">
+    </string>
+  </template>
+  <template name="FAST Business Message Reject" id="26" dictionary="FAST Business Message Reject">
+    <string name="FAST MsgType" id="35" presence="mandatory">
+    </string>
+    <string name="FAST SendingTime" id="52" presence="mandatory">
+    </string>
+    <string name="FAST BusinessRejectRefID" id="379" presence="optional">
+    </string>
+    <uInt32 name="FAST RefTagID" id="371" presence="optional">
+    </uInt32>
+    <string name="LSE FAST RefMsgType" id="372" presence="optional">
+    </string>
+    <uInt32 name="FAST BusinessRejectReason" id="380" presence="mandatory">
+    </uInt32>
+    <string name="FAST Text" id="58" presence="optional">
+    </string>
+  </template>
+  <template name="FAST Application Message Request Ack" id="27" dictionary="FAST Application Message Request Ack">
+    <string name="FAST MsgType" id="35" presence="mandatory">
+    </string>
+    <string name="FAST SendingTime" id="52" presence="mandatory">
+    </string>
+    <string name="FAST ApplResponseID" id="1353" presence="mandatory">
+    </string>
+    <string name="FAST ApplReqID" id="1346" presence="mandatory">
+    </string>
+    <uInt32 name="FAST ApplReqType" id="1347" presence="mandatory">
+    </uInt32>
+    <uInt32 name="FAST ApplResponseType" id="1348" presence="mandatory">
+    </uInt32>
+  </template>
+  <template name="FAST Application Message Report" id="28" dictionary="FAST Application Message Report">
+    <string name="FAST MsgType" id="35" presence="mandatory">
+    </string>
+    <string name="FAST SendingTime" id="52" presence="mandatory">
+    </string>
+    <string name="FAST ApplReportID" id="1356" presence="mandatory">
+    </string>
+    <string name ="FAST ApplReqID" id="1346" presence="mandatory">
+    </string>
+    <uInt32 name="FAST ApplReportType" id="1426" presence="mandatory">
+    </uInt32>
+  </template>
+</templates>

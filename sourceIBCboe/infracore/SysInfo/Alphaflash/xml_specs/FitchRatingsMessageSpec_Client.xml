@@ -1,0 +1,3132 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<?xml-stylesheet type="text/xsl" href="./ClientHTML.xsl"?><protocol>
+<version>351</version>
+<revisions>
+    <revision type="Final" version="351" author="MNI News" date="03/13/2017"/>
+  </revisions>
+<category name="Fitch_Sovereign_Ratings_Data">
+<description>Fitch Sovereign Ratings Data</description>
+<country>ANY</country>
+<category_id>1001</category_id>
+<data>
+<datum>
+<short_description>Fitch Issuer ID</short_description>
+<description>Fitch Issuer ID</description>
+<datum_type>index</datum_type>
+<datum_id>1</datum_id>
+</datum>
+<datum>
+<short_description>Action: Long Term Foreign Currency Issuer Default Rating (IDR)</short_description>
+<description>Action: Long Term Foreign Currency Issuer Default Rating (IDR)</description>
+<datum_type>index</datum_type>
+<datum_id>2</datum_id>
+</datum>
+<datum>
+<short_description>Current: Long Term Foreign Currency Issuer Default Rating (IDR)</short_description>
+<description>Current: Long Term Foreign Currency Issuer Default Rating (IDR)</description>
+<datum_type>index</datum_type>
+<datum_id>3</datum_id>
+</datum>
+<datum>
+<short_description>Previous: Long Term Foreign Currency Issuer Default Rating (IDR)</short_description>
+<description>Previous: Long Term Foreign Currency Issuer Default Rating (IDR)</description>
+<datum_type>index</datum_type>
+<datum_id>4</datum_id>
+</datum>
+<datum>
+<short_description>Outlook: Long Term Rating Outlook (IDR)</short_description>
+<description>Outlook: Long Term Rating Outlook (IDR)</description>
+<datum_type>index</datum_type>
+<datum_id>5</datum_id>
+</datum>
+<datum>
+<short_description>Action: Short Term Foreign Currency Issuer Default Rating (IDR)</short_description>
+<description>Action: Short Term Foreign Currency Issuer Default Rating (IDR)</description>
+<datum_type>index</datum_type>
+<datum_id>6</datum_id>
+</datum>
+<datum>
+<short_description>Current: Short Term Foreign Currency Issuer Default Rating (IDR)</short_description>
+<description>Current: Short Term Foreign Currency Issuer Default Rating (IDR)</description>
+<datum_type>index</datum_type>
+<datum_id>7</datum_id>
+</datum>
+<datum>
+<short_description>Previous: Short Term Foreign Currency Issuer Default Rating (IDR)</short_description>
+<description>Previous: Short Term Foreign Currency Issuer Default Rating (IDR)</description>
+<datum_type>index</datum_type>
+<datum_id>8</datum_id>
+</datum>
+<datum>
+<short_description>Action: Long Term Local Currency Issuer Default Rating (IDR)</short_description>
+<description>Action: Long Term Local Currency Issuer Default Rating (IDR)</description>
+<datum_type>index</datum_type>
+<datum_id>9</datum_id>
+</datum>
+<datum>
+<short_description>Current: Long Term Local Currency Issuer Default Rating (IDR)</short_description>
+<description>Current: Long Term Local Currency Issuer Default Rating (IDR)</description>
+<datum_type>index</datum_type>
+<datum_id>10</datum_id>
+</datum>
+<datum>
+<short_description>Previous: Long Term Local Currency Issuer Default Rating (IDR)</short_description>
+<description>Previous: Long Term Local Currency Issuer Default Rating (IDR)</description>
+<datum_type>index</datum_type>
+<datum_id>11</datum_id>
+</datum>
+<datum>
+<short_description>Outlook: Long Term Local Currency Issuer Rating Outlook (IDR)</short_description>
+<description>Outlook: Long Term Local Currency Issuer Rating Outlook (IDR)</description>
+<datum_type>index</datum_type>
+<datum_id>12</datum_id>
+</datum>
+<datum>
+<short_description>Action: Country Ceiling</short_description>
+<description>Action: Country Ceiling</description>
+<datum_type>index</datum_type>
+<datum_id>13</datum_id>
+</datum>
+<datum>
+<short_description>Current: Country Ceiling</short_description>
+<description>Current: Country Ceiling</description>
+<datum_type>index</datum_type>
+<datum_id>14</datum_id>
+</datum>
+<datum>
+<short_description>Previous: Country Ceiling</short_description>
+<description>Previous: Country Ceiling</description>
+<datum_type>index</datum_type>
+<datum_id>15</datum_id>
+</datum>
+<datum>
+<short_description>Long Term Foreign Currency Issuer Default Rating Delta</short_description>
+<description>Long Term Foreign Currency Issuer Default Rating Delta</description>
+<datum_type>index</datum_type>
+<datum_id>16</datum_id>
+</datum>
+<datum>
+<short_description>Short Term Foreign Currency Issuer Default Rating Delta</short_description>
+<description>Short Term Foreign Currency Issuer Default Rating Delta</description>
+<datum_type>index</datum_type>
+<datum_id>17</datum_id>
+</datum>
+<datum>
+<short_description>Long Term Local Currency Issuer Default Rating Delta</short_description>
+<description>Long Term Local Currency Issuer Default Rating Delta</description>
+<datum_type>index</datum_type>
+<datum_id>18</datum_id>
+</datum>
+</data>
+<messages>
+<message>
+<message_type>release</message_type>
+<message_version>2</message_version>
+<multicast_group>FITCH</multicast_group>
+<fields>
+<field>
+<datum_id>1</datum_id>
+<field_type>int</field_type>
+<example_value>73719737</example_value>
+</field>
+<field>
+<datum_id>2</datum_id>
+<field_type>short_value_enumeration</field_type>
+<example_value>3</example_value>
+<allowed_values optional_value_allowed="true">
+              <allowed_value value="0" description="Null"/>
+              <allowed_value value="1" description="Affirmed"/>
+              <allowed_value value="2" description="Rating Watch On"/>
+              <allowed_value value="3" description="Downgrade"/>
+              <allowed_value value="4" description="New Rating"/>
+              <allowed_value value="5" description="Revision Implication Watch"/>
+              <allowed_value value="6" description="Upgrade"/>
+              <allowed_value value="7" description="Withdrawn"/>
+              <allowed_value value="8" description="Revision Enhancement"/>
+              <allowed_value value="9" description="Expected Rating"/>
+              <allowed_value value="10" description="Revision Rating"/>
+              <allowed_value value="12" description="Revision Outlook"/>
+              <allowed_value value="15" description="Rating Watch Maintained"/>
+              <allowed_value value="16" description="Confirmed"/>
+              <allowed_value value="17" description="Revision IDR"/>
+              <allowed_value value="18" description="Recovery Rating Revision"/>
+              <allowed_value value="24" description="Matured"/>
+              <allowed_value value="25" description="Support Rating Floor Revision"/>
+              <allowed_value value="26" description="Publish"/>
+              <allowed_value value="30" description="Not Monitored"/>
+              <allowed_value value="31" description="Notice of Withdrawal"/>
+              <allowed_value value="34" description="Under Review"/>
+              <allowed_value value="35" description="Suspended"/>
+            </allowed_values>
+</field>
+<field>
+<datum_id>3</datum_id>
+<field_type>short_value_enumeration</field_type>
+<example_value>7</example_value>
+<allowed_values optional_value_allowed="true">
+              <allowed_value value="0" description="Null"/>
+              <allowed_value value="1" description="NR"/>
+              <allowed_value value="2" description="AAA"/>
+              <allowed_value value="3" description="AA+"/>
+              <allowed_value value="4" description="AA"/>
+              <allowed_value value="5" description="AA-"/>
+              <allowed_value value="6" description="A+"/>
+              <allowed_value value="7" description="A"/>
+              <allowed_value value="8" description="A-"/>
+              <allowed_value value="9" description="BBB+"/>
+              <allowed_value value="10" description="BBB"/>
+              <allowed_value value="11" description="BBB-"/>
+              <allowed_value value="12" description="BB+"/>
+              <allowed_value value="13" description="BB"/>
+              <allowed_value value="14" description="BB-"/>
+              <allowed_value value="15" description="B+"/>
+              <allowed_value value="16" description="B"/>
+              <allowed_value value="17" description="B-"/>
+              <allowed_value value="18" description="CCC+"/>
+              <allowed_value value="19" description="CCC"/>
+              <allowed_value value="20" description="CCC-"/>
+              <allowed_value value="21" description="CC"/>
+              <allowed_value value="22" description="C"/>
+              <allowed_value value="23" description="DDD"/>
+              <allowed_value value="24" description="DD"/>
+              <allowed_value value="25" description="D"/>
+              <allowed_value value="26" description="AAA(EXP)"/>
+              <allowed_value value="27" description="AA+(EXP)"/>
+              <allowed_value value="28" description="AA(EXP)"/>
+              <allowed_value value="29" description="AA-(EXP)"/>
+              <allowed_value value="30" description="A+(EXP)"/>
+              <allowed_value value="31" description="A(EXP)"/>
+              <allowed_value value="32" description="A-(EXP)"/>
+              <allowed_value value="33" description="BBB+(EXP)"/>
+              <allowed_value value="34" description="BBB(EXP)"/>
+              <allowed_value value="35" description="BBB-(EXP)"/>
+              <allowed_value value="36" description="BB+(EXP)"/>
+              <allowed_value value="37" description="BB(EXP)"/>
+              <allowed_value value="38" description="BB-(EXP)"/>
+              <allowed_value value="39" description="B+(EXP)"/>
+              <allowed_value value="40" description="B(EXP)"/>
+              <allowed_value value="41" description="B-(EXP)"/>
+              <allowed_value value="42" description="CCC+(EXP)"/>
+              <allowed_value value="43" description="CCC(EXP)"/>
+              <allowed_value value="44" description="CCC-(EXP)"/>
+              <allowed_value value="45" description="CC(EXP)"/>
+              <allowed_value value="46" description="C(EXP)"/>
+              <allowed_value value="47" description="DDD(EXP)"/>
+              <allowed_value value="48" description="DD(EXP)"/>
+              <allowed_value value="49" description="DD-(EXP)"/>
+              <allowed_value value="50" description="D(EXP)"/>
+              <allowed_value value="51" description="NR(EXP)"/>
+              <allowed_value value="316" description="WD"/>
+              <allowed_value value="318" description="RD"/>
+            </allowed_values>
+</field>
+<field>
+<datum_id>4</datum_id>
+<field_type>short_value_enumeration</field_type>
+<example_value>6</example_value>
+<allowed_values optional_value_allowed="true">
+              <allowed_value value="0" description="Null"/>
+              <allowed_value value="1" description="NR"/>
+              <allowed_value value="2" description="AAA"/>
+              <allowed_value value="3" description="AA+"/>
+              <allowed_value value="4" description="AA"/>
+              <allowed_value value="5" description="AA-"/>
+              <allowed_value value="6" description="A+"/>
+              <allowed_value value="7" description="A"/>
+              <allowed_value value="8" description="A-"/>
+              <allowed_value value="9" description="BBB+"/>
+              <allowed_value value="10" description="BBB"/>
+              <allowed_value value="11" description="BBB-"/>
+              <allowed_value value="12" description="BB+"/>
+              <allowed_value value="13" description="BB"/>
+              <allowed_value value="14" description="BB-"/>
+              <allowed_value value="15" description="B+"/>
+              <allowed_value value="16" description="B"/>
+              <allowed_value value="17" description="B-"/>
+              <allowed_value value="18" description="CCC+"/>
+              <allowed_value value="19" description="CCC"/>
+              <allowed_value value="20" description="CCC-"/>
+              <allowed_value value="21" description="CC"/>
+              <allowed_value value="22" description="C"/>
+              <allowed_value value="23" description="DDD"/>
+              <allowed_value value="24" description="DD"/>
+              <allowed_value value="25" description="D"/>
+              <allowed_value value="26" description="AAA(EXP)"/>
+              <allowed_value value="27" description="AA+(EXP)"/>
+              <allowed_value value="28" description="AA(EXP)"/>
+              <allowed_value value="29" description="AA-(EXP)"/>
+              <allowed_value value="30" description="A+(EXP)"/>
+              <allowed_value value="31" description="A(EXP)"/>
+              <allowed_value value="32" description="A-(EXP)"/>
+              <allowed_value value="33" description="BBB+(EXP)"/>
+              <allowed_value value="34" description="BBB(EXP)"/>
+              <allowed_value value="35" description="BBB-(EXP)"/>
+              <allowed_value value="36" description="BB+(EXP)"/>
+              <allowed_value value="37" description="BB(EXP)"/>
+              <allowed_value value="38" description="BB-(EXP)"/>
+              <allowed_value value="39" description="B+(EXP)"/>
+              <allowed_value value="40" description="B(EXP)"/>
+              <allowed_value value="41" description="B-(EXP)"/>
+              <allowed_value value="42" description="CCC+(EXP)"/>
+              <allowed_value value="43" description="CCC(EXP)"/>
+              <allowed_value value="44" description="CCC-(EXP)"/>
+              <allowed_value value="45" description="CC(EXP)"/>
+              <allowed_value value="46" description="C(EXP)"/>
+              <allowed_value value="47" description="DDD(EXP)"/>
+              <allowed_value value="48" description="DD(EXP)"/>
+              <allowed_value value="49" description="DD-(EXP)"/>
+              <allowed_value value="50" description="D(EXP)"/>
+              <allowed_value value="51" description="NR(EXP)"/>
+              <allowed_value value="316" description="WD"/>
+              <allowed_value value="318" description="RD"/>
+            </allowed_values>
+</field>
+<field>
+<datum_id>5</datum_id>
+<field_type>short_value_enumeration</field_type>
+<example_value>2</example_value>
+<allowed_values optional_value_allowed="true">
+              <allowed_value value="0" description="Null"/>
+              <allowed_value value="2" description="Rating Watch Positive"/>
+              <allowed_value value="3" description="Rating Watch Negative"/>
+              <allowed_value value="4" description="Rating Watch Evolving"/>
+              <allowed_value value="5" description="Rating Watch Off"/>
+              <allowed_value value="7" description="Rating Outlook Stable"/>
+              <allowed_value value="8" description="Rating Outlook Negative"/>
+              <allowed_value value="9" description="Rating Outlook Positive"/>
+              <allowed_value value="10" description="Rating Outlook Evolving"/>
+              <allowed_value value="19" description="Under Review"/>
+            </allowed_values>
+</field>
+<field>
+<datum_id>6</datum_id>
+<field_type>short_value_enumeration</field_type>
+<example_value>6</example_value>
+<allowed_values optional_value_allowed="true">
+              <allowed_value value="0" description="Null"/>
+              <allowed_value value="1" description="Affirmed"/>
+              <allowed_value value="2" description="Rating Watch On"/>
+              <allowed_value value="3" description="Downgrade"/>
+              <allowed_value value="4" description="New Rating"/>
+              <allowed_value value="5" description="Revision Implication Watch"/>
+              <allowed_value value="6" description="Upgrade"/>
+              <allowed_value value="7" description="Withdrawn"/>
+              <allowed_value value="8" description="Revision Enhancement"/>
+              <allowed_value value="9" description="Expected Rating"/>
+              <allowed_value value="10" description="Revision Rating"/>
+              <allowed_value value="12" description="Revision Outlook"/>
+              <allowed_value value="15" description="Rating Watch Maintained"/>
+              <allowed_value value="16" description="Confirmed"/>
+              <allowed_value value="17" description="Revision IDR"/>
+              <allowed_value value="18" description="Recovery Rating Revision"/>
+              <allowed_value value="24" description="Matured"/>
+              <allowed_value value="25" description="Support Rating Floor Revision"/>
+              <allowed_value value="26" description="Publish"/>
+              <allowed_value value="30" description="Not Monitored"/>
+              <allowed_value value="31" description="Notice of Withdrawal"/>
+              <allowed_value value="34" description="Under Review"/>
+              <allowed_value value="35" description="Suspended"/>
+            </allowed_values>
+</field>
+<field>
+<datum_id>7</datum_id>
+<field_type>short_value_enumeration</field_type>
+<example_value>3</example_value>
+<allowed_values optional_value_allowed="true">
+              <allowed_value value="0" description="Null"/>
+              <allowed_value value="1" description="NR- Not Rated"/>
+              <allowed_value value="2" description="F1+"/>
+              <allowed_value value="3" description="F1"/>
+              <allowed_value value="4" description="F2"/>
+              <allowed_value value="5" description="F3"/>
+              <allowed_value value="6" description="B"/>
+              <allowed_value value="7" description="C"/>
+              <allowed_value value="8" description="D"/>
+              <allowed_value value="9" description="F1+(EXP)"/>
+              <allowed_value value="10" description="F1(EXP)"/>
+              <allowed_value value="11" description="F2(EXP)"/>
+              <allowed_value value="12" description="F3(EXP)"/>
+              <allowed_value value="13" description="B(EXP)"/>
+              <allowed_value value="14" description="C(EXP)"/>
+              <allowed_value value="15" description="D(EXP)"/>
+              <allowed_value value="16" description="NR(EXP)"/>
+              <allowed_value value="629" description="RD"/>
+            </allowed_values>
+</field>
+<field>
+<datum_id>8</datum_id>
+<field_type>short_value_enumeration</field_type>
+<example_value>4</example_value>
+<allowed_values optional_value_allowed="true">
+              <allowed_value value="0" description="Null"/>
+              <allowed_value value="1" description="NR- Not Rated"/>
+              <allowed_value value="2" description="F1+"/>
+              <allowed_value value="3" description="F1"/>
+              <allowed_value value="4" description="F2"/>
+              <allowed_value value="5" description="F3"/>
+              <allowed_value value="6" description="B"/>
+              <allowed_value value="7" description="C"/>
+              <allowed_value value="8" description="D"/>
+              <allowed_value value="9" description="F1+(EXP)"/>
+              <allowed_value value="10" description="F1(EXP)"/>
+              <allowed_value value="11" description="F2(EXP)"/>
+              <allowed_value value="12" description="F3(EXP)"/>
+              <allowed_value value="13" description="B(EXP)"/>
+              <allowed_value value="14" description="C(EXP)"/>
+              <allowed_value value="15" description="D(EXP)"/>
+              <allowed_value value="16" description="NR(EXP)"/>
+              <allowed_value value="629" description="RD"/>
+            </allowed_values>
+</field>
+<field>
+<datum_id>9</datum_id>
+<field_type>short_value_enumeration</field_type>
+<example_value>1</example_value>
+<allowed_values optional_value_allowed="true">
+              <allowed_value value="0" description="Null"/>
+              <allowed_value value="1" description="Affirmed"/>
+              <allowed_value value="2" description="Rating Watch On"/>
+              <allowed_value value="3" description="Downgrade"/>
+              <allowed_value value="4" description="New Rating"/>
+              <allowed_value value="5" description="Revision Implication Watch"/>
+              <allowed_value value="6" description="Upgrade"/>
+              <allowed_value value="7" description="Withdrawn"/>
+              <allowed_value value="8" description="Revision Enhancement"/>
+              <allowed_value value="9" description="Expected Rating"/>
+              <allowed_value value="10" description="Revision Rating"/>
+              <allowed_value value="12" description="Revision Outlook"/>
+              <allowed_value value="15" description="Rating Watch Maintained"/>
+              <allowed_value value="16" description="Confirmed"/>
+              <allowed_value value="17" description="Revision IDR"/>
+              <allowed_value value="18" description="Recovery Rating Revision"/>
+              <allowed_value value="24" description="Matured"/>
+              <allowed_value value="25" description="Support Rating Floor Revision"/>
+              <allowed_value value="26" description="Publish"/>
+              <allowed_value value="30" description="Not Monitored"/>
+              <allowed_value value="31" description="Notice of Withdrawal"/>
+              <allowed_value value="34" description="Under Review"/>
+              <allowed_value value="35" description="Suspended"/>
+            </allowed_values>
+</field>
+<field>
+<datum_id>10</datum_id>
+<field_type>short_value_enumeration</field_type>
+<example_value>3</example_value>
+<allowed_values optional_value_allowed="true">
+              <allowed_value value="0" description="Null"/>
+              <allowed_value value="1" description="NR"/>
+              <allowed_value value="2" description="AAA"/>
+              <allowed_value value="3" description="AA+"/>
+              <allowed_value value="4" description="AA"/>
+              <allowed_value value="5" description="AA-"/>
+              <allowed_value value="6" description="A+"/>
+              <allowed_value value="7" description="A"/>
+              <allowed_value value="8" description="A-"/>
+              <allowed_value value="9" description="BBB+"/>
+              <allowed_value value="10" description="BBB"/>
+              <allowed_value value="11" description="BBB-"/>
+              <allowed_value value="12" description="BB+"/>
+              <allowed_value value="13" description="BB"/>
+              <allowed_value value="14" description="BB-"/>
+              <allowed_value value="15" description="B+"/>
+              <allowed_value value="16" description="B"/>
+              <allowed_value value="17" description="B-"/>
+              <allowed_value value="18" description="CCC+"/>
+              <allowed_value value="19" description="CCC"/>
+              <allowed_value value="20" description="CCC-"/>
+              <allowed_value value="21" description="CC"/>
+              <allowed_value value="22" description="C"/>
+              <allowed_value value="23" description="DDD"/>
+              <allowed_value value="24" description="DD"/>
+              <allowed_value value="25" description="D"/>
+              <allowed_value value="26" description="RD"/>
+              <allowed_value value="27" description="AAA(EXP)"/>
+              <allowed_value value="28" description="AA+(EXP)"/>
+              <allowed_value value="29" description="AA(EXP)"/>
+              <allowed_value value="30" description="AA-(EXP)"/>
+              <allowed_value value="31" description="A+(EXP)"/>
+              <allowed_value value="32" description="A(EXP)"/>
+              <allowed_value value="33" description="A-(EXP)"/>
+              <allowed_value value="34" description="BBB+(EXP)"/>
+              <allowed_value value="35" description="BBB(EXP)"/>
+              <allowed_value value="36" description="BBB-(EXP)"/>
+              <allowed_value value="37" description="BB+(EXP)"/>
+              <allowed_value value="38" description="BB(EXP)"/>
+              <allowed_value value="39" description="BB-(EXP)"/>
+              <allowed_value value="40" description="B+(EXP)"/>
+              <allowed_value value="41" description="B(EXP)"/>
+              <allowed_value value="42" description="B-(EXP)"/>
+              <allowed_value value="43" description="CCC+(EXP)"/>
+              <allowed_value value="44" description="CCC(EXP)"/>
+              <allowed_value value="45" description="CCC-(EXP)"/>
+              <allowed_value value="46" description="CC(EXP)"/>
+              <allowed_value value="47" description="C(EXP)"/>
+              <allowed_value value="48" description="DDD(EXP)"/>
+              <allowed_value value="49" description="DD(EXP)"/>
+              <allowed_value value="50" description="DD-(EXP)"/>
+              <allowed_value value="51" description="D(EXP)"/>
+              <allowed_value value="52" description="NR(EXP)"/>
+              <allowed_value value="501" description="WD"/>
+            </allowed_values>
+</field>
+<field>
+<datum_id>11</datum_id>
+<field_type>short_value_enumeration</field_type>
+<example_value>3</example_value>
+<allowed_values optional_value_allowed="true">
+              <allowed_value value="0" description="Null"/>
+              <allowed_value value="1" description="NR"/>
+              <allowed_value value="2" description="AAA"/>
+              <allowed_value value="3" description="AA+"/>
+              <allowed_value value="4" description="AA"/>
+              <allowed_value value="5" description="AA-"/>
+              <allowed_value value="6" description="A+"/>
+              <allowed_value value="7" description="A"/>
+              <allowed_value value="8" description="A-"/>
+              <allowed_value value="9" description="BBB+"/>
+              <allowed_value value="10" description="BBB"/>
+              <allowed_value value="11" description="BBB-"/>
+              <allowed_value value="12" description="BB+"/>
+              <allowed_value value="13" description="BB"/>
+              <allowed_value value="14" description="BB-"/>
+              <allowed_value value="15" description="B+"/>
+              <allowed_value value="16" description="B"/>
+              <allowed_value value="17" description="B-"/>
+              <allowed_value value="18" description="CCC+"/>
+              <allowed_value value="19" description="CCC"/>
+              <allowed_value value="20" description="CCC-"/>
+              <allowed_value value="21" description="CC"/>
+              <allowed_value value="22" description="C"/>
+              <allowed_value value="23" description="DDD"/>
+              <allowed_value value="24" description="DD"/>
+              <allowed_value value="25" description="D"/>
+              <allowed_value value="26" description="RD"/>
+              <allowed_value value="27" description="AAA(EXP)"/>
+              <allowed_value value="28" description="AA+(EXP)"/>
+              <allowed_value value="29" description="AA(EXP)"/>
+              <allowed_value value="30" description="AA-(EXP)"/>
+              <allowed_value value="31" description="A+(EXP)"/>
+              <allowed_value value="32" description="A(EXP)"/>
+              <allowed_value value="33" description="A-(EXP)"/>
+              <allowed_value value="34" description="BBB+(EXP)"/>
+              <allowed_value value="35" description="BBB(EXP)"/>
+              <allowed_value value="36" description="BBB-(EXP)"/>
+              <allowed_value value="37" description="BB+(EXP)"/>
+              <allowed_value value="38" description="BB(EXP)"/>
+              <allowed_value value="39" description="BB-(EXP)"/>
+              <allowed_value value="40" description="B+(EXP)"/>
+              <allowed_value value="41" description="B(EXP)"/>
+              <allowed_value value="42" description="B-(EXP)"/>
+              <allowed_value value="43" description="CCC+(EXP)"/>
+              <allowed_value value="44" description="CCC(EXP)"/>
+              <allowed_value value="45" description="CCC-(EXP)"/>
+              <allowed_value value="46" description="CC(EXP)"/>
+              <allowed_value value="47" description="C(EXP)"/>
+              <allowed_value value="48" description="DDD(EXP)"/>
+              <allowed_value value="49" description="DD(EXP)"/>
+              <allowed_value value="50" description="DD-(EXP)"/>
+              <allowed_value value="51" description="D(EXP)"/>
+              <allowed_value value="52" description="NR(EXP)"/>
+              <allowed_value value="501" description="WD"/>
+            </allowed_values>
+</field>
+<field>
+<datum_id>12</datum_id>
+<field_type>short_value_enumeration</field_type>
+<example_value>9</example_value>
+<allowed_values optional_value_allowed="true">
+              <allowed_value value="0" description="Null"/>
+              <allowed_value value="2" description="Rating Watch Positive"/>
+              <allowed_value value="3" description="Rating Watch Negative"/>
+              <allowed_value value="4" description="Rating Watch Evolving"/>
+              <allowed_value value="5" description="Rating Watch Off"/>
+              <allowed_value value="7" description="Rating Outlook Stable"/>
+              <allowed_value value="8" description="Rating Outlook Negative"/>
+              <allowed_value value="9" description="Rating Outlook Positive"/>
+              <allowed_value value="10" description="Rating Outlook Evolving"/>
+              <allowed_value value="19" description="Under Review"/>
+            </allowed_values>
+</field>
+<field>
+<datum_id>13</datum_id>
+<field_type>short_value_enumeration</field_type>
+<example_value>3</example_value>
+<allowed_values optional_value_allowed="true">
+              <allowed_value value="0" description="Null"/>
+              <allowed_value value="1" description="Affirmed"/>
+              <allowed_value value="2" description="Rating Watch On"/>
+              <allowed_value value="3" description="Downgrade"/>
+              <allowed_value value="4" description="New Rating"/>
+              <allowed_value value="5" description="Revision Implication Watch"/>
+              <allowed_value value="6" description="Upgrade"/>
+              <allowed_value value="7" description="Withdrawn"/>
+              <allowed_value value="8" description="Revision Enhancement"/>
+              <allowed_value value="9" description="Expected Rating"/>
+              <allowed_value value="10" description="Revision Rating"/>
+              <allowed_value value="12" description="Revision Outlook"/>
+              <allowed_value value="15" description="Rating Watch Maintained"/>
+              <allowed_value value="16" description="Confirmed"/>
+              <allowed_value value="17" description="Revision IDR"/>
+              <allowed_value value="18" description="Recovery Rating Revision"/>
+              <allowed_value value="24" description="Matured"/>
+              <allowed_value value="25" description="Support Rating Floor Revision"/>
+              <allowed_value value="26" description="Publish"/>
+              <allowed_value value="30" description="Not Monitored"/>
+              <allowed_value value="31" description="Notice of Withdrawal"/>
+              <allowed_value value="34" description="Under Review"/>
+              <allowed_value value="35" description="Suspended"/>
+            </allowed_values>
+</field>
+<field>
+<datum_id>14</datum_id>
+<field_type>short_value_enumeration</field_type>
+<example_value>6</example_value>
+<allowed_values optional_value_allowed="true">
+              <allowed_value value="0" description="Null"/>
+              <allowed_value value="1" description="NR"/>
+              <allowed_value value="2" description="AAA"/>
+              <allowed_value value="3" description="AA+"/>
+              <allowed_value value="4" description="AA"/>
+              <allowed_value value="5" description="AA-"/>
+              <allowed_value value="6" description="A+"/>
+              <allowed_value value="7" description="A"/>
+              <allowed_value value="8" description="A-"/>
+              <allowed_value value="9" description="BBB+"/>
+              <allowed_value value="10" description="BBB"/>
+              <allowed_value value="11" description="BBB-"/>
+              <allowed_value value="12" description="BB+"/>
+              <allowed_value value="13" description="BB"/>
+              <allowed_value value="14" description="BB-"/>
+              <allowed_value value="15" description="B+"/>
+              <allowed_value value="16" description="B"/>
+              <allowed_value value="17" description="B-"/>
+              <allowed_value value="18" description="CCC+"/>
+              <allowed_value value="19" description="CCC"/>
+              <allowed_value value="20" description="CCC-"/>
+              <allowed_value value="21" description="CC"/>
+              <allowed_value value="22" description="C"/>
+              <allowed_value value="23" description="DDD"/>
+              <allowed_value value="24" description="DD"/>
+              <allowed_value value="25" description="D"/>
+              <allowed_value value="316" description="WD"/>
+            </allowed_values>
+</field>
+<field>
+<datum_id>15</datum_id>
+<field_type>short_value_enumeration</field_type>
+<example_value>5</example_value>
+<allowed_values optional_value_allowed="true">
+              <allowed_value value="0" description="Null"/>
+              <allowed_value value="1" description="NR"/>
+              <allowed_value value="2" description="AAA"/>
+              <allowed_value value="3" description="AA+"/>
+              <allowed_value value="4" description="AA"/>
+              <allowed_value value="5" description="AA-"/>
+              <allowed_value value="6" description="A+"/>
+              <allowed_value value="7" description="A"/>
+              <allowed_value value="8" description="A-"/>
+              <allowed_value value="9" description="BBB+"/>
+              <allowed_value value="10" description="BBB"/>
+              <allowed_value value="11" description="BBB-"/>
+              <allowed_value value="12" description="BB+"/>
+              <allowed_value value="13" description="BB"/>
+              <allowed_value value="14" description="BB-"/>
+              <allowed_value value="15" description="B+"/>
+              <allowed_value value="16" description="B"/>
+              <allowed_value value="17" description="B-"/>
+              <allowed_value value="18" description="CCC+"/>
+              <allowed_value value="19" description="CCC"/>
+              <allowed_value value="20" description="CCC-"/>
+              <allowed_value value="21" description="CC"/>
+              <allowed_value value="22" description="C"/>
+              <allowed_value value="23" description="DDD"/>
+              <allowed_value value="24" description="DD"/>
+              <allowed_value value="25" description="D"/>
+              <allowed_value value="316" description="WD"/>
+            </allowed_values>
+</field>
+<field>
+<datum_id>16</datum_id>
+<field_type>short</field_type>
+<example_value>2</example_value>
+</field>
+<field>
+<datum_id>17</datum_id>
+<field_type>short</field_type>
+<example_value>-1</example_value>
+</field>
+<field>
+<datum_id>18</datum_id>
+<field_type>short</field_type>
+<example_value>1</example_value>
+</field>
+</fields>
+</message>
+</messages>
+</category>
+<category name="Fitch_Supranational_Ratings_Data">
+<description>Fitch Supranational Ratings Data</description>
+<country>ANY</country>
+<category_id>1002</category_id>
+<data>
+<datum>
+<short_description>Fitch Issuer ID</short_description>
+<description>Fitch Issuer ID</description>
+<datum_type>index</datum_type>
+<datum_id>1</datum_id>
+</datum>
+<datum>
+<short_description>Action: Long Term Foreign Currency Issuer Default Rating (IDR)</short_description>
+<description>Action: Long Term Foreign Currency Issuer Default Rating (IDR)</description>
+<datum_type>index</datum_type>
+<datum_id>2</datum_id>
+</datum>
+<datum>
+<short_description>Current: Long Term Foreign Currency Issuer Default Rating (IDR)</short_description>
+<description>Current: Long Term Foreign Currency Issuer Default Rating (IDR)</description>
+<datum_type>index</datum_type>
+<datum_id>3</datum_id>
+</datum>
+<datum>
+<short_description>Previous: Long Term Foreign Currency Issuer Default Rating (IDR)</short_description>
+<description>Previous: Long Term Foreign Currency Issuer Default Rating (IDR)</description>
+<datum_type>index</datum_type>
+<datum_id>4</datum_id>
+</datum>
+<datum>
+<short_description>Outlook: Long Term Rating Outlook (IDR)</short_description>
+<description>Outlook: Long Term Rating Outlook (IDR)</description>
+<datum_type>index</datum_type>
+<datum_id>5</datum_id>
+</datum>
+<datum>
+<short_description>Action: Short Term Foreign Currency Issuer Default Rating (IDR)</short_description>
+<description>Action: Short Term Foreign Currency Issuer Default Rating (IDR)</description>
+<datum_type>index</datum_type>
+<datum_id>6</datum_id>
+</datum>
+<datum>
+<short_description>Current: Short Term Foreign Currency Issuer Default Rating (IDR)</short_description>
+<description>Current: Short Term Foreign Currency Issuer Default Rating (IDR)</description>
+<datum_type>index</datum_type>
+<datum_id>7</datum_id>
+</datum>
+<datum>
+<short_description>Previous: Short Term Foreign Currency Issuer Default Rating (IDR)</short_description>
+<description>Previous: Short Term Foreign Currency Issuer Default Rating (IDR)</description>
+<datum_type>index</datum_type>
+<datum_id>8</datum_id>
+</datum>
+<datum>
+<short_description>Action: National Long Term Rating</short_description>
+<description>Action: National Long Term Rating</description>
+<datum_type>index</datum_type>
+<datum_id>32</datum_id>
+</datum>
+<datum>
+<short_description>Current: National Long Term Rating</short_description>
+<description>Current: National Long Term Rating</description>
+<datum_type>index</datum_type>
+<datum_id>33</datum_id>
+</datum>
+<datum>
+<short_description>Previous: National Long Term Rating</short_description>
+<description>Previous: National Long Term Rating</description>
+<datum_type>index</datum_type>
+<datum_id>34</datum_id>
+</datum>
+<datum>
+<short_description>Outlook: National Long Term Rating</short_description>
+<description>Outlook: National Long Term Rating</description>
+<datum_type>index</datum_type>
+<datum_id>35</datum_id>
+</datum>
+<datum>
+<short_description>Action: National Short Term Rating</short_description>
+<description>Action: National Short Term Rating</description>
+<datum_type>index</datum_type>
+<datum_id>36</datum_id>
+</datum>
+<datum>
+<short_description>Current: National Short Term Rating</short_description>
+<description>Current: National Short Term Rating</description>
+<datum_type>index</datum_type>
+<datum_id>37</datum_id>
+</datum>
+<datum>
+<short_description>Previous: National Short Term Rating</short_description>
+<description>Previous: National Short Term Rating</description>
+<datum_type>index</datum_type>
+<datum_id>38</datum_id>
+</datum>
+</data>
+<messages>
+<message>
+<message_type>release</message_type>
+<message_version>1</message_version>
+<multicast_group>FITCH</multicast_group>
+<fields>
+<field>
+<datum_id>1</datum_id>
+<field_type>int</field_type>
+<example_value>73719737</example_value>
+</field>
+<field>
+<datum_id>2</datum_id>
+<field_type>short_value_enumeration</field_type>
+<example_value>3</example_value>
+<allowed_values optional_value_allowed="true">
+              <allowed_value value="0" description="Null"/>
+              <allowed_value value="1" description="Affirmed"/>
+              <allowed_value value="2" description="Rating Watch On"/>
+              <allowed_value value="3" description="Downgrade"/>
+              <allowed_value value="4" description="New Rating"/>
+              <allowed_value value="5" description="Revision Implication Watch"/>
+              <allowed_value value="6" description="Upgrade"/>
+              <allowed_value value="7" description="Withdrawn"/>
+              <allowed_value value="8" description="Revision Enhancement"/>
+              <allowed_value value="9" description="Expected Rating"/>
+              <allowed_value value="10" description="Revision Rating"/>
+              <allowed_value value="12" description="Revision Outlook"/>
+              <allowed_value value="15" description="Rating Watch Maintained"/>
+              <allowed_value value="16" description="Confirmed"/>
+              <allowed_value value="17" description="Revision IDR"/>
+              <allowed_value value="18" description="Recovery Rating Revision"/>
+              <allowed_value value="24" description="Matured"/>
+              <allowed_value value="25" description="Support Rating Floor Revision"/>
+              <allowed_value value="26" description="Publish"/>
+              <allowed_value value="30" description="Not Monitored"/>
+              <allowed_value value="31" description="Notice of Withdrawal"/>
+              <allowed_value value="34" description="Under Review"/>
+              <allowed_value value="35" description="Suspended"/>
+            </allowed_values>
+</field>
+<field>
+<datum_id>3</datum_id>
+<field_type>short_value_enumeration</field_type>
+<example_value>7</example_value>
+<allowed_values optional_value_allowed="true">
+              <allowed_value value="0" description="Null"/>
+              <allowed_value value="1" description="NR"/>
+              <allowed_value value="2" description="AAA"/>
+              <allowed_value value="3" description="AA+"/>
+              <allowed_value value="4" description="AA"/>
+              <allowed_value value="5" description="AA-"/>
+              <allowed_value value="6" description="A+"/>
+              <allowed_value value="7" description="A"/>
+              <allowed_value value="8" description="A-"/>
+              <allowed_value value="9" description="BBB+"/>
+              <allowed_value value="10" description="BBB"/>
+              <allowed_value value="11" description="BBB-"/>
+              <allowed_value value="12" description="BB+"/>
+              <allowed_value value="13" description="BB"/>
+              <allowed_value value="14" description="BB-"/>
+              <allowed_value value="15" description="B+"/>
+              <allowed_value value="16" description="B"/>
+              <allowed_value value="17" description="B-"/>
+              <allowed_value value="18" description="CCC+"/>
+              <allowed_value value="19" description="CCC"/>
+              <allowed_value value="20" description="CCC-"/>
+              <allowed_value value="21" description="CC"/>
+              <allowed_value value="22" description="C"/>
+              <allowed_value value="23" description="DDD"/>
+              <allowed_value value="24" description="DD"/>
+              <allowed_value value="25" description="D"/>
+              <allowed_value value="26" description="AAA(EXP)"/>
+              <allowed_value value="27" description="AA+(EXP)"/>
+              <allowed_value value="28" description="AA(EXP)"/>
+              <allowed_value value="29" description="AA-(EXP)"/>
+              <allowed_value value="30" description="A+(EXP)"/>
+              <allowed_value value="31" description="A(EXP)"/>
+              <allowed_value value="32" description="A-(EXP)"/>
+              <allowed_value value="33" description="BBB+(EXP)"/>
+              <allowed_value value="34" description="BBB(EXP)"/>
+              <allowed_value value="35" description="BBB-(EXP)"/>
+              <allowed_value value="36" description="BB+(EXP)"/>
+              <allowed_value value="37" description="BB(EXP)"/>
+              <allowed_value value="38" description="BB-(EXP)"/>
+              <allowed_value value="39" description="B+(EXP)"/>
+              <allowed_value value="40" description="B(EXP)"/>
+              <allowed_value value="41" description="B-(EXP)"/>
+              <allowed_value value="42" description="CCC+(EXP)"/>
+              <allowed_value value="43" description="CCC(EXP)"/>
+              <allowed_value value="44" description="CCC-(EXP)"/>
+              <allowed_value value="45" description="CC(EXP)"/>
+              <allowed_value value="46" description="C(EXP)"/>
+              <allowed_value value="47" description="DDD(EXP)"/>
+              <allowed_value value="48" description="DD(EXP)"/>
+              <allowed_value value="49" description="DD-(EXP)"/>
+              <allowed_value value="50" description="D(EXP)"/>
+              <allowed_value value="51" description="NR(EXP)"/>
+              <allowed_value value="316" description="WD"/>
+              <allowed_value value="318" description="RD"/>
+            </allowed_values>
+</field>
+<field>
+<datum_id>4</datum_id>
+<field_type>short_value_enumeration</field_type>
+<example_value>6</example_value>
+<allowed_values optional_value_allowed="true">
+              <allowed_value value="0" description="Null"/>
+              <allowed_value value="1" description="NR"/>
+              <allowed_value value="2" description="AAA"/>
+              <allowed_value value="3" description="AA+"/>
+              <allowed_value value="4" description="AA"/>
+              <allowed_value value="5" description="AA-"/>
+              <allowed_value value="6" description="A+"/>
+              <allowed_value value="7" description="A"/>
+              <allowed_value value="8" description="A-"/>
+              <allowed_value value="9" description="BBB+"/>
+              <allowed_value value="10" description="BBB"/>
+              <allowed_value value="11" description="BBB-"/>
+              <allowed_value value="12" description="BB+"/>
+              <allowed_value value="13" description="BB"/>
+              <allowed_value value="14" description="BB-"/>
+              <allowed_value value="15" description="B+"/>
+              <allowed_value value="16" description="B"/>
+              <allowed_value value="17" description="B-"/>
+              <allowed_value value="18" description="CCC+"/>
+              <allowed_value value="19" description="CCC"/>
+              <allowed_value value="20" description="CCC-"/>
+              <allowed_value value="21" description="CC"/>
+              <allowed_value value="22" description="C"/>
+              <allowed_value value="23" description="DDD"/>
+              <allowed_value value="24" description="DD"/>
+              <allowed_value value="25" description="D"/>
+              <allowed_value value="26" description="AAA(EXP)"/>
+              <allowed_value value="27" description="AA+(EXP)"/>
+              <allowed_value value="28" description="AA(EXP)"/>
+              <allowed_value value="29" description="AA-(EXP)"/>
+              <allowed_value value="30" description="A+(EXP)"/>
+              <allowed_value value="31" description="A(EXP)"/>
+              <allowed_value value="32" description="A-(EXP)"/>
+              <allowed_value value="33" description="BBB+(EXP)"/>
+              <allowed_value value="34" description="BBB(EXP)"/>
+              <allowed_value value="35" description="BBB-(EXP)"/>
+              <allowed_value value="36" description="BB+(EXP)"/>
+              <allowed_value value="37" description="BB(EXP)"/>
+              <allowed_value value="38" description="BB-(EXP)"/>
+              <allowed_value value="39" description="B+(EXP)"/>
+              <allowed_value value="40" description="B(EXP)"/>
+              <allowed_value value="41" description="B-(EXP)"/>
+              <allowed_value value="42" description="CCC+(EXP)"/>
+              <allowed_value value="43" description="CCC(EXP)"/>
+              <allowed_value value="44" description="CCC-(EXP)"/>
+              <allowed_value value="45" description="CC(EXP)"/>
+              <allowed_value value="46" description="C(EXP)"/>
+              <allowed_value value="47" description="DDD(EXP)"/>
+              <allowed_value value="48" description="DD(EXP)"/>
+              <allowed_value value="49" description="DD-(EXP)"/>
+              <allowed_value value="50" description="D(EXP)"/>
+              <allowed_value value="51" description="NR(EXP)"/>
+              <allowed_value value="316" description="WD"/>
+              <allowed_value value="318" description="RD"/>
+            </allowed_values>
+</field>
+<field>
+<datum_id>5</datum_id>
+<field_type>short_value_enumeration</field_type>
+<example_value>2</example_value>
+<allowed_values optional_value_allowed="true">
+              <allowed_value value="0" description="Null"/>
+              <allowed_value value="2" description="Rating Watch Positive"/>
+              <allowed_value value="3" description="Rating Watch Negative"/>
+              <allowed_value value="4" description="Rating Watch Evolving"/>
+              <allowed_value value="5" description="Rating Watch Off"/>
+              <allowed_value value="7" description="Rating Outlook Stable"/>
+              <allowed_value value="8" description="Rating Outlook Negative"/>
+              <allowed_value value="9" description="Rating Outlook Positive"/>
+              <allowed_value value="10" description="Rating Outlook Evolving"/>
+              <allowed_value value="19" description="Under Review"/>
+            </allowed_values>
+</field>
+<field>
+<datum_id>6</datum_id>
+<field_type>short_value_enumeration</field_type>
+<example_value>6</example_value>
+<allowed_values optional_value_allowed="true">
+              <allowed_value value="0" description="Null"/>
+              <allowed_value value="1" description="Affirmed"/>
+              <allowed_value value="2" description="Rating Watch On"/>
+              <allowed_value value="3" description="Downgrade"/>
+              <allowed_value value="4" description="New Rating"/>
+              <allowed_value value="5" description="Revision Implication Watch"/>
+              <allowed_value value="6" description="Upgrade"/>
+              <allowed_value value="7" description="Withdrawn"/>
+              <allowed_value value="8" description="Revision Enhancement"/>
+              <allowed_value value="9" description="Expected Rating"/>
+              <allowed_value value="10" description="Revision Rating"/>
+              <allowed_value value="12" description="Revision Outlook"/>
+              <allowed_value value="15" description="Rating Watch Maintained"/>
+              <allowed_value value="16" description="Confirmed"/>
+              <allowed_value value="17" description="Revision IDR"/>
+              <allowed_value value="18" description="Recovery Rating Revision"/>
+              <allowed_value value="24" description="Matured"/>
+              <allowed_value value="25" description="Support Rating Floor Revision"/>
+              <allowed_value value="26" description="Publish"/>
+              <allowed_value value="30" description="Not Monitored"/>
+              <allowed_value value="31" description="Notice of Withdrawal"/>
+              <allowed_value value="34" description="Under Review"/>
+              <allowed_value value="35" description="Suspended"/>
+            </allowed_values>
+</field>
+<field>
+<datum_id>7</datum_id>
+<field_type>short_value_enumeration</field_type>
+<example_value>3</example_value>
+<allowed_values optional_value_allowed="true">
+              <allowed_value value="0" description="Null"/>
+              <allowed_value value="1" description="NR- Not Rated"/>
+              <allowed_value value="2" description="F1+"/>
+              <allowed_value value="3" description="F1"/>
+              <allowed_value value="4" description="F2"/>
+              <allowed_value value="5" description="F3"/>
+              <allowed_value value="6" description="B"/>
+              <allowed_value value="7" description="C"/>
+              <allowed_value value="8" description="D"/>
+              <allowed_value value="9" description="F1+(EXP)"/>
+              <allowed_value value="10" description="F1(EXP)"/>
+              <allowed_value value="11" description="F2(EXP)"/>
+              <allowed_value value="12" description="F3(EXP)"/>
+              <allowed_value value="13" description="B(EXP)"/>
+              <allowed_value value="14" description="C(EXP)"/>
+              <allowed_value value="15" description="D(EXP)"/>
+              <allowed_value value="16" description="NR(EXP)"/>
+              <allowed_value value="629" description="RD"/>
+            </allowed_values>
+</field>
+<field>
+<datum_id>8</datum_id>
+<field_type>short_value_enumeration</field_type>
+<example_value>4</example_value>
+<allowed_values optional_value_allowed="true">
+              <allowed_value value="0" description="Null"/>
+              <allowed_value value="1" description="NR- Not Rated"/>
+              <allowed_value value="2" description="F1+"/>
+              <allowed_value value="3" description="F1"/>
+              <allowed_value value="4" description="F2"/>
+              <allowed_value value="5" description="F3"/>
+              <allowed_value value="6" description="B"/>
+              <allowed_value value="7" description="C"/>
+              <allowed_value value="8" description="D"/>
+              <allowed_value value="9" description="F1+(EXP)"/>
+              <allowed_value value="10" description="F1(EXP)"/>
+              <allowed_value value="11" description="F2(EXP)"/>
+              <allowed_value value="12" description="F3(EXP)"/>
+              <allowed_value value="13" description="B(EXP)"/>
+              <allowed_value value="14" description="C(EXP)"/>
+              <allowed_value value="15" description="D(EXP)"/>
+              <allowed_value value="16" description="NR(EXP)"/>
+              <allowed_value value="629" description="RD"/>
+            </allowed_values>
+</field>
+<field>
+<datum_id>32</datum_id>
+<field_type>short_value_enumeration</field_type>
+<example_value>3</example_value>
+<allowed_values optional_value_allowed="true">
+              <allowed_value value="0" description="Null"/>
+              <allowed_value value="1" description="Affirmed"/>
+              <allowed_value value="2" description="Rating Watch On"/>
+              <allowed_value value="3" description="Downgrade"/>
+              <allowed_value value="4" description="New Rating"/>
+              <allowed_value value="5" description="Revision Implication Watch"/>
+              <allowed_value value="6" description="Upgrade"/>
+              <allowed_value value="7" description="Withdrawn"/>
+              <allowed_value value="8" description="Revision Enhancement"/>
+              <allowed_value value="9" description="Expected Rating"/>
+              <allowed_value value="10" description="Revision Rating"/>
+              <allowed_value value="12" description="Revision Outlook"/>
+              <allowed_value value="15" description="Rating Watch Maintained"/>
+              <allowed_value value="16" description="Confirmed"/>
+              <allowed_value value="17" description="Revision IDR"/>
+              <allowed_value value="18" description="Recovery Rating Revision"/>
+              <allowed_value value="24" description="Matured"/>
+              <allowed_value value="25" description="Support Rating Floor Revision"/>
+              <allowed_value value="26" description="Publish"/>
+              <allowed_value value="30" description="Not Monitored"/>
+              <allowed_value value="31" description="Notice of Withdrawal"/>
+              <allowed_value value="34" description="Under Review"/>
+              <allowed_value value="35" description="Suspended"/>
+            </allowed_values>
+</field>
+<field>
+<datum_id>33</datum_id>
+<field_type>short_value_enumeration</field_type>
+<example_value>4</example_value>
+<allowed_values optional_value_allowed="true">
+              <allowed_value value="0" description="Null"/>
+              <allowed_value value="1" description="NR"/>
+              <allowed_value value="2" description="AAA"/>
+              <allowed_value value="3" description="AA+"/>
+              <allowed_value value="4" description="AA"/>
+              <allowed_value value="5" description="AA-"/>
+              <allowed_value value="6" description="A+"/>
+              <allowed_value value="7" description="A"/>
+              <allowed_value value="8" description="A-"/>
+              <allowed_value value="9" description="BBB+"/>
+              <allowed_value value="10" description="BBB"/>
+              <allowed_value value="11" description="BBB-"/>
+              <allowed_value value="12" description="BB+"/>
+              <allowed_value value="13" description="BB"/>
+              <allowed_value value="14" description="BB-"/>
+              <allowed_value value="15" description="B+"/>
+              <allowed_value value="16" description="B"/>
+              <allowed_value value="17" description="B-"/>
+              <allowed_value value="18" description="CCC+"/>
+              <allowed_value value="19" description="CCC"/>
+              <allowed_value value="20" description="CCC-"/>
+              <allowed_value value="21" description="CC"/>
+              <allowed_value value="22" description="C"/>
+              <allowed_value value="23" description="DDD"/>
+              <allowed_value value="24" description="DD"/>
+              <allowed_value value="25" description="D"/>
+              <allowed_value value="26" description="E"/>
+              <allowed_value value="27" description="C+"/>
+              <allowed_value value="28" description="C-"/>
+              <allowed_value value="29" description="NR(EXP)"/>
+              <allowed_value value="30" description="AAA(EXP)"/>
+              <allowed_value value="31" description="AA+(EXP)"/>
+              <allowed_value value="32" description="AA(EXP)"/>
+              <allowed_value value="33" description="AA-(EXP)"/>
+              <allowed_value value="34" description="A+(EXP)"/>
+              <allowed_value value="35" description="A(EXP)"/>
+              <allowed_value value="36" description="A-(EXP)"/>
+              <allowed_value value="37" description="BBB+(EXP)"/>
+              <allowed_value value="38" description="BBB(EXP)"/>
+              <allowed_value value="39" description="BBB-(EXP)"/>
+              <allowed_value value="40" description="BB+(EXP)"/>
+              <allowed_value value="41" description="BB(EXP)"/>
+              <allowed_value value="42" description="BB-(EXP)"/>
+              <allowed_value value="43" description="B+(EXP)"/>
+              <allowed_value value="44" description="B(EXP)"/>
+              <allowed_value value="45" description="B-(EXP)"/>
+              <allowed_value value="46" description="CCC+(EXP)"/>
+              <allowed_value value="47" description="CCC(EXP)"/>
+              <allowed_value value="48" description="CCC-(EXP)"/>
+              <allowed_value value="49" description="CC(EXP)"/>
+              <allowed_value value="50" description="C(EXP)"/>
+              <allowed_value value="51" description="DDD(EXP)"/>
+              <allowed_value value="52" description="DD(EXP)"/>
+              <allowed_value value="53" description="D(EXP)"/>
+              <allowed_value value="54" description="E(EXP)"/>
+              <allowed_value value="55" description="PIF"/>
+              <allowed_value value="56" description="WD"/>
+              <allowed_value value="57" description="C+(EXP)"/>
+              <allowed_value value="58" description="C-(EXP)"/>
+              <allowed_value value="60" description="S"/>
+              <allowed_value value="502" description="RD"/>
+            </allowed_values>
+</field>
+<field>
+<datum_id>34</datum_id>
+<field_type>short_value_enumeration</field_type>
+<example_value>4</example_value>
+<allowed_values optional_value_allowed="true">
+              <allowed_value value="0" description="Null"/>
+              <allowed_value value="1" description="NR"/>
+              <allowed_value value="2" description="AAA"/>
+              <allowed_value value="3" description="AA+"/>
+              <allowed_value value="4" description="AA"/>
+              <allowed_value value="5" description="AA-"/>
+              <allowed_value value="6" description="A+"/>
+              <allowed_value value="7" description="A"/>
+              <allowed_value value="8" description="A-"/>
+              <allowed_value value="9" description="BBB+"/>
+              <allowed_value value="10" description="BBB"/>
+              <allowed_value value="11" description="BBB-"/>
+              <allowed_value value="12" description="BB+"/>
+              <allowed_value value="13" description="BB"/>
+              <allowed_value value="14" description="BB-"/>
+              <allowed_value value="15" description="B+"/>
+              <allowed_value value="16" description="B"/>
+              <allowed_value value="17" description="B-"/>
+              <allowed_value value="18" description="CCC+"/>
+              <allowed_value value="19" description="CCC"/>
+              <allowed_value value="20" description="CCC-"/>
+              <allowed_value value="21" description="CC"/>
+              <allowed_value value="22" description="C"/>
+              <allowed_value value="23" description="DDD"/>
+              <allowed_value value="24" description="DD"/>
+              <allowed_value value="25" description="D"/>
+              <allowed_value value="26" description="E"/>
+              <allowed_value value="27" description="C+"/>
+              <allowed_value value="28" description="C-"/>
+              <allowed_value value="29" description="NR(EXP)"/>
+              <allowed_value value="30" description="AAA(EXP)"/>
+              <allowed_value value="31" description="AA+(EXP)"/>
+              <allowed_value value="32" description="AA(EXP)"/>
+              <allowed_value value="33" description="AA-(EXP)"/>
+              <allowed_value value="34" description="A+(EXP)"/>
+              <allowed_value value="35" description="A(EXP)"/>
+              <allowed_value value="36" description="A-(EXP)"/>
+              <allowed_value value="37" description="BBB+(EXP)"/>
+              <allowed_value value="38" description="BBB(EXP)"/>
+              <allowed_value value="39" description="BBB-(EXP)"/>
+              <allowed_value value="40" description="BB+(EXP)"/>
+              <allowed_value value="41" description="BB(EXP)"/>
+              <allowed_value value="42" description="BB-(EXP)"/>
+              <allowed_value value="43" description="B+(EXP)"/>
+              <allowed_value value="44" description="B(EXP)"/>
+              <allowed_value value="45" description="B-(EXP)"/>
+              <allowed_value value="46" description="CCC+(EXP)"/>
+              <allowed_value value="47" description="CCC(EXP)"/>
+              <allowed_value value="48" description="CCC-(EXP)"/>
+              <allowed_value value="49" description="CC(EXP)"/>
+              <allowed_value value="50" description="C(EXP)"/>
+              <allowed_value value="51" description="DDD(EXP)"/>
+              <allowed_value value="52" description="DD(EXP)"/>
+              <allowed_value value="53" description="D(EXP)"/>
+              <allowed_value value="54" description="E(EXP)"/>
+              <allowed_value value="55" description="PIF"/>
+              <allowed_value value="56" description="WD"/>
+              <allowed_value value="57" description="C+(EXP)"/>
+              <allowed_value value="58" description="C-(EXP)"/>
+              <allowed_value value="60" description="S"/>
+              <allowed_value value="502" description="RD"/>
+            </allowed_values>
+</field>
+<field>
+<datum_id>35</datum_id>
+<field_type>short_value_enumeration</field_type>
+<example_value>4</example_value>
+<allowed_values optional_value_allowed="true">
+              <allowed_value value="0" description="Null"/>
+              <allowed_value value="2" description="Rating Watch Positive"/>
+              <allowed_value value="3" description="Rating Watch Negative"/>
+              <allowed_value value="4" description="Rating Watch Evolving"/>
+              <allowed_value value="5" description="Rating Watch Off"/>
+              <allowed_value value="7" description="Rating Outlook Stable"/>
+              <allowed_value value="8" description="Rating Outlook Negative"/>
+              <allowed_value value="9" description="Rating Outlook Positive"/>
+              <allowed_value value="10" description="Rating Outlook Evolving"/>
+              <allowed_value value="19" description="Under Review"/>
+            </allowed_values>
+</field>
+<field>
+<datum_id>36</datum_id>
+<field_type>short_value_enumeration</field_type>
+<example_value>4</example_value>
+<allowed_values optional_value_allowed="true">
+              <allowed_value value="0" description="Null"/>
+              <allowed_value value="1" description="Affirmed"/>
+              <allowed_value value="2" description="Rating Watch On"/>
+              <allowed_value value="3" description="Downgrade"/>
+              <allowed_value value="4" description="New Rating"/>
+              <allowed_value value="5" description="Revision Implication Watch"/>
+              <allowed_value value="6" description="Upgrade"/>
+              <allowed_value value="7" description="Withdrawn"/>
+              <allowed_value value="8" description="Revision Enhancement"/>
+              <allowed_value value="9" description="Expected Rating"/>
+              <allowed_value value="10" description="Revision Rating"/>
+              <allowed_value value="12" description="Revision Outlook"/>
+              <allowed_value value="15" description="Rating Watch Maintained"/>
+              <allowed_value value="16" description="Confirmed"/>
+              <allowed_value value="17" description="Revision IDR"/>
+              <allowed_value value="18" description="Recovery Rating Revision"/>
+              <allowed_value value="24" description="Matured"/>
+              <allowed_value value="25" description="Support Rating Floor Revision"/>
+              <allowed_value value="26" description="Publish"/>
+              <allowed_value value="30" description="Not Monitored"/>
+              <allowed_value value="31" description="Notice of Withdrawal"/>
+              <allowed_value value="34" description="Under Review"/>
+              <allowed_value value="35" description="Suspended"/>
+            </allowed_values>
+</field>
+<field>
+<datum_id>37</datum_id>
+<field_type>short_value_enumeration</field_type>
+<example_value>4</example_value>
+<allowed_values optional_value_allowed="true">
+              <allowed_value value="0" description="Null"/>
+              <allowed_value value="1" description="NR- Not Rated"/>
+              <allowed_value value="2" description="F1+"/>
+              <allowed_value value="3" description="F1"/>
+              <allowed_value value="4" description="F2"/>
+              <allowed_value value="5" description="F3"/>
+              <allowed_value value="6" description="B"/>
+              <allowed_value value="7" description="C"/>
+              <allowed_value value="8" description="D"/>
+              <allowed_value value="9" description="E"/>
+              <allowed_value value="10" description="F1+(EXP)"/>
+              <allowed_value value="11" description="F1(EXP)"/>
+              <allowed_value value="12" description="F2(EXP)"/>
+              <allowed_value value="13" description="F3(EXP)"/>
+              <allowed_value value="14" description="B(EXP)"/>
+              <allowed_value value="15" description="C(EXP)"/>
+              <allowed_value value="16" description="D(EXP)"/>
+              <allowed_value value="17" description="A1+(EXP)"/>
+              <allowed_value value="18" description="A1(EXP)"/>
+              <allowed_value value="19" description="A2(EXP)"/>
+              <allowed_value value="20" description="A3(EXP)"/>
+              <allowed_value value="21" description="E(EXP)"/>
+              <allowed_value value="22" description="F4(EXP)"/>
+              <allowed_value value="23" description="NR(EXP)"/>
+              <allowed_value value="24" description="A2+(EXP)"/>
+              <allowed_value value="25" description="A3+(EXP)"/>
+              <allowed_value value="26" description="A4+(EXP)"/>
+              <allowed_value value="27" description="A4(EXP)"/>
+              <allowed_value value="55" description="PIF"/>
+              <allowed_value value="56" description="WD"/>
+              <allowed_value value="386" description="A1+"/>
+              <allowed_value value="387" description="A1"/>
+              <allowed_value value="388" description="A2"/>
+              <allowed_value value="389" description="A3"/>
+              <allowed_value value="390" description="N1+"/>
+              <allowed_value value="391" description="N1"/>
+              <allowed_value value="392" description="N2"/>
+              <allowed_value value="393" description="N3"/>
+              <allowed_value value="394" description="N4"/>
+              <allowed_value value="395" description="N5"/>
+              <allowed_value value="489" description="F2+"/>
+              <allowed_value value="500" description="A2+"/>
+              <allowed_value value="501" description="A3+"/>
+              <allowed_value value="502" description="A4+"/>
+              <allowed_value value="503" description="A4"/>
+              <allowed_value value="703" description="F4"/>
+              <allowed_value value="704" description="F5"/>
+            </allowed_values>
+</field>
+<field>
+<datum_id>38</datum_id>
+<field_type>short_value_enumeration</field_type>
+<example_value>4</example_value>
+<allowed_values optional_value_allowed="true">
+              <allowed_value value="0" description="Null"/>
+              <allowed_value value="1" description="NR- Not Rated"/>
+              <allowed_value value="2" description="F1+"/>
+              <allowed_value value="3" description="F1"/>
+              <allowed_value value="4" description="F2"/>
+              <allowed_value value="5" description="F3"/>
+              <allowed_value value="6" description="B"/>
+              <allowed_value value="7" description="C"/>
+              <allowed_value value="8" description="D"/>
+              <allowed_value value="9" description="E"/>
+              <allowed_value value="10" description="F1+(EXP)"/>
+              <allowed_value value="11" description="F1(EXP)"/>
+              <allowed_value value="12" description="F2(EXP)"/>
+              <allowed_value value="13" description="F3(EXP)"/>
+              <allowed_value value="14" description="B(EXP)"/>
+              <allowed_value value="15" description="C(EXP)"/>
+              <allowed_value value="16" description="D(EXP)"/>
+              <allowed_value value="17" description="A1+(EXP)"/>
+              <allowed_value value="18" description="A1(EXP)"/>
+              <allowed_value value="19" description="A2(EXP)"/>
+              <allowed_value value="20" description="A3(EXP)"/>
+              <allowed_value value="21" description="E(EXP)"/>
+              <allowed_value value="22" description="F4(EXP)"/>
+              <allowed_value value="23" description="NR(EXP)"/>
+              <allowed_value value="24" description="A2+(EXP)"/>
+              <allowed_value value="25" description="A3+(EXP)"/>
+              <allowed_value value="26" description="A4+(EXP)"/>
+              <allowed_value value="27" description="A4(EXP)"/>
+              <allowed_value value="55" description="PIF"/>
+              <allowed_value value="56" description="WD"/>
+              <allowed_value value="386" description="A1+"/>
+              <allowed_value value="387" description="A1"/>
+              <allowed_value value="388" description="A2"/>
+              <allowed_value value="389" description="A3"/>
+              <allowed_value value="390" description="N1+"/>
+              <allowed_value value="391" description="N1"/>
+              <allowed_value value="392" description="N2"/>
+              <allowed_value value="393" description="N3"/>
+              <allowed_value value="394" description="N4"/>
+              <allowed_value value="395" description="N5"/>
+              <allowed_value value="489" description="F2+"/>
+              <allowed_value value="500" description="A2+"/>
+            </allowed_values>
+</field>
+</fields>
+</message>
+</messages>
+</category>
+<category name="Fitch_Corporate_Finance_Ratings_Data">
+<description>Fitch Corporate Finance Ratings Data</description>
+<country>ANY</country>
+<category_id>1003</category_id>
+<data>
+<datum>
+<short_description>Fitch Issuer ID</short_description>
+<description>Fitch Issuer ID</description>
+<datum_type>index</datum_type>
+<datum_id>1</datum_id>
+</datum>
+<datum>
+<short_description>Action: Long Term Foreign Currency Issuer Default Rating (IDR)</short_description>
+<description>Action: Long Term Foreign Currency Issuer Default Rating (IDR)</description>
+<datum_type>index</datum_type>
+<datum_id>2</datum_id>
+</datum>
+<datum>
+<short_description>Current: Long Term Foreign Currency Issuer Default Rating (IDR)</short_description>
+<description>Current: Long Term Foreign Currency Issuer Default Rating (IDR)</description>
+<datum_type>index</datum_type>
+<datum_id>3</datum_id>
+</datum>
+<datum>
+<short_description>Previous: Long Term Foreign Currency Issuer Default Rating (IDR)</short_description>
+<description>Previous: Long Term Foreign Currency Issuer Default Rating (IDR)</description>
+<datum_type>index</datum_type>
+<datum_id>4</datum_id>
+</datum>
+<datum>
+<short_description>Outlook: Long Term Rating Outlook (IDR)</short_description>
+<description>Outlook: Long Term Rating Outlook (IDR)</description>
+<datum_type>index</datum_type>
+<datum_id>5</datum_id>
+</datum>
+<datum>
+<short_description>Action: Short Term Foreign Currency Issuer Default Rating (IDR)</short_description>
+<description>Action: Short Term Foreign Currency Issuer Default Rating (IDR)</description>
+<datum_type>index</datum_type>
+<datum_id>6</datum_id>
+</datum>
+<datum>
+<short_description>Current: Short Term Foreign Currency Issuer Default Rating (IDR)</short_description>
+<description>Current: Short Term Foreign Currency Issuer Default Rating (IDR)</description>
+<datum_type>index</datum_type>
+<datum_id>7</datum_id>
+</datum>
+<datum>
+<short_description>Previous: Short Term Foreign Currency Issuer Default Rating (IDR)</short_description>
+<description>Previous: Short Term Foreign Currency Issuer Default Rating (IDR)</description>
+<datum_type>index</datum_type>
+<datum_id>8</datum_id>
+</datum>
+<datum>
+<short_description>Action: Long Term Local Currency Issuer Default Rating (IDR)</short_description>
+<description>Action: Long Term Local Currency Issuer Default Rating (IDR)</description>
+<datum_type>index</datum_type>
+<datum_id>9</datum_id>
+</datum>
+<datum>
+<short_description>Current: Long Term Local Currency Issuer Default Rating (IDR)</short_description>
+<description>Current: Long Term Local Currency Issuer Default Rating (IDR)</description>
+<datum_type>index</datum_type>
+<datum_id>10</datum_id>
+</datum>
+<datum>
+<short_description>Previous: Long Term Local Currency Issuer Default Rating (IDR)</short_description>
+<description>Previous: Long Term Local Currency Issuer Default Rating (IDR)</description>
+<datum_type>index</datum_type>
+<datum_id>11</datum_id>
+</datum>
+<datum>
+<short_description>Outlook: Long Term Local Currency Issuer Rating Outlook (IDR)</short_description>
+<description>Outlook: Long Term Local Currency Issuer Rating Outlook (IDR)</description>
+<datum_type>index</datum_type>
+<datum_id>12</datum_id>
+</datum>
+<datum>
+<short_description>Action: Support Rating Floor</short_description>
+<description>Action: Support Rating Floor</description>
+<datum_type>index</datum_type>
+<datum_id>16</datum_id>
+</datum>
+<datum>
+<short_description>Current: Support Rating Floor</short_description>
+<description>Current: Support Rating Floor</description>
+<datum_type>index</datum_type>
+<datum_id>17</datum_id>
+</datum>
+<datum>
+<short_description>Previous: Support Rating Floor</short_description>
+<description>Previous: Support Rating Floor</description>
+<datum_type>index</datum_type>
+<datum_id>18</datum_id>
+</datum>
+<datum>
+<short_description>Outlook: Support Rating Floor</short_description>
+<description>Outlook: Support Rating Floor</description>
+<datum_type>index</datum_type>
+<datum_id>19</datum_id>
+</datum>
+<datum>
+<short_description>Action: Viability Rating</short_description>
+<description>Action: Viability Rating</description>
+<datum_type>index</datum_type>
+<datum_id>20</datum_id>
+</datum>
+<datum>
+<short_description>Current: Viability Rating</short_description>
+<description>Current: Viability Rating</description>
+<datum_type>index</datum_type>
+<datum_id>21</datum_id>
+</datum>
+<datum>
+<short_description>Previous: Viability Rating</short_description>
+<description>Previous: Viability Rating</description>
+<datum_type>index</datum_type>
+<datum_id>22</datum_id>
+</datum>
+<datum>
+<short_description>Outlook: Viability Rating</short_description>
+<description>Outlook: Viability Rating</description>
+<datum_type>index</datum_type>
+<datum_id>23</datum_id>
+</datum>
+<datum>
+<short_description>Action: Support Rating</short_description>
+<description>Action: Support Rating</description>
+<datum_type>index</datum_type>
+<datum_id>24</datum_id>
+</datum>
+<datum>
+<short_description>Current: Support Rating</short_description>
+<description>Current: Support Rating</description>
+<datum_type>index</datum_type>
+<datum_id>25</datum_id>
+</datum>
+<datum>
+<short_description>Previous: Support Rating</short_description>
+<description>Previous: Support Rating</description>
+<datum_type>index</datum_type>
+<datum_id>26</datum_id>
+</datum>
+<datum>
+<short_description>Outlook: Support Rating</short_description>
+<description>Outlook: Support Rating</description>
+<datum_type>index</datum_type>
+<datum_id>27</datum_id>
+</datum>
+<datum>
+<short_description>Action: Insurer Financial Strength</short_description>
+<description>Action: Insurer Financial Strength</description>
+<datum_type>index</datum_type>
+<datum_id>28</datum_id>
+</datum>
+<datum>
+<short_description>Current: Insurer Financial Strength</short_description>
+<description>Current: Insurer Financial Strength</description>
+<datum_type>index</datum_type>
+<datum_id>29</datum_id>
+</datum>
+<datum>
+<short_description>Previous: Insurer Financial Strength</short_description>
+<description>Previous: Insurer Financial Strength</description>
+<datum_type>index</datum_type>
+<datum_id>30</datum_id>
+</datum>
+<datum>
+<short_description>Outlook: Insurer Financial Strength</short_description>
+<description>Outlook: Insurer Financial Strength</description>
+<datum_type>index</datum_type>
+<datum_id>31</datum_id>
+</datum>
+<datum>
+<short_description>Action: National Long Term Rating</short_description>
+<description>Action: National Long Term Rating</description>
+<datum_type>index</datum_type>
+<datum_id>32</datum_id>
+</datum>
+<datum>
+<short_description>Current: National Long Term Rating</short_description>
+<description>Current: National Long Term Rating</description>
+<datum_type>index</datum_type>
+<datum_id>33</datum_id>
+</datum>
+<datum>
+<short_description>Previous: National Long Term Rating</short_description>
+<description>Previous: National Long Term Rating</description>
+<datum_type>index</datum_type>
+<datum_id>34</datum_id>
+</datum>
+<datum>
+<short_description>Outlook: National Long Term Rating</short_description>
+<description>Outlook: National Long Term Rating</description>
+<datum_type>index</datum_type>
+<datum_id>35</datum_id>
+</datum>
+<datum>
+<short_description>Action: National Short Term Rating</short_description>
+<description>Action: National Short Term Rating</description>
+<datum_type>index</datum_type>
+<datum_id>36</datum_id>
+</datum>
+<datum>
+<short_description>Current: National Short Term Rating</short_description>
+<description>Current: National Short Term Rating</description>
+<datum_type>index</datum_type>
+<datum_id>37</datum_id>
+</datum>
+<datum>
+<short_description>Previous: National Short Term Rating</short_description>
+<description>Previous: National Short Term Rating</description>
+<datum_type>index</datum_type>
+<datum_id>38</datum_id>
+</datum>
+<datum>
+<short_description>Action: Local Currency Short Term Rating</short_description>
+<description>Action: Local Currency Short Term Rating</description>
+<datum_type>index</datum_type>
+<datum_id>39</datum_id>
+</datum>
+<datum>
+<short_description>Current: Local Currency Short Term Rating</short_description>
+<description>Current: Local Currency Short Term Rating</description>
+<datum_type>index</datum_type>
+<datum_id>40</datum_id>
+</datum>
+<datum>
+<short_description>Previous: Local Currency Short Term Rating</short_description>
+<description>Previous: Local Currency Short Term Rating</description>
+<datum_type>index</datum_type>
+<datum_id>41</datum_id>
+</datum>
+<datum>
+<short_description>Action: Short Term Insurer Financial Strength</short_description>
+<description>Action: Short Term Insurer Financial Strength</description>
+<datum_type>index</datum_type>
+<datum_id>42</datum_id>
+</datum>
+<datum>
+<short_description>Current: Short Term Insurer Financial Strength</short_description>
+<description>Current: Short Term Insurer Financial Strength</description>
+<datum_type>index</datum_type>
+<datum_id>43</datum_id>
+</datum>
+<datum>
+<short_description>Previous: Short Term Insurer Financial Strength</short_description>
+<description>Previous: Short Term Insurer Financial Strength</description>
+<datum_type>index</datum_type>
+<datum_id>44</datum_id>
+</datum>
+<datum>
+<short_description>Action: National Insurer Financial Strength</short_description>
+<description>Action: National Insurer Financial Strength</description>
+<datum_type>index</datum_type>
+<datum_id>45</datum_id>
+</datum>
+<datum>
+<short_description>Current: National Insurer Financial Strength</short_description>
+<description>Current: National Insurer Financial Strength</description>
+<datum_type>index</datum_type>
+<datum_id>46</datum_id>
+</datum>
+<datum>
+<short_description>Previous: National Insurer Financial Strength</short_description>
+<description>Previous: National Insurer Financial Strength</description>
+<datum_type>index</datum_type>
+<datum_id>47</datum_id>
+</datum>
+<datum>
+<short_description>Outlook: National Insurer Financial Strength</short_description>
+<description>Outlook: National Insurer Financial Strength</description>
+<datum_type>index</datum_type>
+<datum_id>48</datum_id>
+</datum>
+</data>
+<messages>
+<message>
+<message_type>release</message_type>
+<message_version>1</message_version>
+<multicast_group>FITCH</multicast_group>
+<fields>
+<field>
+<datum_id>1</datum_id>
+<field_type>int</field_type>
+<example_value>73719737</example_value>
+</field>
+<field>
+<datum_id>2</datum_id>
+<field_type>short_value_enumeration</field_type>
+<example_value>3</example_value>
+<allowed_values optional_value_allowed="true">
+              <allowed_value value="0" description="Null"/>
+              <allowed_value value="1" description="Affirmed"/>
+              <allowed_value value="2" description="Rating Watch On"/>
+              <allowed_value value="3" description="Downgrade"/>
+              <allowed_value value="4" description="New Rating"/>
+              <allowed_value value="5" description="Revision Implication Watch"/>
+              <allowed_value value="6" description="Upgrade"/>
+              <allowed_value value="7" description="Withdrawn"/>
+              <allowed_value value="8" description="Revision Enhancement"/>
+              <allowed_value value="9" description="Expected Rating"/>
+              <allowed_value value="10" description="Revision Rating"/>
+              <allowed_value value="12" description="Revision Outlook"/>
+              <allowed_value value="15" description="Rating Watch Maintained"/>
+              <allowed_value value="16" description="Confirmed"/>
+              <allowed_value value="17" description="Revision IDR"/>
+              <allowed_value value="18" description="Recovery Rating Revision"/>
+              <allowed_value value="24" description="Matured"/>
+              <allowed_value value="25" description="Support Rating Floor Revision"/>
+              <allowed_value value="26" description="Publish"/>
+              <allowed_value value="30" description="Not Monitored"/>
+              <allowed_value value="31" description="Notice of Withdrawal"/>
+              <allowed_value value="34" description="Under Review"/>
+              <allowed_value value="35" description="Suspended"/>
+            </allowed_values>
+</field>
+<field>
+<datum_id>3</datum_id>
+<field_type>short_value_enumeration</field_type>
+<example_value>7</example_value>
+<allowed_values optional_value_allowed="true">
+              <allowed_value value="0" description="Null"/>
+              <allowed_value value="1" description="NR"/>
+              <allowed_value value="2" description="AAA"/>
+              <allowed_value value="3" description="AA+"/>
+              <allowed_value value="4" description="AA"/>
+              <allowed_value value="5" description="AA-"/>
+              <allowed_value value="6" description="A+"/>
+              <allowed_value value="7" description="A"/>
+              <allowed_value value="8" description="A-"/>
+              <allowed_value value="9" description="BBB+"/>
+              <allowed_value value="10" description="BBB"/>
+              <allowed_value value="11" description="BBB-"/>
+              <allowed_value value="12" description="BB+"/>
+              <allowed_value value="13" description="BB"/>
+              <allowed_value value="14" description="BB-"/>
+              <allowed_value value="15" description="B+"/>
+              <allowed_value value="16" description="B"/>
+              <allowed_value value="17" description="B-"/>
+              <allowed_value value="18" description="CCC+"/>
+              <allowed_value value="19" description="CCC"/>
+              <allowed_value value="20" description="CCC-"/>
+              <allowed_value value="21" description="CC"/>
+              <allowed_value value="22" description="C"/>
+              <allowed_value value="23" description="DDD"/>
+              <allowed_value value="24" description="DD"/>
+              <allowed_value value="25" description="D"/>
+              <allowed_value value="26" description="AAA(EXP)"/>
+              <allowed_value value="27" description="AA+(EXP)"/>
+              <allowed_value value="28" description="AA(EXP)"/>
+              <allowed_value value="29" description="AA-(EXP)"/>
+              <allowed_value value="30" description="A+(EXP)"/>
+              <allowed_value value="31" description="A(EXP)"/>
+              <allowed_value value="32" description="A-(EXP)"/>
+              <allowed_value value="33" description="BBB+(EXP)"/>
+              <allowed_value value="34" description="BBB(EXP)"/>
+              <allowed_value value="35" description="BBB-(EXP)"/>
+              <allowed_value value="36" description="BB+(EXP)"/>
+              <allowed_value value="37" description="BB(EXP)"/>
+              <allowed_value value="38" description="BB-(EXP)"/>
+              <allowed_value value="39" description="B+(EXP)"/>
+              <allowed_value value="40" description="B(EXP)"/>
+              <allowed_value value="41" description="B-(EXP)"/>
+              <allowed_value value="42" description="CCC+(EXP)"/>
+              <allowed_value value="43" description="CCC(EXP)"/>
+              <allowed_value value="44" description="CCC-(EXP)"/>
+              <allowed_value value="45" description="CC(EXP)"/>
+              <allowed_value value="46" description="C(EXP)"/>
+              <allowed_value value="47" description="DDD(EXP)"/>
+              <allowed_value value="48" description="DD(EXP)"/>
+              <allowed_value value="49" description="DD-(EXP)"/>
+              <allowed_value value="50" description="D(EXP)"/>
+              <allowed_value value="51" description="NR(EXP)"/>
+              <allowed_value value="316" description="WD"/>
+              <allowed_value value="318" description="RD"/>
+            </allowed_values>
+</field>
+<field>
+<datum_id>4</datum_id>
+<field_type>short_value_enumeration</field_type>
+<example_value>6</example_value>
+<allowed_values optional_value_allowed="true">
+              <allowed_value value="0" description="Null"/>
+              <allowed_value value="1" description="NR"/>
+              <allowed_value value="2" description="AAA"/>
+              <allowed_value value="3" description="AA+"/>
+              <allowed_value value="4" description="AA"/>
+              <allowed_value value="5" description="AA-"/>
+              <allowed_value value="6" description="A+"/>
+              <allowed_value value="7" description="A"/>
+              <allowed_value value="8" description="A-"/>
+              <allowed_value value="9" description="BBB+"/>
+              <allowed_value value="10" description="BBB"/>
+              <allowed_value value="11" description="BBB-"/>
+              <allowed_value value="12" description="BB+"/>
+              <allowed_value value="13" description="BB"/>
+              <allowed_value value="14" description="BB-"/>
+              <allowed_value value="15" description="B+"/>
+              <allowed_value value="16" description="B"/>
+              <allowed_value value="17" description="B-"/>
+              <allowed_value value="18" description="CCC+"/>
+              <allowed_value value="19" description="CCC"/>
+              <allowed_value value="20" description="CCC-"/>
+              <allowed_value value="21" description="CC"/>
+              <allowed_value value="22" description="C"/>
+              <allowed_value value="23" description="DDD"/>
+              <allowed_value value="24" description="DD"/>
+              <allowed_value value="25" description="D"/>
+              <allowed_value value="26" description="AAA(EXP)"/>
+              <allowed_value value="27" description="AA+(EXP)"/>
+              <allowed_value value="28" description="AA(EXP)"/>
+              <allowed_value value="29" description="AA-(EXP)"/>
+              <allowed_value value="30" description="A+(EXP)"/>
+              <allowed_value value="31" description="A(EXP)"/>
+              <allowed_value value="32" description="A-(EXP)"/>
+              <allowed_value value="33" description="BBB+(EXP)"/>
+              <allowed_value value="34" description="BBB(EXP)"/>
+              <allowed_value value="35" description="BBB-(EXP)"/>
+              <allowed_value value="36" description="BB+(EXP)"/>
+              <allowed_value value="37" description="BB(EXP)"/>
+              <allowed_value value="38" description="BB-(EXP)"/>
+              <allowed_value value="39" description="B+(EXP)"/>
+              <allowed_value value="40" description="B(EXP)"/>
+              <allowed_value value="41" description="B-(EXP)"/>
+              <allowed_value value="42" description="CCC+(EXP)"/>
+              <allowed_value value="43" description="CCC(EXP)"/>
+              <allowed_value value="44" description="CCC-(EXP)"/>
+              <allowed_value value="45" description="CC(EXP)"/>
+              <allowed_value value="46" description="C(EXP)"/>
+              <allowed_value value="47" description="DDD(EXP)"/>
+              <allowed_value value="48" description="DD(EXP)"/>
+              <allowed_value value="49" description="DD-(EXP)"/>
+              <allowed_value value="50" description="D(EXP)"/>
+              <allowed_value value="51" description="NR(EXP)"/>
+              <allowed_value value="316" description="WD"/>
+              <allowed_value value="318" description="RD"/>
+            </allowed_values>
+</field>
+<field>
+<datum_id>5</datum_id>
+<field_type>short_value_enumeration</field_type>
+<example_value>2</example_value>
+<allowed_values optional_value_allowed="true">
+              <allowed_value value="0" description="Null"/>
+              <allowed_value value="2" description="Rating Watch Positive"/>
+              <allowed_value value="3" description="Rating Watch Negative"/>
+              <allowed_value value="4" description="Rating Watch Evolving"/>
+              <allowed_value value="5" description="Rating Watch Off"/>
+              <allowed_value value="7" description="Rating Outlook Stable"/>
+              <allowed_value value="8" description="Rating Outlook Negative"/>
+              <allowed_value value="9" description="Rating Outlook Positive"/>
+              <allowed_value value="10" description="Rating Outlook Evolving"/>
+              <allowed_value value="19" description="Under Review"/>
+            </allowed_values>
+</field>
+<field>
+<datum_id>6</datum_id>
+<field_type>short_value_enumeration</field_type>
+<example_value>6</example_value>
+<allowed_values optional_value_allowed="true">
+              <allowed_value value="0" description="Null"/>
+              <allowed_value value="1" description="Affirmed"/>
+              <allowed_value value="2" description="Rating Watch On"/>
+              <allowed_value value="3" description="Downgrade"/>
+              <allowed_value value="4" description="New Rating"/>
+              <allowed_value value="5" description="Revision Implication Watch"/>
+              <allowed_value value="6" description="Upgrade"/>
+              <allowed_value value="7" description="Withdrawn"/>
+              <allowed_value value="8" description="Revision Enhancement"/>
+              <allowed_value value="9" description="Expected Rating"/>
+              <allowed_value value="10" description="Revision Rating"/>
+              <allowed_value value="12" description="Revision Outlook"/>
+              <allowed_value value="15" description="Rating Watch Maintained"/>
+              <allowed_value value="16" description="Confirmed"/>
+              <allowed_value value="17" description="Revision IDR"/>
+              <allowed_value value="18" description="Recovery Rating Revision"/>
+              <allowed_value value="24" description="Matured"/>
+              <allowed_value value="25" description="Support Rating Floor Revision"/>
+              <allowed_value value="26" description="Publish"/>
+              <allowed_value value="30" description="Not Monitored"/>
+              <allowed_value value="31" description="Notice of Withdrawal"/>
+              <allowed_value value="34" description="Under Review"/>
+              <allowed_value value="35" description="Suspended"/>
+            </allowed_values>
+</field>
+<field>
+<datum_id>7</datum_id>
+<field_type>short_value_enumeration</field_type>
+<example_value>3</example_value>
+<allowed_values optional_value_allowed="true">
+              <allowed_value value="0" description="Null"/>
+              <allowed_value value="1" description="NR- Not Rated"/>
+              <allowed_value value="2" description="F1+"/>
+              <allowed_value value="3" description="F1"/>
+              <allowed_value value="4" description="F2"/>
+              <allowed_value value="5" description="F3"/>
+              <allowed_value value="6" description="B"/>
+              <allowed_value value="7" description="C"/>
+              <allowed_value value="8" description="D"/>
+              <allowed_value value="9" description="F1+(EXP)"/>
+              <allowed_value value="10" description="F1(EXP)"/>
+              <allowed_value value="11" description="F2(EXP)"/>
+              <allowed_value value="12" description="F3(EXP)"/>
+              <allowed_value value="13" description="B(EXP)"/>
+              <allowed_value value="14" description="C(EXP)"/>
+              <allowed_value value="15" description="D(EXP)"/>
+              <allowed_value value="16" description="NR(EXP)"/>
+              <allowed_value value="629" description="RD"/>
+            </allowed_values>
+</field>
+<field>
+<datum_id>8</datum_id>
+<field_type>short_value_enumeration</field_type>
+<example_value>4</example_value>
+<allowed_values optional_value_allowed="true">
+              <allowed_value value="0" description="Null"/>
+              <allowed_value value="1" description="NR- Not Rated"/>
+              <allowed_value value="2" description="F1+"/>
+              <allowed_value value="3" description="F1"/>
+              <allowed_value value="4" description="F2"/>
+              <allowed_value value="5" description="F3"/>
+              <allowed_value value="6" description="B"/>
+              <allowed_value value="7" description="C"/>
+              <allowed_value value="8" description="D"/>
+              <allowed_value value="9" description="F1+(EXP)"/>
+              <allowed_value value="10" description="F1(EXP)"/>
+              <allowed_value value="11" description="F2(EXP)"/>
+              <allowed_value value="12" description="F3(EXP)"/>
+              <allowed_value value="13" description="B(EXP)"/>
+              <allowed_value value="14" description="C(EXP)"/>
+              <allowed_value value="15" description="D(EXP)"/>
+              <allowed_value value="16" description="NR(EXP)"/>
+              <allowed_value value="629" description="RD"/>
+            </allowed_values>
+</field>
+<field>
+<datum_id>9</datum_id>
+<field_type>short_value_enumeration</field_type>
+<example_value>3</example_value>
+<allowed_values optional_value_allowed="true">
+              <allowed_value value="0" description="Null"/>
+              <allowed_value value="1" description="Affirmed"/>
+              <allowed_value value="2" description="Rating Watch On"/>
+              <allowed_value value="3" description="Downgrade"/>
+              <allowed_value value="4" description="New Rating"/>
+              <allowed_value value="5" description="Revision Implication Watch"/>
+              <allowed_value value="6" description="Upgrade"/>
+              <allowed_value value="7" description="Withdrawn"/>
+              <allowed_value value="8" description="Revision Enhancement"/>
+              <allowed_value value="9" description="Expected Rating"/>
+              <allowed_value value="10" description="Revision Rating"/>
+              <allowed_value value="12" description="Revision Outlook"/>
+              <allowed_value value="15" description="Rating Watch Maintained"/>
+              <allowed_value value="16" description="Confirmed"/>
+              <allowed_value value="17" description="Revision IDR"/>
+              <allowed_value value="18" description="Recovery Rating Revision"/>
+              <allowed_value value="24" description="Matured"/>
+              <allowed_value value="25" description="Support Rating Floor Revision"/>
+              <allowed_value value="26" description="Publish"/>
+              <allowed_value value="30" description="Not Monitored"/>
+              <allowed_value value="31" description="Notice of Withdrawal"/>
+              <allowed_value value="34" description="Under Review"/>
+              <allowed_value value="35" description="Suspended"/>
+            </allowed_values>
+</field>
+<field>
+<datum_id>10</datum_id>
+<field_type>short_value_enumeration</field_type>
+<example_value>4</example_value>
+<allowed_values optional_value_allowed="true">
+              <allowed_value value="0" description="Null"/>
+              <allowed_value value="1" description="NR"/>
+              <allowed_value value="2" description="AAA"/>
+              <allowed_value value="3" description="AA+"/>
+              <allowed_value value="4" description="AA"/>
+              <allowed_value value="5" description="AA-"/>
+              <allowed_value value="6" description="A+"/>
+              <allowed_value value="7" description="A"/>
+              <allowed_value value="8" description="A-"/>
+              <allowed_value value="9" description="BBB+"/>
+              <allowed_value value="10" description="BBB"/>
+              <allowed_value value="11" description="BBB-"/>
+              <allowed_value value="12" description="BB+"/>
+              <allowed_value value="13" description="BB"/>
+              <allowed_value value="14" description="BB-"/>
+              <allowed_value value="15" description="B+"/>
+              <allowed_value value="16" description="B"/>
+              <allowed_value value="17" description="B-"/>
+              <allowed_value value="18" description="CCC+"/>
+              <allowed_value value="19" description="CCC"/>
+              <allowed_value value="20" description="CCC-"/>
+              <allowed_value value="21" description="CC"/>
+              <allowed_value value="22" description="C"/>
+              <allowed_value value="23" description="DDD"/>
+              <allowed_value value="24" description="DD"/>
+              <allowed_value value="25" description="D"/>
+              <allowed_value value="26" description="E"/>
+              <allowed_value value="27" description="C+"/>
+              <allowed_value value="28" description="C-"/>
+              <allowed_value value="29" description="NR(EXP)"/>
+              <allowed_value value="30" description="AAA(EXP)"/>
+              <allowed_value value="31" description="AA+(EXP)"/>
+              <allowed_value value="32" description="AA(EXP)"/>
+              <allowed_value value="33" description="AA-(EXP)"/>
+              <allowed_value value="34" description="A+(EXP)"/>
+              <allowed_value value="35" description="A(EXP)"/>
+              <allowed_value value="36" description="A-(EXP)"/>
+              <allowed_value value="37" description="BBB+(EXP)"/>
+              <allowed_value value="38" description="BBB(EXP)"/>
+              <allowed_value value="39" description="BBB-(EXP)"/>
+              <allowed_value value="40" description="BB+(EXP)"/>
+              <allowed_value value="41" description="BB(EXP)"/>
+              <allowed_value value="42" description="BB-(EXP)"/>
+              <allowed_value value="43" description="B+(EXP)"/>
+              <allowed_value value="44" description="B(EXP)"/>
+              <allowed_value value="45" description="B-(EXP)"/>
+              <allowed_value value="46" description="CCC+(EXP)"/>
+              <allowed_value value="47" description="CCC(EXP)"/>
+              <allowed_value value="48" description="CCC-(EXP)"/>
+              <allowed_value value="49" description="CC(EXP)"/>
+              <allowed_value value="50" description="C(EXP)"/>
+              <allowed_value value="51" description="DDD(EXP)"/>
+              <allowed_value value="52" description="DD(EXP)"/>
+              <allowed_value value="53" description="D(EXP)"/>
+              <allowed_value value="54" description="E(EXP)"/>
+              <allowed_value value="55" description="PIF"/>
+              <allowed_value value="56" description="WD"/>
+              <allowed_value value="57" description="C+(EXP)"/>
+              <allowed_value value="58" description="C-(EXP)"/>
+              <allowed_value value="60" description="S"/>
+              <allowed_value value="502" description="RD"/>
+            </allowed_values>
+</field>
+<field>
+<datum_id>11</datum_id>
+<field_type>short_value_enumeration</field_type>
+<example_value>4</example_value>
+<allowed_values optional_value_allowed="true">
+              <allowed_value value="0" description="Null"/>
+              <allowed_value value="1" description="NR"/>
+              <allowed_value value="2" description="AAA"/>
+              <allowed_value value="3" description="AA+"/>
+              <allowed_value value="4" description="AA"/>
+              <allowed_value value="5" description="AA-"/>
+              <allowed_value value="6" description="A+"/>
+              <allowed_value value="7" description="A"/>
+              <allowed_value value="8" description="A-"/>
+              <allowed_value value="9" description="BBB+"/>
+              <allowed_value value="10" description="BBB"/>
+              <allowed_value value="11" description="BBB-"/>
+              <allowed_value value="12" description="BB+"/>
+              <allowed_value value="13" description="BB"/>
+              <allowed_value value="14" description="BB-"/>
+              <allowed_value value="15" description="B+"/>
+              <allowed_value value="16" description="B"/>
+              <allowed_value value="17" description="B-"/>
+              <allowed_value value="18" description="CCC+"/>
+              <allowed_value value="19" description="CCC"/>
+              <allowed_value value="20" description="CCC-"/>
+              <allowed_value value="21" description="CC"/>
+              <allowed_value value="22" description="C"/>
+              <allowed_value value="23" description="DDD"/>
+              <allowed_value value="24" description="DD"/>
+              <allowed_value value="25" description="D"/>
+              <allowed_value value="26" description="E"/>
+              <allowed_value value="27" description="C+"/>
+              <allowed_value value="28" description="C-"/>
+              <allowed_value value="29" description="NR(EXP)"/>
+              <allowed_value value="30" description="AAA(EXP)"/>
+              <allowed_value value="31" description="AA+(EXP)"/>
+              <allowed_value value="32" description="AA(EXP)"/>
+              <allowed_value value="33" description="AA-(EXP)"/>
+              <allowed_value value="34" description="A+(EXP)"/>
+              <allowed_value value="35" description="A(EXP)"/>
+              <allowed_value value="36" description="A-(EXP)"/>
+              <allowed_value value="37" description="BBB+(EXP)"/>
+              <allowed_value value="38" description="BBB(EXP)"/>
+              <allowed_value value="39" description="BBB-(EXP)"/>
+              <allowed_value value="40" description="BB+(EXP)"/>
+              <allowed_value value="41" description="BB(EXP)"/>
+              <allowed_value value="42" description="BB-(EXP)"/>
+              <allowed_value value="43" description="B+(EXP)"/>
+              <allowed_value value="44" description="B(EXP)"/>
+              <allowed_value value="45" description="B-(EXP)"/>
+              <allowed_value value="46" description="CCC+(EXP)"/>
+              <allowed_value value="47" description="CCC(EXP)"/>
+              <allowed_value value="48" description="CCC-(EXP)"/>
+              <allowed_value value="49" description="CC(EXP)"/>
+              <allowed_value value="50" description="C(EXP)"/>
+              <allowed_value value="51" description="DDD(EXP)"/>
+              <allowed_value value="52" description="DD(EXP)"/>
+              <allowed_value value="53" description="D(EXP)"/>
+              <allowed_value value="54" description="E(EXP)"/>
+              <allowed_value value="55" description="PIF"/>
+              <allowed_value value="56" description="WD"/>
+              <allowed_value value="57" description="C+(EXP)"/>
+              <allowed_value value="58" description="C-(EXP)"/>
+              <allowed_value value="60" description="S"/>
+              <allowed_value value="502" description="RD"/>
+            </allowed_values>
+</field>
+<field>
+<datum_id>12</datum_id>
+<field_type>short_value_enumeration</field_type>
+<example_value>4</example_value>
+<allowed_values optional_value_allowed="true">
+              <allowed_value value="0" description="Null"/>
+              <allowed_value value="2" description="Rating Watch Positive"/>
+              <allowed_value value="3" description="Rating Watch Negative"/>
+              <allowed_value value="4" description="Rating Watch Evolving"/>
+              <allowed_value value="5" description="Rating Watch Off"/>
+              <allowed_value value="7" description="Rating Outlook Stable"/>
+              <allowed_value value="8" description="Rating Outlook Negative"/>
+              <allowed_value value="9" description="Rating Outlook Positive"/>
+              <allowed_value value="10" description="Rating Outlook Evolving"/>
+              <allowed_value value="19" description="Under Review"/>
+            </allowed_values>
+</field>
+<field>
+<datum_id>16</datum_id>
+<field_type>short_value_enumeration</field_type>
+<example_value>4</example_value>
+<allowed_values optional_value_allowed="true">
+              <allowed_value value="0" description="Null"/>
+              <allowed_value value="1" description="Affirmed"/>
+              <allowed_value value="2" description="Rating Watch On"/>
+              <allowed_value value="3" description="Downgrade"/>
+              <allowed_value value="4" description="New Rating"/>
+              <allowed_value value="5" description="Revision Implication Watch"/>
+              <allowed_value value="6" description="Upgrade"/>
+              <allowed_value value="7" description="Withdrawn"/>
+              <allowed_value value="8" description="Revision Enhancement"/>
+              <allowed_value value="9" description="Expected Rating"/>
+              <allowed_value value="10" description="Revision Rating"/>
+              <allowed_value value="12" description="Revision Outlook"/>
+              <allowed_value value="15" description="Rating Watch Maintained"/>
+              <allowed_value value="16" description="Confirmed"/>
+              <allowed_value value="17" description="Revision IDR"/>
+              <allowed_value value="18" description="Recovery Rating Revision"/>
+              <allowed_value value="24" description="Matured"/>
+              <allowed_value value="25" description="Support Rating Floor Revision"/>
+              <allowed_value value="26" description="Publish"/>
+              <allowed_value value="30" description="Not Monitored"/>
+              <allowed_value value="31" description="Notice of Withdrawal"/>
+              <allowed_value value="34" description="Under Review"/>
+              <allowed_value value="35" description="Suspended"/>
+            </allowed_values>
+</field>
+<field>
+<datum_id>17</datum_id>
+<field_type>short_value_enumeration</field_type>
+<example_value>4</example_value>
+<allowed_values optional_value_allowed="true">
+              <allowed_value value="0" description="Null"/>
+              <allowed_value value="1" description="NR"/>
+              <allowed_value value="2" description="AAA"/>
+              <allowed_value value="3" description="AA+"/>
+              <allowed_value value="4" description="AA"/>
+              <allowed_value value="5" description="AA-"/>
+              <allowed_value value="6" description="A+"/>
+              <allowed_value value="7" description="A"/>
+              <allowed_value value="8" description="A-"/>
+              <allowed_value value="9" description="BBB+"/>
+              <allowed_value value="10" description="BBB"/>
+              <allowed_value value="11" description="BBB-"/>
+              <allowed_value value="12" description="BB+"/>
+              <allowed_value value="13" description="BB"/>
+              <allowed_value value="14" description="BB-"/>
+              <allowed_value value="15" description="B+"/>
+              <allowed_value value="16" description="B"/>
+              <allowed_value value="17" description="B-"/>
+              <allowed_value value="18" description="CCC+"/>
+              <allowed_value value="19" description="CCC"/>
+              <allowed_value value="20" description="CCC-"/>
+              <allowed_value value="21" description="CC"/>
+              <allowed_value value="22" description="C"/>
+              <allowed_value value="23" description="DDD"/>
+              <allowed_value value="24" description="DD"/>
+              <allowed_value value="25" description="D"/>
+              <allowed_value value="26" description="AAA(EXP)"/>
+              <allowed_value value="27" description="AA+(EXP)"/>
+              <allowed_value value="28" description="AA(EXP)"/>
+              <allowed_value value="29" description="AA-(EXP)"/>
+              <allowed_value value="30" description="A+(EXP)"/>
+              <allowed_value value="31" description="A(EXP)"/>
+              <allowed_value value="32" description="A-(EXP)"/>
+              <allowed_value value="33" description="BBB+(EXP)"/>
+              <allowed_value value="34" description="BBB(EXP)"/>
+              <allowed_value value="35" description="BBB-(EXP)"/>
+              <allowed_value value="36" description="BB+(EXP)"/>
+              <allowed_value value="37" description="BB(EXP)"/>
+              <allowed_value value="38" description="BB-(EXP)"/>
+              <allowed_value value="39" description="B+(EXP)"/>
+              <allowed_value value="40" description="B(EXP)"/>
+              <allowed_value value="41" description="B-(EXP)"/>
+              <allowed_value value="42" description="CCC+(EXP)"/>
+              <allowed_value value="43" description="CCC(EXP)"/>
+              <allowed_value value="44" description="CCC-(EXP)"/>
+              <allowed_value value="45" description="CC(EXP)"/>
+              <allowed_value value="46" description="C(EXP)"/>
+              <allowed_value value="47" description="DDD(EXP)"/>
+              <allowed_value value="48" description="DD(EXP)"/>
+              <allowed_value value="49" description="DD-(EXP)"/>
+              <allowed_value value="50" description="D(EXP)"/>
+              <allowed_value value="51" description="NR(EXP)"/>
+              <allowed_value value="70" description="IG"/>
+              <allowed_value value="71" description="NIG"/>
+              <allowed_value value="316" description="WD"/>
+              <allowed_value value="415" description="E"/>
+              <allowed_value value="512" description="NF"/>
+            </allowed_values>
+</field>
+<field>
+<datum_id>18</datum_id>
+<field_type>short_value_enumeration</field_type>
+<example_value>4</example_value>
+<allowed_values optional_value_allowed="true">
+              <allowed_value value="0" description="Null"/>
+              <allowed_value value="1" description="NR"/>
+              <allowed_value value="2" description="AAA"/>
+              <allowed_value value="3" description="AA+"/>
+              <allowed_value value="4" description="AA"/>
+              <allowed_value value="5" description="AA-"/>
+              <allowed_value value="6" description="A+"/>
+              <allowed_value value="7" description="A"/>
+              <allowed_value value="8" description="A-"/>
+              <allowed_value value="9" description="BBB+"/>
+              <allowed_value value="10" description="BBB"/>
+              <allowed_value value="11" description="BBB-"/>
+              <allowed_value value="12" description="BB+"/>
+              <allowed_value value="13" description="BB"/>
+              <allowed_value value="14" description="BB-"/>
+              <allowed_value value="15" description="B+"/>
+              <allowed_value value="16" description="B"/>
+              <allowed_value value="17" description="B-"/>
+              <allowed_value value="18" description="CCC+"/>
+              <allowed_value value="19" description="CCC"/>
+              <allowed_value value="20" description="CCC-"/>
+              <allowed_value value="21" description="CC"/>
+              <allowed_value value="22" description="C"/>
+              <allowed_value value="23" description="DDD"/>
+              <allowed_value value="24" description="DD"/>
+              <allowed_value value="25" description="D"/>
+              <allowed_value value="26" description="AAA(EXP)"/>
+              <allowed_value value="27" description="AA+(EXP)"/>
+              <allowed_value value="28" description="AA(EXP)"/>
+              <allowed_value value="29" description="AA-(EXP)"/>
+              <allowed_value value="30" description="A+(EXP)"/>
+              <allowed_value value="31" description="A(EXP)"/>
+              <allowed_value value="32" description="A-(EXP)"/>
+              <allowed_value value="33" description="BBB+(EXP)"/>
+              <allowed_value value="34" description="BBB(EXP)"/>
+              <allowed_value value="35" description="BBB-(EXP)"/>
+              <allowed_value value="36" description="BB+(EXP)"/>
+              <allowed_value value="37" description="BB(EXP)"/>
+              <allowed_value value="38" description="BB-(EXP)"/>
+              <allowed_value value="39" description="B+(EXP)"/>
+              <allowed_value value="40" description="B(EXP)"/>
+              <allowed_value value="41" description="B-(EXP)"/>
+              <allowed_value value="42" description="CCC+(EXP)"/>
+              <allowed_value value="43" description="CCC(EXP)"/>
+              <allowed_value value="44" description="CCC-(EXP)"/>
+              <allowed_value value="45" description="CC(EXP)"/>
+              <allowed_value value="46" description="C(EXP)"/>
+              <allowed_value value="47" description="DDD(EXP)"/>
+              <allowed_value value="48" description="DD(EXP)"/>
+              <allowed_value value="49" description="DD-(EXP)"/>
+              <allowed_value value="50" description="D(EXP)"/>
+              <allowed_value value="51" description="NR(EXP)"/>
+              <allowed_value value="70" description="IG"/>
+              <allowed_value value="71" description="NIG"/>
+              <allowed_value value="316" description="WD"/>
+              <allowed_value value="415" description="E"/>
+              <allowed_value value="512" description="NF"/>
+            </allowed_values>
+</field>
+<field>
+<datum_id>19</datum_id>
+<field_type>short_value_enumeration</field_type>
+<example_value>4</example_value>
+<allowed_values optional_value_allowed="true">
+              <allowed_value value="0" description="Null"/>
+              <allowed_value value="2" description="Rating Watch Positive"/>
+              <allowed_value value="3" description="Rating Watch Negative"/>
+              <allowed_value value="4" description="Rating Watch Evolving"/>
+              <allowed_value value="5" description="Rating Watch Off"/>
+              <allowed_value value="7" description="Rating Outlook Stable"/>
+              <allowed_value value="8" description="Rating Outlook Negative"/>
+              <allowed_value value="9" description="Rating Outlook Positive"/>
+              <allowed_value value="10" description="Rating Outlook Evolving"/>
+              <allowed_value value="19" description="Under Review"/>
+            </allowed_values>
+</field>
+<field>
+<datum_id>20</datum_id>
+<field_type>short_value_enumeration</field_type>
+<example_value>4</example_value>
+<allowed_values optional_value_allowed="true">
+              <allowed_value value="0" description="Null"/>
+              <allowed_value value="1" description="Affirmed"/>
+              <allowed_value value="2" description="Rating Watch On"/>
+              <allowed_value value="3" description="Downgrade"/>
+              <allowed_value value="4" description="New Rating"/>
+              <allowed_value value="5" description="Revision Implication Watch"/>
+              <allowed_value value="6" description="Upgrade"/>
+              <allowed_value value="7" description="Withdrawn"/>
+              <allowed_value value="8" description="Revision Enhancement"/>
+              <allowed_value value="9" description="Expected Rating"/>
+              <allowed_value value="10" description="Revision Rating"/>
+              <allowed_value value="12" description="Revision Outlook"/>
+              <allowed_value value="15" description="Rating Watch Maintained"/>
+              <allowed_value value="16" description="Confirmed"/>
+              <allowed_value value="17" description="Revision IDR"/>
+              <allowed_value value="18" description="Recovery Rating Revision"/>
+              <allowed_value value="24" description="Matured"/>
+              <allowed_value value="25" description="Support Rating Floor Revision"/>
+              <allowed_value value="26" description="Publish"/>
+              <allowed_value value="30" description="Not Monitored"/>
+              <allowed_value value="31" description="Notice of Withdrawal"/>
+              <allowed_value value="34" description="Under Review"/>
+              <allowed_value value="35" description="Suspended"/>
+            </allowed_values>
+</field>
+<field>
+<datum_id>21</datum_id>
+<field_type>short_value_enumeration</field_type>
+<example_value>4</example_value>
+<allowed_values optional_value_allowed="true">
+              <allowed_value value="0" description="Null"/>
+              <allowed_value value="1" description="NR"/>
+              <allowed_value value="2" description="AAA"/>
+              <allowed_value value="3" description="AA+"/>
+              <allowed_value value="4" description="AA"/>
+              <allowed_value value="5" description="AA-"/>
+              <allowed_value value="6" description="A+"/>
+              <allowed_value value="7" description="A"/>
+              <allowed_value value="8" description="A-"/>
+              <allowed_value value="9" description="BBB+"/>
+              <allowed_value value="10" description="BBB"/>
+              <allowed_value value="11" description="BBB-"/>
+              <allowed_value value="12" description="BB+"/>
+              <allowed_value value="13" description="BB"/>
+              <allowed_value value="14" description="BB-"/>
+              <allowed_value value="15" description="B+"/>
+              <allowed_value value="16" description="B"/>
+              <allowed_value value="17" description="B-"/>
+              <allowed_value value="19" description="CCC"/>
+              <allowed_value value="21" description="CC"/>
+              <allowed_value value="22" description="C"/>
+              <allowed_value value="26" description="F"/>
+              <allowed_value value="501" description="WD"/>
+            </allowed_values>
+</field>
+<field>
+<datum_id>22</datum_id>
+<field_type>short_value_enumeration</field_type>
+<example_value>4</example_value>
+<allowed_values optional_value_allowed="true">
+              <allowed_value value="0" description="Null"/>
+              <allowed_value value="1" description="NR"/>
+              <allowed_value value="2" description="AAA"/>
+              <allowed_value value="3" description="AA+"/>
+              <allowed_value value="4" description="AA"/>
+              <allowed_value value="5" description="AA-"/>
+              <allowed_value value="6" description="A+"/>
+              <allowed_value value="7" description="A"/>
+              <allowed_value value="8" description="A-"/>
+              <allowed_value value="9" description="BBB+"/>
+              <allowed_value value="10" description="BBB"/>
+              <allowed_value value="11" description="BBB-"/>
+              <allowed_value value="12" description="BB+"/>
+              <allowed_value value="13" description="BB"/>
+              <allowed_value value="14" description="BB-"/>
+              <allowed_value value="15" description="B+"/>
+              <allowed_value value="16" description="B"/>
+              <allowed_value value="17" description="B-"/>
+              <allowed_value value="19" description="CCC"/>
+              <allowed_value value="21" description="CC"/>
+              <allowed_value value="22" description="C"/>
+              <allowed_value value="26" description="F"/>
+              <allowed_value value="501" description="WD"/>
+            </allowed_values>
+</field>
+<field>
+<datum_id>23</datum_id>
+<field_type>short_value_enumeration</field_type>
+<example_value>4</example_value>
+<allowed_values optional_value_allowed="true">
+              <allowed_value value="0" description="Null"/>
+              <allowed_value value="2" description="Rating Watch Positive"/>
+              <allowed_value value="3" description="Rating Watch Negative"/>
+              <allowed_value value="4" description="Rating Watch Evolving"/>
+              <allowed_value value="5" description="Rating Watch Off"/>
+              <allowed_value value="7" description="Rating Outlook Stable"/>
+              <allowed_value value="8" description="Rating Outlook Negative"/>
+              <allowed_value value="9" description="Rating Outlook Positive"/>
+              <allowed_value value="10" description="Rating Outlook Evolving"/>
+              <allowed_value value="19" description="Under Review"/>
+            </allowed_values>
+</field>
+<field>
+<datum_id>24</datum_id>
+<field_type>short_value_enumeration</field_type>
+<example_value>4</example_value>
+<allowed_values optional_value_allowed="true">
+              <allowed_value value="0" description="Null"/>
+              <allowed_value value="1" description="Affirmed"/>
+              <allowed_value value="2" description="Rating Watch On"/>
+              <allowed_value value="3" description="Downgrade"/>
+              <allowed_value value="4" description="New Rating"/>
+              <allowed_value value="5" description="Revision Implication Watch"/>
+              <allowed_value value="6" description="Upgrade"/>
+              <allowed_value value="7" description="Withdrawn"/>
+              <allowed_value value="8" description="Revision Enhancement"/>
+              <allowed_value value="9" description="Expected Rating"/>
+              <allowed_value value="10" description="Revision Rating"/>
+              <allowed_value value="12" description="Revision Outlook"/>
+              <allowed_value value="15" description="Rating Watch Maintained"/>
+              <allowed_value value="16" description="Confirmed"/>
+              <allowed_value value="17" description="Revision IDR"/>
+              <allowed_value value="18" description="Recovery Rating Revision"/>
+              <allowed_value value="24" description="Matured"/>
+              <allowed_value value="25" description="Support Rating Floor Revision"/>
+              <allowed_value value="26" description="Publish"/>
+              <allowed_value value="30" description="Not Monitored"/>
+              <allowed_value value="31" description="Notice of Withdrawal"/>
+              <allowed_value value="34" description="Under Review"/>
+              <allowed_value value="35" description="Suspended"/>
+            </allowed_values>
+</field>
+<field>
+<datum_id>25</datum_id>
+<field_type>short_value_enumeration</field_type>
+<example_value>4</example_value>
+<allowed_values optional_value_allowed="true">
+              <allowed_value value="0" description="Null"/>
+              <allowed_value value="1" description="NR"/>
+              <allowed_value value="2" description="1"/>
+              <allowed_value value="3" description="2"/>
+              <allowed_value value="4" description="3"/>
+              <allowed_value value="5" description="4"/>
+              <allowed_value value="6" description="5"/>
+              <allowed_value value="501" description="WD"/>
+            </allowed_values>
+</field>
+<field>
+<datum_id>26</datum_id>
+<field_type>short_value_enumeration</field_type>
+<example_value>4</example_value>
+<allowed_values optional_value_allowed="true">
+              <allowed_value value="0" description="Null"/>
+              <allowed_value value="1" description="NR"/>
+              <allowed_value value="2" description="1"/>
+              <allowed_value value="3" description="2"/>
+              <allowed_value value="4" description="3"/>
+              <allowed_value value="5" description="4"/>
+              <allowed_value value="6" description="5"/>
+              <allowed_value value="501" description="WD"/>
+            </allowed_values>
+</field>
+<field>
+<datum_id>27</datum_id>
+<field_type>short_value_enumeration</field_type>
+<example_value>4</example_value>
+<allowed_values optional_value_allowed="true">
+              <allowed_value value="0" description="Null"/>
+              <allowed_value value="2" description="Rating Watch Positive"/>
+              <allowed_value value="3" description="Rating Watch Negative"/>
+              <allowed_value value="4" description="Rating Watch Evolving"/>
+              <allowed_value value="5" description="Rating Watch Off"/>
+              <allowed_value value="7" description="Rating Outlook Stable"/>
+              <allowed_value value="8" description="Rating Outlook Negative"/>
+              <allowed_value value="9" description="Rating Outlook Positive"/>
+              <allowed_value value="10" description="Rating Outlook Evolving"/>
+              <allowed_value value="19" description="Under Review"/>
+            </allowed_values>
+</field>
+<field>
+<datum_id>28</datum_id>
+<field_type>short_value_enumeration</field_type>
+<example_value>4</example_value>
+<allowed_values optional_value_allowed="true">
+              <allowed_value value="0" description="Null"/>
+              <allowed_value value="1" description="Affirmed"/>
+              <allowed_value value="2" description="Rating Watch On"/>
+              <allowed_value value="3" description="Downgrade"/>
+              <allowed_value value="4" description="New Rating"/>
+              <allowed_value value="5" description="Revision Implication Watch"/>
+              <allowed_value value="6" description="Upgrade"/>
+              <allowed_value value="7" description="Withdrawn"/>
+              <allowed_value value="8" description="Revision Enhancement"/>
+              <allowed_value value="9" description="Expected Rating"/>
+              <allowed_value value="10" description="Revision Rating"/>
+              <allowed_value value="12" description="Revision Outlook"/>
+              <allowed_value value="15" description="Rating Watch Maintained"/>
+              <allowed_value value="16" description="Confirmed"/>
+              <allowed_value value="17" description="Revision IDR"/>
+              <allowed_value value="18" description="Recovery Rating Revision"/>
+              <allowed_value value="24" description="Matured"/>
+              <allowed_value value="25" description="Support Rating Floor Revision"/>
+              <allowed_value value="26" description="Publish"/>
+              <allowed_value value="30" description="Not Monitored"/>
+              <allowed_value value="31" description="Notice of Withdrawal"/>
+              <allowed_value value="34" description="Under Review"/>
+              <allowed_value value="35" description="Suspended"/>
+            </allowed_values>
+</field>
+<field>
+<datum_id>29</datum_id>
+<field_type>short_value_enumeration</field_type>
+<example_value>4</example_value>
+<allowed_values optional_value_allowed="true">
+              <allowed_value value="0" description="Null"/>
+              <allowed_value value="1" description="NR"/>
+              <allowed_value value="2" description="AAA"/>
+              <allowed_value value="3" description="AA+"/>
+              <allowed_value value="4" description="AA"/>
+              <allowed_value value="5" description="AA-"/>
+              <allowed_value value="6" description="A+"/>
+              <allowed_value value="7" description="A"/>
+              <allowed_value value="8" description="A-"/>
+              <allowed_value value="9" description="BBB+"/>
+              <allowed_value value="10" description="BBB"/>
+              <allowed_value value="11" description="BBB-"/>
+              <allowed_value value="12" description="BB+"/>
+              <allowed_value value="13" description="BB"/>
+              <allowed_value value="14" description="BB-"/>
+              <allowed_value value="15" description="B+"/>
+              <allowed_value value="16" description="B"/>
+              <allowed_value value="17" description="B-"/>
+              <allowed_value value="18" description="CCC+"/>
+              <allowed_value value="19" description="CCC"/>
+              <allowed_value value="20" description="CCC-"/>
+              <allowed_value value="21" description="CC+"/>
+              <allowed_value value="23" description="CC-"/>
+              <allowed_value value="24" description="C+"/>
+              <allowed_value value="25" description="C"/>
+              <allowed_value value="26" description="C-"/>
+              <allowed_value value="27" description="DDD"/>
+              <allowed_value value="28" description="DD"/>
+              <allowed_value value="29" description="D"/>
+              <allowed_value value="30" description="REV RATING"/>
+              <allowed_value value="100" description="RD"/>
+              <allowed_value value="501" description="WD"/>
+            </allowed_values>
+</field>
+<field>
+<datum_id>30</datum_id>
+<field_type>short_value_enumeration</field_type>
+<example_value>4</example_value>
+<allowed_values optional_value_allowed="true">
+              <allowed_value value="0" description="Null"/>
+              <allowed_value value="1" description="NR"/>
+              <allowed_value value="2" description="AAA"/>
+              <allowed_value value="3" description="AA+"/>
+              <allowed_value value="4" description="AA"/>
+              <allowed_value value="5" description="AA-"/>
+              <allowed_value value="6" description="A+"/>
+              <allowed_value value="7" description="A"/>
+              <allowed_value value="8" description="A-"/>
+              <allowed_value value="9" description="BBB+"/>
+              <allowed_value value="10" description="BBB"/>
+              <allowed_value value="11" description="BBB-"/>
+              <allowed_value value="12" description="BB+"/>
+              <allowed_value value="13" description="BB"/>
+              <allowed_value value="14" description="BB-"/>
+              <allowed_value value="15" description="B+"/>
+              <allowed_value value="16" description="B"/>
+              <allowed_value value="17" description="B-"/>
+              <allowed_value value="18" description="CCC+"/>
+              <allowed_value value="19" description="CCC"/>
+              <allowed_value value="20" description="CCC-"/>
+              <allowed_value value="21" description="CC+"/>
+              <allowed_value value="23" description="CC-"/>
+              <allowed_value value="24" description="C+"/>
+              <allowed_value value="25" description="C"/>
+              <allowed_value value="26" description="C-"/>
+              <allowed_value value="27" description="DDD"/>
+              <allowed_value value="28" description="DD"/>
+              <allowed_value value="29" description="D"/>
+              <allowed_value value="30" description="REV RATING"/>
+              <allowed_value value="100" description="RD"/>
+              <allowed_value value="501" description="WD"/>
+            </allowed_values>
+</field>
+<field>
+<datum_id>31</datum_id>
+<field_type>short_value_enumeration</field_type>
+<example_value>4</example_value>
+<allowed_values optional_value_allowed="true">
+              <allowed_value value="0" description="Null"/>
+              <allowed_value value="2" description="Rating Watch Positive"/>
+              <allowed_value value="3" description="Rating Watch Negative"/>
+              <allowed_value value="4" description="Rating Watch Evolving"/>
+              <allowed_value value="5" description="Rating Watch Off"/>
+              <allowed_value value="7" description="Rating Outlook Stable"/>
+              <allowed_value value="8" description="Rating Outlook Negative"/>
+              <allowed_value value="9" description="Rating Outlook Positive"/>
+              <allowed_value value="10" description="Rating Outlook Evolving"/>
+              <allowed_value value="19" description="Under Review"/>
+            </allowed_values>
+</field>
+<field>
+<datum_id>32</datum_id>
+<field_type>short_value_enumeration</field_type>
+<example_value>3</example_value>
+<allowed_values optional_value_allowed="true">
+              <allowed_value value="0" description="Null"/>
+              <allowed_value value="1" description="Affirmed"/>
+              <allowed_value value="2" description="Rating Watch On"/>
+              <allowed_value value="3" description="Downgrade"/>
+              <allowed_value value="4" description="New Rating"/>
+              <allowed_value value="5" description="Revision Implication Watch"/>
+              <allowed_value value="6" description="Upgrade"/>
+              <allowed_value value="7" description="Withdrawn"/>
+              <allowed_value value="8" description="Revision Enhancement"/>
+              <allowed_value value="9" description="Expected Rating"/>
+              <allowed_value value="10" description="Revision Rating"/>
+              <allowed_value value="12" description="Revision Outlook"/>
+              <allowed_value value="15" description="Rating Watch Maintained"/>
+              <allowed_value value="16" description="Confirmed"/>
+              <allowed_value value="17" description="Revision IDR"/>
+              <allowed_value value="18" description="Recovery Rating Revision"/>
+              <allowed_value value="24" description="Matured"/>
+              <allowed_value value="25" description="Support Rating Floor Revision"/>
+              <allowed_value value="26" description="Publish"/>
+              <allowed_value value="30" description="Not Monitored"/>
+              <allowed_value value="31" description="Notice of Withdrawal"/>
+              <allowed_value value="34" description="Under Review"/>
+              <allowed_value value="35" description="Suspended"/>
+            </allowed_values>
+</field>
+<field>
+<datum_id>33</datum_id>
+<field_type>short_value_enumeration</field_type>
+<example_value>4</example_value>
+<allowed_values optional_value_allowed="true">
+              <allowed_value value="0" description="Null"/>
+              <allowed_value value="1" description="NR"/>
+              <allowed_value value="2" description="AAA"/>
+              <allowed_value value="3" description="AA+"/>
+              <allowed_value value="4" description="AA"/>
+              <allowed_value value="5" description="AA-"/>
+              <allowed_value value="6" description="A+"/>
+              <allowed_value value="7" description="A"/>
+              <allowed_value value="8" description="A-"/>
+              <allowed_value value="9" description="BBB+"/>
+              <allowed_value value="10" description="BBB"/>
+              <allowed_value value="11" description="BBB-"/>
+              <allowed_value value="12" description="BB+"/>
+              <allowed_value value="13" description="BB"/>
+              <allowed_value value="14" description="BB-"/>
+              <allowed_value value="15" description="B+"/>
+              <allowed_value value="16" description="B"/>
+              <allowed_value value="17" description="B-"/>
+              <allowed_value value="18" description="CCC+"/>
+              <allowed_value value="19" description="CCC"/>
+              <allowed_value value="20" description="CCC-"/>
+              <allowed_value value="21" description="CC"/>
+              <allowed_value value="22" description="C"/>
+              <allowed_value value="23" description="DDD"/>
+              <allowed_value value="24" description="DD"/>
+              <allowed_value value="25" description="D"/>
+              <allowed_value value="26" description="E"/>
+              <allowed_value value="27" description="C+"/>
+              <allowed_value value="28" description="C-"/>
+              <allowed_value value="29" description="NR(EXP)"/>
+              <allowed_value value="30" description="AAA(EXP)"/>
+              <allowed_value value="31" description="AA+(EXP)"/>
+              <allowed_value value="32" description="AA(EXP)"/>
+              <allowed_value value="33" description="AA-(EXP)"/>
+              <allowed_value value="34" description="A+(EXP)"/>
+              <allowed_value value="35" description="A(EXP)"/>
+              <allowed_value value="36" description="A-(EXP)"/>
+              <allowed_value value="37" description="BBB+(EXP)"/>
+              <allowed_value value="38" description="BBB(EXP)"/>
+              <allowed_value value="39" description="BBB-(EXP)"/>
+              <allowed_value value="40" description="BB+(EXP)"/>
+              <allowed_value value="41" description="BB(EXP)"/>
+              <allowed_value value="42" description="BB-(EXP)"/>
+              <allowed_value value="43" description="B+(EXP)"/>
+              <allowed_value value="44" description="B(EXP)"/>
+              <allowed_value value="45" description="B-(EXP)"/>
+              <allowed_value value="46" description="CCC+(EXP)"/>
+              <allowed_value value="47" description="CCC(EXP)"/>
+              <allowed_value value="48" description="CCC-(EXP)"/>
+              <allowed_value value="49" description="CC(EXP)"/>
+              <allowed_value value="50" description="C(EXP)"/>
+              <allowed_value value="51" description="DDD(EXP)"/>
+              <allowed_value value="52" description="DD(EXP)"/>
+              <allowed_value value="53" description="D(EXP)"/>
+              <allowed_value value="54" description="E(EXP)"/>
+              <allowed_value value="55" description="PIF"/>
+              <allowed_value value="56" description="WD"/>
+              <allowed_value value="57" description="C+(EXP)"/>
+              <allowed_value value="58" description="C-(EXP)"/>
+              <allowed_value value="60" description="S"/>
+              <allowed_value value="502" description="RD"/>
+            </allowed_values>
+</field>
+<field>
+<datum_id>34</datum_id>
+<field_type>short_value_enumeration</field_type>
+<example_value>4</example_value>
+<allowed_values optional_value_allowed="true">
+              <allowed_value value="0" description="Null"/>
+              <allowed_value value="1" description="NR"/>
+              <allowed_value value="2" description="AAA"/>
+              <allowed_value value="3" description="AA+"/>
+              <allowed_value value="4" description="AA"/>
+              <allowed_value value="5" description="AA-"/>
+              <allowed_value value="6" description="A+"/>
+              <allowed_value value="7" description="A"/>
+              <allowed_value value="8" description="A-"/>
+              <allowed_value value="9" description="BBB+"/>
+              <allowed_value value="10" description="BBB"/>
+              <allowed_value value="11" description="BBB-"/>
+              <allowed_value value="12" description="BB+"/>
+              <allowed_value value="13" description="BB"/>
+              <allowed_value value="14" description="BB-"/>
+              <allowed_value value="15" description="B+"/>
+              <allowed_value value="16" description="B"/>
+              <allowed_value value="17" description="B-"/>
+              <allowed_value value="18" description="CCC+"/>
+              <allowed_value value="19" description="CCC"/>
+              <allowed_value value="20" description="CCC-"/>
+              <allowed_value value="21" description="CC"/>
+              <allowed_value value="22" description="C"/>
+              <allowed_value value="23" description="DDD"/>
+              <allowed_value value="24" description="DD"/>
+              <allowed_value value="25" description="D"/>
+              <allowed_value value="26" description="E"/>
+              <allowed_value value="27" description="C+"/>
+              <allowed_value value="28" description="C-"/>
+              <allowed_value value="29" description="NR(EXP)"/>
+              <allowed_value value="30" description="AAA(EXP)"/>
+              <allowed_value value="31" description="AA+(EXP)"/>
+              <allowed_value value="32" description="AA(EXP)"/>
+              <allowed_value value="33" description="AA-(EXP)"/>
+              <allowed_value value="34" description="A+(EXP)"/>
+              <allowed_value value="35" description="A(EXP)"/>
+              <allowed_value value="36" description="A-(EXP)"/>
+              <allowed_value value="37" description="BBB+(EXP)"/>
+              <allowed_value value="38" description="BBB(EXP)"/>
+              <allowed_value value="39" description="BBB-(EXP)"/>
+              <allowed_value value="40" description="BB+(EXP)"/>
+              <allowed_value value="41" description="BB(EXP)"/>
+              <allowed_value value="42" description="BB-(EXP)"/>
+              <allowed_value value="43" description="B+(EXP)"/>
+              <allowed_value value="44" description="B(EXP)"/>
+              <allowed_value value="45" description="B-(EXP)"/>
+              <allowed_value value="46" description="CCC+(EXP)"/>
+              <allowed_value value="47" description="CCC(EXP)"/>
+              <allowed_value value="48" description="CCC-(EXP)"/>
+              <allowed_value value="49" description="CC(EXP)"/>
+              <allowed_value value="50" description="C(EXP)"/>
+              <allowed_value value="51" description="DDD(EXP)"/>
+              <allowed_value value="52" description="DD(EXP)"/>
+              <allowed_value value="53" description="D(EXP)"/>
+              <allowed_value value="54" description="E(EXP)"/>
+              <allowed_value value="55" description="PIF"/>
+              <allowed_value value="56" description="WD"/>
+              <allowed_value value="57" description="C+(EXP)"/>
+              <allowed_value value="58" description="C-(EXP)"/>
+              <allowed_value value="60" description="S"/>
+              <allowed_value value="502" description="RD"/>
+            </allowed_values>
+</field>
+<field>
+<datum_id>35</datum_id>
+<field_type>short_value_enumeration</field_type>
+<example_value>4</example_value>
+<allowed_values optional_value_allowed="true">
+              <allowed_value value="0" description="Null"/>
+              <allowed_value value="2" description="Rating Watch Positive"/>
+              <allowed_value value="3" description="Rating Watch Negative"/>
+              <allowed_value value="4" description="Rating Watch Evolving"/>
+              <allowed_value value="5" description="Rating Watch Off"/>
+              <allowed_value value="7" description="Rating Outlook Stable"/>
+              <allowed_value value="8" description="Rating Outlook Negative"/>
+              <allowed_value value="9" description="Rating Outlook Positive"/>
+              <allowed_value value="10" description="Rating Outlook Evolving"/>
+              <allowed_value value="19" description="Under Review"/>
+            </allowed_values>
+</field>
+<field>
+<datum_id>36</datum_id>
+<field_type>short_value_enumeration</field_type>
+<example_value>4</example_value>
+<allowed_values optional_value_allowed="true">
+              <allowed_value value="0" description="Null"/>
+              <allowed_value value="1" description="Affirmed"/>
+              <allowed_value value="2" description="Rating Watch On"/>
+              <allowed_value value="3" description="Downgrade"/>
+              <allowed_value value="4" description="New Rating"/>
+              <allowed_value value="5" description="Revision Implication Watch"/>
+              <allowed_value value="6" description="Upgrade"/>
+              <allowed_value value="7" description="Withdrawn"/>
+              <allowed_value value="8" description="Revision Enhancement"/>
+              <allowed_value value="9" description="Expected Rating"/>
+              <allowed_value value="10" description="Revision Rating"/>
+              <allowed_value value="12" description="Revision Outlook"/>
+              <allowed_value value="15" description="Rating Watch Maintained"/>
+              <allowed_value value="16" description="Confirmed"/>
+              <allowed_value value="17" description="Revision IDR"/>
+              <allowed_value value="18" description="Recovery Rating Revision"/>
+              <allowed_value value="24" description="Matured"/>
+              <allowed_value value="25" description="Support Rating Floor Revision"/>
+              <allowed_value value="26" description="Publish"/>
+              <allowed_value value="30" description="Not Monitored"/>
+              <allowed_value value="31" description="Notice of Withdrawal"/>
+              <allowed_value value="34" description="Under Review"/>
+              <allowed_value value="35" description="Suspended"/>
+            </allowed_values>
+</field>
+<field>
+<datum_id>37</datum_id>
+<field_type>short_value_enumeration</field_type>
+<example_value>4</example_value>
+<allowed_values optional_value_allowed="true">
+              <allowed_value value="0" description="Null"/>
+              <allowed_value value="1" description="NR- Not Rated"/>
+              <allowed_value value="2" description="F1+"/>
+              <allowed_value value="3" description="F1"/>
+              <allowed_value value="4" description="F2"/>
+              <allowed_value value="5" description="F3"/>
+              <allowed_value value="6" description="B"/>
+              <allowed_value value="7" description="C"/>
+              <allowed_value value="8" description="D"/>
+              <allowed_value value="9" description="E"/>
+              <allowed_value value="10" description="F1+(EXP)"/>
+              <allowed_value value="11" description="F1(EXP)"/>
+              <allowed_value value="12" description="F2(EXP)"/>
+              <allowed_value value="13" description="F3(EXP)"/>
+              <allowed_value value="14" description="B(EXP)"/>
+              <allowed_value value="15" description="C(EXP)"/>
+              <allowed_value value="16" description="D(EXP)"/>
+              <allowed_value value="17" description="A1+(EXP)"/>
+              <allowed_value value="18" description="A1(EXP)"/>
+              <allowed_value value="19" description="A2(EXP)"/>
+              <allowed_value value="20" description="A3(EXP)"/>
+              <allowed_value value="21" description="E(EXP)"/>
+              <allowed_value value="22" description="F4(EXP)"/>
+              <allowed_value value="23" description="NR(EXP)"/>
+              <allowed_value value="24" description="A2+(EXP)"/>
+              <allowed_value value="25" description="A3+(EXP)"/>
+              <allowed_value value="26" description="A4+(EXP)"/>
+              <allowed_value value="27" description="A4(EXP)"/>
+              <allowed_value value="55" description="PIF"/>
+              <allowed_value value="56" description="WD"/>
+              <allowed_value value="386" description="A1+"/>
+              <allowed_value value="387" description="A1"/>
+              <allowed_value value="388" description="A2"/>
+              <allowed_value value="389" description="A3"/>
+              <allowed_value value="390" description="N1+"/>
+              <allowed_value value="391" description="N1"/>
+              <allowed_value value="392" description="N2"/>
+              <allowed_value value="393" description="N3"/>
+              <allowed_value value="394" description="N4"/>
+              <allowed_value value="395" description="N5"/>
+              <allowed_value value="489" description="F2+"/>
+              <allowed_value value="500" description="A2+"/>
+              <allowed_value value="501" description="A3+"/>
+              <allowed_value value="502" description="A4+"/>
+              <allowed_value value="503" description="A4"/>
+              <allowed_value value="703" description="F4"/>
+              <allowed_value value="704" description="F5"/>
+            </allowed_values>
+</field>
+<field>
+<datum_id>38</datum_id>
+<field_type>short_value_enumeration</field_type>
+<example_value>4</example_value>
+<allowed_values optional_value_allowed="true">
+              <allowed_value value="0" description="Null"/>
+              <allowed_value value="1" description="NR- Not Rated"/>
+              <allowed_value value="2" description="F1+"/>
+              <allowed_value value="3" description="F1"/>
+              <allowed_value value="4" description="F2"/>
+              <allowed_value value="5" description="F3"/>
+              <allowed_value value="6" description="B"/>
+              <allowed_value value="7" description="C"/>
+              <allowed_value value="8" description="D"/>
+              <allowed_value value="9" description="E"/>
+              <allowed_value value="10" description="F1+(EXP)"/>
+              <allowed_value value="11" description="F1(EXP)"/>
+              <allowed_value value="12" description="F2(EXP)"/>
+              <allowed_value value="13" description="F3(EXP)"/>
+              <allowed_value value="14" description="B(EXP)"/>
+              <allowed_value value="15" description="C(EXP)"/>
+              <allowed_value value="16" description="D(EXP)"/>
+              <allowed_value value="17" description="A1+(EXP)"/>
+              <allowed_value value="18" description="A1(EXP)"/>
+              <allowed_value value="19" description="A2(EXP)"/>
+              <allowed_value value="20" description="A3(EXP)"/>
+              <allowed_value value="21" description="E(EXP)"/>
+              <allowed_value value="22" description="F4(EXP)"/>
+              <allowed_value value="23" description="NR(EXP)"/>
+              <allowed_value value="24" description="A2+(EXP)"/>
+              <allowed_value value="25" description="A3+(EXP)"/>
+              <allowed_value value="26" description="A4+(EXP)"/>
+              <allowed_value value="27" description="A4(EXP)"/>
+              <allowed_value value="55" description="PIF"/>
+              <allowed_value value="56" description="WD"/>
+              <allowed_value value="386" description="A1+"/>
+              <allowed_value value="387" description="A1"/>
+              <allowed_value value="388" description="A2"/>
+              <allowed_value value="389" description="A3"/>
+              <allowed_value value="390" description="N1+"/>
+              <allowed_value value="391" description="N1"/>
+              <allowed_value value="392" description="N2"/>
+              <allowed_value value="393" description="N3"/>
+              <allowed_value value="394" description="N4"/>
+              <allowed_value value="395" description="N5"/>
+              <allowed_value value="489" description="F2+"/>
+              <allowed_value value="500" description="A2+"/>
+              <allowed_value value="501" description="A3+"/>
+              <allowed_value value="502" description="A4+"/>
+              <allowed_value value="503" description="A4"/>
+              <allowed_value value="703" description="F4"/>
+              <allowed_value value="704" description="F5"/>
+            </allowed_values>
+</field>
+<field>
+<datum_id>39</datum_id>
+<field_type>short_value_enumeration</field_type>
+<example_value>4</example_value>
+<allowed_values optional_value_allowed="true">
+              <allowed_value value="0" description="Null"/>
+              <allowed_value value="1" description="Affirmed"/>
+              <allowed_value value="2" description="Rating Watch On"/>
+              <allowed_value value="3" description="Downgrade"/>
+              <allowed_value value="4" description="New Rating"/>
+              <allowed_value value="5" description="Revision Implication Watch"/>
+              <allowed_value value="6" description="Upgrade"/>
+              <allowed_value value="7" description="Withdrawn"/>
+              <allowed_value value="8" description="Revision Enhancement"/>
+              <allowed_value value="9" description="Expected Rating"/>
+              <allowed_value value="10" description="Revision Rating"/>
+              <allowed_value value="12" description="Revision Outlook"/>
+              <allowed_value value="15" description="Rating Watch Maintained"/>
+              <allowed_value value="16" description="Confirmed"/>
+              <allowed_value value="17" description="Revision IDR"/>
+              <allowed_value value="18" description="Recovery Rating Revision"/>
+              <allowed_value value="24" description="Matured"/>
+              <allowed_value value="25" description="Support Rating Floor Revision"/>
+              <allowed_value value="26" description="Publish"/>
+              <allowed_value value="30" description="Not Monitored"/>
+              <allowed_value value="31" description="Notice of Withdrawal"/>
+              <allowed_value value="34" description="Under Review"/>
+              <allowed_value value="35" description="Suspended"/>
+            </allowed_values>
+</field>
+<field>
+<datum_id>40</datum_id>
+<field_type>short_value_enumeration</field_type>
+<example_value>4</example_value>
+<allowed_values optional_value_allowed="true">
+              <allowed_value value="0" description="Null"/>
+              <allowed_value value="1" description="NR- Not Rated"/>
+              <allowed_value value="2" description="F1+"/>
+              <allowed_value value="3" description="F1"/>
+              <allowed_value value="4" description="F2"/>
+              <allowed_value value="5" description="F3"/>
+              <allowed_value value="6" description="B"/>
+              <allowed_value value="7" description="C"/>
+              <allowed_value value="8" description="D"/>
+              <allowed_value value="9" description="F1+(EXP)"/>
+              <allowed_value value="10" description="F1(EXP)"/>
+              <allowed_value value="11" description="F2(EXP)"/>
+              <allowed_value value="12" description="F3(EXP)"/>
+              <allowed_value value="13" description="B(EXP)"/>
+              <allowed_value value="14" description="C(EXP)"/>
+              <allowed_value value="15" description="D(EXP)"/>
+              <allowed_value value="16" description="NR(EXP)"/>
+              <allowed_value value="501" description="WD"/>
+            </allowed_values>
+</field>
+<field>
+<datum_id>41</datum_id>
+<field_type>short_value_enumeration</field_type>
+<example_value>4</example_value>
+<allowed_values optional_value_allowed="true">
+              <allowed_value value="0" description="Null"/>
+              <allowed_value value="1" description="NR- Not Rated"/>
+              <allowed_value value="2" description="F1+"/>
+              <allowed_value value="3" description="F1"/>
+              <allowed_value value="4" description="F2"/>
+              <allowed_value value="5" description="F3"/>
+              <allowed_value value="6" description="B"/>
+              <allowed_value value="7" description="C"/>
+              <allowed_value value="8" description="D"/>
+              <allowed_value value="9" description="F1+(EXP)"/>
+              <allowed_value value="10" description="F1(EXP)"/>
+              <allowed_value value="11" description="F2(EXP)"/>
+              <allowed_value value="12" description="F3(EXP)"/>
+              <allowed_value value="13" description="B(EXP)"/>
+              <allowed_value value="14" description="C(EXP)"/>
+              <allowed_value value="15" description="D(EXP)"/>
+              <allowed_value value="16" description="NR(EXP)"/>
+              <allowed_value value="501" description="WD"/>
+            </allowed_values>
+</field>
+<field>
+<datum_id>42</datum_id>
+<field_type>short_value_enumeration</field_type>
+<example_value>4</example_value>
+<allowed_values optional_value_allowed="true">
+              <allowed_value value="0" description="Null"/>
+              <allowed_value value="1" description="Affirmed"/>
+              <allowed_value value="2" description="Rating Watch On"/>
+              <allowed_value value="3" description="Downgrade"/>
+              <allowed_value value="4" description="New Rating"/>
+              <allowed_value value="5" description="Revision Implication Watch"/>
+              <allowed_value value="6" description="Upgrade"/>
+              <allowed_value value="7" description="Withdrawn"/>
+              <allowed_value value="8" description="Revision Enhancement"/>
+              <allowed_value value="9" description="Expected Rating"/>
+              <allowed_value value="10" description="Revision Rating"/>
+              <allowed_value value="12" description="Revision Outlook"/>
+              <allowed_value value="15" description="Rating Watch Maintained"/>
+              <allowed_value value="16" description="Confirmed"/>
+              <allowed_value value="17" description="Revision IDR"/>
+              <allowed_value value="18" description="Recovery Rating Revision"/>
+              <allowed_value value="24" description="Matured"/>
+              <allowed_value value="25" description="Support Rating Floor Revision"/>
+              <allowed_value value="26" description="Publish"/>
+              <allowed_value value="30" description="Not Monitored"/>
+              <allowed_value value="31" description="Notice of Withdrawal"/>
+              <allowed_value value="34" description="Under Review"/>
+              <allowed_value value="35" description="Suspended"/>
+            </allowed_values>
+</field>
+<field>
+<datum_id>43</datum_id>
+<field_type>short_value_enumeration</field_type>
+<example_value>4</example_value>
+<allowed_values optional_value_allowed="true">
+              <allowed_value value="0" description="Null"/>
+              <allowed_value value="1" description="NR- Not Rated"/>
+              <allowed_value value="2" description="F1+"/>
+              <allowed_value value="3" description="F1"/>
+              <allowed_value value="4" description="F2"/>
+              <allowed_value value="5" description="F3"/>
+              <allowed_value value="6" description="B"/>
+              <allowed_value value="7" description="C"/>
+              <allowed_value value="8" description="D"/>
+              <allowed_value value="501" description="WD"/>
+            </allowed_values>
+</field>
+<field>
+<datum_id>44</datum_id>
+<field_type>short_value_enumeration</field_type>
+<example_value>4</example_value>
+<allowed_values optional_value_allowed="true">
+              <allowed_value value="0" description="Null"/>
+              <allowed_value value="1" description="NR- Not Rated"/>
+              <allowed_value value="2" description="F1+"/>
+              <allowed_value value="3" description="F1"/>
+              <allowed_value value="4" description="F2"/>
+              <allowed_value value="5" description="F3"/>
+              <allowed_value value="6" description="B"/>
+              <allowed_value value="7" description="C"/>
+              <allowed_value value="8" description="D"/>
+              <allowed_value value="501" description="WD"/>
+            </allowed_values>
+</field>
+<field>
+<datum_id>45</datum_id>
+<field_type>short_value_enumeration</field_type>
+<example_value>4</example_value>
+<allowed_values optional_value_allowed="true">
+              <allowed_value value="0" description="Null"/>
+              <allowed_value value="1" description="Affirmed"/>
+              <allowed_value value="2" description="Rating Watch On"/>
+              <allowed_value value="3" description="Downgrade"/>
+              <allowed_value value="4" description="New Rating"/>
+              <allowed_value value="5" description="Revision Implication Watch"/>
+              <allowed_value value="6" description="Upgrade"/>
+              <allowed_value value="7" description="Withdrawn"/>
+              <allowed_value value="8" description="Revision Enhancement"/>
+              <allowed_value value="9" description="Expected Rating"/>
+              <allowed_value value="10" description="Revision Rating"/>
+              <allowed_value value="12" description="Revision Outlook"/>
+              <allowed_value value="15" description="Rating Watch Maintained"/>
+              <allowed_value value="16" description="Confirmed"/>
+              <allowed_value value="17" description="Revision IDR"/>
+              <allowed_value value="18" description="Recovery Rating Revision"/>
+              <allowed_value value="24" description="Matured"/>
+              <allowed_value value="25" description="Support Rating Floor Revision"/>
+              <allowed_value value="26" description="Publish"/>
+              <allowed_value value="30" description="Not Monitored"/>
+              <allowed_value value="31" description="Notice of Withdrawal"/>
+              <allowed_value value="34" description="Under Review"/>
+              <allowed_value value="35" description="Suspended"/>
+            </allowed_values>
+</field>
+<field>
+<datum_id>46</datum_id>
+<field_type>short_value_enumeration</field_type>
+<example_value>4</example_value>
+<allowed_values optional_value_allowed="true">
+              <allowed_value value="0" description="Null"/>
+              <allowed_value value="1" description="NR"/>
+              <allowed_value value="2" description="AAA"/>
+              <allowed_value value="3" description="AA+"/>
+              <allowed_value value="4" description="AA"/>
+              <allowed_value value="5" description="AA-"/>
+              <allowed_value value="6" description="A+"/>
+              <allowed_value value="7" description="A"/>
+              <allowed_value value="8" description="A-"/>
+              <allowed_value value="9" description="BBB+"/>
+              <allowed_value value="10" description="BBB"/>
+              <allowed_value value="11" description="BBB-"/>
+              <allowed_value value="12" description="BB+"/>
+              <allowed_value value="13" description="BB"/>
+              <allowed_value value="14" description="BB-"/>
+              <allowed_value value="15" description="B+"/>
+              <allowed_value value="16" description="B"/>
+              <allowed_value value="17" description="B-"/>
+              <allowed_value value="18" description="CCC+"/>
+              <allowed_value value="19" description="CCC"/>
+              <allowed_value value="20" description="CCC-"/>
+              <allowed_value value="21" description="CC"/>
+              <allowed_value value="22" description="C"/>
+              <allowed_value value="23" description="DDD"/>
+              <allowed_value value="24" description="DD"/>
+              <allowed_value value="25" description="D"/>
+              <allowed_value value="26" description="E"/>
+              <allowed_value value="501" description="WD"/>
+            </allowed_values>
+</field>
+<field>
+<datum_id>47</datum_id>
+<field_type>short_value_enumeration</field_type>
+<example_value>4</example_value>
+<allowed_values optional_value_allowed="true">
+              <allowed_value value="0" description="Null"/>
+              <allowed_value value="1" description="NR"/>
+              <allowed_value value="2" description="AAA"/>
+              <allowed_value value="3" description="AA+"/>
+              <allowed_value value="4" description="AA"/>
+              <allowed_value value="5" description="AA-"/>
+              <allowed_value value="6" description="A+"/>
+              <allowed_value value="7" description="A"/>
+              <allowed_value value="8" description="A-"/>
+              <allowed_value value="9" description="BBB+"/>
+              <allowed_value value="10" description="BBB"/>
+              <allowed_value value="11" description="BBB-"/>
+              <allowed_value value="12" description="BB+"/>
+              <allowed_value value="13" description="BB"/>
+              <allowed_value value="14" description="BB-"/>
+              <allowed_value value="15" description="B+"/>
+              <allowed_value value="16" description="B"/>
+              <allowed_value value="17" description="B-"/>
+              <allowed_value value="18" description="CCC+"/>
+              <allowed_value value="19" description="CCC"/>
+              <allowed_value value="20" description="CCC-"/>
+              <allowed_value value="21" description="CC"/>
+              <allowed_value value="22" description="C"/>
+              <allowed_value value="23" description="DDD"/>
+              <allowed_value value="24" description="DD"/>
+              <allowed_value value="25" description="D"/>
+              <allowed_value value="26" description="E"/>
+              <allowed_value value="501" description="WD"/>
+            </allowed_values>
+</field>
+<field>
+<datum_id>48</datum_id>
+<field_type>short_value_enumeration</field_type>
+<example_value>4</example_value>
+<allowed_values optional_value_allowed="true">
+              <allowed_value value="0" description="Null"/>
+              <allowed_value value="2" description="Rating Watch Positive"/>
+              <allowed_value value="3" description="Rating Watch Negative"/>
+              <allowed_value value="4" description="Rating Watch Evolving"/>
+              <allowed_value value="5" description="Rating Watch Off"/>
+              <allowed_value value="7" description="Rating Outlook Stable"/>
+              <allowed_value value="8" description="Rating Outlook Negative"/>
+              <allowed_value value="9" description="Rating Outlook Positive"/>
+              <allowed_value value="10" description="Rating Outlook Evolving"/>
+              <allowed_value value="19" description="Under Review"/>
+            </allowed_values>
+</field>
+</fields>
+</message>
+</messages>
+</category>
+</protocol>

@@ -1,0 +1,1387 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<?xml-stylesheet type="text/xsl" href="./ClientHTML.xsl"?><protocol>
+<version>351</version>
+<revisions>
+    <revision type="Final" version="351" author="MNI News" date="03/13/2017"/>
+  </revisions>
+<category name="DE_CPI_Bavaria">
+<description>CPI Bavaria</description>
+<country>DE</country>
+<category_id>30001</category_id>
+<data>
+<datum>
+<short_description>change month on month</short_description>
+<description>Month on month change</description>
+<datum_type>%</datum_type>
+<datum_id>1</datum_id>
+</datum>
+<datum>
+<short_description>change year  on year</short_description>
+<description>Year on year change</description>
+<datum_type>%</datum_type>
+<datum_id>2</datum_id>
+</datum>
+</data>
+<messages>
+<message>
+<message_type>release</message_type>
+<message_version>1</message_version>
+<multicast_group>EU_GROUP_3</multicast_group>
+<fields>
+<field>
+<datum_id>1</datum_id>
+<field_type>float</field_type>
+<example_value>0.7</example_value>
+</field>
+<field>
+<datum_id>2</datum_id>
+<field_type>float</field_type>
+<example_value>3.2</example_value>
+</field>
+</fields>
+</message>
+<message>
+<message_type>estimate</message_type>
+<message_version>1</message_version>
+<multicast_group>EU_ESTIMATES</multicast_group>
+<fields>
+<field>
+<datum_id>1</datum_id>
+<field_type>float</field_type>
+<example_value>0.7</example_value>
+</field>
+<field>
+<datum_id>2</datum_id>
+<field_type>float</field_type>
+<example_value>3.2</example_value>
+</field>
+</fields>
+</message>
+</messages>
+</category>
+<category name="DE_CPI_Brandenburg">
+<description>CPI Brandenburg</description>
+<country>DE</country>
+<category_id>30002</category_id>
+<data>
+<datum>
+<short_description>change month on month</short_description>
+<description>Month on month change</description>
+<datum_type>%</datum_type>
+<datum_id>1</datum_id>
+</datum>
+<datum>
+<short_description>change year on year</short_description>
+<description>Year on year change</description>
+<datum_type>%</datum_type>
+<datum_id>2</datum_id>
+</datum>
+</data>
+<messages>
+<message>
+<message_type>release</message_type>
+<message_version>1</message_version>
+<multicast_group>EU_GROUP_3</multicast_group>
+<fields>
+<field>
+<datum_id>1</datum_id>
+<field_type>float</field_type>
+<example_value>0.5</example_value>
+</field>
+<field>
+<datum_id>2</datum_id>
+<field_type>float</field_type>
+<example_value>3.1</example_value>
+</field>
+</fields>
+</message>
+<message>
+<message_type>estimate</message_type>
+<message_version>1</message_version>
+<multicast_group>EU_ESTIMATES</multicast_group>
+<fields>
+<field>
+<datum_id>1</datum_id>
+<field_type>float</field_type>
+<example_value>0.5</example_value>
+</field>
+<field>
+<datum_id>2</datum_id>
+<field_type>float</field_type>
+<example_value>3.1</example_value>
+</field>
+</fields>
+</message>
+</messages>
+</category>
+<category name="DE_CPI_North_Rhine_Westphalia">
+<description>CPI North Rhine Westphalia</description>
+<country>DE</country>
+<category_id>30003</category_id>
+<data>
+<datum>
+<short_description>change month on month</short_description>
+<description>Month on month change</description>
+<datum_type>%</datum_type>
+<datum_id>1</datum_id>
+</datum>
+<datum>
+<short_description>change year on year</short_description>
+<description>Year on year change</description>
+<datum_type>%</datum_type>
+<datum_id>2</datum_id>
+</datum>
+</data>
+<messages>
+<message>
+<message_type>release</message_type>
+<message_version>1</message_version>
+<multicast_group>EU_GROUP_3</multicast_group>
+<fields>
+<field>
+<datum_id>1</datum_id>
+<field_type>float</field_type>
+<example_value>0.1</example_value>
+</field>
+<field>
+<datum_id>2</datum_id>
+<field_type>float</field_type>
+<example_value>0.3</example_value>
+</field>
+</fields>
+</message>
+<message>
+<message_type>estimate</message_type>
+<message_version>1</message_version>
+<multicast_group>EU_ESTIMATES</multicast_group>
+<fields>
+<field>
+<datum_id>1</datum_id>
+<field_type>float</field_type>
+<example_value>0.1</example_value>
+</field>
+<field>
+<datum_id>2</datum_id>
+<field_type>float</field_type>
+<example_value>0.3</example_value>
+</field>
+</fields>
+</message>
+</messages>
+</category>
+<category name="DE_CPI_Saxony">
+<description>CPI Saxony</description>
+<country>DE</country>
+<category_id>30004</category_id>
+<data>
+<datum>
+<short_description>change month on month</short_description>
+<description>Month on month change</description>
+<datum_type>%</datum_type>
+<datum_id>1</datum_id>
+</datum>
+<datum>
+<short_description>change year on year</short_description>
+<description>Year on year change</description>
+<datum_type>%</datum_type>
+<datum_id>2</datum_id>
+</datum>
+</data>
+<messages>
+<message>
+<message_type>release</message_type>
+<message_version>1</message_version>
+<multicast_group>EU_GROUP_3</multicast_group>
+<fields>
+<field>
+<datum_id>1</datum_id>
+<field_type>float</field_type>
+<example_value>0.1</example_value>
+</field>
+<field>
+<datum_id>2</datum_id>
+<field_type>float</field_type>
+<example_value>0.3</example_value>
+</field>
+</fields>
+</message>
+<message>
+<message_type>estimate</message_type>
+<message_version>1</message_version>
+<multicast_group>EU_ESTIMATES</multicast_group>
+<fields>
+<field>
+<datum_id>1</datum_id>
+<field_type>float</field_type>
+<example_value>0.1</example_value>
+</field>
+<field>
+<datum_id>2</datum_id>
+<field_type>float</field_type>
+<example_value>0.3</example_value>
+</field>
+</fields>
+</message>
+</messages>
+</category>
+<category name="DE_CPI_Hesse">
+<description>CPI Hesse</description>
+<country>DE</country>
+<category_id>30005</category_id>
+<data>
+<datum>
+<short_description>change month on month</short_description>
+<description>Month on month change</description>
+<datum_type>%</datum_type>
+<datum_id>1</datum_id>
+</datum>
+<datum>
+<short_description>change year on year</short_description>
+<description>Year on year change</description>
+<datum_type>%</datum_type>
+<datum_id>2</datum_id>
+</datum>
+</data>
+<messages>
+<message>
+<message_type>release</message_type>
+<message_version>1</message_version>
+<multicast_group>EU_GROUP_3</multicast_group>
+<fields>
+<field>
+<datum_id>1</datum_id>
+<field_type>float</field_type>
+<example_value>0.7</example_value>
+</field>
+<field>
+<datum_id>2</datum_id>
+<field_type>float</field_type>
+<example_value>3.5</example_value>
+</field>
+</fields>
+</message>
+<message>
+<message_type>estimate</message_type>
+<message_version>1</message_version>
+<multicast_group>EU_ESTIMATES</multicast_group>
+<fields>
+<field>
+<datum_id>1</datum_id>
+<field_type>float</field_type>
+<example_value>0.7</example_value>
+</field>
+<field>
+<datum_id>2</datum_id>
+<field_type>float</field_type>
+<example_value>3.5</example_value>
+</field>
+</fields>
+</message>
+</messages>
+</category>
+<category name="DE_CPI_Baden_Wuerttemberg">
+<description>CPI Baden Wuerttemberg</description>
+<country>DE</country>
+<category_id>30006</category_id>
+<data>
+<datum>
+<short_description>change month on month</short_description>
+<description>Month on month change</description>
+<datum_type>%</datum_type>
+<datum_id>1</datum_id>
+</datum>
+<datum>
+<short_description>change year on year</short_description>
+<description>Year on year change</description>
+<datum_type>%</datum_type>
+<datum_id>2</datum_id>
+</datum>
+</data>
+<messages>
+<message>
+<message_type>release</message_type>
+<message_version>1</message_version>
+<multicast_group>EU_GROUP_3</multicast_group>
+<fields>
+<field>
+<datum_id>1</datum_id>
+<field_type>float</field_type>
+<example_value>0.6</example_value>
+</field>
+<field>
+<datum_id>2</datum_id>
+<field_type>float</field_type>
+<example_value>2.9</example_value>
+</field>
+</fields>
+</message>
+<message>
+<message_type>estimate</message_type>
+<message_version>1</message_version>
+<multicast_group>EU_ESTIMATES</multicast_group>
+<fields>
+<field>
+<datum_id>1</datum_id>
+<field_type>float</field_type>
+<example_value>0.6</example_value>
+</field>
+<field>
+<datum_id>2</datum_id>
+<field_type>float</field_type>
+<example_value>2.9</example_value>
+</field>
+</fields>
+</message>
+</messages>
+</category>
+<category name="DE_Preliminary_CPI_Germany">
+<description>Preliminary CPI</description>
+<country>DE</country>
+<category_id>30007</category_id>
+<data>
+<datum>
+<short_description>change month on month</short_description>
+<description>Month on month change</description>
+<datum_type>%</datum_type>
+<datum_id>1</datum_id>
+</datum>
+<datum>
+<short_description>change year on year</short_description>
+<description>Year on year change</description>
+<datum_type>%</datum_type>
+<datum_id>2</datum_id>
+</datum>
+<datum>
+<short_description>HICP month on month</short_description>
+<description>HICP Month on month</description>
+<datum_type>%</datum_type>
+<datum_id>3</datum_id>
+</datum>
+<datum>
+<short_description>HICP change year on year</short_description>
+<description>HICP change year on year</description>
+<datum_type>%</datum_type>
+<datum_id>4</datum_id>
+</datum>
+</data>
+<messages>
+<message>
+<message_type>release</message_type>
+<message_version>1</message_version>
+<multicast_group>EU_GROUP_3</multicast_group>
+<fields>
+<field>
+<datum_id>1</datum_id>
+<field_type>float</field_type>
+<example_value>0.6</example_value>
+</field>
+<field>
+<datum_id>2</datum_id>
+<field_type>float</field_type>
+<example_value>3.3</example_value>
+</field>
+<field>
+<datum_id>3</datum_id>
+<field_type>float</field_type>
+<example_value>0.6</example_value>
+</field>
+<field>
+<datum_id>4</datum_id>
+<field_type>float</field_type>
+<example_value>3.4</example_value>
+</field>
+</fields>
+</message>
+<message>
+<message_type>estimate</message_type>
+<message_version>1</message_version>
+<multicast_group>EU_ESTIMATES</multicast_group>
+<fields>
+<field>
+<datum_id>1</datum_id>
+<field_type>float</field_type>
+<example_value>0.6</example_value>
+</field>
+<field>
+<datum_id>2</datum_id>
+<field_type>float</field_type>
+<example_value>3.3</example_value>
+</field>
+<field>
+<datum_id>3</datum_id>
+<field_type>float</field_type>
+<example_value>0.6</example_value>
+</field>
+<field>
+<datum_id>4</datum_id>
+<field_type>float</field_type>
+<example_value>3.4</example_value>
+</field>
+</fields>
+</message>
+</messages>
+</category>
+<category name="DE_Final_CPI_Germany">
+<description>Final CPI</description>
+<country>DE</country>
+<category_id>30008</category_id>
+<data>
+<datum>
+<short_description>change month on month</short_description>
+<description>Month on month change</description>
+<datum_type>%</datum_type>
+<datum_id>1</datum_id>
+</datum>
+<datum>
+<short_description>change year on year</short_description>
+<description>Year on year change</description>
+<datum_type>%</datum_type>
+<datum_id>2</datum_id>
+</datum>
+<datum>
+<short_description>HICP month on month</short_description>
+<description>HICP Month on month</description>
+<datum_type>%</datum_type>
+<datum_id>3</datum_id>
+</datum>
+<datum>
+<short_description>HICP year on year</short_description>
+<description>HICP year on year</description>
+<datum_type>%</datum_type>
+<datum_id>4</datum_id>
+</datum>
+</data>
+<messages>
+<message>
+<message_type>release</message_type>
+<message_version>1</message_version>
+<multicast_group>EU_GROUP_3</multicast_group>
+<fields>
+<field>
+<datum_id>1</datum_id>
+<field_type>float</field_type>
+<example_value>0.6</example_value>
+</field>
+<field>
+<datum_id>2</datum_id>
+<field_type>float</field_type>
+<example_value>3.3</example_value>
+</field>
+<field>
+<datum_id>3</datum_id>
+<field_type>float</field_type>
+<example_value>0.7</example_value>
+</field>
+<field>
+<datum_id>4</datum_id>
+<field_type>float</field_type>
+<example_value>3.1</example_value>
+</field>
+</fields>
+</message>
+<message>
+<message_type>estimate</message_type>
+<message_version>1</message_version>
+<multicast_group>EU_ESTIMATES</multicast_group>
+<fields>
+<field>
+<datum_id>1</datum_id>
+<field_type>float</field_type>
+<example_value>0.6</example_value>
+</field>
+<field>
+<datum_id>2</datum_id>
+<field_type>float</field_type>
+<example_value>3.3</example_value>
+</field>
+<field>
+<datum_id>3</datum_id>
+<field_type>float</field_type>
+<example_value>0.7</example_value>
+</field>
+<field>
+<datum_id>4</datum_id>
+<field_type>float</field_type>
+<example_value>3.1</example_value>
+</field>
+</fields>
+</message>
+</messages>
+</category>
+<category name="DE_Retail_Sales">
+<description>Retail Sales</description>
+<country>DE</country>
+<category_id>30009</category_id>
+<data>
+<datum>
+<short_description>real change month on month</short_description>
+<description>Real month on month change</description>
+<datum_type>%</datum_type>
+<datum_id>1</datum_id>
+</datum>
+<datum>
+<short_description>real change year on year</short_description>
+<description>Real year on year change</description>
+<datum_type>%</datum_type>
+<datum_id>2</datum_id>
+</datum>
+</data>
+<messages>
+<message>
+<message_type>release</message_type>
+<message_version>1</message_version>
+<multicast_group>EU_GROUP_3</multicast_group>
+<fields>
+<field>
+<datum_id>1</datum_id>
+<field_type>float</field_type>
+<example_value>0.1</example_value>
+</field>
+<field>
+<datum_id>2</datum_id>
+<field_type>float</field_type>
+<example_value>0.3</example_value>
+</field>
+</fields>
+</message>
+<message>
+<message_type>estimate</message_type>
+<message_version>1</message_version>
+<multicast_group>EU_ESTIMATES</multicast_group>
+<fields>
+<field>
+<datum_id>1</datum_id>
+<field_type>float</field_type>
+<example_value>0.1</example_value>
+</field>
+<field>
+<datum_id>2</datum_id>
+<field_type>float</field_type>
+<example_value>0.3</example_value>
+</field>
+</fields>
+</message>
+</messages>
+</category>
+<category name="DE_Producer_Prices">
+<description>Producer Prices</description>
+<country>DE</country>
+<category_id>30010</category_id>
+<data>
+<datum>
+<short_description>change month on month</short_description>
+<description>Month on month change</description>
+<datum_type>%</datum_type>
+<datum_id>1</datum_id>
+</datum>
+<datum>
+<short_description>change year on year</short_description>
+<description>change year on year</description>
+<datum_type>%</datum_type>
+<datum_id>2</datum_id>
+</datum>
+</data>
+<messages>
+<message>
+<message_type>release</message_type>
+<message_version>1</message_version>
+<multicast_group>EU_GROUP_3</multicast_group>
+<fields>
+<field>
+<datum_id>1</datum_id>
+<field_type>float</field_type>
+<example_value>0.9</example_value>
+</field>
+<field>
+<datum_id>2</datum_id>
+<field_type>float</field_type>
+<example_value>6.7</example_value>
+</field>
+</fields>
+</message>
+<message>
+<message_type>estimate</message_type>
+<message_version>1</message_version>
+<multicast_group>EU_ESTIMATES</multicast_group>
+<fields>
+<field>
+<datum_id>1</datum_id>
+<field_type>float</field_type>
+<example_value>0.9</example_value>
+</field>
+<field>
+<datum_id>2</datum_id>
+<field_type>float</field_type>
+<example_value>6.7</example_value>
+</field>
+</fields>
+</message>
+</messages>
+</category>
+<category name="DE_Factory_Orders_Industrial_Orders">
+<description>Factory Orders/Industrial Orders</description>
+<country>DE</country>
+<category_id>30011</category_id>
+<data>
+<datum>
+<short_description>change month on month - seasonally adjusted</short_description>
+<description>Month on month change seasonally adjusted</description>
+<datum_type>%</datum_type>
+<datum_id>1</datum_id>
+</datum>
+<datum>
+<short_description>% change year on year-Adjusted for Workdays</short_description>
+<description>Percent change year on year-Adjusted for Workdays</description>
+<datum_type>%</datum_type>
+<datum_id>3</datum_id>
+</datum>
+</data>
+<messages>
+<message>
+<message_type>release</message_type>
+<message_version>2</message_version>
+<start_date>2011-04-01</start_date>
+<multicast_group>EU_GROUP_3</multicast_group>
+<fields>
+<field>
+<datum_id>1</datum_id>
+<field_type>float</field_type>
+<example_value>-1.8</example_value>
+</field>
+<field>
+<datum_id>3</datum_id>
+<field_type>float</field_type>
+<example_value>8.7</example_value>
+</field>
+</fields>
+</message>
+<message>
+<message_type>estimate</message_type>
+<message_version>2</message_version>
+<start_date>2011-04-01</start_date>
+<multicast_group>EU_ESTIMATES</multicast_group>
+<fields>
+<field>
+<datum_id>1</datum_id>
+<field_type>float</field_type>
+<example_value>-1.8</example_value>
+</field>
+<field>
+<datum_id>3</datum_id>
+<field_type>float</field_type>
+<example_value>8.7</example_value>
+</field>
+</fields>
+</message>
+</messages>
+</category>
+<category name="DE_Industrial_Production">
+<description>Industrial Production</description>
+<country>DE</country>
+<category_id>30012</category_id>
+<data>
+<datum>
+<short_description>change month on month seasonally adjusted</short_description>
+<description>Month on month change seasonally adjusted</description>
+<datum_type>%</datum_type>
+<datum_id>1</datum_id>
+</datum>
+<datum>
+<short_description>change year on year-adjusted for working days</short_description>
+<description>change year on year-adjusted for working days</description>
+<datum_type>%</datum_type>
+<datum_id>2</datum_id>
+</datum>
+</data>
+<messages>
+<message>
+<message_type>release</message_type>
+<message_version>1</message_version>
+<multicast_group>EU_GROUP_3</multicast_group>
+<fields>
+<field>
+<datum_id>1</datum_id>
+<field_type>float</field_type>
+<example_value>-2.4</example_value>
+</field>
+<field>
+<datum_id>2</datum_id>
+<field_type>float</field_type>
+<example_value>0.8</example_value>
+</field>
+</fields>
+</message>
+<message>
+<message_type>estimate</message_type>
+<message_version>1</message_version>
+<multicast_group>EU_ESTIMATES</multicast_group>
+<fields>
+<field>
+<datum_id>1</datum_id>
+<field_type>float</field_type>
+<example_value>-2.4</example_value>
+</field>
+<field>
+<datum_id>2</datum_id>
+<field_type>float</field_type>
+<example_value>0.8</example_value>
+</field>
+</fields>
+</message>
+</messages>
+</category>
+<category name="DE_Imports_Exports_Trade_Balance">
+<description>Imports/Exports/Trade Balance</description>
+<country>DE</country>
+<category_id>30013</category_id>
+<data>
+<datum>
+<short_description>change Imports month on month (seasonally adjusted)</short_description>
+<description>Change of imports, month on month (seasonally adjusted)</description>
+<datum_type>%</datum_type>
+<datum_id>1</datum_id>
+</datum>
+<datum>
+<short_description>change Exports month on month (seasonally adjusted)</short_description>
+<description>change Exports month on month (seasonally adjusted)</description>
+<datum_type>%</datum_type>
+<datum_id>2</datum_id>
+</datum>
+<datum>
+<short_description>Monthly Trade Balance bln (seasonally adjusted)</short_description>
+<description>Monthly Trade Balance bln</description>
+<datum_scale>B</datum_scale>
+<datum_type>Euro</datum_type>
+<datum_id>3</datum_id>
+</datum>
+</data>
+<messages>
+<message>
+<message_type>release</message_type>
+<message_version>1</message_version>
+<multicast_group>EU_GROUP_3</multicast_group>
+<fields>
+<field>
+<datum_id>1</datum_id>
+<field_type>float</field_type>
+<example_value>2.1</example_value>
+</field>
+<field>
+<datum_id>2</datum_id>
+<field_type>float</field_type>
+<example_value>1.2</example_value>
+</field>
+<field>
+<datum_id>3</datum_id>
+<field_type>float</field_type>
+<example_value>17.7</example_value>
+</field>
+</fields>
+</message>
+<message>
+<message_type>estimate</message_type>
+<message_version>1</message_version>
+<multicast_group>EU_ESTIMATES</multicast_group>
+<fields>
+<field>
+<datum_id>1</datum_id>
+<field_type>float</field_type>
+<example_value>2.1</example_value>
+</field>
+<field>
+<datum_id>2</datum_id>
+<field_type>float</field_type>
+<example_value>1.2</example_value>
+</field>
+<field>
+<datum_id>3</datum_id>
+<field_type>float</field_type>
+<example_value>17.7</example_value>
+</field>
+</fields>
+</message>
+</messages>
+</category>
+<category name="DE_Import_Export_Price_Indices">
+<description>Import/Export Price Indices</description>
+<country>DE</country>
+<category_id>30014</category_id>
+<data>
+<datum>
+<short_description>Imports change month on month</short_description>
+<description>Change of imports, month on month</description>
+<datum_type>%</datum_type>
+<datum_id>1</datum_id>
+</datum>
+<datum>
+<short_description>Imports change year on year</short_description>
+<description>Change of imports, year on year</description>
+<datum_type>%</datum_type>
+<datum_id>2</datum_id>
+</datum>
+<datum>
+<short_description>Exports change month on month</short_description>
+<description>Change of exports, month on month</description>
+<datum_type>%</datum_type>
+<datum_id>3</datum_id>
+</datum>
+<datum>
+<short_description>Exports change year on year</short_description>
+<description>Change of exports, year on year</description>
+<datum_type>%</datum_type>
+<datum_id>4</datum_id>
+</datum>
+</data>
+<messages>
+<message>
+<message_type>release</message_type>
+<message_version>1</message_version>
+<multicast_group>EU_GROUP_3</multicast_group>
+<fields>
+<field>
+<datum_id>1</datum_id>
+<field_type>float</field_type>
+<example_value>1.5</example_value>
+</field>
+<field>
+<datum_id>2</datum_id>
+<field_type>float</field_type>
+<example_value>8.9</example_value>
+</field>
+<field>
+<datum_id>3</datum_id>
+<field_type>float</field_type>
+<example_value>0.5</example_value>
+</field>
+<field>
+<datum_id>4</datum_id>
+<field_type>float</field_type>
+<example_value>2.7</example_value>
+</field>
+</fields>
+</message>
+<message>
+<message_type>estimate</message_type>
+<message_version>1</message_version>
+<multicast_group>EU_ESTIMATES</multicast_group>
+<fields>
+<field>
+<datum_id>1</datum_id>
+<field_type>float</field_type>
+<example_value>1.5</example_value>
+</field>
+<field>
+<datum_id>2</datum_id>
+<field_type>float</field_type>
+<example_value>8.9</example_value>
+</field>
+<field>
+<datum_id>3</datum_id>
+<field_type>float</field_type>
+<example_value>0.5</example_value>
+</field>
+<field>
+<datum_id>4</datum_id>
+<field_type>float</field_type>
+<example_value>2.7</example_value>
+</field>
+</fields>
+</message>
+</messages>
+</category>
+<category name="DE_Quarterly_Flash_German_GDP">
+<description>Quarterly Flash German GDP</description>
+<country>DE</country>
+<category_id>30016</category_id>
+<data>
+<datum>
+<short_description>Change in GDP qtr-on-qtr seasonally, calendar-adjusted</short_description>
+<description>Change in GDP quarter-on-quarter seasonally, calendar-adjusted</description>
+<datum_type>%</datum_type>
+<datum_id>1</datum_id>
+</datum>
+<datum>
+<short_description>Change in GDP year-on-year calendar-adjusted</short_description>
+<description>Change in GDP year-on-year calendar-adjusted</description>
+<datum_type>%</datum_type>
+<datum_id>2</datum_id>
+</datum>
+</data>
+<messages>
+<message>
+<message_type>release</message_type>
+<message_version>2</message_version>
+<multicast_group>EU_GROUP_3</multicast_group>
+<fields>
+<field>
+<datum_id>1</datum_id>
+<field_type>float</field_type>
+<example_value>0.3</example_value>
+</field>
+<field>
+<datum_id>2</datum_id>
+<field_type>float</field_type>
+<example_value>1.8</example_value>
+</field>
+</fields>
+</message>
+<message>
+<message_type>estimate</message_type>
+<message_version>2</message_version>
+<multicast_group>EU_ESTIMATES</multicast_group>
+<fields>
+<field>
+<datum_id>1</datum_id>
+<field_type>float</field_type>
+<example_value>0.3</example_value>
+</field>
+<field>
+<datum_id>2</datum_id>
+<field_type>float</field_type>
+<example_value>1.8</example_value>
+</field>
+</fields>
+</message>
+</messages>
+</category>
+<category name="DE_Quarterly_Final_German_GDP">
+<description>Quarterly Final German GDP</description>
+<country>DE</country>
+<category_id>30017</category_id>
+<data>
+<datum>
+<short_description>Change GDP qtr on qtr seasonally, calendar-adjusted</short_description>
+<description>Change in GDP quarter-on-quarter seasonally, calendar-adjusted</description>
+<datum_type>%</datum_type>
+<datum_id>1</datum_id>
+</datum>
+<datum>
+<short_description>Change in GDP year-on-year calendar-adjusted</short_description>
+<description>Change in GDP year-on-year calendar-adjusted</description>
+<datum_type>%</datum_type>
+<datum_id>2</datum_id>
+</datum>
+</data>
+<messages>
+<message>
+<message_type>release</message_type>
+<message_version>2</message_version>
+<multicast_group>EU_GROUP_3</multicast_group>
+<fields>
+<field>
+<datum_id>1</datum_id>
+<field_type>float</field_type>
+<example_value>0.3</example_value>
+</field>
+<field>
+<datum_id>2</datum_id>
+<field_type>float</field_type>
+<example_value>1.8</example_value>
+</field>
+</fields>
+</message>
+<message>
+<message_type>estimate</message_type>
+<message_version>2</message_version>
+<multicast_group>EU_ESTIMATES</multicast_group>
+<fields>
+<field>
+<datum_id>1</datum_id>
+<field_type>float</field_type>
+<example_value>0.3</example_value>
+</field>
+<field>
+<datum_id>2</datum_id>
+<field_type>float</field_type>
+<example_value>1.8</example_value>
+</field>
+</fields>
+</message>
+</messages>
+</category>
+<category name="DE_ZEW">
+<description>Deutsch ZEW</description>
+<country>DE</country>
+<category_id>30018</category_id>
+<data>
+<datum>
+<short_description>Economic Sentiment Index</short_description>
+<description>Economic Sentiment</description>
+<datum_type>index</datum_type>
+<datum_id>1</datum_id>
+</datum>
+</data>
+<messages>
+<message>
+<message_type>release</message_type>
+<message_version>1</message_version>
+<multicast_group>EU_GROUP_3</multicast_group>
+<fields>
+<field>
+<datum_id>1</datum_id>
+<field_type>float</field_type>
+<example_value>63.9</example_value>
+</field>
+</fields>
+</message>
+<message>
+<message_type>estimate</message_type>
+<message_version>1</message_version>
+<multicast_group>EU_ESTIMATES</multicast_group>
+<fields>
+<field>
+<datum_id>1</datum_id>
+<field_type>float</field_type>
+<example_value>63.9</example_value>
+</field>
+</fields>
+</message>
+</messages>
+</category>
+<category name="DE_IFO">
+<description>Deutsch IFO</description>
+<country>DE</country>
+<category_id>30019</category_id>
+<data>
+<datum>
+<short_description>Business Climate Index</short_description>
+<description>Business Climate</description>
+<datum_type>index</datum_type>
+<datum_id>1</datum_id>
+</datum>
+</data>
+<messages>
+<message>
+<message_type>release</message_type>
+<message_version>1</message_version>
+<multicast_group>EU_GROUP_3</multicast_group>
+<fields>
+<field>
+<datum_id>1</datum_id>
+<field_type>float</field_type>
+<example_value>94.8</example_value>
+</field>
+</fields>
+</message>
+<message>
+<message_type>estimate</message_type>
+<message_version>1</message_version>
+<multicast_group>EU_ESTIMATES</multicast_group>
+<fields>
+<field>
+<datum_id>1</datum_id>
+<field_type>float</field_type>
+<example_value>94.8</example_value>
+</field>
+</fields>
+</message>
+</messages>
+</category>
+<category name="DE_Annual_German_GDP_1st_Estimate">
+<description>Annual German GDP first estimate (BIP preisbereinigt, verkettet)</description>
+<country>DE</country>
+<category_id>30023</category_id>
+<data>
+<datum>
+<short_description>Annual German GDP first estimate (BIP preisbereinigt, verkettet)</short_description>
+<description>Annual German GDP first estimate (BIP preisbereinigt, verkettet)</description>
+<datum_type>%</datum_type>
+<datum_id>1</datum_id>
+</datum>
+</data>
+<messages>
+<message>
+<message_type>release</message_type>
+<message_version>1</message_version>
+<multicast_group>EU_GROUP_2</multicast_group>
+<fields>
+<field>
+<datum_id>1</datum_id>
+<field_type>float</field_type>
+<example_value>-5</example_value>
+</field>
+</fields>
+</message>
+<message>
+<message_type>estimate</message_type>
+<message_version>1</message_version>
+<multicast_group>EU_ESTIMATES</multicast_group>
+<fields>
+<field>
+<datum_id>1</datum_id>
+<field_type>float</field_type>
+<example_value>-5</example_value>
+</field>
+</fields>
+</message>
+</messages>
+</category>
+<category name="DE_Annual_German_GDP_2nd_Estimate">
+<description>Annual German GDP second estimate (BIP preisbereinigt, verkettet, Ursprungswert)</description>
+<country>DE</country>
+<category_id>30024</category_id>
+<data>
+<datum>
+<short_description>Annual German GDP second estimate (BIP preisbereinigt, verkettet, Ursprungswert)</short_description>
+<description>Annual German GDP second estimate (BIP preisbereinigt, verkettet, Ursprungswert)</description>
+<datum_type>%</datum_type>
+<datum_id>1</datum_id>
+</datum>
+</data>
+<messages>
+<message>
+<message_type>release</message_type>
+<message_version>1</message_version>
+<multicast_group>EU_GROUP_2</multicast_group>
+<fields>
+<field>
+<datum_id>1</datum_id>
+<field_type>float</field_type>
+<example_value>-5</example_value>
+</field>
+</fields>
+</message>
+<message>
+<message_type>estimate</message_type>
+<message_version>1</message_version>
+<multicast_group>EU_ESTIMATES</multicast_group>
+<fields>
+<field>
+<datum_id>1</datum_id>
+<field_type>float</field_type>
+<example_value>-5</example_value>
+</field>
+</fields>
+</message>
+</messages>
+</category>
+<category name="DE_IFO_Direction">
+<description>This tells whether the IFO Business Climate Index is up, down or flat.  This is sent as soon as the IFO announces the direction. For speed, this is an unconfirmed indicator, meaning that it is sent as soon as the reporter types it, without another reporter verifying it. Unconfirmed indicators inherently have a higher risk of error than confirmed indicators.</description>
+<country>DE</country>
+<category_id>30025</category_id>
+<data>
+<datum>
+<short_description>Business Climate Index Direction</short_description>
+<description>Business Climate Index Direction</description>
+<datum_type>index</datum_type>
+<datum_id>1</datum_id>
+</datum>
+</data>
+<messages>
+<message>
+<message_type>release</message_type>
+<message_version>1</message_version>
+<start_date>2010-09-24</start_date>
+<multicast_group>EU_GROUP_3</multicast_group>
+<fields>
+<field>
+<datum_id>1</datum_id>
+<field_type>directional</field_type>
+<example_value>1</example_value>
+</field>
+</fields>
+</message>
+<message>
+<message_type>estimate</message_type>
+<message_version>1</message_version>
+<start_date>2010-09-24</start_date>
+<multicast_group>EU_ESTIMATES</multicast_group>
+<fields>
+<field>
+<datum_id>1</datum_id>
+<field_type>directional</field_type>
+<example_value>1</example_value>
+</field>
+</fields>
+</message>
+</messages>
+</category>
+<category name="DE_GLO_Employment">
+<description>German GLO Labour Market Statistics</description>
+<country>DE</country>
+<category_id>30027</category_id>
+<data>
+<datum>
+<short_description>Change in Unemployment M/M, SA</short_description>
+<description>Change in Unemployment Monthly, SA</description>
+<datum_type>units</datum_type>
+<datum_id>1</datum_id>
+</datum>
+<datum>
+<short_description>Unemployment Rate, SA</short_description>
+<description>Unemployment Rate, SA</description>
+<datum_type>%</datum_type>
+<datum_id>2</datum_id>
+</datum>
+</data>
+<messages>
+<message>
+<message_type>release</message_type>
+<message_version>1</message_version>
+<start_date>2010-11-30</start_date>
+<multicast_group>EU_GROUP_3</multicast_group>
+<fields>
+<field>
+<datum_id>1</datum_id>
+<field_type>int</field_type>
+<example_value>19000</example_value>
+</field>
+<field>
+<datum_id>2</datum_id>
+<field_type>float</field_type>
+<example_value>6.7</example_value>
+</field>
+</fields>
+</message>
+<message>
+<message_type>estimate</message_type>
+<message_version>1</message_version>
+<start_date>2010-11-30</start_date>
+<multicast_group>EU_ESTIMATES</multicast_group>
+<fields>
+<field>
+<datum_id>1</datum_id>
+<field_type>int</field_type>
+<example_value>19000</example_value>
+</field>
+<field>
+<datum_id>2</datum_id>
+<field_type>float</field_type>
+<example_value>6.7</example_value>
+</field>
+</fields>
+</message>
+</messages>
+</category>
+<category name="DE_German_Parliamentary_Election_Poll_–_ARD">
+<description>German Parliamentary Election Poll – ARD</description>
+<country>DE</country>
+<category_id>30031</category_id>
+<data>
+<datum>
+<short_description>Conservatives, or CDU (% voter intentions)</short_description>
+<description>Conservatives, or CDU (% voter intentions)</description>
+<datum_type>%</datum_type>
+<datum_id>1</datum_id>
+</datum>
+<datum>
+<short_description>Social Democrats, or SPD (% voter intentions)</short_description>
+<description>Social Democrats, or SPD (% voter intentions)</description>
+<datum_type>%</datum_type>
+<datum_id>2</datum_id>
+</datum>
+<datum>
+<short_description>Green Party (% voter intentions)</short_description>
+<description>Green Party (% voter intentions)</description>
+<datum_type>%</datum_type>
+<datum_id>3</datum_id>
+</datum>
+<datum>
+<short_description>Liberals or FDP (% voter intentions)</short_description>
+<description>Liberals, or FDP (% voter intentions)</description>
+<datum_type>%</datum_type>
+<datum_id>4</datum_id>
+</datum>
+<datum>
+<short_description>Left, or Die Linke (% voter intentions)</short_description>
+<description>Left, or Die Linke (% voter intentions)</description>
+<datum_type>%</datum_type>
+<datum_id>5</datum_id>
+</datum>
+</data>
+<messages>
+<message>
+<message_type>release</message_type>
+<message_version>1</message_version>
+<multicast_group>EU_GROUP_3</multicast_group>
+<fields>
+<field>
+<datum_id>1</datum_id>
+<field_type>float</field_type>
+<example_value>50</example_value>
+</field>
+<field>
+<datum_id>2</datum_id>
+<field_type>float</field_type>
+<example_value>31.5</example_value>
+</field>
+<field>
+<datum_id>3</datum_id>
+<field_type>float</field_type>
+<example_value>15.5</example_value>
+</field>
+<field>
+<datum_id>4</datum_id>
+<field_type>float</field_type>
+<example_value>20.5</example_value>
+</field>
+<field>
+<datum_id>5</datum_id>
+<field_type>float</field_type>
+<example_value>12</example_value>
+</field>
+</fields>
+</message>
+<message>
+<message_type>estimate</message_type>
+<message_version>1</message_version>
+<multicast_group>EU_ESTIMATES</multicast_group>
+<fields>
+<field>
+<datum_id>1</datum_id>
+<field_type>float</field_type>
+<example_value>50</example_value>
+</field>
+<field>
+<datum_id>2</datum_id>
+<field_type>float</field_type>
+<example_value>31.5</example_value>
+</field>
+<field>
+<datum_id>3</datum_id>
+<field_type>float</field_type>
+<example_value>15.5</example_value>
+</field>
+<field>
+<datum_id>4</datum_id>
+<field_type>float</field_type>
+<example_value>20.5</example_value>
+</field>
+<field>
+<datum_id>5</datum_id>
+<field_type>float</field_type>
+<example_value>12</example_value>
+</field>
+</fields>
+</message>
+</messages>
+</category>
+<category name="DE_ZEW_CURRENT_CONDITIONS_INDEX">
+<description>DE ZEW CURRENT CONDITIONS INDEX</description>
+<country>DE</country>
+<category_id>30033</category_id>
+<data>
+<datum>
+<short_description>Current Conditions Index</short_description>
+<description>Current Conditions Index</description>
+<datum_type>%</datum_type>
+<datum_id>1</datum_id>
+</datum>
+</data>
+<messages>
+<message>
+<message_type>release</message_type>
+<message_version>1</message_version>
+<start_date>2016-02-16</start_date>
+<multicast_group>EU_GROUP_3</multicast_group>
+<fields>
+<field>
+<datum_id>1</datum_id>
+<field_type>float</field_type>
+<example_value>0.5</example_value>
+</field>
+</fields>
+</message>
+</messages>
+</category>
+</protocol>

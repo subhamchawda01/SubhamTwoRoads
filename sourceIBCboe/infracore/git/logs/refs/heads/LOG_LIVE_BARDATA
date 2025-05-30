@@ -1,0 +1,13 @@
+0000000000000000000000000000000000000000 5ea50fe14b6861a189e8691b0deb851640245c1d subhamchawda01 <subham.chawda@tworoads-trading.co.in> 1676460892 +0000	branch: Created from HEAD
+5ea50fe14b6861a189e8691b0deb851640245c1d 187fb313abe8dbe204f535f171059687b1172c20 subhamchawda01 <subham.chawda@tworoads-trading.co.in> 1676460904 +0000	commit: nse bardata logger changes
+187fb313abe8dbe204f535f171059687b1172c20 30ec888216337b67770b9549ce5531917d5bbce0 subhamchawda01 <subham.chawda@tworoads-trading.co.in> 1679893894 +0000	pull: Fast-forward
+30ec888216337b67770b9549ce5531917d5bbce0 5dec76ed05172b6ad39f2be6ecff6889ae53e8e2 subhamchawda01 <subham.chawda@tworoads-trading.co.in> 1681716488 +0000	commit: commented drop logs and changed NSE_RAW_MD_CHANNELS file name
+5dec76ed05172b6ad39f2be6ecff6889ae53e8e2 4e4dbd0cf979dd8068ac6946fcab9a11a52e680f subhamchawda01 <subham.chawda@tworoads-trading.co.in> 1683105925 +0000	pull: Fast-forward
+4e4dbd0cf979dd8068ac6946fcab9a11a52e680f 2c7bd9ed6bb2bc69d72a4e8ec77c2515e128c908 subhamchawda01 <subham.chawda@tworoads-trading.co.in> 1684740736 +0000	pull: Fast-forward
+2c7bd9ed6bb2bc69d72a4e8ec77c2515e128c908 4331cda779b8a166ff07b6e0c26f44cf1b64578d subhamchawda01 <subham.chawda@tworoads-trading.co.in> 1684740828 +0000	merge origin/master: Merge made by the 'recursive' strategy.
+4331cda779b8a166ff07b6e0c26f44cf1b64578d fad3c77c72afdfcea549640aa4a66628905b89c9 subhamchawda01 <subham.chawda@tworoads-trading.co.in> 1685002333 +0000	commit: nse bardata recovery exec changes
+fad3c77c72afdfcea549640aa4a66628905b89c9 bbf91623d2dd0dbd5d55b44b362d820c15850192 subhamchawda01 <subham.chawda@tworoads-trading.co.in> 1686713370 +0000	commit: bardata recovery manager changes
+bbf91623d2dd0dbd5d55b44b362d820c15850192 ab2171ea0691582859ed16339c64ee07b98f7689 subhamchawda01 <subham.chawda@tworoads-trading.co.in> 1686900572 +0000	commit: live bardata recovery change processing bardata and sending bardata to strat change
+ab2171ea0691582859ed16339c64ee07b98f7689 ffe64b01ebfb98dff04acc9b7124974d7e8e215d subhamchawda01 <subham.chawda@tworoads-trading.co.in> 1687854207 +0000	commit: recovery live bardata for FO change working
+ffe64b01ebfb98dff04acc9b7124974d7e8e215d 80d277eabccfc2e347ee304551b5ffc71a781d18 subhamchawda01 <subham.chawda@tworoads-trading.co.in> 1687951594 +0000	commit: added MIDCP handling for live bardata and UPDDirect zocket added
+80d277eabccfc2e347ee304551b5ffc71a781d18 809e68b424ec1a37a1b286f16c2afd0a7ecb6f29 raghunandan95 <raghunandan.sharma@tworoads-trading.co.in> 1708507149 +0000	pull: Fast-forward

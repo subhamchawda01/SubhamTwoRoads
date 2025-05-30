@@ -1,0 +1,18 @@
+project : usage-requirements <include>$(PROJECT_INSTALL) 
+<linkflags>-lboost_iostreams
+;
+
+use-project /PDVCC : ../libdvccode ;
+
+use-project /PMarketAdapter : ../MarketAdapterCode ;
+use-project /PBaseUtils : ../BaseUtilsCode ;
+
+lib LoggedSources : [ glob *.cpp ] : <link>static <use>/PDVCC//Utils <use>/PDVCC//Profiler <use>/PMarketAdapter//MarketAdapter <use>/PDVCC//ExternalData <use>/PBaseUtils//BaseUtils ;
+
+install libLoggedSources
+  : LoggedSources
+  : <install-type>LIB
+    <variant>release:<location>"$(PROJECT_INSTALL)/lib"
+    <variant>debug:<location>"$(PROJECT_INSTALL)/libdebug"
+  : release debug
+  ;

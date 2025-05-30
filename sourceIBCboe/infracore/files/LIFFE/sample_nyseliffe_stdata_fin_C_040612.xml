@@ -1,0 +1,71 @@
+<?xml version="1.0" encoding="US-ASCII"?>
+<FIXML>
+  <Exchange MktSegID="C" MarketSegmentDesc="Euronext Paris - Cash Market">
+    <Contract SecGrp="CIEPE" Sym="EPE" LogSym="EPE" Desc="FTSE EPRA Euro Zone" RndLot="1" Ccy="EUR" MinPxIncr=".5" PxQteMeth="STD" SettlMeth="P" FlexInd="N" Src="4" ID="NL0000249753">
+      <NestedAttr Typ="25" Val="100"/>
+      <NestedAttr Typ="26" Val="1"/>
+      <NestedAttr Typ="101" Val="1"/>
+      <NestedAttr Typ="102" Val="1"/>
+      <NestedAttr Typ="120" Val="L"/>
+      <NestedAttr Typ="121" Val="0"/>
+      <Expiry>
+        <Series CFI="XXXXXX" RndLot="1" Src="8" ID="CIEPE000000000N"/>
+      </Expiry>
+    </Contract>
+    <Contract SecGrp="CIEPR" Sym="EPR" LogSym="EPR" Desc="FTSE EPRA Europe" RndLot="1" Ccy="EUR" MinPxIncr=".5" PxQteMeth="STD" SettlMeth="P" FlexInd="N" Src="4" ID="NL0000249720">
+      <NestedAttr Typ="25" Val="100"/>
+      <NestedAttr Typ="26" Val="1"/>
+      <NestedAttr Typ="101" Val="1"/>
+      <NestedAttr Typ="102" Val="1"/>
+      <NestedAttr Typ="120" Val="L"/>
+      <NestedAttr Typ="121" Val="0"/>
+      <Expiry>
+        <Series CFI="XXXXXX" RndLot="1" Src="8" ID="CIEPR000000000N"/>
+      </Expiry>
+    </Contract>
+    <Contract SecGrp="CIFEF" Sym="FEF" LogSym="FEF" Desc="FTSEEurofirst 80" RndLot="1" Ccy="EUR" MinPxIncr=".5" PxQteMeth="STD" SettlMeth="P" FlexInd="N" Src="4" ID="NL0000255438">
+      <NestedAttr Typ="25" Val="100"/>
+      <NestedAttr Typ="26" Val="1"/>
+      <NestedAttr Typ="101" Val="1"/>
+      <NestedAttr Typ="102" Val="1"/>
+      <NestedAttr Typ="120" Val="L"/>
+      <NestedAttr Typ="121" Val="0"/>
+      <Expiry>
+        <Series CFI="XXXXXX" RndLot="1" Src="8" ID="CIFEF000000000N"/>
+      </Expiry>
+    </Contract>
+    <Contract SecGrp="CIFEO" Sym="FEO" LogSym="FEO" Desc="FTSEEurofirst 100" RndLot="1" Ccy="EUR" MinPxIncr=".5" PxQteMeth="STD" SettlMeth="P" FlexInd="N" Src="4" ID="NL0000255446">
+      <NestedAttr Typ="25" Val="100"/>
+      <NestedAttr Typ="26" Val="1"/>
+      <NestedAttr Typ="101" Val="1"/>
+      <NestedAttr Typ="102" Val="1"/>
+      <NestedAttr Typ="120" Val="L"/>
+      <NestedAttr Typ="121" Val="0"/>
+      <Expiry>
+        <Series CFI="XXXXXX" RndLot="1" Src="8" ID="CIFEO000000000N"/>
+      </Expiry>
+    </Contract>
+    <Contract SecGrp="CIPX1" Sym="PX1" LogSym="PX1" Desc="CAC40 Index" RndLot="1" Ccy="EUR" MinPxIncr=".5" PxQteMeth="STD" SettlMeth="P" FlexInd="N" Src="4" ID="FR0003500008">
+      <NestedAttr Typ="25" Val="100"/>
+      <NestedAttr Typ="26" Val="1"/>
+      <NestedAttr Typ="101" Val="1"/>
+      <NestedAttr Typ="102" Val="1"/>
+      <NestedAttr Typ="120" Val="L"/>
+      <NestedAttr Typ="121" Val="0"/>
+      <Expiry>
+        <Series CFI="XXXXXX" RndLot="1" Src="8" ID="CIPX1000000000N"/>
+      </Expiry>
+    </Contract>
+    <Contract SecGrp="CIXFC" Sym="XFC" LogSym="XFC" Desc="CAC40 Dividend Index" RndLot="1" Ccy="EUR" MinPxIncr=".5" PxQteMeth="STD" SettlMeth="P" FlexInd="N" Src="4" ID="QS0011158118">
+      <NestedAttr Typ="25" Val="100"/>
+      <NestedAttr Typ="26" Val="1"/>
+      <NestedAttr Typ="101" Val="1"/>
+      <NestedAttr Typ="102" Val="1"/>
+      <NestedAttr Typ="120" Val="L"/>
+      <NestedAttr Typ="121" Val="0"/>
+      <Expiry>
+        <Series CFI="XXXXXX" RndLot="1" Src="8" ID="CIXFC000000000N"/>
+      </Expiry>
+    </Contract>
+  </Exchange>
+</FIXML>

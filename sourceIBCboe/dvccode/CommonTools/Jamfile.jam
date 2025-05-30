@@ -1,0 +1,947 @@
+project : usage-requirements
+        ;
+
+use-project /PUtils : ../UtilsCode ;
+use-project /PCDef : ../CDefCode ;
+use-project /PProfiler : ../ProfilerCode ;
+use-project /PCommonDataStructures : ../CommonDataStructuresCode ;
+use-project /PCommonTradeUtils : ../CommonTradeUtilsCode ;
+use-project /PExternalData : ../ExternalDataCode ;
+use-project /PTradingInfo : ../TradingInfo ;
+use-project /PSpan : ../SpanMarginCode ;
+use-project /PIBUtils : ../IBUtilsCode ;
+lib boost_program_options : : <name>boost_program_options <search>$(BOOST_LIB_INSTALL) ;
+
+project : requirements <library>boost_program_options
+        : usage-requirements ;
+
+exe profilerTest
+    : profilerTest.cpp
+      /PProfiler//libProfiler
+    :
+    : <variant>debug <variant>release
+    ;
+exe get_trading_date
+    : get_trading_date.cpp
+      /PSpan//libSpanMargin
+      /PCDef//libCDef
+      /PTradingInfo//libTradingInfo
+      /PCommonTradeUtils//libCommonTradeUtils
+      /PUtils//libUtils
+      /PProfiler//libProfiler
+      /PCommonDataStructures//libCommonDataStructures
+    :
+    : <variant>debug <variant>release
+    ;
+exe console_margin_calculator
+    : console_margin_calculator.cpp
+      /PSpan//libSpanMargin
+      /PCDef//libCDef
+      /PTradingInfo//libTradingInfo
+      /PCommonTradeUtils//libCommonTradeUtils
+      /PUtils//libUtils
+      /PProfiler//libProfiler
+      /PCommonDataStructures//libCommonDataStructures
+    :
+    : <variant>debug <variant>release
+    ;
+
+exe risk_array_generator
+    : generate_risk_arrays.cpp
+      /PSpan//libSpanMargin
+      /PCDef//libCDef
+      /PTradingInfo//libTradingInfo
+      /PCommonTradeUtils//libCommonTradeUtils
+      /PUtils//libUtils
+      /PProfiler//libProfiler
+      /PCommonDataStructures//libCommonDataStructures
+    :
+    : <variant>debug <variant>release
+    ;
+
+exe user_msg
+    : user_msg.cpp
+      /PCDef//libCDef
+      /PTradingInfo//libTradingInfo
+      /PCommonTradeUtils//libCommonTradeUtils
+      /PUtils//libUtils
+      /PProfiler//libProfiler
+      /PCommonDataStructures//libCommonDataStructures
+    :
+    : <variant>debug <variant>release
+    ;
+
+exe get_weekly_shortcode_from_symbol
+    : get_weekly_shortcode_from_symbol.cpp
+      /PCDef//libCDef
+      /PCommonDataStructures//libCommonDataStructures
+      /PUtils//libUtils
+      /PCommonTradeUtils//libCommonTradeUtils
+      /PExternalData//libExternalData
+      /PProfiler//libProfiler
+    :
+    : <variant>debug <variant>release
+      <linkflags>-lpthread
+    ;
+
+exe get_weekly_shortcode_from_monthly_shortcode
+    : get_weekly_shortcode_from_monthly_shortcode.cpp
+      /PCDef//libCDef
+      /PCommonDataStructures//libCommonDataStructures
+      /PUtils//libUtils
+      /PCommonTradeUtils//libCommonTradeUtils
+      /PExternalData//libExternalData
+      /PProfiler//libProfiler
+    :
+    : <variant>debug <variant>release
+      <linkflags>-lpthread
+    ;
+
+exe get_weekly_shortcode_from_symbol_file
+    : get_weekly_shortcode_from_symbol_file.cpp
+      /PCDef//libCDef
+      /PCommonDataStructures//libCommonDataStructures
+      /PUtils//libUtils
+      /PCommonTradeUtils//libCommonTradeUtils
+      /PExternalData//libExternalData
+      /PProfiler//libProfiler
+    :
+    : <variant>debug <variant>release
+      <linkflags>-lpthread
+    ;
+
+exe get_weekly_shortcode_from_monthly_shortcode_file
+    : get_weekly_shortcode_from_monthly_shortcode_file.cpp
+      /PCDef//libCDef
+      /PCommonDataStructures//libCommonDataStructures
+      /PUtils//libUtils
+      /PCommonTradeUtils//libCommonTradeUtils
+      /PExternalData//libExternalData
+      /PProfiler//libProfiler
+    :
+    : <variant>debug <variant>release
+      <linkflags>-lpthread
+    ;
+
+exe nse_compute_ltovn_index
+    : nse_compute_ltovn_index.cpp
+      /PCDef//libCDef
+      /PCommonDataStructures//libCommonDataStructures
+      /PUtils//libUtils
+      /PCommonTradeUtils//libCommonTradeUtils
+      /PExternalData//libExternalData
+      /PProfiler//libProfiler
+    :
+    : <variant>debug <variant>release
+      <linkflags>-lpthread
+    ;
+
+exe generate_trade_log_summary
+    : generate_trade_log_summary.cpp
+      /PCDef//libCDef
+      /PCommonDataStructures//libCommonDataStructures
+      /PUtils//libUtils
+      /PCommonTradeUtils//libCommonTradeUtils
+      /PExternalData//libExternalData
+      /PProfiler//libProfiler
+    :
+    : <variant>debug <variant>release
+      <linkflags>-lpthread
+    ;
+
+exe get_strike_from_shortcode
+    : get_strike_from_shortcode.cpp
+      /PCDef//libCDef
+      /PCommonDataStructures//libCommonDataStructures
+      /PUtils//libUtils
+      /PCommonTradeUtils//libCommonTradeUtils
+      /PExternalData//libExternalData
+      /PProfiler//libProfiler
+    :
+    : <variant>debug <variant>release
+      <linkflags>-lpthread
+    ;
+
+exe get_itm_from_underlying
+    : get_itm_from_underlying.cpp
+      /PCDef//libCDef
+      /PCommonDataStructures//libCommonDataStructures
+      /PUtils//libUtils
+      /PCommonTradeUtils//libCommonTradeUtils
+      /PExternalData//libExternalData
+      /PProfiler//libProfiler
+    :
+    : <variant>debug <variant>release
+      <linkflags>-lpthread
+    ;
+
+exe merge_Two_bardata_Files
+   : merge_Two_bardata_Files.cpp
+      /PCDef//libCDef
+      /PCommonDataStructures//libCommonDataStructures
+      /PUtils//libUtils
+      /PCommonTradeUtils//libCommonTradeUtils
+      /PExternalData//libExternalData
+      /PProfiler//libProfiler
+    :
+    : <variant>debug <variant>release
+      <linkflags>-lpthread
+    ;
+
+exe bardata_fix_for_weekly_expiry
+   : bardata_fix_for_weekly_expiry.cpp
+      /PCDef//libCDef
+      /PCommonDataStructures//libCommonDataStructures
+      /PUtils//libUtils
+      /PCommonTradeUtils//libCommonTradeUtils
+      /PExternalData//libExternalData
+      /PProfiler//libProfiler
+    :
+    : <variant>debug <variant>release
+      <linkflags>-lpthread
+    ;
+
+exe bardata_fix_for_weekly_expiry_tuesday
+    : bardata_fix_for_weekly_expiry_tuesday.cpp
+      /PCDef//libCDef
+      /PCommonDataStructures//libCommonDataStructures
+      /PUtils//libUtils
+      /PCommonTradeUtils//libCommonTradeUtils
+      /PExternalData//libExternalData
+      /PProfiler//libProfiler
+    :
+    : <variant>debug <variant>release
+      <linkflags>-lpthread
+    ;
+exe bardata_fix_for_weekly_expiry_wednesday
+    : bardata_fix_for_weekly_expiry_wednesday.cpp
+      /PCDef//libCDef
+      /PCommonDataStructures//libCommonDataStructures
+      /PUtils//libUtils
+      /PCommonTradeUtils//libCommonTradeUtils
+      /PExternalData//libExternalData
+      /PProfiler//libProfiler
+    :
+    : <variant>debug <variant>release
+      <linkflags>-lpthread
+    ;
+
+exe bardata_fix_for_weekly_expiry_friday
+    : bardata_fix_for_weekly_expiry_friday.cpp
+      /PCDef//libCDef
+      /PCommonDataStructures//libCommonDataStructures
+      /PUtils//libUtils
+      /PCommonTradeUtils//libCommonTradeUtils
+      /PExternalData//libExternalData
+      /PProfiler//libProfiler
+    :
+    : <variant>debug <variant>release
+      <linkflags>-lpthread
+    ;
+
+exe mds_log_reader
+    : mds_log_reader.cpp
+      /PCDef//libCDef
+      /PCommonDataStructures//libCommonDataStructures
+      /PUtils//libUtils
+      /PCommonTradeUtils//libCommonTradeUtils
+      /PExternalData//libExternalData
+      /PProfiler//libProfiler
+    :
+    : <variant>debug <variant>release
+      <linkflags>-lpthread
+    ;
+
+exe oi_process
+    : oi_process.cpp
+      /PCDef//libCDef
+      /PCommonDataStructures//libCommonDataStructures
+      /PUtils//libUtils
+      /PCommonTradeUtils//libCommonTradeUtils
+      /PExternalData//libExternalData
+      /PProfiler//libProfiler
+    :
+    : <variant>debug <variant>release
+      <linkflags>-lpthread
+    ;
+
+exe mds_fast_first_trade_read
+    : mds_fast_first_trade_read.cpp
+      /PCDef//libCDef
+      /PCommonDataStructures//libCommonDataStructures
+      /PUtils//libUtils
+      /PCommonTradeUtils//libCommonTradeUtils
+      /PExternalData//libExternalData
+      /PProfiler//libProfiler
+    :
+    : <variant>debug <variant>release
+      <linkflags>-lpthread
+    ;
+
+exe mds_fast_first_Compare
+    : mds_fast_first_Compare.cpp
+      /PCDef//libCDef
+      /PCommonDataStructures//libCommonDataStructures
+      /PUtils//libUtils
+      /PCommonTradeUtils//libCommonTradeUtils
+      /PExternalData//libExternalData
+      /PProfiler//libProfiler
+    :
+    : <variant>debug <variant>release
+      <linkflags>-lpthread
+    ;
+
+exe mds_circuit_alert_read
+    : mds_circuit_alert_read.cpp
+      /PCDef//libCDef
+      /PCommonDataStructures//libCommonDataStructures
+      /PUtils//libUtils
+      /PCommonTradeUtils//libCommonTradeUtils
+      /PExternalData//libExternalData
+      /PProfiler//libProfiler
+    :
+    : <variant>debug <variant>release
+      <linkflags>-lpthread
+    ;
+
+
+exe mds_fast_first_trade_read_Volume
+    : mds_fast_first_trade_read_Volume.cpp
+      /PCDef//libCDef
+      /PCommonDataStructures//libCommonDataStructures
+      /PUtils//libUtils
+      /PCommonTradeUtils//libCommonTradeUtils
+      /PExternalData//libExternalData
+      /PProfiler//libProfiler
+    :
+    : <variant>debug <variant>release
+      <linkflags>-lpthread
+    ;
+
+exe mds_fast_first_trade_read_Volume_Machince
+    : mds_fast_first_trade_read_Volume_Machince.cpp
+      /PCDef//libCDef
+      /PCommonDataStructures//libCommonDataStructures
+      /PUtils//libUtils
+      /PCommonTradeUtils//libCommonTradeUtils
+      /PExternalData//libExternalData
+      /PProfiler//libProfiler
+    :
+    : <variant>debug <variant>release
+      <linkflags>-lpthread
+    ;
+
+
+exe mds_fast_first_trade_read_Volume_Machince_fo
+    : mds_fast_first_trade_read_Volume_Machince_fo.cpp
+      /PCDef//libCDef
+      /PCommonDataStructures//libCommonDataStructures
+      /PUtils//libUtils
+      /PCommonTradeUtils//libCommonTradeUtils
+      /PExternalData//libExternalData
+      /PProfiler//libProfiler
+    :
+    : <variant>debug <variant>release
+      <linkflags>-lpthread
+    ;
+exe extract_mds_messages
+    : extract_mds_messages.cpp
+      /PCDef//libCDef
+      /PCommonDataStructures//libCommonDataStructures
+      /PUtils//libUtils
+      /PCommonTradeUtils//libCommonTradeUtils
+      /PExternalData//libExternalData
+      /PProfiler//libProfiler
+    :
+    : <variant>debug <variant>release
+      <linkflags>-lpthread
+    ;
+exe get_shortCode_from_strike_price
+    : get_shortCode_from_strike_price.cpp
+      /PCDef//libCDef
+      /PUtils//libUtils
+      /PCommonTradeUtils//libCommonTradeUtils
+      /PCommonDataStructures//libCommonDataStructures
+      /PProfiler//libProfiler
+    :
+    : <variant>debug <variant>release
+    ;
+
+exe get_details_from_shortcode_file
+    : get_details_from_shortcode_file.cpp
+      /PCDef//libCDef
+      /PUtils//libUtils
+      /PCommonTradeUtils//libCommonTradeUtils
+      /PCommonDataStructures//libCommonDataStructures
+      /PProfiler//libProfiler
+    :
+    : <variant>debug <variant>release
+    ;
+
+
+exe fix_cme_log_data
+    : fix_cme_log_data.cpp
+      /PCDef//libCDef
+      /PCommonDataStructures//libCommonDataStructures
+      /PUtils//libUtils
+      /PCommonTradeUtils//libCommonTradeUtils
+      /PExternalData//libExternalData
+      /PProfiler//libProfiler
+    :
+    : <variant>debug <variant>release
+      <linkflags>-lpthread
+    ;
+exe get_exchange_symbol_file
+    : get_exchange_symbol_file.cpp
+      /PCDef//libCDef
+      /PUtils//libUtils
+      /PCommonDataStructures//libCommonDataStructures
+      /PCommonTradeUtils//libCommonTradeUtils
+      /PProfiler//libProfiler
+    :
+    : <variant>debug <variant>release
+    ;
+
+exe get_exchange_symbol
+    : get_exchange_symbol.cpp
+      /PCDef//libCDef
+      /PUtils//libUtils
+      /PCommonDataStructures//libCommonDataStructures
+      /PCommonTradeUtils//libCommonTradeUtils
+      /PProfiler//libProfiler
+    :
+    : <variant>debug <variant>release
+    ;
+
+exe check_shortcode_valid
+    : check_shortcode_valid.cpp
+      /PCDef//libCDef
+      /PUtils//libUtils
+      /PCommonDataStructures//libCommonDataStructures
+      /PCommonTradeUtils//libCommonTradeUtils
+      /PProfiler//libProfiler
+    :
+    : <variant>debug <variant>release
+    ;
+
+
+exe get_expiry_from_shortcode
+    : get_expiry_from_shortcode.cpp
+      /PCDef//libCDef
+      /PUtils//libUtils
+      /PCommonDataStructures//libCommonDataStructures
+      /PCommonTradeUtils//libCommonTradeUtils
+      /PProfiler//libProfiler
+    :
+    : <variant>debug <variant>release
+    ;
+
+exe get_option_shortcodes
+    : get_option_shortcodes.cpp
+      /PCDef//libCDef
+      /PUtils//libUtils
+      /PCommonDataStructures//libCommonDataStructures
+      /PCommonTradeUtils//libCommonTradeUtils
+      /PProfiler//libProfiler
+    :
+    : <variant>debug <variant>release
+    ;
+
+exe get_shortcode_for_symbol
+    : get_shortcode_for_symbol.cpp
+      /PCDef//libCDef
+      /PCommonTradeUtils//libCommonTradeUtils
+      /PUtils//libUtils
+      /PCommonDataStructures//libCommonDataStructures
+      :
+      : <variant>debug <variant>release
+      ;
+
+exe get_shortcode_for_symbol_from_file
+    : get_shortcode_for_symbol_from_file.cpp
+      /PCDef//libCDef
+      /PCommonTradeUtils//libCommonTradeUtils
+      /PUtils//libUtils
+      /PCommonDataStructures//libCommonDataStructures
+      :
+      : <variant>debug <variant>release
+      ;
+
+exe get_shortcode_for_symbol_from_file_uniq_shortcode
+    : get_shortcode_for_symbol_from_file_uniq_shortcode.cpp
+      /PCDef//libCDef
+      /PCommonTradeUtils//libCommonTradeUtils
+      /PUtils//libUtils
+      /PCommonDataStructures//libCommonDataStructures
+      :
+      : <variant>debug <variant>release
+      ;
+
+exe update_date
+    : update_date.cpp
+      /PCDef//libCDef
+      /PCommonTradeUtils//libCommonTradeUtils
+      /PUtils//libUtils
+      /PCommonDataStructures//libCommonDataStructures
+    :
+    : <variant>debug <variant>release
+    ;
+
+exe get_utc_time
+    : get_utc_time.cpp
+      /PCDef//libCDef
+      /PCommonTradeUtils//libCommonTradeUtils
+      /PUtils//libUtils
+    :
+    : <variant>debug <variant>release
+    ;
+
+exe dump_raw_multicast_data_using_config
+    : dump_raw_multicast_data_using_config.cpp
+      /PCDef//libCDef
+      /PCommonTradeUtils//libCommonTradeUtils
+      /PCommonDataStructures//libCommonDataStructures
+      /PExternalData//libExternalData
+      /PUtils//libUtils
+      /PProfiler//libProfiler
+    :
+    : <variant>debug <variant>release
+    ;
+    
+exe calc_next_day
+    : calc_next_day.cpp
+      /PUtils//libUtils
+      /PCDef//libCDef
+      /PCommonTradeUtils//libCommonTradeUtils
+      /PProfiler//libProfiler
+    :
+    : <variant>debug <variant>release
+    ;
+
+exe calc_next_week_day
+    : calc_next_week_day.cpp
+      /PUtils//libUtils
+      /PCDef//libCDef
+      /PCommonTradeUtils//libCommonTradeUtils
+      /PProfiler//libProfiler
+    :
+    : <variant>debug <variant>release
+    ;
+
+exe calc_prev_day
+    : calc_prev_day.cpp
+      /PCDef//libCDef
+      /PUtils//libUtils
+      /PCommonTradeUtils//libCommonTradeUtils
+    :
+    : <variant>debug <variant>release
+    ;
+
+exe calc_prev_week_day
+    : calc_prev_week_day.cpp
+      /PCDef//libCDef
+      /PUtils//libUtils
+      /PCommonTradeUtils//libCommonTradeUtils
+    :
+    : <variant>debug <variant>release
+    ;
+
+exe holiday_manager
+    : holiday_manager_exec.cpp
+      /PCDef//libCDef
+      /PUtils//libUtils
+      /PCommonDataStructures//libCommonDataStructures
+       /PCommonTradeUtils//libCommonTradeUtils
+    :
+    : <variant>debug <variant>release
+    ;
+
+exe exanic_receive
+    : exanic_receive.cpp
+      /PCDef//libCDef
+    :
+    : <variant>debug <variant>release
+      <linkflags>-lexanic
+    ;
+
+exe exanic_transmitter
+    : exanic_transmitter.cpp
+      /PCDef//libCDef
+    :
+    : <variant>debug <variant>release
+      <linkflags>-lexanic
+    ;
+
+exe get_tradeinfo_fut
+    : get_tradeinfo_fut.cpp
+      /PCommonDataStructures//libCommonDataStructures
+    :
+    : <variant>debug <variant>release
+    ;
+
+exe get_segment_from_shortcode
+    : get_segment_from_shortcode.cpp
+      /PCDef//libCDef
+      /PCommonTradeUtils//libCommonTradeUtils
+      /PUtils//libUtils
+      /PCommonDataStructures//libCommonDataStructures
+      :
+      : <variant>debug <variant>release
+      ;
+
+exe get_symbol_from_shortcode_file
+    : get_symbol_from_shortcode_file.cpp
+      /PCDef//libCDef
+      /PCommonTradeUtils//libCommonTradeUtils
+      /PUtils//libUtils
+      /PCommonDataStructures//libCommonDataStructures
+      :
+      : <variant>debug <variant>release
+      ;
+
+exe ftx_crypto_data_reader
+    : ftx_crypto_data_reader.cpp
+      /PCDef//libCDef
+      /PUtils//libUtils
+      /PCommonDataStructures//libCommonDataStructures
+      :
+      : <variant>debug <variant>release
+      ;
+
+exe ftx_latency_diff_stats
+    : ftx_latency_diff_stats.cpp
+      /PCDef//libCDef
+      /PUtils//libUtils
+      /PCommonDataStructures//libCommonDataStructures
+      :
+      : <variant>debug <variant>release
+      ;
+
+exe coinbase_latency_diff_stats
+    : coinbase_latency_diff_stats.cpp
+      /PCDef//libCDef
+      /PUtils//libUtils
+      /PCommonDataStructures//libCommonDataStructures
+      :
+      : <variant>debug <variant>release
+      ;
+
+exe ftx_crypto_volume_summary
+    : ftx_crypto_volume_summary.cpp
+      /PCDef//libCDef
+      /PUtils//libUtils
+      /PCommonDataStructures//libCommonDataStructures
+      :
+      : <variant>debug <variant>release
+      ;
+
+exe compare_mbochip_tradeengine_latency
+    : compare_mbochip_tradeengine_latency.cpp
+      /PCDef//libCDef
+      /PUtils//libUtils
+      /PCommonDataStructures//libCommonDataStructures
+      /PCommonDataStructures//libCommonDataStructures
+      :
+      : <variant>debug <variant>release
+      ;
+
+exe compare_mbochip_tradeengine_app_book
+    : compare_mbochip_tradeengine_app_book.cpp
+      /PCDef//libCDef
+      /PUtils//libUtils
+      /PCommonDataStructures//libCommonDataStructures
+      /PCommonDataStructures//libCommonDataStructures
+      :
+      : <variant>debug <variant>release
+      ;
+
+exe historical_data_generator_cash_new
+    :
+      historical_data_generator_cash_new.cpp
+      /PUtils//libUtils
+      /PCDef//libCDef
+      /PCommonDataStructures//libCommonDataStructures
+    :
+    : <variant>debug <variant>release
+      <linkflags>-lpthread
+    ;
+
+exe historical_data_generator_fut_new_unconverted
+    : historical_data_generator_fut_new_unconverted.cpp
+      /PUtils//libUtils
+      /PCDef//libCDef
+      /PCommonDataStructures//libCommonDataStructures
+    :
+    : <variant>debug <variant>release
+      <linkflags>-lpthread
+    ;
+
+exe historical_data_generator_cash_new_unconverted
+    : historical_data_generator_cash_new_unconverted.cpp
+      /PUtils//libUtils
+      /PCDef//libCDef
+      /PCommonDataStructures//libCommonDataStructures
+    :
+    : <variant>debug <variant>release
+      <linkflags>-lpthread
+    ;
+
+exe nse_bse_latency_check
+    : nse_bse_latency_check.cpp
+      /PCDef//libCDef
+      /PCommonDataStructures//libCommonDataStructures
+      /PUtils//libUtils
+      /PCommonTradeUtils//libCommonTradeUtils
+      /PExternalData//libExternalData
+      /PProfiler//libProfiler
+    :
+    : <variant>debug <variant>release
+      <linkflags>-lpthread
+    ;
+
+exe test_bse_defination_symbol
+    : test_bse_defination_symbol.cpp
+      /PCDef//libCDef
+      /PCommonDataStructures//libCommonDataStructures
+      /PUtils//libUtils
+      /PCommonTradeUtils//libCommonTradeUtils
+      /PExternalData//libExternalData
+      /PProfiler//libProfiler
+    :
+    : <variant>debug <variant>release
+      <linkflags>-lpthread
+    ;
+
+
+exe convert_oi_data
+    :
+     convert_oi_data.cpp
+     /PCDef//libCDef
+     /PCommonDataStructures//libCommonDataStructures
+     /PUtils//libUtils
+     /PCommonTradeUtils//libCommonTradeUtils
+     /PExternalData//libExternalData
+     /PProfiler//libProfiler
+    :
+    : <variant>debug <variant>release
+      <linkflags>-lpthread
+    ;
+
+exe convert_bse_oi_data
+    :
+     convert_bse_oi_data.cpp
+     /PCDef//libCDef
+     /PCommonDataStructures//libCommonDataStructures
+     /PUtils//libUtils
+     /PCommonTradeUtils//libCommonTradeUtils
+     /PExternalData//libExternalData
+     /PProfiler//libProfiler
+    :
+    : <variant>debug <variant>release
+      <linkflags>-lpthread
+    ;
+
+exe get_token_from_shortcode
+    : get_token_from_shortcode.cpp
+      /PCDef//libCDef
+      /PCommonDataStructures//libCommonDataStructures
+      /PUtils//libUtils
+      /PCommonTradeUtils//libCommonTradeUtils
+      /PExternalData//libExternalData
+      /PProfiler//libProfiler
+    :
+    : <variant>debug <variant>release
+      <linkflags>-lpthread
+    ;
+
+exe get_shortcode_from_token_file_bse
+    : get_shortcode_from_token_file_bse.cpp
+      /PCDef//libCDef
+      /PCommonDataStructures//libCommonDataStructures
+      /PUtils//libUtils
+      /PCommonTradeUtils//libCommonTradeUtils
+      /PExternalData//libExternalData
+      /PProfiler//libProfiler
+    :
+    : <variant>debug <variant>release
+      <linkflags>-lpthread
+    ;
+
+exe get_all_weekly_expiry_for_year_bse_friday
+    : get_all_weekly_expiry_for_year_bse_friday.cpp
+      /PCDef//libCDef
+      /PCommonDataStructures//libCommonDataStructures
+      /PUtils//libUtils
+      /PCommonTradeUtils//libCommonTradeUtils
+      /PExternalData//libExternalData
+      /PProfiler//libProfiler
+    :
+    : <variant>debug <variant>release
+      <linkflags>-lpthread
+    ;
+
+exe get_total_trade_qty_from_market_data
+    : get_total_trade_qty_from_market_data.cpp
+      /PCDef//libCDef
+      /PCommonDataStructures//libCommonDataStructures
+      /PUtils//libUtils
+      /PCommonTradeUtils//libCommonTradeUtils
+      /PExternalData//libExternalData
+      /PProfiler//libProfiler
+    :
+    : <variant>debug <variant>release
+      <linkflags>-lpthread
+    ;
+
+exe ib_manager
+    : IBManager.cpp
+      /PCDef//libCDef
+      /PCommonDataStructures//libCommonDataStructures
+      /PCommonTradeUtils//libCommonTradeUtils
+      /PIBUtils//libIBUtils
+      /PUtils//libUtils
+    :
+    : <variant>debug <variant>release
+      <linkflags>-lpthread
+      <linkflags>-lbid
+      <linkflags>-lTwsSocketClient
+    ;
+exe ors_command_client_ibkr
+    : ors_command_client_ibkr.cpp
+      /PCDef//libCDef
+      /PCommonDataStructures//libCommonDataStructures
+      /PCommonTradeUtils//libCommonTradeUtils
+      /PIBUtils//libIBUtils
+      /PUtils//libUtils
+    :
+    : <variant>debug <variant>release
+      <linkflags>-lpthread
+      <linkflags>-lbid
+      <linkflags>-lTwsSocketClient
+    ;
+exe testCombo
+    : testCombo.cpp
+      /PCDef//libCDef
+      /PCommonDataStructures//libCommonDataStructures
+      /PCommonTradeUtils//libCommonTradeUtils
+      /PIBUtils//libIBUtils
+      /PUtils//libUtils
+    :
+    : <variant>debug <variant>release
+      <linkflags>-lpthread
+      <linkflags>-lbid
+      <linkflags>-lTwsSocketClient
+    ;
+exe ComboProductHandlerTest
+    : ComboProductHandlerTest.cpp
+      /PCDef//libCDef
+      /PCommonDataStructures//libCommonDataStructures
+      /PCommonTradeUtils//libCommonTradeUtils
+      /PIBUtils//libIBUtils
+      /PUtils//libUtils
+    :
+    : <variant>debug <variant>release
+      <linkflags>-lpthread
+      <linkflags>-lbid
+      <linkflags>-lTwsSocketClient
+    ;
+
+exe get_close_price_from_shortcode
+    : get_close_price_from_shortcode.cpp
+      /PCDef//libCDef
+      /PUtils//libUtils
+      /PCommonTradeUtils//libCommonTradeUtils
+      /PCommonDataStructures//libCommonDataStructures
+      /PProfiler//libProfiler
+    :
+    : <variant>debug <variant>release
+    ;
+
+exe compute_ltovn_index
+    : compute_ltovn_index.cpp
+      /PCDef//libCDef
+      /PUtils//libUtils
+      /PCommonTradeUtils//libCommonTradeUtils
+      /PCommonDataStructures//libCommonDataStructures
+      /PProfiler//libProfiler
+    :
+    : <variant>debug <variant>release
+    ;
+
+install install-bin
+    : user_msg
+      historical_data_generator_cash_new
+      get_all_weekly_expiry_for_year_bse_friday
+      generate_trade_log_summary
+      get_symbol_from_shortcode_file
+      compare_mbochip_tradeengine_latency
+      compare_mbochip_tradeengine_app_book
+      bardata_fix_for_weekly_expiry_friday
+      bardata_fix_for_weekly_expiry_wednesday
+      get_details_from_shortcode_file
+      get_itm_from_underlying
+      exanic_receive
+      exanic_transmitter
+      mds_log_reader
+      oi_process
+      mds_fast_first_trade_read
+      mds_fast_first_trade_read_Volume
+      mds_fast_first_trade_read_Volume_Machince
+      mds_fast_first_trade_read_Volume_Machince_fo
+      mds_circuit_alert_read
+      mds_fast_first_Compare
+      bardata_fix_for_weekly_expiry
+      bardata_fix_for_weekly_expiry_tuesday
+      merge_Two_bardata_Files
+      extract_mds_messages
+      get_strike_from_shortcode
+      test_bse_defination_symbol
+      get_token_from_shortcode
+      get_strike_from_shortcode
+      fix_cme_log_data
+      get_exchange_symbol
+      get_expiry_from_shortcode
+      get_exchange_symbol_file 
+      check_shortcode_valid
+      nse_compute_ltovn_index
+      get_option_shortcodes
+      get_segment_from_shortcode
+      get_shortcode_for_symbol
+      get_shortcode_for_symbol_from_file
+      get_shortcode_for_symbol_from_file_uniq_shortcode
+      get_shortCode_from_strike_price 
+      get_weekly_shortcode_from_monthly_shortcode
+      get_weekly_shortcode_from_monthly_shortcode_file
+      get_weekly_shortcode_from_symbol
+      get_weekly_shortcode_from_symbol_file
+      update_date
+      get_utc_time
+      dump_raw_multicast_data_using_config
+      calc_next_day  calc_next_week_day  calc_prev_day  calc_prev_week_day
+      holiday_manager
+      get_tradeinfo_fut
+      ftx_crypto_data_reader
+      ftx_latency_diff_stats
+      coinbase_latency_diff_stats
+      console_margin_calculator
+      ftx_crypto_volume_summary
+      nse_bse_latency_check
+      convert_oi_data
+      convert_bse_oi_data
+      get_total_trade_qty_from_market_data
+      risk_array_generator
+      historical_data_generator_fut_new_unconverted
+      historical_data_generator_cash_new_unconverted
+      get_shortcode_from_token_file_bse
+      ib_manager
+      profilerTest
+      ComboProductHandlerTest
+      get_trading_date
+      ors_command_client_ibkr
+      testCombo
+      compute_ltovn_index
+      get_close_price_from_shortcode
+    : <variant>release:<location>"$(PROJECT_BIN_INSTALL)"
+      <variant>debug:<location>"$(PROJECT_BIN_INSTALL_DEBUG)"
+  	: release debug
+    ;

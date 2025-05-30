@@ -1,0 +1,1 @@
+sh -c 'TZ=Asia/Sao_Paulo date'

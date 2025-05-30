@@ -1,0 +1,68 @@
+[core]
+	repositoryformatversion = 0
+	filemode = true
+	bare = false
+	logallrefupdates = true
+[remote "origin"]
+	url = git+ssh://git@github.com/two-roads-trading-pvt-ltd/tradeengine.git
+	fetch = +refs/heads/*:refs/remotes/origin/*
+[branch "POST_MARKET_EXEC_WATCH"]
+	remote = origin
+	merge = refs/heads/POST_MARKET_EXEC_WATCH
+[branch "T2T_2020"]
+	remote = origin
+	merge = refs/heads/T2T_2020
+[branch "CHANNEL_CHANGES"]
+	remote = origin
+	merge = refs/heads/CHANNEL_CHANGES
+[branch "STREAM_CHANGES_POST"]
+	remote = origin
+	merge = refs/heads/STREAM_CHANGES_POST
+[branch "LOG_LIVE_BARDATA"]
+	remote = origin
+	merge = refs/heads/LOG_LIVE_BARDATA
+[branch "nishit_mm_barsmm"]
+	remote = origin
+	merge = refs/heads/nishit_mm_barsmm
+[branch "abhishek_mm_temp"]
+	remote = origin
+	merge = refs/heads/abhishek_mm_temp
+[branch "midterm_master"]
+	remote = origin
+	merge = refs/heads/midterm_master
+[branch "L1_LOGGED_DATA"]
+	remote = origin
+	merge = refs/heads/L1_LOGGED_DATA
+[branch "master"]
+	remote = origin
+	merge = refs/heads/master
+[branch "L1_LOGGED_DATA_MASTER"]
+	remote = origin
+	merge = refs/heads/L1_LOGGED_DATA_MASTER
+[branch "midterm_master_l1_data"]
+	remote = origin
+	merge = refs/heads/midterm_master_l1_data
+[branch "midterm_master_CBOE_prototype"]
+	remote = origin
+	merge = refs/heads/midterm_master_CBOE_prototype
+[branch "midterm_master_CBOE_prototype_bardata"]
+	remote = origin
+	merge = refs/heads/midterm_master_CBOE_prototype_bardata
+[branch "NSE_BARDATA_STKFO"]
+	remote = origin
+	merge = refs/heads/NSE_BARDATA_STKFO
+[branch "nishit_mm_CBOE"]
+	remote = origin
+	merge = refs/heads/nishit_mm_CBOE
+[branch "BUG_SIM_PREV_HOLIDAY_MIDTERM"]
+	remote = origin
+	merge = refs/heads/BUG_SIM_PREV_HOLIDAY_MIDTERM
+[branch "BUG_SIM_PREV_HOLIDAY"]
+	remote = origin
+	merge = refs/heads/BUG_SIM_PREV_HOLIDAY
+[branch "OI_BARDATA_NSE"]
+	remote = origin
+	merge = refs/heads/OI_BARDATA_NSE
+[branch "IB_Infra"]
+	remote = origin
+	merge = refs/heads/IB_Infra

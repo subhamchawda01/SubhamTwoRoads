@@ -1,0 +1,308 @@
+CREATE DATABASE databasename;
+DROP DATABASE databasename;
+
+
+BACKUP DATABASE databasename TO DISK = 'filepath';
+BACKUP DATABASE testDB TO DISK = 'D:\backups\testDB.bak' WITH DIFFERENTIAL;
+
+
+CREATE TABLE Persons (
+    PersonID int,
+    LastName varchar(255),
+    FirstName varchar(255),
+    Address varchar(255),
+    City varchar(255)
+);
+
+DROP TABLE table_name; 
+
+TRUNCATE TABLE table_name;
+
+ALTER TABLE table_name ADD column_name datatype;
+
+ALTER TABLE table_name DROP COLUMN column_name;
+
+ALTER TABLE table_name MODIFY COLUMN column_name datatype;
+
+
+NOT NULL - Ensures that a column cannot have a NULL value
+UNIQUE - Ensures that all values in a column are different
+PRIMARY KEY - A combination of a NOT NULL and UNIQUE. Uniquely identifies each row in a table
+FOREIGN KEY - Prevents actions that would destroy links between tables
+CHECK - Ensures that the values in a column satisfies a specific condition
+DEFAULT - Sets a default value for a column if no value is specified
+CREATE INDEX - Used to create and retrieve data from the database very quickly
+
+
+
+	CREATE TABLE Product (
+	    exchangeSymbol varchar(18) NOT NULL,
+	    expiry DATE,
+	    product varchar(18) NOT NULL UNIQUE,
+	    strikePrice int,
+	    lotSize int,
+	    PRIMARY KEY (exchangeSymbol)
+	);
+
+insert into Pro
+
+INSERT INTO Product VALUES ('NSE123', '2021-07-01', 'SBIN', null, null );
+
+CREATE TABLE MKT_DAILY_DATA  (
+	exchangeSymbol varchar(18) NOT NULL,
+	dataId int NOT NULL AUTO_INCREMENT,
+    day DATE NOT NULL,
+    minPx double NOT NULL,
+	maxPx double NOT NULL,
+	pxRange double NOT NULL,
+	avgPx double NOT NULL,
+	pxStdev double NOT NULL,
+	totalVolume int NOT NULL,
+	totalTrades int NOT NULL,
+	totalBuyVolume int NOT NULL,
+	totalSellVolume int NOT NULL,
+	volumeWeightedAvgPx double NOT NULL,
+	volumeWeightedPxStdev double NOT NULL,
+	avgL1Size double NOT NULL,
+	minTrdSz int NOT NULL,
+	maxTrdSz int NOT NULL,
+	avgTrdSz double NOT NULL,
+	minSpread int NOT NULL,
+	maxSpread int NOT NULL,
+	avgSpread double NOT NULL,
+    PRIMARY KEY (dataId),
+    FOREIGN KEY (exchangeSymbol) REFERENCES Product(exchangeSymbol)
+);
+
+
+CREATE TABLE MKT_DAILY_MIN_DATA  (
+    exchangeSymbol varchar(18) NOT NULL,
+    dataId int NOT NULL AUTO_INCREMENT,
+    day DATE NOT NULL,
+    time TIMESTAMP NOT NULL,
+    minPx double NOT NULL,
+	maxPx double NOT NULL,
+	pxRange double NOT NULL,
+	avgPx double NOT NULL,
+	pxStdev double NOT NULL,
+	totalVolume int NOT NULL,
+	totalTrades int NOT NULL,
+	totalBuyVolume int NOT NULL,
+	totalSellVolume int NOT NULL,
+	volumeWeightedAvgPx double NOT NULL,
+	volumeWeightedPxStdev double NOT NULL,
+	avgL1Size double NOT NULL,
+	minTrdSz double NOT NULL,
+	maxTrdSz double NOT NULL,
+	avgTrdSz double NOT NULL,
+	minSpread double NOT NULL,
+	maxSpread double NOT NULL,
+	avgSpread double NOT NULL,
+    PRIMARY KEY (dataId),
+    FOREIGN KEY (exchangeSymbol) REFERENCES Product(exchangeSymbol)
+);
+
+
+CREATE TABLE BHAVCOPY_DATA  (
+	exchangeSymbol varchar(18) NOT NULL,
+	dataId int NOT NULL AUTO_INCREMENT,
+	Instrument,
+	Symbol,
+	Expiry_dt,
+	Strike_pr,
+	Option_typ,
+	OPEN,
+	HIGH,
+	Low,
+	Close,
+	Settle_pr,
+	Contracts,
+	Val_inlakh,
+	Open_int,
+	Chg_in_oi,
+	Timestamp,
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+pstmt.setDate(3, new Date(597396086000L));
+
+
+
+
+phpMyAdmin ->
+
+
+
+
+techincal indicator
+
+https://bazaartrend.com/
+
+
+50 Day EMA	Close is Above EMA 50 (Short Term)
+Bullish
+100 Day EMA	Close is Above EMA 100 (Mid Term)	Bullish
+200 Day EMA	Close is Above EMA 200 (Long Term)	Bullish
+MACD (12 26 9)	MACD Line is Less Then SIGNAL Line	Bearish
+RSI (14)	RSI is Below 30	Over Sold
+MFI (14)	MFI is 23.73	Sideways
+CCI (20)	CCI is Below -100	Over Sold
+WILLIAM %R (14)	William %R is Below -80	Over Sold
+ADX (14)	ADX is Above 20 & +DI is Below -DI	Down Trend
+PSAR	Stoploss For Long Buy	677.62
+10 Day Avg Volume	Traded 13.24 % More then 10 Day Average Volume
+ 
+and OI DATA.
+
+
+SMA instead of EMA
+
+
+Corrpted
+
+
+ONLY FUT STOCKS 1,2 year FO ka ref data, 5 sample, 1 year and now (5 common fut)
+
+
+
+The member has maintained and set the market price protection to 4% percentage to the applicable circuit limits including dummy circuit limits in respect of all algorithmic orders.
+
+Further, it is mandated by the system for setting the market price protection percentage i.e. the system has set the limit as equal to the applicable circuit limits.
+
+
+
+
+
+
+CREATE TABLE MKT_DAILY_DATA  (
+        shortcode varchar(30) NOT NULL,
+        day DATE NOT NULL,
+        minPx DECIMAL(15, 3) NOT NULL,
+        maxPx DECIMAL(15, 3) NOT NULL,
+        pxRange DECIMAL(15, 3) NOT NULL,
+        avgPx DECIMAL(15, 3) NOT NULL,
+        pxStdev DECIMAL(15, 3),
+        totalVolume int NOT NULL,
+        totalTrades int NOT NULL,
+        totalBuyVolume int NOT NULL,
+        totalSellVolume int NOT NULL,
+        volumeWeightedAvgPx DECIMAL(15, 3) NOT NULL,
+        volumeWeightedPxStdev DECIMAL(15, 3),
+        avgL1Size DECIMAL(15, 3) NOT NULL,
+        minTrdSz int NOT NULL,
+        maxTrdSz int NOT NULL,
+        avgTrdSz DECIMAL(15, 3) NOT NULL,
+        minSpread int NOT NULL,
+        maxSpread int NOT NULL,
+        avgSpread DECIMAL(15, 3) NOT NULL,
+	noOfMsg int NOT NULL,
+    PRIMARY KEY (shortcode,day),
+    FOREIGN KEY (shortcode) REFERENCES PRODUCT(shortcode)
+);
+
+CREATE TABLE MKT_DAILY_MIN_DATA  (
+        shortcode varchar(30) NOT NULL,
+        day DATE NOT NULL,
+        time TIMESTAMP NOT NULL,
+        minPx DECIMAL(15, 3) NOT NULL,
+	maxPx DECIMAL(15, 3) NOT NULL,
+	pxRange DECIMAL(15, 3) NOT NULL,
+	avgPx DECIMAL(15, 3) NOT NULL,
+	pxStdev DECIMAL(15, 3),
+	totalVolume int NOT NULL,
+	totalTrades int NOT NULL,
+	totalBuyVolume int NOT NULL,
+	totalSellVolume int NOT NULL,
+	volumeWeightedAvgPx DECIMAL(15, 3) NOT NULL,
+	volumeWeightedPxStdev DECIMAL(15, 3),
+	avgL1Size DECIMAL(15, 3) NOT NULL,
+	minTrdSz DECIMAL(15, 3) NOT NULL,
+	maxTrdSz DECIMAL(15, 3) NOT NULL,
+	avgTrdSz DECIMAL(15, 3) NOT NULL,
+	minSpread DECIMAL(15, 3) NOT NULL,
+	maxSpread DECIMAL(15, 3) NOT NULL,
+	avgSpread DECIMAL(15, 3) NOT NULL,
+	noOfMsg int NOT NULL,
+    PRIMARY KEY (shortcode,day,time)
+);
+
+// Don't as table is changed    FOREIGN KEY (shortcode) REFERENCES PRODUCT(shortcode)
+
+BHAV COPY TABLES
+
+CREATE TABLE BHAV_COPY_DETAILS_FO  (
+      shortcode varchar(30) NOT NULL,
+      instrument varchar(8) NOT NULL,
+      symbol varchar(18) NOT NULL,
+      expiry_dt DATE NOT NULL,
+      strike_pr double NOT NULL,
+      option_typ varchar(4) NOT NULL,
+      open double NOT NULL,
+      high double NOT NULL,
+      low double NOT NULL,
+      close double NOT NULL,
+      settle_pr double NOT NULL,
+      contracts double NOT NULL,
+      val_inlakh  double NOT NULL,
+      open_int  double NOT NULL,
+      chg_in_oi  double NOT NULL,
+      timestamp DATE NOT NULL,
+      PRIMARY KEY (symbol,expiry_dt,strike_pr,timestamp),
+      FOREIGN KEY (shortcode) REFERENCES PRODUCT(shortcode)
+);
+
+
+
+CREATE TABLE BHAV_COPY_DETAILS_CASH  (
+      shortcode varchar(30) NOT NULL,
+      symbol varchar(18) NOT NULL,
+      series varchar(4) NOT NULL,
+      open double NOT NULL,
+      high double NOT NULL,
+      low double NOT NULL,
+      last double NOT NULL,
+      prevclose double NOT NULL,
+      close double NOT NULL,
+      tottrdqty int NOT NULL,
+      tottrdval double NOT NULL,
+      timestamp DATE NOT NULL,
+      totaltrades int NOT NULL,
+      isin varchar(18) NOT NULL,
+      PRIMARY KEY (symbol,timestamp),
+      FOREIGN KEY (shortcode) REFERENCES PRODUCT(shortcode)
+);
+
+ALTER TABLE MKT_DAILY_DATA MODIFY COLUMN avgL1Size double;
+
+
+CREATE TABLE INDICATOR_DAILY_DATA(
+    shortcode varchar(30) NOT NULL,
+    timestamp DATE NOT NULL,
+    SMA50 double, 
+    SMA100 double,
+    SMA200 double,
+    MACD double,
+    RSI double,
+    MFI double,
+    CCI double,
+    WILLIAM double,
+    AvgVolume10 double,
+    SignalLine double,
+    PRIMARY KEY (shortcode,timestamp),
+    FOREIGN KEY (shortcode) REFERENCES PRODUCT(shortcode) 
+);
+

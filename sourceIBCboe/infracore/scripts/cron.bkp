@@ -1,0 +1,115 @@
+# Edit this file to introduce tasks to be run by cron.
+# 
+# Each task to run has to be defined through a single line
+# indicating with different fields when the task will be run
+# and what command to run for the task
+# 
+# To define the time you can provide concrete values for
+# minute (m), hour (h), day of month (dom), month (mon),
+# and day of week (dow) or use '*' in these fields (for 'any').# 
+# Notice that tasks will be started based on the cron's system
+# daemon's notion of time and timezones.
+# 
+# Output of the crontab jobs (including errors) is sent through
+# email to the user the crontab file belongs to (unless redirected).
+# 
+# For example, you can run a backup of all your user accounts
+# at 5 a.m every week with:
+# 0 5 * * 1 tar -zcf /var/backups/home.tgz /home/
+# 
+# For more information see the manual pages of crontab(5) and cron(8)
+# 
+# m h  dom mon dow   command
+
+#MAILTO=nsehft@tworoads.co.in
+#MAILFROM=uttkarsh.sarraf@tworoads.co.in
+
+# Edit this file to introduce tasks to be run by cron.
+# 
+# Each task to run has to be defined through a single line
+# indicating with different fields when the task will be run
+# and what command to run for the task
+# 
+# To define the time you can provide concrete values for
+# minute (m), hour (h), day of month (dom), month (mon),
+# and day of week (dow) or use '*' in these fields (for 'any').# 
+# Notice that tasks will be started based on the cron's system
+# daemon's notion of time and timezones.
+# 
+# Output of the crontab jobs (including errors) is sent through
+# email to the user the crontab file belongs to (unless redirected).
+# 
+# For example, you can run a backup of all your user accounts
+# at 5 a.m every week with:
+# 0 5 * * 1 tar -zcf /var/backups/home.tgz /home/
+# 
+# For more information see the manual pages of crontab(5) and cron(8)
+# 
+# m h  dom mon dow   command
+
+
+#05 15 * * 1-5 python ~/usarraf/tradeengine/scripts/run_param_permute.py ~/CONFIG_SET/CONFIG_NSE_CM_SPC_SET6/ _MM ~/CONFIG_SET/CONFIG_NSE_CM_SPC_PARAM_SET6/ ~/param_offset 20171130 90 --start_time IST_0918 --end_time IST_1525 --exec_to_run ~/stable_exec/trade_engine_20171211 --num_workers 6 --live_file_name LIVE_FILE.csv &> out.set6.spc &
+
+PATH=/apps/perllib/perl5/bin/:/apps/boost/boost-git:/apps/gcc_versions/gcc-6_3_install/bin:/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin:/usr/games:/usr/local/games:/snap/bin:/apps/s3-cli/ec2-cli/ec2-api-tools-1.6.8.0/bin:/home/dvctrader/bin
+LIBRARY_PATH=/apps/boost/boost-install/lib:/usr/lib/x86_64-linux-gnu:
+CURRENT_BOOST_INSTALL_PATH=/apps/boost/boost-install
+LD_LIBRARY_PATH=/apps/boost/boost-install/lib:/apps/gcc_versions/gcc-6_3_install/lib64:/usr/lib/x86_64-linux-gnu::/apps/mysqlcpp/mysql-connector-c++-1.1.5_install/lib
+LD_RUN_PATH=/apps/boost/boost-install/lib:
+GCC_ROOT=/apps/gcc_versions/gcc-6_3_install
+CURRENT_BOOST_PATH=/apps/boost/boost-git
+BOOST_ROOT=/apps/boost/boost-git
+BOOST_INCLUDE_DIR=/apps/boost/boost-install/include
+BOOST_LIB_INSTALL=/apps/boost/boost-install/lib
+HOME=/home/dvctrader
+
+XDG_SESSION_ID=3145
+TERM=xterm
+SHELL=/bin/bash
+HISTSIZE=1000
+SSH_CLIENT=182.75.9.66 53381 22
+PERL5LIB=/apps/perllib/perl5/lib64/perl5:/apps/perllib/perl5/lib:/apps/perllib/perl5/share/perl5:
+LIBRARY_PATH=/apps/boost/boost-install/lib:/usr/lib/x86_64-linux-gnu:
+SSH_TTY=/dev/pts/4
+CURRENT_BOOST_INSTALL_PATH=/apps/boost/boost-install
+HISTFILESIZE=10000
+USER=dvctrader
+ZLIB_LIBPATH=/apps/zlib/lib
+LD_LIBRARY_PATH=/apps/boost/boost-install/lib:/apps/gcc_versions/gcc-6_3_install/lib64:/usr/lib/x86_64-linux-gnu::/apps/mysqlcpp/mysql-connector-c++-1.1.5_install/lib
+WORKDIR=.
+EC2_HOME=/apps/s3-cli/ec2-cli/ec2-api-tools-1.6.8.0
+VIRTUAL_ENV=/home/dvctrader/venv
+MAIL=/var/mail/dvctrader
+PATH=/home/dvctrader/venv/bin:/apps/perllib/perl5/bin/:/apps/boost/boost-git:/apps/gcc_versions/gcc-6_3_install/bin:/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin:/usr/games:/usr/local/games:/snap/bin:/apps/s3-cli/ec2-cli/ec2-api-tools-1.6.8.0/bin:/home/dvctrader/bin
+LD_RUN_PATH=/apps/boost/boost-install/lib:
+PWD=/home/dvctrader/shantanu/tradeengine
+JAVA_HOME=/usr
+LANG=en_US.UTF-8
+PS1=(venv) \[\033[0;33m\][ \u@\h \w ] \[\033[00m\]
+HISTCONTROL=ignoreboth
+GCC_ROOT=/apps/gcc_versions/gcc-6_3_install
+SHLVL=1
+HOME=/home/dvctrader
+CURRENT_BOOST_PATH=/apps/boost/boost-git
+BZIP2_SOURCE=/apps/bzip2
+LOGNAME=dvctrader
+BOOST_ROOT=/apps/boost/boost-git
+BOOST_INCLUDE_DIR=/apps/boost/boost-install/include
+SSH_CONNECTION=182.75.9.66 53381 10.1.6.9 22
+ZLIB_SOURCE=/apps/zlib
+BZIP2_LIBPATH=/apps/bzip2/lib
+XDG_RUNTIME_DIR=/run/user/503
+BOOST_LIB_INSTALL=/apps/boost/boost-install/lib
+_=/usr/bin/env
+OLDPWD=/home/dvctrader/shantanu/baseinfra
+
+
+30 16 * * 1-5  today=`date +"\%Y\%m\%d"`; /home/dvctrader/usarraf/tradeengine/scripts/calc_ratio.sh $today 10 IST_916 IST_930 StartRatio /home/dvctrader/CONFIG_SET/CONFIG_FUT1_RATIO_CALCULATOR/LIVE_FILE.csv 1>/spare/local/logs/log_calc_ratio_start_fut1  2>/spare/local/logs/log_calc_ratio_start_fut1
+30 16 * * 1-5  today=`date +"\%Y\%m\%d"`; /home/dvctrader/usarraf/tradeengine/scripts/calc_ratio.sh $today 11 IST_1500 IST_1525 EndRatio /home/dvctrader/CONFIG_SET/CONFIG_FUT1_RATIO_CALCULATOR/LIVE_FILE.csv 1>/spare/local/logs/log_calc_ratio_end_fut1 2>/spare/local/logs/log_calc_ratio_end_fut1
+59 16 * * 1-5  today=`date +"\%Y\%m\%d"`; /home/dvctrader/usarraf/tradeengine/scripts/calc_ratio.sh $today 12 IST_916 IST_930 StartRatio /home/dvctrader/CONFIG_SET/CONFIG_FUT2_RATIO_CALCULATOR/LIVE_FILE.csv 1>/home/dvctrader/usarraf/log_calc_ratio_start_fut2 2>/home/dvctrader/usarraf/log_calc_ratio_start_fut2
+59 16 * * 1-5  today=`date +"\%Y\%m\%d"`; /home/dvctrader/usarraf/tradeengine/scripts/calc_ratio.sh $today 13 IST_1500 IST_1525 EndRatio /home/dvctrader/CONFIG_SET/CONFIG_FUT2_RATIO_CALCULATOR/LIVE_FILE.csv 1>/home/dvctrader/usarraf/log_calc_ratio_end_fut2 2>/home/dvctrader/usarraf/log_calc_ratio_end_fut2
+30 17 * * 1-5  today=`date +"\%Y\%m\%d"`; /home/dvctrader/usarraf/tradeengine/scripts/calc_ratio.sh $today 14 IST_916 IST_930 StartRatio /home/dvctrader/CONFIG_SET/CONFIG_NSE_CM_RATIO_CALCULATOR/LIVE_FILE.csv 1>/spare/local/logs/log_calc_ratio_start_cm1  2>/spare/local/logs/log_calc_ratio_start_cm1
+30 17 * * 1-5  today=`date +"\%Y\%m\%d"`; /home/dvctrader/usarraf/tradeengine/scripts/calc_ratio.sh $today 15 IST_1500 IST_1525 EndRatio /home/dvctrader/CONFIG_SET/CONFIG_NSE_CM_RATIO_CALCULATOR/LIVE_FILE.csv 1>/spare/local/logs/log_calc_ratio_end_cm1 2>/spare/local/logs/log_calc_ratio_end_cm1
+59 17 * * 1-5  today=`date +"\%Y\%m\%d"`; /home/dvctrader/usarraf/tradeengine/scripts/calc_ratio.sh $today 16 IST_916 IST_930 StartRatio /home/dvctrader/CONFIG_SET/CONFIG_NSE_CM_RATIO_CALCULATOR_FUT1/LIVE_FILE.csv 1>/home/dvctrader/usarraf/log_calc_ratio_start_cm2 2>/home/dvctrader/usarraf/log_calc_ratio_start_cm2
+59 17 * * 1-5  today=`date +"\%Y\%m\%d"`; /home/dvctrader/usarraf/tradeengine/scripts/calc_ratio.sh $today 17 IST_1500 IST_1525 EndRatio /home/dvctrader/CONFIG_SET/CONFIG_NSE_CM_RATIO_CALCULATOR_FUT1/LIVE_FILE.csv 1>/home/dvctrader/usarraf/log_calc_ratio_end_cm2 2>/home/dvctrader/usarraf/log_calc_ratio_end_cm2
+
+

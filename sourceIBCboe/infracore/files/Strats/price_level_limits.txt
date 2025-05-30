@@ -1,0 +1,12 @@
+#SHORTCODE MIN_ORD_TO_JOIN MIN_SIZE_TO_JOIN
+ZN_0       20              100
+#ZB_0       10              50
+ZF_0       5               10
+#ZT_0       5               10
+#ES_0       15              40
+FGBL_0     5               10
+FGBS_0     5               10
+FGBM_0     5               10
+FESX_0     5               10
+FDAX_0     5               10
+#FGBX_0     5               10

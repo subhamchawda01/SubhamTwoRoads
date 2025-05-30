@@ -1,0 +1,534 @@
+Date Time,,,,Event,,Survey,Actual,Prior,Revised
+01/04/2012 02:00,BZ,1),,FIPE CPI - Monthly,DEC,0.47%,0.61%,0.60%,- -
+01/04/2012 02:00,BZ,2),,FIPE CPI - Weekly,23-Dec,0.47%,0.59%,0.49%,- -
+01/04/2012 09:30,BZ,3),,Central Bank Posts Currency Flows' Data for Prev. Week,,,,,
+01/04/2012 09:30,BZ,4),,Commodity Price Index (MoM),DEC,- -,-0.53%,-1.70%,- -
+01/04/2012 09:30,BZ,5),,Commodity Price Index (YoY),DEC,- -,-0.35%,6.14%,- -
+01/05/2012 06:00,BZ,6),,Industrial Production sa (MoM),NOV,0.50%,- -,-0.60%,- -
+01/05/2012 06:00,BZ,7),,Industrial Production YoY,NOV,-2.40%,- -,-2.20%,- -
+01/05/2012 07:30,BZ,8),,Vehicle Sales (Anfavea),DEC,- -,- -,321560,- -
+01/05/2012 07:30,BZ,9),,Vehicle Production (Anfavea),DEC,- -,- -,274487,- -
+01/05/2012 07:30,BZ,10),,Vehicle Exports (Anfavea),DEC,- -,- -,54950,- -
+01/06/2012 06:00,BZ,11),,IBGE Inflation IPCA (MoM),DEC,0.55%,- -,0.52%,- -
+01/06/2012 06:00,BZ,12),,IBGE Inflation IPCA (YoY),DEC,6.56%,- -,6.64%,- -
+01/09/2012 05:00,BZ,13),,FGV Inflation IGP-DI,DEC,-0.25%,- -,0.43%,- -
+01/09/2012 05:00,BZ,14),,FGV CPI IPC-S,6-Jan,- -,- -,0.79%,- -
+01/09/2012 08:00,BZ,15),,Trade Balance (FOB) - Weekly,8-Jan,- -,- -,$740M,- -
+01/11/2012 02:00,BZ,16),,FIPE CPI - Weekly,7-Jan,- -,- -,0.59%,- -
+01/11/2012 05:00,BZ,17),,FGV Preview Inflation IGP-M,10-Jan,- -,- -,- -,- -
+01/12/2012 06:00,BZ,18),,Retail Sales (MoM),NOV,- -,- -,0.00%,- -
+01/12/2012 06:00,BZ,19),,Retail Sales (YoY),NOV,- -,- -,4.30%,- -
+01/12/2012 06:00,BZ,20),,Broad Retail Sales (YoY),NOV,- -,- -,1.60%,- -
+14-21 JAN,BZ,21),,CAGED Formal Job Creation,DEC,- -,- -,42735,- -
+15-22 JAN,BZ,22),,Tax Collections,DEC,- -,- -,78968M,- -
+01/16/2012 05:00,BZ,23),,FGV CPI IPC-S,13-Jan,- -,- -,- -,- -
+01/16/2012 08:00,BZ,24),,Trade Balance (FOB) - Weekly,15-Jan,- -,- -,- -,- -
+16-20 JAN,BZ,25),,CNI Capacity Utilization,NOV,81.50%,- -,81.40%,- -
+16-20 JAN,BZ,26),,Economic Activity Indx MoM SA,NOV,- -,- -,-0.32%,- -
+16-20 JAN,BZ,27),,Economic Activity Indx YoY NSA,NOV,- -,- -,0.69%,- -
+01/17/2012 05:00,BZ,28),,FGV Inflation IGP-10 (MoM),JAN,- -,- -,0.19%,- -
+01/18/2012 02:00,BZ,29),,FIPE CPI - Weekly,15-Jan,- -,- -,- -,- -
+01/18/2012,BZ,30),,SELIC Target - Central Bank,18-Jan,- -,- -,11.00%,- -
+01/19/2012 05:00,BZ,31),,FGV Preview Inflation IGP-M,18-Jan,- -,- -,- -,- -
+01/23/2012 05:00,BZ,32),,FGV CPI IPC-S,20-Jan,- -,- -,- -,- -
+01/23/2012 08:00,BZ,33),,Trade Balance (FOB) - Weekly,22-Jan,- -,- -,- -,- -
+01/24/2012 06:00,BZ,34),,IBGE CPI IPCA-15 (MoM),JAN,- -,- -,0.56%,- -
+01/24/2012 07:30,BZ,35),,Current Account - Monthly,DEC,- -,- -,-$6803M,- -
+01/24/2012 07:30,BZ,36),,Foreign Investment,DEC,- -,- -,$4056M,- -
+01/25/2012 05:00,BZ,37),,FGV Consumer Confidence,JAN,- -,- -,119.6,- -
+01/26/2012 02:00,BZ,38),,FIPE CPI - Weekly,23-Jan,- -,- -,- -,- -
+01/26/2012 05:00,BZ,39),,FGV Construction Costs (MoM),JAN,- -,- -,0.35%,- -
+01/26/2012 05:30,BZ,40),,COPOM Monetary Policy Meeting Minutes,,,,,
+01/26/2012 06:00,BZ,41),,Unemployment Rate,DEC,- -,- -,5.20%,- -
+01/26/2012 21:00,BZ,42),,Private Banks Lending,DEC,- -,- -,"$1,131 ",- -
+01/26/2012 21:00,BZ,43),,Outstanding Loans MoM%,DEC,- -,- -,1.90%,- -
+01/26/2012 21:00,BZ,44),,Total Outstanding Loans,DEC,- -,- -,"$1,984 ",- -
+01/30/2012 05:00,BZ,45),,FGV Inflation IGP-M (MoM),JAN,- -,- -,-0.12%,- -
+01/30/2012 05:00,BZ,46),,FGV Inflation IGP-M (YoY),JAN,- -,- -,5.10%,- -
+01/30/2012 08:00,BZ,47),,Trade Balance (FOB) - Weekly,29-Jan,- -,- -,- -,- -
+01/30/2012,BZ,48),,Central Govt Budget,DEC,- -,- -,4.6B,- -
+01/31/2012 06:00,BZ,49),,Industrial Production sa (MoM),DEC,- -,- -,- -,- -
+01/31/2012 06:00,BZ,50),,Industrial Production YoY,DEC,- -,- -,5.30%,- -
+01/31/2012 07:30,BZ,51),,Net Debt % GDP,DEC,- -,- -,36.60%,- -
+01/31/2012 07:30,BZ,52),,Primary Budget Balance,DEC,- -,- -,8.2B,- -
+01/31/2012 07:30,BZ,53),,Nominal Budget Balance,DEC,- -,- -,-10.2B,- -
+02/01/2012 05:00,BZ,54),,FGV CPI IPC-S,27-Jan,- -,- -,- -,- -
+02/01/2012 07:00,BZ,55),,PMI Manufacturing,JAN,- -,- -,49.1,- -
+02/01/2012 08:00,BZ,56),,Trade Balance (FOB) - Monthly,JAN,- -,- -,$3817M,- -
+02/01/2012 08:00,BZ,57),,EXPORTS - US$ million,JAN,- -,- -,$22129M,- -
+02/01/2012 08:00,BZ,58),,IMPORTS - US$ million,JAN,- -,- -,$18312M,- -
+01-08 FEB,BZ,59),,Commodity Price Index (MoM),JAN,- -,- -,-0.53%,- -
+01-08 FEB,BZ,60),,Commodity Price Index (YoY),JAN,- -,- -,-0.35%,- -
+02/02/2012 02:00,BZ,61),,FIPE CPI - Monthly,JAN,- -,- -,0.61%,- -
+03-09 FEB,BZ,62),,CNI Capacity Utilization,DEC,- -,- -,- -,- -
+02/06/2012 08:00,BZ,63),,Trade Balance (FOB) - Weekly,5-Feb,- -,- -,- -,- -
+06-09 FEB,BZ,64),,Vehicle Sales (Anfavea),JAN,- -,- -,- -,- -
+06-09 FEB,BZ,65),,Vehicle Production (Anfavea),JAN,- -,- -,- -,- -
+06-09 FEB,BZ,66),,Vehicle Exports (Anfavea),JAN,- -,- -,- -,- -
+02/08/2012 05:00,BZ,67),,FGV Inflation IGP-DI,JAN,- -,- -,- -,- -
+02/08/2012 05:00,BZ,68),,FGV CPI IPC-S,3-Feb,- -,- -,- -,- -
+02/09/2012 02:00,BZ,69),,FIPE CPI - Weekly,7-Feb,- -,- -,- -,- -
+02/10/2012 05:00,BZ,70),,FGV Preview Inflation IGP-M,9-Feb,- -,- -,- -,- -
+02/10/2012 06:00,BZ,71),,IBGE Inflation IPCA (MoM),JAN,- -,- -,- -,- -
+02/10/2012 06:00,BZ,72),,IBGE Inflation IPCA (YoY),JAN,- -,- -,- -,- -
+02/13/2012 08:00,BZ,73),,Trade Balance (FOB) - Weekly,12-Feb,- -,- -,- -,- -
+02/14/2012 06:00,BZ,74),,Retail Sales (MoM),DEC,- -,- -,- -,- -
+02/14/2012 06:00,BZ,75),,Retail Sales (YoY),DEC,- -,- -,- -,- -
+02/14/2012 06:00,BZ,76),,Broad Retail Sales (YoY),DEC,- -,- -,- -,- -
+14-21 FEB,BZ,77),,CAGED Formal Job Creation,JAN,- -,- -,- -,- -
+02/15/2012 05:00,BZ,78),,FGV Inflation IGP-10 (MoM),FEB,- -,- -,- -,- -
+15-22 FEB,BZ,79),,Tax Collections,JAN,- -,- -,- -,- -
+02/16/2012 02:00,BZ,80),,FIPE CPI - Weekly,14-Feb,- -,- -,- -,- -
+02/16/2012 05:00,BZ,81),,FGV CPI IPC-S,10-Feb,- -,- -,- -,- -
+02/17/2012 06:00,BZ,82),,FGV Preview Inflation IGP-M,16-Feb,- -,- -,- -,- -
+02/17/2012 07:00,BZ,83),,IBGE CPI IPCA-15 (MoM),FEB,- -,- -,- -,- -
+02/17/2012 07:00,BZ,84),,Unemployment Rate,JAN,- -,- -,- -,- -
+20-24 FEB,BZ,85),,Economic Activity Indx MoM SA,DEC,- -,- -,- -,- -
+20-24 FEB,BZ,86),,Economic Activity Indx YoY NSA,DEC,- -,- -,- -,- -
+02/22/2012 09:00,BZ,87),,Trade Balance (FOB) - Weekly,19-Feb,- -,- -,- -,- -
+02/23/2012 06:00,BZ,88),,FGV CPI IPC-S,17-Feb,- -,- -,- -,- -
+02/23/2012 06:00,BZ,89),,FGV Construction Costs (MoM),FEB,- -,- -,- -,- -
+02/23/2012 08:30,BZ,90),,Current Account - Monthly,JAN,- -,- -,- -,- -
+02/23/2012 08:30,BZ,91),,Foreign Investment,JAN,- -,- -,- -,- -
+02/24/2012 06:00,BZ,92),,FGV Consumer Confidence,FEB,- -,- -,- -,- -
+02/27/2012 03:00,BZ,93),,FIPE CPI - Weekly,21-Feb,- -,- -,- -,- -
+02/27/2012 06:00,BZ,94),,FGV Inflation IGP-M (MoM),FEB,- -,- -,- -,- -
+02/27/2012 06:00,BZ,95),,FGV Inflation IGP-M (YoY),FEB,- -,- -,- -,- -
+02/27/2012 09:00,BZ,96),,Trade Balance (FOB) - Weekly,26-Feb,- -,- -,- -,- -
+02/27/2012 22:00,BZ,97),,Private Banks Lending,JAN,- -,- -,- -,- -
+02/27/2012 22:00,BZ,98),,Outstanding Loans MoM%,JAN,- -,- -,- -,- -
+02/27/2012 22:00,BZ,99),,Total Outstanding Loans,JAN,- -,- -,- -,- -
+02/28/2012,BZ,100),,Central Govt Budget,JAN,- -,- -,- -,- -
+02/29/2012 08:30,BZ,101),,Net Debt % GDP,JAN,- -,- -,- -,- -
+02/29/2012 08:30,BZ,102),,Primary Budget Balance,JAN,- -,- -,- -,- -
+02/29/2012 08:30,BZ,103),,Nominal Budget Balance,JAN,- -,- -,- -,- -
+03/01/2012 06:00,BZ,104),,FGV CPI IPC-S,24-Feb,- -,- -,- -,- -
+03/01/2012 08:00,BZ,105),,PMI Manufacturing,FEB,- -,- -,- -,- -
+03/01/2012 09:00,BZ,106),,Trade Balance (FOB) - Monthly,FEB,- -,- -,- -,- -
+03/01/2012 09:00,BZ,107),,EXPORTS - US$ million,FEB,- -,- -,- -,- -
+03/01/2012 09:00,BZ,108),,IMPORTS - US$ million,FEB,- -,- -,- -,- -
+03/05/2012 03:00,BZ,109),,FIPE CPI - Monthly,FEB,- -,- -,- -,- -
+03/05/2012 09:00,BZ,110),,Trade Balance (FOB) - Weekly,4-Mar,- -,- -,- -,- -
+05-09 MAR,BZ,111),,CNI Capacity Utilization,JAN,- -,- -,- -,- -
+03/06/2012 07:00,BZ,112),,GDP (IBGE) QoQ,4Q,- -,- -,0.00%,- -
+03/06/2012 07:00,BZ,113),,GDP (IBGE) YoY,4Q,- -,- -,2.10%,- -
+03/06/2012 07:00,BZ,114),,GDP (IBGE) 4Qtrs Accumulated,4Q,- -,- -,3.70%,- -
+06-09 MAR,BZ,115),,Vehicle Sales (Anfavea),FEB,- -,- -,- -,- -
+06-09 MAR,BZ,116),,Vehicle Production (Anfavea),FEB,- -,- -,- -,- -
+06-09 MAR,BZ,117),,Vehicle Exports (Anfavea),FEB,- -,- -,- -,- -
+03/07/2012 06:00,BZ,118),,FGV Inflation IGP-DI,FEB,- -,- -,- -,- -
+03/07/2012 07:00,BZ,119),,Industrial Production sa (MoM),JAN,- -,- -,- -,- -
+03/07/2012 07:00,BZ,120),,Industrial Production YoY,JAN,- -,- -,- -,- -
+03/07/2012,BZ,121),,SELIC Target - Central Bank,7-Mar,- -,- -,- -,- -
+07-14 MAR,BZ,122),,Commodity Price Index (MoM),FEB,- -,- -,- -,- -
+07-14 MAR,BZ,123),,Commodity Price Index (YoY),FEB,- -,- -,- -,- -
+03/08/2012 06:00,BZ,124),,FGV CPI IPC-S,2-Mar,- -,- -,- -,- -
+03/09/2012 04:00,BZ,125),,FIPE CPI - Weekly,7-Mar,- -,- -,- -,- -
+03/09/2012 07:00,BZ,126),,FGV Preview Inflation IGP-M,8-Mar,- -,- -,- -,- -
+03/09/2012 08:00,BZ,127),,IBGE Inflation IPCA (MoM),FEB,- -,- -,- -,- -
+03/09/2012 08:00,BZ,128),,IBGE Inflation IPCA (YoY),FEB,- -,- -,- -,- -
+03/12/2012 10:00,BZ,129),,Trade Balance (FOB) - Weekly,11-Mar,- -,- -,- -,- -
+14-21 MAR,BZ,130),,Economic Activity Indx MoM SA,FEB,- -,- -,- -,- -
+14-21 MAR,BZ,131),,Economic Activity Indx YoY NSA,FEB,- -,- -,- -,- -
+14-21 MAR,BZ,132),,CAGED Formal Job Creation,FEB,- -,- -,- -,- -
+03/15/2012 07:00,BZ,133),,FGV Inflation IGP-10 (MoM),MAR,- -,- -,- -,- -
+03/15/2012 07:30,BZ,134),,COPOM Monetary Policy Meeting Minutes,,,,,
+15-22 MAR,BZ,135),,Tax Collections,FEB,- -,- -,- -,- -
+03/16/2012 07:00,BZ,136),,FGV CPI IPC-S,9-Mar,- -,- -,- -,- -
+03/19/2012 04:00,BZ,137),,FIPE CPI - Weekly,15-Mar,- -,- -,- -,- -
+03/19/2012 07:00,BZ,138),,FGV Preview Inflation IGP-M,18-Mar,- -,- -,- -,- -
+03/19/2012 10:00,BZ,139),,Trade Balance (FOB) - Weekly,18-Mar,- -,- -,- -,- -
+03/22/2012 08:00,BZ,140),,IBGE CPI IPCA-15 (MoM),MAR,- -,- -,- -,- -
+03/22/2012 08:00,BZ,141),,Unemployment Rate,FEB,- -,- -,- -,- -
+03/23/2012 07:00,BZ,142),,FGV CPI IPC-S,16-Mar,- -,- -,- -,- -
+03/23/2012 08:00,BZ,143),,Broad Retail Sales (YoY),JAN,- -,- -,- -,- -
+03/23/2012 08:00,BZ,144),,Retail Sales (MoM),JAN,- -,- -,- -,- -
+03/23/2012 08:00,BZ,145),,Retail Sales (YoY),JAN,- -,- -,- -,- -
+03/23/2012 09:30,BZ,146),,Current Account - Monthly,FEB,- -,- -,- -,- -
+03/23/2012 09:30,BZ,147),,Foreign Investment,FEB,- -,- -,- -,- -
+03/26/2012 07:00,BZ,148),,FGV Consumer Confidence,MAR,- -,- -,- -,- -
+03/26/2012 10:00,BZ,149),,Trade Balance (FOB) - Weekly,25-Mar,- -,- -,- -,- -
+03/26/2012 23:00,BZ,150),,Private Banks Lending,FEB,- -,- -,- -,- -
+03/26/2012 23:00,BZ,151),,Outstanding Loans MoM%,FEB,- -,- -,- -,- -
+03/26/2012 23:00,BZ,152),,Total Outstanding Loans,FEB,- -,- -,- -,- -
+03/27/2012 04:00,BZ,153),,FIPE CPI - Weekly,23-Mar,- -,- -,- -,- -
+03/27/2012 07:00,BZ,154),,FGV Construction Costs (MoM),MAR,- -,- -,- -,- -
+03/28/2012,BZ,155),,Central Govt Budget,FEB,- -,- -,- -,- -
+03/28/2012,BZ,156),,Long Term Rate - TJLP,1-Apr,- -,- -,6.00%,- -
+03/29/2012 07:00,BZ,157),,FGV Inflation IGP-M (MoM),MAR,- -,- -,- -,- -
+03/29/2012 07:00,BZ,158),,FGV Inflation IGP-M (YoY),MAR,- -,- -,- -,- -
+03/29/2012 09:30,BZ,159),,Net Debt % GDP,FEB,- -,- -,- -,- -
+03/29/2012 09:30,BZ,160),,Primary Budget Balance,FEB,- -,- -,- -,- -
+03/29/2012 09:30,BZ,161),,Nominal Budget Balance,FEB,- -,- -,- -,- -
+04/02/2012 07:00,BZ,162),,FGV CPI IPC-S,23-Mar,- -,- -,- -,- -
+04/02/2012 09:00,BZ,163),,PMI Manufacturing,MAR,- -,- -,- -,- -
+04/02/2012 10:00,BZ,164),,Trade Balance (FOB) - Monthly,MAR,- -,- -,- -,- -
+04/02/2012 10:00,BZ,165),,EXPORTS - US$ million,MAR,- -,- -,- -,- -
+04/02/2012 10:00,BZ,166),,IMPORTS - US$ million,MAR,- -,- -,- -,- -
+04/02/2012 10:00,BZ,167),,Trade Balance (FOB) - Weekly,1-Apr,- -,- -,- -,- -
+04/03/2012 08:00,BZ,168),,Industrial Production sa (MoM),FEB,- -,- -,- -,- -
+04/03/2012 08:00,BZ,169),,Industrial Production YoY,FEB,- -,- -,- -,- -
+04/04/2012 04:00,BZ,170),,FIPE CPI - Monthly,MAR,- -,- -,- -,- -
+04-11 APR,BZ,171),,Commodity Price Index (MoM),MAR,- -,- -,- -,- -
+04-11 APR,BZ,172),,Commodity Price Index (YoY),MAR,- -,- -,- -,- -
+04-11 APR,BZ,173),,CNI Capacity Utilization,FEB,- -,- -,- -,- -
+04/05/2012 08:00,BZ,174),,IBGE Inflation IPCA (MoM),MAR,- -,- -,- -,- -
+04/05/2012 08:00,BZ,175),,IBGE Inflation IPCA (YoY),MAR,- -,- -,- -,- -
+05-11 APR,BZ,176),,Vehicle Sales (Anfavea),MAR,- -,- -,- -,- -
+05-11 APR,BZ,177),,Vehicle Production (Anfavea),MAR,- -,- -,- -,- -
+05-11 APR,BZ,178),,Vehicle Exports (Anfavea),MAR,- -,- -,- -,- -
+04/09/2012 07:00,BZ,179),,FGV Inflation IGP-DI,MAR,- -,- -,- -,- -
+04/09/2012 07:00,BZ,180),,FGV CPI IPC-S,6-Apr,- -,- -,- -,- -
+04/09/2012 10:00,BZ,181),,Trade Balance (FOB) - Weekly,8-Apr,- -,- -,- -,- -
+04/11/2012 07:00,BZ,182),,FGV Preview Inflation IGP-M,10-Apr,- -,- -,- -,- -
+11-18 APR,BZ,183),,Economic Activity Indx MoM SA,MAR,- -,- -,- -,- -
+11-18 APR,BZ,184),,Economic Activity Indx YoY NSA,MAR,- -,- -,- -,- -
+04/13/2012 08:00,BZ,185),,Broad Retail Sales (YoY),FEB,- -,- -,- -,- -
+04/13/2012 08:00,BZ,186),,Retail Sales (MoM),FEB,- -,- -,- -,- -
+04/13/2012 08:00,BZ,187),,Retail Sales (YoY),FEB,- -,- -,- -,- -
+14-21 APR,BZ,188),,CAGED Formal Job Creation,MAR,- -,- -,- -,- -
+15-22 APR,BZ,189),,Tax Collections,MAR,- -,- -,- -,- -
+04/16/2012 07:00,BZ,190),,FGV Inflation IGP-10 (MoM),APR,- -,- -,- -,- -
+04/16/2012 07:00,BZ,191),,FGV CPI IPC-S,13-Apr,- -,- -,- -,- -
+04/16/2012 10:00,BZ,192),,Trade Balance (FOB) - Weekly,15-Apr,- -,- -,- -,- -
+04/18/2012 07:00,BZ,193),,FGV Preview Inflation IGP-M,17-Apr,- -,- -,- -,- -
+04/18/2012,BZ,194),,SELIC Target - Central Bank,18-Apr,- -,- -,- -,- -
+04/23/2012 07:00,BZ,195),,FGV CPI IPC-S,20-Apr,- -,- -,- -,- -
+04/23/2012 10:00,BZ,196),,Trade Balance (FOB) - Weekly,22-Apr,- -,- -,- -,- -
+04/24/2012 08:00,BZ,197),,IBGE CPI IPCA-15 (MoM),APR,- -,- -,- -,- -
+04/24/2012 09:30,BZ,198),,Current Account - Monthly,MAR,- -,- -,- -,- -
+04/24/2012 09:30,BZ,199),,Foreign Investment,MAR,- -,- -,- -,- -
+04/24/2012 23:00,BZ,200),,Private Banks Lending,MAR,- -,- -,- -,- -
+04/24/2012 23:00,BZ,201),,Outstanding Loans MoM%,MAR,- -,- -,- -,- -
+04/24/2012 23:00,BZ,202),,Total Outstanding Loans,MAR,- -,- -,- -,- -
+04/25/2012 07:00,BZ,203),,FGV Construction Costs (MoM),APR,- -,- -,- -,- -
+04/26/2012 07:00,BZ,204),,FGV Consumer Confidence,APR,- -,- -,- -,- -
+04/26/2012 07:30,BZ,205),,COPOM Monetary Policy Meeting Minutes,,,,,
+04/26/2012 08:00,BZ,206),,Unemployment Rate,MAR,- -,- -,- -,- -
+04/26/2012,BZ,207),,Central Govt Budget,MAR,- -,- -,- -,- -
+04/27/2012 07:00,BZ,208),,FGV Inflation IGP-M (MoM),APR,- -,- -,- -,- -
+04/27/2012 07:00,BZ,209),,FGV Inflation IGP-M (YoY),APR,- -,- -,- -,- -
+04/27/2012 09:30,BZ,210),,Net Debt % GDP,MAR,- -,- -,- -,- -
+04/27/2012 09:30,BZ,211),,Primary Budget Balance,MAR,- -,- -,- -,- -
+04/27/2012 09:30,BZ,212),,Nominal Budget Balance,MAR,- -,- -,- -,- -
+04/30/2012 10:00,BZ,213),,Trade Balance (FOB) - Weekly,29-Apr,- -,- -,- -,- -
+05/02/2012 09:00,BZ,214),,PMI Manufacturing,APR,- -,- -,- -,- -
+05/02/2012 10:00,BZ,215),,Trade Balance (FOB) - Monthly,APR,- -,- -,- -,- -
+05/02/2012 10:00,BZ,216),,EXPORTS - US$ million,APR,- -,- -,- -,- -
+05/02/2012 10:00,BZ,217),,IMPORTS - US$ million,APR,- -,- -,- -,- -
+02-09 MAY,BZ,218),,Commodity Price Index (MoM),APR,- -,- -,- -,- -
+02-09 MAY,BZ,219),,Commodity Price Index (YoY),APR,- -,- -,- -,- -
+05/03/2012 08:00,BZ,220),,Industrial Production sa (MoM),MAR,- -,- -,- -,- -
+05/03/2012 08:00,BZ,221),,Industrial Production YoY,MAR,- -,- -,- -,- -
+04-10 MAY,BZ,222),,CNI Capacity Utilization,MAR,- -,- -,- -,- -
+05/07/2012 10:00,BZ,223),,Trade Balance (FOB) - Weekly,6-May,- -,- -,- -,- -
+07-10 MAY,BZ,224),,Vehicle Sales (Anfavea),APR,- -,- -,- -,- -
+07-10 MAY,BZ,225),,Vehicle Production (Anfavea),APR,- -,- -,- -,- -
+07-10 MAY,BZ,226),,Vehicle Exports (Anfavea),APR,- -,- -,- -,- -
+05/09/2012 08:00,BZ,227),,IBGE Inflation IPCA (MoM),APR,- -,- -,- -,- -
+05/09/2012 08:00,BZ,228),,IBGE Inflation IPCA (YoY),APR,- -,- -,- -,- -
+09-16 MAY,BZ,229),,Economic Activity Indx MoM SA,APR,- -,- -,- -,- -
+09-16 MAY,BZ,230),,Economic Activity Indx YoY NSA,APR,- -,- -,- -,- -
+05/14/2012 10:00,BZ,231),,Trade Balance (FOB) - Weekly,13-May,- -,- -,- -,- -
+14-21 MAY,BZ,232),,CAGED Formal Job Creation,APR,- -,- -,- -,- -
+15-22 MAY,BZ,233),,Tax Collections,APR,- -,- -,- -,- -
+05/17/2012 08:00,BZ,234),,Broad Retail Sales (YoY),MAR,- -,- -,- -,- -
+05/17/2012 08:00,BZ,235),,Retail Sales (MoM),MAR,- -,- -,- -,- -
+05/17/2012 08:00,BZ,236),,Retail Sales (YoY),MAR,- -,- -,- -,- -
+05/21/2012 10:00,BZ,237),,Trade Balance (FOB) - Weekly,20-May,- -,- -,- -,- -
+21-31 MAY,BZ,238),,FGV Consumer Confidence,MAY,- -,- -,- -,- -
+05/22/2012 08:00,BZ,239),,IBGE CPI IPCA-15 (MoM),MAY,- -,- -,- -,- -
+05/24/2012 08:00,BZ,240),,Unemployment Rate,APR,- -,- -,- -,- -
+05/24/2012 09:30,BZ,241),,Current Account - Monthly,APR,- -,- -,- -,- -
+05/24/2012 09:30,BZ,242),,Foreign Investment,APR,- -,- -,- -,- -
+05/24/2012 23:00,BZ,243),,Private Banks Lending,APR,- -,- -,- -,- -
+05/24/2012 23:00,BZ,244),,Outstanding Loans MoM%,APR,- -,- -,- -,- -
+05/24/2012 23:00,BZ,245),,Total Outstanding Loans,APR,- -,- -,- -,- -
+05/28/2012 10:00,BZ,246),,Trade Balance (FOB) - Weekly,27-May,- -,- -,- -,- -
+05/30/2012,BZ,247),,Central Govt Budget,APR,- -,- -,- -,- -
+05/30/2012,BZ,248),,SELIC Target - Central Bank,30-May,- -,- -,- -,- -
+05/31/2012 08:00,BZ,249),,Industrial Production sa (MoM),APR,- -,- -,- -,- -
+05/31/2012 08:00,BZ,250),,Industrial Production YoY,APR,- -,- -,- -,- -
+05/31/2012 09:30,BZ,251),,Net Debt % GDP,APR,- -,- -,- -,- -
+05/31/2012 09:30,BZ,252),,Primary Budget Balance,APR,- -,- -,- -,- -
+05/31/2012 09:30,BZ,253),,Nominal Budget Balance,APR,- -,- -,- -,- -
+06/01/2012 08:00,BZ,254),,GDP (IBGE) 4Qtrs Accumulated,1Q,- -,- -,- -,- -
+06/01/2012 08:00,BZ,255),,GDP (IBGE) QoQ,1Q,- -,- -,- -,- -
+06/01/2012 08:00,BZ,256),,GDP (IBGE) YoY,1Q,- -,- -,- -,- -
+06/01/2012 09:00,BZ,257),,PMI Manufacturing,MAY,- -,- -,- -,- -
+06/01/2012 10:00,BZ,258),,Trade Balance (FOB) - Monthly,MAY,- -,- -,- -,- -
+06/01/2012 10:00,BZ,259),,EXPORTS - US$ million,MAY,- -,- -,- -,- -
+06/01/2012 10:00,BZ,260),,IMPORTS - US$ million,MAY,- -,- -,- -,- -
+06/04/2012 10:00,BZ,261),,Trade Balance (FOB) - Weekly,3-Jun,- -,- -,- -,- -
+05-12 JUN,BZ,262),,CNI Capacity Utilization,APR,- -,- -,- -,- -
+06/06/2012 08:00,BZ,263),,IBGE Inflation IPCA (MoM),MAY,- -,- -,- -,- -
+06/06/2012 08:00,BZ,264),,IBGE Inflation IPCA (YoY),MAY,- -,- -,- -,- -
+06-13 JUN,BZ,265),,Commodity Price Index (MoM),MAY,- -,- -,- -,- -
+06-13 JUN,BZ,266),,Commodity Price Index (YoY),MAY,- -,- -,- -,- -
+06-12 JUN,BZ,267),,Vehicle Sales (Anfavea),MAY,- -,- -,- -,- -
+06-12 JUN,BZ,268),,Vehicle Production (Anfavea),MAY,- -,- -,- -,- -
+06-12 JUN,BZ,269),,Vehicle Exports (Anfavea),MAY,- -,- -,- -,- -
+06/08/2012 07:30,BZ,270),,COPOM Monetary Policy Meeting Minutes,,,,,
+06/11/2012 10:00,BZ,271),,Trade Balance (FOB) - Weekly,10-Jun,- -,- -,- -,- -
+13-20 JUN,BZ,272),,Economic Activity Indx MoM SA,MAY,- -,- -,- -,- -
+13-20 JUN,BZ,273),,Economic Activity Indx YoY NSA,MAY,- -,- -,- -,- -
+06/14/2012 08:00,BZ,274),,Broad Retail Sales (YoY),APR,- -,- -,- -,- -
+06/14/2012 08:00,BZ,275),,Retail Sales (MoM),APR,- -,- -,- -,- -
+06/14/2012 08:00,BZ,276),,Retail Sales (YoY),APR,- -,- -,- -,- -
+14-21 JUN,BZ,277),,CAGED Formal Job Creation,MAY,- -,- -,- -,- -
+15-22 JUN,BZ,278),,Tax Collections,MAY,- -,- -,- -,- -
+06/18/2012 10:00,BZ,279),,Trade Balance (FOB) - Weekly,17-Jun,- -,- -,- -,- -
+18-29 JUN,BZ,280),,FGV Consumer Confidence,JUN,- -,- -,- -,- -
+06/21/2012 08:00,BZ,281),,IBGE CPI IPCA-15 (MoM),JUN,- -,- -,- -,- -
+06/21/2012 08:00,BZ,282),,Unemployment Rate,MAY,- -,- -,- -,- -
+06/22/2012 09:30,BZ,283),,Current Account - Monthly,MAY,- -,- -,- -,- -
+06/22/2012 09:30,BZ,284),,Foreign Investment,MAY,- -,- -,- -,- -
+06/25/2012 10:00,BZ,285),,Trade Balance (FOB) - Weekly,24-Jun,- -,- -,- -,- -
+06/25/2012 23:00,BZ,286),,Private Banks Lending,MAY,- -,- -,- -,- -
+06/25/2012 23:00,BZ,287),,Outstanding Loans MoM%,MAY,- -,- -,- -,- -
+06/25/2012 23:00,BZ,288),,Total Outstanding Loans,MAY,- -,- -,- -,- -
+06/27/2012,BZ,289),,Central Govt Budget,MAY,- -,- -,- -,- -
+06/27/2012,BZ,290),,Long Term Rate - TJLP,1-Jul,- -,- -,- -,- -
+06/28/2012 09:30,BZ,291),,Net Debt % GDP,MAY,- -,- -,- -,- -
+06/28/2012 09:30,BZ,292),,Primary Budget Balance,MAY,- -,- -,- -,- -
+06/28/2012 09:30,BZ,293),,Nominal Budget Balance,MAY,- -,- -,- -,- -
+07/02/2012 09:00,BZ,294),,PMI Manufacturing,JUN,- -,- -,- -,- -
+07/02/2012 10:00,BZ,295),,Trade Balance (FOB) - Monthly,JUN,- -,- -,- -,- -
+07/02/2012 10:00,BZ,296),,EXPORTS - US$ million,JUN,- -,- -,- -,- -
+07/02/2012 10:00,BZ,297),,IMPORTS - US$ million,JUN,- -,- -,- -,- -
+07/02/2012 10:00,BZ,298),,Trade Balance (FOB) - Weekly,1-Jul,- -,- -,- -,- -
+07/03/2012 08:00,BZ,299),,Industrial Production sa (MoM),MAY,- -,- -,- -,- -
+07/03/2012 08:00,BZ,300),,Industrial Production YoY,MAY,- -,- -,- -,- -
+04-11 JUL,BZ,301),,Commodity Price Index (MoM),JUN,- -,- -,- -,- -
+04-11 JUL,BZ,302),,Commodity Price Index (YoY),JUN,- -,- -,- -,- -
+04-10 JUL,BZ,303),,CNI Capacity Utilization,MAY,- -,- -,- -,- -
+05-10 JUL,BZ,304),,Vehicle Sales (Anfavea),JUN,- -,- -,- -,- -
+05-10 JUL,BZ,305),,Vehicle Production (Anfavea),JUN,- -,- -,- -,- -
+05-10 JUL,BZ,306),,Vehicle Exports (Anfavea),JUN,- -,- -,- -,- -
+07/06/2012 08:00,BZ,307),,IBGE Inflation IPCA (MoM),JUN,- -,- -,- -,- -
+07/06/2012 08:00,BZ,308),,IBGE Inflation IPCA (YoY),JUN,- -,- -,- -,- -
+07/09/2012 10:00,BZ,309),,Trade Balance (FOB) - Weekly,8-Jul,- -,- -,- -,- -
+07/11/2012 08:00,BZ,310),,Broad Retail Sales (YoY),MAY,- -,- -,- -,- -
+07/11/2012 08:00,BZ,311),,Retail Sales (MoM),MAY,- -,- -,- -,- -
+07/11/2012 08:00,BZ,312),,Retail Sales (YoY),MAY,- -,- -,- -,- -
+07/11/2012,BZ,313),,SELIC Target - Central Bank,11-Jul,- -,- -,- -,- -
+11-18 JUL,BZ,314),,Economic Activity Indx MoM SA,JUN,- -,- -,- -,- -
+11-18 JUL,BZ,315),,Economic Activity Indx YoY NSA,JUN,- -,- -,- -,- -
+14-21 JUL,BZ,316),,CAGED Formal Job Creation,JUN,- -,- -,- -,- -
+15-22 JUL,BZ,317),,Tax Collections,JUN,- -,- -,- -,- -
+07/16/2012 10:00,BZ,318),,Trade Balance (FOB) - Weekly,15-Jul,- -,- -,- -,- -
+07/19/2012 07:30,BZ,319),,COPOM Monetary Policy Meeting Minutes,,,,,
+07/20/2012 08:00,BZ,320),,IBGE CPI IPCA-15 (MoM),JUL,- -,- -,- -,- -
+07/23/2012 10:00,BZ,321),,Trade Balance (FOB) - Weekly,22-Jul,- -,- -,- -,- -
+23-31 JUL,BZ,322),,FGV Consumer Confidence,JUL,- -,- -,- -,- -
+07/24/2012 09:30,BZ,323),,Current Account - Monthly,JUN,- -,- -,- -,- -
+07/24/2012 09:30,BZ,324),,Foreign Investment,JUN,- -,- -,- -,- -
+07/25/2012 23:00,BZ,325),,Private Banks Lending,JUN,- -,- -,- -,- -
+07/25/2012 23:00,BZ,326),,Outstanding Loans MoM%,JUN,- -,- -,- -,- -
+07/25/2012 23:00,BZ,327),,Total Outstanding Loans,JUN,- -,- -,- -,- -
+07/26/2012 08:00,BZ,328),,Unemployment Rate,JUN,- -,- -,- -,- -
+07/30/2012 10:00,BZ,329),,Trade Balance (FOB) - Weekly,29-Jul,- -,- -,- -,- -
+07/30/2012,BZ,330),,Central Govt Budget,JUN,- -,- -,- -,- -
+07/31/2012 09:30,BZ,331),,Net Debt % GDP,JUN,- -,- -,- -,- -
+07/31/2012 09:30,BZ,332),,Primary Budget Balance,JUN,- -,- -,- -,- -
+07/31/2012 09:30,BZ,333),,Nominal Budget Balance,JUN,- -,- -,- -,- -
+08/01/2012 08:00,BZ,334),,Industrial Production sa (MoM),JUN,- -,- -,- -,- -
+08/01/2012 08:00,BZ,335),,Industrial Production YoY,JUN,- -,- -,- -,- -
+08/01/2012 09:00,BZ,336),,PMI Manufacturing,JUL,- -,- -,- -,- -
+08/01/2012 10:00,BZ,337),,Trade Balance (FOB) - Monthly,JUL,- -,- -,- -,- -
+08/01/2012 10:00,BZ,338),,EXPORTS - US$ million,JUL,- -,- -,- -,- -
+08/01/2012 10:00,BZ,339),,IMPORTS - US$ million,JUL,- -,- -,- -,- -
+01-08 AUG,BZ,340),,Commodity Price Index (MoM),JUL,- -,- -,- -,- -
+01-08 AUG,BZ,341),,Commodity Price Index (YoY),JUL,- -,- -,- -,- -
+03-09 AUG,BZ,342),,CNI Capacity Utilization,JUN,- -,- -,- -,- -
+08/06/2012 10:00,BZ,343),,Trade Balance (FOB) - Weekly,5-Aug,- -,- -,- -,- -
+06-09 AUG,BZ,344),,Vehicle Sales (Anfavea),JUL,- -,- -,- -,- -
+06-09 AUG,BZ,345),,Vehicle Production (Anfavea),JUL,- -,- -,- -,- -
+06-09 AUG,BZ,346),,Vehicle Exports (Anfavea),JUL,- -,- -,- -,- -
+08/08/2012 08:00,BZ,347),,IBGE Inflation IPCA (MoM),JUL,- -,- -,- -,- -
+08/08/2012 08:00,BZ,348),,IBGE Inflation IPCA (YoY),JUL,- -,- -,- -,- -
+08-15 AUG,BZ,349),,Economic Activity Indx MoM SA,JUL,- -,- -,- -,- -
+08-15 AUG,BZ,350),,Economic Activity Indx YoY NSA,JUL,- -,- -,- -,- -
+08/13/2012 10:00,BZ,351),,Trade Balance (FOB) - Weekly,12-Aug,- -,- -,- -,- -
+14-21 AUG,BZ,352),,CAGED Formal Job Creation,JUL,- -,- -,- -,- -
+15-22 AUG,BZ,353),,Tax Collections,JUL,- -,- -,- -,- -
+08/16/2012 08:00,BZ,354),,Broad Retail Sales (YoY),JUN,- -,- -,- -,- -
+08/16/2012 08:00,BZ,355),,Retail Sales (MoM),JUN,- -,- -,- -,- -
+08/16/2012 08:00,BZ,356),,Retail Sales (YoY),JUN,- -,- -,- -,- -
+08/20/2012 10:00,BZ,357),,Trade Balance (FOB) - Weekly,19-Aug,- -,- -,- -,- -
+20-31 AUG,BZ,358),,FGV Consumer Confidence,AUG,- -,- -,- -,- -
+08/22/2012 08:00,BZ,359),,IBGE CPI IPCA-15 (MoM),AUG,- -,- -,- -,- -
+08/23/2012 08:00,BZ,360),,Unemployment Rate,JUL,- -,- -,- -,- -
+08/23/2012 09:30,BZ,361),,Current Account - Monthly,JUL,- -,- -,- -,- -
+08/23/2012 09:30,BZ,362),,Foreign Investment,JUL,- -,- -,- -,- -
+08/27/2012 10:00,BZ,363),,Trade Balance (FOB) - Weekly,26-Aug,- -,- -,- -,- -
+08/29/2012 23:00,BZ,364),,Private Banks Lending,JUL,- -,- -,- -,- -
+08/29/2012 23:00,BZ,365),,Outstanding Loans MoM%,JUL,- -,- -,- -,- -
+08/29/2012 23:00,BZ,366),,Total Outstanding Loans,JUL,- -,- -,- -,- -
+08/29/2012,BZ,367),,SELIC Target - Central Bank,29-Aug,- -,- -,- -,- -
+08/30/2012,BZ,368),,Central Govt Budget,JUL,- -,- -,- -,- -
+08/31/2012 08:00,BZ,369),,GDP (IBGE) 4Qtrs Accumulated,2Q,- -,- -,- -,- -
+08/31/2012 08:00,BZ,370),,GDP (IBGE) QoQ,2Q,- -,- -,- -,- -
+08/31/2012 08:00,BZ,371),,GDP (IBGE) YoY,2Q,- -,- -,- -,- -
+08/31/2012 09:30,BZ,372),,Net Debt % GDP,JUL,- -,- -,- -,- -
+08/31/2012 09:30,BZ,373),,Primary Budget Balance,JUL,- -,- -,- -,- -
+08/31/2012 09:30,BZ,374),,Nominal Budget Balance,JUL,- -,- -,- -,- -
+09/03/2012 09:00,BZ,375),,PMI Manufacturing,AUG,- -,- -,- -,- -
+09/03/2012 10:00,BZ,376),,Trade Balance (FOB) - Monthly,AUG,- -,- -,- -,- -
+09/03/2012 10:00,BZ,377),,EXPORTS - US$ million,AUG,- -,- -,- -,- -
+09/03/2012 10:00,BZ,378),,IMPORTS - US$ million,AUG,- -,- -,- -,- -
+09/03/2012 10:00,BZ,379),,Trade Balance (FOB) - Weekly,2-Sep,- -,- -,- -,- -
+09/04/2012 08:00,BZ,380),,Industrial Production sa (MoM),JUL,- -,- -,- -,- -
+09/04/2012 08:00,BZ,381),,Industrial Production YoY,JUL,- -,- -,- -,- -
+09/05/2012 08:00,BZ,382),,IBGE Inflation IPCA (MoM),AUG,- -,- -,- -,- -
+09/05/2012 08:00,BZ,383),,IBGE Inflation IPCA (YoY),AUG,- -,- -,- -,- -
+05-12 SEP,BZ,384),,Commodity Price Index (MoM),AUG,- -,- -,- -,- -
+05-12 SEP,BZ,385),,Commodity Price Index (YoY),AUG,- -,- -,- -,- -
+05-12 SEP,BZ,386),,CNI Capacity Utilization,JUL,- -,- -,- -,- -
+09/06/2012 07:30,BZ,387),,COPOM Monetary Policy Meeting Minutes,,,,,
+06-12 SEP,BZ,388),,Vehicle Sales (Anfavea),AUG,- -,- -,- -,- -
+06-12 SEP,BZ,389),,Vehicle Production (Anfavea),AUG,- -,- -,- -,- -
+06-12 SEP,BZ,390),,Vehicle Exports (Anfavea),AUG,- -,- -,- -,- -
+09/10/2012 10:00,BZ,391),,Trade Balance (FOB) - Weekly,9-Sep,- -,- -,- -,- -
+12-19 SEP,BZ,392),,Economic Activity Indx MoM SA,AUG,- -,- -,- -,- -
+12-19 SEP,BZ,393),,Economic Activity Indx YoY NSA,AUG,- -,- -,- -,- -
+09/13/2012 08:00,BZ,394),,Broad Retail Sales (YoY),JUL,- -,- -,- -,- -
+09/13/2012 08:00,BZ,395),,Retail Sales (MoM),JUL,- -,- -,- -,- -
+09/13/2012 08:00,BZ,396),,Retail Sales (YoY),JUL,- -,- -,- -,- -
+14-21 SEP,BZ,397),,CAGED Formal Job Creation,AUG,- -,- -,- -,- -
+15-22 SEP,BZ,398),,Tax Collections,AUG,- -,- -,- -,- -
+09/17/2012 10:00,BZ,399),,Trade Balance (FOB) - Weekly,16-Sep,- -,- -,- -,- -
+17-28 SEP,BZ,400),,FGV Consumer Confidence,SEP,- -,- -,- -,- -
+09/20/2012 08:00,BZ,401),,IBGE CPI IPCA-15 (MoM),SEP,- -,- -,- -,- -
+09/20/2012 08:00,BZ,402),,Unemployment Rate,AUG,- -,- -,- -,- -
+09/24/2012 10:00,BZ,403),,Trade Balance (FOB) - Weekly,23-Sep,- -,- -,- -,- -
+09/25/2012 09:30,BZ,404),,Current Account - Monthly,AUG,- -,- -,- -,- -
+09/25/2012 09:30,BZ,405),,Foreign Investment,AUG,- -,- -,- -,- -
+09/26/2012 23:00,BZ,406),,Private Banks Lending,AUG,- -,- -,- -,- -
+09/26/2012 23:00,BZ,407),,Outstanding Loans MoM%,AUG,- -,- -,- -,- -
+09/26/2012 23:00,BZ,408),,Total Outstanding Loans,AUG,- -,- -,- -,- -
+09/26/2012,BZ,409),,Long Term Rate - TJLP,1-Oct,- -,- -,- -,- -
+09/27/2012,BZ,410),,Central Govt Budget,AUG,- -,- -,- -,- -
+09/28/2012 09:30,BZ,411),,Net Debt % GDP,AUG,- -,- -,- -,- -
+09/28/2012 09:30,BZ,412),,Primary Budget Balance,AUG,- -,- -,- -,- -
+09/28/2012 09:30,BZ,413),,Nominal Budget Balance,AUG,- -,- -,- -,- -
+10/01/2012 09:00,BZ,414),,PMI Manufacturing,SEP,- -,- -,- -,- -
+10/01/2012 10:00,BZ,415),,Trade Balance (FOB) - Monthly,SEP,- -,- -,- -,- -
+10/01/2012 10:00,BZ,416),,EXPORTS - US$ million,SEP,- -,- -,- -,- -
+10/01/2012 10:00,BZ,417),,IMPORTS - US$ million,SEP,- -,- -,- -,- -
+10/01/2012 10:00,BZ,418),,Trade Balance (FOB) - Weekly,30-Sep,- -,- -,- -,- -
+10/02/2012 08:00,BZ,419),,Industrial Production sa (MoM),AUG,- -,- -,- -,- -
+10/02/2012 08:00,BZ,420),,Industrial Production YoY,AUG,- -,- -,- -,- -
+03-10 OCT,BZ,421),,Commodity Price Index (MoM),SEP,- -,- -,- -,- -
+03-10 OCT,BZ,422),,Commodity Price Index (YoY),SEP,- -,- -,- -,- -
+03-09 OCT,BZ,423),,CNI Capacity Utilization,AUG,- -,- -,- -,- -
+04-09 OCT,BZ,424),,Vehicle Sales (Anfavea),SEP,- -,- -,- -,- -
+04-09 OCT,BZ,425),,Vehicle Production (Anfavea),SEP,- -,- -,- -,- -
+04-09 OCT,BZ,426),,Vehicle Exports (Anfavea),SEP,- -,- -,- -,- -
+10/05/2012 08:00,BZ,427),,IBGE Inflation IPCA (MoM),SEP,- -,- -,- -,- -
+10/05/2012 08:00,BZ,428),,IBGE Inflation IPCA (YoY),SEP,- -,- -,- -,- -
+10/08/2012 10:00,BZ,429),,Trade Balance (FOB) - Weekly,7-Oct,- -,- -,- -,- -
+10/10/2012,BZ,430),,SELIC Target - Central Bank,10-Oct,- -,- -,- -,- -
+10-17 OCT,BZ,431),,Economic Activity Indx MoM SA,SEP,- -,- -,- -,- -
+10-17 OCT,BZ,432),,Economic Activity Indx YoY NSA,SEP,- -,- -,- -,- -
+10/11/2012 08:00,BZ,433),,Broad Retail Sales (YoY),AUG,- -,- -,- -,- -
+10/11/2012 08:00,BZ,434),,Retail Sales (MoM),AUG,- -,- -,- -,- -
+10/11/2012 08:00,BZ,435),,Retail Sales (YoY),AUG,- -,- -,- -,- -
+14-20 OCT,BZ,436),,CAGED Formal Job Creation,SEP,- -,- -,- -,- -
+10/15/2012 09:00,BZ,437),,Trade Balance (FOB) - Weekly,14-Oct,- -,- -,- -,- -
+15-22 OCT,BZ,438),,Tax Collections,SEP,- -,- -,- -,- -
+10/17/2012 06:30,BZ,439),,COPOM Monetary Policy Meeting Minutes,,,,,
+10/19/2012 07:00,BZ,440),,IBGE CPI IPCA-15 (MoM),OCT,- -,- -,- -,- -
+10/22/2012 09:00,BZ,441),,Trade Balance (FOB) - Weekly,20-Oct,- -,- -,- -,- -
+22-31 OCT,BZ,442),,FGV Consumer Confidence,OCT,- -,- -,- -,- -
+10/23/2012 08:30,BZ,443),,Current Account - Monthly,SEP,- -,- -,- -,- -
+10/23/2012 08:30,BZ,444),,Foreign Investment,SEP,- -,- -,- -,- -
+10/25/2012 07:00,BZ,445),,Unemployment Rate,SEP,- -,- -,- -,- -
+10/25/2012 22:00,BZ,446),,Private Banks Lending,SEP,- -,- -,- -,- -
+10/25/2012 22:00,BZ,447),,Outstanding Loans MoM%,SEP,- -,- -,- -,- -
+10/25/2012 22:00,BZ,448),,Total Outstanding Loans,SEP,- -,- -,- -,- -
+10/29/2012 09:00,BZ,449),,Trade Balance (FOB) - Weekly,28-Oct,- -,- -,- -,- -
+10/29/2012,BZ,450),,Central Govt Budget,SEP,- -,- -,- -,- -
+10/30/2012 08:30,BZ,451),,Net Debt % GDP,SEP,- -,- -,- -,- -
+10/30/2012 08:30,BZ,452),,Primary Budget Balance,SEP,- -,- -,- -,- -
+10/30/2012 08:30,BZ,453),,Nominal Budget Balance,SEP,- -,- -,- -,- -
+11/01/2012 07:00,BZ,454),,Industrial Production sa (MoM),SEP,- -,- -,- -,- -
+11/01/2012 07:00,BZ,455),,Industrial Production YoY,SEP,- -,- -,- -,- -
+11/01/2012 08:00,BZ,456),,PMI Manufacturing,OCT,- -,- -,- -,- -
+11/01/2012 09:00,BZ,457),,Trade Balance (FOB) - Monthly,OCT,- -,- -,- -,- -
+11/01/2012 09:00,BZ,458),,EXPORTS - US$ million,OCT,- -,- -,- -,- -
+11/01/2012 09:00,BZ,459),,IMPORTS - US$ million,OCT,- -,- -,- -,- -
+11/05/2012 08:00,BZ,460),,Trade Balance (FOB) - Weekly,4-Nov,- -,- -,- -,- -
+06-12 NOV,BZ,461),,CNI Capacity Utilization,SEP,- -,- -,- -,- -
+11/07/2012 06:00,BZ,462),,IBGE Inflation IPCA (MoM),OCT,- -,- -,- -,- -
+11/07/2012 06:00,BZ,463),,IBGE Inflation IPCA (YoY),OCT,- -,- -,- -,- -
+07-14 NOV,BZ,464),,Commodity Price Index (MoM),OCT,- -,- -,- -,- -
+07-14 NOV,BZ,465),,Commodity Price Index (YoY),OCT,- -,- -,- -,- -
+07-12 NOV,BZ,466),,Vehicle Sales (Anfavea),OCT,- -,- -,- -,- -
+07-12 NOV,BZ,467),,Vehicle Production (Anfavea),OCT,- -,- -,- -,- -
+07-12 NOV,BZ,468),,Vehicle Exports (Anfavea),OCT,- -,- -,- -,- -
+11/12/2012 08:00,BZ,469),,Trade Balance (FOB) - Weekly,11-Nov,- -,- -,- -,- -
+11/13/2012 06:00,BZ,470),,Broad Retail Sales (YoY),SEP,- -,- -,- -,- -
+11/13/2012 06:00,BZ,471),,Retail Sales (MoM),SEP,- -,- -,- -,- -
+11/13/2012 06:00,BZ,472),,Retail Sales (YoY),SEP,- -,- -,- -,- -
+14-21 NOV,BZ,473),,Economic Activity Indx MoM SA,OCT,- -,- -,- -,- -
+14-21 NOV,BZ,474),,Economic Activity Indx YoY NSA,OCT,- -,- -,- -,- -
+14-21 NOV,BZ,475),,CAGED Formal Job Creation,OCT,- -,- -,- -,- -
+15-22 NOV,BZ,476),,Tax Collections,OCT,- -,- -,- -,- -
+11/19/2012 08:00,BZ,477),,Trade Balance (FOB) - Weekly,18-Nov,- -,- -,- -,- -
+19-30 NOV,BZ,478),,FGV Consumer Confidence,NOV,- -,- -,- -,- -
+11/22/2012 06:00,BZ,479),,IBGE CPI IPCA-15 (MoM),NOV,- -,- -,- -,- -
+11/22/2012 06:00,BZ,480),,Unemployment Rate,OCT,- -,- -,- -,- -
+11/22/2012 07:30,BZ,481),,Current Account - Monthly,OCT,- -,- -,- -,- -
+11/22/2012 07:30,BZ,482),,Foreign Investment,OCT,- -,- -,- -,- -
+11/26/2012 08:00,BZ,483),,Trade Balance (FOB) - Weekly,25-Nov,- -,- -,- -,- -
+11/28/2012 21:00,BZ,484),,Private Banks Lending,OCT,- -,- -,- -,- -
+11/28/2012 21:00,BZ,485),,Outstanding Loans MoM%,OCT,- -,- -,- -,- -
+11/28/2012 21:00,BZ,486),,Total Outstanding Loans,OCT,- -,- -,- -,- -
+11/28/2012,BZ,487),,SELIC Target - Central Bank,28-Nov,- -,- -,- -,- -
+11/29/2012,BZ,488),,Central Govt Budget,OCT,- -,- -,- -,- -
+11/30/2012 06:00,BZ,489),,GDP (IBGE) 4Qtrs Accumulated,3Q,- -,- -,- -,- -
+11/30/2012 06:00,BZ,490),,GDP (IBGE) QoQ,3Q,- -,- -,- -,- -
+11/30/2012 06:00,BZ,491),,GDP (IBGE) YoY,3Q,- -,- -,- -,- -
+11/30/2012 07:30,BZ,492),,Net Debt % GDP,OCT,- -,- -,- -,- -
+11/30/2012 07:30,BZ,493),,Primary Budget Balance,OCT,- -,- -,- -,- -
+11/30/2012 07:30,BZ,494),,Nominal Budget Balance,OCT,- -,- -,- -,- -
+12/03/2012 07:00,BZ,495),,PMI Manufacturing,NOV,- -,- -,- -,- -
+12/03/2012 08:00,BZ,496),,Trade Balance (FOB) - Monthly,NOV,- -,- -,- -,- -
+12/03/2012 08:00,BZ,497),,EXPORTS - US$ million,NOV,- -,- -,- -,- -
+12/03/2012 08:00,BZ,498),,IMPORTS - US$ million,NOV,- -,- -,- -,- -
+12/03/2012 08:00,BZ,499),,Trade Balance (FOB) - Weekly,2-Dec,- -,- -,- -,- -
+12/04/2012 06:00,BZ,500),,Industrial Production sa (MoM),OCT,- -,- -,- -,- -
+12/04/2012 06:00,BZ,501),,Industrial Production YoY,OCT,- -,- -,- -,- -
+05-12 DEC,BZ,502),,Commodity Price Index (MoM),NOV,- -,- -,- -,- -
+05-12 DEC,BZ,503),,Commodity Price Index (YoY),NOV,- -,- -,- -,- -
+05-11 DEC,BZ,504),,CNI Capacity Utilization,OCT,- -,- -,- -,- -
+12/06/2012 05:30,BZ,505),,COPOM Monetary Policy Meeting Minutes,,,,,
+06-11 DEC,BZ,506),,Vehicle Sales (Anfavea),NOV,- -,- -,- -,- -
+06-11 DEC,BZ,507),,Vehicle Production (Anfavea),NOV,- -,- -,- -,- -
+06-11 DEC,BZ,508),,Vehicle Exports (Anfavea),NOV,- -,- -,- -,- -
+12/07/2012 06:00,BZ,509),,IBGE Inflation IPCA (MoM),NOV,- -,- -,- -,- -
+12/07/2012 06:00,BZ,510),,IBGE Inflation IPCA (YoY),NOV,- -,- -,- -,- -
+12/10/2012 08:00,BZ,511),,Trade Balance (FOB) - Weekly,9-Dec,- -,- -,- -,- -
+12-19 DEC,BZ,512),,Economic Activity Indx MoM SA,NOV,- -,- -,- -,- -
+12-19 DEC,BZ,513),,Economic Activity Indx YoY NSA,NOV,- -,- -,- -,- -
+12/13/2012 06:00,BZ,514),,Broad Retail Sales (YoY),OCT,- -,- -,- -,- -
+12/13/2012 06:00,BZ,515),,Retail Sales (MoM),OCT,- -,- -,- -,- -
+12/13/2012 06:00,BZ,516),,Retail Sales (YoY),OCT,- -,- -,- -,- -
+14-21 DEC,BZ,517),,CAGED Formal Job Creation,NOV,- -,- -,- -,- -
+15-22 DEC,BZ,518),,Tax Collections,NOV,- -,- -,- -,- -
+12/17/2012 08:00,BZ,519),,Trade Balance (FOB) - Weekly,16-Dec,- -,- -,- -,- -
+17-31 DEC,BZ,520),,FGV Consumer Confidence,DEC,- -,- -,- -,- -
+12/19/2012 06:00,BZ,521),,IBGE CPI IPCA-15 (MoM),DEC,- -,- -,- -,- -
+12/19/2012,BZ,522),,Long Term Rate - TJLP,1-Jan,- -,- -,- -,- -
+12/20/2012 07:30,BZ,523),,Current Account - Monthly,NOV,- -,- -,- -,- -
+12/20/2012 07:30,BZ,524),,Foreign Investment,NOV,- -,- -,- -,- -
+12/20/2012 21:00,BZ,525),,Private Banks Lending,NOV,- -,- -,- -,- -
+12/20/2012 21:00,BZ,526),,Outstanding Loans MoM%,NOV,- -,- -,- -,- -
+12/20/2012 21:00,BZ,527),,Total Outstanding Loans,NOV,- -,- -,- -,- -
+12/21/2012 06:00,BZ,528),,Unemployment Rate,NOV,- -,- -,- -,- -
+12/24/2012 08:00,BZ,529),,Trade Balance (FOB) - Weekly,23-Dec,- -,- -,- -,- -
+12/27/2012,BZ,530),,Central Govt Budget,NOV,- -,- -,- -,- -
+12/28/2012 07:30,BZ,531),,Net Debt % GDP,NOV,- -,- -,- -,- -
+12/28/2012 07:30,BZ,532),,Primary Budget Balance,NOV,- -,- -,- -,- -
+12/28/2012 07:30,BZ,533),,Nominal Budget Balance,NOV,- -,- -,- -,- -

@@ -1,0 +1,8 @@
+##################USAGE###########################
+/home/dvctrader/important/onexpiry/fetch_nse_on_expiry_part1.sh
+
+/home/dvctrader/important/onexpiry/fetch_nse_on_expiry_part2.sh date
+
+/home/dvctrader/important/onexpiry/fetch_nse_on_expiry_part3.sh date
+
+/apps/anaconda/anaconda3/bin/python ./checkdb_update.py 20191129 /spare/local/tradeinfo/NSE_Files/midterm_db

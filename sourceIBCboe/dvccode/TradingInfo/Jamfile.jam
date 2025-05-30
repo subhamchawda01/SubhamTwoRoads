@@ -1,0 +1,14 @@
+
+project : usage-requirements ;
+
+lib TradingInfo : [ glob *.cpp ] : <link>static ;
+
+install libTradingInfo
+  : TradingInfo
+  : <install-type>LIB
+    <variant>release:<location>"$(PROJECT_LIB_INSTALL)"
+    <variant>debug:<location>"$(PROJECT_LIB_INSTALL_DEBUG)"
+  : release debug
+  ;
+
+
