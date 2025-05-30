@@ -1,0 +1,184 @@
+
+#hostname change
+echo "hostnamectl set-hostname sdv-indb-srv11"
+
+#localtime change to GMT
+echo "cd /etc; ls -lrt | grep localtime; unlink localtime; ln -s /usr/share/zoneinfo/GMT localtime; ls -lrt | grep localtime"
+
+#add user
+echo "adduser dvcinfra; adduser dvctrader; adduser pengine;"
+echo "cat /etc/passwd | awk -F: '{print $1}' | egrep 'dvcinfra|dvctrader|pengine'"
+
+#change pass
+echo "passwd dvcinfra"
+echo "passwd dvctrader"
+echo "passwd pengine"
+
+#change gid and user id
+echo "groupmod -g 502 dvcinfra; usermod -u 502 dvcinfra"
+echo "groupmod -g 503 dvctrader; usermod -u 503 dvctrader"
+echo "groupmod -g 1002 pengine; usermod -u 1002 pengine"
+echo "sudo usermod -m -d /TRADER/subham subham"
+
+#check users
+echo "id dvcinfra; id dvctrader; id pengine"
+
+#add infra group
+echo "echo "infra:x:504:dvcinfra,dvctrader,ravi,rkumar,pengine" >>/etc/group"
+
+#grub config setting
+echo "cat /etc/default/grub"
+  #GRUB_TIMEOUT=5
+  #GRUB_DISTRIBUTOR="$(sed 's, release .*$,,g' /etc/system-release)"
+  #GRUB_DEFAULT=saved
+  #GRUB_DISABLE_SUBMENU=true
+  #GRUB_TERMINAL_OUTPUT="console"
+  #GRUB_CMDLINE_LINUX="rhgb quiet intel_idle.max_cstate=0 processor.max_cstate=0 clocksource=tsc selinux=0 mce=ignore_ce nosoftlockup idle=poll isolcpus=1-22"
+  #GRUB_DISABLE_RECOVERY="true"
+ 
+#generate anbd load new grub
+echo "grub2-mkconfig -o /boot/grub2/grub.cfg "
+/home/pengine/prod/live_execs/cpu_affinity_mgr VIEW 1 init
+
+#generate spare and apps ir
+echo "mkdir /home/spare /home/apps"
+echo "chown dvcinfra:infra /home/spare"
+echo "chown root:infra /home/apps"
+echo "ln -s /home/spare /spare"
+echo "ln -s /home/apps /apps"
+
+#install some packages if not available
+echo "yum list rsync"
+echo "yum install rsync"
+echo "yum list vim-enhanced"
+echo "yum install vim-enhanced"
+echo "yum list mailx"
+echo "yum install mailx"
+
+#check services
+echo "yum list wget gcc make httpd"
+echo "yum install wget gcc make httpd"
+
+#start httpd
+systemctl start httpd
+systemctl enable httpd
+systemctl status httpd
+
+#Add huge page
+echo "grep -i huge /etc/sysctl.conf"
+#If below text not present add it in above file
+vm.nr_hugepages = 1024
+echo "sysctl -p"
+
+#take backup before syncing
+#sync from different server /home/apps /home/spare
+echo "rsync -ravz --progress /home/spare 192.168.132.11:/home/ > /tmp/output_spare &"
+echo "rsync -ravz --progress /home/apps 192.168.132.11:/home/ > /tmp/output_apps &"
+echo "rsync -ravz --progress /home/dvcinfra 192.168.132.11:/home/ > /tmp/output_dvcinfra &"
+echo "rsync -ravz --progress /home/dvctrader 192.168.132.11:/home/ > /tmp/output_dvctrader &"
+echo "rsync -ravz --progress /home/pengine 192.168.132.11:/home/ > /tmp/output_pengine &"
+echo "rsync -ravz --progress /apps 192.168.132.11:/ > /tmp/output_apps &"
+
+#setup gcc path
+vim /etc/ld.so.conf.d/gcc_local.conf
+/apps/gcc_versions/gcc-6_3_install/lib64
+/apps/gcc_versions/gcc_10_0_1_install/lib64   [ new update ]
+ldconfig -v
+
+#take backup before syncing
+#sync /etc/init.d
+echo "cp -r /etc/init.d /etc/init.d_backup"
+#run below cmd from different server
+echo "scp -r root@10.23.227.72:/etc/rc.d/init.d /etc/rc.d/"
+echo "ln -s /etc/rc.d/init.d /etc/init.d"
+
+#set up mail serivce
+echo "cp /etc/postfix/main.cf /etc/postfix/main.cf_backup"
+echo "do changes on above file -> relayhost = 10.23.5.43"
+echo "add server details to 5.43 main.cf file in this field mynetworks"
+#add below details to /etc/postfix/main.cf
+echo "relayhost = 10.23.5.50"
+
+#check if mail service running
+echo "service postfix status"
+echo "service postfix start"
+echo "ps aux | grep postfix"
+
+#send mail and check in 5.50 using cmd: mailq
+echo "echo ""| mailx -s "Welcome 11" subham.chawda@tworoads-trading.co.in"
+
+#set up zabbix
+echo "mkdir /var/run/zabbix/ /var/log/zabbix"
+echo "scp 192.168.132.12:/usr/sbin/zabbix_agentd /usr/sbin/zabbix_agentd"
+echo "scp -r 192.168.132.12:/etc/zabbix /etc/"
+echo "/usr/sbin/zabbix_agentd"
+echo "/var/log/zabbix/zabbix_agentd.log"
+
+#add below in root cron to automatically restart zabbix , copy the script from other machine
+echo "scp 10.23.227.72:/root/onboot_script.sh /root/"
+@reboot /root/onboot_script.sh
+
+#set up dvc_autossh 
+echo "service dvc_autossh status"
+echo "wget http://www.harding.motd.ca/autossh/autossh-1.4e.tgz"(use local machine and scp)
+echo "tar -xf autossh-1.4e.tgz"
+echo "cd autossh-1.4e"
+echo "./configure"
+echo "make"
+echo "make install"
+echo "service dvc_autossh restart"
+echo "ps aux | grep autossh"
+
+#set up dvc_clm
+echo "service dvc_clm status"
+echo "scp 192.168.132.12:/usr/bin/centralized_logging_manager /usr/bin/centralized_logging_manager"
+echo "service dvc_clm restart"
+echo "ps aux | grep centralized_logging_manager"
+
+#set up
+echo "service dvc_gc status"
+echo "service dvc_gc restart"
+echo "ps aux | grep move_trash_to_trash"
+
+#set ptpd
+tail -f /var/log/ptpd2.log
+service ptpd status
+vim /etc/sysconfig/ptpd2
+
+#set environment variable 
+vim /etc/environment
+http_proxy=127.0.0.1:8181
+https_proxy=127.0.0.1:8181
+pexec=/home/pengine/prod/live_execs
+pscript=/home/pengine/prod/live_scripts
+pconfig=/home/pengine/prod/live_configs
+http_proxy=127.0.0.1:8181
+https_proxy=127.0.0.1:8181
+
+#add entry in /etc/sudoers
+echo "scp 192.168.132.12:/etc/sudoers /etc/sudoers"
+
+#setup init.d process at restart
+chkconfig --list
+chkconfig httpd on
+chkconfig --add httpd
+chkconfig --add dvc_autossh
+chkconfig --add dvc_gc
+chkconfig --add dvc_dsm
+chkconfig --add dvc_clm
+
+#check multicast dvcinfra/dvctrader
+LD_PRELOAD=/home/dvcinfra/important/libcrypto.so.1.1
+/home/pengine/prod/live_execs/simple_multicast_receiver enp0s31f6.227 239.60.60.41 16641
+/home/pengine/prod/live_execs/simple_multicast_sender 239.60.60.41 16641 5 10 enp0s31f6.227
+
+#check SOLARFLARE ULTRA LOW LATENCY
+sfboot (to ckeck)
+#to set (required hardreboot) 
+sfboot firmware-variant=ultra-low-latency
+
+#reboot machine
+echo "reboot"
+
+#check is all services are up or not
+

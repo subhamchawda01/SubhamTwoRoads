@@ -1,0 +1,951 @@
+dvcinfra@sdv-ind-srv13 /var/www/html 
+ind18_tmp.html
+market_data_ind18_tmp.json
+oebu_info_ind18_tmp.json
+/spare/local/logs/alllogs/
+
+do changes in .html file
+
+LD_PRELOAD=/home/dvcinfra/important/libcrypto.so.1.1 /home/dvcinfra/trash/our_extended_bidask_mkt_book_util_nse_web_multishm_net_gross_exposure_int /spare/local/files/oebu_volmon_product_list_ind19.txt /var/www/html/market_data_ind19_tmp.json /var/www/html/oebu_info_ind19_tmp.json IND19_TEST C 0 0 340 >/tmp/oebu_ind19 2>&1 &
+
+LD_PRELOAD=/home/dvcinfra/important/libcrypto.so.1.1 /home/dvcinfra/trash/our_extended_bidask_mkt_book_util_nse_web_multishm_pc_column_swap /spare/local/files/oebu_volmon_product_list_ind19.txt /var/www/html/market_data_ind19_price_tmp.json /var/www/html/oebu_info_ind19_price_tmp.json IND19_PRICE_TMP C 0 0 340 >/tmp/oebu_ind19_price_tmp 2>&1 &
+
+LD_PRELOAD=/home/dvcinfra/important/libcrypto.so.1.1 /home/dvcinfra/trash/our_extended_bidask_mkt_book_util_nse_web_multishm_price_column_book0_comb /spare/local/files/oebu_volmon_product_list_ind20_options.txt /var/www/html/market_data_ind20_options_price_tmp.json /var/www/html/oebu_info_ind20_options_price_tmp.json IND20_OPTIONS_PRICE_TMP C 0 0 320 >/tmp/oebu_ind20_price_tmp 2>&1 &
+
+
+LD_PRELOAD=/home/dvcinfra/important/libcrypto.so.1.1 /home/dvcinfra/trash/our_extended_bidask_mkt_book_util_nse_web_multishm_asm_column /spare/local/files/oebu_volmon_product_list_ind18.txt /var/www/html/market_data_ind18_tmp.json /var/www/html/oebu_info_ind18_tmp.json IND18_TEST N 0 0 306 >/tmp/oebu_ind18_asm 2>&1 &
+
+LD_PRELOAD=/home/dvcinfra/important/libcrypto.so.1.1 /home/dvcinfra/trash/our_extended_bidask_mkt_book_util_nse_web_multishm_asm_column_log /spare/local/files/oebu_volmon_product_list_ind18.txt /var/www/html/market_data_ind18_tmp_asm.json /var/www/html/oebu_info_ind18_tmp_asm.json IND18_TEST_ASM N 0 0 306 >/tmp/oebu_ind18_asm_log 2>&1 &
+
+LD_PRELOAD=/home/dvcinfra/important/libcrypto.so.1.1 /home/dvcinfra/important/subham/our_extended_bidask_mkt_book_util_nse_web_multishm_merge_new /spare/local/files/oebu_volmon_product_list_ind17.txt /var/www/html/market_data_ind17_tmp.json /var/www/html/oebu_info_ind17_tmp.json IND17_TMP N 0 0 307 >/tmp/oebu_ind17_tmp 2>&1 &
+
+LD_PRELOAD=/home/dvcinfra/important/libcrypto.so.1.1 /home/dvcinfra/trash/our_extended_bidask_mkt_book_util_nse_web_multishm_price_column_book0 /spare/local/files/oebu_volmon_product_list_ind22.txt /var/www/html/market_data_ind22_price_book.json /var/www/html/oebu_info_ind22_price_book.json IND22_TEST_PRICE_BOOK N 0 0 322 >/tmp/oebu_ind22_price_book 2>&1 &
+
+---------------------------------------------------------------------------------------
+PTPD CHECK
+
+INDB11
+192.168.132.11
+ifconfig -a
+p4p1 : inet -> 10.104.17.228 ; broadcast -> 10.104.17.255
+tcpdump -ni p4p1
+IP 10.104.10.86.ptp-general
+/etc/sysconfig/network-scripts/route-p4p1
+   already present : 137.0.0.0/8 via 10.104.17.225
+                               138.0.0.0/8 via 10.104.17.225
+                               10.255.0.0/16 via 10.104.17.225
+                               10.1.101.0/24 via 10.104.17.225
+                               10.104.10.0/24 via 10.104.17.225
+
+   add : 10.104.10.0/24 via 10.104.17.225
+ifdown p4p1
+ifup p4p1
+route -nv
+date -s "Oct  6 14:22:46 GMT 2022"
+check if date is updated or not
+
+vim /etc/sysconfig/ptpd2 (change interface)
+chmod 777 /etc/sysconfig/ptpd2
+tail -f /var/log/ptpd2.log
+should show the exect interface in ptpd log
+systemctl restart ptpd
+systemctl status ptpd
+
+2021-11-13 07:31:00.028925 ptpd2[11730].enp23s0f0 (warning)   (slv) Stepped the system clock to: 11/13/21 07:31:00.28910468
+2021-11-13 07:31:00.030166 ptpd2[11730].enp23s0f0 (notice)    (lstn_reset) Now in state: PTP_LISTENING
+2021-11-13 07:31:02.028341 ptpd2[11730].enp23s0f0 (info)      (lstn_reset) UTC offset is now 37
+2021-11-13 07:31:02.028371 ptpd2[11730].enp23s0f0 (info)      (lstn_reset) New best master selected: c014fefffeb6cd01(unknown)/12
+2021-11-13 07:31:02.028390 ptpd2[11730].enp23s0f0 (notice)    (slv) Now in state: PTP_SLAVE, Best master: c014fefffeb6cd01(unknown)/12 (IPv4:10.231.118.129)
+2021-11-13 07:31:02.028428 ptpd2[11730].enp23s0f0 (notice)    (slv) Received first Sync from Master
+2021-11-13 07:31:03.029358 ptpd2[11730].enp23s0f0 (notice)    (slv) Received first Delay Response from Master
+2021-11-13 07:31:03.029380 ptpd2[11730].enp23s0f0 (notice)    (slv) Received new Delay Request interval 1 from Master (was: 0)
+2021-11-13 07:31:08.609017 ptpd2[11730].enp23s0f0 (notice)    (slv) TimingService.PTP0: elected best TimingService
+2021-11-13 07:31:08.609038 ptpd2[11730].enp23s0f0 (info)      (slv) TimingService.PTP0: acquired clock control
+
+INDB12
+
+-> check market data interface in this file from which the time will sync
+/etc/sysconfig/ptpd2
+-> tcpdump -ni enp101s0f1 (market data interface)
+-> check below ip for ptp
+13:06:50.789676 IP 10.104.10.94.ptp-general > 224.0.1.129.ptp-general: UDP, length 64
+13:06:50.789783 IP 10.104.10.94.ptp-event > 224.0.1.129.ptp-event: UDP, length 44
+13:06:50.790604 IP 10.104.10.94.ptp-general > 224.0.1.129.ptp-general: UDP, length 44
+-> add above ip route to below file (10.104.10.94)
+/etc/sysconfig/network-scripts/route-enp101s0f1
+10.255.0.0/16 via 10.104.17.225
+10.1.101.0/24 via 10.104.17.225
+10.104.10.0/24 via 10.104.17.225
+
+-> to check via which ip need to route use below steps.
+route -nv | grep enp101s0f1
+second column (Gateway) 10.104.17.225.
+
+-> ifdown enp101s0f1
+-> ifup enp101s0f1
+-> systemctl status ptpd
+
+-> check ptpd logs for the interface which we configured.
+tail -f /var/log/ptpd2.log
+
+2022-03-24 13:08:16.821363 ptpd2[102439].enp101s0f1 (notice)    (slv) Received first Sync from Master
+2022-03-24 13:08:16.822556 ptpd2[102439].enp101s0f1 (critical)  (slv) Offset above 1 second (17.352042839 s). Clock will step.
+2022-03-24 13:07:59.470534 ptpd2[102439].enp101s0f1 (warning)   (slv) Stepped the system clock to: 03/24/22 13:07:59.470522411
+2022-03-24 13:07:59.471655 ptpd2[102439].enp101s0f1 (notice)    (lstn_reset) Now in state: PTP_LISTENING
+2022-03-24 13:08:01.470170 ptpd2[102439].enp101s0f1 (info)      (lstn_reset) UTC offset is now 37
+2022-03-24 13:08:01.470194 ptpd2[102439].enp101s0f1 (info)      (lstn_reset) New best master selected: c44d84fffe22877c(unknown)/30
+2022-03-24 13:08:01.470215 ptpd2[102439].enp101s0f1 (notice)    (slv) Now in state: PTP_SLAVE, Best master: c44d84fffe22877c(unknown)/30 (IPv4:10.104.10.94)
+2022-03-24 13:08:01.470250 ptpd2[102439].enp101s0f1 (notice)    (slv) Received first Sync from Master
+2022-03-24 13:08:02.471069 ptpd2[102439].enp101s0f1 (notice)    (slv) Received first Delay Response from Master
+2022-03-24 13:08:02.471085 ptpd2[102439].enp101s0f1 (notice)    (slv) Received new Delay Request interval 1 from Master (was: 0)
+
+-----------------------------------------------------------------------------------------
+CORE DUMP CHECK
+
+[ root@sdv-ind-srv14 /var/lib/systemd/coredump ] core.nse_tbt_recover.1000.f8a9ec6c283b4242b5692c8ab5704ebb.577905.1649652224000000.lz4
+[ root@sdv-ind-srv14 /var/lib/systemd/coredump ] coredumpctl gdb 577905
+
+gdb /home/pengine/prod/live_execs/cme_ilink_ors core.4224
+
+ldd /home/pengine/prod/live_execs/cme_ilink_ors
+
+/usr/bin/gdb /home/pengine/prod//live_execs/cme_ilink_ors trash/core.42906
+thread apply all bt
+
+objdump -DCl /home/pengine/prod/live_execs/cme_ilink_ors > trash/assem
+Search : 42f22
+
+#0  0x00007f0acdc42f22 in ?? ()
+(gdb) bt
+#0  0x00007f0acdc42f22 in ?? ()
+
+---------------------------------------------------------------------------------------------------------------
+CORE DUMP
+
+/var/lib/systemd/coredump
+/home/dvcinfra/trash
+------------------------------------------------------------------------------------------
+
+CHECK WHEN SCRIPT LAST RUN
+
+stat -c '%n : %x' <script>
+------------------------------------------------------------------------------------------
+CPU SPEED OR FREQUENCY
+
+[ root@sdv-ind-srv22 /home/tools ] ./i7z_64bit
+
+-------------------------------------------------------------------------------------------
+
+CHECK INTERNET SPEED 
+
+rsync -avz --progress 10.23.227.65:/home/dvcinfra/important/NSE_BANKNIFTY_FUT_20211125_20211101.gz /home/dvcinfra/trash/
+-----------------------------------------------------------------------------------------------
+
+CHECK CPU NO
+ps -o pid,psr,comm -p 102947
+
+time taskset -c 20 ../cvquant_install/tradeengine/bin/trade_engine
+----------------------------------------------------------------------------------------
+
+RESTART NETWORK SETTINGS
+
+"/etc/init.d/network restart"
+--------------------------------------------------------------------------------------
+
+IPERF TOOL TO CHECK BANDWIDTH
+
+receiver : [ root@sdv-indb-srv12 ~/iperf/src ] ./iperf3 -s
+sender : market data ip [ root@sdv-ind-srv22 ~/iperf/src ] ./iperf3 -c 10.231.118.181 -u -b 1000m -i 1 -t 999
+sender : machiner ip [ root@sdv-ind-srv22 ~/iperf/src ] ./iperf3 -c 192.168.132.12 -u -b 2000m -i 1 -t 999
+
+------------------------------------------------------------------------------------------
+
+ADD ALIAS
+    Edit ~/.bash_aliases or ~/. bashrc file using: vi ~/.bash_aliases.
+    Append your bash alias.
+    For example append: alias update='sudo yum update'
+    Save and close the file.
+    Activate alias by typing: source ~/.bash_aliases
+
+--------------------------------------------------------------------------------------------
+
+LIBRARY ISSUE
+libstdc++.so.6.0.19
+libstdc++.so.6.0.25
+ibc.so.6 -> libc-2.17.so
+libc.so.6 -> libc-2.27.so
+ldconfig -l -v /lib64/libc-2.17.so
+------------------------------------------------------------------------------------------
+
+SSH LOGIN WITHOUT PASSWORD
+
+copy from 5.67 .ssh to home dir of local
+
+error while ssh
+ssh-keyscan -H 10.23.5.26 >> ~/.ssh/known_hosts
+
+or 
+
+ssh-keygen (machine from which you need to login)
+ssh-copy-id -i ~/.ssh/id_rsa.pub remote-host (machine from which you need to login)
+---------------------------------------------------------------------------------------------
+
+DISK CHECK
+
+fdisk -l
+----------------------------------------------------------------------------------------------
+
+VISUAL=vim; crontab -e
+
+ctags -R .
+
+linux version : hostnamectl , cat /etc/centos-release
+uname -r
+uname -a
+useradd
+
+uptime (to show core in use)
+
+all installed packets fedora : rpm -qa 
+all installed packets ubuntu : apt list
+
+gcc -xc -E -v -
+
+gcc -xc++ -E -v -
+---------------------------------------------------------------------------------------
+
+date -d @1604029651.955428
+date --date="Mon Jan 18 11:04:10 IST 2021" +"%s.%N"
+
+---------------------------------------------------------------------------------------
+FIND THE INTERFACE USED BY A CONNECTED SOCKET
+
+ip route get 10.255.255.6
+10.255.255.6 via 10.104.17.225 dev p4p1 src 10.104.17.228
+---------------------------------------------------------------------------------------
+
+CHECK SWAP MEMORY
+
+trash/a.sh
+---------------------------------------------------------------------------------------
+SOLARFLARE CARD VERSION 
+
+sfkey
+
+---------------------------------------------------------------------------------------
+
+CHECK MAIL IN QUEUE / DELETE MAIL IN QUEUE
+
+mailq | grep domain.com | awk {'print $1'} | xargs -I{} postsuper -d {}
+
+check in 5.42 using cmd: mailq
+
+echo "echo ""| mailx -s "Welcome 11" subham.chawda@tworoads-trading.co.in"
+--------------------------------------------------------------------------------------------------------
+
+WORKER
+
+ssh dvctrader@52.3.22.99
+
+ssh -p 22771 dvcinfra@103.69.169.140
+
+ssh dvctrader@54.90.155.232
+
+ssh -p 22782 dvctrader@103.69.169.140
+------------------------------------------------------------------------------------
+
+check how many cores a process is using
+top -H -p 86072
+taskset -c -p 86072
+
+gdb
+core <corefilepath>
+
++++++++++++++
+pull other branch into current branch:
+
+git checkout branch
+git fetch origin
+git merge origin/master
+
+if there is conflict after merge, do the changes manually
+
+++++++++++
+
+git push pull with out password
+
+cd ~                 #Your home directory
+ssh-keygen -t rsa    #Press enter for all values
+If it is a GitHub repository and you have administrative privileges, go to settings and click 'add SSH key'. Copy the contents of your ~/.ssh/id_rsa.pub into the field labeled 'Key'.
+git remote set-url origin git+ssh://git@github.com/two-roads-trading-pvt-ltd/tradeengine.git
+
++++++++++++++++
+
+git clone <url>
+
+git add .
+
+git commit -m "message"
+
+git push -u origin <branch>
+
+git reset --soft HEAD~1 (undo last commit in local)
+
+git reset --hard HEAD~1 (to remove last commit from local)
+
+git reset --hard HEAD~1
+git push -u origin -f   (both the commands to remove it from local and remote)
+
+git log --oneline (log history)
+
+git checkout origin/TIME_LOGGING_FOR_DROPPED_PACKETS -- Jamfile.jam
+
+git checkout -b newbranch
+
+git stash
+
+git stash save "multicast_heartbeat_stream"
+
+git stash list
+
+git stash apply stash@{2}
+
+git stash drop stash@{0}
+
+git reset (git add)
+
+git diff branch1..branch2
+
+git diff branch1..branch2 -- myfile.cs
+
+remote : git push origin --delete branch
+
+local : git branch -D branch
+--------------------------------------------------------------------------------------
+
+GRUB / UPDATE CORE / CHECK CORE
+
+changes : isolcpus=1-8, nohz_full=1-8
+
+cat /proc/cmdline
+    BOOT_IMAGE=/vmlinuz-3.10.0-862.14.4.el7.x86_64 root=UUID=6b4781f9-9869-49c8-80d6-dbb0ad3513c7 ro rhgb quiet intel_idle.max_cstate=0 processor.max_cstate=0 clocksource=tsc selinux=0 nosoftlockup idle=poll audit=0 isolcpus=1-9 nosoftlockup nohz_full=1-9 skew_tick=1
+
+/home/pengine/prod/live_execs/cpu_affinity_mgr VIEW 1 init
+[ /home/tools ] ./i7z_64bit
+
+[ root@sdv-ind-srv14 /home/tools ] nano /etc/default/grub 
+[ root@sdv-ind-srv14 /home/tools ] grub2-mkconfig -o /boot/grub2/grub.cfg 
+Generating grub configuration file ...
+Found linux image: /boot/vmlinuz-3.10.0-957.el7.x86_64
+Found initrd image: /boot/initramfs-3.10.0-957.el7.x86_64.img
+Found linux image: /boot/vmlinuz-3.10.0-862.14.4.el7.x86_64
+Found initrd image: /boot/initramfs-3.10.0-862.14.4.el7.x86_64.img
+Found linux image: /boot/vmlinuz-0-rescue-1bbd11d9c49b42e7a1174fdcf3300ac9
+Found initrd image: /boot/initramfs-0-rescue-1bbd11d9c49b42e7a1174fdcf3300ac9.img
+done
+[ root@sdv-ind-srv14 /home/tools ] 
+
+--------------------------------------------------------------------------------------------
+
+Total long exposure and total short exposure in Cash 
+noitonal exposure 
+pos * last trade price 
+
+/home/subham/subham/notionalExposure/total_short_long_exposure.sh
+
+------------------------------------------------------------------------------------------
+
+Test position file changes:
+
+test:  today=`date +%Y%m%d`; tail -f  /spare/local/logs/tradelogs/log.${today}.123805 | egrep -i "Risk|freeze|STOP LOSS|Manual|INVALID|ERROR|CONTROL|pnl_up|pnl_down|creased|flat|RESUME"
+output: UserControlManager Reloading positions file c
+------------------------------------------------------------------------------------------
+
+bjam -j3 release <filename>
+
+add it under that directory Jam file suppose the file is under Tools so u have to add entry under Jam file which is present under Tools dir
+
+---------------------------------------------------------------------------------------------------------------------------------
+
+in future you can just do addts like this 
+[ dvcinfra@sdv-ind-srv16 ~ ] for prod in NSE_VOLTAS NSE_TCS NSE_LICHSGFIN NSE_INFRATEL NSE_COFORGE
+> do
+> /home/pengine/prod/live_execs/ors_control_exec 21217 ADDTRADINGSYMBOL $prod 1000 1000 1000 2000 
+> done 
+1st arg of your pos file from NOTIS 
+----------------------------------------------------------------------------------------------------------------------------------
+
+CHECK PACKETS ARE MACHING IN TCP AND EXANIC
+
+awk 'NR==FNR { fd_seq1=$1$2; seq[fd_seq1]=$NF; next } { fd_seq2=$1$2; if (seq[fd_seq2]) print fd_seq2}' tcp_seq_20201023_1.log exanic_seq_20201023_1.log
+---------------------------------------------------------------------------------------------------------------------------------------------
+
+[ dvcinfra@sdv-ind-srv13 ~/trash/subham ] export ZF_ATTR=interface=eth3; onload ~/trash/subham/NSEShmWriter_subham LOGGER
+--------------------------------------------------------------------------------------------------------------------------------------
+
+showaddts(alias): /home/pengine/prod/live_scripts/ADDTRADINGSYMBOL.sh /home/pengine/prod/live_configs/sdv-ind-srv13_addts.cfg (starting addts file)
+
+-------------------------------------------------------------------------------------------------------------------------------------
+ORS REPLY
+
+
+trader
+grep BURGERKING /spare/local/logs/tradelogs/log.20201216.* | grep SACI
+
+no of trade in trade logs should be equal to no of exec type in ors reply for that product
+get position
+grep BURGERKING /spare/local/logs/tradelogs/trade.20201216.* 
+
+compare pos and SAOS check SE column for reject reason
+[ dvcinfra@sdv-ind-srv13 /spare/local/ORSBCAST_MULTISHM/NSE ] LD_PRELOAD=/home/dvcinfra/important/libcrypto.so.1.1 /home/pengine/prod/live_execs/mds_log_reader ORS_REPLY_LIVE NSE_BURGERKING_20201216 | grep "SACI: 20578890"
+
+rejects and SAOS from audit logs
+/home/pengine/prod/live_execs/nse_audit_log_reader AUDIT_IN NSE_EQ /spare/local/ORSlogs/NSE_EQ/MSEQ4/audit.43603.`date +%Y%m%d`.in | grep -i burger | grep -i rej | cut -d' ' -f32 | sort | uniq
+
+
+ind13
+
+/home/pengine/prod/live_execs/multicast_forwarder:  Sends command to strat. ( this is the only use)
+control_msg_shm_writer reads control cmd (strat, start,stop,dumppostion) and send to multicast(aboveone) and sends to server.
+why we are not directly sending to strat? So that all strat command can be given from only one machine...
+
+ors reply : /spare/local/ORSBCAST/NSE 
+ORSDataLogger : /spare/local/ORSBCAST_MULTISHM/NSE , ors_binary_logger_multishm, ors reply live
+
+CombinedSource : ors reply generic data, CombinedShmWriter
+1./home/pengine/prod/live_scripts/SmartDaemonController.sh CombinedSource START
+   1st process
+   this will read from sockets and dump in shm
+   /spare/local/MDSlogs/combined_writer_dbg_20210226.log , combined_writer_log.20210226
+   its similar to NSEShmWriter which runs in ind13 (market data), ind13 we writes to file and shm, here we writes to shm
+
+[ dvcinfra@sdv-ind-srv13 /spare/local/ORSBCAST_MULTISHM/NSE ] LD_PRELOAD=/home/dvcinfra/important/libcrypto.so.1.1 /home/pengine/prod/live_execs/mds_log_reader ORS_REPLY_LIVE NSE1231079_20201201   | grep "SACI: 20578890" | cut -d' ' -f8 | sort | uniq
+
+5.67
+
+root@sdv-ny4-srv67
+/home/dvcinfra/important/subham/exchange_latency_report
+/home/pengine/prod/live_execs/ors_binary_reader_stats_exchange IND23 312 3795 20210526 `ls /NAS1/data/ORSData/NSE/2021/05/26/* | sed 's/\&/\\&/g'`
+
+/home/dvcinfra/important/subham/internal_latency_report
+/home/pengine/prod/live_execs/ors_binary_reader_stats_multishm IND23 312 3795 20210526 `find /NAS1/data/ORSData/ORSBCAST_MULTISHM/2021/05/26 | sed 's/\&/\\&/g'`
+
+/home/dvcinfra/latency_reports/run_live_latency_stats.sh (will generate internal and exchanges latency)
+####
+/home/dvcinfra/latency_reports/generate_latency_reports_multishm.sh (will generate internal latency) 
+/home/pengine/prod/live_execs/ors_binary_reader_stats_multishm
+ORS reply files : /NAS1/data/ORSData/ORSBCAST_MULTISHM/
+####
+/home/dvcinfra/latency_reports/generate_exchange_latency_reports.sh (will generate exchange latency)
+/home/pengine/prod/live_execs/ors_binary_reader_stats_exchange
+ORS reply files : /NAS1/data/ORSData/NSE/
+####
+Market data : /NAS1/data/NSELoggedData/NSE/
+[ dvcinfra@sdv-ind-srv13 /spare/local/MDSlogs/GENERIC ] LD_PRELOAD=/home/dvcinfra/important/libcrypto.so.1.1 /home/pengine/prod/live_execs/mds_log_reader GENERIC NSE_BORORENEW_20210101 | less
+
+/home/pengine/prod/live_configs/server_latency_reporting_config.txt
+
+[ dvcinfra@sdv-ny4-srv67 /NAS1/data/NSELoggedData/NSE/2020/11/02 ] 
+LD_PRELOAD=/home/dvcinfra/important/libcrypto.so.1.1; /home/pengine/prod/live_execs/mds_log_reader NSE NSE_SBIN_20201102 | less
+
+
+[ dvcinfra@sdv-ny4-srv67 /NAS1/data/ORSData/NSE/2020/10/28 ] (
+LD_PRELOAD=/home/dvcinfra/important/libcrypto.so.1.1 ; for file in `ls | grep NSE_ | cut -d'.' -f1`; do /home/pengine/prod/live_execs/mds_log_reader ORS_REPLY $file > /tmp/ors_reply ; awk '(NR>4) {num=$10;base=rshift(num, 16); {if(base == 308) {print $0}}}' /tmp/ors_reply >> /tmp/ind16_reply_20201028; done;
+
+[ dvcinfra@sdv-ny4-srv67 /NAS1/data/ORSData/NSE/2020/10/28 ] 
+LD_PRELOAD=/home/dvcinfra/important/libcrypto.so.1.1; /home/pengine/prod/live_execs/mds_log_reader ORS_REPLY /NAS1/data/ORSData/NSE/2020/10/28/NSE_SBIN_20201028 | less
+
+[ dvcinfra@sdv-ind-srv13 ~ ]
+ LD_PRELOAD=/home/dvcinfra/important/libcrypto.so.1.1; /home/pengine/prod/live_execs/mds_log_reader ORS_REPLY_LIVE /spare/local/ORSBCAST_MULTISHM/NSE/NSE_SBIN_20201103 | less
+
+/spare/local/MDS/generic 
+----------------------------------------------------------------------------------------------------------------------------------
+
+NOTIS file
+
+CM
+awk -F, -v usr=${user_id} '{if($13==usr){ if($10=="B"){print $5,1*$7,$10,$13} else{ print $5,-1*$7,$10,$13}}}' /tmp/TradesExport.txt >>/tmp/gen_pos_exec
+cat /tmp/gen_pos_exec | awk '{prod_to_pos[$1]+=$2} END {for( key in prod_to_pos){ if(prod_to_pos[key] != 0) print "NSE_"key,-prod_to_pos[key]}}'
+
+user 1&2
+awk -F, -v usr=43706 '{if($13==usr){ if($10=="B"){print $5,1*$7,$10,$13} else{ print $5,-1*$7,$10,$13}}}' TradesExport.txt > gen_pos_exec;awk -F, -v usr=43605 '{if($13==usr){ if($10=="B"){print $5,1*$7,$10,$13} else{ print $5,-1*$7,$10,$13}}}' TradesExport.txt >> gen_pos_exec ;cat gen_pos_exec | awk '{prod_to_pos[$1]+=$2} END {for( key in prod_to_pos){ if(prod_to_pos[key] != 0) print "NSE_"key,-prod_to_pos[key]}}'
+
+
+[ dvctrader@sdv-ind-srv17 ~ ] /home/pengine/prod/live_scripts/trade_export_to_pos_exec.sh
+USAGE: <SCRIPT> <TYPE:FO/CM> <TRADE_EXP_FILE> <USERLIST_FILE or srv_name[IND14]> <ADDS-FLAG [0/1]>
+any INDserver 
+16 17 18 CM 
+14 15 19 20 FO
+
+############
+local (subham)
+scp TradesExport.txt dvctrader@10.23.227.64:/tmp
+
+dvctrader:
+/home/pengine/prod/live_scripts/trade_export_to_pos_exec.sh FO /tmp/TradesExport.txt IND15 0
+
+vim /tmp/tmp_user_id_`date +%Y%m%d`
+/home/pengine/prod/live_scripts/trade_export_to_pos_exec.sh CM /tmp/TradesExport.txt /tmp/tmp_user_id_`date +%Y%m%d` 0
+
+/tmp/pos_exec_file_`date +%Y%m%d`
+/tmp/opt_pos_exec_file_`date +%Y%m%d`
+/tmp/fut_pos_exec_file_`date +%Y%m%d`
+###########
+
+FO Server	UserId
+IND11	34353
+IND14	36277
+	36474
+IND15	36298
+	34110
+IND19	37709
+	36975
+IND20	35693
+	34459
+
+CM Server	UserId
+IND16	43965
+	43740
+IND17	43706
+	43605
+IND18	43603
+	43966
+IND 23 43604
+    43606
+IND 24 43546
+----------------------------------------------------------------------------------------------------------------------------------
+
+All server Trader:
+grep -i drop /spare/local/logs/tradelogs/log.`date +%Y%m%d`.12380[5-8] | awk -F':' '{print $1}' | sort | uniq -c
+grep -i drop /spare/local/logs/tradelogslog.20210310.12380* | awk -F"DROP OF :" '{print $2}' | awk '{print $1}' | awk '{sum+=$1} END {print sum}'
+569524
+
+infra IND13
+
+/home/pengine/prod/live_configs/sdv-ind-srv13_nse-tbt-mcast.txt
+
+(no of drop)
+grep "DROPPED" /spare/local/MDSlogs/nseshm_writer_dbg_`date +%Y%m%d`.log | wc -l 
+
+Drop for particular socket:
+grep "DROPPED" /spare/local/MDSlogs/nseshm_writer_dbg_`date +%Y%m%d`.log | awk '{ soc[$10]+=1; msg_d[$10]+=($15-$21)} END {for (i in soc){print "SOCKET_FD["i"]"," OCCURANCE: "soc[i],"\tMSG_DROPPED: "msg_d[i]}}' | sort -k5 -n
+
+grep "DROPPED" /spare/local/MDSlogs/nseshm_writer_dbg_`date +%Y%m%d`.log | awk '{ soc[$10]+=1; msg_d[$10]+=($25)} END {for (i in soc){print "SOCKET_FD["i"]"," OCCURANCE: "soc[i],"\tMSG_DROPPED: "msg_d[i]}}' | sort -k5 -n
+
+-------------------------------------------------------------------------------------------------------------------------------------
+
+trader IND17
+ps aux | grep trade_engine (for all strat path, change date) check asm product position are 0 or not , we make it 0 so that we will not trade those product, but currently not using this file, because we are trading this product
+
+awk '{print "_"$1"_"}' /spare/local/tradeinfo/NSE_Files/ASMSecurities/short_term_asm.csv_`date +%Y%m%d` >/tmp/f10;grep -f /tmp/f10 /home/dvctrader/ATHENA/CONFIG_CM_NON_FO_202008/PositionLimits.csv
+
+awk '{print "_"$1"_"}' /spare/local/tradeinfo/NSE_Files/ASMSecurities/short_term_asm.csv_`date +%Y%m%d` >/tmp/f10;grep -f /tmp/f10 /home/dvctrader/ATHENA/CONFIG_START_RATIO_20190926/PositionLimits.csv
+
+awk '{print "_"$1"_"}' /spare/local/tradeinfo/NSE_Files/ASMSecurities/short_term_asm.csv_`date +%Y%m%d` >/tmp/f10;grep -f /tmp/f10 /home/dvctrader/ATHENA/CONFIG_NSE_CM_MQ_SET3/PositionLimits.csv
+
+awk '{print "_"$1"_"}' /spare/local/tradeinfo/NSE_Files/ASMSecurities/short_term_asm.csv_`date +%Y%m%d` >/tmp/f10;grep -f /tmp/f10 /home/dvctrader/ATHENA/CONFIG_CM_NON_FO_202006_BAN/PositionLimits.csv
+
+awk '{print "_"$1"_"}' /spare/local/tradeinfo/NSE_Files/ASMSecurities/short_term_asm.csv_`date +%Y%m%d` >/tmp/f10;grep -f /tmp/f10 /home/dvctrader/ATHENA/CONFIG_NSE_CM_IPO/PositionLimits.csv
+
+-----------------------------------------------------------------------------------------------------------------------------
+PNL OF ASM PRODUCT
+
+`date +%Y%m%d`
+scp dvcinfra@10.23.227.63:/spare/local/tradeinfo/NSE_Files/ASMSecurities/short_term_asm.csv_20201216 /tmp ; echo "Symbol Total_PNL"; for prod in `cat /tmp/short_term_asm.csv_20201216`; do grep -w $prod /NAS1/data/MFGlobalTrades/ind_pnls/CM/eod_pnls/ind_pnl_20201216.txt | awk '{print $2,$23}'; done
+
+------------------------------------------------------------------------------------------------------------------------------
+
+HANDLE RESETTING ERROR
+
+cat log.20220207 | grep "Requested max pos" | awk '{print $14}'  | cut -d'.' -f1 | awk '{print $1 " 600 600 600 600"}' >>/home/pengine/prod/live_configs/common_initial_margin_file.txt
+
+-------------------------------------------------------------------------------------------------------------------------------
+
+for REBOOT stop all processes.
+su root
+reboot
+
+REBOOT SERVER CHECK
+
+log in from 5.67 root , ssh 10.23.227.66 (root user) to restart service
+
+cat /etc/resolv.conf; cat /etc/resolve.conf; service dvc_autossh status; service dvc_clm status; service dvc_gc status; service postfix status;  service crond status; ps aux | grep zabbix; 
+/usr/sbin/zabbix_agentd
+
+ps aux | grep autossh; ps aux | grep clm; ps aux | grep move_trash_to_trash; ps aux | grep move_trash_to_trash; ps aux | grep postfix;
+
+dvc_gc : garbage collector
+dvc_clm : centralized_logging_manager
+postfix : mail service
+ps aux check if services are running or not
+/home/pengine/prod/live_scripts/move_trash_to_trash.sh
+
+service postfix status
+>/etc/resolv.conf
+>/etc/resolve.conf
+service dvc_autossh status
+service dvc_clm status
+service dvc_gc status
+/usr/sbin/zabbix_agentd
+
+defination of above services are in below path.
+systemctl start dvc_dsm ( to start manage_mdslogs_space service )
+/etc/init.d/
+
+------------------------------------------------------------------------------------------------------------------------------
+
+EXPIRY DAY HANDLING (LAST THURSDAY)
+trader 5.13
+
+refer script : /home/dvctrader/important/onexpiry/run_gen_expiry_files.sh
+1. check if below files got updated or not in nse website
+https://archives.nseindia.com/content/fo/fo_mktlots.csv
+https://archives.nseindia.com/content/fo/sos_scheme.xls
+libreoffice --headless --convert-to csv --outdir /tmp/conv /tmp/sos_scheme.xls
+
+2. file path
+check symbol and strike price
+/spare/local/tradeinfo/NSE_Files/StrikeSchemeFiles/sos_scheme_
+check first column is of next month or not
+/spare/local/tradeinfo/NSE_Files/Lotsizes/fo_mktlots_
+
+3. check nse circular under FO section, if there is any update regarding the above files
+if files are not updated in website , update the change manually.
+
+4. run this script once file are update in website
+/home/dvctrader/important/onexpiry/fetch_nse_on_expiry_part1.sh
+
+5. verify if the changes are present in files or not.
+ copy fo_mktlots.csv to next day (fo_mktlots_20210430.csv)
+ if there is no changes in files , then copy the older file and create backup of downloaded one in case of sos.
+
+6. run /home/dvctrader/important/onexpiry/fetch_nse_on_expiry_part2.sh <current_date: YYYYMMDD>
+select y is asked
+
+7. check if files are downloaded in below path (grep verify in part2 script)
+  9: dvctrader@sdv-ny4-srv13 /spare/local/files/NSEFTPFiles
+  3: /spare/local/tradeinfo/NSE_Files/RefData
+     /spare/local/tradeinfo/NSE_Files
+
+8. check and verify the output with this file for some symbols /spare/local/tradeinfo/NSE_Files/datasource_exchsymbol.txt
+/home/pengine/prod/live_execs/get_exchange_symbol NSE_SBIN_FUT0 20210226
+LD_PRELOAD=/home/dvcinfra/important/libcrypto.so.1.1 /home/pengine/prod/live_execs/get_shortcode_for_symbol NSE1382103 20210603
+verify if the new changes are there in below files or not fut0 , fut1, fut2
+sym="PERSISTENT"; for pe in FUT0 _FUT1 _C0_I3 _C0_I2 _C0_I1 _C0_A _C0_O1 _C0_O2 _C0_O3; do echo NSE${sym}${pe}; grep /home/pengine/prod/live_execs/get_exchange_symbol NSE_${sym}${pe} 20211001 /spare/local/tradeinfo/NSE_Files/datasource_exchsymbol.txt ; done
+/spare/local/tradeinfo/NSE_Files/RefData
+for prod in `egrep 'ALKEM|APLLTD|AUBANK|CUB|DEEPAKNTR|GRANULES|GUJGASLTD|IRCTC|LTI|LTTS|MPHASIS|NAM-INDIA|NAVINFLUOR|PFIZER|PIIND|TRENT' /spare/local/tradeinfo/NSE_Files/StrikeSchemeFiles/sos_scheme_0321.csv | awk -F',' '{print $1}'`; do echo $prod ; grep $prod nse_fo_20210226_contracts.txt | grep FUT; done;
+
+/spare/local/tradeinfo/NSE_Files/RefData (check any product with previous date grep -i idea nse_fo_20210325_contracts.txt)
+
+[ dvctrader@sdv-ny4-srv13 /spare/local/tradeinfo/NSE_Files/RefData ] grep MAR nse_fo_20210326_contracts.txt | egrep -v "APR|MAY|JUN" | head
+
+[ dvctrader@sdv-ny4-srv13 /spare/local/tradeinfo/NSE_Files ] sqlite3 midterm_db
+SQLite version 3.13.0 2016-05-18 10:57:30
+Enter ".help" for usage hints.
+sqlite> select * from LOTSIZES where day="20210326";
+
+
+9. run /home/dvctrader/important/onexpiry/fetch_nse_on_expiry_part3.sh <current_date: YYYYMMDD>
+/spare/local/tradeinfo/NSE_Files/midterm_db
+/spare/local/tradeinfo/NSE_Files/ContractFiles/nse_contracts.
+
+10. /home/dvctrader/important/onexpiry/sync_trade_info.sh
+
+11. trader ind12: /home/dvctrader/anaconda3/bin/python /home/dvctrader/basequant/Scripts/contract_files_diff_mailer.py
+
+12. if any new symbols are added then run the below script and redirect out put to a file. this will tell in what all changes we need to do.
+~/important/handling_Updates/newsymbol_update.sh Date Symbol
+
+******~/important/handling_Updates/check_new_product.sh 20211001 PERSISTENT
+
+13.  add new symbols in below files
+/home/pengine/prod/live_configs/common_initial_margin_file.txt (add for all fo machine)
+/home/dvctrader/LiveConfigs/NSE_SIMPLE_EXEC_PARAMS/mult_param_disp, /home/dvctrader/LiveConfigs/NSE_SIMPLE_EXEC_PARAMS/mult_param_midterm, /home/dvctrader/LiveConfigs/NSE_SIMPLE_EXEC_PARAMS/mult_param_manual
+/spare/local/files/NSE/MidTermLogs/midterm_data_server_products.txt on ind12 and ind11
+
+NOTE:  (use FORCE if file present)
+INDIVIDUAL FETCH SCRIPTs
+
+/home/dvctrader/important/run_sep_fetch_nse_scripts.sh
+/home/pengine/prod/live_scripts/download_SecurtiesUnderBan.sh
+
+------------------------------------------------------------------------------------------------------------------------------
+
+Verify total PNL and open position.
+NOTIS for cash 
+generate ors trades file and verify positions / pnl etcbasically get NOTIS 
+generate ORS trades file and keep it on IND22 
+and then only run backend for IND22 
+once verified with existing positions / pnl 
+remove the IND22 trades file
+
+1.Get the TradeExport file.
+2.Copy to any ind server
+3.run this script /home/pengine/prod/live_scripts/generate_ors_trade_new.sh CM TradeExport.txt to generate ors trade file
+4./home/pengine/prod/live_scripts/generate_ors_trade_new.sh CM /tmp/TradesExport.txt <userlist_file>
+5.Copy this generated file /tmp/ors_trade_file to ind22 ORSlogs(/spare/local/ORSlogs/NSE_EQ/MSEQ4) path where ORS trade file(trades.20210219) is there.
+6.Run this in 5.13 infra
+today=`date +"\%Y\%m\%d"`; logfile=/spare/local/logs/pnl_data/hft/tag_pnl/ind13_pnls/cm_log.${today}; touch $logfile; /apps/anaconda/anaconda3/bin/python /home/dvcinfra/nishank_temp/newpnl/GenerateInd13EodPnl_test2_new.py -D CM -s IND22_EQ -d $today >>$logfile 2>&1;
+7.Compare the out with old file by running the below command.
+cat /NAS1/data/MFGlobalTrades/ind_pnls/CM/eod_pnls/ind_pnl_`date +%Y%m%d`.txt | grep -v "TOTAL_POS:      0"
+8.Remove the trade file.
+9.Rerun this command
+today=`date +"\%Y\%m\%d"`; logfile=/spare/local/logs/pnl_data/hft/tag_pnl/ind13_pnls/cm_log.${today}; touch $logfile; /apps/anaconda/anaconda3/bin/python /home/dvcinfra/nishank_temp/newpnl/GenerateInd13EodPnl_test2_new.py -D CM -s IND16_EQ IND17_EQ IND18_EQ IND21_EQ IND22_EQ -d $today >>$logfile 2>&1;
+
+---------------------------------------------------------------------------------------------------------------------------------
+ADD TRADES
+
+check ors tradelogs
+cat trades.20210518 | tr '\001' ' ' | awk '{if($2 == "0") total += $3; else total -= $3; next;} END {print total}'
+
+cat trades.20210518 | tr '\001' ' ' | awk '{if($2 == "0") prod_pos[$1] += $3; else prod_pos[$1] -= $3; next;} END {for(sym in prod_pos) {print sym,prod_pos[sym]}}'
+
+
+/NAS1/data/MFGlobalTrades/ind_pnls/FO/trades_to_adjust/
+here need to add trades for whichever products needs to add 
+on 5.26
+
+first 4 column are relavent
+size if lot
+verify if position are same or not 12 , -12 
+grep -i pnb /NAS1/data/MFGlobalTrades/ind_pnls/FO/eod_pnls/ind_pnl_20210514.txt
+sym       b/s size pric       order no                             SACI
+NSE1357894 1 10500 63.4 211 4833858800542177300 1568864998.428204 20578417
+
+echo "NSE1357894 1 10500 63.4" | awk '{print $1"\001"$2"\001"$3"\001"$4"\001211\0014833858800542177300\0011568864998.428204\00120578417"}' > trades.20210517
+
+/home/pengine/prod/live_execs/get_exchange_symbol NSE_BHEL_FUT0 20210510
+
+/NAS1/data/MFGlobalTrades/ind_pnls/FO/eod_pnls/ind_pnl_20210517.txt
+
+expiry_=`date +%Y%m%d`;cat /NAS1/data/MFGlobalTrades/ind_pnls/FO/eod_pnls/ind_pnl_${expiry_}.txt   | grep -v "TOTAL_POS:      0" | grep -v FUT | awk '{if(NF>20)print $0}' | awk '{ if($(NF-6)>0){ print $(NF-1),"1",$(NF-6)} else {print $(NF-1),"0",-$(NF-6)}}' | awk '{print $1"\001"$2"\001"$3"\0010\001211\0014833858800542177300\0011568864998.428204\00120578417"}' >/NAS1/data/MFGlobalTrades/ind_pnls/FO/trades_to_adjust/trades.${expiry_}
+
+echo "NSE1358713 1 5400 151.5" | awk '{print $1"\001"$2"\001"$3"\001"$4"\001211\0014833858800542177300\0011568864998.428204\00120578417"}' > /NAS1/data/MFGlobalTrades/ind_pnls/FO/trades_to_adjust/trades.`date +"%Y%m%d"
+
+today="20210517"; logfile=/spare/local/logs/pnl_data/hft/tag_pnl/ind13_pnls/fo_log.${today}; touch $logfile; /apps/anaconda/anaconda3/bin/python /home/dvcinfra/nishank_temp/newpnl/GenerateInd13EodPnl_test2_new.py -D FO -s IND13_FO IND14_FO IND15_FO IND19_FO IND20_FO -d $today >$logfile 2>&1;
+
+today="20210517"; /home/dvctrader/usarraf/unhedged_eod_pos_check.sh $today  >/dev/null 2>&1; /home/dvcinfra/fo_exposure.sh $today;
+
+------------------------------------------------------------------------------------------------------------------------------
+ADD TRADE MIDTERM
+
+File to add -> /spare/local/files/NSE/FileExecLogs/nse_complex_execlogic_trades_60_20210514.dat
+Eg: PNB_FUT0
+grep PNB  /spare/local/files/NSE/MidTermLogs/EODPosFiles/live 
+output-> KSratio -2 
+grep KSRatio /spare/local/files/NSE/MidTermLogs/trancheid_2_strategydetails_map
+Output -> 97  KSRatio    banknifty-rv  FILE    /spare/local/files/NSE/FileExecLogs/ordersfile 45008
+RelSecMom > RSM_LongTerm strat name (/spare/local/files/NSE/MidTermLogs/trancheid_2_strategydetails_map)
+for commission check last date file nse_complex_execlogic_trades_60_20210820.dat
+for lotsize /spare/local/tradeinfo/NSE_Files/Lotsizes/fo_mktlots_20201029.csv 
+Add trade to file -> #echo "lastorderid_(stratid)97_NSE_PNB_FUT0 NSE_PNB_FUT0 SELL    lotsize    (price) 59.5395(commission) 1620964167  PASS" 
+
+ind11 trader in trading time
+/spare/local/logs/alllogs/MediumTerm ] echo "1644840300000001384_56_BANKNIFTY_PE_39800.00_0_W    NSE_BANKNIFTY_P0_I2_M3_W    BUY 25  2475 38.8528 1644820755  PASS" >>disp_execlog
+ic_trades_20220214.da
+
+-----------------------------------------------------------------------------------------------------------------------------------
+MIDTERM BAN POSITIONS
+
+[ dvctrader@sdv-ind-srv12 /spare/local/files/NSE/MidTermLogs/EODPosFiles ] ls -lrt | tail -2
+-rw-r----- 1 dvctrader infra  9400 Sep 27 10:29 20210927
+-rw-r----- 1 dvctrader infra  9349 Sep 28 05:50 live
+egrep "CANBK|ESCORTS|IDEA|SAIL|SUNTV|ZEEL" 20210927 | awk -F',' '{split($2,a,"_");open[a[2]]+=$3;next} END {for (key in open) {print key,open[key]}}'
+
+--------------------------------------------------------------------------------------------------------------------------
+
+START BEFORE RUNNING ORS
+
+centralized loggin manager- need to start this before running ors :
+
+/usr/bin/centralized_logging_manager
+service dvc_clm restart
+(pass 123456)
+---------------------------------------------------------------------------------------------------------------------
+
+/home/pengine/prod/live_execs/cme_ilink_ors
+/home/pengine/prod/live_configs/common_MSFO_ors.cfg
+/spare/local/ORSlogs/NSE_FO/MSFO/
+
+HANDLE ORS ERROR : 
+ /home/pengine/prod/live_scripts/automated_ors_login.sh MSEQ2 KEEP 
+>/etc/resolv.conf
+>/etc/resolve.conf
+
+START ORS
+
+crontab -l | grep START
+/home/pengine/prod/live_scripts/SmartDaemonController.sh ORS MSEQ9 START KEEP >/dev/null 2>/dev/null
+
+CHECK:
+should show login user details
+egrep -i 'log|trailer' /spare/local/ORSlogs/NSE_EQ/MSEQ4/log.20201027 | tail
+
+grep -i local /spare/local/ORSlogs/NSE_EQ/MSEQ4/log.20201027 | tail
+
+N5HFSAT3NSE9NSEEngineE:ProcessExchangeResponse:1320 < INFO > Received LocalDB Trailer
+
+[ dvcinfra@sdv-ind-srv22 /spare/local/ORSlogs/NSE_EQ/MSEQ9 ] tail -f cme_ilink_ors.COUT.CERR20201105
+
+STOP ORS
+
+/home/pengine/prod/live_scripts/SmartDaemonController.sh ORS MSEQ9 STOP KEEP >/dev/null 2>/dev/null
+
+----------------------------------------------------------------------------------------------------------------------------
+
+CONSOLE TRADER ORDER EXECUTE, CANCEL, MODIFY
+
+check oebu ind15(FO) or BS/AS get lot size from /spare/local/tradeinfo/NSE_Files/Lotsizes/fo_mktlots_20201029.csv 
+size : nooflot * lotsize
+size and max trading size same
+price : ask or check in net or get it from oebu ind15(FO) AP(sell) BP(buy)
+to sell a product you have give low price making it BP(current buy order in market), and to buy u have to give high price making it AP(current sell order pirce in market)
+
+1. Check ADDTS of that product is done or not in ors logs.
+showaddts (no of lots) or default 20 (for FO no of lots ADDTS)
+/home/pengine/prod/live_configs/sdv-ind-srv21_addts.cfg
+/home/pengine/prod/live_scripts/ors_control.pl NSE MSFO ADDTRADINGSYMBOL NSE_SBIN 1909 1909 1909 1909
+
+under ban product
+vim /spare/local/tradeinfo/NSE_Files/SecuritiesUnderBan/fo_secban_20201218.csv
+/home/pengine/prod/live_scripts/ors_control.pl NSE MSFO RELOADMARGINFILE
+
+2. If NOT done need to do
+3. Run the below command
+
+CMD : [ dvcinfra@sdv-ind-srv11 ~ ] export LD_LIBRARY_PATH=/opt/glibc-2.14/lib; console_trader
+/home/pengine/prod/live_execs/console_trader
+/home/pengine/prod/live_execs/console_trader_new_onload
+LD_PRELOAD=important/libcrypto.so.1.1 /home/pengine/prod/live_execs/console_trader
+
+4. Enter the symbol
+5. In Query tag select 1
+6. select enter order, cancel order, modify order
+7. enter price (Px column)
+8. size : pos_to_close column
+9. max trading size : pos_to_close column
+10. buy or sell : pos_to_close is + then select buy
+11. dont close the console until and unless order gets executed.
+11. check order got executed or not in console logs (log path printed in terminal)
+
+/home/pengine/prod/live_execs/nse_audit_log_reader AUDIT_IN NSE_EQ /spare/local/ORSlogs/NSE_EQ/MSEQ3/audit.43706.`date +%Y%m%d`.in | egrep -a 'JUMPNET'
+/home/pengine/prod/live_execs/nse_audit_log_reader AUDIT_IN NSE_FO /spare/local/ORSlogs/NSE_FO/MSFO/audit.20201218.in | grep 'PNB'
+
+STRAT LOG PATH : /spare/local/logs/tradelogs/queryoutput
+/spare/local/logs/tradelogs/queryoutput/sms.20210120.123706
+
+NOTE:
+1. if doing ctrl+d in console then the order will get cancel. so after order gets executed do ctrl+d . if want to modify order then keep the console alive.
+2. for CM there is no lotsize concept its only in FO.
+-------------------------------------------------------------------------------------------------------------------------------------
+
+CLOSE POS DURING MARKET HOURS
+
+agar market hours me koi position close karni hai then we have to use below command:
+
+export ZF_ATTR=interface=eth5; LD_PRELOAD=/home/dvctrader/important/libcrypto.so.1.1 /hom
+e/dvctrader/ATHENA/post_market_exec_sanitize_throttle_20200828 $POS_FILE $DATE $START $TRIGGER_TIME $STRAT_ID &
+export ZF_ATTR=interface=eth5 ye specific to each server hoga
+
+cat /home/pengine/prod/live_configs/sdv-ind-srv17_network_interface_config.cfg
+
+export ZF_ATTR=interface=enp101s0f1;
+$posexec pos_file_to_execute TRADINGDATE START_TIME TIME_TO_EXECUTE PROGID NOTIONAL_TO_USE  LIVETRADING=1
+
+/home/dvctrader/ATHENA/pos_exec premarket_pos_close 20210319 IST_1005 IST_1020 123902 0 1
+
+export ZF_ATTR=interface=enp101s0f1; LD_PRELOAD=/home/dvctrader/important/libcrypto.so.1.1 /home/dvctrader/ATHENA/pos_exec premarket_pos_close 20210319 IST_1035 6000 123902 1000000 &
+
+---------------------------------------------------------------------------------------------------------------------------------------
+
+PRE MARKET
+
+1. check product whose total position to close 
+[ dvcinfra@sdv-ny4-srv13 ~ ] cat /NAS1/data/MFGlobalTrades/ind_pnls/CM/eod_pnls/ind_pnl_20210430.txt | grep -v "TOTAL_POS:      0"
+
+2. the below script will copy the eod_pnl products and positions from infra:5.13 to trader:ind17
+[ dvctrader@sdv-ind-srv17 ~ ] 00 01 * * 1-5 /home/pengine/prod/live_scripts/get_pre_market_products.sh > /dev/null 2>&1
+
+check addts of prod
+cat /home/dvctrader/ATHENA/pre_market_asm_products
+
+3. verify the products and positions present in step 1 are present in below file or not in trader:ind17
+cat /home/dvctrader/ATHENA/pos_exec_file_temp
+
+check addts of products are done or not
+if not do addts
+/home/pengine/prod/live_scripts/ors_control.pl NSE MSEQ3 ADDTRADINGSYMBOL <prod> <close pos>
+
+4. run the below command at 8:30 (check ors is running or not)
+################
+[ dvctrader@sdv-ind-srv17 ~/ATHENA ] bash
+[ dvctrader@sdv-ind-srv17 ~/ATHENA ] #./start_pre_market_trading.sh  pos_exec_file_temp IST_901 123901 &
+[ trader@ind17 ~/ATHENA ] #for tid in `seq 123901 123901` ; do /home/pengine/prod/live_execs/user_msg --traderid $tid --forceallindicatorready ; done
+[ dvctrader@sdv-ind-srv17 ~/ATHENA ] exit
+#####################
+
+5. after running the above command check showing All Good of not means waiting for 9:00 to sent order or not
+egrep -i 'logging|bye' /spare/local/logs/tradelogs/log.`date +%Y%m%d`.123901 | egrep -v "SIMRESULT|PORTRESULT"
+All set going into sleep now. BYE!
+
+9:01 order is sent
+9:07 order gets executed
+
+6. this start_pre_market_trading.sh will start sending order at at 9:00
+ps aux | grep post_mark
+
+7. to check order are conformed or not at 9:02
+grep confirmed /spare/local/logs/tradelogs/log.`date +%Y%m%d`.123901
+order got traded or not at 9:07 check below
+cat /spare/local/logs/tradelogs/trades.`date +%Y%m%d`.123901
+
+8. kill the process at 9:10 (kill it before 9:11) and after killing check the process got killed or not
+ps aux | grep post_mark
+kill -2 proc_id
+
+9. check order got cancled or not (audit logs - exchanges reply dump) infra:ind17
+/home/pengine/prod/live_execs/nse_audit_log_reader AUDIT_IN NSE_EQ /spare/local/ORSlogs/NSE_EQ/MSEQ3/audit.43706.`date +%Y%m%d`.in | grep -a -v "error code: 0 " | grep -a "ProcessedOrderResponse" | awk '{print $4,$5,$(NF-5),$(NF-4)}' | sort | uniq -c
+/home/pengine/prod/live_execs/nse_audit_log_reader AUDIT_IN NSE_EQ /spare/local/ORSlogs/NSE_EQ/MSEQ3/audit.43605.`date +%Y%m%d`.in | grep -a -v "error code: 0 " | grep -a "ProcessedOrderResponse" | awk '{print $4,$5,$(NF-5),$(NF-4)}' | sort | uniq -c
+/home/pengine/prod/live_execs/nse_audit_log_reader AUDIT_IN NSE_FO /spare/local/ORSlogs/NSE_FO/MSFO4/audit.34110.`date +%Y%m%d`.in | grep -a ORDER_ERROR | sort | uniq -c
+
+
+audit.user.date - check user details in config file
+
+---------------------------------------------------------------------------------------------------------------------------
+
+POST MARKET 
+
+5.13 check 
+1. check product whose total position to close 
+[ dvcinfra@sdv-ny4-srv13 ~ ] cat /NAS1/data/MFGlobalTrades/ind_pnls/CM/eod_pnls/ind_pnl_`date +%Y%m%d`.txt | grep -v "TOTAL_POS:      0"
+
+crontab : at 3:31 /home/dvctrader/ATHENA/closing_session_pos.sh
+
+At 3:33 check the below file if the product pos are matching or not , if not add it manually (complete it before 3:35)
+[ dvctrader@sdv-ind-srv17 ~/ATHENA ] ./check_post_market_product_diff.sh
+cat /home/dvctrader/ATHENA/pos_to_exit_`date +%Y%m%d`
+
+---------
+scp dvctrader@10.23.227.83:/home/dvctrader/ATHENA/pos_to_exit_`date +%Y%m%d` .
+----------
+
+start the exec at 3:35
+[ dvctrader@sdv-ind-srv17 ~/ATHENA ] #bash
+[ dvctrader@sdv-ind-srv17 ~/ATHENA ] #./start_post_market_trading_backup.sh pos_to_exit_`date +%Y%m%d` IST_1540 123716 &
+for tid in 123716 ; do /home/pengine/prod/live_execs/user_msg --traderid $tid --forceallindicatorready ; done
+/home/pengine/prod/live_execs/user_msg --traderid  $PROGID --forceallindicatorready
+[ dvctrader@sdv-ind-srv17 ~/ATHENA ] #exit
+
+egrep -i 'logging|bye'  /spare/local/logs/tradelogs/log.`date +%Y%m%d`.123716 | egrep -v "SIMRESULT|PORT"
+
+to check order are conformed or not
+grep confirmed /spare/local/logs/tradelogs/log.`date +%Y%m%d`.123716
+
+order got traded or not check below (check order name and strat)
+cat /spare/local/logs/tradelogs/trades.`date +%Y%m%d`.123716 
+
+[ dvctrader@sdv-ind-srv17 ~/ATHENA ] cat /spare/local/logs/tradelogs/trades.`date +%Y%m%d`.123716 
+1604916867.736240 OPEN NSE_STEL.123716 S    1(postion) 54.2500000   -1        0        0 [    -1 -1000.000000 X 54.250000   761 ] 0.000 0 0.000 0
+
+---------------
+

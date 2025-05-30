@@ -1,0 +1,99 @@
+CONTROL PORT CM: 21217 FO: 22217
+
+/home/pengine/prod/live_execs/ors_control_exec <CONTROL_PORT> ADDTRADINGSYMBOL <SHORTCODE> <MAXPOS> <MAXORDERSIZE> <MAXWORSTCASEPOS> <MAXLIVEORDERS>
+
+/home/pengine/prod/live_scripts/ors_control.pl NSE <PROFILER> ADDTRADINGSYMBOL <SHORTCODE> <MAXPOS> <MAXORDERSIZE> <MAXWORSTCASEPOS> <MAXLIVEORDERS>
+
+/home/pengine/prod/live_execs/ors_control_exec <CONTROL_PORT> RELOADMARGINFILE
+
+/home/pengine/prod/live_scripts/ors_control.pl NSE <PROFILER> RELOADMARGINFILE
+
+/home/pengine/prod/live_execs/ors_control_exec <CONTROL_PORT> RELOADSECURITYMARGINFILE
+
+/home/pengine/prod/live_scripts/ors_control.pl NSE <PROFILER> RELOADSECURITYMARGINFILE
+
+/home/pengine/prod/live_execs/ors_control_exec <CONTROL_PORT> DUMPORSPOSITIONS
+
+/home/pengine/prod/live_scripts/ors_control.pl NSE <PROFILER> DUMPORSPOSITIONS
+
+/home/pengine/prod/live_execs/ors_control_exec <CONTROL_PORT> CLEARPOSITIONS
+
+/home/pengine/prod/live_scripts/ors_control.pl NSE <PROFILER> CLEARPOSITIONS	
+
+/home/pengine/prod/live_execs/ors_control_exec <CONTROL_PORT> RELOADROLLOVERFILE <SHORTCODE>
+
+/home/pengine/prod/live_scripts/ors_control.pl NSE <PROFILER> RELOADROLLOVERFILE <SHORTCODE>
+
+/home/pengine/prod/live_execs/ors_control_exec <CONTROL_PORT> STOP
+
+/home/pengine/prod/live_scripts/ors_control.pl NSE <PROFILER> STOP
+
+/home/pengine/prod/live_execs/ors_control_exec <CONTROL_PORT> START
+
+/home/pengine/prod/live_scripts/ors_control.pl NSE <PROFILER> START
+
+/home/pengine/prod/live_execs/ors_control_exec <CONTROL_PORT> STARTWITHOUTPLAYBACK
+
+/home/pengine/prod/live_scripts/ors_control.pl NSE <PROFILER> STARTWITHOUTPLAYBACK
+
+/home/pengine/prod/live_execs/ors_control_exec <CONTROL_PORT> LOGIN
+
+/home/pengine/prod/live_scripts/ors_control.pl NSE <PROFILER> LOGIN
+
+/home/pengine/prod/live_execs/ors_control_exec <CONTROL_PORT> LOGOUT
+
+/home/pengine/prod/live_scripts/ors_control.pl NSE <PROFILER> LOGOUT
+
+/home/pengine/prod/live_execs/ors_control_exec <CONTROL_PORT> LOADTRADINGSYMBOLFILE <FILENAME>
+
+/home/pengine/prod/live_scripts/ors_control.pl NSE <PROFILER> LOADTRADINGSYMBOLFILE <FILENAME>
+
+/home/pengine/prod/live_execs/ors_control_exec <CONTROL_PORT> ADDEXTERNALPOSITIONS <SECURITYNAME> <SACI> <POSITION> <BUY/SELL>
+
+/home/pengine/prod/live_scripts/ors_control.pl NSE <PROFILER> ADDEXTERNALPOSITIONS <SECURITYNAME> <SACI> <POSITION> <BUY/SELL>
+
+/home/pengine/prod/live_execs/ors_control_exec <CONTROL_PORT> DUMPSACIPositions <OUTPUTFILE> <SACICONFIG>
+
+/home/pengine/prod/live_scripts/ors_control.pl NSE <PROFILER> DUMPSACIPositions <OUTPUTFILE> <SACICONFIG>
+
+/home/pengine/prod/live_execs/ors_control_exec <CONTROL_PORT> DumpSecurityPositions <OUTPUTFILE>
+
+/home/pengine/prod/live_scripts/ors_control.pl NSE <PROFILER> DumpSecurityPositions <OUTPUTFILE>
+
+/home/pengine/prod/live_execs/ors_control_exec <CONTROL_PORT> SETORSPNLCHECK <PNL_VALUE>
+
+/home/pengine/prod/live_scripts/ors_control.pl NSE <PROFILER> SETORSPNLCHECK <PNL_VALUE>
+
+/home/pengine/prod/live_execs/ors_control_exec <CONTROL_PORT> SETGROSSMARGINCHECK <GROSS_MARGIN_VALUE>
+
+/home/pengine/prod/live_scripts/ors_control.pl NSE <PROFILER> SETGROSSMARGINCHECK <GROSS_MARGIN_VALUE>
+
+/home/pengine/prod/live_execs/ors_control_exec <CONTROL_PORT> SETNETMARGINCHECK <NET_MARGIN_VALUE>
+
+/home/pengine/prod/live_scripts/ors_control.pl NSE <PROFILER> SETNETMARGINCHECK <NET_MARGIN_VALUE>
+
+/home/pengine/prod/live_execs/ors_control_exec <CONTROL_PORT> UPDATEMARGINFACTOR <MARGIN_FACTOR_VALUE>
+
+/home/pengine/prod/live_scripts/ors_control.pl NSE <PROFILER> UPDATEMARGINFACTOR <MARGIN_FACTOR_VALUE>
+
+/home/pengine/prod/live_execs/ors_control_exec <CONTROL_PORT> UPDATESECURITYMARGIN  <SHORTCODE> <MARGIN_VALUE>
+
+/home/pengine/prod/live_scripts/ors_control.pl NSE <PROFILER> UPDATESECURITYMARGIN  <SHORTCODE> <MARGIN_VALUE>
+
+/home/pengine/prod/live_execs/ors_control_exec <CONTROL_PORT> DUMPORSPNLMARGINSTATUS
+
+/home/pengine/prod/live_scripts/ors_control.pl NSE <PROFILER> DUMPORSPNLMARGINSTATUS
+
+/home/pengine/prod/live_execs/ors_control_exec <CONTROL_PORT> GEN
+
+/home/pengine/prod/live_scripts/ors_control.pl NSE <PROFILER> GEN
+
+/home/pengine/prod/live_execs/ors_control_exec <CONTROL_PORT> DUMPALLORSPOSITIONS
+
+/home/pengine/prod/live_scripts/ors_control.pl NSE <PROFILER> DUMPALLORSPOSITIONS
+
+/home/pengine/prod/live_execs/ors_control_exec <CONTROL_PORT> CANCELLIVEORDERS
+
+/home/pengine/prod/live_scripts/ors_control.pl NSE <PROFILER> CANCELLIVEORDERS
+
+

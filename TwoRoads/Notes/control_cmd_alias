@@ -1,0 +1,98 @@
+
+/home/pengine/prod/live_execs/ors_control_exec <CM:21217/FO:22217> ADDTRADINGSYMBOL <SHORTCODE> <MAXPOS> <MAXORDERSIZE> <MAXWORSTCASEPOS> <MAXLIVEORDERS>
+
+/home/pengine/prod/live_scripts/ors_control.pl NSE <MSEQx/MSFOx> ADDTRADINGSYMBOL <SHORTCODE> <MAXPOS> <MAXORDERSIZE> <MAXWORSTCASEPOS> <MAXLIVEORDERS>
+
+/home/pengine/prod/live_execs/ors_control_exec <CM:21217/FO:22217> RELOADMARGINFILE
+
+/home/pengine/prod/live_scripts/ors_control.pl NSE <MSEQx/MSFOx> RELOADMARGINFILE
+
+/home/pengine/prod/live_execs/ors_control_exec <CM:21217/FO:22217> RELOADSECURITYMARGINFILE
+
+/home/pengine/prod/live_scripts/ors_control.pl NSE <MSEQx/MSFOx> RELOADSECURITYMARGINFILE
+
+/home/pengine/prod/live_execs/ors_control_exec <CM:21217/FO:22217> DUMPORSPOSITIONS
+
+/home/pengine/prod/live_scripts/ors_control.pl NSE <MSEQx/MSFOx> DUMPORSPOSITIONS
+
+/home/pengine/prod/live_execs/ors_control_exec <CM:21217/FO:22217> CLEARPOSITIONS
+
+/home/pengine/prod/live_scripts/ors_control.pl NSE <MSEQx/MSFOx> CLEARPOSITIONS	
+
+/home/pengine/prod/live_execs/ors_control_exec <CM:21217/FO:22217> RELOADROLLOVERFILE <SHORTCODE>
+
+/home/pengine/prod/live_scripts/ors_control.pl NSE <MSEQx/MSFOx> RELOADROLLOVERFILE <SHORTCODE>
+
+/home/pengine/prod/live_execs/ors_control_exec <CM:21217/FO:22217> STOP
+
+/home/pengine/prod/live_scripts/ors_control.pl NSE <MSEQx/MSFOx> STOP
+
+/home/pengine/prod/live_execs/ors_control_exec <CM:21217/FO:22217> START
+
+/home/pengine/prod/live_scripts/ors_control.pl NSE <MSEQx/MSFOx> START
+
+/home/pengine/prod/live_execs/ors_control_exec <CM:21217/FO:22217> STARTWITHOUTPLAYBACK
+
+/home/pengine/prod/live_scripts/ors_control.pl NSE <MSEQx/MSFOx> STARTWITHOUTPLAYBACK
+
+/home/pengine/prod/live_execs/ors_control_exec <CM:21217/FO:22217> LOGIN
+
+/home/pengine/prod/live_scripts/ors_control.pl NSE <MSEQx/MSFOx> LOGIN
+
+/home/pengine/prod/live_execs/ors_control_exec <CM:21217/FO:22217> LOGOUT
+
+/home/pengine/prod/live_scripts/ors_control.pl NSE <MSEQx/MSFOx> LOGOUT
+
+/home/pengine/prod/live_execs/ors_control_exec <CM:21217/FO:22217> LOADTRADINGSYMBOLFILE <FILENAME>
+
+/home/pengine/prod/live_scripts/ors_control.pl NSE <MSEQx/MSFOx> LOADTRADINGSYMBOLFILE <FILENAME>
+
+/home/pengine/prod/live_execs/ors_control_exec <CM:21217/FO:22217> ADDEXTERNALPOSITIONS <SECURITYNAME> <SACI> <POSITION> <BUY/SELL>
+
+/home/pengine/prod/live_scripts/ors_control.pl NSE <MSEQx/MSFOx> ADDEXTERNALPOSITIONS <SECURITYNAME> <SACI> <POSITION> <BUY/SELL>
+
+/home/pengine/prod/live_execs/ors_control_exec <CM:21217/FO:22217> DUMPSACIPositions <OUTPUTFILE> <SACICONFIG>
+
+/home/pengine/prod/live_scripts/ors_control.pl NSE <MSEQx/MSFOx> DUMPSACIPositions <OUTPUTFILE> <SACICONFIG>
+
+/home/pengine/prod/live_execs/ors_control_exec <CM:21217/FO:22217> DumpSecurityPositions <OUTPUTFILE>
+
+/home/pengine/prod/live_scripts/ors_control.pl NSE <MSEQx/MSFOx> DumpSecurityPositions <OUTPUTFILE>
+
+/home/pengine/prod/live_execs/ors_control_exec <CM:21217/FO:22217> SETORSPNLCHECK <PNL_VALUE>
+
+/home/pengine/prod/live_scripts/ors_control.pl NSE <MSEQx/MSFOx> SETORSPNLCHECK <PNL_VALUE>
+
+/home/pengine/prod/live_execs/ors_control_exec <CM:21217/FO:22217> SETGROSSMARGINCHECK <GROSS_MARGIN_VALUE>
+
+/home/pengine/prod/live_scripts/ors_control.pl NSE <MSEQx/MSFOx> SETGROSSMARGINCHECK <GROSS_MARGIN_VALUE>
+
+/home/pengine/prod/live_execs/ors_control_exec <CM:21217/FO:22217> SETNETMARGINCHECK <NET_MARGIN_VALUE>
+
+/home/pengine/prod/live_scripts/ors_control.pl NSE <MSEQx/MSFOx> SETNETMARGINCHECK <NET_MARGIN_VALUE>
+
+/home/pengine/prod/live_execs/ors_control_exec <CM:21217/FO:22217> UPDATEMARGINFACTOR <MARGIN_FACTOR_VALUE>
+
+/home/pengine/prod/live_scripts/ors_control.pl NSE <MSEQx/MSFOx> UPDATEMARGINFACTOR <MARGIN_FACTOR_VALUE>
+
+/home/pengine/prod/live_execs/ors_control_exec <CM:21217/FO:22217> UPDATESECURITYMARGIN  <SHORTCODE> <MARGIN_VALUE>
+
+/home/pengine/prod/live_scripts/ors_control.pl NSE <MSEQx/MSFOx> UPDATESECURITYMARGIN  <SHORTCODE> <MARGIN_VALUE>
+
+/home/pengine/prod/live_execs/ors_control_exec <CM:21217/FO:22217> DUMPORSPNLMARGINSTATUS
+
+/home/pengine/prod/live_scripts/ors_control.pl NSE <MSEQx/MSFOx> DUMPORSPNLMARGINSTATUS
+
+/home/pengine/prod/live_execs/ors_control_exec <CM:21217/FO:22217> GEN
+
+/home/pengine/prod/live_scripts/ors_control.pl NSE <MSEQx/MSFOx> GEN
+
+/home/pengine/prod/live_execs/ors_control_exec <CM:21217/FO:22217> DUMPALLORSPOSITIONS
+
+/home/pengine/prod/live_scripts/ors_control.pl NSE <MSEQx/MSFOx> DUMPALLORSPOSITIONS
+
+/home/pengine/prod/live_execs/ors_control_exec <CM:21217/FO:22217> CANCELLIVEORDERS
+
+/home/pengine/prod/live_scripts/ors_control.pl NSE <MSEQx/MSFOx> CANCELLIVEORDERS
+
+

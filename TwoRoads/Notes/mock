@@ -1,0 +1,104 @@
+/spare/local/tradeinfo/NSE_Files/RefData/nse_fo_20210205_contracts.txt
+/spare/local/tradeinfo/NSE_Files/SecuritiesMarginFiles/security_margin_20210206.txt
+/spare/local/tradeinfo/NSE_Files/RefData
+run from ~ : /home/dvctrader/ATHENA/run.sh
+
+generate files: the script is under important/handling_Updates in 5.26 dvctrader
+time ~/important/handling_Updates/mock_file_gen.sh 20210807
+
+/home/dvcinfra/raghu/SmartDaemonController.sh CONTROL_SHM_WRITER START
+virtual: ind20: /tmp/SmartDaemonController.sh ORS MSFO6 START KEEP
+dumpcancel: ind19: /tmp/SmartDaemonController.sh ORS MSFO5 START KEEP
+ind18: /tmp/SmartDaemonController.sh ORS MSEQ4 START KEEP
+
+
+BEFORE RUNNING TRADE ENGINE
+do change tradeengine id in run.sh 
+run the below command in IND14
+
+AFTER RUNNING TRADE ENGINE
+check START for the channels which are present , to confirm that we are receiving data in that channel
+
+ind14:
+/home/pengine/prod/live_scripts/SmartDaemonController.sh CONTROL_SHM_WRITER START
+/home/pengine/prod/live_scripts/SmartDaemonController.sh MCAST_FORWARD START
+/home/pengine/prod/live_scripts/SmartDaemonController.sh TBT_RM START NSE_FO
+/home/pengine/prod/live_scripts/SmartDaemonController.sh TBT_RM START NSE_EQ
+
+
+check addts done or not
+cmd: addts
+
+to send order for mocktest:
+
+ind18:
+LD_PRELOAD=/home/dvcinfra/important/libcrypto.so.1.1 /home/dvcinfra/important/multi_prod_console_trader ~/important/product_file_mock
+
+/home/pengine/prod/live_execs/nse_audit_log_reader AUDIT_IN NSE_EQ /spare/local/ORSlogs/NSE_EQ/MSEQ4/audit.43603.`date +%Y%m%d`.in | grep -a -i exec | less
+/home/pengine/prod/live_execs/nse_audit_log_reader AUDIT_IN NSE_EQ /spare/local/ORSlogs/NSE_EQ/MSEQ4/audit.43966.`date +%Y%m%d`.in | grep -a -i exec | less
+
+/home/pengine/prod/live_execs/nse_audit_log_reader AUDIT_IN NSE_EQ /spare/local/ORSlogs/NSE_EQ/MSEQ4/audit.43603.`date +%Y%m%d`.in | grep -a "error code: " | grep -a ProcessedOrderResponse | awk '{print $35}' | sort | uniq -c
+
+/home/pengine/prod/live_execs/nse_audit_log_reader AUDIT_IN NSE_EQ /spare/local/ORSlogs/NSE_EQ/MSEQ4/audit.43966.`date +%Y%m%d`.in | grep -a "error code: " | grep -a ProcessedOrderResponse | awk '{print $35}' | sort | uniq -c
+
+
+ind19:
+/home/dvcinfra/important/multi_prod_console_trader_new ~/important/product_file
+
+/home/pengine/prod/live_execs/nse_audit_log_reader AUDIT_IN NSE_FO /spare/local/ORSlogs/NSE_FO/MSFO5/audit.37709.`date +%Y%m%d`.in | grep -a -i exec | less
+
+/home/pengine/prod/live_execs/nse_audit_log_reader AUDIT_IN NSE_FO /spare/local/ORSlogs/NSE_FO/MSFO5/audit.36975.`date +%Y%m%d`.in | grep -a -i exec | less
+
+/home/pengine/prod/live_execs/nse_audit_log_reader AUDIT_IN NSE_FO /spare/local/ORSlogs/NSE_FO/MSFO5/audit.37709.`date +%Y%m%d`.in | grep -a "error code: " | less
+
+
+ind20:
+/home/dvcinfra/important/multi_prod_console_trader_new ~/important/product_file
+
+/home/pengine/prod/live_execs/nse_audit_log_reader AUDIT_IN NSE_FO /spare/local/ORSlogs/NSE_FO/MSFO6/audit.35693.`date +%Y%m%d`.in | grep -a -i exec | less
+
+/home/pengine/prod/live_execs/nse_audit_log_reader AUDIT_IN NSE_FO /spare/local/ORSlogs/NSE_FO/MSFO6/audit.34459.`date +%Y%m%d`.in | grep -a -i exec | less
+
+/home/pengine/prod/live_execs/nse_audit_log_reader AUDIT_IN NSE_FO /spare/local/ORSlogs/NSE_FO/MSFO6/audit.34459.`date +%Y%m%d`.in | grep -a "error code: " | less
+
+
+ind18 tradeengine:
+START STRAT:
+/home/dvctrader/ATHENA/run.sh (run from home)
+/home/pengine/prod/live_scripts/adjust_addts.sh
+/home/pengine/prod/live_execs/user_msg --traderid $i --start ;
+#for i in 123990 123991 123992 123993 123994 ; do /home/pengine/prod/live_execs/user_msg --traderid $i --start ; done
+If need to check whether the start got to particular strat or not, one can check in the tradelog files.
+
+STOP STRAT:
+/home/dvctrader/ATHENA/get_flat_running.sh (run from home)
+/home/pengine/prod/live_execs/user_msg --traderid $i --dumpposition
+/home/dvctrader/ATHENA/agg_get_flat_running.sh
+#/home/dvctrader/ATHENA/exit_running_strats.sh
+
+
+ind19 tradeengine:
+START STRAT:
+/home/dvctrader/ATHENA/run.sh (run from home)
+/home/dvctrader/ATHENA/run_midterm.sh
+/home/pengine/prod/live_scripts/adjust_addts.sh
+/home/pengine/prod/live_execs/user_msg --traderid $i --start ;
+#for i in 123991 123992 123993 ; do /home/pengine/prod/live_execs/user_msg --traderid $i --start ; done
+If need to check whether the start got to particular strat or not, one can check in the tradelog files.
+
+STOP START:
+for tid in 123991 123992 123993 ; do /home/dvctrader/ATHENA/stop_real_trading.sh $tid 1>/dev/null 2>/dev/null ; done
+
+
+ind20 tradeengine:
+START STRAT:
+/home/dvctrader/ATHENA/run.sh (run from home)
+/home/pengine/prod/live_scripts/adjust_addts.sh
+/home/pengine/prod/live_execs/user_msg --traderid $i --start ;
+#for i in 123881 123882 123883 123884 ; do /home/pengine/prod/live_execs/user_msg --traderid $i --start ; done
+If need to check whether the start got to particular strat or not, one can check in the tradelog files.
+
+STOP STRAT:
+for tid in 123881 123882 123883 123884 ; do /home/dvctrader/ATHENA/stop_real_trading.sh $tid 1>/dev/null 2>/dev/null ; done
+
+

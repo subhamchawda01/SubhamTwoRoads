@@ -1,0 +1,20 @@
+check_fetch_nse_daily_files_running.sh
+
+1. /tmp/nse_ref.err -> this file will have out put of fetch_nse_daily_files.sh
+2. reading last append line from /tmp/nse_ref.err and storing it in /tmp/mail_nse_ref.txt
+3. checking fetch_nse_daily_files.sh is running or not.
+4. if running send mail Fetch_nse is Still Running
+5. else running the below script:
+
+  /home/dvctrader/important/onexpiry/run_check_daily_files_raghu_mail.sh
+
+  1. storing server_ip in map.
+  2. for every server we are running this script /home/pengine/prod/live_scripts/check_daily_files_to_file.sh
+  3. in above script we are checking if the files download using fetch_nse_daily_files.sh are present in every server or not
+  4. if not present we are logging FILE NOT UPDATED to this file /tmp/check_daily_mail_file
+  5. for every server logging server name and failed files present in /tmp/check_daily_mail_file to mail_file=/tmp/run_check_daily_mail_file.html
+
+6. resyncing the data using /home/dvctrader/important/onexpiry/sync_trade_info.sh
+7. sending mail Fetch_nse is Stopped Running
+
+

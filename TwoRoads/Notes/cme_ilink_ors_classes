@@ -1,0 +1,119 @@
+################################################  CODE FLOW (ORS LOG /spare/local/ORSlogs/) ########################################################
+HFSAT::ORSUtils::ORSPnlManager
+
+1. ors_pnl_manager.SetORSStopPnl(p_settings_->getIntValue("ORSStopPnl", 0));
+----------------------------------------------------------------------------------------
+
+HFSAT::ORSUtils::ORSMarginManager
+
+1. ors_margin_manager.EnableMarginChecks();
+2. ors_margin_manager.SetGrossMarginCheck(atof(p_settings_->getValue("GrossMarginCheck").c_str()));
+3. ors_margin_manager.SetNetMarginCheck(atof(p_settings_->getValue("NetMarginCheck").c_str()));
+-----------------------------------------------------------------------------
+
+HFSAT::ORS::OrderManager
+
+1. setting the exchange source (NSE etc)
+2. functionality for order sent to exchange (getNewOrder, disableNewOrder, removeOrder)
+------------------------------------------------------------------
+
+HFSAT::BroadcastManager* bcast_manager_
+
+broadcast write to shm and tradeengne read it,,  (write about rejects, mssg from exchange etc)
+
+1. creating object and passing {bcast_ip_, bcast_port_, (atoi(p_settings_->getValue("Client_Base").c_str())) << 16}
+2. in BroadcastManager constructor creating obj (broadcaster_ = new Broadcaster(t_dbglogger_, bcast_ip_, bcast_port_, base_writer_id);
+3. order_manager_(HFSAT::ORS::OrderManager::GetUniqueInstance()) ,mds_shm_interface_(HFSAT::Utils::ORSReplyShmInterface::GetUniqueInstance()), use_shm_for_ors_reply_(true).
+4. queue_ = new boost::lockfree::queue<GenericORSReplyStructLiveProShm>(100);
+5. mds_shm_interface_.Initialize(); InitializeThreadSafeSHM (ors_reply_shm_interface.hpp)
+6. bcast_manager_->StartThread();
+   We want the replies to reach as fast as it can to the awaiting clients,
+
+   GenericORSReplyStructLiveProShm reply_struct; (symbol_, price_, client_request_time_,
+   server_assigned_client_id_; (unique identifier of the client whose order this pertains to. Set in a way such that this is unique across all exchanges or rather OrderRoutingServers.Suppose each ORS is given a number ( ORS_ID ) from 1 to 255. Base client id is a unique number from 0x00000001 to 0x00001111. Hence Final client id could be (ORS_ID << 16 ) | BaseClientId)
+
+   queue_->pop(reply_struct);
+   multicast_sender_socket_.WriteN(sizeof(reply_struct), &reply_struct);
+--------------------------------------------------------------------------
+
+HFSAT::ORS::PositionManager::GetUniqueInstance().SetBaseWriterId(atoi(p_settings_->getValue("Client_Base").c_str()));
+
+class PositionManager (Class that is used by MarginChecker to make sure that positions never exceed MaxPosition and WorstCaseMaxPos)
+
+void DumpPMRecovery(); (Write the position manager's state to the specified file, to be used for recovery at next startup --)
+
+PositionManager::DumpSACIPosition() (SACI based Position, using Clien_base)
+--------------------------------------------------------------------------------
+
+HFSAT::ORS::MarginChecker::GetUniqueInstance(exchanges name)
+
+This make sure that positions never exceed MaxPosition and WorstCaseMaxPos
+----------------------------------------------------------------------------------
+
+HFSAT::ORS::AccountManager::GetNewAccountThread(HFSAT::ORS::OrderManager::GetUniqueInstance(), *p_settings_);
+
+1. calling AccountThread* _GetNewAccountThread and creating a account thread.
+2. Initialize(t_output_log_dir_); (Initialize engine and heartbeat manager based on exchange)
+   p_base_engine_ = makeMultiSessionEngine(exchange, m_settings, dbglogger_, t_output_log_dir_); (account_thread.cpp)
+   BaseEngine* en = nullptr;
+   BaseEngine object -- en = new MultiSessionEngine<HFSAT::NSE::NSEEngine>(settings, logger, output_log_dir, ex); (multisession_engine.cpp)
+   class MultiSessionEngine : public BaseEngine
+   MultiSessionEngine(...): BaseEngine(settings, logger)...
+   a. we are creating different multisession NSE engine based on the configration file.(MSES: sessions:, MSES: sessions id:)
+
+   thread_main() (multisession_engine.cpp)
+   p_base_engine_->setListener(this); (account_thread.cpp)
+   AccountThread::Connect() {
+    if (!connected_) {
+      p_base_engine_->Connect();
+      p_base_engine_->run(); (starts base engine)
+    else
+      ORSControllerThread::thread_main() (Sends heartbeat requests currently)
+
+this will use p_base_engine_ obj an will call BaseEngine functions (start BaseEngine, login, logout, connect, disconnect, sendorder, receiveorder, cancelorder, modifyorder)
+-----------------------------------------------------------------------------------
+
+HFSAT::ORS::ControlReceiver control_receiver_(dbglogger_, *p_settings_, client_logging_segment_initializer_ptr,vm["output-log-dir"].as<std::string>());
+p_global_control_receiver_ = &control_receiver_;
+control_receiver_.run(); (starting control thread)
+
+1. ControlReceiver constructor we are calling LoadMarginFile();
+2. creating thread for ControlReceiver control_receiver_.run(); (calling ControlReceiver::thread_main)
+3. ControlThread* _new_control_thread_ = new ControlThread(dbglogger_, connected_socket_file_descriptor_, settings_,
+   client_logging_segment_initializer_, output_log_dir_, sec_to_max_pos_map_, sec_to_max_ord_sz_map_, this, thread_id, is_addts_thread_running_);
+4. in ControlThread constructor calling below functions:
+   LoadNSEFOSecuritiesUnderBan();
+   LoadNSEFOSecuritiesUnderPhysicalSettlement();
+   LoadNSESecuritiesUnderUnsolicitedSMSList();
+5. creating thread for ControlThread which will execute different cases based on input : kAddTradingSymbol,kReloadMarginFile (_new_control_thread_->run());
+-----------------------------------------------------------------------------------------
+
+HFSAT::ORS::ShmClientReceiver(dbglogger_, *p_settings_, p_settings_->getValue("Exchange"));
+
+1. Get the write id, so we can know which client thread
+2. reading data from shared memory (reader->readTNonBlocking(ors_request);)
+3. processing client request (client_request_processor_->ProcessClientRequest(ors_request.data, ors_request.writer_id);)
+4. ProcessClientRequest function switch cases : ProcessOrderSendRequest, ProcessOrderCancelRequest, ProcessOrderCancelRequest,
+                                                ProcessOrderCancelRequest, ProcessExchangeTCPReadRequest....
+-------------------------------------------------------------------------------------------
+
+HFSAT::ORS::ORSControllerThread::SetUniqueInstance(dbglogger_, *p_settings_);
+functions -- AddRequest(GenericORSRequestStruct& req); WriteRequestToSHM(ORQType_t type); ProcessRequestQueue();
+
+ProcessRequestQueue:
+ WriteRequestToSHM(ORQ_PROCESS_QUEUE); or queue_->pop(request);
+
+WriteRequestToSHM:
+ recovery_request.writer_id = client_id_;
+ recovery_request.data.orq_request_type_ = type;  // Heartbeat request
+ shm_writer_->writeT(recovery_request);
+ 
+
+1. shm_writer_ = new SharedMemWriter<GenericORSRequestStruct>(exch_source_); (writes the data to shm)
+2. client_id_ = shm_writer_->intilizeWriter(); (failed Can't initialize, shared memory are not allocated. Start Reader first...)
+   setWriterId();
+3. ControllerThread (thread_main) will 
+   ProcessRequestQueue();
+   SendFakeSendRequest();
+   WriteRequestToSHM(ORQ_HEARTBEAT);
+

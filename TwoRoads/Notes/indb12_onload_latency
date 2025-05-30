@@ -1,0 +1,286 @@
+
+[ root@sdv-indb-srv12 /tmp/cns-sfnettest/src ] onload --profile=latency taskset -c 4 ./sfnt-pingpong --affinity "4;4" tcp 192.168.132.11
+oo:sfnt-pingpong[108103]: Using OpenOnload 201805-u1 Copyright 2006-2018 Solarflare Communications, 2002-2005 Level 5 Networks [6]
+# cmdline: ./sfnt-pingpong --affinity 4;4 tcp 192.168.132.11
+# version: no-version
+# src: 2b01b02a25134b95306a16c81ae1d4bb
+# date: Wed Aug 17 00:13:50 GMT 2022
+# uname: Linux sdv-indb-srv12 3.10.0-862.14.4.el7.x86_64 #1 SMP Wed Sep 26 15:12:11 UTC 2018 x86_64 x86_64 x86_64 GNU/Linux
+# cpu: model name	: Intel(R) Core(TM) i9-7900X CPU @ 3.30GHz
+# lspci: 00:1f.6 Ethernet controller: Intel Corporation Ethernet Connection (2) I219-V
+# lspci: 65:00.0 Ethernet controller: Solarflare Communications SFC9220 10/40G Ethernet Controller (rev 02)
+# lspci: 65:00.1 Ethernet controller: Solarflare Communications SFC9220 10/40G Ethernet Controller (rev 02)
+# eno1: driver: e1000e
+# eno1: version: 3.2.6-k
+# eno1: bus-info: 0000:00:1f.6
+# enp101s0f0: driver: sfc
+# enp101s0f0: version: 4.14.0.1014
+# enp101s0f0: bus-info: 0000:65:00.0
+# enp101s0f1: driver: sfc
+# enp101s0f1: version: 4.14.0.1014
+# enp101s0f1: bus-info: 0000:65:00.1
+# ram: MemTotal:       32622156 kB
+# tsc_hz: 3312057557
+# LD_PRELOAD=libonload.so
+# onload_version=201805-u1
+# EF_TCP_FASTSTART_INIT=0
+# EF_POLL_USEC=100000
+# EF_TCP_FASTSTART_IDLE=0
+# server LD_PRELOAD=libonload.so
+# percentile=99
+#
+#	size	mean	min	median	max	%ile	stddev	iter
+	1	41297	21385	50763	57397	52640	11963	37000
+	2	41312	20896	50801	55379	52643	11996	37000
+	4	41303	24259	50785	54946	52633	11980	37000
+	8	41566	20659	50830	73616	52667	11980	37000
+	16	41381	23664	50666	54844	52653	11879	37000
+	32	42239	22101	50629	56348	52689	11665	36000
+	64	42280	27223	50643	53931	53060	11536	36000
+	128	46825	22133	52544	56171	53286	9765	32000
+	256	52877	27559	52778	57079	54797	609	29000
+	512	53077	28924	52661	58318	56036	1053	29000
+	1024	55116	36679	52484	78723	64115	4717	28000
+	2048	72296	50998	78696	99482	98710	16822	21000
+	4096	93995	77238	97882	122992	106373	9295	16000
+	8192	155097	123754	128303	284506	256793	44878	10000
+	16384	254434	250299	254354	385092	255177	3947	6000
+	32768	422777	376328	408899	686302	507087	52222	4000
+	65536	731008	682804	687151	1109837	946209	74309	3000
+[ root@sdv-indb-srv12 /tmp/cns-sfnettest/src ] 
+
+
+[ root@sdv-indb-srv12 /tmp/cns-sfnettest/src ] onload --profile=latency-best taskset -c 4 ./sfnt-pingpong --affinity "4;4" tcp 192.168.132.11
+oo:sfnt-pingpong[110798]: Using OpenOnload 201805-u1 Copyright 2006-2018 Solarflare Communications, 2002-2005 Level 5 Networks [5]
+# cmdline: ./sfnt-pingpong --affinity 4;4 tcp 192.168.132.11
+# version: no-version
+# src: 2b01b02a25134b95306a16c81ae1d4bb
+# date: Wed Aug 17 00:30:55 GMT 2022
+# uname: Linux sdv-indb-srv12 3.10.0-862.14.4.el7.x86_64 #1 SMP Wed Sep 26 15:12:11 UTC 2018 x86_64 x86_64 x86_64 GNU/Linux
+# cpu: model name	: Intel(R) Core(TM) i9-7900X CPU @ 3.30GHz
+# lspci: 00:1f.6 Ethernet controller: Intel Corporation Ethernet Connection (2) I219-V
+# lspci: 65:00.0 Ethernet controller: Solarflare Communications SFC9220 10/40G Ethernet Controller (rev 02)
+# lspci: 65:00.1 Ethernet controller: Solarflare Communications SFC9220 10/40G Ethernet Controller (rev 02)
+# eno1: driver: e1000e
+# eno1: version: 3.2.6-k
+# eno1: bus-info: 0000:00:1f.6
+# enp101s0f0: driver: sfc
+# enp101s0f0: version: 4.14.0.1014
+# enp101s0f0: bus-info: 0000:65:00.0
+# enp101s0f1: driver: sfc
+# enp101s0f1: version: 4.14.0.1014
+# enp101s0f1: bus-info: 0000:65:00.1
+# ram: MemTotal:       32622156 kB
+# tsc_hz: 3312057699
+# LD_PRELOAD=libonload.so
+# onload_version=201805-u1
+# EF_TCP_FASTSTART_INIT=0
+# EF_CTPIO_MODE=ct
+# EF_CTPIO_SWITCH_BYPASS=1
+# EF_POLL_USEC=100000
+# EF_TCP_FASTSTART_IDLE=0
+# EF_EPOLL_MT_SAFE=1
+# server LD_PRELOAD=libonload.so
+# percentile=99
+#
+#	size	mean	min	median	max	%ile	stddev	iter
+	1	41471	23720	50789	54894	52663	11952	37000
+	2	41481	23793	50852	54532	52658	12006	37000
+	4	41542	23792	50849	54358	52662	11977	37000
+	8	41811	20294	50951	55786	52684	11965	36000
+	16	41852	23690	50794	55425	52690	11859	36000
+	32	46795	22579	52069	55627	53006	9988	33000
+	64	49400	22205	52811	56730	53211	8169	31000
+	128	49607	21936	52804	69727	53192	7744	31000
+	256	52856	27179	52765	55532	54718	530	29000
+	512	52850	49702	52661	68533	55820	757	29000
+	1024	52388	50953	52404	62746	52839	240	29000
+	2048	67697	50977	78298	98959	88038	15384	23000
+	4096	93746	77087	97864	123473	122278	10255	16000
+	8192	154174	124249	128226	284261	256801	44262	10000
+	16384	255051	250982	254348	514572	255298	10690	6000
+	32768	422629	377220	408829	674716	507509	52326	4000
+	65536	730902	681966	687303	1100402	946089	71956	3000
+[ root@sdv-indb-srv12 /tmp/cns-sfnettest/src ] 
+
+
+
+[ root@sdv-indb-srv12 /tmp/cns-sfnettest/src ] onload --profile=latency taskset -c 4 ./sfnt-pingpong --affinity "4;4" udp 192.168.132.11
+oo:sfnt-pingpong[108620]: Using OpenOnload 201805-u1 Copyright 2006-2018 Solarflare Communications, 2002-2005 Level 5 Networks [3]
+# cmdline: ./sfnt-pingpong --affinity 4;4 udp 192.168.132.11
+# version: no-version
+# src: 2b01b02a25134b95306a16c81ae1d4bb
+# date: Wed Aug 17 00:18:43 GMT 2022
+# uname: Linux sdv-indb-srv12 3.10.0-862.14.4.el7.x86_64 #1 SMP Wed Sep 26 15:12:11 UTC 2018 x86_64 x86_64 x86_64 GNU/Linux
+# cpu: model name	: Intel(R) Core(TM) i9-7900X CPU @ 3.30GHz
+# lspci: 00:1f.6 Ethernet controller: Intel Corporation Ethernet Connection (2) I219-V
+# lspci: 65:00.0 Ethernet controller: Solarflare Communications SFC9220 10/40G Ethernet Controller (rev 02)
+# lspci: 65:00.1 Ethernet controller: Solarflare Communications SFC9220 10/40G Ethernet Controller (rev 02)
+# eno1: driver: e1000e
+# eno1: version: 3.2.6-k
+# eno1: bus-info: 0000:00:1f.6
+# enp101s0f0: driver: sfc
+# enp101s0f0: version: 4.14.0.1014
+# enp101s0f0: bus-info: 0000:65:00.0
+# enp101s0f1: driver: sfc
+# enp101s0f1: version: 4.14.0.1014
+# enp101s0f1: bus-info: 0000:65:00.1
+# ram: MemTotal:       32622156 kB
+# tsc_hz: 3312058339
+# LD_PRELOAD=libonload.so
+# onload_version=201805-u1
+# EF_TCP_FASTSTART_INIT=0
+# EF_POLL_USEC=100000
+# EF_TCP_FASTSTART_IDLE=0
+# server LD_PRELOAD=libonload.so
+# percentile=99
+#
+#	size	mean	min	median	max	%ile	stddev	iter
+	0	49676	25526	52155	54150	52646	7644	31000
+	1	49770	25671	52156	53935	52646	7511	31000
+	2	49671	25733	52158	59037	52656	7654	31000
+	4	49808	25575	52147	57118	52641	7445	31000
+	8	49817	25834	52150	54161	52648	7438	31000
+	16	49690	25817	52156	55421	52666	7626	31000
+	32	50284	26008	52157	53321	52660	6738	30000
+	64	51782	26268	52175	53454	52720	3286	29000
+	128	52640	26397	52640	54105	53065	308	29000
+	256	52648	24427	52610	56342	53915	520	29000
+	512	53076	29431	52509	79586	56545	1355	29000
+	1024	55111	41774	52320	81067	64249	4909	28000
+	1472	61077	50078	52385	92243	70981	9128	25000
+	1473	62320	50964	69503	95685	73389	9329	25000
+	2048	98637	51291	99284	101144	100116	4869	16000
+	4096	99216	81526	99366	109401	100376	737	16000
+	8192	144841	108286	147389	178122	176179	15469	11000
+	16384	246609	196260	245012	386191	315203	13913	7000
+	32768	446118	366280	436665	650151	555642	62107	4000
+[ root@sdv-indb-srv12 /tmp/cns-sfnettest/src ] 
+
+
+[ root@sdv-indb-srv12 /tmp/cns-sfnettest/src ] onload --profile=latency-best taskset -c 4 ./sfnt-pingpong --affinity "4;4" udp 192.168.132.11
+oo:sfnt-pingpong[110250]: Using OpenOnload 201805-u1 Copyright 2006-2018 Solarflare Communications, 2002-2005 Level 5 Networks [0]
+# cmdline: ./sfnt-pingpong --affinity 4;4 udp 192.168.132.11
+# version: no-version
+# src: 2b01b02a25134b95306a16c81ae1d4bb
+# date: Wed Aug 17 00:28:41 GMT 2022
+# uname: Linux sdv-indb-srv12 3.10.0-862.14.4.el7.x86_64 #1 SMP Wed Sep 26 15:12:11 UTC 2018 x86_64 x86_64 x86_64 GNU/Linux
+# cpu: model name	: Intel(R) Core(TM) i9-7900X CPU @ 3.30GHz
+# lspci: 00:1f.6 Ethernet controller: Intel Corporation Ethernet Connection (2) I219-V
+# lspci: 65:00.0 Ethernet controller: Solarflare Communications SFC9220 10/40G Ethernet Controller (rev 02)
+# lspci: 65:00.1 Ethernet controller: Solarflare Communications SFC9220 10/40G Ethernet Controller (rev 02)
+# eno1: driver: e1000e
+# eno1: version: 3.2.6-k
+# eno1: bus-info: 0000:00:1f.6
+# enp101s0f0: driver: sfc
+# enp101s0f0: version: 4.14.0.1014
+# enp101s0f0: bus-info: 0000:65:00.0
+# enp101s0f1: driver: sfc
+# enp101s0f1: version: 4.14.0.1014
+# enp101s0f1: bus-info: 0000:65:00.1
+# ram: MemTotal:       32622156 kB
+# tsc_hz: 3312056926
+# LD_PRELOAD=libonload.so
+# onload_version=201805-u1
+# EF_TCP_FASTSTART_INIT=0
+# EF_CTPIO_MODE=ct
+# EF_CTPIO_SWITCH_BYPASS=1
+# EF_POLL_USEC=100000
+# EF_TCP_FASTSTART_IDLE=0
+# EF_EPOLL_MT_SAFE=1
+# server LD_PRELOAD=libonload.so
+# percentile=99
+#
+#	size	mean	min	median	max	%ile	stddev	iter
+	0	49735	25713	52148	66093	52634	7557	31000
+	1	49797	25794	52147	55439	52639	7464	31000
+	2	49713	25747	52147	58287	52651	7581	31000
+	4	49700	25683	52147	54404	52645	7597	31000
+	8	49774	25768	52144	55793	52631	7489	31000
+	16	49852	25653	52153	53441	52654	7390	31000
+	32	50138	25934	52152	53835	52679	6962	30000
+	64	51338	26205	52169	71922	52714	4641	30000
+	128	52639	23901	52644	55259	52968	438	29000
+	256	52627	22881	52606	55513	53641	417	29000
+	512	53037	33731	52505	57756	56543	1300	29000
+	1024	55111	41294	52316	83930	64226	4916	28000
+	1472	61111	50829	52416	79653	71003	9117	25000
+	1473	61887	50827	69441	99265	73135	9305	25000
+	2048	93238	51193	99188	101536	100216	11771	17000
+	4096	100223	77598	99435	124499	122460	4635	15000
+	8192	153545	108286	151072	281025	176625	16169	10000
+	16384	245042	230689	244997	310772	246671	1688	7000
+	32768	435648	356293	436109	650369	555144	63426	4000
+[ root@sdv-indb-srv12 /tmp/cns-sfnettest/src ] 
+
+
+[ root@sdv-indb-srv12 /tmp/netperf-netperf-2.7.0/src ] onload --profile=latency-best taskset -c 4 ./netperf -t TCP_RR -H 192.168.132.11 -l 10 -- -r 32
+oo:netperf[1968]: Using OpenOnload 201805-u1 Copyright 2006-2018 Solarflare Communications, 2002-2005 Level 5 Networks [2]
+MIGRATED TCP REQUEST/RESPONSE TEST from 0.0.0.0 (0.0.0.0) port 0 AF_INET to 192.168.132.11 () port 0 AF_INET : first burst 0
+Local /Remote
+Socket Size   Request  Resp.   Elapsed  Trans.
+Send   Recv   Size     Size    Time     Rate         
+bytes  Bytes  bytes    bytes   secs.    per sec   
+
+16384  87380  32       32      10.00    10180.30   
+16384  87380 
+[ root@sdv-indb-srv12 /tmp/netperf-netperf-2.7.0/src ] 
+[ root@sdv-indb-srv12 /tmp/netperf-netperf-2.7.0/src ] onload --profile=latency-best taskset -c 4 ./netperf -t TCP_RR -H 192.168.132.11 -l 10 -- -r 64
+oo:netperf[2005]: Using OpenOnload 201805-u1 Copyright 2006-2018 Solarflare Communications, 2002-2005 Level 5 Networks [0]
+MIGRATED TCP REQUEST/RESPONSE TEST from 0.0.0.0 (0.0.0.0) port 0 AF_INET to 192.168.132.11 () port 0 AF_INET : first burst 0
+Local /Remote
+Socket Size   Request  Resp.   Elapsed  Trans.
+Send   Recv   Size     Size    Time     Rate         
+bytes  Bytes  bytes    bytes   secs.    per sec   
+
+16384  87380  64       64      10.00    12644.06   
+16384  87380 
+[ root@sdv-indb-srv12 /tmp/netperf-netperf-2.7.0/src ] 
+[ root@sdv-indb-srv12 /tmp/netperf-netperf-2.7.0/src ] 
+[ root@sdv-indb-srv12 /tmp/netperf-netperf-2.7.0/src ] 
+[ root@sdv-indb-srv12 /tmp/netperf-netperf-2.7.0/src ] onload --profile=latency-best taskset -c 4 ./netperf -t UDP_RR -H 192.168.132.11 -l 10 -- -r 64
+oo:netperf[2141]: Using OpenOnload 201805-u1 Copyright 2006-2018 Solarflare Communications, 2002-2005 Level 5 Networks [3]
+MIGRATED UDP REQUEST/RESPONSE TEST from 0.0.0.0 (0.0.0.0) port 0 AF_INET to 192.168.132.11 () port 0 AF_INET : first burst 0
+Local /Remote
+Socket Size   Request  Resp.   Elapsed  Trans.
+Send   Recv   Size     Size    Time     Rate         
+bytes  Bytes  bytes    bytes   secs.    per sec   
+
+212992 212992 64       64      10.00    10016.52   
+212992 212992
+[ root@sdv-indb-srv12 /tmp/netperf-netperf-2.7.0/src ] 
+[ root@sdv-indb-srv12 /tmp/netperf-netperf-2.7.0/src ] onload --profile=latency-best taskset -c 4 ./netperf -t UDP_RR -H 192.168.132.11 -l 10 -- -r 32
+oo:netperf[2192]: Using OpenOnload 201805-u1 Copyright 2006-2018 Solarflare Communications, 2002-2005 Level 5 Networks [1]
+MIGRATED UDP REQUEST/RESPONSE TEST from 0.0.0.0 (0.0.0.0) port 0 AF_INET to 192.168.132.11 () port 0 AF_INET : first burst 0
+Local /Remote
+Socket Size   Request  Resp.   Elapsed  Trans.
+Send   Recv   Size     Size    Time     Rate         
+bytes  Bytes  bytes    bytes   secs.    per sec   
+
+212992 212992 32       32      10.00    10060.83   
+212992 212992
+[ root@sdv-indb-srv12 /tmp/netperf-netperf-2.7.0/src ] 
+
+
+[ root@sdv-indb-srv12 /home/tools/openonload-201805-u1/build/gnu_x86_64/tests/zf_apps/static ] ZF_ATTR="interface=enp101s0f1;ctpio_mode=ct" taskset -c 4 ./zftcppingpong -s 32 ping 192.168.132.11:20000
+Connecting to ponger
+Connection established
+mean round-trip time: 2.987 usec
+[ root@sdv-indb-srv12 /home/tools/openonload-201805-u1/build/gnu_x86_64/tests/zf_apps/static ] 
+
+
+[ root@sdv-indb-srv12 /home/tools/openonload-201805-u1/build/gnu_x86_64/tests/zf_apps/static ] ZF_ATTR="interface=enp101s0f0;ctpio_mode=ct" taskset -c 4 ./zfudppingpong -s 32 ping 192.168.132.12:20000 192.168.132.11:20000
+mean round-trip time: 2.965 usec
+[ root@sdv-indb-srv12 /home/tools/openonload-201805-u1/build/gnu_x86_64/tests/zf_apps/static ] 
+
+
+[ root@sdv-indb-srv12 /home/tools/openonload-201805-u1/build/gnu_x86_64/tests/ef_vi ] taskset -c 4 ./eflatency -s 32 ping enp101s0f0
+# ef_vi_version_str: 201805-u1
+# udp payload len: 32
+# iterations: 100000
+# warmups: 10000
+# frame len: 74
+# mode: Alternatives
+mean round-trip time: 2.929 usec
+[ root@sdv-indb-srv12 /home/tools/openonload-201805-u1/build/gnu_x86_64/tests/ef_vi ] 
+

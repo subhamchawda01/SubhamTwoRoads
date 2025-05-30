@@ -1,0 +1,33 @@
+Summary for tag No virtual, 1 fun, PBase->DERobj :: Mean:65472	Median: 65472	90th: 65472	95th: 65472	99th: 65472	99.9th: 65472	Min: 65472	Max: 65472	count: 1
+
+
+Summary for tag virtual, 1 fun, PBase->DERobj :: Mean:29344	Median: 29344	90th: 29344	95th: 29344	99th: 29344	99.9th: 29344	Min: 29344	Max: 29344	count: 1
+
+
+Summary for tag virtual, 1 fun, PDer->DERobj :: Mean:28288	Median: 28288	90th: 28288	95th: 28288	99th: 28288	99.9th: 28288	Min: 28288	Max: 28288	count: 1
+
+
+Summary for tag virtual, 1 fun, 3 class multiinheritance, PBase->DERobj :: Mean:73472	Median: 73472	90th: 73472	95th: 73472	99th: 73472	99.9th: 73472	Min: 73472	Max: 73472	count: 1
+
+
+Summary for tag virtual, 1 fun, 3 class multiinheritance, PDer->DERobj :: Mean:73728	Median: 73728	90th: 73728	95th: 73728	99th: 73728	99.9th: 73728	Min: 73728	Max: 73728	count: 1
+
+
+Summary for tag no virtual, 1 fun, 3 class multiinheritance, PDer->DERobj :: Mean:71168	Median: 71168	90th: 71168	95th: 71168	99th: 71168	99.9th: 71168	Min: 71168	Max: 71168	count: 1
+
+
+Summary for tag pure virtual, 1 fun, 3 class multiinheritance, PDer->DERobj :: Mean:83712	Median: 83712	90th: 83712	95th: 83712	99th: 83712	99.9th: 83712	Min: 83712	Max: 83712	count: 1
+
+
+Summary for tag pure virtual, 1 fun, 3 class multiinheritance, PBase->DERobj :: Mean:85120	Median: 85120	90th: 85120	95th: 85120	99th: 85120	99.9th: 85120	Min: 85120	Max: 85120	count: 1
+
+
+Summary for tag virtual, 4 fun, 2 class, PBase->DERobj :: Mean:81280	Median: 81280	90th: 81280	95th: 81280	99th: 81280	99.9th: 81280Min: 81280	Max: 81280	count: 1
+
+
+Summary for tag virtual, 4 fun, 2 class, PDer->DERobj :: Mean:81024	Median: 81024	90th: 81024	95th: 81024	99th: 81024	99.9th: 81024Min: 81024	Max: 81024	count: 1
+
+
+Summary for tag no virtual, 4 fun, 2 class, PDer->DERobj :: Mean:77312	Median: 77312	90th: 77312	95th: 77312	99th: 77312	99.9th: 77312Min: 77312	Max: 77312	count: 1
+
+

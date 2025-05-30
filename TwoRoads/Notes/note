@@ -1,0 +1,731 @@
+
+5. valgrind --tool=cachegrind --cachegrind-out-file=/home/dvctrader/important/subham/strat_cache/cachegrind.out --log-file=/home/dvctrader/important/subham/strat_cache/cachegrind.summary --cache-sim=yes --branch-sim=yes <exec>
+
+
+python /home/dvctrader/subham/source/tradeengine/scripts/create_simulations.py --strat_list_file /home/dvctrader/RESULTS_FRAMEWORK/strats_new/live_file_list --date_file /home/dvctrader/RESULTS_FRAMEWORK/strats_new/dates_list_new --base_folder /home/dvctrader/RESULTS_FRAMEWORK/base_results/ --num_workers 20 /home/dvctrader/subham/source/tradeengine/trade_engine 20201215 > /tmp/mismatch_test_`date +%Y%m%d` &
+
+./trade_engine /home/dvctrader/RESULTS_FRAMEWORK/strats_new/CONFIG_NSE_CM_LP_202004/LIVE_FILE_JZ.csv 20201203 IST_915 IST_1530 802 > output &
+
+./trade_engine_live /home/dvctrader/ATHENA/CONFIG_CM_NON_FO_202008/LIVE_FILE_AD.csv 20210109 IST_1140 IST_1900 909090 > heartbeat_test 2>&1
+
+gdb --args ./trade_engine /home/dvctrader/RESULTS_FRAMEWORK/strats_new/CONFIG_NSE_CM_LP_202004/LIVE_FILE_JZ.csv 20201203 IST_915 IST_1530 800002
+
+    
+/home/pengine/prod/live_scripts/ors_control.pl NSE MSEQ9 ADDTRADINGSYMBOL NSE_SBIN 3 3 3 3
+
+/home/pengine/prod/live_scripts/ors_control.pl NSE MSEQ9 DUMPALLORSPOSITIONS
+
+/home/pengine/prod/live_scripts/ors_control.pl NSE MSEQ9 CANCELLIVEORDERS
+
+/home/pengine/prod/live_execs/nse_audit_log_reader AUDIT_IN NSE_EQ /spare/local/ORSlogs/NSE_EQ/MSEQ9/audit.43606.`date +%Y%m%d`.in | egrep -a 'SBIN'
+
+/home/pengine/prod/live_execs/console_trader
+----------------------------------------------------------------------------------------------------
+
+how are we reading order file 
+how are we communicating with ors using shm
+how are we waiting for reply
+implementation : force cancel when an order is stuct
+
+
+post market baselive trade ,GetReadTimeStampCounter
+wait of 5min (start)
+test with current repo gcc
+
+root@sdv-ind-srv21 ~]# cat /etc/ld.so.conf.d/gcc_local.conf 
+/apps/gcc_versions/gcc-6_3_install/lib64
+
+ldd exec
+libstdc++.so.6 => /apps/gcc_versions/gcc-6_3_install/lib64/libstdc++.so.6 (0x00007f7682229000)ss
+
+
+awk '{split($3,a,".");printf "%s %d %d %0.3f\n",a[1],$4,$5,$6}' our_extended_BULK.IND16.log | sort -k 1 > /tmp/tradecomparesort
+--------------------------------------------------------------
+
+apps/boost/tools build
+./boost-git/tools/build/src/tools/gcc.jam
+/apps/boost/boost-git/tools/build/src/tools/gcc.jam
+bjam -n will not build 
+
+-------------------------------------------------------------
+
+for prod in NSE_SBIN NSE_JINDALSTEL NSE_HINDALCO NSE_BANDHANBNK NSE_JSWSTEEL NSE_BPCL NSE_BANKBARODA NSE_PNB NSE_ONGC NSE_TATAPOWER NSE_GAIL NSE_ASHOKLEY ; do /home/pengine/prod/live_execs/ors_control.pl NSE MSEQ9 ADDTRADINGSYMBOL $prod ; done;
+
+-----------------------------------------------------------
+
+if there is settlement holiday we wait for day and close it
+
+---------------------------------------------------------------------------------------------------------------------
+
+basetrade:  Multi_book_Mkt_Trade_logger
+
+File:  Tools/bar_data_generation.cpp 
+@subham, this file u can actually debug and u have to check the bug
+I'm sure there is some bug in that due to which it gets stuck
+u can run for some random date and check initially for ur understanding
+and I might have the details regarding the issue date during which we faced that issue
+for that u can run the exec after that
+
+
+oebu market book generate
+
+whenever there is inaccessability issues is there , there will be trade miss match due to which audit file generation will get effected will get missmatch , so to regenerate the details, i have to generated the audit file from trade export file
+convert trader export file to audit file, no audit file there is format , refer below script , currently we are using audit file to convert it , need to use trade export file for convertion (cannot convert tradeexport to audit because some details are not present)
+ script which i need to refer for tradefile convertion task
+[ root@sdv-ny4-srv67 /home/dvcinfra ] crontab -l | grep -i audit
+#=========================== AUDIT REPORT MAILER =================================
+00 20 * * 1-5 /home/pengine/prod/live_scripts/send_audit_info.sh >/dev/null 2>/dev/null &
+
+
+task
+1619087700000000729 COMPLEX%1%NSE_BANKNIFTY_FUT0%0.0%%1?geq?28439.6147009 0 73 -1 Entry
+1619085900000000427 COMPLEX%2%BANKNIFTY_CE_31300.00_0_W|BANKNIFTY_PE_30300.00_0_W%-1|-1%1 50 -1 Entr
+
+normal order which dont have price check(condition) , orders which dont have condition if those order does not execute for 10min using watch, if order is not executed after 10min need to send mail, create variable initialize it to current watch and check for normal orders
+complex order depends on market data
+
+------------------------------------------------------------------------------------------------------------------------
+
+ 5639  for i in 963749 963759 963769; do /home/pengine/prod/live_execs/user_msg --traderid $i --start ; done
+ 5640  for i in 963749 963759 963769; do /home/pengine/prod/live_execs/user_msg --traderid $i --dumpposition ; done
+ 5641  for i in 963749 963759 963769; do /home/pengine/prod/live_execs/user_msg --traderid $i --getflat ; done
+ 5642  for i in 963749 963759 963769; do /home/pengine/prod/live_execs/user_msg --traderid $i --dumpposition ; done
+
+
+ 5644  /home/dvctrader/ATHENA/stop_real_trading.sh 963739  &
+ 5645  /home/dvctrader/ATHENA/stop_real_trading.sh 963749  &
+ 5646  /home/dvctrader/ATHENA/stop_real_trading.sh 963759  &
+ 5647  /home/dvctrader/ATHENA/stop_real_trading.sh 963769  &
+
+--------------------------------------------------------------------------------------------------------------------------
+
+5.51 -> 5.66
+checked ping working local and ind
+root password pu2@n6db
+
+5.30 -> 5.42
+
+66 42 sync rsync -avz to get all ssh no pass
+
+67 .ssh no pass home
+
+refer check 58 history
+
+--------------------------------------------------------------------------------------------------------------------------
+add logs in notional midterm forcecancel debug , print order id and instrument
+check why force cancel did not work
+
+local server setup
+
+check below task
+67 have last 5 days date and fut cash
+66 has all fut opt cash
+
+data copy scipt go through
+
+sync ors report data
+
+series compatibility.
+
+5.26 : /home/pengine/prod/live_scripts/download_volume_spurts.sh
+
+check why virtual changes have more latency
+add t2t breakup branch: T2T_2020
+
+check code its related to oebu logg
+
+check mail sent by ravi Fri, May 14, 9:45 AM
+
+audit task , data copy task , virtual change task
+
+before expiry ( testing )
+order live is present or not using audit ( write script, to check live order , check option type, option symbol, input symbol or exchange)
+
+eod pnl script check 5.26
+
+check tradelogs also for pos
+
+nse shm writer / market data
+Fwd: FW: Request for BEFS: 6701 TEST MARKET ACCESS
+EOBI Mode
+https://www.bseindia.com/nta.aspx
+
+5.58 : gcc build ~/trash/hardik
+/apps/
+
+check datacopy dependency in 67, 66 and other server
+
+branch bse : infracore - LEGACY_DVC
+----------------------------------------------------------------------------------------------------------------------------
+
+root 5.67:
+
+1. /home/hardik/PNLProject/logFileCopy.sh
+   using the above will copy ind14 tradelogs logs from 5.26 (data from 2019 is available)
+2. /home/hardik/PNLProject/daily_generate_pnl.sh
+   /home/hardik/PNLProject/get_top5_gainer_loser_product.sh DAILY
+   /home/hardik/PNLProject/html/generate_pnl_reports.sh
+   /home/hardik/PNLProject/html/daily_generate_pnl_reports.sh
+   /home/hardik/PNLProject/get_top5_gainer_loser_product.sh MONTHLY
+   /home/hardik/PNLProject/get_top5_gainer_loser_product.sh YEARLY
+   will run the above script for only ind14 for all the dates 
+  
+-----------------------------------------------------------------------------------------------------------------------------
+
+
+data copy changes:
+
+1. remove old mds files infra67 cron
+2. infra66 /home/dvcinfra/important/SyncOptionsDay.sh : comment sync from 5.67
+3. rsync 5.67 comment : root:66
+4. /home/dvcinfra/important/sync_mds_run_datacopy.sh
+   /home/dvcinfra/important/datacopy_complete.sh
+   /home/dvcinfra/important/check_datasync.sh
+
+   this scripts need to be copied from 5.67 to 5.66
+4. need to remove inplace option
+
+data copy changes:
+
+in /home/dvcinfra/important/sync_mds_run_datacopy.sh 5.67
+
+in while loop:
+local_count=`ls $local_Dir| wc -l` ;
+replace it with:
+local_count=`ls $local_Dir| egrep -v \"_PE_|_CE_\"| wc -l"` ;
+
+in
+start_sync_worker function:
+rsync -avz --progress --inplace $local_Dir dvctrader@52.3.22.99:${local_Dir} &
+
+replace
+rsync -avz --progress --inplace --exclude="*_CE_*" --exclude="*_PE_*" $local_Dir dvctrader@52.3.22.99:${local_Dir} &
+
+------------------------------------------------------
+/home/dvcinfra/important/check_datasync.sh
+
+#now data is synced, sync that to worker assuming again connection break doesn't happen
+rsync -avz --progress ${local_data_dir}  dvctrader@52.3.22.99:${local_data_dir}
+
+replace above with:
+
+rsync -avz --progress --exclude="*_CE_*" --exclude="*_PE_*"  ${local_data_dir}  dvctrader@52.3.22.99:${local_data_dir}
+
+-------------------------------------------------------
+
+5.67 5.66
+
+testmarket
+10.255.254.6 12408
+172.28.124.30 10990
+exchange gate way ip
+
+bse live market
+10.255.255.6 12908
+10.255.255.6 12908
+
+go through bse manual
+BSE branch: infracore
+
+ors config
+
+update pnl script eod, push the script , update readme doc
+
+check missmatch
+
+check oebu crash
+check who is sending control cmd, why its no ors
+
+go through cpu cycle how its calculated
+
+---------------------------------------------------------------------------------------------------
+pnl script merge
+
+latency scriipt changes
+
+add circular 
+
+i have fixed the divi and earning script. bug releated to button id and click..
+
+oebu code go through , find reson of why to restart oebu after shmwriter restart
+
+handling for ors report fo 20210621
+----------------------------------------------------------------------------------------------------
+BSE
+
+orderstatus : 00e 
+exectype : 0e
+
+1. getting negative value for session logon response TradSesMode, NoOfPartition, DaysLeftForPasswdExpiry, GraceLoginsLeft
+2. 
+
+ors reply report fo
+check bse fields request , response
+
+update mail in all machine
+script for margin handle
+audit file garbage value
+fetch nse script
+
+let's move the tool to infra/dvc 
+we don't use basetrade / devmodel 
+that's a legacy code 
+ors_binary_reader_stats.cpp
+
+
+copy enerateInd13EodPnl_test2_new to important , and push changes infracore (important branch)
+add keyboard exception to stop script
+
+daily all product pnl 
+
+only one script to generated all pnl
+
+add handling in ors report fo rsync check
+
+sim improvement
+
+push ors report fo scripts
+
+root@sdv-ny4-srv67 /run/media/dvcinfra/TB4Extra/PNLReportsIND
+
+
+throttle total seq cancel conf modified add column mds_log_reader
+
+sync ind19 , 15 banfile
+
+bse:
+in cancel wrong saos exit crash
+add reject handling for order sent , getting seq but after reject not getting removed , send order price greater
+console trader changes getting reply handling
+audit log for exec add strcture and chare changes
+revert back to failed safe:
+in case of console trader , for modify , cancel order  we are setting ors_ptr = 0 , due to which we are getting REVERT BACK TO FAIL SAFE FOR  in ors logs
+
+push exchange latency changes script , exec
+
+
+BSE:
+client order ID must change onevery modification and cancellation request
+When modifying or cancelling an order, a newClOrdID (11)must be provided.
+The order to be modified or cancelled is identified with theOrigClOrdID (41).In this way the customer is able to find and track individual requests by theirclient order ID.
+Duplicate ClOrdID (11) values for the same session and instrument will be rejected with the exception ofImmediate or Cancel (IOC) Orders.
+
+The value of the fieldActivityTime (30645)should always be equal to the timestamp thatwas received in last order response or immediate execution message of that order. Themodification or cancellation request will be rejected if the activity timestamp value does notmatch the last activity timestamp value which is present in matching engine for that order.
+
+~/bseSource/baseinfra/MDSMessages/combined_mds_messages_pro_ors_reply_processor.hpp : ProcessORSReplyEvent
+
+
+-----------------------------------------------------------------
+bar data script , position check nishit script ,  ipo scirpt 
+
+sim optimization check with ravi
+
+---------------------------------------------------------------------
+
+
+TODAY: email , dump in log file , Exception handling page151, add case in response
+
+CHECK how we are getting ors reply /NAS1/data/ORSData/NSE/2021/07/20
+
+TODAY: midterm check code
+
+FRIDAY: sim improvement check with ravi
+
+HOLD : pnl script fo, adding throttle column
+
+WEEKEND : move all tools from base trade to dvccode/ infracore
+
+first build the exec and check if its working or not in current branch
+then , if working fine the copy the files to infracore/master copy branch and build and check then create pull request to master
+basetrade: devtrade/Tools
+ multi_prod_smart_console_trader.cpp   
+ multi_smart_console_trader.cpp   
+ smart_console_trader.cpp   
+ user_msg.cpp  
+ 
+once above is completed , then will do it for devmodel/Tools
+
+ravi/trade_engine_20210416 ~/ravi/WORK/TESTBED/202104/master/CONFIG_START_RATIO_20190926/LIVE_FILE_MZ.csv 20210707 IST_915 IST_920 9999801
+ravi/trade_engine_20210416  ~/ravi/WORK/TESTBED/202107/master_latest/CONFIG_NSE_CM_MM_MQ_HP_NEW2/LIVE_FILE_A_I.csv 20210831 IST_916 IST_1528 9999801
+ravi/trade_engine_20210416  ~/ravi/WORK/TESTBED/202107/master_latest/CONFIG_NSE_CM_MM_MQ_HP_NEW2/LIVE_FILE_J_Z.csv 20210831 IST_916 IST_1528 9999802
+
+survilance@nse.co.in
+investigation
+dnld
+
+mysql -u root -p -h 54.90.155.232
+
+vdousza@nse.co.in
+
+49118
+49119
+45945 CM stream
+47493 FO stream
+45126 broadcast
+
+45126 45945 47493
+
+disable alert on zabbix for non working day , slack alert
+ALERT / INFO / REMINDER
+
+risk_ops@nsccl.co.in
+collaterals_ops@nsccl.co.in
+
+Base price : 44482 (circular)
+
+msm@nse.co.in
+check line , self , manage (1800 41999 63)
+get in check with netwok team
+
+
+one variable : this_smv_.security_id() : done
+secid_baseorder_map_ : call function to get this variable : done
+saci variable dont crreate directly print : done
+change bulk file name : done
+
+
+jupiter tool check
+check crash issue	
+
+complete sim improvement
+got through combined shm , nse shm
+
+check expiry day handling script go through 
+
+reimbursement
+script check ors reject
+
+zip it , dvcinfra@sdv-indb-srv11 /spare/local/MDSlogs/BSE
+and save it to worker /NAS3/data/BSELoggedData/BSE/2021/08/23
+
+check bse data copy script [ dvcinfra@sdv-ny4-srv67 ~/important/subham/bse_datacopy ] sync_mds_run_datacopy_bse.sh
+check orsreject script
+update orsreject script in all machine alias 
+
+ baseinfra/MinuteBar/technical_indicator_generator.hpp(DB_PROJECT)
+ 
+ BSE:
+	conversion script
+	logged source data same as for nse
+	while conversion which we will be using structure , generic to bse
+	smartdeamoncontral.sh
+	dump control cmd, nseshmwriter
+
+	vinod
+	install onload, ptpd, interactive changes are done or not
+	
+add addts file functionality in orsreject script, in file only products, 
+add common initial file new product scirpt
+
+what is physical settlement error check 
+
+FO new stream changes tradeengine
+tradeengine/StratLogic/pos_exec.cpp
+tradeengine/StratLogic/trade_engine_live.cpp
+ask NSE regarding the details of stream , type of data
+
+
+NOTE STREAM CHANGES:
+SHM WRITER FILE UPDATE CHANGE CHANNEL , in channel file update in midterm ind11, 12 , 13 , 22
+check for new Q product , in future , if new product add verify channel
+/spare/local/files/NSE/channel_info.txt
+
+
+link ptpt to intractive 
+zabbix check if getting unreachable or not
+
+
+BSE_NEW_RECVRY
+infracore
+EOBI
+4.1,  7.1, 7.2, 7.3
+7.6
+
+update mail in all machine
+
+check code why its dumping garbage value if size is large (new product margin)
+./dvccode/CommonTools/get_exchange_symbol_file.cpp
+
+improvement in data copy 
+
+check adds mail morning script
+------------------------------------------------------------------------------------
+addts script changes taking time
+raw data handler
+create tcp direct 
+
+combined shm writer, ors reply exec one more
+
+oebu check 
+
+push set up steps
+
+-------------------------------------------------------------------------------------
+improvement 
+
+1. nseshmwriter we are using 2 structures (ProcessEventsForProShmMode(NSE_MDS::NSETBTDataCommonStruct* nse_tbt_data_common_struct), we can use only one structure , like we do in BSE (EOBI)
+
+-------------------------------------------------------------------------------------
+
+BSE INDB11 SERVER
+
+
+./infracore/Tools/combined_user_msg.cpp : 
+
+-------------------------------------------------------------------------------------------
+infracore/BSEMD/bse_tbt_raw_md_handler.hpp : not correct 
+     // 239.60.* Are EQ Channels
+      // 239.70.* FO
+      // 239.80.* CD
+      // 239.55.* TradeExecRange
+	  
+
+why taking too much time to get confirmation
+
+N5HFSAT3ORS13AccountThreadE:OnOrderConf Order confirmed at different price!
+
+test user cmd
+
+oebu changes for BSE
+
+===============================================
+hardik tasks
+
+So from tomorrow onwards you can look into 
+Addts,
+NOTIS script[mostly I run at around 9:25 am],
+Giving start to all strats
+
+So mainly we need to handle margin not provided, and resetting issues
+mostly this comes for FO machines
+
+SYNC SUCCEED For Unhedged Positions
+SYNC FAILED For Unhedged Positions : 
+
+maket_trade_logger
+
+
+today=date +%Y%m%d; tail -f  /spare/local/logs/tradelogs/log.${today}.* | egrep -i  "Risk|freeze|STOP LOSS|Manual|INVALID|ERROR|CONTROL|pnl_up|pnl_down|creased|flat|RESUME|drop|sani"
+
+-------------------------------------------------------------------------------------------------
+ 
+ do changes in /spare/local/tradeinfo/NSE_Files/Lotsizes/fo_mktlots_1121.csv
+ U have to adjust bar data as well as ds file
+ have made the cahnges u can refer that. /NAS1/data/NSEMidTerm/MachineReadableCorpAdjustmentFiles/2021/INDHOTEL_RightsIssue_20211111 , /run/media/dvcinfra/Elements/data/NSEMidTerm/MachineReadableCorpAdjustmentFiles/Complete_Index_No_Header.csv
+5.66
+verify strike in /spare/local/tradeinfo/NSE_Files/datasource_exchsymbol.txt file
+
+ask raghu
+PRODUCT NAME SYMBOL CHANGE
+what are the change needs to be done , on start and ors end , will do from next time
+
+strat start check with raghu, how we are doing.
+
+strat start: we mostly give start at 8:30 ;
+start command 
+#for i in 123990 123991 123992 123993 123994 ; do /home/pengine/prod/live_execs/user_msg --traderid $i --start ; done;
+check logs
+today=date +%Y%m%d; tail -f  /spare/local/logs/tradelogs/log.${today}.* | egrep -i  "Ri
+sk|freeze|STOP LOSS|Manual|INVALID|ERROR|CONTROL|pnl_up|pnl_down|creased|flat|RESUME|drop|sani"
+
+NOTE : dont start this strat 
+IND16: 1236..
+Don't give start
+
+
+INFRA 26 : 
+SYNC UNHEDGED POS TO IND14
+/home/pengine/prod/live_scripts/get_unhedged_positions_to_close.sh
+we get UNHEDGED POS mail at post marked, we have positions in this mail , which we were not able to close (its call unhedged in FO).
+those UNHEDGED POS we have to close next day. we close unhedged position on IND14.
+/home/pengine/prod/live_scripts/get_unhedged_positions_to_close.sh : this script sync unhedged position from infra26 to IND14. 
+2 things are synced :
+a. no of lots respect to product in trader ATHENA
+b. addts file in dvcinfra.
+
+IF SYNC SUCCESS THEN WE WILL GET AT MAIL AT 8 30  AND IT WILL DO ADDTS. (CHECK MAIL)
+IF SYNC FAILS THEN WE NEED TO RERUN THE SAME SCRIPT.
+
+
+SECURITIES AVAILABLE FOR TRADING MAIL: (this is for CASH mahine)
+some times we have new securities for trading, previous days some products may not be available for trading , if previous day the product is not present then the margin for that product is not present. then we will get margin not provided issue for CASH machine. so the scipt willl handle the above and this script willl do the adjust also.
+
+
+go through what raghu had pinged
+
+need to push script which i have not pushed
+
+neat config check , WAN ip 
+
+20200911-47
+22728426
+8524
+
+BSE ORS #define value update for all request  ( api values like 0 for passive 1 for active)
+
+update all product branch in excel sheet provided by raghu.
+
+
+update one oebu from OEBU_FIX_MASTER ON ind13 just to test ,, everything run on friday, one more oebu
+
+synthetic match check , with 8, and wihtout 16 , run only for 1 channel. to avoid drops
+
+
+will seq no be repeated for each product? if yes when.
+
+we have service A channel , service B channel, the seq no which we get in service A and B is equal or not, ideally should be equal
+
+before 18 check seq no is geting repeated or not, check for generic... 
+(SBIN MARUTI TANLA NATCOPHARM IDFCFIRSTB)
+
+as we are getting , duplicate seq no call , to avoid this update_seq_num in decode event.
+
+need to handle margin not found for CM also., the mail which we get in morning for ADDTS verification
+
+20211126
+1637939700000007374
+
+-------------------------------------------------------------------------------------------------------
+to check openposition for a CM server.
+[ dvcinfra@sdv-ind-srv16 /spare/local/ORSlogs/NSE_EQ/MSEQ2 ] #cat trades.20211130 | tr '\001' ' '  | awk '{if($2==0){a[$
+1]-=$3; } else{ a[$1]+=$3}} END {for(key in a){ print key,a[key]}}' | grep -v " 0"  >/tmp/p
+
+
+crontab -l | grep -v '^#' | grep run | awk '{if(NF == 6) print}' | awk '{print $NF}'; 
+
+cat /home/dvctrader/ATHENA/run.sh | grep -v "#" | grep CONFIG | awk '{print $2}'   | awk -F "/" '{print $1"/"$2"/"$3"/"$4"/"$5"/PositionLimits.csv"}' | sort | uniq
+
+for prod in `cat /tmp/addts_verify_prod`; do grep $prod /home/dvctrader/ATHENA/CONFIG_NSE_CM_MQ_SET3/PositionLimits.csv /home/dvctrader/ATHENA/CONFIG_START_RATIO_20190926/PositionLimits.csv /home/dvctrader/ATHENA/CONFIG_CM_VWAP_NEW/PositionLimits.csv | cut -d':' -f2 | uniq | cut -d'_' -f1,2 | uniq >> /tmp/strat_prod; done
+
+
+check audit missmatch
+
+zocket ors check.
+
+Zocket Error Lists::
+Incorrect Arguements supplied: -22
+Zocket is not in a valid TCP state for sending: -107
+Not Enough Space in the send queue: -11
+Not enough packet buffers available: -12
+
+
+-EINVAL Incorrect arguments supplied.
+-ENOTCONN Zocket is not in a valid TCP state for sending.
+-EAGAIN Not enough space (either bytes or buffers) in the send queue.
+-ENOMEM Not enough packet buffers available.
+
+
+ int zft_get_mss (struct zft *ts)
+maximum segment size (MSS)
+
+new product addts verify scirpt , if addts is done corrrectly and in oebu products are present or not.
+
+---------------------------------------------------------
+
+[ dvcinfra@sdv-ny4-srv22 ~ ] cat /run/media/root/Elements/SERVERDATA/INDB12/ORSlogs/BSE_EQ/MSEQ9/trades.20220302 | tr '\001' ' ' | awk '{if ($2 == "0") {prod_buy[$1]+=$3*$4;total_pnl-=$3*$4;total_pnl-=$3*$4*0.000180;total_pnl+=$3*$4*0.000005;} else {prod_sell[$1]+=$3*$4; total_pnl+=$3*$4;total_pnl-=$3*$4*0.000180;total_pnl+=$3*$4*0.000005;} next;} END { for (prod in prod_buy) { print "Prod: "prod" BUY: "prod_buy[prod]" SELL: "prod_sell[prod]" PNL: "total_pnl} for (prod in prod_sell) { print "Prod: "prod" BUY: "prod_buy[prod]" SELL: "prod_sell[prod]" PNL: "total_pnl}}' | sort | uniq
+
+[ dvcinfra@sdv-ny4-srv22 ~ ] cat /run/media/root/Elements/SERVERDATA/INDB12/ORSlogs/BSE_EQ/MSEQ9/trades.20220315 | tr '\001' ' ' | awk '{if ($2 == "0") {prod_buy[$1]+=$3*$4;total_pnl-=$3*$4; t_buy+=$3*$4;} else {prod_sell[$1]+=$3*$4; total_pnl+=$3*$4; t_sell+=$3*$4;} next;} END { for (prod in prod_buy) { printf "%s %s %s %.2f %s %.2f %s %.2f %s %.2f %s %.2f\n","Prod: ",prod," BUY: ",prod_buy[prod]," SELL: ",prod_sell[prod]," TBUY: ",t_buy," TSELL: ",t_sell," PNL: ",total_pnl} for (prod in prod_sell) { printf "%s %s %s %.2f %s %.2f %s %.2f %s %.2f %s %.2f\n","Prod: ",prod," BUY: ",prod_buy[prod]," SELL: ",prod_sell[prod]," TBUY: ",t_buy," TSELL: ",t_sell," PNL: ",total_pnl}}' | sort | uniq
+
+NSE LATENCY CHANES:
+https://github.com/two-roads-trading-pvt-ltd/infracore/commit/43be89e2b461c4bd153bdd9fff61856b8e677efe
+contiguous memory change 
+
+-------------------------------------------------------------------------------------------------------
+
+market_trade_logger (base trade)
+basetrade repo
+devmodel branch
+Tools/mkt_trade_logger.cpp
+basetrade/Tools/multi_mkt_trade_logger.cpp
+it will take the market data and build the book.
+
+improve book data structure. index_nse_market_view_manager. sparce_index_view , we are using heap ( how we can improve heap)
+
+physical settlement related handling, 
+it comes only for physical ind14, 20 for options, only on expiry day , need to handle addts mail.
+The physical settlement means if you hold a position in any Stock F&O contract, at expiry, you will be required to give/take delivery of stocks. The physical settlement is restricted only to stock derivatives. Physical settlement of index options is not applicable.
+
+
+find out why we are not able to get ORS login at once?
+
+1. ors rap up check password, and other changes. 
+
+2. exchange latency and ors latency imporvement. this should be done parallaly
+
+3. Work on latency not only code hardware like ram or gz.
+
+4. Currently for tick to trade only we are checking time , when we are receiving packets processing and sending.
+
+5. THROWPUT means when we get data and we check if we need to process or not , so if we focus on improving parts which we are not sending order for to ORS then we can improve cache, as the packets which we are processing but not sending order for that (trade engine case which check if order need to be sent or not)
+
+---> start time for snapshot recovery using file BSE, close socket  after recovery , if recoveyry is not started then done connect to socket , and if it goes for recovery then stop the recovery. if time limit is less than recovery then dont create socket for recovery, which is not required.
+
+----------------------------------------------------------------------------------------------------------------------------------------------------------------
+
+SIM IMPROVEMENT : NO CHANGES IN EXCHANGE CODE , DO CHANGES IN BOOK SIDE, OR CHECK FOR IMPROVEMENT IN MACHINE LIKE TASK SET FOR FASTER PROCESSING
+ 
+
+
+INTEL ICC BUILD CODE FOR FASTER INSTRUCTION INSTEAD OF GCC
+https://blog.cloudflare.com/branch-predictor/
+
+
+IN TRADEENGINE UPDATE T2T TIME STAMP
+
+CHECK WHAT IS EF_PIO
+AND WHY WE GOT THIS ERROR
+ZOCKET CREATED ON INTERFACE : enp101s0f0
+enp101s0f0/017     0 | Failed to allocate PIO buffer (rc = -28)
+
+
+https://docs.xilinx.com/v/u/en-US/SF-104474-CD-33_Onload_User_Guide
+https://docs.xilinx.com/api/khub/documents/eGV8Ap_sOQhnGoSuHfOQjg/content?Ft-Calling-App=ft%2Fturnkey-portal&Ft-Calling-App-Version=3.11.45&filename=SF-104474-CD-33_Onload_User_Guide.pdf#G4.1600255
+https://docs.xilinx.com/api/khub/documents/eGV8Ap_sOQhnGoSuHfOQjg/content?Ft-Calling-App=ft%2Fturnkey-portal&Ft-Calling-App-Version=3.11.45&filename=SF-104474-CD-33_Onload_User_Guide.pdf#M13.9.CTPIO
+http://www.smallake.kr/wp-content/uploads/2015/12/SF-104474-CD-20_Onload_User_Guide.pdf
+https://define-technology.com/hft-virtualised
+
+onload --profile=latency taskset -c 4 ./sfnt-pingpong --affinity "1;1" tcp 192.168.132.12
+onload --profile=latency taskset -c 4 ./sfnt-pingpong
+
+
+sort -n -k1 LTC_FUT0 | awk '{if (($1 >= "1648166400") && ($1 < "1648252800")) {expiry="20220325";printf"%d\t%s\t%d\t%d\t%s\t%f  %f  %f  %f  %f  %d\n", $1,$2,$3,$4,expiry,$6,$7,$8,$9,$10,$11} else if (($1 >= "1656028800") && ($1 < "1656115200")) {expiry="20220624";printf"%d\t%s\t%d\t%d\t%s\t%f  %f  %f  %f  %f  %d\n", $1,$2,$3,$4,expiry,$6,$7,$8,$9,$10,$11} else if (($1 >= "1664496000") && ($1 < "1664582400")) {expiry="20220930";printf"%d\t%s\t%d\t%d\t%s\t%f  %f  %f  %f  %f  %d\n", $1,$2,$3,$4,expiry,$6,$7,$8,$9,$10,$11} else {printf"%d\t%s\t%d\t%d\t%d\t%f  %f  %f  %f  %f  %d\n", $1,$2,$3,$4,$5,$6,$7,$8,$9,$10,$11}}' > LTC_FUT0_bkp
+
+awk '{if (NR == "1") { print $0;} else { if(temp_time != $1){print $0}} temp_time=$1; }' SOL_FUT0_bkp > SOL_FUT0_bkp_2
+
+sudo mount -t ext4 /dev/sdl2 /NAS4
+
+12.update get_pos_strat for multiple ors trade file as input and exchange symbol column
+13.MDSMessages/combined_mds_messages_pro_nse_processor.hpp
+
+
+ + 4e04d8b...538b62f BSE_ETI    -> origin/BSE_ETI  (forced update)
+ + 35238e1...4641016 MIDTERM_MASTER -> origin/MIDTERM_MASTER  (forced update)
+ + 2e1f785...a4c41ae ONLOAD_ALIAS_DEBUG -> origin/ONLOAD_ALIAS_DEBUG  (forced update)
+ + e0207c0...644d0d6 T2T_2020   -> origin/T2T_2020  (forced update)
+
+l1 data generation 5.69
+ 20:15:09 
+ 22:35:12 
+ 23:31:05 
+ 23:49:09 
+ 00:07:17   
+
+3. check midcp bardata logging (abhishek one)
+7. NSE instance handling check if any empty core , assign that core to pos_exec if no core then assign to init.
+for id in `ps -efL | egrep 'cme|trade_engine_live' | awk '{print $4}'`; do /home/pengine/prod/live_execs/cpu_affinity_mgr VIEW $id test ; done``
+9. l1 data space check 5.68 and 5.69
+
+-------------------------------------------------------------------------------------------------------------------------
+IND14 X2522-25G 1.8
+IND15 Ultra 8000 Series 10G
+IND16 Ultra 8000 Series 10G 1.3
+IND17 Ultra 8000 Series 10G 2.1
+IND18 X2522 10/25GbE 1.2
+IND19 Ultra 8000 Series 10G 1.0
+IND20 Ultra 8000 Series 10G 1.4
+IND21 X2522-25G 
+IND22 X2522-25G 1.4
+IND23 X2522-25G 2.0
+
+BSE11 X2522-25G
+BSE12 Ultra 8000 Series 10G

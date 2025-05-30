@@ -1,0 +1,291 @@
+https://docs.google.com/document/d/13o8EXnXUbvIJjtYwnIKWYYHdGbGG9sBqPjQzg6hFt_s/edit?ts=602a4f6b
+https://docs.google.com/document/d/1Q25SdueG6AC4YzFIAnkRq9RbT9QLyrlQGeIRGzcxGD0/edit?ts=602a49a0
+
+TRADE LOGS IND11
+
+[ dvctrader@sdv-ind-srv11 /spare/local/logs/alllogs/MediumTerm ] tail -fn10 *_execlogic_dbglog.date +"%Y%m%d" | awk '/^==> / {a=substr($0, 5, length-8); next} {print a":"$0}' | egrep "Rej|ALERT|ERROR|kORR" | egrep -v "QUEUE LAG|TOKEN LESS"
+--------------------------------------------------------------------------------------------------------------------------------------
+LAST UDPATE IN LOG FOR ORDER INDI11
+grep NSE_NIFTY_P0_I3_M1 /spare/local/logs/alllogs/mid_term_data_server_20220222.log | less
+
+--------------------------------------------------------------------------------------------------------------------------------------
+
+CHECK DROPS IN IND11
+
+onload_stackdump lots | grep oflow
+----------------------------------------------------------------------------------------------------------------------------------------
+
+ORDER DETAILS LIVE  INDI11
+
+grep 1645525775000000953 /spare/local/logs/alllogs/MediumTerm/*_execlogic_dbglog.20220222 | less
+tail -f /spare/local/logs/alllogs/MediumTerm/*_execlogic_dbglog.20220215 | grep NSE_BANKNIFTY_C0_I1_M4_W
+grep 1645525775000000953 /spare/local/logs/alllogs/MediumTerm/*_execlogic_dbglog.20220222 | grep -i stat | less
+
+/home/pengine/prod/live_execs/nse_audit_log_reader AUDIT_IN NSE_FO audit.20220222.in | grep -a NIFTY | grep -a 65810 | less  (price check in above log Conf)
+
+----------------------------------------------------------------------------------------------------------------------------------------
+ORS REPLY IND11
+
+/spare/local/ORSBCAST/NSE
+
+-----------------------------------------------------------------------------------------------------------------------------------------------------
+FULL PROCESS FLOW:
+1. combinedsource will get the data from nse, then it will give the data to midtermserver , midtermserver will give to strat,
+   strat will decide whether to send order or not, if need to send order it will dump order in this file
+   /spare/local/files/NSE/FileExecLogs/ordersfile, /spare/local/files/NSE/ExecutionLogs/ordersfile, /spare/local/files/NSE/DispersionExecLogs/ordersfile,
+   rsync will sync above files from ind12 ind11(running continiously),
+   notional exec will read it it needs to send order or not. its not like notional will directly send orders, notional exec also gets
+   nse data, so there are conditions in order files based on condition notional exec sends order.
+   this notional exec will writes order to be executed in shm and ind11 ors will read it and send to exchange.
+   cancel ,send which ever reply it gets from exchange it writes to shm and notional gets that information and dumps to
+  /spare/local/logs/alllogs/MediumTerm, disp_execlogic_trades_20210305.dat, manual_execlogic_trades_20210305.dat, midterm_execlogic_trades_20210305.dat
+
+   important order file and trade file, ind 12 will have orders which will be sent to ind11,
+   ind11 will have trade which will be sent to ind12
+
+ind12 infra
+
+1./home/pengine/prod/live_scripts/SmartDaemonController.sh CombinedSource START
+   1st process
+   this will read from sockets and dump in shm
+   /spare/local/MDSlogs/combined_writer_dbg_20210226.log , combined_writer_log.20210226
+   its similar to NSEShmWriter which runs in ind13 (market data), ind13 we writes to file and shm, here we writes to shm
+   /home/pengine/prod/live_configs/"`hostname`"_combinedwriter.cfg
+   /spare/local/files/tmp/saci_gen.txt
+   /spare/local/files/affinity/affinity_pid_process.txt
+   /home/pengine/prod/live_configs/sdv-ind-srv12_nse-tbt-mcast.txt
+
+2./home/pengine/prod/live_scripts/NSETBTRecoveryHost.sh START
+   2nd process
+   from ind11 notional and midterm server will ping for recovery
+   this recovery manager is same as we are running on ind14
+
+ind12 trader
+3./home/pengine/prod/live_scripts/mid_term_data_only_server.sh START SERVER 567844
+   this will read the data from shm and will send to statergy and statergy will give order. then ind11 infra gets the order by sync 
+   (sync order file to ind 11
+   statergy communicates with mid_term_server.
+   midterm server runs on ind11(infra) and ind12.
+   in ind12 it runs in server mode.
+   this again writes to shm which statergy reads.(it will filter and give date)
+
+4. ALL STATERGYS ARE RUNNING IN IND12 TRADER
+   STATERGY DUMPS ORDER IN FILES , THERE ARE 3 FILES
+   THIS WILL SYNC THIS FILES TO IND11
+   IN INFRA IND11 IT WILL READ THIS FILE AND WILL SEND TO ORS AND ORDER WILL BE EXECUTED.
+   rsync -avz --progress /spare/local/files/NSE/FileExecLogs/ordersfile dvcinfra@10.23.115.61:/spare/local/files/nse_strategy_orders_manual > /dev/null 2>&1 
+   rsync -avz --progress /spare/local/files/NSE/ExecutionLogs/ordersfile dvcinfra@10.23.115.61:/spare/local/files/nse_strategy_orders_midterm > /dev/null 2>&1 
+   rsync -avz --progress /spare/local/files/NSE/DispersionExecLogs/ordersfile dvcinfra@10.23.115.61:/spare/local/files/nse_strategy_orders_disp > /dev/null 2>&1
+
+   #Syncs relevant ordersfile to IND11
+   50 02 * * 1-5 /home/dvctrader/LiveExec/scripts/sync_all_orders.sh >/dev/null 2>/dev/null &
+
+   we can add trades manually also, (if dispersion then tranchid should be 40)
+
+5.#Finds intraday mismatch
+   46 03 * * 1-5 /home/dvctrader/hftrap/Scripts/IntraDayOrderMatching.sh START >/tmp/intraday_order_matching_log.txt 2>&1
+   this will find/show if there is any trademiss match, if statergy wants to send order does that order exist in ORS viceversa,
+** if statergy has send order and order does not exist in ors , then in that case we have send order manually
+  #Finds intraday trades mismatch
+   46 03 * * 1-5 /home/dvctrader/hftrap/Scripts/IntraDayTradesMatching.sh START >/tmp/intraday_trades_matching_log.txt 2>&1
+   ORS is having order but stategy does not executed order
+ 
+6. pos cmd: /spare/local/files/NSE/MidTermLogs/EODPosFiles (all statergy position)
+   dispersion position which we clear , we get it from this path.
+
+7. disp cmd: this will show open positions of dispersion. can see for any statergy.
+   dispersion is stat which deals with options.
+
+8. today=`date +"\%Y\%m\%d"`;Pnloutfile=/spare/local/files/NSE/MidTermLogs/EODPnl;/home/dvctrader/anaconda3/bin/python /home/dvctrader/basequant/Scripts/GeneratePnL_v1.py --enddate $today --eodmode 1 >$Pnloutfile 2>/dev/null
+   this will generate latest position (at night 11)
+
+9. stratid file (tranch details)
+   /spare/local/files/NSE/MidTermLogs/trancheid_2_strategydetails_map
+
+10. to clear pos go to pos
+
+11. dumps midterm pnl every 10 min
+    /home/pengine/prod/live_scripts/monitor_pnl_midterm.sh
+
+12. ind66 future data gets calculated then adjusted then beta calculation.
+
+13. /home/dvctrader/basequant/Scripts/MultiStockGapHedger.py
+    used for hedging
+    if hedge value is more it trys to decrease
+    we can get to know from first 2 hour that it will hedge or not, after that we can kill.
+
+14. tracks if stats are running or not
+    if there is any crash we can run and check.
+    40 03 * * 1-5 /home/pengine/prod/live_scripts/strat_running_track.sh
+
+
+ind11 infra
+1./home/pengine/prod/live_scripts/mid_term_data_only_logger.sh START LOGGER 567846
+   this runs in logging mode.
+   if statergy crash in intraday, then this will take data directly from ind12 midterm server.
+   in ind11 midterm server this dumps data in files
+   /spare/local/MDSlogs/MediumTerm(fut), MediumTermOptions (minute bar data)
+   /spare/local/files/NSE/MidTermLogs/midterm_data_server_products.txt (config file)
+   for above file if a product is having 0.5 it means its telling to consider option also for that product
+   the bar data is continiously getting sync to ind12, so that if startegy restart they can get the details.
+
+2.ALL STATERGYS ARE RUNNING IN IND12 TRADER
+   STATERGY DUMPS ORDER IN FILES
+   Order files which are sync from ind12 trader
+   check and go through below files (what are values)
+   /spare/local/files/nse_strategy_orders_manual, /spare/local/files/nse_strategy_orders_midterm, /spare/local/files/nse_strategy_orders_disp
+
+3.Market update controlshm runs on both ind12 and ind11
+  check if we are getting data from nse or not.
+  /spare/local/MDSlogs/MediumTerm(fut), MediumTermOptions (minute bar data)
+  this gives data to midterm server and to notional execs to get the LATTEST trade price. so that it can check the condition and send order.
+  ##====================================================== COMBINED SOURCE ======================================================## 
+  05 02 * * 1-5 /home/pengine/prod/live_scripts/SmartDaemonController.sh CombinedSource START >/dev/null 2>&1
+
+4.There are 2 types of order send and cancel. no modify. can check in order files.
+
+5.ORS reads order from shm and sends to exchanges and write reply in shm.
+
+6.#======================================================ORS_LOGGER====================================================#
+  10 02 * * 1-5 /home/pengine/prod/live_scripts/SmartDaemonController.sh ORS_LOGGER START >/dev/null 2>&1
+  its similar to ind13 logger (broadcast orslive)
+
+7.#================================= REJECTRS ALERT =====================================================#
+  45 3 * * 1-5 /home/dvcinfra/anaconda3/bin/python /home/pengine/prod/live_scripts/Rejects_Alerts.py midterm > /dev/null 2> /dev/null &
+  45 3 * * 1-5 /home/dvcinfra/anaconda3/bin/python /home/pengine/prod/live_scripts/Rejects_Alerts.py manual > /dev/null 2> /dev/null &
+  45 3 * * 1-5 /home/dvcinfra/anaconda3/bin/python /home/pengine/prod/live_scripts/Rejects_Alerts.py disp > /dev/null 2> /dev/null &
+  midterm order reject which we get in slack is send through the above script, if we get any reject.
+
+8.syncs trades to ind12 from ind11, so that we can calculate pnl and pos
+  #============================= SYNC TRADE FILES TO IND12 ===============================================#
+  30 10 * * 1-5 rsync -avz /spare/local/ORSlogs/NSE_FO/MSFO/trade* dvctrader@10.23.115.62:/spare/local/ORSlogs/NSE_FO/MSFO/ >/dev/null 2>/dev/null
+
+9.bardata syncs to ind12, in ind12 when strat starts , it will read latest bardata from below folder, then it will take live data from midterm server.
+  #=============================== SYNC DATA SERVER LOGS TO IND12 =======================================#
+  */60 * * * 1-5 rsync -avz /spare/local/MDSlogs/MediumTermWeeklyOptions dvcinfra@10.23.115.62:/spare/local/MDSlogs/ >/dev/null 2>/dev/null
+  */45 * * * 1-5 rsync -avz /spare/local/MDSlogs/MediumTermOptions dvcinfra@10.23.115.62:/spare/local/MDSlogs/ >/dev/null 2>/dev/null
+  */60 * * * 1-5 rsync -avz /spare/local/MDSlogs/MediumTerm dvcinfra@10.23.115.62:/spare/local/MDSlogs/ >/dev/null 2>/dev/null
+
+10.we dont run this script , as we will always get login on ind 11 if option market is up
+   #==========================================ORS LOGIN============================================================
+   #32 01 * * 1-5 /home/pengine/prod/live_scripts/automated_ors_login.sh MSFO KEEP > /tmp/automated_login_log 2>&1 &
+
+11.Dumps ors logs in 66
+   10 11 * * 1-5 /home/pengine/prod/live_scripts/ors_binary_log_backup.sh NSE IND11 TODAY >/dev/null 2>/dev/null
+
+12.check if every things works fine or not
+   #===========process check==============
+   05 03 * * 1-5 /home/pengine/prod/live_scripts/check_process_midterm.sh 2>/dev/null 2>/dev/null
+
+
+ind11 trader
+1.Here we run 3 exec (process)
+  #================================== MANUAL EXEC LOGIC START/STOP ===========================================#
+  03 03 * * 1-5 /home/pengine/prod/live_scripts/SmartDaemonController.sh NSESimpleTrading START >/dev/null 2>&1
+  /home/dvctrader/LiveConfigs/NSE_SIMPLE_EXEC_PARAMS/mult_param_manual
+  #================================= MIDTERM EXEC LOGIC START/STOP ===========================================#
+  00 03 * * 1-5 /home/pengine/prod/live_scripts/SmartDaemonController.sh NSEMidTermTrading START >/dev/null 2>&1
+  /home/dvctrader/LiveConfigs/NSE_SIMPLE_EXEC_PARAMS/mult_param_midterm
+  #================================= DISP EXEC LOGIC START/STOP ===========================================#
+  45 02 * * 1-5 /home/pengine/prod/live_scripts/RunDisNotional.sh START >/tmp/RunNotinalDisp_log.txt 2>&1
+  /home/dvctrader/LiveConfigs/NSE_SIMPLE_EXEC_PARAMS/mult_param_disp
+
+  this above exec (notional) will read those order files (which we have synced from ind12 trader) and will send orders to ors
+  /spare/local/logs/alllogs/MediumTerm, disp_execlogic_trades_20210305.dat, manual_execlogic_trades_20210305.dat, midterm_execlogic_trades_20210305.dat
+  strat trade miss match is of notional, strat sync notional trade and check whether we got trade or not
+  if we add any trade here , strat will consider it as trade.
+  this notional exec will write order to be executed in shm and ind11 ors will read it and send to exchage.
+  cancel ,send which ever reply it gets from exchange it writes to shm and notional gets that information and dumps to
+  /spare/local/logs/alllogs/MediumTerm, disp_execlogic_trades_20210305.dat, manual_execlogic_trades_20210305.dat, midterm_execlogic_trades_20210305.dat
+
+--------------------------------------------------------------------------------------------------------------
+
+RUN NOTIONAL EXEC
+
+TRADER
+/home/dvctrader/LiveConfigs/strategy_to_server_port_map
+/home/dvctrader/LiveConfigs/strategy_to_qid_map
+/spare/local/logs/tradelogs/queryoutput
+/home/dvctrader/LiveConfigs/NSE_SIMPLE_EXEC_PARAMS/mult_param_midterm
+/spare/local/logs/alllogs/MediumTerm
+/spare/local/files/nse_strategy_orders_test
+
+
+BUILD
+
+dvcinfra@sdv-ny4-srv222 ~/raghu/MIDTERM_NOTIONAL
+
+dvcccode : MIDTERM_MASTER
+infracore : MIDTERM_MASTER
+baseinfra : MIDTERM_MASTER
+dvctrade : master
+basetrade : devmodel
+
+---------------------------------------------------------------------------------------------------------------
+ORDER FILE
+
+1620125900000001809 COMPLEX%1%NSE_MARICO_FUT0%-2.0%%1?geq?456.0 0 100 -1 Entry
+1620126400000001809 COMPLEX%1%NSE_MARICO_FUT0%2.0%%1?geq?456.0 0 100 -1 Entry
+1620126500000001809 COMPLEX%1%NSE_MARICO_FUT0%2.0%%1?geq?520.0 0 100 -1 Entry
+1620126600000001809     NSE_SBIN   1618495003000012300     51      -1      ForceCancel
+1620126900000001809	COMPLEX%1%NSE_PETRONET_FUT0%-1.0%	0	45	-1	Entry
+1620127000000001809    NSE_PETRONET_FUT0    1618495003000012300     45      -1      ForceCancel
+1620128000000001809    NSE_PETRONET_FUT0    1618495003000012300     45      -1      ForceCancel
+1620128100000001809	Cancel_String	1620126900000001809	95	-1	Cancel
+1620128200000001809     Cancel_String   1620126900000001809     45      -1      Cancel
+1620128300000001809    NSE_PETRONET_FUT0    1618495003000012300     45      -1      ForceCancel
+1620129900000001809     COMPLEX%1%NSE_PETRONET_FUT0%-1.0%       0       45      -1      Entry
+1620139900000001809     Cancel_String   1620129900000001809     45      -1      Cancel
+
+------------------------------------------------------------------------------------------------------------
+READING ORDER FROM FILE FLOW
+
+SimpleNseExecLogicOrderReaderFromFile::ReadLiveOrdersFromFile
+SimpleNseExecLogicOrderReader::NotifyOrderListeners
+shortcodes_.push_back(this_shc_); (remove) (print Processed)
+synthetic_execs_.find(shortcodes_[i]) (remove)
+  exec_logic_helper_->Setup(smart_order_manager_, shortcodes_[i],temp_smv_, temp_param_, temp_filesource_)
+    new HFSAT::BaseLiveTrader (print RMC_SACI:)
+    new HFSAT::SmartOrderManager -> BaseOrderManager
+    combined_mds_messages_shm_processor_.GetORSReplyProcessor()->AddOrderConfirmedListener ( all listner)
+    new NSE_SIMPLEEXEC::NseSyntheticLegExecLogic(
+        *smv_, p_base_trader_, p_smart_order_manager_, modify_exec_logic_, dbglogger_, watch_, param_, true, shortcode_,
+        HFSAT::kPriceTypeMktSizeWPrice, strategy_name_, 567828); (print "SACI: ")
+      SimpleNseExecLogic(this_smv_t, p_base_trader_t, p_smart_order_manager_t, modify_exec_logic_t,dbglogger_t,
+                         watch_t, t_param_, isLive_t_, shortcode_t)
+    smv_->subscribe_tradeprints(simple_nse_exec_logic_);
+    smv_->subscribe_rawtradeprints(simple_nse_exec_logic_);   
+    smv_->subscribe_price_type(simple_nse_exec_logic_, HFSAT::kPriceTypeMktSizeWPrice);
+    p_smart_order_manager_->AddExecutionListener(simple_nse_exec_logic_);
+  
+  synthetic_execs_[shortcodes_[i]] = exec_logic_;
+  legs_.push_back(dynamic_cast<NSE_SIMPLEEXEC::NseSyntheticLegExecLogic *>(exec_logic_));(print Created synthetic generalized leg for)
+  new NSE_SIMPLEEXEC::NseGeneralizedExecutionLogic(dbglogger_, watch_, order_id_, t_shortcode_, legs_, NULL, tranche_id_to_strategy_, bkp_file_);
+  NseExecutionListenerManager::GetUniqueInstance().SubscribeNseExecutionListener(exec_);
+
+-----------------------------------------------------------------------------------------------------------
+
+watch_.subscribe_BigTimePeriod(this); (BaseOrderManager::BaseOrderManager)	
+watch_.subscribe_BigTimePeriod(exec_); (NSE_SIMPLEEXEC::NseGeneralizedExecutionLogic)
+smart_order_manager_->RemoveExecutionLister(exec_logic_)
+synthetic_execs_.erase(t_instrument_);
+
+
+live_order_id_info_map_.insert(std::make_pair(order_id_, size::std_make(pair_order, ref_px_)));
+~/sourceCode/midterm/GeneralizedLogicCode/nse_synthetic_leg_exec_logic.cpp
+
+Execs/nse_given_notional_tradeinit.cpp
+map<std::string, SyntheticLegInfo> leg_info_
+
+OnTimePeriodUpdate
+complex_info_[shortcodes_[i]]
+~/sourceCode/midterm/GeneralizedLogic/nse_generalized_execution_logic.hpp
+
+LegInfo temp_leg_ = LegInfo();
+temp_leg_.req_position_ = std::atoi(positions_[i].c_str());
+complex_info_.insert(std::make_pair(shortcodes_[i], temp_leg_));
+~/sourceCode/midterm/GeneralizedLogic/nse_generalized_execution_logic.hpp
+
+------------------------------------------------------------------------------------------------------------------------
+SecurityMarketView:
+

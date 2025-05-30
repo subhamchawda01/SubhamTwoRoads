@@ -1,0 +1,25 @@
+branch: IMPORTANT_SCRIPTS : infracore/scripts/datacopy_scripts/copy_ind_data.sh
+
+1st to start EOD task , it will make sure that the current time is more than 10AM
+
+2nd we will dump the market data to files
+
+3rd moving older data (/spare/local/MDSlogs/NSE) to 10.23.5.67
+
+4th file name with NSE are moved to /spare/local/MDSlogs/GENERIC/ALLDATA location
+
+5th moving CASH data to GENERIC
+
+6th starting data converter script convert_nse_generic_dotex.sh
+
+7th after data conversion is completed we are zipping those files and copying those data to different server
+
+8th converted data will be inside /spare/local/MDSlogs/NSE
+
+9th repeating the above steps for moving FUT data to GENERIC
+
+10th using datacopy_complete.sh script we are generating start ratio, end ratio
+
+11th repeating the above steps for moving PE options data to GENERIC
+
+

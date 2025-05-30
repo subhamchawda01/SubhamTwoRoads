@@ -1,0 +1,95 @@
+POST MARKET EXEC FLOW (tradeengine/StratLogic/post_market_exec.cpp)
+
+tradeengine/ExecutionerCode/MarketOrderExecution.cpp : MarketOrderExecution::OnTimePeriodUpdate() (BYE) -> PlaceOrder();
+
+CommonTradeUtils/watch.hpp : OnTimeReceived -> UpdateFifteenSecondPeriodListeners -> OnTimePeriodUpdate
+
+ORSMessages/ors_message_livesource.hpp : ProcessORSReply -> p_time_keeper_->OnTimeReceived
+--------------------------------
+StratLogic/post_market_exec.cpp : udp_direct_multiple_zockets.RunLiveDispatcherWithTimeOut(2000) -> NotifyTimeOut -> OnEventsTimeout
+
+baseinfra/MDSMessages/combined_mds_messages_direct_processor.hpp: OnEventsTimeout -> CheckAndProcessORSReply -> ProcessORSReplyEvent
+
+baseinfra/MDSMessages/combined_mds_messages_pro_ors_reply_processor.hpp : ProcessORSReplyEvent -> p_time_keeper_->OnTimeReceived
+
+*******************
+udp_direct_multiple_zockets.RunLiveDispatcherWithTimeOut(2000) -> ReadAndDispatchEvents -> ProcessEventsFromUDPDirectRead (nse_tbt_raw_md_handler.hpp)
+
+nse_tbt_data_decoder_.DecodeEvents -> nse_tbt_data_processor_.OnMarketEvent(nse_tbt_data_common_struct_)
+
+CALL_MEMBER_FN (*this, process_event_for_modes_)(nse_tbt_data_common_struct) -> process_event_for = &NSETBTDataProcessor::ProcessEventsForRawMode;
+
+MDSMessages/combined_mds_messages_direct_processor.hpp : market_event_listener_->OnMarketEventDispatch(nse_mds_message_) -> nse_mds_processor_->ProcessNSEEvent(market_event);
+
+MDSMessages/combined_mds_messages_pro_nse_processor.hpp : p_time_keeper_->OnTimeReceived(next_event_->source_time);
+
+
+
+####################################
+
+Parser::ParseConfig(_position_file, shc_pos_map);
+
+CommonInitializer(source_shortcode_list_, ors_shortcode_list_, tradingdate_, dbglogger_, true)
+
+InitDbglogger(tradingdate_, progid_, dbg_code_vec, common_intializer, logs_directory, true)
+
+ClientLoggingSegmentInitializer(dbglogger_, progid_, offload_logging_filedir_char
+
+common_intializer->SetStartEndTime(start_utc_hhmm_, 1100);
+common_intializer->SetRuntimeID(progid_);
+common_intializer->Initialize() -> InitializeVariables , ->HFSAT::MDSMessages::CombinedMDSMessagesDirectProcessor, -> SecurityMarketView (holds the book information of all sec)
+
+common_intializer->Initialize()
+// Go over all the security ids.
+// Create it's filesource and link it to the shortcode's exchange's MarketViewManager Link the Filesource to the HistoricalDispatcher
+
+common_intializer->Initialize() -> new HFSAT::IndexedNSEMarketViewManager2 (for each product)
+combined_mds_messages_shm_processor_->AddORSreplySourceForProcessing -> ors_reply_processor_ = new HFSAT::ProORSReply::CombinedMDSMessagesProShmORSReplyProcessor;  ors_reply_processor_->SetExternalTimeListener(_p_time_keeper_);
+
+combined_mds_messages_shm_processor_->AddDataSourceForProcessing -> nse_mds_processor_ = new HFSAT::ProNSE::CombinedMDSMessagesProNSEProcessor;
+nse_mds_processor_->SetOrderGlobalListenerNSE((OrderGlobalListenerNSE *)_p_book_listener_);
+nse_mds_processor_->SetExternalTimeListener(_p_time_keeper_);
+
+HFSAT::Watch &watch_ = common_intializer->getWatch();
+
+HFSAT::MarketUpdateManager &market_update_manager_ = *(HFSAT::MarketUpdateManager::GetUniqueInstance
+
+HFSAT::MDSMessages::CombinedMDSMessagesDirectProcessor *combined_mds_messages_shm_processor = common_intializer->getShmProcessor();
+
+HFSAT::NetworkAccountInfoManager network_account_info_manager_;
+
+udp_direct_multiple_zockets.AddEventTimeoutNotifyListener(combined_mds_messages_shm_processor);
+
+HFSAT::NSEMD::NSETBTRawMDHandler::GetUniqueInstance
+
+HFSAT::NSEMD::NSETBTDataProcessor &nse_tbt_data_processor = HFSAT::NSEMD::NSETBTDataProcessor::GetUniqueInstance
+
+nse_tbt_data_processor.AddShortCodeForProcessing(shc); (for all sym)
+
+std::map<std::string, MarketOrderExecution *> shc_exec_map;
+std::vector<HFSAT::BasicOrderManager *> basic_order_manager_vec_;
+
+BaseLiveTrader extends interface BaseTrader. It is used to send order-routing requests to the ORS
+
+for (auto shc_iter_ : shc_vec_) {
+base_trader_ = GetNSETrader(shc_iter_, sec_id_, network_account_info_manager_, watch_);
+// Get RefData Info From RefLoader
+HFSAT::Utils::NSERefDataLoader &nse_ref_data_loader = HFSAT::Utils::NSERefDataLoader::GetUniqueInstance(tradingdate_);
+std::map<int32_t, NSE_UDP_MDS::NSERefData> &nse_ref_data = nse_ref_data_loader.GetNSERefData(segment);
+HFSAT::BaseTrader *p_base_trader_ = new HFSAT::BaseLiveTrader
+auto basic_om_ = new HFSAT::BasicOrderManager (Main class that listens to ORS reply messages either from ORS) -> watch_.subscribe_BigTimePeriod(this);
+basic_om_->AddExecutionListener(mkt_exec_);
+SubscribeToORSReply(combined_mds_messages_shm_processor, basic_om_, sec_id_);
+base_pnl = new HFSAT::LiveBasePNL -> watch_.subscribe_BigTimePeriod(this)
+}
+
+UserControlManager *user_control_manager_ = new UserControlManager
+
+combined_mds_messages_shm_processor->AddControlSourceForProcessing -> , control_processor_->AddControlMessageListener(trader_id_, control_listener_);
+control_processor_->SetExternalTimeListener(_p_time_keeper_);
+
+market_update_manager_.start(); -> StartListening() -> security_id_to_smv_[security_id_]->subscribe_L1_Only(this);
+security_id_to_smv_[security_id_]->subscribe_MktStatus(this); (for all sym)
+
+udp_direct_multiple_zockets.RunLiveDispatcherWithTimeOut(2000);
+

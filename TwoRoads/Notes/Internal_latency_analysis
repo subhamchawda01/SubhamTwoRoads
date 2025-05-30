@@ -1,0 +1,46 @@
+LD_PRELOAD=/home/dvcinfra/important/libcrypto.so.1.1 ; for file in `ls | grep NSE_ | cut -d'.' -f1`; do /home/pengine/prod/live_execs/mds_log_reader ORS_REPLY $file > /tmp/ors_reply ;
+
+awk '(NR>4) {num=$10;base=rshift(num, 16); {if(base == 308) {print $0}}}' /tmp/ors_reply
+
+awk '{overall=($42 / (3600 * 1.0)); md=($34 / (3600 * 1.0)); shm1=(($36 - $34) / (3600 * 1.0)); strat=(($38 - $36) / (3600 * 1.0)); shm2=(($40 - $38) / (3600 * 1.0)); ors=(($42 - $38) / (3600 * 1.0)); print $1,$2,$5,$6,$7,$8,$11,$12,$13,$14,"OVERALL",overall,"md",md,"shm1",shm1,"strat",strat,"shm2",shm2,"ors",ors}' ind16SBINreply
+
+
+overall - OE / (3600 * 1.0)
+md - CE / (3600 * 1.0)
+shm1 - (QS - CE) / (3600 * 1.0)x
+strat - (QE - QS) / (3600 * 1.0)
+shm2 - (OS - QE) / (3600 * 1.0)
+ors - (OE - OS) / (3600 * 1.0)
+
+
+1. most of the order are of type modify
+2. when there is a new product then there is a spike
+3. if strat time is increased then shm2 and ors time also increases
+4. when we are sending new order the spike is there
+5. order conf and cancel are nearly same
+6. market start ors avg shm1 0.00777778 strat 5.59278 shm2 0.130556 ors 0.528889
+
+
+all days
+individual prod with max msg and min msg 
+
+
+awk '{prod[$2]+=1; price[$2]=$4;} END {for(i in prod) {print "Sym: ",i,"Price: ",price[i],"Occurrence: ",prod[i]}}' price_olat_less_90 | sort -k6 -n > price_olat_less_90_count
+
+#gawk '{overall[$14];md[$16];shm1[$18];strat[$20];shm2[22];ors[24];} END {asorti(overall);asorti(md);asorti(shm1);asorti(strat);asorti(shm2);asorti(ors);len=length(overall);mid=int(len/2);{print len,mid,overall[1],overall[mid],overall[len]}}' ind16_20201102_ors_replys_computed_price
+
+./latency_analysis.sh 20201102 2.40833 0.107778 0.00833333 1.14389 0.617222 0.621667 > analysis_log &
+
+./latency_analysis.sh 20201102 1.25833 0.0844444 0.00777778 0.451667 0.181111 0.422778 > analysis_log &
+
+awk '{if($14 > 1) {print $0}}' price_less_1000 > price_less_1000_lat_gre_1; 
+awk '{if($14 <= 1) {print $0}}' price_less_1000 > price_less_1000_lat_less_1; 
+awk '{if($14 > 1) {print $0}}' price_gre_1000 > price_gre_1000_lat_gre_1;
+awk '{if($14 <= 1) {print $0}}' price_gre_1000 > price_gre_1000_lat_less_1;
+
+awk '{if($20 > 1) {print $0}}' price_less_1000 > price_less_1000_strat_gre_1; 
+awk '{if($20 <= 1) {print $0}}' price_less_1000 > price_less_1000_strat_less_1; 
+awk '{if($20 > 1) {print $0}}' price_gre_1000 > price_gre_1000_strat_gre_1;
+awk '{if($20 <= 1) {print $0}}' price_gre_1000 > price_gre_1000_strat_less_1;
+
+

@@ -1,0 +1,96 @@
+/infracore/scripts/fetch_nse_daily_files.sh   [ dvctrader@sdv-ny4-srv13 ~ ] 
+
+fetch nse script do it takes all required files from exchange and prepared data for tomorrow
+logging the scirpt output to /tmp/nse_ref.err
+
+1. downloading fetch_fo_ref_contracts, fetch_cd_ref_contracts, fetch_fo_bhavcopy, fetch_cd_bhavcopy, fetch_stock_security
+2. If today is a CD holiday, we look for the last working day for CD and copy the files from that date to Today's dated files
+3. verifying all the files are present or not sending mail NSE_DAILY_FILE_GENERATION_FAILURE
+3. generating nse_fo_contract and nse_cd_contract from /spare/local/files/NSEFTPFiles/2020/09/28/contract file
+4. gen_physical_settlement_list (Contract File Is Present, We can generate physical settlement names)
+5. /home/pengine/prod/live_scripts/NSE_File_Generator.pl
+   This script generates a contract file for nse inputs are 
+   ( a ) last day's bhavcopy file,
+   ( b ) lot size specification file
+   ( c ) strike scheme file for options
+   ( d ) date for which contract file needs to be generated and mode ( C/A-Append )
+6. downloading sec under ban file and market lot.
+7. downloading span_file and exposure_file
+8. downloading bhav copy file and generating loss_rate, closing_price, security_margin etc
+9. Updating midterm_db with Lotsizes for next trading day
+10.Update Fo Next trading per symbol unit margins
+11.generate the symbol shortcode
+12.Computing Option For SM
+13.Computing Futures For SM
+14.SM File generated
+15.NSEFILESUPDATED
+16.syncing data to all servers
+
+if [ $YYYYMMDD -eq $EXPIRY ] : when date it equal to expiry date that script we run on all days except expiry
+
+1.   cd /spare/local/files/NSEFTPFiles/$YYYY/$MM/$DD/
+2.   fetch_fo_ref_contracts : contract  fo_participant  security  spd_contract
+3.   fetch_cd_ref_contracts : cd_contract  cd_participant  cd_spd_contract
+4.   fetch_fo_bhavcopy : echo "FETCHING FILE FROM FTP" , $DD$MM"0000".md , echo "PRESENT", mv $DD$MM"0000".md $DD$MM"fo_0000".md
+5.   if above failed then : echo "Getting FO Bhavcopy from website.." ,  zip file
+6.   fetch_cd_bhavcopy : mv "FINAL_"$DD$MM"0000".md $DD$MM"cd_0000".md ; 
+7.   if above failed then echo "Getting CD Bhavcopy from website..", zip file
+8.   fetch_fo_settl_bhavcopy : wget fo09SEP2021bhav.csv. 
+9.   fetch_stock_security : security.gz, /spare/local/tradeinfo/NSE_Files/RefData/nse_eq_"$next_working_day"_contracts.txt
+10. if CD holiday , mv $FTP_DIR/$prev_DD$prev_MM"cd_0000.md" $FTP_DIR/$DD$MM"cd_0000.md"
+11.  gunzip -df *, unzip -o * , /spare/local/files/NSEFTPFiles/$YYYY/$MM/$DD/
+12. verify if files are present in /spare/local/files/NSEFTPFiles/$YYYY/$MM/$DD/, total 9 files 
+13. if not mail NSE_DAILY_FILE_GENERATION_FAILURE, or echo "CHECKED"
+14. cp $FTP_DIR/$DD$MM"fo_0000".md /spare/local/tradeinfo/NSE_Files/BhavCopy/fo/$MM$YY/
+      cp $FTP_DIR/$DD$MM"cd_0000".md /spare/local/tradeinfo/NSE_Files/BhavCopy/cds/$MM$YY/ 
+      mv $FTP_DIR/fo"$DD"$MSTR"$YYYY"bhav.csv /spare/local/tradeinfo/NSE_Files/BhavCopy/fo/$MM$YY/
+15. filter + cat $FTP_DIR/contract > /spare/local/tradeinfo/NSE_Files/RefData/nse_fo_$next_working_day"_contracts.txt"
+16. filter + cat $FTP_DIR/cd_contract > /spare/local/tradeinfo/NSE_Files/RefData/nse_cd_$next_working_day"_contracts.txt"
+17. filter + cat contract > /spare/local/tradeinfo/NSE_Files/SecuritiesUnderPhysicalSettlement/fo_securities_under_physical_settlement_${N_MM}${N_YY}.csv
+18. /home/pengine/prod/live_scripts/NSE_File_Generator.pl : /spare/local/tradeinfo/NSE_Files/ContractFiles/nse_contracts.$next_working_day
+19. cp /spare/local/tradeinfo/NSE_Files/Lotsizes/fo_mktlots_$N_MM$N_YY".csv" /spare/local/tradeinfo/NSE_Files/Lotsizes/fo_mktlots_$next_working_day".csv";
+20. cd /spare/local/tradeinfo/NSE_Files/SecuritiesUnderBan/ , echo "UPDATING BAN FILE", fo_secban_$next_working_day".csv"
+21. if not updated mail Secunder ban file not updated update after some time
+22. cd /spare/local/tradeinfo/NSE_Files/Margin_Files/Span_Files/ : echo "UPDATING SPAN FILE", 
+      /spare/local/tradeinfo/NSE_Files/Margin_Files/Span_Files/nsccl.$YYYYMMDD.s_1.spn
+23. cd /spare/local/tradeinfo/NSE_Files/Margin_Files/Exposure_Files : echo "Updating EXPOSURE FILE", exposure_margin_rates.$YYYYMMDD
+24. "/spare/local/tradeinfo/NSE_Files/SecuritiesMarginFiles/security_margin_"$next_working_day".txt" : echo "UPDATING SECURITY MARGIN EQ"
+       /spare/local/tradeinfo/NSE_Files/Margin_Files/Exposure_Files/C_VAR1_"$DD$MM$YYYY"_6.DAT, cm"$DD""$month_name""$YYYY"bhav.csv.zip
+	   Unable to download CM Bhavcopy file for $YYYYMMDD. Please download the file manually
+25. /spare/local/tradeinfo/NSE_Files/midterm_db : echo "UPDATING DB"
+26. echo "generate the symbol shortcode"
+      echo "$exch_sym_exec_ $symbols $next_working_day"
+27. Computing Option For SM
+      Computing Futures For SM
+      SM File generated
+      NSEFILESUPDATED
+28. rsync
+29. /home/dvctrader/important/onexpiry/run_check_daily_files_raghu_mail.sh : CHECKING FILES ON IND SERVER
+      checks if files downloaded by fetch is sync to all server or not
+	  
+	  
+/home/dvctrader/important/check_fetch_nse_daily_files_running.sh 
+verify if fetch is running or not , and files are properly downloaded or not
+
+1. checks if fetch is running or not , if not it starts fetch
+2. sleep for 2min
+3. echo "Checking Files in $FTP_DIR", echo "Security File Missing", echo "Contract File Missing", stop_fetch
+4. In /spare/local/files/NSEFTPFiles/$YYYY/$MM/$DD/  checks [[ $file_count == 9 ]] || { echo "Total File Count Less"; stop_fetch;
+5. echo "Checking File in $TRADE_INFO_DIR" : /spare/local/tradeinfo/NSE_Files/
+6. In /BhavCopy/fo/"${MM}${YY}"/fo"${DD}"${MSTR}"${YYYY}"bhav.csv  checks [[ -f $fo_bhavcopy_file ]] || { echo "FO bhavCopy Missing"; stop_fetch;
+7. In /ContractFiles/nse_contracts."$next_working_day checks [[ -f $contract_file ]] || { echo "Contract File Missing"; stop_fetch; continue; }
+8. In /Margin_Files/Span_Files/nsccl."${YYYYMMDD}".s_1.spn" checks [[ -f $margin_span_file ]] || { echo "Margin Span File Missing"; stop_fetch; continue; }
+9. In /Margin_Files/Exposure_Files/cm"${DD}"${MSTR}"${YYYY}"bhav.csv" checks [[ -f $bhavcopy_file_cm ]] || { echo "Cm bhav File Missing"; stop_fetch;
+10. In /SecuritiesMarginFiles/security_margin_"${next_working_day}".txt" checks [[ -f $security_margin_file ]] || { echo "Security File Missing"; stop_fetch; continue; }
+11. In /spare/local/tradeinfo/NSE_Files/Margin_Files/Exposure_Files/exposure_margin_rates.${YYYYMMDD} checks [[ -f $exp_margin_file ]] || { echo "Exposure  File Missing"; stop_fetch; continue; }
+12. checks if fetch is running or not , or echo "failed to Run Fetch Nse After multiple attempts"; mail Failed to Run Fetch NSE Script
+13. If fetch is not running then , checks files in all server /home/dvctrader/important/onexpiry/run_check_daily_files_raghu_mail.sh
+14. If fetch is running checks, NSEFILESUPDATED in /tmp/fetch_nse_append_file, if present FETCH NSE IS EXECUTED & RSYNC IS PENDING
+      /home/dvctrader/important/onexpiry/sync_trade_info.sh >/tmp/sync_again_nse_files 2>&1 &
+15. If NSEFILESUPDATED is not in /tmp/fetch_nse_append_file , echo  "FETCH NSE NOT EXECUTED, Not Running SYNC" > /tmp/mail_nse_ref.txt
+      mail Fetch_nse is Still Runnings
+
+-----------------------------------------------------------------------
+ERROR 
+
+1. NSEDailyFilesGenerationFailure : re run fetch nse, once fetch nse completed

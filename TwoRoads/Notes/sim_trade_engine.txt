@@ -1,0 +1,419 @@
+STABLE VERSION IN WORKER
+/home/dvctrader/RESULTS_FRAMEWORK/base_results_old_20211231/trade_engine
+/home/dvctrader/stable_exec/trade_engine
+
+LIVE FILE : THEO = SHORTCODE , SQUAREOFF TIME , BID-ASK MULTPLIER, POSLIMIT FILENAME
+_live_file_key_val_map : live file data in key value
+
+live_folder_name_ : folder path in which live file is present (~/ravi/WORK/TESTBED/202104/master/CONFIG_START_RATIO_20190926/LIVE_FILE_MZ.csv)
+
+CreateShortcodeLists() ; 
+		key_val_map : read and store Mainconfig.cfg 
+		vec_key_val_map_ : pushing/storing key_val_map for each product 
+		source_shortcode_list_ : push SHORTCODE for value present in key SECONDARY , PRIMARY  shrotcode/Mainconfig.cfg file
+		ors_shortcode_list_ : storing SHORTCODE for value present in key SECONDARY shortcode/Mainconfig.cfg file
+
+CommonInitializer : InitializeVariables()
+		sid_to_ors_needed_map_ : push_back(false) for each security present in this source_shortcode_vec_ (source_shortcode_list_)
+		sid_to_ors_needed_map_ : push_back(true) for each security present in this ors_shortcode_vec_ (ors_shortcode_list_)
+
+		sim_time_series_info_ : new HFSAT::SimTimeSeriesInfo(sec_name_indexer_.NumSecurityId());
+
+		SimTimeSeriesInfo: 
+		sid_to_time_to_seqd_to_conf_times_
+		sid_to_time_to_conf_to_market_delay_times_
+		sid_to_large_price_move_periods_
+		sid_to_time_to_conf_to_update_times_
+
+		SecurityMarketView : holds book information (dbglogger_, watch_, sec_name_indexer_, _this_shortcode_, _this_exchange_symbol_,
+																					sec_id, sid_to_exch_source_map_[i])
+		for every security id we are creating book (sec_name_indexer_.NumSecurityId())
+		listeners for price , size, change
+		sid_to_smv_ptr_map_ : push_back(p_smv_) above class object for each  security
+		shortcode_smv_map_ : shortcode to smv map
+
+CommonInitializer : Initialize()
+		sec_name_indexer_.NumSecurityId() ( below for all security)
+
+		switch (sid_to_exch_source_map_[secid])
+		indexed_nse_market_view_manager_ = 
+		IndexedNSEMarketViewManager2 : creating instance of thiis unique_ptr (dbglogger_, watch_, sec_name_indexer_, sid_to_smv_ptr_map_, use_self_book_)
+		order listener : OnOrderAdd , OnOrderModify, OnTrade, NotifyListenersOnLevelChange, NotifyListenersOnTrade, OrderConfirmed , OrderCancelRejected, OrderExecuted
+
+				SparseIndexBookPxLevelManager px_level_manager_:
+					  underlying_bid_ds_ = new SparseIndexBookHashExtendedDataStructure
+					  underlying_ask_ds_ = new SparseIndexBookHashExtendedDataStructure 
+					  is_book_crossed_.resize(num_sec_id, false);
+					  init_book_cross_time_.resize(num_sec_id, 0);
+					  is_crossing_side_bid_.resize(num_sec_id, false);
+					  sid_2_base_bid_levels_.resize(num_sec_id, std::vector<MarketUpdateInfoLevelStruct*>(MAX_NUM_SORTED_BOOK_LEVELS, NULL));
+					  sid_2_base_ask_levels_.resize(num_sec_id, std::vector<MarketUpdateInfoLevelStruct*>(MAX_NUM_SORTED_BOOK_LEVELS, NULL));
+					  MarketUpdateInfoLevelStruct t_struct(SP_INDEX_BOOK_INVALID_PX_LEVEL, kInvalidIntPrice, kInvalidPrice, 0, 0, watch_.tv());
+					  sid_2_best_uncrossed_bid_level_.resize(num_sec_id, t_struct);
+					  sid_2_best_uncrossed_ask_level_.resize(num_sec_id, t_struct);
+					  num_valid_bid_levels_.resize(num_sec_id, 0);
+					  num_valid_ask_levels_.resize(num_sec_id, 0);s
+					  using_predictive_uncross_.resize(num_sec_id, false);
+
+
+		shortcode_nse_data_filesource_map_[shortcode_] =
+																								std::unique_ptr<HFSAT::NSELoggedMessageFileSource>(new HFSAT::NSELoggedMessageFileSource());
+
+		NSELoggedMessageFileSource(dbglogger_, sec_name_indexer_, tradingdate_, secid, exchange_symbol_, dep_trading_location_(HFSAT::kTLocNSE)
+				reads NSELoggedData (market data, NSE) /NAS1/data/NSELoggedData/NSE/2021/08/09
+				SetOrderGlobalListenerNSE : p_order_global_listener_nse_  : IndexedNSEMarketViewManager2
+				SetOrderLevelListenerSim : p_order_level_listener_sim_ : NSEMarketOrderManager
+				shortcode_filesource_map_[shortcode_] = shortcode_nse_data_filesource_map_[shortcode_].get();
+				historical_dispatcher_.AddExternalDataListener(shortcode_nse_data_filesource_map_[shortcode_].get()) {NSELoggedMessageFileSource}
+                ////////////////////////
+				HistoricalDispatcher():
+				gets a list of sources
+				In Historical
+				for the ExternalDataListener to know the time of the event first
+				ask them to read the data and depending on whether there is any data of interest
+				( for instance it could have data but of securities that are not of interest ),
+				compute the next_event_timestamp
+
+				Once the sources have next_event_timestamp two choices here :
+				(i) sort the events based on time and based on the event time call the corresponding ExternalDataListener to process
+				that event
+					and fetch the next_event_timestamp
+					and resort if the next_event_timestamp is != 0
+				(ii) all the sources that have some data in the channels, sequentially call them to process all data they have
+					 and call any listeners as and when they feel a need to
+				downsides of method (ii) :
+				   (a) if the time we take in processing events is very high then events from other sources could be ignored.
+				   (b) events are sure to not be chronological in live and hence different in hist and live 
+
+				At the end HistoricalDispatcher collects all sources in prev_external_data_listener_vec_
+				and calls delete on them
+				///////////////////////
+
+		sid_to_sim_smv_ptr_map_.push_back(p_smv_sim_); (HFSAT::SecurityMarketView)
+		sid_to_mov_ptr_map_.push_back(nullptr);
+
+		OrderLevelSim : public BaseSimMarketMaker, public QueuePositionChangeListener, public TimePeriodListener, public TradeGlobalListener
+		(dbglogger_, watch_, *p_smv_sim_, 0, *sim_time_series_info_)
+		////////////////
+		  This order level sim manages self order.
+		  The sim subscribes to order level queue position updates
+		  and updates queue size ahead and queue size behind.
+		//////////////////
+		
+		HFSAT::PriceLevelSimMarketMaker *plsmm = HFSAT::PriceLevelSimMarketMaker::GetUniqueInstance(
+                    dbglogger_, watch_, *p_smv_sim_, 0, *sim_time_series_info_);
+		BaseSimMarketMaker : public OrderNotFoundListener, public OrderConfirmedListener, public OrderConfCxlReplacedListener, public OrderExecutedListener,
+												public OrderRejectedListener, public RetailTradingListener, public OrderInternallyMatchedListener, public ExternalDataListenerListener,
+												public SecurityMarketViewStatusListener
+		//////////////////////
+		BaseSimMarketMaker listens to order-routing messages from ORSMessageLiveSource in live trading to improve fills, and
+		also to maintain global_position_ for the security
+		//////////////////////
+		smv_.subscribe_MktStatus(this);  (BaseSimMarketMaker) (market_status_listeners_ -> SecurityMarketView)
+		
+		watch_.subscribe_first_SmallTimePeriod(PriceLevelSimMarketMaker);
+
+		mov_->SubscribeQueuePosChange(OrderLevelSim);
+
+		shortcode_nse_data_filesource_map_->SetOrderLevelListenerSim(nse_market_order_manager);
+		shortcode_nse_data_filesource_map_->SetExternalTimeListener(&watch_)
+		sid_to_mov_ptr_map_[secid] = mov;
+		sid_to_smm_map_.push_back(plsmm);  (HFSAT::PriceLevelSimMarketMaker)
+		historical_dispatcher_.AddExternalDataListener(filesource, true);
+
+
+BasicOrderManager : listens to ors reply
+                                    public OrderNotFoundListener, public OrderSequencedListener, public OrderConfirmedListener, public OrderConfCxlReplaceRejectListener,
+                                    public OrderConfCxlReplacedListener, public OrderCanceledListener, public OrderExecutedListener, public OrderRejectedListener,
+                                    public TimePeriodListener
+watch_.subscribe_BigTimePeriod(this);
+
+HFSAT::BaseTrader* base_trader_ = HFSAT::SimTraderHelper::GetSimTrader(trade_info, smm_); (BaseSimTrader -> BaseSimMarketMaker -> SendOrderExch,
+																																									CancelOrderExch, CancelReplaceOrderExch, )
+GetSimTrader(trade_info, smm_):
+BaseSimTrader(account, smm) : SendTrade , Cancel, Modify, below are called in this function
+base_sim_market_maker_->SendOrderExch, base_sim_market_maker_->CancelOrderExch, base_sim_market_maker_->ReplayOrderExch
+
+sim_base_pnl = new HFSAT::SimBasePNL(dbglogger_, watch_, *dep_smv_, theo_calc_->GetRuntimeID(), trades_writer_);
+SimBasePNL : class to compute PNL listening to L1 MarketData Updates and OrderRouting Updates
+watch_.subscribe_BigTimePeriod(this);
+OnExec, 
+
+-------------------------------------------------------------------------------------------------------------------------------------------------------
+
+SimpleLiveDispatcher: 
+
+reading mkt data, just poll for eachip and and on mkt update calls the lisntener
+
+HistoricalDispatcher::SeekHistFileSourcesTo > called only once
+NSELoggedMessageFileSource::SeekToFirstEventAfter > bulk_file_reader.read is taking more time
+NSELoggedMessageFileSource::ProcessEventsTill > calls _ProcessThisMsg , and bulk_file_reader_.read
+NSELoggedMessageFileSource::_ProcessThisMsg > OnTimeReceived , OnPriceLevelUpdate (not taking much time), below On function are called, switch changes
+IndexedNSEMarketViewManager2::OnOrderAdd > 
+IndexedNSEMarketViewManager2::OnOrderModify
+IndexedNSEMarketViewManager2::OnOrderDelete
+IndexedNSEMarketViewManager2::OnTrade
+BaseSimMarketMaker::ProcessRequestQueue : PriceLevelSimMarketMaker::OnTimePeriodUpdate>ProcessRequestQueue
+BaseSimMarketMaker::ProcessSendRequest
+BaseSimMarketMaker::ProcessCancelRequest
+BaseSimMarketMaker::ProcessCxlReplaceRequest
+BaseSimMarketMaker::CancelReplaceOrderExch
+BaseSimMarketMaker::GetCancelReplaceOrderDelay
+BaseSimMarketMaker::UpdateAggSizes
+BaseSimMarketMaker::SendOrderExch
+BaseSimMarketMaker::CancelOrderExch
+BaseSimMarketMaker::CancelReplaceOrderExch
+BaseSimMarketMaker::GetSendOrderDelay
+BaseSimMarketMaker::ProcessBidSendRequest
+BaseSimMarketMaker::ProcessAskSendRequest
+
+BaseSimMarketMaker
+
+BasicOrderManager:SendTrade --> BaseSimTrader:SendTrade --> base_sim_market_maker_:SendOrderExch --> addRequest
+
+NSELoggedMessageFileSource::_ProcessThisMsg --> PriceLevelSimMarketMaker::OnTimePeriodUpdate:ProcessRequestQueue --> BaseSimMarketMaker::ProcessRequestQueue
+
+NSELoggedMessageFileSource::_ProcessThisMsg --> NSE_MDS::MsgType::kNSEOrderDelta --> p_order_global_listener_nse_->OnOrderModify --> PriceLevelSimMarketMaker::OnMarketUpdate --> PriceLevelSimMarketMaker::InitializeOnMktUpdate --> BaseSimMarketMaker::ProcessRequestQueue
+
+BaseSimMarketMaker::SendOrderExch
+BaseSimMarketMaker::CancelOrderExch
+BaseSimMarketMaker::CancelReplaceOrderExch
+BaseSimMarketMaker::ReplayOrderExch
+BaseSimMarketMaker::addRequest
+BaseSimMarketMaker::ProcessRequestQueue : if (dbglogger_.CheckLoggingLevel(PLSMM_INFO)) (# def), genrequest.wakeup_time_ = genrequest.wakeup_time_ + ttime_t(0, POSTPONE_MSECS * 1000);
+BaseSimMarketMaker::ProcessSendRequest
+BaseSimMarketMaker::ProcessBidSendRequest : 
+BaseSimMarketMaker::ProcessAskSendRequest
+
+
+ProcessRequestQueue-->ProcessSendRequest-->ProcessBidSendRequest-->GetSizeAtIntPrice
+ProcessRequestQueue-->ProcessCxlReplaceRequest-->ProcessBidSendRequest-->GetSizeAtIntPrice
+
+this GetSizeAtIntPrice function in SIM is being called most no of times and is taking more time (cpu), 
+this above function is calling SecurityMarketView::bid_size_at_int_price / SecurityMarketView::ask_size_at_int_price respectively
+
+Mean: 2206      Min: 771        Median: 1050    Max: 20381696   95th: 1924      count:35556507
+Mean: 2133      Min: 741        Median: 981     Max: 20348928   95th: 1816      count:35556507
+
+-------------------------------------
+ExternalDataListener:
+  BaseSimMarketMaker
+  NSELoggedMessageFileSource
+  
+ OnTimePeriodUpdate
+  BasicOrderManager
+  PriceLevelSimMarketMaker
+ 
+ 
+ grep -i mean /NAS3/subham/output_tradeengine_1prodS_OnMarketUpdate | awk '{split($(NF-16),arr,":");mean=arr[2] / 3000;median=$(NF-14) / 3000;nzth=$(NF-12) / 3000;nfth=$(NF-10) / 3000;nnth=$(NF-8) / 3000;nnnth=$(NF-6) / 3000;min=$(NF-4) / 3000;max=$(NF-2) / 3000 * $NF;{printf "%.4f  %.4f  %.4f  %.4f  %.4f  %.4f  %.4f  %.4f %d\n",mean,median,nzth,nfth,nnth,nnnth,min,max,$NF}}'
+ 
+ 
+ grep -i mean /NAS3/subham/output_tradeengine_1prodS_OnMarketUpdate | awk -F'[ :]' '{print $(NF-16),$NF}' | awk '{var = $1 / 3000 * $NF / 1000000 / 60; print var,$NF}'
+ 
+ 
+ grep -i mean /NAS3/subham/output_tradeengine_1prodS_OnMarketUpdate | awk -F'[ :]' '{print $(NF-16),$NF}' | awk '{var = $1 / 3000 * $NF / 1000000; print var,$NF}'
+ 
+LOGIC IMPROVEMENT:
+	GetSizeAtIntPrice
+	GetBidPL
+	IndexedNSEMarketViewManager2::SanitizeBook (GetBidPL)
+ 
+------------------------------------------------------------------------------------------
+
+HistoricalDispatcher::RunHist USING_HEAP ProcessEventsTill										-->>  14.0483 		87497802
+HistoricalDispatcher::RunHist USING_HEAP push_heap  													-->>  0.112289 	87497657
+
+NSELoggedMessageFileSource::ProcessEventsTill _ProcessThisMsg 							-->>  11.2648 		205021588
+NSELoggedMessageFileSource::ProcessEventsTill bulk_file_reader_.read 						-->>  2.42609 		205021588
+
+NSELoggedMessageFileSource::_ProcessThisMsg NotifyExternalDataListenerListener  -->>  1.10598 		205021588
+NSELoggedMessageFileSource::_ProcessThisMsg OnTimeReceived 								-->>  3.76215 		205021588
+NSELoggedMessageFileSource::_ProcessThisMsg OnPriceLevelUpdate 						-->>  0.112762 	205021588
+NSELoggedMessageFileSource::_ProcessThisMsg nse_->OnOrderAdd 							-->>  1.00833 		17251085
+NSELoggedMessageFileSource::_ProcessThisMsg nse_->OnOrderModify 					-->>  3.78388 		169469496
+NSELoggedMessageFileSource::_ProcessThisMsg nse_->OnOrderDelete						-->>  0.581677 	14878776
+NSELoggedMessageFileSource::_ProcessThisMsg nse_->OnTrade								-->>  0.289986 	3422116
+
+---------------------------------------------------------------------------------------------------
+
+NSELoggedMessageFileSource::ProcessEventsTill _ProcessThisMsg 								-->>  12.3639 			205021588
+NSELoggedMessageFileSource::_ProcessThisMsg NotifyExternalDataListenerListener 		-->>  0.849701 		205021588
+NSELoggedMessageFileSource::_ProcessThisMsg OnTimeReceived 									-->>  6.51513 			205021588
+NSELoggedMessageFileSource::_ProcessThisMsg OnPriceLevelUpdate 							-->>  0.101372 		205021588
+NSELoggedMessageFileSource::_ProcessThisMsg nse_->OnOrderAdd  							-->>  0.785308 		17251085
+NSELoggedMessageFileSource::_ProcessThisMsg nse_->OnOrderModify 						-->>  2.92523 			169469496
+NSELoggedMessageFileSource::_ProcessThisMsg nse_->OnOrderDelete 							-->>  0.450083 		14878776
+NSELoggedMessageFileSource::_ProcessThisMsg nse_->OnTrade 									-->>  0.228198 		3422116
+BasicOrderManager::OnTimePeriodUpdate 																			-->>  0.00304789 	1642573
+PriceLevelSimMarketMaker::OnTimePeriodUpdate  																-->>  3.36264 			2480635922
+PriceLevelSimMarketMaker::OnTimePeriodUpdate::ProcessRequestQueue 						-->>  2.24085 			2515104
+OrderLevelSim::OnTimePeriodUpdate 																						-->>  1.07494 			2480635922
+SimBasePNL::OnTimePeriodUpdate 																						-->>  0.00662504 	1642573
+
+------------------------------------------------------------------------------------------------------------------------------------------------------------------
+
+NSELoggedMessageFileSource::ProcessEventsTill _ProcessThisMsg									-->>  8.11316 		205021588
+NSELoggedMessageFileSource::_ProcessThisMsg OnTimeReceived 									-->>  2.67667 		205021588
+NSELoggedMessageFileSource::_ProcessThisMsg nse_->OnOrderModify							-->>  3.33572 		169469496
+IndexedNSEMarketViewManager2::OnOrderModify::End														-->>  1.78225 		169469445
+
+------------------------------------------------------------------------------------------------------------------------------------------------------------------
+
+NSELoggedMessageFileSource::ProcessEventsTill _ProcessThisMsg														-->>  10.9037 		205021588	
+NSELoggedMessageFileSource::_ProcessThisMsg OnTimeReceived 														-->>  6.38756 		205021588	
+OrderLevelSim::OnTimePeriodUpdate 																											-->>  1.06116 		2480635922
+PriceLevelSimMarketMaker::OnTimePeriodUpdate																						-->>  3.30751 		2480635922      
+PriceLevelSimMarketMaker::OnTimePeriodUpdate::ProcessRequestQueue 											-->>  2.15322 		2515104		
+BaseSimMarketMaker::ProcessRequestQueue 																							-->>  2.42664 		3750856		
+BaseSimMarketMaker::ProcessRequestQueue::ProcessCxlReplaceRequest 											-->>  2.41116 		2101240		
+BaseSimMarketMaker::ProcessRequestQueue::ProcessCxlReplaceRequest::End 								-->>  2.39805 		2101240
+
+------------------------------------------------------------------------------------------------------------------------------------------------------------------
+
+NSELoggedMessageFileSource::ProcessEventsTill _ProcessThisMsg 													-->>  7.91269 		205021588
+NSELoggedMessageFileSource::_ProcessThisMsg OnTimeReceived 														-->>  2.69603 		205021588
+NSELoggedMessageFileSource::_ProcessThisMsg nse_->OnOrderModify 											-->>  3.02315 		169469496
+IndexedNSEMarketViewManager2::OnOrderModify::End 																			-->>  2.09954 		169469445
+IndexedNSEMarketViewManager2::NotifyListenersOnLevelChange 															-->>  2.6097 		201607683
+
+------------------------------------------------------------------------------------------------------
+
+NSELoggedMessageFileSource::ProcessEventsTill _ProcessThisMsg																			-->>  8.89794 		205021588
+NSELoggedMessageFileSource::_ProcessThisMsg OnTimeReceived				 															-->>  4.51161 		205021588
+PriceLevelSimMarketMaker::OnTimePeriodUpdate																											-->>  3.22483 		2480635922
+PriceLevelSimMarketMaker::OnTimePeriodUpdate::ProcessRequestQueue																-->>  2.1381 		2515104
+BaseSimMarketMaker::ProcessRequestQueue 																												-->>  2.40884 		3750856
+BaseSimMarketMaker::ProcessRequestQueue::ProcessCxlReplaceRequest																-->>  2.3975 		2101240
+BaseSimMarketMaker::ProcessRequestQueue::ProcessCxlReplaceRequest::End 													-->>  2.38864 		2101240
+BaseSimMarketMaker::ProcessRequestQueue::ProcessCxlReplaceRequest::ProcessBidSendRequest 					-->>  1.13951 		1160793
+BaseSimMarketMaker::ProcessRequestQueue::ProcessCxlReplaceRequest::ProcessAskSendRequest					-->>  1.21625 		940373
+
+--------------------------------------------------------------------------------------------------------
+
+NSELoggedMessageFileSource::ProcessEventsTill _ProcessThisMsg																			-->>  7.13361 		205021588
+NSELoggedMessageFileSource::_ProcessThisMsg OnTimeReceived 																			-->>  2.65617 		205021588
+BaseSimMarketMaker::ProcessRequestQueue::ProcessCxlReplaceRequest																-->>  2.38385 		2101240
+BaseSimMarketMaker::ProcessRequestQueue::ProcessCxlReplaceRequest::End 													-->>  2.37423 		2101240
+BaseSimMarketMaker::ProcessRequestQueue::ProcessCxlReplaceRequest::ProcessBidSendRequest					-->>  1.12484 		1160793
+BaseSimMarketMaker::ProcessRequestQueue::ProcessCxlReplaceRequest::ProcessAskSendRequest					-->>  1.2202 		940373
+BaseSimMarketMaker::GetSizeAtIntPrice 																														-->>  2.33534 		2103853
+
+------------------------------------------------------------------------------------------------------------
+
+1PRODUCT /home/dvctrader/usarraf/CONFIG_FUT1_HDG_VWAP_FINAL_BKP_PRE_EXPIRY_20211118/LIVE_FILE_TEST.csv
+/NAS3/subham/output_tradeengine_1prodS
+/NAS3/subham/output_tradeengine_1prodS2
+
+HistoricalDispatcher::RunHist::USING_HEAP::END																					-->>  2.85778e-08 		1						3.61333e-08		1
+HistoricalDispatcher::RunHist::USING_HEAP::make_heap																		-->>  5.18889e-09 		1						4.84444e-09 		1
+HistoricalDispatcher::RunHist::USING_HEAP::external_data_listener_vec_.front										-->>  0.00111644 		2870852			0.00105265 		2870852
+HistoricalDispatcher::RunHist::USING_HEAP::pop_heap																			-->>  0.00124404 		2870852			0.00118024 		2870852
+HistoricalDispatcher::RunHist::USING_HEAP::ProcessEventsTill																-->>  13.9793 				2870852			13.575 				2870852
+HistoricalDispatcher::RunHist::USING_HEAP::push_heap																			-->>  0.00242427 		2870851			0.00221693 		2870851
+HistoricalDispatcher::RunHist::USING_HEAP::_hasevents_::else																-->>  6.24e-08 			1						3.27111e-08 		1
+NSELoggedMessageFileSource::ProcessEventsTill::_ProcessThisMsg													-->>  13.8581 				15865178		13.4612 				15865178
+NSELoggedMessageFileSource::ProcessEventsTill::bulk_file_reader_.read												-->>  0.0969539 			15865178		0.0910485 			15865178
+NSELoggedMessageFileSource::_ProcessThisMsg::NotifyExternalDataListenerListener							-->>  0.0148956 			15865178		0.0143668 			15865178
+NSELoggedMessageFileSource::_ProcessThisMsg::OnTimeReceived 													-->>  0.0178924 			15865178		0.0172754 			15865178
+NSELoggedMessageFileSource::_ProcessThisMsg::OnPriceLevelUpdate												-->>  0.00987167 		15865178		0.0106649 			15865178
+NSELoggedMessageFileSource::_ProcessThisMsg::nse_->OnOrderAdd 												-->>  0.378174 			636848			0.366941 			636848
+NSELoggedMessageFileSource::_ProcessThisMsg::nse_->OnOrderModify 											-->>  13.0306 				14592687		12.6589 				14592687
+NSELoggedMessageFileSource::_ProcessThisMsg::nse_->OnOrderDelete 											-->>  0.362556 			630574			0.352298 			630574
+NSELoggedMessageFileSource::_ProcessThisMsg::nse_->OnTrade 														-->>  0.000695477 		5047				0.000644979 		5047
+
+------------------------------------------------------------------------------------------------------------
+/NAS3/subham/output_tradeengine_1prodS_ProcessThisMsg
+
+HistoricalDispatcher::RunHist::USING_HEAP::ProcessEventsTill																-->>  13.8741 			2870852
+NSELoggedMessageFileSource::ProcessEventsTill::_ProcessThisMsg													-->>  13.773 			15865178
+NSELoggedMessageFileSource::_ProcessThisMsg::OnTimeReceived 													-->>  0.0195671 		15865178
+NSELoggedMessageFileSource::_ProcessThisMsg::nse_->OnOrderAdd													-->>  0.373943 		636848
+NSELoggedMessageFileSource::_ProcessThisMsg::nse_->OnOrderModify											-->>  12.9855 			14592687
+NSELoggedMessageFileSource::_ProcessThisMsg::nse_->OnOrderDelete												-->>  0.358268 		630574
+NSELoggedMessageFileSource::_ProcessThisMsg::nse_->OnTrade 														-->>  0.000679719 	5047
+IndexedNSEMarketViewManager2::OnOrderModify::SanitizeBookOnCrossedBook 								-->>  3.00306e-06 	190
+IndexedNSEMarketViewManager2::OnOrderModify::order_history_instance.GetOrderDetails 				-->>  0.0192137 		14592687
+IndexedNSEMarketViewManager2::OnOrderModify::smv_.GetIntPx 														-->>  0.0098906 		14592687
+IndexedNSEMarketViewManager2::OnOrderModify::px_level_manager_.ModifySizeAtPxLevel 				-->>  8.15444e-07 	205
+IndexedNSEMarketViewManager2::OnOrderModify::px_level_manager_.ModifyOrderAtDiffLevels 		-->>  0.0527761 		14592482
+IndexedNSEMarketViewManager2::OnOrderModify::SetSMVBestVars 													-->>  0.0102149 		14592687
+IndexedNSEMarketViewManager2::OnOrderModify::TriggerTrade 															-->>  7.38082e-05 	377
+IndexedNSEMarketViewManager2::OnOrderModify::NotifyListenersOnLevelChange 								-->>  12.8262 			14592310
+IndexedNSEMarketViewManager2::OnOrderModify::px_level_manager_.IsBookCrossed 						-->>  0.00624243 	14592687
+
+-------------------------------------------------------------------------------------------------------------
+/NAS3/subham/output_tradeengine_1prodS_NotifyListenersOnLevelChange
+
+HistoricalDispatcher::RunHist::USING_HEAP::ProcessEventsTill																-->>  14.1624 		2870852
+NSELoggedMessageFileSource::ProcessEventsTill::_ProcessThisMsg 													-->>  14.0617 		15865178
+NSELoggedMessageFileSource::_ProcessThisMsg::nse_->OnOrderModify 											-->>  13.2756 		14592687
+IndexedNSEMarketViewManager2::OnOrderModify::NotifyListenersOnLevelChange 								-->>  13.1919 		14592310
+IndexedNSEMarketViewManager2::NotifyListenersOnLevelChange::smv_.NotifyL1PriceListeners 		-->>  10.8264 		10744104
+IndexedNSEMarketViewManager2::NotifyListenersOnLevelChange::smv_.NotifyL1SizeListeners 			-->>  0.798135 	894096
+IndexedNSEMarketViewManager2::NotifyListenersOnLevelChange::smv_.NotifyL2Listeners 				-->>  2.28935 		3067057
+IndexedNSEMarketViewManager2::NotifyListenersOnLevelChange::smv_.NotifyL2OnlyListeners		 	-->>  0.001738 	3067057
+SecurityMarketView::NotifyL1PriceListeners::OnMarketUpdate 																	-->>  10.7939 		47386584
+SecurityMarketView::NotifyL1SizeListeners::OnMarketUpdate 																	-->>  0.795532 	3125318
+SecurityMarketView::NotifyL2Listeners::OnMarketUpdate 																			-->>  2.28271 		7841962
+
+-------------------------------------------------------------------------------------------------------------------
+/NAS3/subham/output_tradeengine_1prodS_OnMarketUpdate
+
+HistoricalDispatcher::RunHist::USING_HEAP::ProcessEventsTill 																-->>  14.3738 			2870852
+NSELoggedMessageFileSource::ProcessEventsTill::_ProcessThisMsg 													-->>  14.1911 			15865178
+NSELoggedMessageFileSource::_ProcessThisMsg::nse_->OnOrderModify 											-->>  13.3919 			14592687
+IndexedNSEMarketViewManager2::OnOrderModify::NotifyListenersOnLevelChange 								-->>  13.2996 			14592310
+IndexedNSEMarketViewManager2::NotifyListenersOnLevelChange::smv_.NotifyL1PriceListeners 		-->>  10.9142 			10744104
+IndexedNSEMarketViewManager2::NotifyListenersOnLevelChange::smv_.NotifyL1SizeListeners 			-->>  0.803663 		894096
+IndexedNSEMarketViewManager2::NotifyListenersOnLevelChange::smv_.NotifyL2Listeners 				-->>  2.30735 			3067057
+IndexedNSEMarketViewManager2::NotifyListenersOnLevelChange::smv_.NotifyL2OnlyListeners 			-->>  0.00185727 	3067057
+SecurityMarketView::NotifyL1PriceListeners::OnMarketUpdate 																	-->>  10.8776 			47386584
+SecurityMarketView::NotifyL1SizeListeners::OnMarketUpdate 																	-->>  0.799977 		3125318
+SecurityMarketView::NotifyL2Listeners::OnMarketUpdate 																			-->>  2.29861 			7841962
+PriceLevelSimMarketMaker::OnMarketUpdate 																							-->>  13.7401 			14705257
+BasePNL::OnMarketUpdate 																															-->>  0.0150417 		10744104
+TimeDecayedTradeInfoManager::OnMarketUpdate 																					-->>  0.00814674 	11638200
+RatioTheoCalculator::OnMarketUpdate 																										-->>  0.11225 			14705257
+SquareOffTheoCalculator::OnMarketUpdate 																								-->>  1.08578e-05 	5584
+HedgeTheoCalculator::OnMarketUpdate 																										-->>  0.00986961 	6555462
+
+---------------------------------------------------------------------------------------------------------------------------
+
+/NAS3/subham/output_tradeengine_1prodS_OnMarketUpdate_new
+
+HistoricalDispatcher::RunHist::USING_HEAP::ProcessEventsTill 																-->>  13.6448 		2870852
+NSELoggedMessageFileSource::ProcessEventsTill::_ProcessThisMsg 													-->>  13.4795 		15865178
+NSELoggedMessageFileSource::_ProcessThisMsg::nse_->OnOrderModify 											-->>  12.7274 		14592687
+IndexedNSEMarketViewManager2::OnOrderModify::NotifyListenersOnLevelChange 								-->>  12.6464 		14592310
+IndexedNSEMarketViewManager2::NotifyListenersOnLevelChange::smv_.NotifyL1PriceListeners 		-->>  10.3793 		10744104
+IndexedNSEMarketViewManager2::NotifyListenersOnLevelChange::smv_.NotifyL1SizeListeners 			-->>  0.765088 	894096
+IndexedNSEMarketViewManager2::NotifyListenersOnLevelChange::smv_.NotifyL2Listeners 				-->>  2.19678 		3067057
+SecurityMarketView::NotifyL1PriceListeners::OnMarketUpdate 																	-->>  10.349 		47386584
+SecurityMarketView::NotifyL1SizeListeners::OnMarketUpdate 																	-->>  0.762925 	3125318
+SecurityMarketView::NotifyL2Listeners::OnMarketUpdate 																			-->>  2.19096 		7841962
+PriceLevelSimMarketMaker::OnMarketUpdate 																							-->>  13.1415 		14705257
+
+----------------------------------------------------------------------------------------------------------------------------------------
+
+/NAS3/subham/output_tradeengine_1prodS_OnMarketUpdate_PriceLevelSimMarketMaker
+
+HistoricalDispatcher::RunHist::USING_HEAP::ProcessEventsTill																-->>  44.2739 			2870852				44.9916 2870852
+NSELoggedMessageFileSource::ProcessEventsTill::_ProcessThisMsg 													-->>  44.0903 			15865178			44.8049 15865178
+NSELoggedMessageFileSource::_ProcessThisMsg::nse_->OnOrderModify 											-->>  41.6874 			14592687			42.3603 14592687
+IndexedNSEMarketViewManager2::OnOrderModify::NotifyListenersOnLevelChange 								-->>  41.591 			14592310			42.2507 14592310
+IndexedNSEMarketViewManager2::NotifyListenersOnLevelChange::smv_.NotifyL1PriceListeners 		-->>  34.1732 			10744104			34.7122 10744104
+IndexedNSEMarketViewManager2::NotifyListenersOnLevelChange::smv_.NotifyL2Listeners 				-->>  7.23297 			3067057				7.35059 3067057
+SecurityMarketView::NotifyL1PriceListeners::OnMarketUpdate 																	-->>  34.1328 			47386584			34.6659 47386584
+SecurityMarketView::NotifyL2Listeners::OnMarketUpdate 																			-->>  7.22358 			7841962				7.33973 7841962
+PriceLevelSimMarketMaker::OnMarketUpdate 																							-->>  8.26667e-09 	8							44.352 14705257
+PriceLevelSimMarketMaker::OnMarketUpdate::InitializeOnMktUpdate 														-->>  0.0463215 		14705249			0.0531023 14705249
+PriceLevelSimMarketMaker::OnMarketUpdate::BidUpdateAggress 															-->>  4.17985 			8748515775		4.17985 8748515775
+PriceLevelSimMarketMaker::OnMarketUpdate::BidUpdateImprove 															-->>  1.19131 			2552803120		1.20549 2552803120
+PriceLevelSimMarketMaker::OnMarketUpdatei::BidUpdateBest 																-->>  0.00493307 	6529065				0.00732706 6529065
+PriceLevelSimMarketMaker::OnMarketUpdate::AskUpdateAggress 															-->>  13.9654 			29229861206		13.9654 29229861206
+PriceLevelSimMarketMaker::OnMarketUpdate::AskUpdateImprove 															-->>  0.914596 		1959848741		0.903708 1959848741
+PriceLevelSimMarketMaker::OnMarketUpdate::AskUpdateBest 																-->>  0.00397944 	5305914				0.00433316 5305914
+
+---------------------------------------------------------------------------------------------------------------------------
+
+

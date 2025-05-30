@@ -1,0 +1,13 @@
+this is lattest gen processor, for this higher version of os is required , so they installed normal 7.6 and above
+over software is 100% tested in 7.4, os we can install 7.4 , but for driver they will install latest kernal
+stock kernal(which comes with os) and updated kernal from both this which one is better
+limitation kernal hardware
+os 7.4 for libraries and kernal lattest one
+new features are supported in kernal higher version
+the way hardware is updated same way kernal is also updated
+for higher version hardware , higher version kernal is recomanded
+main problem will , if we have compiled in 7.4, at that time 7.4 which ever library is there, if we run the same in higher version may be some incompatability we can get, when ever there is a new release of intel processor
+
+had call with vinod and ganesh , they said currently in ind22 os 7.6version is installed and in ind17 7.4version.
+As our software is tested with 7.4 (ind17) . so they will install 7.4 in ind22 with lattest kernal.
+they will do the changes tomorrow postmarket.

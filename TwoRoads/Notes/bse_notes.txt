@@ -1,0 +1,585 @@
+INDB11:
+IP : 192.168.132.11
+ETI Id : 1001
+Mem Code : 6701
+Member Name : Two Roads Trading Pvt Ltd
+Product Name : TR Trading Software
+Product Version : 1.0
+Vendor Name : Inhouse
+Algo Category : High Frequency
+Startegies Name : TR Trading BSE CM
+Startegy Version : 1.0
+Strategy Developed by : Inhouse
+Equity : Y
+ExchangeGatewayIP 10.255.255.6
+ExchangeGatewayPort 12908
+AlgoId-1 1088040670100001
+AlgoId-2 1088040670100001
+UserID-1 670101001
+UserID-2 670101002
+SessionID-1 670101001
+SessionID-2 670101002
+UserPassword-1 18Oct@21
+UserPassword-2 18Oct@21
+SessionPassword-1 18Oct@21
+SessionPassword-2 18Oct@21
+LocationId-1 5600490001001188
+LocationId-2 5600490001002188
+ClientCode OWN
+CPCode 
+
+
+~/important/BSE 5.67
+~/important/BSE
+/spare/local/files/BSEFTPFiles/2021/06/28
+/spare/local/tradeinfo/BSE_Files
+
+NOTE:
+IF THERE IS ANY FILE CHANGE (BSE_FILES), FIRST CHECK OFFLINE IF THE CHANGES ARE WORKING OR NOT , BY RUNNING 
+EXEC LIKE GET_EXCHANGE_SYMBOL ....
+
+member id live = 6701
+member id simulation = 7621
+
+Gateway Request:
+MsgSeqNum = 1
+PartyIDSessionID = sessionID config
+DefaultCstmApplVerID = ETI_INTERFACE_VERSION
+Password = config
+
+
+Gateway Response:
+GatewayID = ipaddress
+GatewaySubID = port
+SecondaryGatewayID = ip address
+SecondaryGatewaySub-ID = port
+SessionMode = 1:HF , 2:LF
+TradSesMode = Development , Simulation , Production, Acceptance
+
+
+Session Logon Request
+MsgSeqNum = 1 (ETI_SESSION_LOGON_START_SEQUENCE)
+HeartBtInt = 30 (config)
+PartyIDSessionID = sessionID config
+DefaultCstmApplVerID = ETI_INTERFACE_VERSION
+Password = config
+ApplUsageOrders = A (ENUM_APPL_USAGE_ORDERS_AUTOMATED_CHAR)
+ApplUsageQuotes = N (ENUM_APPL_USAGE_QUOTES_NONE_CHAR)
+OrderRoutingIndicator = Y (ENUM_ORDER_ROUTING_INDICATOR_YES_CHAR)
+FIXEngineName = dontknow
+FIXEngineVersion  = dontknow
+FIXEngineVendor = dontknow
+ApplicationSystemName = "ETI"
+ApplicationSystemVersion = "1"
+ApplicationSystemVendor = "DVC"
+
+
+Session Logon Response
+ThrottleTimeInterval = miliseconds
+LastLoginTime = lastlogintime
+LastLoginIP = ip of machine
+ThrottleNoMsgs = throttlelimit (0 : off)
+ThrottleDisconnect-Limit = disconnectlimit
+HeartBtInt = miliseconds
+SessionInstanceID = uniqueid for session
+TradSesMode = Development , Simulation , Production, Acceptance
+NoOfPartition = totalpartition
+DaysLeftForPasswd-Expiry = days remaining for expiry (field will be populated 3days prior to the expiry else "no value")
+GraceLoginsLeft = no of successsful loging allowed (0: no new login with expired pass)
+DefaultCstmApplVerID = 2.3 version
+
+
+Session Logout Request
+MsgSeqNum = 1
+
+
+Session Logout Response
+RequestTime = milisec
+SendingTime = milisec
+MsgSeqNum = 1
+
+
+Session Logout Notification
+VarTextLen = textlength
+VarText = error text
+
+
+User Logon Request
+MsgSeqNum = 1
+Username = config (UserID)
+Password = config
+
+
+User Logon Response
+MsgSeqNum = 1
+LastLoginTime = milisec
+DaysLeftForPasswd-Expiry = days remaining for expiry (field will be populated 3days prior to the expiry else "no value")
+GraceLoginsLeft = no of successsful loging allowed (0: no new login with expired pass)
+
+
+User Logout Request 
+MsgSeqNum = 1
+Username = config (UserID)
+
+
+New Order Single
+MsgSeqNum = last seq
+SenderSubID = userid
+Price = req if OrdType limit
+StopPx = req if OrdType stop (ETI_SIGNED_8_BYTE_INT_NOVALUE)
+MaxPricePercentage = req if OrdType  market
+SenderLocationID =  location id of order //ask 16  for test for live ask help desk
+ClOrdID = client order id
+MessageTag = userdefined free field
+OrderQty = total order quantity
+MaxShow = quantity to be visible
+MarketSegmentID = product segment //partison - productid (marketsegmentid) ask 
+SimpleSecurityID = security id
+AccountType = own, client ,special client , institution //ask
+ApplSeqIndicator = lean
+Side = buy, sell
+OrdType = limit
+TimeInForce = day 
+ExecInst = Non Persistent
+STPCFlag = Active
+TradingCapacity = 1
+Account = A1
+PositionEffect = C
+RegulatoryText = additional info
+AlgoID = alogid
+FreeText1 = Unique client code //ask
+CPCode = participant code //ask
+FreeText3 = comments
+
+
+NewOrderSingleShort
+MsgSeqNum = current seq //dynamic
+SenderSubID = userid //static
+Price = price //dynamic
+SenderLocationID = location id of order // static ask 16  for test for live ask help desk : ucc portal //constructor
+ClOrdID = client order id // dynamic
+OrderQty = order quantity // dynamic
+MaxShow = Order quantity //dynamic
+SimpleSecurityID = provided in BSE reference data //constructor
+AccountType = 30 (client) //constructor
+Side = buy , sell // dynamic
+TimeInForce = 0 (Good for day) //constructor
+STPCFlag = 1 (active)
+AlgoID = algoid (constructor) // ask help desk 
+FreeText1 = Unique client code // ask help desk : ucc portal
+CPCode = participant code // constructor ask help desk : extranet portal
+
+
+CancelOrderSingle
+MsgSeqNum = current seq// dynamic
+SenderSubID = userid // static
+OrderID = order id //dynamic
+ClOrdID = client order id //dynamic
+OrigClOrdID = last successful client order id //dynamic 
+ActivityTime = time stamp //dynamic
+MessageTag = any msg //dynamic
+MarketSegmentID = partition - product id // dynamic 
+SimpleSecurityID = provided in bse ref data // dynamic
+TargetPartyIDSessionID = session id // static
+AlgoID = algo id // constructor
+
+
+ReplaceOrderSingle
+MsgSeqNum = current seq // dynamic
+SenderSubID = userid // static
+OrderID = order id //dynamic
+ClOrdID = client order id // dynamic
+OrigClOrdID = last successsful client order id // dynamic
+Price = price // dynamic
+SenderLocationID = location id of order // static
+ActivityTime = activity time // dynamic
+OrderQty = order quantity // dynamic
+MaxShow = order quantity // dynamic
+SimpleSecurityID = privided in bse ref data //dynamic
+AccountType = type // static
+Side = side // dynamic
+TimeInForce = 0 (day) // static 
+AlgoID = algo id // static 
+FreeText1 = ucc code // static
+CPCode = participant code // static
+
+
+Immediate Execution Response
+MsgSeqNum = msg seq no
+PartitionID = partition id
+ApplID = 4 session data
+ApplMsgID = application msg identifier
+LastFragment = 1 last msg
+
+
+
+
+   new_order_->price_ = 1400;
+   new_order_->security_id_ = 500209;
+   new_order_->size_remaining_ = 2;
+   new_order_->buysell_ = 1;
+   new_order_->server_assigned_order_sequence_ = 10;
+
+
+bsehelp@bseindia.com
+bse.csd@bseindia.com
+iml.techsupport@bseindia.com
+iml.info@bseindia.com
+
+check conf
+
+MarketSegmentID : partision - product id // total 4 partition 
+only of equity there are 4 partition , for other segment only 1 partition
+
+reset using 0 , tws bolt 
+
+Service not available reject (when any of partision is down)
+TRANSACTION NOT ALLOWED IN CURRENT INSTRUMENT STATE [CLOSED]
+TRANSACTION NOT ALLOWED IN CURRENT INSTRUMENT STATE [RESTRICTED]UCT ID [54] (A24O)
+TRANSACTION NOT ALLOWED IN CURRENT STATE 'START_OF_DAY' FOR PRODUCT ID [54]\
+on what basic this segment id  has been categorised, is it live all it company will fall under one partsion,
+for every partision there will be unique product id , and for every product id there will be multiple instruments
+based on load balancing they have devided , if they have to increase or decrease the load they can shift instrument from one partision to another, 
+
+SESSSION LOGON
+ApplUsageOrders : automated , manual , both , (A, M , B) // automated
+OrderRoutingIndicator : what is this order routin system (Y, N) // y
+FIXEngineName : FIX name // empty for developer use
+FIXEngineVersion : FIX version // empty for developer use
+FIXEngineVendor : FIX vendor name //empty for developer use
+ApplicationSystem-Name : applicationsystem being used to generate BSEETI application message // empty fo rdervveloper use
+ ApplicationSystem-Version :  // empty for developer use
+ ApplicationSystem-Vendor :  //empty for developer use
+ 
+ BSE_SECURITY
+ 
+ Order Confirmation
+ MessageTag : getting negative value // what ever we send earlier we will  receive the same
+ 
+ NEW ORDER RESPONSE 
+ Yield : getting -ve 
+ UnderlyingDirtyPrice : getting -ve
+ 
+ 
+ changes:
+ BSEEngine::CancelOrder : _market_segment_id_, hardcode , setting changes  // done
+ BSEEngine::ModifyOrder : check container 
+ ControlReceiver::ControlReceiver : LoadMarginFile
+ ControlThread::ControlThread: LoadNSEFOSecuritiesUnderBan , LoadNSEFOSecuritiesUnderPhysicalSettlement, LoadNSESecuritiesUnderUnsolicitedSMSList
+ control_thread.cpp : kReloadMarginFile
+ BSEEngine::CheckToSendHeartbeat() : commented
+BSEEngine::SocketConnectHost setting
+ 
+ add algoid in settings : cancel order , modify order, sendorder
+ add algo id 1111111111111111 , senderlocation id 1111111111111111 , clientcode 1111111111, cpcode P3357581IK in config
+ 
+ audit
+ check exec addts one
+ multiple ctrl cmd
+ broadcast check
+ 
+ ========================================================
+ ORS START
+ 
+ check NSE_Files folder for lattest files
+ 
+ CONSOLE TRADER 
+ /home/pengine/prod/live_configs/sdv-indb-srv11_network_account_info_filename.cfg
+ 
+ iml 
+ 22728053
+ 
+ boardlin
+ 22721234
+ 
+ 
+ maket order
+ 
+ ----------------------------------------------------------------------------------------------------------------------------------
+ BSE TICK SIZE 
+ 
+ > 15 rs 0.05
+< 15 rs 0.01
+
+https://www.bseindia.com/static/markets/equity/EQReports/tra_trading.aspx
+
+ ------------------------------------------------------------------------------------------------------------------------------------
+ [ hardik@sdv-ny4-srv50 ~/basetrade ] vim Tools/mkt_trade_logger.cpp
+Branch: dvccode, baseinfra; BSE_NEW
+
+smv_.ShowMarket();
+if(smv_.is_book_crossed_) std::cout << "BOOK CROSSED for: " << smv_.shortcode() << std::endl;
+
+5.42
+
+
+In EOBI and EMDI the channels are common for Equity and Equity Derivatives. 
+
+SCRIPT for mock file generation for BSE , 
+
+console trader for MOCK BSE.
+
+PNL Check is order gets executed.
+
+20211127 BSE ORS logs , for 500.00 did not got order exec resoponse.
+OrderExecuted: shortcode: BSE_SBIN SACI: 26214405 CAOS: 90000001 SAOS: 6 security_id: 0 price: 500.000000 buysell: 1 SR: 3 SE: 1 Intprice: 9443 SAMS: 0
+OrderExecuted: shortcode: BSE_SBIN SACI: 26214405 CAOS: 90000001 SAOS: 6 security_id: 0 price: 487.000000 buysell: 1 SR: 0 SE: 4 Intprice: 9443 SAMS: 0
+
+
+console trader 
+Action: Weird msgtype in ORSMessagesLiveSource::ProcessAllEvents 34252496 
+Weird msgtype in ORSMessagesLiveSource::ProcessAllEvents 34252496 
+Weird msgtype in ORSMessagesLiveSource::ProcessAllEvents 34252496 
+Weird msgtype in ORSMessagesLiveSource::ProcessAllEvents 34252496
+
+
+(SBIN MARUTI TANLA NATCOPHARM IDFCFIRSTB)
+did not find any duplicate/repeated seq no while running BSEShmWriter during MOCK 20211127.
+no duplicate/repeated seq no for date 20211117, 20211123, 20211125, 20211111, 20211103, 20211126
+found duplicate/repeated seq no for 20211118, and the time at which we have got was at around Thu Nov 18 08:05:29 GMT 2021.
+had send i mail to BSE regarding this.
+
+
+
+
+--------------------------------------------------------------------------------------------------------------------------------
+BSE snapshot recovery
+
+issue.
+
+there is a condition check which checks if the time is > 60 sec then it will stop the recovery , then here the issue will be for some products the recovery will not happen.
+
+we are recoverying data at the start of market or at start off exec , not in between.
+once the recovery is done close the recovery socket. as we dont want to recover data in middle , as we will be getting update data .
+recovery is only use to recovey data at the start to build the book.
+
+flow :
+product summary
+instrument summary
+snapshot message
+
+instrument summary will give us the details for particular security , that for that security how many order we will be getting in snapshot message after instrument summary message .
+check after getting instrument summary that , the total no of message/order mentioned in instrument summary , are we getting the same no of snapshot message or not after getting instrument summary for the security id. no of snapshort order should be equal to no of total order provided in instrument summary
+
+in instrument summary under decode events
+target message seq no = seq_no + total_order count which we will get in instrument summary. (this will update the seq no to current one)
+
+        if (bse_tbt_data_processor_.o_seq_num_ == bse_tbt_data_processor_.target_msg_seq_num_[security_id_]) {
+          bse_tbt_data_processor_.security_in_recovery[security_id_] = false;
+          bse_tbt_data_processor_.instr_summry_rcvd_[security_id_] = false; // change to true
+        }
+
+check with bse how many levels of data we willl be getting in snapshot recovery?
+like how many order details they will provide . last one hour or 10 level details.
+
+IN NSE HOW RECOVERY WORKS : 
+
+in ind14 we run recovry manager , it is same as bseshmwriter but it does not dump the data, it only stores in map with respect to security id , there will be map of orders, if an strat is going in recovrey the that strat will create tcp connection with ind14 , and it will get the data from recovery manager, and once the recovery is completed it will disconned the tcp connection , and will go for normal market data. so here it get stuck if not able to create connection with the recovery.
+
+In BSE we have dedicated channel for recovery , which is not present in NSE.
+
+once the recovery is end, we can disconned the connection for recovery.
+
+TESTING: 
+ONLY CHECK IF WE ARE GETTING INSTRUMENT SUMMARY , SNAPSHOT MESSAGE OR NOT
+AND ONCE THE SCAPSHOT ORDER IS PASSED ARE WE RECOMPUTING RECOVERY OR NOT , WE SHOULD NOT GO FOR RECOVERY ONCE THE RECOVERY IS DONE.
+
+once normal testing is done . need to test with TCP direct (bseshmwriter), if its working or not , which is used by trade engine, 
+
+EOBI book changes: 
+when ever we get execution summary, we will update the book , but since we dont have the order id details we will not remove the order .
+
+recovery changes: 
+start recovery only if market starts, not before the market starts , its not required.
+
+-> In Smart Deamon for recovey pass one condition if we want to recover or not. use file for this mention 
+baseinfra/MDSMessages/combined_mds_messages_pro_nse_processor.hpp
+
+    timeval tv;
+    gettimeofday(&tv, NULL);
+    int curr_hhmm = DateTime::GetUTCHHMMFromTime(tv.tv_sec);
+    for (unsigned int sec_id = 0; sec_id < _sec_name_indexer_.NumSecurityId(); sec_id++) {
+      // If current time is less than the start time for this sec_id, then don't go for its recovery
+      int start_time = trade_time_manager_.GetStartTime(sec_id);
+      int start_hhmm = (start_time / 3600) * 100 + (start_time % 3600) / 60;
+      if (curr_hhmm < start_hhmm) {
+        security_id_to_recovery_complete_[sec_id] = 0;
+      }
+    }
+
+-> we are dropping lots of packets a nick.
+
+-> remind nagaraj about bse line.
+     ACT line is for NSE upload, TATA line is for NSE download,
+	 Use 1 tata line for BSE download and upload.s
+
+-> /home/dvcinfra/important/subham/bse_audit_log_reader_new AUDIT_IN BSE_EQ /spare/local/ORSlogs/BSE_EQ/MSEQ8/audit.670101001.20220212.in
+    Unexpected Reply : 10117
+    Unexpected Reply : 10308
+	
+-> BSE add route 
+     [root@sdv-indb-srv12 ~]# ip route add 172.16.110.0/29 via 192.168.132.249
+     [root@sdv-indb-srv12 ~]# ip route add 10.23.5.0/24 via 192.168.132.249
+---------------------------------------------------------------------------------------------------------------------------------------------------------------------
+
+SNAPSHOT RECOVEY ANALYSIS : (bseshm_writer_log_snapshot_log.20211117)
+
+a. add time stamp at the time of starting the recovery. (Ending overall recovery at Wed Nov 17 07:16:32 2021)
+b. print secid , seq no at the time of entering snapshot , instrument summary case.
+c. at end recovery print current time stamp.
+
+OBSERVATIONS:
+1. we are getting INSTRUMENT_SUMMARY and SNAPSHOT_ORDER for different securities randomly . not after completion for one security we are getting other.In between also there are INSTRUMENT_SUMMARY and SNAPSHOT_ORDER for of other security.
+
+2. data for some security was not recovred fully. ( due to drops )
+
+3. we are storing messages for all security in buffer, untill initial recovery is finished.
+	
+	in SNAPSHOT_ORDER we are setting security_in_recovery as FALSE once recovery is finished. but we are not calling end recovery for this securities , as we have stored messages which we would have got during the recovery.
+	EndRecovery is been call for only those securities whose recovery is not done.
+	
+4. once recovery is done we are not recoverying data.
+
+5. getting invalid token id (bseshm_writer_log_snapshot_log.20211122). 
+
+SNAPSHOT_ORDER:                  TOKEN: -1  SEQ_NO: 32827
+SNAPSHOT_ORDER RECOVERY CHECK
+SNAPSHOT_ORDER:
+SNAPSHOT_ORDER:                  TOKEN: -1  SEQ_NO: 32828
+SNAPSHOT_ORDER RECOVERY CHECK
+
+INSTRUMENT_SUMMARY: TOKEN : 72060531795559709 SEQ_NO: 207125
+INSTRUMENT_SUMMARY RECOVERY CHECK       
+INSTRUMENT_SUMMARY : Mon Nov 22 05:17:49 2021
+
+INSTRUMENT_SUMMARY: TOKEN : 72060531795559710 SEQ_NO: 207126
+INSTRUMENT_SUMMARY RECOVERY CHECK       
+INSTRUMENT_SUMMARY : Mon Nov 22 05:17:49 2021
+
+INSTRUMENT_SUMMARY: TOKEN : 1146531 SEQ_NO: 190938
+INSTRUMENT_SUMMARY RECOVERY CHECK       
+INSTRUMENT_SUMMARY : Mon Nov 22 05:17:49 2021
+
+INSTRUMENT_SUMMARY: TOKEN : 1146991 SEQ_NO: 190939
+INSTRUMENT_SUMMARY RECOVERY CHECK
+
+
+FILES : bseshm_writer_log_snapshot_log.20211122_1
+
+PRODUCT_SUMMARY: CUR_MKT_SEG_ID: 690 SEQ: 195 LAST_SEQ_N: 131841
+INSTRUMENT_SUMMARY : Mon Nov 22 05:17:49 2021
+
+INSTRUMENT_SUMMARY: TOKEN : 823658 SEQ_NO: 207138
+INSTRUMENT_SUMMARY RECOVERY CHECK       
+INSTRUMENT_SUMMARY : Mon Nov 22 05:17:49 2021
+
+INSTRUMENT_SUMMARY: TOKEN : 828772 SEQ_NO: 207139
+INSTRUMENT_SUMMARY RECOVERY CHECK       
+INSTRUMENT_SUMMARY : Mon Nov 22 05:17:49 2021
+
+INSTRUMENT_SUMMARY: TOKEN : 838840 SEQ_NO: 207140
+INSTRUMENT_SUMMARY RECOVERY CHECK       
+INSTRUMENT_SUMMARY : Mon Nov 22 05:17:49 202
+
+
+6. can improve EndRecovery function.
+
+
+
+INSTRUMENT_SUMMARY: SEC_ID : 570001
+SEQ_NO: 113319 (start seq no)
+TOTAL ORDERS: 1053
+114373
+113475, 113516, 113557, 113598, 113639, 113680, 113721, 113762, 113803, 113844, 113885, 113926, 113967, 114008, 114049, 114090, 114131, 114172, 114213, 114254, 114295, 114336, 114372
+RECOVERED FULL DATA
+
+PRODUCT_SUMMARY: CUR_MKT_SEG_ID: 71 SEQ: 6333943 LAST_SEQ_N: 131841
+
+INSTRUMENT_SUMMARY: SEC_ID : 532218
+SEQ_NO: 79424
+TOTAL ORDERS: 1034
+80458
+79426, 79467, 79508, 79549, 79590, 79631, 79672,  
+NOT RECOVERED FULL DATA 
+
+INSTRUMENT_SUMMARY: SEC_ID : 500459
+SEQ_NO: 114374
+TOTAL ORDERS: 178
+114552
+
+114406, 114447, 114488, 114529, 114552
+
+INSTRUMENT_SUMMARY: SEC_ID : 502355
+SEQ_NO: 114553
+TOTAL ORDERS: 428
+114981
+
+114563, 114604, 114645, 114686, 114727, 114768, 114809, 114850, 114891, 114932, 114973, 114981.
+
+INSTRUMENT_SUMMARY: SEC_ID : 523385
+SEQ_NO: 114982
+TOTAL ORDERS: 305
+115287
+
+115007, 115048, 115089, 115130, 115171, 115212, 115253, 115287, 
+
+INSTRUMENT_SUMMARY: SEC_ID : 523398
+SEQ_NO: 115288
+TOTAL ORDERS: 347
+115635
+CORRECT
+
+INSTRUMENT_SUMMARY: SEC_ID : 523598
+SEQ_NO: 115636
+TOTAL ORDERS: 361
+115997
+CORRECT
+
+INSTRUMENT_SUMMARY: SEC_ID : 532234
+SEQ_NO: 116922
+TOTAL ORDERS: 1989
+118911
+CORRECT
+
+INSTRUMENT_SUMMARY: SEC_ID : 502742
+SEQ_NO: 3505
+TOTAL ORDERS: 3332
+6837
+CORRECT
+
+INSTRUMENT_SUMMARY: SEC_ID : 540695
+SEQ_NO: 201592
+TOTAL ORDERS: 2
+201594
+CORRECT
+
+orders got add to buffer, printing ORDER_ADD, ORDER_MODIFY after end recovery
+START : 
+796651 ORDER_ADD
+796604 ORDER_MODIFY
+762820 Ending recovery
+
+#############################################################
+LOGS 2 : bseshm_writer_log_snapshot_log.20211122
+
+start : Mon Nov 22 09:21:46 2021
+end : Mon Nov 22 09:22:47 2021
+
+INSTRUMENT_SUMMARY: SEC_ID : 539400
+SEQ_NO: 207340
+TOTAL ORDERS: 71
+207411
+CORRECT
+
+INSTRUMENT_SUMMARY: SEC_ID : 539470
+SEQ_NO: 207479
+TOTAL ORDERS: 53
+207532
+CORRECT
+
+INSTRUMENT_SUMMARY: SEC_ID : 539584
+SEQ_NO: 207873
+TOTAL ORDERS: 474
+208347
+CORRECT
+

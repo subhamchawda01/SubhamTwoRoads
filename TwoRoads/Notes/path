@@ -1,0 +1,196 @@
+
+multiple multicast receiver with different(any ip) mcast-ip but same port 
+
+dvccode/Utils/multicast_receiver_socket.hpp
+enable: addr_join(false)
+------------------------------------------------------------------------------------------------------
+
+infracore-master\BasicOrderRoutingServer\control_thread.cpp
+kDumpAllORSPositions
+--------------------------------------------------------------------------------------------------------
+
+branch : TIME_LOGGING_FOR_DROPPED_PACKETS
+
+infracore/NSEMD/nse_tbt_raw_md_handler.hpp (ProcessAllEvents drop time stamp)
+---------------------------------------------------------------------------------------------------------------------
+
+ExaSockLib -->dvccode,infracore,tradeengine(yet to push)
+https://github.com/two-roads-trading-pvt-ltd/infracore/compare/master_optimization
+-------------------------------------------------------------------------------------------------------------------------
+
+tradeengine/StratLogic/post_market_exec.cpp
+
+-------------------------------------------------------------------------------------------
+
+[ dvcinfra@sdv-ind-srv11 ~/important/subham ] rejectHandling.sh
+
+[ dvcinfra@sdv-ind-srv11 ~/important ] trade_missing_midterm.sh 
+
+-------------------------------------------------------------------------------------------
+
+ORS compatibility for other series [E1, RR, etc]
+
+dvccode-master\CDef\security_definitions.hpp
+dvccode-master\CDef\nse_security_definition.hpp
+infracore-master\NSET\NSEEngine.cpp
+
+branch:ORS_COMPATIBILITY_OTHER_SERIES
+files: infracore/NSET/NSEEngine.cpp , NSEEngine.hpp
+
+branch : ORS_COMPATIBILITY_OTHER_SERIES
+dvccode/CDefCode/nse_security_definition.cpp
+
+-----------------------------------------------------------------------------------------
+
+Exchange Latency :
+ORS_SACI_BINARY_READER_EXCHANGE : basetrade\Tools\ors_binary_reader_stats_exchange.cpp
+
+basetrade\Tools\ors_binary_reader_stats_exchange.cpp
+ORS_SACI_BINARY_READER: basetrade\Tools\ors_binary_reader_stats.cpp
+
+infracore/Tools/generic_data_converter.cpp
+--------------------------------------------------------------------------------------
+
+branch name : TCP_DIRECT_MULTICAST (for both repo same branch name)
+repo : dvccode, infracore
+---------------------------------------------------------------------------------
+
+devmodel
+baseinfra : OEBU_FIX_MASTER , OEBU_FIX_MASTER_NEW
+basetrade: devmodel
+http://10.23.227.63/ind17.html
+
+basetrade: devmodel
+Tools/our_extended_bidask_mkt_book_util_nse_web_multishm.cpp
+---------------------------------------------------------------------------------------
+
+/spare/local/tradeinfo/NSE_Files/ASMSecurities/short_term_asm.csv_20200824
+---------------------------------------------------------------------------------------
+
+/spare/local/ORSlogs/NSE_EQ/MSEQ3/ : so ors logs u will get here in this dir
+------------------------------------------------------------------------------------------
+
+infracore\BasicOrderRoutingServer\multisession_engine.hpp
+   1. baseinfra\BaseTrader\base_live_trader.hpp
+   2. dvccode\Utils\shared_mem_reader.hpp
+---------------------------------------------------------------------------------------------
+
+tradeengine repository : tradeengine/StratLogic/trade_engine_live.cpp
+
+repository: basetrade
+branch: devmodel
+Tools/our_extended_bidask_mkt_book_util_nse_web_multishm.cpp
+-----------------------------------------------------------------------------------------
+
+infracore branch: IMPORTANT_SCRIPTS
+dir: infracore/scripts/datacopy_scripts
+------------------------------------------------------------------------------------------
+
+DIRECT MULTICAST 
+
+infracore/tools
+branch:subham
+
+infracore/tools
+dvccode/Utils
+branch: TCP_DIRECT_MULTICAST
+------------------------------------------------------------------------------------
+
+OEBU EXEC:
+
+dvcinfra@sdv-ind-srv13 : ssh dvcinfra@10.23.227.63
+/home/pengine/prod/live_scripts/oebu_limit.py
+
+
+exec_path:  /home/pengine/prod/live_execs/our_extended_bidask_mkt_book_util_nse_web_multishm
+
+OEBU scirpt:
+/home/pengine/prod/live_scripts/SmartDaemonController.sh (OEBU_EXEC PATH)
+---------------------------------------------------------------------------------------
+
+fetch_nse_files
+
+/spare/local/tradeinfo/NSE_Files/ : here we store all nse files
+
+echo "Running download_bhavcopy script"
+/bin/bash /home/pengine/prod/live_scripts/download_bhavcopy.sh
+
+echo "Running download_bhavcopy_md script"
+/bin/bash /home/pengine/prod/live_scripts/download_bhavcopy_md.sh
+
+echo "Running download_price_band script"
+/bin/bash /home/pengine/prod/live_scripts/download_price_band.sh
+
+echo "Running download_SecurtiesUnderBan script"
+/bin/bash /home/pengine/prod/live_scripts/download_SecurtiesUnderBan.sh
+
+echo "Running download_contract script"
+/bin/bash /home/pengine/prod/live_scripts/download_contract.sh
+
+#echo "Running update db"
+#/bin/bash /home/pengine/prod/live_scripts/Update_midterm_db.sh `date +\%Y\%m\%d`
+
+echo "Running download_margin_securitiesMargin script"
+/bin/bash /home/pengine/prod/live_scripts/download_margin_securitiesMargin.sh
+
+echo "Running Sync"
+#/bin/bash /home/dvctrader/important/onexpiry/sync_trade_info.sh
+---------------------------------------------------------------------------------------
+
+CPP Script to generate last 90 days IND17 trade log file summary
+
+dvccode/CommonTools/generate_trade_log_summary.cpp
+branch: GENERATE_TRADE_LOG_SUMMARY
+dvcinfra@sdv-ny4-srv13 ~/important/subham/IND17TradeLogSummary
+---------------------------------------------------------------------------------------
+
+series compatibility.
+branch:  ORS_COMPATIBILITY_OTHER_SERIES
+dvccode and infracore
+----------------------------------------------------------------------------------------
+SINGLE PROCESS
+infracore
+branch : SINGLE_PROCESS_STRAT_2020
+StratLogic/single_process_trade_engine_live.cpp
+----------------------------------------------------------------------------------------
+tradelog files path: ssh dvcinfra@10.23.5.13:/run/media/root/Elements/SERVERDATA/IND17/tradelogs/
+
+--------------------------------------------------------------------------------------
+AUDIT LOG
+
+infracore-master\infracore-master\Tools\nse_audit_log_reader.cpp
+----------------------------------------------------------------------------------------
+
+MTBT data on local 66 
+/home/pengine/prod/live_execs/mds_log_reader NSE /run/media/dvcinfra/SEGATE_USB_HDD1/data/NSELoggedData/NSE/2020/05/08/NSE_SBIN_20200508.gz
+
+-----------------------------------------------------------------------------------------------------
+NSE FILES PATH
+
+/spare/local/tradeinfo/NSE_Files/RefData/nse_fo_20210205_contracts.txt
+/spare/local/tradeinfo/NSE_Files/SecuritiesMarginFiles/security_margin_20210206.txt
+/spare/local/tradeinfo/NSE_Files/RefData
+/spare/local/tradeinfo/NSE_Files/SecuritiesUnderPhysicalSettlement/fo_securities_under_physical_settlement.csv
+/spare/local/tradeinfo/NSE_Files/ContractFiles/nse_contracts
+
+--------------------------------------------------------------------------------------------------------
+ORS REPORT FO
+
+dvcinfra 5.67
+/home/pengine/prod/live_execs/mds_fast_first_trade_read_Volume_Machince_fo
+BRANCH: master : dvccode/CommonTools/mds_fast_first_trade_read_Volume_Machince_fo.cpp
+ORS_REPORT_FO (merge branch)
+--------------------------------------------------------------------------------------------------------------------
+
+ORS REPORT 
+
+dvcinfra 5.67
+/home/dvcinfra/important/Generate_ors_detail/get_order_ors.sh
+/home/dvcinfra/important/Generate_ors_detail/get_order_ors_fo.sh
+/home/dvcinfra/important/Generate_ors_detail/email_alert_for_cash.sh
+/home/dvcinfra/important/Generate_ors_detail/email_alert_for_fo.sh
+BRANCH: IMPORTANT_SCRIPTS : infracore/scripts/Generate_ors_detail/
+ORS_REPORT_FO (merge branch)
+-------------------------------------------------------------------------------------------------------------------
+
+https://loox.io/z/VkdeeFpWp

@@ -1,0 +1,201 @@
+ORSMarginManager
+
+stores gross and net margin
+
+OrderRoutingServer/cme_ilink_ors.cpp
+loading margin values from file
+ors_margin_manager.EnableMarginChecks() : /spare/local/tradeinfo/NSE_Files/SecuritiesMarginFiles/security_margin_date
+
+OrderRoutingServer/cme_ilink_ors.cpp, BasicOrderRoutingServer/control_thread.cpp -> kSetORSGrossMarginCheck-> SetGrossMarginCheck
+setting gross margin from config or from control cmd
+ors_margin_manager.SetGrossMarginCheck
+
+OrderRoutingServer/cme_ilink_ors.cpp, BasicOrderRoutingServer/control_thread.cpp -> kSetORSNetMarginCheck-> SetNetMarginCheck
+setting net margin from config or from control cmd
+ors_margin_manager.SetNetMarginCheck
+
+called by SetGrossMarginCheck , SetNetMarginCheck when gross_margin or net_margin is set to 0
+DisableMarginChecks
+
+called 
+BasicOrderRoutingServer/control_thread.cpp, OrderRoutingServer/cme_ilink_ors.cpp
+UpdateMarginFactor
+
+called OnOrderExec-> AccountThread::OnOrderExec -> NSEEngine::ProcessTradeConfirmation -> NSEEngine::ProcessExchangeResponse -> NSEEngine::onInputAvailable -> NSEEngine::ProcessLockFreeTCPDirectRead -> ClientRequestProcessor::ProcessExchangeTCPReadRequest-> ClientRequestProcessor::ProcessClientRequest -> ShmClientReceiver::thread_main()
+updates gross and net margin, sends margin alert if current margin is > margin * 0.9
+position_manager_.GetGlobalPosition(security_id)
+OnOrderExec: AccountThread::OnOrderExec called 
+
+called using ctrl cmd
+dump ors margin status , gross: current , gcheck: max , 
+DumpMarginStatus
+
+update margin for shortcode , control cmd
+UpdateSecurityMarginForShortCode
+
+called in AllowAddTSForShortCode, OnOrderExec
+checks if margin check is enabled or not
+IsMarginChecksInPlace
+
+called in BasicOrderRoutingServer/control_thread.cpp -> AddtradingSymbol-> AllowAddTSForShortCode
+checks if margin provided for shortcode or not
+AllowAddTSForShortCode
+
+called in BasicOrderRoutingServer/margin_checker.hpp -> Allows(checke worstcase, pnl, gross, net) -> ClientRequestProcessor::ProcessOrderSendRequest, ProcessOrderCancelReplace
+if margin > then , send order rejectfailedmargincheck
+AllowsNetMarginCheck : margin_checker.hpp , function Allow
+
+called in BasicOrderRoutingServer/margin_checker.hpp -> Allows -> ClientRequestProcessor::ProcessOrderSendRequest, ProcessOrderCancelReplace
+if margin > then , send order rejectfailedmargincheck
+AllowsGrossMarginCheck : margin_checker.hpp , function Allow
+
+called by BasicOrderRoutingServer/control_thread.cpp
+reloads security margin file
+ReloadMarginValues : calls LoadMarginValues:
+
+
+------------------------------------------------------------------------------------------------------------------
+MarginChecker
+
+
+Class that keeps the limits ( ordersize, position and worst_case_position )
+and is an interface to allowing orders that check pass those checks
+Shares a common security_id semantics to all ClientThread instances (though the common SimpleSecuritySymbolIndexer)
+security_id being a low integer the map from security_id to symbol can be made a vector
+
+called margin_checker_.Set -> ControlThread::AddtradingSymbol-> kAddTradingSymbol
+sets limits max_position_, max_order_size_, max_worst_case_position_, max_live_order_
+Set : all limits
+ 
+called by ClientRequestProcessor::ProcessOrderSendRequest, ClientRequestProcessor::ProcessOrderCancelReplace
+called when reject is returned by margin_checker_.Allows
+getMaxPos
+getMaxOrdSize
+getWorstPos
+getMaxLiveOrd
+
+checks maxorder size (kORSRejectMarginCheckFailedOrderSizes), maxworstcasepos (size requested + global worst bid pos) 
+ors_margin_manager_.AllowsGrossMarginCheck, ors_margin_manager_.AllowsNetMarginCheck ( sends reject if failed check ) 
+Allows : called by BasicOrderRoutingServer/client_request_processor.cpp , ProcessOrderSendRequest function , ProcessOrderCancelReplace
+
+called by ClientRequestProcessor::ProcessRiskRequest (did not understood)
+SetQueryCumulativeRiskChecks
+SetQueryRiskFeatureFlag
+
+called margin_checker_.GetClientWorstCasePositionLimit,margin_checker_.SetClientWorstCasePositionLimit -> ClientRequestProcessor::WriterRemoved -> ShmClientReceiver::RemoveWriter -> SharedMemReader::notifyRemove -> SharedMemReader::thread_main
+SetClientWorstCasePositionLimit
+GetClientWorstCasePositionLimit
+
+
+---------------------------------------------------------------------------------------------------------------------------------------
+ORSPnlManager
+
+called by OnOrderExec
+GetN2D (did not understood)
+
+updates total pnl and pnl of security, sends pnl alert if total pnl > stop_pnl_ * 0.6
+HFSAT::NSESecurityDefinitions::GetNSECommission : commission - 
+OnOrderExec: AccountThread::OnOrderExec called 
+
+shows total pnl , stop pnl
+DumpORSPnlStatus
+
+margin_checker.hpp , Allows function ors_pnl_manager_.AllowsPnlCheck (kORSRejectFailedPnlCheck)
+AllowsPnlCheck
+
+called by BasicOrderRoutingServer/control_thread.cpp : control cmd - kSetORSPnlCheck , ors_pnl_manager.SetORSStopPnl set from config
+SetORSStopPnl
+
+get current pnl
+GetCurrentORSPnl(not using)
+
+ors_pnl_manager_.AllowsPnlCheck -> BasicOrderRoutingServer/margin_checker.hpp -> Allows(checke worstcase, pnl, gross, net) -> ClientRequestProcessor::ProcessOrderSendRequest, ProcessOrderCancelReplace
+AllowsPnlCheck : checks current pnl > stoppnl
+
+infracore/BasicOrderRoutingServer/control_thread.cpp ->kDumpORSPnlMarginStatus -> DumpORSPnlStatus
+DumpORSPnlStatus : dumps pnl status
+
+called OnOrderExec-> AccountThread::OnOrderExec -> NSEEngine::ProcessTradeConfirmation -> NSEEngine::ProcessExchangeResponse -> NSEEngine::onInputAvailable -> NSEEngine::ProcessLockFreeTCPDirectRead -> ClientRequestProcessor::ProcessExchangeTCPReadRequest-> ClientRequestProcessor::ProcessClientRequest -> ShmClientReceiver::thread_main()
+OnOrderExec : how is it calculated
+
+-------------------------------------------------------------------------------------------------------------------------------------
+PositionManager
+
+
+Class that is used by MarginChecker to make sure that
+positions never exceed MaxPosition and WorstCaseMaxPos
+
+
+return position stucture. had position, bid_size , ask_size, ordered_vol, ordered_count, traded_vol, traded_count
+GetPositionInfoStruct
+
+get position
+GetGlobalPosition
+
+get bidsize
+GetGlobalBidSize
+
+get asksize
+GetGlobalAskSize
+
+pos + bidsize
+GetGlobalWorstCaseBidPosition
+
+asksize - pos
+GetGlobalWorstCaseAskPosition
+
+get posiion using saci
+GetClientPosition
+
+check live buy order
+CheckifAnyLiveBuyOrders
+
+check live sell order
+CheckifAnyLiveSellOrders
+
+AccountThread::OnOrderExec
+AddBuyTrade : adds buy when order executed
+
+AccountThread::OnOrderExec
+AddSellTrade : adds sell when order executed
+
+AccountThread::SendTrade, AccountThread::OnOrderMod,  AccountThread::OnOrderCancelReplaced, multisession_engine : MirrorOrder , SendOrder
+AddBidSize : adds bid size
+
+AccountThread::SendTrade, AccountThread::OnOrderMod,  AccountThread::OnOrderCancelReplaced, multisession_engine : MirrorOrder , SendOrder
+AddAskSize : addts ask size 
+
+AccountThread::OnReject, AccountThread::OnCxlRejec, AccountThread::OnOrderCxl, AccountThread::OnOrderExec
+DecBidSize : dec bid size
+
+AccountThread::OnReject, AccountThread::OnCxlRejec, AccountThread::OnOrderCxl, AccountThread::OnOrderExec
+DecAskSize: dec ask size
+
+PositionManager::DumpPMState -> infracore/OrderRoutingServer/cme_ilink_ors.cpp HFSAT::ORS::PositionManager::GetUniqueInstance().DumpPMState()
+PositionManager::DumpPMState -> AccountThread::OnOrderExec -> NSEEngine::ProcessTradeConfirmation -> NSEEngine::ProcessExchangeResponse -> NSEEngine::onInputAvailable -> NSEEngine::ProcessLockFreeTCPDirectRead -> ClientRequestProcessor::ProcessExchangeTCPReadRequest-> ClientRequestProcessor::ProcessClientRequest -> ShmClientReceiver::thread_main()
+position , bid size, ask size
+DumpPMState
+
+PositionManager::DumpSACIPosition -> ControlThread::DisplaySACIPositions -> kDumpSACIPositions -> infracore/BasicOrderRoutingServer/control_thread.cpp
+SACI position
+DumpSACIPosition
+
+PositionManager::DumpSecurityPositions -> ControlThread::DisplaySecurityPositions -> kDumpSecurityPositions -> infracore/BasicOrderRoutingServer/control_thread.cpp
+dump security position
+DumpSecurityPositions
+
+infracore/BasicOrderRoutingServer/control_thread.cpp -> kClearPositionManager -> PositionManager::ClearPositions
+ClearPositions : clears position
+
+infracore/OrderRoutingServer/cme_ilink_ors.cpp -> PositionManager::SetRecoveryFile
+SetRecoveryFile
+
+called by infracore/OrderRoutingServer/cme_ilink_ors.cpp
+SetBaseWriterId : sets basewriterid
+
+SetMarketDataThread(not using)
+
+infracore/BasicOrderRoutingServer/position_manager.cpp -> PositionManager::DumpPMRecovery() -> PositionManager::DumpPMState(returs stringstream pos,bid,ask)
+dump security position ,bid, ask 
+DumpPMRecovery
+

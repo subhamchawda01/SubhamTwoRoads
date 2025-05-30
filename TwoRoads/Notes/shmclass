@@ -1,0 +1,139 @@
+OrderRoutingServer/cme_ilink_ors.cpp
+HFSAT::ORS::ORSControllerThread
+- shm_writer_ = new SharedMemWriter<GenericORSRequestStruct>(exch_source_);
+
+LoadSHMKeys : /spare/local/files/ORS_SHM_CONFIG_FILE.txt 
+ORS_SHM_KEY, ORS_SHM_KEY_ID_GEN, ORS_SEM_KEY, ORS_SEM_KEY_ID_GEN (assigning key from above config file based on exchange)
+
+shmid = shmget(ORS_SHM_KEY, sizeof(ShmQueue<DataWriterIdPair<T> >), 0);
+
+semid = semget(ORS_SEM_KEY, 1, 0);  // semaphore
+
+shm_pc_id = shmget(ORS_SHM_KEY_ID_GEN, sizeof(PidWriterId), 0);
+
+sem_pc_id = semget(ORS_SEM_KEY_ID_GEN, 1, 0);  // semaphore
+
+- client_id_ = shm_writer_->intilizeWriter();
+
+intilizeWriter -> setWriterId
+
+------------------------------------------------------------------------------------------
+OrderRoutingServer/cme_ilink_ors.cpp
+HFSAT::ORS::ShmClientReceiver
+reader(new SharedMemReader<GenericORSRequestStruct>((atoi(settings.getValue("Client_Base").c_str())) << 16, HFSAT::StringToExchSource(exch))),
+
+LoadSHMKeys : /spare/local/files/ORS_SHM_CONFIG_FILE.txt 
+ORS_SHM_KEY, ORS_SHM_KEY_ID_GEN, ORS_SEM_KEY, ORS_SEM_KEY_ID_GEN (assigning key from above config file based on exchange)
+
+shmid = shmget(ORS_SHM_KEY, sizeof(ShmQueue<DataWriterIdPair<T> >), IPC_CREAT | 0666);  // create shared memory area
+
+semid = semget(ORS_SEM_KEY, 1, 07777 | IPC_CREAT); // semaphore for thread synchronization, shared resources wait/release
+
+shm_pc_id = shmget(ORS_SHM_KEY_ID_GEN, sizeof(PidWriterId), IPC_CREAT | 0666);
+
+sem_pc_id = semget(ORS_SEM_KEY_ID_GEN, 1, 07777 | IPC_CREAT);
+
+//shmat to attach to shared memory
+dataQ = (ShmQueue<DataWriterIdPair<T> >*)shmat(shmid, 0, 0); // 0 read/write premission
+
+assign_writer_id_thread.base_writer_id_ = base_writer_id;
+assign_writer_id_thread.callback_handler = this;
+
+created 2 thread 
+thread (assign wirter id to new client)
+HFSAT::PidWriterId (pid ,writer id , thread id)
+add writerid , threadid 
+notifyAdd -> ShmClientReceiver::AddWriter -> ClientRequestProcessor::WriterAdded
+assign_writer_id_thread.run();
+
+thread (detect dead writer)
+isAlivePID -> notifyRemove -> ShmClientReceiver::RemoveWriter -> ClientRequestProcessor::WriterRemoved
+detect_dead_writers_thread.run();
+
+volatile tells the code not to optimize
+
+--------------------------------------------------
+OrderRoutingServer/cme_ilink_ors.cpp
+HFSAT::ORS::AccountManager::GetNewAccountThread -> new AccountThread
+  bcast_manager_(BroadcastManager::GetUniqueInstance(_dbglogger_, "", 0,
+                                                    (atoi(r_settings_.getValue("Client_Base").c_str())) << 16)),
+    new Broadcaster(t_dbglogger_, bcast_ip_, bcast_port_, base_writer_id);
+      mds_shm_interface_(HFSAT::Utils::ORSReplyShmInterface::GetUniqueInstance()), (ind13 ors reply)
+        queue_size_(sizeof(HFSAT::Shm1Queue<HFSAT::GenericORSReplyStructLiveProShm>))
+    queue_ = new boost::lockfree::queue<GenericORSReplyStructLiveProShm>(100);
+    Broadcaster::thread_main()
+    queue_->pop(reply_struct);
+    multicast_sender_socket_.WriteN(sizeof(reply_struct), &reply_struct); (tradeengine)
+    Broadcaster::Push(GenericORSReplyStructLiveProShm& t_ors_reply_)
+      if (use_shm_for_ors_reply_)
+      mds_shm_interface_.WriteGenericStructLockFree(&t_ors_reply_);
+      queue_->push(t_ors_reply_);
+
+ShmClientReceiver::thread_main
+client_request_processor_->ProcessExchangeTCPReadRequest();
+NSEEngine::ProcessLockFreeTCPDirectRead() 
+onInputAvailable(0, tcp_direct_read_buffer_, tcp_direct_read_length_); (reading reply) (nseengine)
+read_offset_ = ProcessExchangeResponse(nse_msg_buffer_, read_offset_ + read_length); (nseengine)
+switch (processed_response_header_->transaction_code) (nseengine)
+p_engine_listener_->OnOrderConf(saos, "", price, size, 0, exch_order_num, entry_dt, last_activity_ref); (nseengine)
+AccountThread::OnOrderConf
+bcast_manager_->BroadcastConfirm(*p_this_order_);
+broadcaster_->Push(generic_ors_reply_struct_); (broadcastmanager)
+
+---------------------------------------------------------
+
+tradeengine/StratLogic/trade_engine_live.cpp
+base_trader_ = GetNSETrader(theo_calc_->GetSecondaryShc(), sec_id_, network_account_info_manager_, watch_);
+new HFSAT::BaseLiveTrader(
+      nse_segment_source, network_account_info_manager_.GetDepTradeAccount(HFSAT::kExchSourceNSE, shortcode_),
+      network_account_info_manager_.GetDepTradeHostIp(HFSAT::kExchSourceNSE, shortcode_),
+      network_account_info_manager_.GetDepTradeHostPort(HFSAT::kExchSourceNSE, shortcode_), watch_, dbglogger_);
+  shm_writer_ = new SharedMemWriter<GenericORSRequestStruct>(_exchange_);
+  client_id_ = shm_writer_->intilizeWriter(); -> setWriterId() (setting writer id using ors AssignWriterIdThread)
+    data_queue = (ShmQueue<DataWriterIdPair<T> > *)shmat(shmid, 0, 0);
+    HFSAT::set_thr_id(thread_id);
+    data_queue->SetNumClients(thread_id);
+  send_order_request_.writer_id = client_id_; ( setting client_Id for the order which we write to shm)
+    
+
+HFSAT::MDSMessages::CombinedMDSMessagesDirectProcessor *combined_mds_messages_shm_processor
+  CombinedMDSMessagesORSProShmBase()
+  ors_reply_queue_size_(sizeof(HFSAT::Shm1Queue<HFSAT::GenericORSReplyStructLiveProShm>))
+  InitializeThreadSafeSHM
+
+
+
+
+BasicOrderManager::SendTrade -> base_trader_.SendTrade(*p_next_new_order_) -> SendTrade(const BaseOrder& _order_) -> 
+shm_writer_->writeT(send_order_request_);
+
+----------------------------------------------------------
+
+set_thr_id(size_t id) { __thr_id = id; }
+called in dvccode/Utils/shared_mem_writer.hpp
+
+__builtin_expect
+You may use __builtin_expect to provide the compiler with branch prediction information.
+
+while (__builtin_expect(thr_pos_[__thr_id].head >= (tail_ + Q_SIZE), 0)) {
+      update_last_head();
+}
+when queue is full
+
+volatile means = we are telling compiler not to take value from cache (not to keep in cache) take it from original location (as we need actual value)
+in some case cache memory is not updated
+
+
+volatile unsigned long head_ ____cacheline_aligned;
+volatile unsigned long tail_ ____cacheline_aligned;
+volatile unsigned long last_head_ ____cacheline_aligned;
+Data that are located closer to each other than this may end up on the same cache line.
+If these data are needed by different cores, the system has to work hard to keep the data consistent between the copies residing in the cores' caches.
+https://stackoverflow.com/questions/39971639/what-does-cacheline-aligned-mean
+
+asm volatile("" ::: "memory");
+creates a compiler level memory barrier forcing optimizer to not re-order memory accesses across the barrier.
+For example, if you need to access some address in a specific order (probably because that memory area is actually backed by a different device rather than a memory) you need to be able tell this to the compiler otherwise it may just optimize your steps for the sake of efficiency.
+https://stackoverflow.com/questions/14950614/working-of-asm-volatile-memory
+
+

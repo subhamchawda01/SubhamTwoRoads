@@ -1,0 +1,490 @@
+[ root@sdv-ny4-srv67 /home/dvcinfra ] ssh 10.23.227.82
+Last failed login: Mon Mar  8 16:16:03 GMT 2021 from 10.23.5.67 on ssh:notty
+There were 4 failed login attempts since the last successful login.
+Last login: Mon Mar  8 12:53:57 2021 from 10.23.5.234
+[root@sdv-ind-srv17 ~]# 
+[root@sdv-ind-srv17 ~]# 
+[root@sdv-ind-srv17 ~]# 
+[root@sdv-ind-srv17 ~]# dmidecode |grep CPU
+	Internal Reference Designator: CPU_FAN
+	Internal Reference Designator: CPU_OPT
+	Version: Intel(R) Core(TM) i9-7920X CPU @ 2.90GHz
+[root@sdv-ind-srv17 ~]# dmidecode -t memory
+# dmidecode 3.0
+Getting SMBIOS data from sysfs.
+SMBIOS 3.2 present.
+# SMBIOS implementations newer than version 3.0 are not
+# fully supported by this version of dmidecode.
+
+Handle 0x0045, DMI type 16, 23 bytes
+Physical Memory Array
+	Location: System Board Or Motherboard
+	Use: System Memory
+	Error Correction Type: None
+	Maximum Capacity: 3 TB
+	Error Information Handle: Not Provided
+	Number Of Devices: 8
+
+Handle 0x0046, DMI type 17, 40 bytes
+Memory Device
+	Array Handle: 0x0045
+	Error Information Handle: Not Provided
+	Total Width: 72 bits
+	Data Width: 64 bits
+	Size: 8192 MB
+	Form Factor: DIMM
+	Set: None
+	Locator: DIMM_A1
+	Bank Locator: NODE 1
+	Type: DDR4
+	Type Detail: Synchronous
+	Speed: 3200 MHz
+	Manufacturer: G-Skill
+	Serial Number: 00000000
+	Asset Tag:  
+	Part Number: F4-3600C16-8GTZKK   
+	Rank: 1
+	Configured Clock Speed: 3200 MHz
+	Minimum Voltage: 1.2 V
+	Maximum Voltage: 1.2 V
+	Configured Voltage: 1.2 V
+
+Handle 0x0047, DMI type 17, 40 bytes
+Memory Device
+	Array Handle: 0x0045
+	Error Information Handle: Not Provided
+	Total Width: Unknown
+	Data Width: Unknown
+	Size: No Module Installed
+	Form Factor: DIMM
+	Set: None
+	Locator: DIMM_A2
+	Bank Locator: NODE 1
+	Type: Unknown
+	Type Detail: Synchronous
+	Speed: Unknown
+	Manufacturer: NO DIMM
+	Serial Number: NO DIMM
+	Asset Tag:  
+	Part Number: NO DIMM
+	Rank: Unknown
+	Configured Clock Speed: Unknown
+	Minimum Voltage: 1.2 V
+	Maximum Voltage: 1.2 V
+	Configured Voltage: 1.2 V
+
+Handle 0x0048, DMI type 17, 40 bytes
+Memory Device
+	Array Handle: 0x0045
+	Error Information Handle: Not Provided
+	Total Width: 72 bits
+	Data Width: 64 bits
+	Size: 8192 MB
+	Form Factor: DIMM
+	Set: None
+	Locator: DIMM_B1
+	Bank Locator: NODE 1
+	Type: DDR4
+	Type Detail: Synchronous
+	Speed: 3200 MHz
+	Manufacturer: G-Skill
+	Serial Number: 00000000
+	Asset Tag:  
+	Part Number: F4-3600C16-8GTZKK   
+	Rank: 1
+	Configured Clock Speed: 3200 MHz
+	Minimum Voltage: 1.2 V
+	Maximum Voltage: 1.2 V
+	Configured Voltage: 1.2 V
+
+Handle 0x0049, DMI type 17, 40 bytes
+Memory Device
+	Array Handle: 0x0045
+	Error Information Handle: Not Provided
+	Total Width: Unknown
+	Data Width: Unknown
+	Size: No Module Installed
+	Form Factor: DIMM
+	Set: None
+	Locator: DIMM_B2
+	Bank Locator: NODE 1
+	Type: Unknown
+	Type Detail: Synchronous
+	Speed: Unknown
+	Manufacturer: NO DIMM
+	Serial Number: NO DIMM
+	Asset Tag:  
+	Part Number: NO DIMM
+	Rank: Unknown
+	Configured Clock Speed: Unknown
+	Minimum Voltage: 1.2 V
+	Maximum Voltage: 1.2 V
+	Configured Voltage: 1.2 V
+
+Handle 0x004A, DMI type 17, 40 bytes
+Memory Device
+	Array Handle: 0x0045
+	Error Information Handle: Not Provided
+	Total Width: 72 bits
+	Data Width: 64 bits
+	Size: 8192 MB
+	Form Factor: DIMM
+	Set: None
+	Locator: DIMM_C1
+	Bank Locator: NODE 1
+	Type: DDR4
+	Type Detail: Synchronous
+	Speed: 3200 MHz
+	Manufacturer: G-Skill
+	Serial Number: 00000000
+	Asset Tag:  
+	Part Number: F4-3600C16-8GTZKK   
+	Rank: 1
+	Configured Clock Speed: 3200 MHz
+	Minimum Voltage: 1.2 V
+	Maximum Voltage: 1.2 V
+	Configured Voltage: 1.2 V
+
+Handle 0x004B, DMI type 17, 40 bytes
+Memory Device
+	Array Handle: 0x0045
+	Error Information Handle: Not Provided
+	Total Width: Unknown
+	Data Width: Unknown
+	Size: No Module Installed
+	Form Factor: DIMM
+	Set: None
+	Locator: DIMM_C2
+	Bank Locator: NODE 1
+	Type: Unknown
+	Type Detail: Synchronous
+	Speed: Unknown
+	Manufacturer: NO DIMM
+	Serial Number: NO DIMM
+	Asset Tag:  
+	Part Number: NO DIMM
+	Rank: Unknown
+	Configured Clock Speed: Unknown
+	Minimum Voltage: 1.2 V
+	Maximum Voltage: 1.2 V
+	Configured Voltage: 1.2 V
+
+Handle 0x004C, DMI type 17, 40 bytes
+Memory Device
+	Array Handle: 0x0045
+	Error Information Handle: Not Provided
+	Total Width: 72 bits
+	Data Width: 64 bits
+	Size: 8192 MB
+	Form Factor: DIMM
+	Set: None
+	Locator: DIMM_D1
+	Bank Locator: NODE 1
+	Type: DDR4
+	Type Detail: Synchronous
+	Speed: 3200 MHz
+	Manufacturer: G-Skill
+	Serial Number: 00000000
+	Asset Tag:  
+	Part Number: F4-3600C16-8GTZKK   
+	Rank: 1
+	Configured Clock Speed: 3200 MHz
+	Minimum Voltage: 1.2 V
+	Maximum Voltage: 1.2 V
+	Configured Voltage: 1.2 V
+
+Handle 0x004D, DMI type 17, 40 bytes
+Memory Device
+	Array Handle: 0x0045
+	Error Information Handle: Not Provided
+	Total Width: Unknown
+	Data Width: Unknown
+	Size: No Module Installed
+	Form Factor: DIMM
+	Set: None
+	Locator: DIMM_D2
+	Bank Locator: NODE 1
+	Type: Unknown
+	Type Detail: Synchronous
+	Speed: Unknown
+	Manufacturer: NO DIMM
+	Serial Number: NO DIMM
+	Asset Tag:  
+	Part Number: NO DIMM
+	Rank: Unknown
+	Configured Clock Speed: Unknown
+	Minimum Voltage: 1.2 V
+	Maximum Voltage: 1.2 V
+	Configured Voltage: 1.2 V
+
+[root@sdv-ind-srv17 ~]# cd /home/tools/
+[root@sdv-ind-srv17 tools]# ./i7z_64bit 
+i7z DEBUG: i7z version: svn-r77-(20-Nov-2011)
+i7z DEBUG: Found Intel Processor
+i7z DEBUG:    Stepping 4
+i7z DEBUG:    Model 5
+i7z DEBUG:    Family 6
+i7z DEBUG:    Processor Type 0
+i7z DEBUG:    Extended Model 5
+i7z DEBUG: msr = Model Specific Register
+i7z DEBUG: Unknown processor, not exactly based on Nehalem, Sandy bridge or Ivy Bridge
+i7z DEBUG: msr device files exist /dev/cpu/*/msr
+i7z DEBUG: You have write permissions to msr device files
+
+------------------------------
+--[core id]--- Other information
+-------------------------------------
+--[0] Processor number 0
+--[0] Socket number/Hyperthreaded Sibling number  0,-1
+--[0] Core id number 0
+--[0] Display core in i7z Tool: Yes
+
+--[1] Processor number 1
+--[1] Socket number/Hyperthreaded Sibling number  0,-1
+--[1] Core id number 1
+--[1] Display core in i7z Tool: Yes
+
+--[2] Processor number 2
+--[2] Socket number/Hyperthreaded Sibling number  0,-1
+--[2] Core id number 2
+--[2] Display core in i7z Tool: Yes
+
+--[3] Processor number 3
+--[3] Socket number/Hyperthreaded Sibling number  0,-1
+--[3] Core id number 3
+--[3] Display core in i7z Tool: Yes
+
+--[4] Processor number 4
+--[4] Socket number/Hyperthreaded Sibling number  0,-1
+--[4] Core id number 4
+--[4] Display core in i7z Tool: Yes
+
+--[5] Processor number 5
+--[5] Socket number/Hyperthreaded Sibling number  0,-1
+--[5] Core id number 5
+--[5] Display core in i7z Tool: Yes
+
+--[6] Processor number 6
+--[6] Socket number/Hyperthreaded Sibling number  0,-1
+--[6] Core id number 8
+--[6] Display core in i7z Tool: Yes
+
+--[7] Processor number 7
+--[7] Socket number/Hyperthreaded Sibling number  0,-1
+--[7] Core id number 9
+--[7] Display core in i7z Tool: Yes
+
+--[8] Processor number 8
+--[8] Socket number/Hyperthreaded Sibling number  0,-1
+--[8] Core id number 10
+--[8] Display core in i7z Tool: Yes
+
+--[9] Processor number 9
+--[9] Socket number/Hyperthreaded Sibling number  0,-1
+--[9] Core id number 11
+--[9] Display core in i7z Tool: Yes
+
+--[10] Processor number 10
+--[10] Socket number/Hyperthreaded Sibling number  0,-1
+--[10] Core id number 12
+--[10] Display core in i7z Tool: Yes
+
+--[11] Processor number 11
+--[11] Socket number/Hyperthreaded Sibling number  0,-1
+--[11] Core id number 13
+--[11] Display core in i7z Tool: Yes
+
+Socket-0 [num of cpus 12 physical 12 logical 12] 0,1,2,3,4,5,6,7,8,9,10,11,
+Socket-1 [num of cpus 0 physical 0 logical 0] 
+GUI has been Turned ON
+Logging is OFF
+i7z DEBUG: Single Socket Detected
+i7z DEBUG: In i7z Single_Socket()
+i7z DEBUG: guessing Nehalem
+Quitting i7z
+[root@sdv-ind-srv17 tools]# uname -a
+Linux sdv-ind-srv17 3.10.0-693.21.1.el7.x86_64 #1 SMP Wed Mar 7 19:03:37 UTC 2018 x86_64 x86_64 x86_64 GNU/Linux
+[root@sdv-ind-srv17 tools]# lsblk -l
+NAME MAJ:MIN RM   SIZE RO TYPE MOUNTPOINT
+sda    8:0    0 232.9G  0 disk 
+sda1   8:1    0   500M  0 part /boot
+sda2   8:2    0     4G  0 part [SWAP]
+sda3   8:3    0 228.4G  0 part /
+[root@sdv-ind-srv17 tools]# fdisk -l
+
+Disk /dev/sda: 250.1 GB, 250059350016 bytes, 488397168 sectors
+Units = sectors of 1 * 512 = 512 bytes
+Sector size (logical/physical): 512 bytes / 512 bytes
+I/O size (minimum/optimal): 512 bytes / 512 bytes
+Disk label type: dos
+Disk identifier: 0x00009397
+
+   Device Boot      Start         End      Blocks   Id  System
+/dev/sda1   *        2048     1026047      512000   83  Linux
+/dev/sda2         1026048     9414655     4194304   82  Linux swap / Solaris
+/dev/sda3         9414656   488396799   239491072   83  Linux
+[root@sdv-ind-srv17 tools]# cat /etc/redhat-release 
+Red Hat Enterprise Linux Server release 7.4 (Maipo)
+[root@sdv-ind-srv17 tools]# ./i7z_64bit 
+i7z DEBUG: i7z version: svn-r77-(20-Nov-2011)
+i7z DEBUG: Found Intel Processor
+i7z DEBUG:    Stepping 4
+i7z DEBUG:    Model 5
+i7z DEBUG:    Family 6
+i7z DEBUG:    Processor Type 0
+i7z DEBUG:    Extended Model 5
+i7z DEBUG: msr = Model Specific Register
+i7z DEBUG: Unknown processor, not exactly based on Nehalem, Sandy bridge or Ivy Bridge
+i7z DEBUG: msr device files exist /dev/cpu/*/msr
+i7z DEBUG: You have write permissions to msr device files
+
+------------------------------
+--[core id]--- Other information
+-------------------------------------
+--[0] Processor number 0
+--[0] Socket number/Hyperthreaded Sibling number  0,-1
+--[0] Core id number 0
+--[0] Display core in i7z Tool: Yes
+
+--[1] Processor number 1
+--[1] Socket number/Hyperthreaded Sibling number  0,-1
+--[1] Core id number 1
+--[1] Display core in i7z Tool: Yes
+
+--[2] Processor number 2
+--[2] Socket number/Hyperthreaded Sibling number  0,-1
+--[2] Core id number 2
+--[2] Display core in i7z Tool: Yes
+
+--[3] Processor number 3
+--[3] Socket number/Hyperthreaded Sibling number  0,-1
+--[3] Core id number 3
+--[3] Display core in i7z Tool: Yes
+
+--[4] Processor number 4
+--[4] Socket number/Hyperthreaded Sibling number  0,-1
+--[4] Core id number 4
+--[4] Display core in i7z Tool: Yes
+
+--[5] Processor number 5
+--[5] Socket number/Hyperthreaded Sibling number  0,-1
+--[5] Core id number 5
+--[5] Display core in i7z Tool: Yes
+
+--[6] Processor number 6
+--[6] Socket number/Hyperthreaded Sibling number  0,-1
+--[6] Core id number 8
+--[6] Display core in i7z Tool: Yes
+
+--[7] Processor number 7
+--[7] Socket number/Hyperthreaded Sibling number  0,-1
+--[7] Core id number 9
+--[7] Display core in i7z Tool: Yes
+
+--[8] Processor number 8
+--[8] Socket number/Hyperthreaded Sibling number  0,-1
+--[8] Core id number 10
+--[8] Display core in i7z Tool: Yes
+
+--[9] Processor number 9
+--[9] Socket number/Hyperthreaded Sibling number  0,-1
+--[9] Core id number 11
+--[9] Display core in i7z Tool: Yes
+
+--[10] Processor number 10
+--[10] Socket number/Hyperthreaded Sibling number  0,-1
+--[10] Core id number 12
+--[10] Display core in i7z Tool: Yes
+
+--[11] Processor number 11
+--[11] Socket number/Hyperthreaded Sibling number  0,-1
+--[11] Core id number 13
+--[11] Display core in i7z Tool: Yes
+
+Socket-0 [num of cpus 12 physical 12 logical 12] 0,1,2,3,4,5,6,7,8,9,10,11,
+Socket-1 [num of cpus 0 physical 0 logical 0] 
+GUI has been Turned ON
+Logging is OFF
+i7z DEBUG: Single Socket Detected
+i7z DEBUG: In i7z Single_Socket()
+i7z DEBUG: guessing Nehalem
+Quitting i7z
+[root@sdv-ind-srv17 tools]# ^C
+[root@sdv-ind-srv17 tools]# ifconfig -a
+eno1: flags=4163<UP,BROADCAST,RUNNING,MULTICAST>  mtu 1500
+        inet6 fe80::127b:44ff:fe19:657e  prefixlen 64  scopeid 0x20<link>
+        ether 10:7b:44:19:65:7e  txqueuelen 1000  (Ethernet)
+        RX packets 1194595  bytes 317047382 (302.3 MiB)
+        RX errors 0  dropped 0  overruns 0  frame 0
+        TX packets 1200708  bytes 479670614 (457.4 MiB)
+        TX errors 0  dropped 0 overruns 0  carrier 0  collisions 0
+        device interrupt 20  memory 0x92f00000-92f20000  
+
+eno1.27: flags=4163<UP,BROADCAST,RUNNING,MULTICAST>  mtu 1500
+        inet 10.23.27.8  netmask 255.255.255.0  broadcast 10.23.27.255
+        inet6 fe80::127b:44ff:fe19:657e  prefixlen 64  scopeid 0x20<link>
+        ether 10:7b:44:19:65:7e  txqueuelen 1000  (Ethernet)
+        RX packets 0  bytes 0 (0.0 B)
+        RX errors 0  dropped 0  overruns 0  frame 0
+        TX packets 14  bytes 900 (900.0 B)
+        TX errors 0  dropped 0 overruns 0  carrier 0  collisions 0
+
+eno1.227: flags=4163<UP,BROADCAST,RUNNING,MULTICAST>  mtu 1500
+        inet 10.23.227.82  netmask 255.255.255.0  broadcast 10.23.227.255
+        inet6 fe80::127b:44ff:fe19:657e  prefixlen 64  scopeid 0x20<link>
+        ether 10:7b:44:19:65:7e  txqueuelen 1000  (Ethernet)
+        RX packets 1134385  bytes 287003762 (273.7 MiB)
+        RX errors 0  dropped 0  overruns 0  frame 0
+        TX packets 925180  bytes 450429738 (429.5 MiB)
+        TX errors 0  dropped 0 overruns 0  carrier 0  collisions 0
+
+eno1.1023: flags=4163<UP,BROADCAST,RUNNING,MULTICAST>  mtu 1500
+        inet 10.23.115.82  netmask 255.255.255.0  broadcast 10.23.115.255
+        inet6 fe80::127b:44ff:fe19:657e  prefixlen 64  scopeid 0x20<link>
+        ether 10:7b:44:19:65:7e  txqueuelen 1000  (Ethernet)
+        RX packets 58724  bytes 3685258 (3.5 MiB)
+        RX errors 0  dropped 0  overruns 0  frame 0
+        TX packets 58728  bytes 4952954 (4.7 MiB)
+        TX errors 0  dropped 0 overruns 0  carrier 0  collisions 0
+
+enp101s0f0: flags=4163<UP,BROADCAST,RUNNING,MULTICAST>  mtu 1500
+        inet 10.231.118.130  netmask 255.255.255.128  broadcast 10.231.118.255
+        inet6 fe80::20f:53ff:fe45:cd40  prefixlen 64  scopeid 0x20<link>
+        ether 00:0f:53:45:cd:40  txqueuelen 1000  (Ethernet)
+        RX packets 682623  bytes 64156698 (61.1 MiB)
+        RX errors 0  dropped 0  overruns 0  frame 0
+        TX packets 159899  bytes 13161342 (12.5 MiB)
+        TX errors 0  dropped 0 overruns 0  carrier 0  collisions 0
+        device interrupt 32  
+
+enp101s0f1: flags=4163<UP,BROADCAST,RUNNING,MULTICAST>  mtu 1500
+        inet 10.231.118.160  netmask 255.255.255.128  broadcast 10.231.118.255
+        inet6 fe80::20f:53ff:fe45:cd41  prefixlen 64  scopeid 0x20<link>
+        ether 00:0f:53:45:cd:41  txqueuelen 1000  (Ethernet)
+        RX packets 3728850580  bytes 313479774616 (291.9 GiB)
+        RX errors 0  dropped 43452  overruns 0  frame 0
+        TX packets 968  bytes 62376 (60.9 KiB)
+        TX errors 0  dropped 0 overruns 0  carrier 0  collisions 0
+        device interrupt 45  
+
+lo: flags=73<UP,LOOPBACK,RUNNING>  mtu 65536
+        inet 127.0.0.1  netmask 255.0.0.0
+        inet6 ::1  prefixlen 128  scopeid 0x10<host>
+        loop  txqueuelen 1  (Local Loopback)
+        RX packets 10862  bytes 814297 (795.2 KiB)
+        RX errors 0  dropped 0  overruns 0  frame 0
+        TX packets 10862  bytes 814297 (795.2 KiB)
+        TX errors 0  dropped 0 overruns 0  carrier 0  collisions 0
+
+[root@sdv-ind-srv17 tools]# ethtool -i enp101s0f0
+driver: sfc
+version: 4.13.1.1034
+firmware-version: 6.6.0.1017 rx1 tx1
+expansion-rom-version: 
+bus-info: 0000:65:00.0
+supports-statistics: yes
+supports-test: yes
+supports-eeprom-access: no
+supports-register-dump: yes
+supports-priv-flags: yes
+[root@sdv-ind-srv17 tools]#

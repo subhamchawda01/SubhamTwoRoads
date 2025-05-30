@@ -1,0 +1,32 @@
+CANCEL LIVE ORDER
+
+infracore/BasicOrderRoutingServer/client_request_processor.cpp : void ClientRequestProcessor::CancelPendingOrders(int saci)
+
+infracore/BasicOrderRoutingServer/shm_client_receiver.cpp : ShmClientReceiver::thread_main() -> client_request_processor_->CancelPendingOrders(itr) 
+
+ShmClientReceiver::RemoveWriter(int writer_id, int32_t const& writer_pid) -> client_disconnect_ = true;
+
+dvccode/Utils/shared_mem_reader.hpp : notifyRemove(int writer_id, int32_t const& writer_pid) -> RemoveWriter(writer_id, writer_pid);
+
+DetectDeadWritersThread -> thread_main(void) -> notifyRemove(vec.at(i).second, vec.at(i).first)
+
+cleanUp() {
+    // reader ends
+    assign_writer_id_thread.keepAlive = false;
+    detect_dead_writers_thread.keepAlive = false;
+}
+
+
+refer ClientRequestProcessor::CancelPendingOrders(int saci)
+1. shm_client_receiver -> client_disconnect = true -> client_request_processor_->CancelPendingOrders(itr);
+
+2. client_request_processor -> creating a function and calling it from control thread (control command)
+
+3. control_thread -> creating a function and calling cancelorder using m_athread->getEngine()
+
+
+
+
+
+
+

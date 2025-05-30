@@ -1,0 +1,179 @@
+
+[ root@sdv-indb-srv11 /tmp/cns-sfnettest/src ] onload --profile=latency taskset -c 4 ./sfnt-pingpong --affinity "4;4" tcp 192.168.132.12
+oo:sfnt-pingpong[42893]: Using OpenOnload 201805-u1 Copyright 2006-2018 Solarflare Communications, 2002-2005 Level 5 Networks [0]
+# cmdline: ./sfnt-pingpong --affinity 4;4 tcp 192.168.132.12
+# version: no-version
+# src: 2b01b02a25134b95306a16c81ae1d4bb
+# date: Wed Aug 17 00:12:33 GMT 2022
+# uname: Linux sdv-indb-srv11 3.10.0-862.14.4.el7.x86_64 #1 SMP Wed Sep 26 15:12:11 UTC 2018 x86_64 x86_64 x86_64 GNU/Linux
+# cpu: model name	: Intel(R) Core(TM) i9-10980XE CPU @ 3.00GHz
+sh: lspci: command not found
+# enp101s0f0: driver: sfc
+# enp101s0f0: version: 4.14.0.1014
+# enp101s0f0: bus-info: 0000:65:00.0
+# enp101s0f1: driver: sfc
+# enp101s0f1: version: 4.14.0.1014
+# enp101s0f1: bus-info: 0000:65:00.1
+# enp5s0: driver: igb
+# enp5s0: version: 5.10.2
+# enp5s0: bus-info: 0000:05:00.0
+# enp6s0: driver: igb
+# enp6s0: version: 5.10.2
+# enp6s0: bus-info: 0000:06:00.0
+# ram: MemTotal:       32619404 kB
+# tsc_hz: 3000052273
+# LD_PRELOAD=libonload.so
+# onload_version=201805-u1
+# EF_TCP_FASTSTART_INIT=0
+# EF_POLL_USEC=100000
+# EF_TCP_FASTSTART_IDLE=0
+# server LD_PRELOAD=libonload.so
+# percentile=99
+#
+#	size	mean	min	median	max	%ile	stddev	iter
+	1	48917	16740	48988	74323	70573	13459	31000
+	2	48902	20096	48981	77695	70595	13552	31000
+	4	48912	19945	48980	73931	70577	13486	31000
+	8	48899	27458	48982	75404	70570	13264	31000
+	16	49028	23789	48991	74063	70696	13385	31000
+	32	49118	26049	49002	74183	73142	12527	31000
+	64	49343	25736	49002	74250	73287	11895	31000
+	128	49637	21018	49015	74098	73461	11132	31000
+	256	52842	32661	49088	74556	73716	8604	29000
+	512	53075	45391	49079	74558	73717	9044	29000
+	1024	52612	48082	52372	74200	73436	3156	29000
+	2048	67616	47718	73049	98795	74873	10706	23000
+	4096	100138	73426	98086	123335	122779	15451	15000
+	8192	154798	121346	146327	289356	264980	42966	10000
+	16384	268320	195913	254037	487371	391867	38904	6000
+	32768	423983	342744	392444	610282	515031	53219	4000
+	65536	730377	650292	689477	1101183	954508	68667	3000
+[ root@sdv-indb-srv11 /tmp/cns-sfnettest/src ] 
+
+[ root@sdv-indb-srv11 /tmp/cns-sfnettest/src ] onload --profile=latency taskset -c 4 ./sfnt-pingpong --affinity "4;4" udp 192.168.132.12
+oo:sfnt-pingpong[47527]: Using OpenOnload 201805-u1 Copyright 2006-2018 Solarflare Communications, 2002-2005 Level 5 Networks [5]
+# cmdline: ./sfnt-pingpong --affinity 4;4 udp 192.168.132.12
+# version: no-version
+# src: 2b01b02a25134b95306a16c81ae1d4bb
+# date: Wed Aug 17 00:32:26 GMT 2022
+# uname: Linux sdv-indb-srv11 3.10.0-862.14.4.el7.x86_64 #1 SMP Wed Sep 26 15:12:11 UTC 2018 x86_64 x86_64 x86_64 GNU/Linux
+# cpu: model name	: Intel(R) Core(TM) i9-10980XE CPU @ 3.00GHz
+sh: lspci: command not found
+# enp101s0f0: driver: sfc
+# enp101s0f0: version: 4.14.0.1014
+# enp101s0f0: bus-info: 0000:65:00.0
+# enp101s0f1: driver: sfc
+# enp101s0f1: version: 4.14.0.1014
+# enp101s0f1: bus-info: 0000:65:00.1
+# enp5s0: driver: igb
+# enp5s0: version: 5.10.2
+# enp5s0: bus-info: 0000:05:00.0
+# enp6s0: driver: igb
+# enp6s0: version: 5.10.2
+# enp6s0: bus-info: 0000:06:00.0
+# ram: MemTotal:       32619404 kB
+# tsc_hz: 3000052378
+# LD_PRELOAD=libonload.so
+# onload_version=201805-u1
+# EF_TCP_FASTSTART_INIT=0
+# EF_POLL_USEC=100000
+# EF_TCP_FASTSTART_IDLE=0
+# server LD_PRELOAD=libonload.so
+# percentile=99
+#
+#	size	mean	min	median	max	%ile	stddev	iter
+	0	49051	46124	48968	73510	51244	475	31000
+	1	49045	24333	48968	53415	51333	447	31000
+	2	49058	47071	48968	52414	51359	460	31000
+	4	49065	45071	48981	71114	51449	519	31000
+	8	49047	24624	48967	71096	51351	468	31000
+	16	49082	24818	48967	73855	51474	855	31000
+	32	49966	46719	48978	74733	73576	4721	30000
+	64	51402	45876	49018	74365	73571	7034	30000
+	128	52618	45863	49021	74581	73776	8479	29000
+	256	52639	46624	49021	74408	73791	8442	29000
+	512	53059	46680	48998	74830	73873	9143	29000
+	1024	55103	46890	49027	75663	73901	10621	28000
+	1472	61166	47431	50691	75028	73946	12274	25000
+	1473	61298	48176	72547	97432	74160	12265	25000
+	2048	97513	49244	99293	101265	100187	7150	16000
+	4096	100840	73400	99436	123677	122556	5768	15000
+	8192	146614	120971	151162	177379	176528	15581	11000
+	16384	282538	242619	245287	490394	489892	73082	6000
+	32768	424048	365375	368748	736356	608374	65337	4000
+[ root@sdv-indb-srv11 /tmp/cns-sfnettest/src ] 
+
+
+[ root@sdv-indb-srv11 /tmp/netperf-netperf-2.7.0/src ] onload --profile=latency taskset -c 4 ./netperf -t UDP_RR -H 192.168.132.12 -l 10 -- -r 32
+oo:netperf[52795]: Using OpenOnload 201805-u1 Copyright 2006-2018 Solarflare Communications, 2002-2005 Level 5 Networks [0]
+MIGRATED UDP REQUEST/RESPONSE TEST from 0.0.0.0 (0.0.0.0) port 0 AF_INET to 192.168.132.12 () port 0 AF_INET : first burst 0
+Local /Remote
+Socket Size   Request  Resp.   Elapsed  Trans.
+Send   Recv   Size     Size    Time     Rate         
+bytes  Bytes  bytes    bytes   secs.    per sec   
+
+212992 212992 32       32      10.00    10123.55   
+212992 212992
+[ root@sdv-indb-srv11 /tmp/netperf-netperf-2.7.0/src ] 
+[ root@sdv-indb-srv11 /tmp/netperf-netperf-2.7.0/src ] 
+[ root@sdv-indb-srv11 /tmp/netperf-netperf-2.7.0/src ] 
+[ root@sdv-indb-srv11 /tmp/netperf-netperf-2.7.0/src ] onload --profile=latency taskset -c 4 ./netperf -t UDP_RR -H 192.168.132.12 -l 10 -- -r 64
+oo:netperf[52831]: Using OpenOnload 201805-u1 Copyright 2006-2018 Solarflare Communications, 2002-2005 Level 5 Networks [1]
+MIGRATED UDP REQUEST/RESPONSE TEST from 0.0.0.0 (0.0.0.0) port 0 AF_INET to 192.168.132.12 () port 0 AF_INET : first burst 0
+Local /Remote
+Socket Size   Request  Resp.   Elapsed  Trans.
+Send   Recv   Size     Size    Time     Rate         
+bytes  Bytes  bytes    bytes   secs.    per sec   
+
+212992 212992 64       64      10.00    10010.55   
+212992 212992
+[ root@sdv-indb-srv11 /tmp/netperf-netperf-2.7.0/src ] 
+[ root@sdv-indb-srv11 /tmp/netperf-netperf-2.7.0/src ] 
+[ root@sdv-indb-srv11 /tmp/netperf-netperf-2.7.0/src ] onload --profile=latency taskset -c 4 ./netperf -t TCP_RR -H 192.168.132.12 -l 10 -- -r 64
+oo:netperf[52916]: Using OpenOnload 201805-u1 Copyright 2006-2018 Solarflare Communications, 2002-2005 Level 5 Networks [5]
+MIGRATED TCP REQUEST/RESPONSE TEST from 0.0.0.0 (0.0.0.0) port 0 AF_INET to 192.168.132.12 () port 0 AF_INET : first burst 0
+Local /Remote
+Socket Size   Request  Resp.   Elapsed  Trans.
+Send   Recv   Size     Size    Time     Rate         
+bytes  Bytes  bytes    bytes   secs.    per sec   
+
+16384  87380  64       64      10.00    10125.87   
+16384  87380 
+[ root@sdv-indb-srv11 /tmp/netperf-netperf-2.7.0/src ] 
+[ root@sdv-indb-srv11 /tmp/netperf-netperf-2.7.0/src ] 
+[ root@sdv-indb-srv11 /tmp/netperf-netperf-2.7.0/src ] onload --profile=latency taskset -c 4 ./netperf -t TCP_RR -H 192.168.132.12 -l 10 -- -r 32
+oo:netperf[53127]: Using OpenOnload 201805-u1 Copyright 2006-2018 Solarflare Communications, 2002-2005 Level 5 Networks [4]
+MIGRATED TCP REQUEST/RESPONSE TEST from 0.0.0.0 (0.0.0.0) port 0 AF_INET to 192.168.132.12 () port 0 AF_INET : first burst 0
+Local /Remote
+Socket Size   Request  Resp.   Elapsed  Trans.
+Send   Recv   Size     Size    Time     Rate         
+bytes  Bytes  bytes    bytes   secs.    per sec   
+
+16384  87380  32       32      10.00    10181.07   
+16384  87380 
+[ root@sdv-indb-srv11 /tmp/netperf-netperf-2.7.0/src ] 
+
+
+[ root@sdv-indb-srv11 /home/tools/openonload-201805-u1/build/gnu_x86_64/tests/zf_apps/static ] ZF_ATTR="interface=enp101s0f0;ctpio_mode=ct" taskset -c 4 ./zftcppingpong -s 32 ping 192.168.132.12:20000
+Connecting to ponger
+Connection established
+mean round-trip time: 2.988 usec
+[ root@sdv-indb-srv11 /home/tools/openonload-201805-u1/build/gnu_x86_64/tests/zf_apps/static ] 
+
+
+[ root@sdv-indb-srv11 /home/tools/openonload-201805-u1/build/gnu_x86_64/tests/zf_apps/static ] ZF_ATTR="interface=enp101s0f1;ctpio_mode=sf" taskset -c 4 ./zfudppingpong -s 32 ping 192.168.132.11:20000 192.168.132.12:20000
+mean round-trip time: 2.971 usec
+[ root@sdv-indb-srv11 /home/tools/openonload-201805-u1/build/gnu_x86_64/tests/zf_apps/static ] 
+
+
+[ root@sdv-indb-srv11 /home/tools/openonload-201805-u1/build/gnu_x86_64/tests/ef_vi ] taskset -c 4 ./eflatency -s 32 ping enp101s0f1
+# ef_vi_version_str: 201805-u1
+# udp payload len: 32
+# iterations: 100000
+# warmups: 10000
+# frame len: 74
+# mode: CTPIO
+mean round-trip time: 2.978 usec
+[ root@sdv-indb-srv11 /home/tools/openonload-201805-u1/build/gnu_x86_64/tests/ef_vi ]
+
+

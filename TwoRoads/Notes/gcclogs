@@ -1,0 +1,199 @@
+libtool: finish: PATH="/usr/share/Modules/bin:/usr/local/bin:/usr/bin:/usr/local/sbin:/usr/sbin:/home/subham/.local/bin:/home/subham/bin:/sbin" ldconfig -n /home/subham/gcc-10.2.0/lib/../lib64
+----------------------------------------------------------------------
+Libraries have been installed in:
+   /home/subham/gcc-10.2.0/lib/../lib64
+
+If you ever happen to want to link against installed libraries
+in a given directory, LIBDIR, you must either use libtool, and
+specify the full pathname of the library, or use the `-LLIBDIR'
+flag during linking and do at least one of the following:
+   - add LIBDIR to the `LD_LIBRARY_PATH' environment variable
+     during execution
+   - add LIBDIR to the `LD_RUN_PATH' environment variable
+     during linking
+   - use the `-Wl,-rpath -Wl,LIBDIR' linker flag
+   - have your system administrator add LIBDIR to `/etc/ld.so.conf'
+
+See any operating system documentation about shared libraries for
+more information, such as the ld(1) and ld.so(8) manual pages.
+----------------------------------------------------------------------
+ /usr/bin/mkdir -p '/home/subham/gcc-10.2.0/lib/gcc/x86_64-pc-linux-gnu/10.2.0/include'
+ /usr/bin/install -c -m 644 ../../../gcc-10.2.0/libgfortran/ISO_Fortran_binding.h '/home/subham/gcc-10.2.0/lib/gcc/x86_64-pc-linux-gnu/10.2.0/include'
+:
+:
+:
+ /usr/bin/mkdir -p '/home/subham/gcc-10.2.0/lib/gcc/x86_64-pc-linux-gnu/10.2.0/finclude'
+ /usr/bin/install -c -m 644 ieee_arithmetic.mod ieee_exceptions.mod ieee_features.mod '/home/subham/gcc-10.2.0/lib/gcc/x86_64-pc-linux-gnu/10.2.0/finclude'
+make[4]: Leaving directory '/home/subham/objdir/x86_64-pc-linux-gnu/libgfortran'
+make[3]: Leaving directory '/home/subham/objdir/x86_64-pc-linux-gnu/libgfortran'
+make[2]: Leaving directory '/home/subham/objdir/x86_64-pc-linux-gnu/libgfortran'
+make[2]: Entering directory '/home/subham/objdir/x86_64-pc-linux-gnu/libatomic'
+Makefile:869: warning: overriding recipe for target 'all-multi'
+Makefile:863: warning: ignoring old recipe for target 'all-multi'
+Making install in testsuite
+make[3]: Entering directory '/home/subham/objdir/x86_64-pc-linux-gnu/libatomic/testsuite'
+make[4]: Entering directory '/home/subham/objdir/x86_64-pc-linux-gnu/libatomic/testsuite'
+make[4]: Nothing to be done for 'install-exec-am'.
+make[4]: Nothing to be done for 'install-data-am'.
+make[4]: Leaving directory '/home/subham/objdir/x86_64-pc-linux-gnu/libatomic/testsuite'
+make[3]: Leaving directory '/home/subham/objdir/x86_64-pc-linux-gnu/libatomic/testsuite'
+make[3]: Entering directory '/home/subham/objdir/x86_64-pc-linux-gnu/libatomic'
+Makefile:869: warning: overriding recipe for target 'all-multi'
+Makefile:863: warning: ignoring old recipe for target 'all-multi'
+true  DO=all multi-do # make
+make[4]: Entering directory '/home/subham/objdir/x86_64-pc-linux-gnu/libatomic'
+Makefile:869: warning: overriding recipe for target 'all-multi'
+Makefile:863: warning: ignoring old recipe for target 'all-multi'
+true  DO=install multi-do # make
+ /usr/bin/mkdir -p '/home/subham/gcc-10.2.0/lib/../lib64'
+ /bin/sh ./libtool   --mode=install /usr/bin/install -c   libatomic.la '/home/subham/gcc-10.2.0/lib/../lib64'
+libtool: install: /usr/bin/install -c .libs/libatomic.so.1.2.0 /home/subham/gcc-10.2.0/lib/../lib64/libatomic.so.1.2.0
+libtool: install: (cd /home/subham/gcc-10.2.0/lib/../lib64 && { ln -s -f libatomic.so.1.2.0 libatomic.so.1 || { rm -f libatomic.so.1 && ln -s libatomic.so.1.2.0 libatomic.so.1; }; })
+libtool: install: (cd /home/subham/gcc-10.2.0/lib/../lib64 && { ln -s -f libatomic.so.1.2.0 libatomic.so || { rm -f libatomic.so && ln -s libatomic.so.1.2.0 libatomic.so; }; })
+libtool: install: /usr/bin/install -c .libs/libatomic.lai /home/subham/gcc-10.2.0/lib/../lib64/libatomic.la
+libtool: install: /usr/bin/install -c .libs/libatomic.a /home/subham/gcc-10.2.0/lib/../lib64/libatomic.a
+libtool: install: chmod 644 /home/subham/gcc-10.2.0/lib/../lib64/libatomic.a
+libtool: install: ranlib /home/subham/gcc-10.2.0/lib/../lib64/libatomic.a
+libtool: finish: PATH="/usr/share/Modules/bin:/usr/local/bin:/usr/bin:/usr/local/sbin:/usr/sbin:/home/subham/.local/bin:/home/subham/bin:/sbin" ldconfig -n /home/subham/gcc-10.2.0/lib/../lib64
+----------------------------------------------------------------------
+Libraries have been installed in:
+   /home/subham/gcc-10.2.0/lib/../lib64
+
+If you ever happen to want to link against installed libraries
+in a given directory, LIBDIR, you must either use libtool, and
+specify the full pathname of the library, or use the `-LLIBDIR'
+flag during linking and do at least one of the following:
+   - add LIBDIR to the `LD_LIBRARY_PATH' environment variable
+     during execution
+   - add LIBDIR to the `LD_RUN_PATH' environment variable
+     during linking
+   - use the `-Wl,-rpath -Wl,LIBDIR' linker flag
+   - have your system administrator add LIBDIR to `/etc/ld.so.conf'
+
+See any operating system documentation about shared libraries for
+more information, such as the ld(1) and ld.so(8) manual pages.
+----------------------------------------------------------------------
+make[4]: Nothing to be done for 'install-data-am'.
+make[4]: Leaving directory '/home/subham/objdir/x86_64-pc-linux-gnu/libatomic'
+make[3]: Leaving directory '/home/subham/objdir/x86_64-pc-linux-gnu/libatomic'
+make[2]: Leaving directory '/home/subham/objdir/x86_64-pc-linux-gnu/libatomic'
+make[2]: Entering directory '/home/subham/objdir/x86_64-pc-linux-gnu/libgo'
+make[3]: Entering directory '/home/subham/objdir/x86_64-pc-linux-gnu/libgo'
+true "AR_FLAGS=rc" "CC_FOR_BUILD=gcc" "CC_FOR_TARGET=/home/subham/objdir/./gcc/xgcc -B/home/subham/objdir/./gcc/" "CFLAGS=-g -O2" "CXXFLAGS=-g -O2 -D_GNU_SOURCE" "CFLAGS_FOR_BUILD=-g -O2" "CFLAGS_FOR_TARGET=-g -O2" "GOC_FOR_TARGET=/home/subham/objdir/./gcc/gccgo -B/home/subham/objdir/./gcc/" "GOC=/home/subham/objdir/./gcc/gccgo -B/home/subham/objdir/./gcc/ -B/home/subham/gcc-10.2.0/x86_64-pc-linux-gnu/bin/ -B/home/subham/gcc-10.2.0/x86_64-pc-linux-gnu/lib/ -isystem /home/subham/gcc-10.2.0/x86_64-pc-linux-gnu/include -isystem /home/subham/gcc-10.2.0/x86_64-pc-linux-gnu/sys-include   " "GOCFLAGS=-O2 -g" "INSTALL=/usr/bin/install -c" "INSTALL_DATA=/usr/bin/install -c -m 644" "INSTALL_PROGRAM=/usr/bin/install -c" "INSTALL_SCRIPT=/usr/bin/install -c" "LDFLAGS=" "LIBCFLAGS=-g -O2" "LIBCFLAGS_FOR_TARGET=-g -O2" "MAKE=make" "MAKEINFO=/home/subham/gcc-10.2.0/missing makeinfo --split-size=5000000 --split-size=5000000  " "PICFLAG=" "PICFLAG_FOR_TARGET=" "SHELL=/bin/sh" "RUNTESTFLAGS=" "exec_prefix=/home/subham/gcc-10.2.0" "infodir=/home/subham/gcc-10.2.0/share/info" "libdir=/home/subham/gcc-10.2.0/lib" "includedir=/home/subham/gcc-10.2.0/include" "prefix=/home/subham/gcc-10.2.0" "tooldir=/home/subham/gcc-10.2.0/x86_64-pc-linux-gnu" "gxx_include_dir=" "AR=ar" "AS=/home/subham/objdir/./gcc/as" "LD=/home/subham/objdir/./gcc/collect-ld" "RANLIB=ranlib" "NM=/home/subham/objdir/./gcc/nm" "NM_FOR_BUILD=" "NM_FOR_TARGET=nm" "DESTDIR=" "WERROR=-Werror" DO=all multi-do # make
+make[4]: Entering directory '/home/subham/objdir/x86_64-pc-linux-gnu/libgo'
+true "AR_FLAGS=rc" "CC_FOR_BUILD=gcc" "CC_FOR_TARGET=/home/subham/objdir/./gcc/xgcc -B/home/subham/objdir/./gcc/" "CFLAGS=-g -O2" "CXXFLAGS=-g -O2 -D_GNU_SOURCE" "CFLAGS_FOR_BUILD=-g -O2" "CFLAGS_FOR_TARGET=-g -O2" "GOC_FOR_TARGET=/home/subham/objdir/./gcc/gccgo -B/home/subham/objdir/./gcc/" "GOC=/home/subham/objdir/./gcc/gccgo -B/home/subham/objdir/./gcc/ -B/home/subham/gcc-10.2.0/x86_64-pc-linux-gnu/bin/ -B/home/subham/gcc-10.2.0/x86_64-pc-linux-gnu/lib/ -isystem /home/subham/gcc-10.2.0/x86_64-pc-linux-gnu/include -isystem /home/subham/gcc-10.2.0/x86_64-pc-linux-gnu/sys-include   " "GOCFLAGS=-O2 -g" "INSTALL=/usr/bin/install -c" "INSTALL_DATA=/usr/bin/install -c -m 644" "INSTALL_PROGRAM=/usr/bin/install -c" "INSTALL_SCRIPT=/usr/bin/install -c" "LDFLAGS=" "LIBCFLAGS=-g -O2" "LIBCFLAGS_FOR_TARGET=-g -O2" "MAKE=make" "MAKEINFO=/home/subham/gcc-10.2.0/missing makeinfo --split-size=5000000 --split-size=5000000   " "PICFLAG=" "PICFLAG_FOR_TARGET=" "SHELL=/bin/sh" "RUNTESTFLAGS=" "exec_prefix=/home/subham/gcc-10.2.0" "infodir=/home/subham/gcc-10.2.0/share/info" "libdir=/home/subham/gcc-10.2.0/lib" "includedir=/home/subham/gcc-10.2.0/include" "prefix=/home/subham/gcc-10.2.0" "tooldir=/home/subham/gcc-10.2.0/x86_64-pc-linux-gnu" "gxx_include_dir=" "AR=ar" "AS=/home/subham/objdir/./gcc/as" "LD=/home/subham/objdir/./gcc/collect-ld" "RANLIB=ranlib" "NM=/home/subham/objdir/./gcc/nm" "NM_FOR_BUILD=" "NM_FOR_TARGET=nm" "DESTDIR=" "WERROR=-Werror" DO=install multi-do # make
+ /usr/bin/mkdir -p '/home/subham/gcc-10.2.0/lib/../lib64'
+ /usr/bin/install -c -m 644  libgobegin.a libgolibbegin.a '/home/subham/gcc-10.2.0/lib/../lib64'
+ ( cd '/home/subham/gcc-10.2.0/lib/../lib64' && ranlib libgobegin.a )
+ ( cd '/home/subham/gcc-10.2.0/lib/../lib64' && ranlib libgolibbegin.a )
+ /usr/bin/mkdir -p '/home/subham/gcc-10.2.0/lib/../lib64'
+ /bin/sh ./libtool   --mode=install /usr/bin/install -c   libgo.la '/home/subham/gcc-10.2.0/lib/../lib64'
+libtool: install: /usr/bin/install -c .libs/libgo.so.16.0.0 /home/subham/gcc-10.2.0/lib/../lib64/libgo.so.16.0.0
+libtool: install: (cd /home/subham/gcc-10.2.0/lib/../lib64 && { ln -s -f libgo.so.16.0.0 libgo.so.16 || { rm -f libgo.so.16 && ln -s libgo.so.16.0.0 libgo.so.16; }; })
+libtool: install: (cd /home/subham/gcc-10.2.0/lib/../lib64 && { ln -s -f libgo.so.16.0.0 libgo.so || { rm -f libgo.so && ln -s libgo.so.16.0.0 libgo.so; }; })
+libtool: install: /usr/bin/install -c .libs/libgo.lai /home/subham/gcc-10.2.0/lib/../lib64/libgo.la
+libtool: install: /usr/bin/install -c .libs/libgo.a /home/subham/gcc-10.2.0/lib/../lib64/libgo.a
+libtool: install: chmod 644 /home/subham/gcc-10.2.0/lib/../lib64/libgo.a
+libtool: install: ranlib /home/subham/gcc-10.2.0/lib/../lib64/libgo.a
+libtool: finish: PATH="/usr/share/Modules/bin:/usr/local/bin:/usr/bin:/usr/local/sbin:/usr/sbin:/home/subham/.local/bin:/home/subham/bin:/sbin" ldconfig -n /home/subham/gcc-10.2.0/lib/../lib64
+----------------------------------------------------------------------
+Libraries have been installed in:
+   /home/subham/gcc-10.2.0/lib/../lib64
+
+If you ever happen to want to link against installed libraries
+in a given directory, LIBDIR, you must either use libtool, and
+specify the full pathname of the library, or use the `-LLIBDIR'
+flag during linking and do at least one of the following:
+   - add LIBDIR to the `LD_LIBRARY_PATH' environment variable
+     during execution
+   - add LIBDIR to the `LD_RUN_PATH' environment variable
+     during linking
+   - use the `-Wl,-rpath -Wl,LIBDIR' linker flag
+   - have your system administrator add LIBDIR to `/etc/ld.so.conf'
+
+See any operating system documentation about shared libraries for
+more information, such as the ld(1) and ld.so(8) manual pages.
+
+@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@
+libtool: finish: PATH="/usr/share/Modules/bin:/usr/local/bin:/usr/bin:/usr/local/sbin:/usr/sbin:/home/subham/.local/bin:/home/subham/bin:/sbin" ldconfig -n /home/subham/gcc-10.2.0/lib/../lib64
+----------------------------------------------------------------------
+Libraries have been installed in:
+   /home/subham/gcc-10.2.0/lib/../lib64
+
+If you ever happen to want to link against installed libraries
+in a given directory, LIBDIR, you must either use libtool, and
+specify the full pathname of the library, or use the `-LLIBDIR'
+flag during linking and do at least one of the following:
+   - add LIBDIR to the `LD_LIBRARY_PATH' environment variable
+     during execution
+   - add LIBDIR to the `LD_RUN_PATH' environment variable
+     during linking
+   - use the `-Wl,-rpath -Wl,LIBDIR' linker flag
+   - have your system administrator add LIBDIR to `/etc/ld.so.conf'
+
+See any operating system documentation about shared libraries for
+more information, such as the ld(1) and ld.so(8) manual pages.
+----------------------------------------------------------------------
+ /usr/bin/mkdir -p '/home/subham/gcc-10.2.0/share/info'
+ /usr/bin/install -c -m 644 ../../../gcc-10.2.0/libgomp/libgomp.info '/home/subham/gcc-10.2.0/share/info'
+ install-info --info-dir='/home/subham/gcc-10.2.0/share/info' '/home/subham/gcc-10.2.0/share/info/libgomp.info'
+:
+:
+:
+ /usr/bin/mkdir -p '/home/subham/gcc-10.2.0/lib/gcc/x86_64-pc-linux-gnu/10.2.0/finclude'
+ /usr/bin/install -c -m 644 omp_lib.h omp_lib.f90 omp_lib.mod omp_lib_kinds.mod ../../../gcc-10.2.0/libgomp/openacc_lib.h ../../../gcc-10.2.0/libgomp/openacc.f90 openacc.mod openacc_kinds.mod '/home/subham/gcc-10.2.0/lib/gcc/x86_64-pc-linux-gnu/10.2.0/finclude'
+ /usr/bin/mkdir -p '/home/subham/gcc-10.2.0/lib/gcc/x86_64-pc-linux-gnu/10.2.0/include'
+ /usr/bin/install -c -m 644 omp.h ../../../gcc-10.2.0/libgomp/openacc.h ../../../gcc-10.2.0/libgomp/acc_prof.h '/home/subham/gcc-10.2.0/lib/gcc/x86_64-pc-linux-gnu/10.2.0/include'
+make[4]: Leaving directory '/home/subham/objdir/x86_64-pc-linux-gnu/libgomp'
+make[3]: Leaving directory '/home/subham/objdir/x86_64-pc-linux-gnu/libgomp'
+make[2]: Leaving directory '/home/subham/objdir/x86_64-pc-linux-gnu/libgomp'
+make[2]: Entering directory '/home/subham/objdir/x86_64-pc-linux-gnu/libitm'
+Making install in testsuite
+make[3]: Entering directory '/home/subham/objdir/x86_64-pc-linux-gnu/libitm/testsuite'
+make[4]: Entering directory '/home/subham/objdir/x86_64-pc-linux-gnu/libitm/testsuite'
+make[4]: Nothing to be done for 'install-exec-am'.
+make[4]: Nothing to be done for 'install-data-am'.
+make[4]: Leaving directory '/home/subham/objdir/x86_64-pc-linux-gnu/libitm/testsuite'
+make[3]: Leaving directory '/home/subham/objdir/x86_64-pc-linux-gnu/libitm/testsuite'
+make[3]: Entering directory '/home/subham/objdir/x86_64-pc-linux-gnu/libitm'
+true  DO=all multi-do # make
+make[4]: Entering directory '/home/subham/objdir/x86_64-pc-linux-gnu/libitm'
+true  DO=install multi-do # make
+ /usr/bin/mkdir -p '/home/subham/gcc-10.2.0/lib/../lib64'
+ /usr/bin/install -c -m 644 libitm.spec '/home/subham/gcc-10.2.0/lib/../lib64'
+ /usr/bin/mkdir -p '/home/subham/gcc-10.2.0/lib/../lib64'
+ /bin/sh ./libtool   --mode=install /usr/bin/install -c   libitm.la '/home/subham/gcc-10.2.0/lib/../lib64'
+libtool: install: /usr/bin/install -c .libs/libitm.so.1.0.0 /home/subham/gcc-10.2.0/lib/../lib64/libitm.so.1.0.0
+libtool: install: (cd /home/subham/gcc-10.2.0/lib/../lib64 && { ln -s -f libitm.so.1.0.0 libitm.so.1 || { rm -f libitm.so.1 && ln -s libitm.so.1.0.0 libitm.so.1; }; })
+libtool: install: (cd /home/subham/gcc-10.2.0/lib/../lib64 && { ln -s -f libitm.so.1.0.0 libitm.so || { rm -f libitm.so && ln -s libitm.so.1.0.0 libitm.so; }; })
+libtool: install: /usr/bin/install -c .libs/libitm.lai /home/subham/gcc-10.2.0/lib/../lib64/libitm.la
+libtool: install: /usr/bin/install -c .libs/libitm.a /home/subham/gcc-10.2.0/lib/../lib64/libitm.a
+libtool: install: chmod 644 /home/subham/gcc-10.2.0/lib/../lib64/libitm.a
+libtool: install: ranlib /home/subham/gcc-10.2.0/lib/../lib64/libitm.a
+libtool: finish: PATH="/usr/share/Modules/bin:/usr/local/bin:/usr/bin:/usr/local/sbin:/usr/sbin:/home/subham/.local/bin:/home/subham/bin:/sbin" ldconfig -n /home/subham/gcc-10.2.0/lib/../lib64
+----------------------------------------------------------------------
+Libraries have been installed in:
+   /home/subham/gcc-10.2.0/lib/../lib64
+
+If you ever happen to want to link against installed libraries
+in a given directory, LIBDIR, you must either use libtool, and
+specify the full pathname of the library, or use the `-LLIBDIR'
+flag during linking and do at least one of the following:
+   - add LIBDIR to the `LD_LIBRARY_PATH' environment variable
+     during execution
+   - add LIBDIR to the `LD_RUN_PATH' environment variable
+     during linking
+   - use the `-Wl,-rpath -Wl,LIBDIR' linker flag
+   - have your system administrator add LIBDIR to `/etc/ld.so.conf'
+
+See any operating system documentation about shared libraries for
+more information, such as the ld(1) and ld.so(8) manual pages.
+----------------------------------------------------------------------
+ /usr/bin/mkdir -p '/home/subham/gcc-10.2.0/share/info'
+ /usr/bin/install -c -m 644 ../../../gcc-10.2.0/libitm/libitm.info '/home/subham/gcc-10.2.0/share/info'
+ install-info --info-dir='/home/subham/gcc-10.2.0/share/info' '/home/subham/gcc-10.2.0/share/info/libitm.info'
+make[4]: Leaving directory '/home/subham/objdir/x86_64-pc-linux-gnu/libitm'
+make[3]: Leaving directory '/home/subham/objdir/x86_64-pc-linux-gnu/libitm'
+make[2]: Leaving directory '/home/subham/objdir/x86_64-pc-linux-gnu/libitm'
+make[1]: Leaving directory '/home/subham/objdir'
+

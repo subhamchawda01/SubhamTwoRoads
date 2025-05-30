@@ -1,0 +1,1415 @@
+  
+multisession no
+version
+username
+password
+tat gatway connect it to exchange it will connect to route 
+tap ip will get from exchange
+boxid related to user
+brocker id commom
+client base to send command to ors to identify 
+nnf get it from exchange
+throttle how many no of order we can send to exchange in 1sec
+special order oor immediate order throtal ioc 
+
+passs every 7 days change
+
+client requiest processor
+
+nse engine
+cases processorder
+
+broadcast write to shm and tradeengne read it,,  (write about rejects, mssg from exchange etc)
+
+CDefCode/security_definitions.cpp : ticks are the values by whcih price moves, eg if tick is 0.05 and price is rs10, so if inc its 10.05, 10.10, etc and dec is 9.95,9.90 etc
+
+ControlThread::AddtradingSymbol: this wee add symb to map and margin not of lots,, are added , only product which has ADDtradeing Symbol call be be send to exchange ohter will be rejected .. *no of lots
+----------------------------------------------------------------------------------------------------------------------
+
+midterm_db? : it's a mysqllite database that we keep it for midterm so there is HFT trading and midterm trading HFT is basically for intraday         and midterm they sometime do long term basis trading
+
+lotsize file will be seperately provided by exch
+---------------------------------------------------------------------------------------------------------------------
+
+/home/subham/subham/productNameFilter/productListFiles/
+so in cash market There is a decrease in transaction changes for products except  these symbols which are present in ur generated file
+so for adding additional transaction changes we need these products
+-----------------------------------------------------------------------------------------------------------------------
+
+ORDER LIVE OR NOT
+
+ors reply ya audit file
+agar order cancel hua hai toh phr order live nahi hai
+agar order cancel nahi hua hai toh iska matlab order live hai
+
+/home/pengine/prod/live_execs/get_exchange_symbol NSE_LALPATHLAB_P0_O2 20210310
+
+[ dvcinfra@sdv-ind-srv13 /spare/local/ORSBCAST_MULTISHM/NSE ] LD_PRELOAD=/home/dvcinfra/important/libcrypto.so.1.1 /home/pengine/prod/live_execs/mds_log_reader ORS_REPLY_LIVE NSE1299423_20210310  | grep -a "SACI: 20578959" | tail
+-------------------------------------------------------------------------------------------------------------------
+
+< ERROR > NO HANDLING YET FOR THIS MESSAGE TYPE : 20012
+N5HFSAT3ORS13AccountThreadE:OnOrderConf Order confirmed at different price! Origprice: -1.000000 : 0.000000 SAOS: 2951 SACI: 20119740
+
+---------------------------------------------------------------------------------------------------------------------
+
+N is for normal
+C is for combined shortcode
+
+----------------------------------------------------------------------------------------------------- 
+IND15: enp101s0f1
+IND19: enp101s0f1
+IND14: eth1
+IND20: enp1s0f1
+IND16: enp1s0f1
+enp101s0f1
+IND17: enp101s0f1
+IND18: enp101s0f1
+------------------------------------------------------------------------------------------------------
+
+to simulate 
+1. need to decrease the limit of a product in common_initial_margin_file.txt
+2. have to do addts of that prod with limit more than the limit in common_initial_margin_file.txt
+3. then we will get mid_term_order reject notification in slack
+4. after getting the notification we have to run this scirpt -> rejectHandling.sh <prod short code>
+-------------------------------------------------------------------------------------------------------
+
+fo market lot se grenrate hota hai /spare/local/tradeinfo/NSE_Files/ContractFiles
+
+NSEEngine.cpp : 1077, 1583
+-------------------------------------------------------------------------------------------------------
+
+Jitter : variation in the delay of received packets improper queuing, or configuration errors. Jitter should be below 30 ms. Packet loss shouldn't be more than 1%
+
+Hyper threading :  allows more than one thread to run on each core. More threads means more work can be done in parallel
+
+In multi-core and multi-processor environments running larger applications (for example database server processes) it is important to disable the hyperthreading so that processes will run on a different physical core's main thread rather than on a hyperthread in which case it may run as much as 3X-5X faster.
+--------------------------------------------------------------------------------------------------------
+
+we got one issue of password change on IND22 ors
+this issue will occur most probably on pass change date.So there might be a possibility that we got the login but didn't get the reply back from exchange. So  we try to login again by same changing password but echange policy says that we can't use same password for "changing Password". So I gives 16006 Error by saying password policy voilation
+
+So we have to provide some different Password So that It change it to new different password 
+
+----------------------------------------------------------------------------------------------------------
+ONLOAD
+
+onload -v
+/spare/local/lib/tcpdirect/libonload_zf_static.a iske jagah
+/spare/local/lib/tcpdirect/onload_7/libonload_zf_static.a
+ye rakho
+file: OrderRoutingServer/Jamfile.jam
+
+ONLOAD CONFIG PATH BUFFER SIZE 
+
+/home/pengine/prod/live_configs/which_onload_params_should_i_use_for_sdv-indb-srv11
+
+INSTALL ONLOAD 
+1. tar zxvf openonload-201805.tgz
+2. cd openonload-201805/scripts/
+3. onload_uninstall
+4. ./onload_install
+5. onload_tool reload
+6. reboot
+7. onload -v
+8. ethtool -i p4p1
+
+ALL ONLOAD
+e7f132102f4b0fa4bfbde22cd0e1edd0  ./onload-7.1.1.75/prebuilt/gnu_x86_64/lib/zf/libonload_zf_static.a BSE DIR
+035ae2a77c53f9e425a8b1d65ddd60e7  ./onload-7.1.0.265/prebuilt/gnu_x86_64/lib/zf/libonload_zf_static.a ONLOAD7 DIR
+5cf9b1b7784fe15c9753c064102f7bb6  ./openonload-201805/prebuilt/gnu_x86_64/lib/zf/libonload_zf_static.a tcpdirect/
+
+
+----------------------------------------------------------------------------------------------------------
+CHANGE KERNEL VERSION
+
+grub2-set-default 1
+----------------------------------------------------------------------------------------------------------
+
+FOR CPU ALLOCATION :
+
+HFSAT::CpucycleProfiler::SetUniqueInstance
+HFSAT::AllocateCPUUtils::GetUniqueInstance().AllocateCPUOrExit("virtual_test");
+
+need to add function parameter name which we are passing in below file
+/spare/local/files/affinity/affinity_process_type_list.txt
+
+valgrind --tool=cachegrind ./virtual_test > vtest
+--cachegrind-out-file=<file> --log-file=<file> (terminal output)
+
+ --cache-sim=no|yes [yes]
+
+    Enables or disables collection of cache access and miss counts.
+--branch-sim=no|yes [no]
+
+    Enables or disables collection of branch instruction and misprediction counts. By default this is disabled as it slows Cachegrind down by approximately 25%. Note that you cannot specify --cache-sim=no and --branch-sim=no together, as that would leave Cachegrind with no information to collect.
+
+cg_annotate cachegrind.out.269907
+
+
+HFSAT::CpucycleProfiler::GetUniqueInstance()
+there is one class  as Cpucycle profiler
+u have to set tags  befor eusing it
+
+HFSAT::CpucycleProfiler::GetUniqueInstance().SetTag(1, "single template")
+and the code which u want to test and get latency details it should be inbetween start and end fumction call
+HFSAT::CpucycleProfiler::GetUniqueInstance().Start(1);
+HFSAT::CpucycleProfiler::GetUniqueInstance().End(1);
+functin parameter is tag number 
+
+for getting details in summary you have to call 
+
+HFSAT::CpucycleProfiler::GetUniqueInstance().GetCpucycleSummaryString()
+this
+yeah you wil get al details like mean time avg time 90% etc
+
+REFER CODE TO ADD CPU PROFILER TO CME_ILINK
+https://github.com/two-roads-trading-pvt-ltd/infracore/commit/b3e3892ab5b5090c379de9002d02c81e692b8ecf
+[ dvcinfra@sdv-ind-srv22 /spare/local/ORSlogs/NSE_EQ/MSEQ9 ] tail -f cme_ilink_ors.COUT.CERR20201105 
+
+*************
+
+--collect-bus=yes
+--separate-threads=yes
+
+--dump-line=yes
+This specifies that event counting should be performed at source line granularity. This allows source annotation for sources which are compiled with debug information (-g).
+
+--cacheuse=yes
+
+--toggle-collect=function
+
+--log-file=<file>
+
+--callgrind-out-file=<file>
+
+	
+valgrind --tool=callgrind --cache-sim=yes --branch-sim=yes --collect-bus=yes --cacheuse=yes ./a.out
+valgrind --tool=callgrind --cache-sim=yes --branch-sim=yes ./a.out
+
+--show-percs=yes
+
+callgrind_annotate --inclusive=no --show-percs=yes callgrind.out.17280
+callgrind_annotate --inclusive=no callgrind.out.14837
+
+valgrind --tool=callgrind --cache-sim=yes --branch-sim=yes --collect-bus=yes --cacheuse=yes --separate-threads=yes --log-file=`date +%Y%m%d%H%M` ./trade_engine_master /home/dvctrader/RESULTS_FRAMEWORK/strats_new/CONFIG_NSE_CM_LP_202004/LIVE_FILE_JZ.csv 20201203 IST_915 IST_1530 800004 > output2 &
+
+********
+----------------------------------------------------------------------------------------------------------------
+
+code is on 42 local user raghu 
+5.42
+user raghu
+pass raghu123
+
+~/Project2/infracore  //ravi tcp direct dvccode
+
+~/Project3/infracore   // exalib
+
+
+#channel to lisen currently cash channels
+
+/home/pengine/prod/live_configs/sdv-ind-srv21_nse-tbt-mcast.txt
+/home/pengine/prod/live_configs/sdv-ind-srv21_network_interface_config.cfg
+
+export ZF_ATTR=interface=eth5	
+/home/dvcinfra/raghu/new_exec/NSEShmWriter_exalib_20201021
+
+
+export ZF_ATTR=interface=eth5
+~/raghu/new_exec/NSEShmWriter_TCP_20201021
+
+
+
+
+logs 1gen at /spare/local/logs/alllogs/exanic_seq.log
+logs 2gen at /spare/local/logs/alllogs/tcp_seq.log
+
+
+output
+fd msg_seq cpucyle
+@ravi can just check this change, /home/raghu/Project2/dvccode  fd add,, once.. Utils/tcp_direct_client_zocket_with_logging.hpp
+fd add.. 
+----------------------------------------------------------------
+
+MD value eth7
+export ZF_ATTR=interface=eth5;
+/home/dvcinfra/raghu/new_exec/NSEShmWriter_exalib_20201021 > /spare/local/logs/alllogs/exanic_cout_20201023 2>&1 &
+
+MD value eth5
+export ZF_ATTR=interface=eth5;
+/home/dvcinfra/raghu/new_exec/NSEShmWriter_TCP_20201021 > /spare/local/logs/alllogs/tcpdirect_cout_20201023 2>&1 &
+
+
+ls -lh /spare/local/logs/alllogs/tcp_seq.log /spare/local/logs/alllogs/exanic_seq.log
+
+MD value eth5
+export ZF_ATTR=interface=eth5;
+/home/dvcinfra/raghu/new_exec/NSEShmWriter_exalib_20201021 > /spare/local/logs/alllogs/exanic_cout_20201026 2>&1 &
+
+MD value eth7
+export ZF_ATTR=interface=eth5;
+/home/dvcinfra/raghu/new_exec/NSEShmWriter_TCP_20201021 > /spare/local/logs/alllogs/tcpdirect_cout_20201026 2>&1 &
+
+------------------------------------------------------------------------------------------------
+
+[ dvcinfra@sdv-ind-srv21 ~ ] watch -n1 'zf_stackdump dump'
+
+Observe this stack : name=eth5/0fc   ( Should be at the bottom ) 
+if you see no values are changing here 
+means no buffers getting used / freed up etc and hence no tcp direct acceleration 
+can note this for future use as well, a cmd which tells you which processes are runing under tcp direct etc and whether its' getting data throgh it or not 
+[ dvcinfra@sdv-ind-srv21 ~ ] zf_stackdump
+eth5/00d             id=3     pid=145234
+eth5/0fc             id=1     pid=85753
+
+here eth5/0fc -  this was exalib process 
+
+
+do you guys know cmd to look for exasock stats ?
+ not the exalib, but anything running under exasock like onload 
+[ dvcinfra@sdv-ind-srv21 ~ ] exasock-stat
+
+Active ExaNIC Sockets accelerated connections (servers and established):
+Proto | Recv-Q   | Send-Q   | Local Address            | Foreign Address          | State      
+
+the above cmd gives information on packets going through "exasock", since currently we are runing exalib version it won't show up here 
+
+[ dvcinfra@sdv-ind-srv13 ~ ] watch -n1 'onload_stackdump lots | grep "EF_MAX_PACKETS\|EF_MAX_RX\|EF_MAX_TX\|udp_recv\|u_poll\|memory_pressure\|EF_UDP_RCVBUF\|udp_tot_recv_drops\|pkt_bufs"'
+
+and the last cmd above is for monitoring onload process 
+whether it's geting data, it has drops under onload etc,  more information about those params etc in the Onload User Guide
+
+--------------------------------------------------------------------------------------------------
+
+MCAST CHANNELS
+
+cat /home/pengine/prod/live_configs/sdv-ind-srv13_nse-tbt-mcast.txt
+ /spare/local/files/NSE/channel_info.txt
+ /home/pengine/prod/live_configs/channel_to_subscribe_strat.txt in 5.26
+
+#1 - CURRENCY
+#2 NIFTY OPTIONS 
+#3 NIFTY FUT and all OTHER INDEX FUT/OPTIONS
+#4 A-G stock fut & opt
+#5 H-M stock fut & opt
+#6 BANKNIFTY fut & opt
+#7 N-Z stocks fut & opt
+#8 - A-D stocks
+#9 - E-J stocks
+#10 - K-R stocks
+#11 - S-Z stocks
+#
+#1 239.80.80.41 18841
+#2 239.80.80.42 18842
+#1 239.70.70.41 17741
+#4 239.70.70.45 17745
+1 239.70.70.42 17742
+2 239.70.70.43 17743
+3 239.70.70.44 17744
+4 239.70.70.46 17746
+5 239.60.60.41 16641
+6 239.60.60.42 16642
+7 239.60.60.43 16643
+8 239.60.60.44 16644
+9 239.55.55.21 55021
+10 239.55.55.71 55071
+
+  NSE_NIFTY
+  1 239.70.70.41 17741 (options)
+  2 239.70.70.42 17742 (future)
+
+  NSE_BANKNIFTY
+  5 239.70.70.45 17745 (options)
+  2 239.70.70.42 17742 (future)
+
+  OPTIONS
+  12 239.55.55.21 55021
+  FUT
+  239.55.55.71 55071
+
+  // A-G
+  fut_stocks_channels_['A'] = "3 239.70.70.43 17743";
+  fut_stocks_channels_['B'] = "3 239.70.70.43 17743";
+  fut_stocks_channels_['C'] = "3 239.70.70.43 17743";
+  fut_stocks_channels_['D'] = "3 239.70.70.43 17743";
+  fut_stocks_channels_['E'] = "3 239.70.70.43 17743";
+  fut_stocks_channels_['F'] = "3 239.70.70.43 17743";
+  fut_stocks_channels_['G'] = "3 239.70.70.43 17743";
+
+  // H-M
+  fut_stocks_channels_['H'] = "4 239.70.70.44 17744";
+  fut_stocks_channels_['I'] = "4 239.70.70.44 17744";
+  fut_stocks_channels_['J'] = "4 239.70.70.44 17744";
+  fut_stocks_channels_['K'] = "4 239.70.70.44 17744";
+  fut_stocks_channels_['L'] = "4 239.70.70.44 17744";
+  fut_stocks_channels_['M'] = "4 239.70.70.44 17744";
+
+  // N-R 
+  fut_stocks_channels_['N'] = "6 239.70.70.46 17746";
+  fut_stocks_channels_['O'] = "6 239.70.70.46 17746";
+  fut_stocks_channels_['P'] = "6 239.70.70.46 17746";
+  fut_stocks_channels_['Q'] = "6 239.70.70.46 17746";
+  fut_stocks_channels_['R'] = "6 239.70.70.46 17746";
+  fut_stocks_channels_['S'] = "6 239.70.70.46 17746";
+  fut_stocks_channels_['T'] = "6 239.70.70.46 17746";
+  fut_stocks_channels_['U'] = "6 239.70.70.46 17746";
+  fut_stocks_channels_['V'] = "6 239.70.70.46 17746";
+  fut_stocks_channels_['W'] = "6 239.70.70.46 17746";
+  fut_stocks_channels_['X'] = "6 239.70.70.46 17746";
+  fut_stocks_channels_['Y'] = "6 239.70.70.46 17746";
+  fut_stocks_channels_['Z'] = "6 239.70.70.46 17746";
+
+
+  // A-D
+  cash_channels_['A'] = "10 239.60.60.41 16641";
+  cash_channels_['B'] = "10 239.60.60.41 16641";
+  cash_channels_['C'] = "10 239.60.60.41 16641";
+  cash_channels_['D'] = "10 239.60.60.41 16641";
+
+  // E-J
+  cash_channels_['E'] = "11 239.60.60.42 16642";
+  cash_channels_['F'] = "11 239.60.60.42 16642";
+  cash_channels_['G'] = "11 239.60.60.42 16642";
+  cash_channels_['H'] = "11 239.60.60.42 16642";
+  cash_channels_['I'] = "11 239.60.60.42 16642";
+
+  // K-R
+  cash_channels_['J'] = "12 239.60.60.43 16643";
+  cash_channels_['K'] = "12 239.60.60.43 16643";
+  cash_channels_['L'] = "12 239.60.60.43 16643";
+  cash_channels_['M'] = "12 239.60.60.43 16643";
+  cash_channels_['N'] = "12 239.60.60.43 16643";
+  cash_channels_['O'] = "12 239.60.60.43 16643";
+  cash_channels_['P'] = "12 239.60.60.43 16643";
+  cash_channels_['Q'] = "12 239.60.60.43 16643";
+
+  // S-Z
+  cash_channels_['R'] = "13 239.60.60.44 16644";
+  cash_channels_['S'] = "13 239.60.60.44 16644";
+  cash_channels_['T'] = "13 239.60.60.44 16644";
+  cash_channels_['U'] = "13 239.60.60.44 16644";
+  cash_channels_['V'] = "13 239.60.60.44 16644";
+  cash_channels_['W'] = "13 239.60.60.44 16644";
+  cash_channels_['X'] = "13 239.60.60.44 16644";
+  cash_channels_['Y'] = "13 239.60.60.44 16644";
+  cash_channels_['Z'] = "13 239.60.60.44 16644";
+
+----------------------------------------------------------------------------------------------------------------
+
+all machine are getting mtbt feed, checked  strat logs and from exec.
+we have this on 5.67
+/home/dvcinfra/important/NseLineCheck/Email_line.sh
+
+----------------------------------------------------------------------------------------------------------------------
+
+NOTIS script:
+
+I've started run_loop batch file 
+It will run till 4pm 
+if trade export file is needed then take file from C:\Users\tworoads\Desktop\Postman_Position_File\CM\2021\06\03
+comb one
+now no need to do extra work
+just make sure before getting trade export file you are checking time of last trade from output file
+if time is old then you have to wait for comb file to be updated
+
+[ dvctrader@sdv-ind-srv17 ~ ] /home/pengine/prod/live_scripts/trade_export_to_pos_exec.sh
+USAGE: <SCRIPT> <TYPE:FO/CM> <TRADE_EXP_FILE> <USERLIST_FILE or srv_name[IND14]> <ADDS-FLAG [0/1]>
+any INDserver
+please use the script from dvctrader user as we will be running pos_exec from dvcinfra user
+as currently it will be a mock drill so please just put last arg as 0 everytime otherwise unnecessary addts will happen
+
+suppose specific ind server ki pos chahiye to agar ind15 ki chaiye toh ye cmd
+
+/home/pengine/prod/live_scripts/trade_export_to_pos_exec.sh FO /tmp/TradesExport.txt IND15 0   
+
+agar spacific user ki chahiye toh jo file me userid entreer kiya hai vo input dena
+
+/home/pengine/prod/live_scripts/trade_export_to_pos_exec.sh CM /tmp/TradesExport.txt user_file_name 0   
+
+aurmaine bataya tha na ki 16 17 18 CM machines hai
+14 15 19 20 FO
+
+scp TradesExport.txt dvctrader@10.23.227.64:/tmp
+
+/tmp/pos_exec_file_20201027
+/tmp/opt_pos_exec_file_20201016
+/tmp/fut_pos_exec_file_20201016
+
+multiple user ke liye file me aise store krna hoga
+34353
+36277
+36474
+
+  declare -A server_to_interface_map
+  server_to_interface_map=( ["sdv-ind-srv14"]="eth1" \
+                          ["sdv-ind-srv15"]="enp101s0f1" \
+                          ["sdv-ind-srv16"]="enp1s0f1" \
+                          ["sdv-ind-srv17"]="enp101s0f1" \
+                          ["sdv-ind-srv18"]="enp101s0f1" \
+                          ["sdv-ind-srv19"]="enp101s0f1" \
+                          ["sdv-ind-srv20"]="enp1s0f1" )
+
+  declare -A server_to_profile_
+  server_to_profile_=( ["sdv-ind-srv14"]="MSFO7" \
+                     ["sdv-ind-srv15"]="MSFO4" \
+                     ["sdv-ind-srv16"]="MSEQ2" \
+                     ["sdv-ind-srv17"]="MSEQ3" \
+                     ["sdv-ind-srv18"]="MSEQ4" \
+                     ["sdv-ind-srv21"]="MSEQ7" \
+                     ["sdv-ind-srv22"]="MSEQ9" \
+                     ["sdv-ind-srv23"]="MSEQ6" \
+                     ["sdv-ind-srv19"]="MSFO5" \
+                     ["sdv-ind-srv20"]="MSFO6" )
+
+  declare -A server_to_ip_map
+  server_to_ip_map=( ["sdv-ind-srv14"]="10.23.227.64" \
+                   ["sdv-ind-srv15"]="10.23.227.65" \
+                   ["sdv-ind-srv16"]="10.23.227.81" \
+                   ["sdv-ind-srv17"]="10.23.227.82" \
+                   ["sdv-ind-srv18"]="10.23.227.83" \
+                   ["sdv-ind-srv19"]="10.23.227.69" \
+                   ["sdv-ind-srv21"]="10.23.227.66" \
+                   ["sdv-ind-srv22"]="10.23.227.71" \
+                   ["sdv-ind-srv23"]="10.23.227.72" \
+                   ["sdv-ind-srv20"]="10.23.227.84" )
+
+IND21 : 227.66
+IND22 : 227.71
+
+FO Server	UserId
+IND11	34353
+IND14	36277
+	36474
+IND15	36298
+	34110
+IND19	37709
+	36975
+IND20	35693
+	34459
+
+CM Server	UserId
+IND16	43965
+	43740
+IND17	43706
+	43605
+IND18	43603
+	43966
+IND 23 43604
+    43606
+IND 24 43546
+
+server_ip_map=(["local13"]="10.23.5.13"
+               ["local67"]="10.23.5.67"
+               ["local66"]="10.23.5.66"
+               ["local42"]="10.23.5.42"
+               ["local26"]="10.23.5.26"
+               ["local43"]="10.23.5.43"
+               ["local51"]="10.23.5.51"
+               ["local58"]="10.23.5.58"
+               ["local30"]="10.23.5.30")
+
+IND_Server_ip=( ["IND11"]="10.23.227.61" \
+                ["IND12"]="10.23.227.62" \
+                ["IND13"]="10.23.227.63" \
+                ["IND14"]="10.23.227.64" \
+                ["IND15"]="10.23.227.65" \
+                ["IND16"]="10.23.227.81" \
+                ["IND17"]="10.23.227.82" \
+                ["IND18"]="10.23.227.83" \
+                ["IND19"]="10.23.227.69" \
+                ["IND20"]="10.23.227.84" \
+                ["IND21"]="10.23.227.66" \
+                ["IND22"]="10.23.227.71" \
+                ["IND23"]="10.23.227.72" )
+
+---------------------------------------------------------------------------------------------------------
+NOTIS
+
+1. start/run at 9:25 everyday -> C:\Users\tworoads\Desktop\Postman_Position_File\CM\run_loop.
+2. the above exec will run post_man_new_20210517_new python script.
+3. it will show only this , TRADE EXPORT FILE IS GETTING DOWNLOADED KINDLY DONT STOP BEFORE 4PM
+4. the files willl get updated in dated format in this . C:\Users\tworoads\Desktop\Postman_Position_File\CM\2021\11\04
+5. Sometimes due to exception the script gets stuck. we willl get errors which will be shown in the terminal. some of them are handled.
+6. so if this happens , we need to stop the script, and create a folder under C:\Users\tworoads\Desktop\Postman_Position_File\CM\2021\11\04, and copy alll the files in newly created folder.
+7. why we are taking backup : if we run , run_loop again it will created duplicate comb file which will created issue.
+8. run the run_loop script again.
+9. check if the files is getting updated or not (outputfile), in output file it willl show last seq no and sleep time.
+10. check last updated time of outputfile and wait until its updated to lattest time.
+11. we can only send 1 request in every 30sec , and can get data upto 10000 sequence at a time. we have to send request after 30sec only( in code ).
+12. check in every 1 hr it there is any issue in notis.
+
+------------------------------------------------------------------------------------------------------------------
+ORS CRASH 
+NOTIS
+
+[ dvctrader@sdv-ny4-srv67 ~ ] /home/dvctrader/important/Get_Notis_File_from_window_server.sh
+tail -f /tmp/notis_file_scp_from_windows.logs
+
+[ dvctrader@sdv-ny4-srv67 ~/important/NOTIS_FILES
+
+NOTE : 
+FOR MUHRAT ONLY CHANGE TIME IN THE PYTHON SCRIPT ( take backup)
+
+1. get the position from notis
+    Script Path:
+    CM : C:\Users\tworoads\Desktop\Postman_Position_File\CM
+    FO: C:\Users\tworoads\Desktop\Postman_Position_File\FO
+	We run “run_loop”(CM) , "run_new" (FO, need to run at the time of getting tradeexport file) batch file since morning 9:15 till 4 pm. 
+	go to 2021/09/09 and check date and time of last updated OUTPUT_FILE , it should be lattest or wait for next update.
+	once updated , scp Trade_export_CM_20210909_0917_comb.txt dvctrader@10.23.227.82:/tmp
+	
+	copy position to trader ATHENA of crashed server (/tmp/pos_exec_file_20211112)
+	
+	export ZF_ATTR=interface=enp101s0f1	/home/dvctrader/ATHENA/run.sh
+	export ZF_ATTR=interface=enp101s0f1; LD_PRELOAD=/home/dvctrader/important/libcrypto.so.1.1 /home/dvctrader/ATHENA/pos_exec /tmp/pos_exec_file_20211104 20211104 IST_1440 300 999999 100000 &
+	
+	/home/dvctrader/ATHENA/pos_exec /home/dvctrader/ATHENA/pos_exec_file_20220211 20220211 IST_932 300 123999 300000
+	                                                                                                                                 <currentdate> <starttime><totaltime to run posexec><traderid><exposure/notional>
+	-> total exposure (total position to close * price is individual instrument) / notional 
+	    ex : 800000 (total exposure)/ 100000 = 8; (total no of window).
+		after each windown (time /8) it will send aggress order.
+	
+	/home/dvctrader/ATHENA/run.sh (for interface)
+	
+	for i in 999999; do /home/pengine/prod/live_execs/user_msg --traderid $i --refreshecoevents ; done (check in trade logs for open position)
+	to check position remaining for pos_exec : grep -i remaining log.20211112.999999 | grep -v "POS REMAINING: 0"
+	
+2. In IND machine (trader) type get_pos  (user id above) , find ind 23
+    once the above script is done, it will show you the command which we need to run.
+	need to do some changes in that command like , id, notional value , time, export_zf (interface for that machine crash).
+	
+3. start the ORS
+
+4. run from trader /home/pengine/prod/live_scripts/adjust_addts.sh
+
+5. run from infra /home/pengine/prod/live_scripts/expiry_day_x_times_addts.sh FORCE 12 (based on server times addts only for CM)
+
+6. run pos_exec , ask for time and notional (refer point 2)
+    after running pos_exec , wait for 5min and then generate pos file (tradeexport file to ind17 ,generate pos file), to check if there is any open position or not.
+	if the file is empty then , all the positions are closed.
+
+7. after all position close , get the position from notis and verify if any open positon.
+
+8. generate ORS trade file from the above (7th) trade export file (get the lattest one). copy it to IND21 and run backend for IND21. check for eod and delete trader file     
+    from IND21 INFRA after checking. 
+	
+	[ dvctrader@sdv-ind-srv17 /home/pengine/prod/live_scripts ] ./generate_ors_trade_new.sh
+    USAGE: <SCRIPT> <TYPE:FO/CM> <TRADE_EXP_FILE> <USERLIST_FILE>
+	
+	[ dvctrader@sdv-ind-srv17 /home/pengine/prod/live_scripts ] ./generate_ors_trade_new.sh CM /tmp/Trade_export_CM_20211104_1817_comb.txt /tmp/user_list
+	/home/pengine/prod/live_scripts/generate_ors_trade_new.sh CM /tmp/Trade_export_CM_20211112_0918_comb.txt /tmp/user_list
+	
+PROFILER:
+SERVER_IP:
+PROFILER: MSEQ3
+
+userid: 43965
+userid: 43740
+userid: 43706
+userid: 43605
+userid: 43603
+userid: 43966
+userid: 43604
+userid: 43606
+ORS_TRADE_FILE: /tmp/ors_trade_file
+	
+	scp /tmp/ors_trade_file dvcinfra@10.23.227.72:/spare/local/ORSlogs/NSE_EQ/MSEQ6/trades.20211027
+	
+	/home/pengine/prod/live_scripts/generate_ors_trade_new.sh CM /tmp/Trade_export_CM_20210812_0915_comb.txt /tmp/user_20210811
+	Copy this generated file /tmp/ors_trade_file to IND21 ORSlogs(/spare/local/ORSlogs/NSE_EQ/MSEQ4) path where ORS trade file(trades.20210219) is there.
+	Run this in 5.26 infra
+    today=`date +"\%Y\%m\%d"`; logfile=/spare/local/logs/pnl_data/hft/tag_pnl/ind13_pnls/cm_log.${today}; touch $logfile; /apps/anaconda/anaconda3/bin/python /home/dvcinfra/nishank_temp/newpnl/GenerateInd13EodPnl_test2_new.py -D CM -s IND21_EQ -d $today >>$logfile 2>&1;
+	cat /NAS1/data/MFGlobalTrades/ind_pnls/CM/eod_pnls/ind_pnl_`date +%Y%m%d`.txt | grep -v "TOTAL_POS:      0"
+	
+	after checking eod pnl , inform ravi that all position are closed.
+	after this remove the trade file from (/spare/local/ORSlogs/NSE_EQ/MSEQ4)
+
+9. in infra run ctrlcmd CLEAR (CLEARPOSITIONS)
+
+10. restart oebu of crashed IND server
+
+11. cp trades.20211027 trades.20211027_crash
+      at 3:30 generate and replace ORS trader file of crashed machine and run backend , regenerate eod pnl file , run postmarket.
+      after 3:30 wait for tradeexport file to get updated.
+
+
+-----------------------------------------------------------------------------------------------------------------------
+APPLY OF NEW USER PROCESS
+
+first we need to apply for new TAP after that aplly for new neat user ID  and CTCL id and after that we need to do pro enablement request in nse portal. For every steps we need one day for approval
+---------------------------------------------------------------------------------------------------------
+
+ADDIING NEW USER 
+
+/home/pengine/prod/live_configs/common_MSEQ9_ors.cfg
+ors config file changes
+
+BoxId-2 23320
+Multisessions 1,2
+NNF-2 560049001015000
+ORSThrottleLimit 25
+ORSThrottleLimit_IOC 10
+Password-2 Neat@CM1
+PasswordChangeDate-2 20210310
+TAPIP-2 10.231.118.131
+TAPInterface-2 enp23s0f0:1
+UserName-2 43604
+
+in ifconfig check if interface is showing or not, match inet ip with TAPIP in config file.
+if not showing, then follow the below steps:
+
+1. go to root user
+2. cd /etc/sysconfig/network-scripts
+3. copy ifcfg-enp23s0f0 to the name which you want to create interface for (ex: ifcfg-enp23s0f0:1)
+4. edit the above file ifcfg-enp23s0f0:1 with the value. name , device, ipaddar
+TYPE=Ethernet
+PROXY_METHOD=none
+BROWSER_ONLY=no
+BOOTPROTO=static
+DEFROUTE=no
+NAME=enp23s0f0:1
+DEVICE=enp23s0f0:1
+NM_CONTROLLED=no
+ONBOOT=yes
+IPADDR=10.231.118.131
+NETMASK=255.255.255.128
+5. reboot (root) to apply the changes.
+
+NEAT USER PASSWORD CHANGE:
+
+1. NEAT login in pass: https://docs.google.com/spreadsheets/d/1oXuOQzYVVt2c5HkZlAcB1pr4aeL7LqmUX_HOHKy4DQ4/edit#gid=1425098077
+2. Dialogs -> resetuserid -> select user id -> reset (check the password)
+3. Dialogs -> orderlimit -> orderlimits -> ordervalue=10 , orderquantity=50000 -> set
+4. Dialogs -> user,branch orderlimit -> user order value limit -> select user -> buy limit sell limit = 6000;
+
+UPDATE PASSWORD IN CONFIG FILE
+
+add reset password in config file, and add last week date password change
+
+----------------------------------------------------------------------------------------------------------
+
+MULTICAST RECEIVER
+onload /home/pengine/prod/live_execs/simple_multicast_receiver enp0s31f6.227 239.70.70.45 17745
+
+MULTICAST SENDER
+onload /home/pengine/prod/live_execs/simple_multicast_sender 239.70.70.45 17745 5 10 enp0s31f6.227
+
+---------------------------------------------------------------------------------------------------------
+where order is in queue?
+    check in generic data, can get it using Orderid, Qty, BuySell, NSEBookDelta(all order) , NSETrade( all traded)
+
+check in audit logs order_no , size(Qty)
+/home/pengine/prod/live_execs/nse_audit_log_reader AUDIT_IN NSE_EQ /spare/local/ORSlogs/NSE_EQ/MSEQ3/audit.43706.`date +%Y%m%d`.in | egrep -a 'JUMPNET'
+
+[ dvcinfra@sdv-ind-srv13 /spare/local/MDSlogs/GENERIC ] LD_PRELOAD=/home/dvcinfra/important/libcrypto.so.1.1 /home/pengine/prod/live_execs/mds_log_reader GENERIC NSE_BORORENEW_20210101 | less
+
+LD_PRELOAD=/home/dvcinfra/important/libcrypto.so.1.1 /home/pengine/prod/live_execs/mds_log_reader GENERIC NSE_BORORENEW_20210101 | grep -w Qty: | grep -n Qty | grep 1943
+
+/home/pengine/prod/live_execs/mds_log_reader GENERIC NSE_HCC_20210304 | grep -w "Orderid:" | grep -n "Orderid:" | grep -w 4832155201053763720
+
+postmarket
+/home/pengine/prod/live_execs/mds_log_reader GENERIC ~/trash/NSE_HCC_20210304 | grep 1614852599 | grep -n 1614852599.919589
+
+-----------------------------------------------------------------------------------------------------------
+INVALID BOOK ISSUE IN OEBU
+
+check entry in shm logs (/spare/local/MDSlogs) , if entry not present run below script
+[ dvcinfra@sdv-ind-srv13 ~ ] /home/pengine/prod/live_scripts/oebu_shortcode_helper.sh
+
+---------------------------------------------------------------------------------------------------------------
+OEBU COLUMN DETAILS
+
+          tempstring << start << secname.c_str() << end;
+          tempstring << start << this_smv_.bid_size(t_level_) << end;
+          tempstring << start << this_smv_.bid_order(t_level_) << end;
+          tempstring << start << this_smv_.bid_price(t_level_) << end;
+          tempstring << start << this_smv_.bid_int_price(t_level_) << end;
+          tempstring << start << this_smv_.ask_int_price(t_level_) << end;
+          tempstring << start << this_smv_.ask_price(t_level_) << end;
+          tempstring << start << this_smv_.ask_order(t_level_) << end;
+          tempstring << start << this_smv_.ask_size(t_level_) << end;
+          tempstring << start << sid_to_best_bid_size_c << end;
+          tempstring << start << sid_to_best_bid_price_c << end;
+          tempstring << start << sid_to_best_ask_price_c << end;
+          tempstring << start << sid_to_best_ask_size_c << end;
+          tempstring << start << (int)prom_pnl_->total_pnl() << end;
+          tempstring << start << prom_pnl_->get_pnl_diff(PNL_DIFF_TIME_) << end;
+          tempstring << start << (double)global_pos_t / min_order_size_<< end;
+
+          tempstring << start << (long int)current_exposure_t << end;
+
+          tempstring << start << self_traded_volume_ / LAKH_DIVISOR << end;
+          tempstring << start << (double)traded_volume_/ LAKH_DIVISOR << end;
+          tempstring << start
+                     << (self_traded_volume_ / (double)(traded_volume_ + 1)) * 100.0
+                     << end;
+          tempstring << start << price_change << end;
+          tempstring << start << last_activity_time_.tm_hour << ":" << last_activity_time_.tm_min << ":" << last_activity_time_.tm_sec << end;
+          tempstring << start << p_prom_order_manager_->get_rejected() << end;
+          tempstring << start << p_prom_order_manager_->get_exch_rejected() << end;
+          tempstring << start << p_prom_order_manager_->get_exch_cxl_rejected() << end;
+          tempstring << start << p_prom_order_manager_->get_cxl_rejected() << end;
+          tempstring << start << p_prom_order_manager_->get_exch_replace_rejects() << end;
+          tempstring << start << p_prom_order_manager_->get_ors_replace_rejects() << end;
+          tempstring << start << p_prom_order_manager_->get_num_ors_messages() << end;
+          tempstring << start << asm_prod_flag_ << end;
+          tempstring << start << rejection_reason_string_.c_str() << "\"]";
+
+---------------------------------------------------------------------------------------------------------------
+DUMP MDS LOG DATA
+
+ /home/pengine/prod/live_execs/combined_user_msg --dump_mds_files --only_ors_files 0
+-------------------------------------------------------------------------------------------------------------
+OEBU SETUP 
+
+1. add details in this file : /home/pengine/prod/live_configs/sdv-indb-srv11_oebu_config.cfg 
+2. copy html file to this path : /var/www/html
+3. check if htmp page is accessable or not , check httpd status : service httpd status
+4. do required changes in /home/pengine/prod/live_scripts/SmartDaemonController.sh
+5. check market data interface in update_system_settings() , export ZF_ATTR=interface=enp1s0f1np1, 
+    /home/pengine/prod/live_configs/sdv-ind-srv24_network_interface_config.cfg 
+
+sudo yum install httpd
+systemctl start httpd
+systemctl enable httpd
+systemctl status httpd
+/var/log/httpd
+/etc/httpd/conf.d/
+-------------------------------------------------------------------------------------------------------------------
+
+CombinedShmWriter SETUP
+
+1. /home/pengine/prod/live_scripts/SmartDaemonController.sh CombinedSource START
+2. /home/pengine/prod/live_configs/sdv-ind-srv21_network_interface_config.cfg
+3. /home/pengine/prod/live_configs/`hostname`_use_shm_for_ors_reply.txt
+4. /home/pengine/prod/live_configs/sdv-ind-srv21_combinedwriter.cfg
+5. /home/pengine/prod/live_execs/CombinedShmWriter
+
+----------------------------------------------------------------------------------------------------------------------
+
+NSEShmWriter SETUP
+
+/tmp/SmartDaemonController.sh NSEShmWriter START
+
+above exec will logs and write to shm market data.
+it basically runs in ind13.
+/spare/local/MDSlogs
+
+add NSEShmWriter function and function call in SmartDeamon
+in below file set the correct MD interface.
+/home/pengine/prod/live_execs/NSEShmWriter
+/home/pengine/prod/live_configs/sdv-ind-srv22_network_interface_config.cfg
+in /tmp/SmartDaemonController.sh verify update_system_settings() export ZF_ATTR=interface=enp23s0f0;
+for specific channel : /home/pengine/prod/live_configs/sdv-ind-srv22_nse-tbt-mcast.txt
+/spare/local/files/affinity/affinity_process_type_list.txt:  NSEShmWriter P
+
+/home/pengine/prod/live_configs/channel_to_subscribe_strat.txt in 5.26
+
+/etc/sysctl.conf
+vm.nr_hugepages = 1024
+sysctl -p
+
+------------------------------------------------------------------------------------------------------------------------
+
+CxReSeqd - strat ki taraf se modify order send hua hai ors ko
+CxRe - ye exchange se confirmation hai ki order modify hogaya hai
+Cxld - order cancel
+Conf - order conformed
+
+----------------------------------------------------------------------------------------------------------
+
+DATA COPY SCRIPT (5.67)
+
+check bardata on worker .. U check first column which is timestamp, it will go till 9:59... /spare/local/BarData
+
+worker : dvctrader@52.3.22.99
+
+dvctrader@54.90.155.232
+
+-----------------------------------------------------------------------------------------------------
+
+sync bardata from worker to ind servers
+
+Go to 5.13 dvctrader
+And search in history ratio_upload
+
+[ dvctrader@sdv-ny4-srv13 ~ ] /home/dvctrader/important/ratio_upload.sh > /tmp/output_ratio_upload &
+
+-----------------------------------------------------------------------------------------------------
+
+FREQUENCY DETAILS
+
+./i7z_64bit
+/home/tools
+
+5.67 : /home/pengine/prod/live_configs/server_latency_reporting_config.txt
+
+IND14 314 3448 Q19		3448.00 3552.48
+IND15 305 3312 Q19		3312.00 3411.33
+IND16 308 3600 Q19     3599.00 3700.00
+IND17 307 3023 Q19     3023.00 3127.24
+IND18 306 3023 Q19     3023.00 3127.24
+IND19 340 2923 Q19     2925.00 3027.39
+IND20 320 3600 Q19     3599.00 3700.00
+IND21 330 3400 AL13   3400.00 3500.00
+IND22 322 3504 AL13   3503.00 3604.11
+IND23 312 3696 AL13   
+BMF16 88 2900
+
+IND14 314 3448 Q19
+IND15 305 3312 Q19
+IND16 308 3600 S7
+IND17 307 2904 S7
+IND18 306 3020 S7
+IND19 340 2920 S7
+IND20 320 3601 Q19
+BMF16 88 2900
+
+
+----------------------------------------------------------------------------------------------------
+
+CLEAR ORS POSITION
+
+/home/pengine/prod/live_scripts/ors_control.pl NSE MSFO5 CLEARPOSITIONS
+-----------------------------------------------------------------------------------------------------
+
+CIRCULAR ACTION FILE
+5.67
+
+/spare/local/files/NSE/action_to_consider.txt
+
+jaise ki name change hua kisika , ya adjustment hai , ya phr mock hai 
+ye sabh
+ki lotsize change hogai ya strike scheme change hogai
+
+NAME CHANGE SCRIPT AFTER FETCH
+trader 5.26
+/home/dvctrader/important/handling_Updates/namechange_update.sh
+---------------------------------------------------------------------------------------------------
+
+NAME CHANGE STRAT
+
+[ dvctrader@sdv-indb-srv11 ~/ATHENA/CONFIG_BSE_CM_202209_QUOTER ] grep -i -r PVR *
+[ dvctrader@sdv-indb-srv11 ~/ATHENA/CONFIG_BSE_CM_202209_QUOTER ] mv BSE_PVR_MM BSE_PVRINOX_MM ; mv BSE_PVR_SQUAREOFF BSE_PVRINOX_SQUAREOFF ;
+[ dvctrader@sdv-indb-srv11 ~/ATHENA/CONFIG_BSE_CM_202209_QUOTER ] find ./ -type f -exec sed -i -e 's/PVR/PVRINOX/g' {} \;
+--------------------------------------------------------------------------------------------------
+
+BHAV COPY FILE
+/spare/local/tradeinfo/NSE_Files/Margin_Files/Exposure_Files/cm..
+
+---------------------------------------------------------------------------------------------------
+STRAT STRAT SCRIPT
+export ZF_ATTR=interface=eth5;
+strat start  dvctrader ATHENA/run.sh
+
+Interface name must be specified
+ERROR: UDPDirectMultipleZocket: ZF_TRY(value) failed
+ERROR: at /home/subham/sourceCode/cvquant_install/dvccode/Utils/tcp_direct_client_zocket_with_logging.hpp:428
+ERROR: rc=-19 (No such device) errno=0
+
+ZOCKET CREATED ON INTERFACE : enp101s0f0
+enp101s0f0/017     0 | Failed to allocate PIO buffer (rc = -28)
+STACK VALUE : -28
+ERROR: UDPDirectMultipleZocket: ZF_TRY(value) failed
+ERROR: at /home/ravi/master2/cvquant_install/dvccode/Utils/tcp_direct_client_zocket_with_logging.hpp:440
+ERROR: rc=-28 (No space left on device) errno=28
+
+Fix; 
+Example: 
+BSE11
+/home/pengine/prod/live_scripts/SmartDaemonController.sh
+   export EF_PIO=0 ; // add this
+   $ACCELERATOR_PREFIX $CW_EXEC --config $COMBINED_WRITER_CFG >>$logfile 2>&1 &
+
+command to check
+onload_stackdump lots | grep -i EF_PIO 
+
+----------------------------------------------------------------------------------------------------
+/lib64/libc.so.6: version `GLIBC_2.17' not found
+
+export LD_LIBRARY_PATH=/opt/glibc-2.17/lib; /home/pengine/prod/live_execs/NSEShmWriter LOGGER
+or 
+remove HFSAT::Utils::UDPDirectMultipleZocket& udp_direct_multiple_zockets_;
+and /spare/local/lib/tcpdirect/libonload_zf_static.a
+----------------------------------------------------------------------------------------------------
+ORS ISSUE
+
+Use_Shm yesExchange NSE_EQ
+Thread : BroadcastManager Thread ID : 3452619 CORE # 1
+zf_init: Failed to initialize Control Plane: Can not access a needed shared library
+ERROR: TCPDirectLockFreeSocket: ZF_TRY(zf_init()) failed
+ERROR: at /home/subham/sourceCode/cvquant_install/dvccode/Utils/tcp_direct_client_zocket_with_logging.hpp:272
+ERROR: rc=-79 (Can not access a needed shared library) errno=2
+connect() failed on 127.0.0.1:21240
+connect() failed on 127.0.0.1:21240
+connect() failed on 127.0.0.1:21240
+Use_Shm yesExchange NSE_EQ
+Thread : BroadcastManager Thread ID : 3452963 CORE # 1
+zf_init: Failed to initialize Control Plane: Can not access a needed shared library
+ERROR: TCPDirectLockFreeSocket: ZF_TRY(zf_init()) failed
+
+SOLUTION:
+/spare/local/lib/tcpdirect/libonload_zf_static.a iske jagah
+/spare/local/lib/tcpdirect/onload_7/libonload_zf_static.a
+
+------------------------------------------------------------------------------------------------------
+
+ORS OTHER SERIES SEGMENT
+
+BRANCH : ORS_COMPATIBILITY_OTHER_SERIES
+FOR BE changes
+contract file , refdata file
+/spare/local/files/NSEFTPFiles/2021/10/05/security file token details
+
+ContractFiles : nse_contracts.20211006 : STKEQ	SHIL	431.9	1 	0.05
+RefData : nse_eq_20211006_contracts.txt : 15945 0 STK SHIL 0 0 BE STK 0 0
+
+-------------------------------------------------------------------------------------------------------------
+
+POST MARKET FILE
+
+tradeengine-master\StratLogic\post_market_exec.cpp
+
+----------------------------------------------------------------------------------------------------
+
+BOOST LIB PATH
+
+boost library path :  /apps/boost
+-------------------------------------------------------------------------------------------------
+
+CONSOLE TRADER FILE PATH
+
+branch: devtrade
+/sourceCode/basetrade/Tools ] vim smart_console_trader.cpp
+
+BSE 
+BRANCH : BSE_NEW
+baseinfra/Tools/bse_smart_console_trader.cpp
+
+NSE
+BRANCH : devtrade
+basetrade/Tools/smart_console_trader.cpp
+
+---------------------------------------------------------------------------------------------------------
+
+ASM FILE DOWNLOAD SCRIPT PATH
+
+[ dvctrader@sdv-ny4-srv13 ~ ] /home/pengine/prod/live_scripts/download_asm_prod_list.sh
+-------------------------------------------------------------------------------------------------------
+
+EXCHANGE SYMBOL
+
+/spare/local/tradeinfo/NSE_Files/datasource_exchsymbol.txt
+--------------------------------------------------------------------------------------------------------
+EXCHANGE SYMBOL -> SHORTCODE
+
+LD_PRELOAD=/home/dvcinfra/important/libcrypto.so.1.1 /home/pengine/prod/live_execs/get_shortcode_for_symbol NSE1382103 20210603
+---------------------------------------------------------------------------------------------------------------------------
+
+EXCHANGE SYMBOL
+
+/home/pengine/prod/live_execs/get_exchange_symbol NSE_LALPATHLAB_P0_O2 20210310
+/home/pengine/prod/live_execs/get_exchange_symbol_file /tmp/temp_shortcode 20210310
+----------------------------------------------------------------------------------------------------------------------------
+
+COMMISSION 
+/home/pengine/prod//live_execs/get_nse_commission
+---------------------------------------------------------------------------------------------------------------------------
+
+HOLIDAY LIST FILE PATH
+
+INFRA IND SERVER
+/home/pengine/prod/live_configs/exchange_holidays.txt
+------------------------------------------------------------------------------------------------------
+
+ADDTS VERIFY SCRIPT
+
+INFRA IND16
+/home/pengine/prod/live_scripts/run_verify_addts_mail.sh 
+---------------------------------------------------------------------------------------------------
+
+UNDER BAN ADDTS SCRIPT
+
+ind server infra
+
+~/important/addts_of_underban.sh <file(symbol position) /tmp/underban> 
+
+-----------------------------------------------------------------------------------------------------
+
+DOWNLOAD SECURITYBAN FILE
+
+trader 5.13
+/home/pengine/prod/live_scripts/download_SecurtiesUnderBan.sh FORCE
+-----------------------------------------------------------------------------------------------------
+
+ORS report for CM product mail
+
+/home/dvcinfra/important/ORS_REPLY_INTRADAILY/mds_fast_first_trade_read_Volume_generic
+this gen the daily report /home/dvcinfra/important/Generate_ors_detail/get_order_ors.sh
+/home/dvcinfra/important/Generate_ors_detail/email_alert_for_cash.sh
+
+------------------------------------------------------------------------------------------------------
+
+GET SWAP USAGE
+/home/pengine/prod/live_scripts/get_swap_usage.sh
+---------------------------------------------------------------------------------------------------
+
+CHECK TRADE FILE
+[ dvcinfra@sdv-ind-srv20 /spare/local/ORSlogs/NSE_FO/MSFO6 ] cat trades.20210401 | tr '\001' ' ' | grep NSE1314625
+---------------------------------------------------------------------------------------------------
+
+CHECK IPO SYMBOL
+
+/home/pengine/prod/live_configs/sdv-ind-srv17_addts.cfg
+/spare/local/tradeinfo/NSE_Files/SecuritiesMarginFiles/security_margin_20210419.txt
+---------------------------------------------------------------------------------------------------------------
+
+SERVER DETAILS
+
+local 5.13
+/home/pengine/prod/live_configs/ind_pnl_config.ini
+
+------------------------------------------------------------------------------------------------
+
+ADJUST ADDTS
+
+/home/pengine/prod/live_scripts/ADDTRADINGSYMBOL.sh /tmp/addts_file
+---------------------------------------------------------------------------------------------------
+
+REJECT CHECK
+~/sourceCode/dvccode/CDef/defines.hpp
+
+  kORSOrderAllowed = 0,  
+  kORSRejectSecurityNotFound,
+  kORSRejectMarginCheckFailedOrderSizes,
+  kORSRejectMarginCheckFailedMaxPosition,
+  kORSRejectMarginCheckFailedWorstCasePosition,
+  kExchOrderReject,
+  kSendOrderRejectNotMinOrderSizeMultiple,
+  kORSRejectMarginCheckFailedMaxLiveOrders,
+  kORSRejectSelfTradeCheck,
+  kORSRejectThrottleLimitReached,
+  kORSRejectMarketClosed,
+  kORSRejectNewOrdersDisabled,
+  kORSRejectFailedPriceCheck,
+  kORSRejectETIAlgoTaggingFailure,
+  kORSRejectFOKSendFailed,
+  kORSRejectFailedIOCOrder,
+  kORSRejectMarginCheckFailedBidNotionalValue,
+  kORSRejectMarginCheckFailedAskNotionalValue,
+  kORSRejectNSEComplianceFailure,
+  kTAPRejectThrottleLimitReached,
+  kORSRejectModifyOrdersDisabled,
+  kORSRejectMarginCheckFailedSumQueryWorstCasePosition,
+  kORSRejectFailedPnlCheck,
+  kORSRejectFailedGrossMarginCheck,
+  kORSRejectFailedNetMarginCheck,
+  kORSRejectICEAlgoTaggingFailure,
+  kORSRejectMiFidLimitsBreached
+
+-------------------------------------------------------------------------------------------------------------
+
+CRON BACKUP 
+
+dvcinfra@sdv-ny4-srv218 ~/cron_bkp 
+5.42 machine
+--------------------------------------------------------------------------------------------------------------
+
+OLD DATA
+
+/run/media/dvcinfra/NonMDBackup/SERVERDATA/IND14/tradelogs
+5.42
+
+5.66
+dvctrader@sdv-ny4-srv222 /spare/local/tradeinfo/NSE_Files
+
+--------------------------------------------------------------------------------------------------------------
+CONFIG BACKUP 
+~/important/CONFIG_BACKUP in each of their respective machines.
+
+--------------------------------------------------------------------------------------------------------------
+
+DMESG FREQUENCY
+its prints msg buffer of the kernel
+dmesg -wH
+dmesg --follow > mydmesg.log
+stress --cpu 1024 --io 2 --vm 18 --vm-bytes 1792m --timeout 30m	
+
+---------------------------------------------------------------------------------------------------------------
+
+CM MARGIN CHECK
+
+[ dvcinfra@sdv-ny4-srv67 ~ ] tail -f /home/dvcinfra/important/CM_Margin/CM_margin_file_10s
+
+dvcinfra@sdv-ind-srv16 : /home/pengine/prod/live_scripts/margin_monitor_cash.sh 20
+/tmp/margin_monitoring_file
+alias: margincheck 20
+
+in all infra server
+alias: margin 
+/home/dvcinfra/important/ors_margin_pnl_status.sh
+
+FO MARGIN CHECK
+http://10.23.5.67/daily_margin/
+-----------------------------------------------------------------------------------------------------
+
+HTML
+
+create symbolic link, to show in browser
+/var/www/html
+---------------------------------------------------------------------------------------------------------------------------------
+
+GSM NIFTY FILE PATH
+
+[dvcinfra@sdv-ny4-srv13 /NAS1/data/MFGlobalTrades/ind_pnls/CM/trans_add_products ]
+
+-----------------------------------------------------------------------------------------------------
+CHECK TCP AND UDP 
+
+tcpdump -i ens4f1np1
+
+--------------------------------------------------------------------------------
+IFCONFIG MARKET DATA INTERFACE CHECK
+
+onload /home/pengine/prod/live_execs/simple_multicast_receiver enp0s31f6.227 239.70.70.45 17745
+
+---------------------------------------------------------------------------------
+CLEARING NUMBER BSE
+
+6701
+--------------------------------------------------------------------------------------
+IPO CHANGES
+
+Add margin to security margin and add default addts.. Check in monring if entry is there in oebu file and addts was done without any error
+margin = 30% of actual price
+
+[ dvctrader@sdv-ny4-srv26 /spare/local/tradeinfo/NSE_Files/SecuritiesMarginFiles ] vim security_margin_20210705.txt
+[ dvctrader@sdv-ny4-srv26 /spare/local/tradeinfo/NSE_Files/SecuritiesMarginFiles ] /home/dvctrader/important/onexpiry/sync_trade_info.sh
+-------------------------------------------------------------------------------------------
+
+PRODUCT NAME SYMBOL CHANGE
+Change in name and symbol
+
+We need to change on strat side and on ors side as well
+from next time u can make changes on ORS end:
+Changes on ORS end:
+1. security margin file update, 
+2. default addts file change
+3. channel changes if any. I channel change is not there and the product name belongs to other channel then we have to add in channel file as well
+for example  ORIENTREF -> RHIM
+as per name now ORIENTREF channel changes to channel R-Z channel but channel changes has not happened which means it still resides in the same channel  of J-Q
+So in such cases we need to update channel file
+/spare/local/files/NSE/channel_info.txt
+
+morning verify if product is in oebu
+--------------------------------------------------------------------------------------------
+
+BSE IND SERVER 
+
+ssh dvcinfra@192.168.132.11
+--------------------------------------------------------------------------------------------
+
+MIDTERM REJECT HANDLE
+
+/home/pengine/prod/live_scripts/reject_handle_ors_and_max.sh its there in dvcinfra ind11 cron also
+---------------------------------------------------------------------------------------------
+TO GET POSITIONS
+
+/home/pengine/prod/live_execs/user_msg --traderid 123746 --refreshecoevents
+---------------------------------------------------------------------------------------------
+
+WHAT IS SANITIZE
+
+jab koi drop hota hai packet tab book me jo changes hote hai vo sanitisation hai
+------------------------------------------------------------------------------------------------
+
+if there is a order in premarket , will that order will get cancled when market closes?
+
+till 3:30 if not executed it will go to pending and it will not be considered in post market and it will get canclled at 4 with all other orders not executed in post market.
+ if there was product in pre market and that order was not executed , then do 2x of position addts of that product in postmarket, and check ors logs for error. Do changes in script (post market)
+-----------------------------------------------------------------------------------------------------
+
+NEW MACHINE / OS INSTALLATION
+/etc/centos-release
+
+ifconfig
+1. ipv4 is showing or not showing tell to comptol
+2. login from local and ind
+3. ping from local and ind ping 10.23.227.66
+4. multicast check 
+5. interface check
+
+/home/pengine/prod/live_configs/sdv-ind-srv21_network_interface_config.cfg
+
+LD_PRELOAD=/home/dvcinfra/important/libcrypto.so.1.1
+/home/pengine/prod/live_execs/simple_multicast_receiver enp0s31f6.227 239.60.60.41 16641
+
+LD_PRELOAD=/home/dvcinfra/important/libcrypto.so.1.1
+/home/pengine/prod/live_execs/simple_multicast_sender 239.60.60.41 16641 5 10 enp0s31f6.227
+
+p6p1
+ifconfig
+inet 10.231.118.132 
+ors-> 10.230.154.2 ipv4
+2nd 10.23.154.22 ipv4
+
+also need to check that ind14 is able to connect ffrom all ind and local mahcine each user without passwd, as some script will fail if not
+take backup of ipconfig of that machine., if installing OS
+
+-------------------------------------------------------------------------------------------------
+
+RESET POSITION LIMIT FILE
+
+/home/pengine/prod/live_execs/user_msg --traderid 909090 --setmaxpos 1
+---------------------------------------------------------------------------------------------------------
+
+RUN STRAT / TRADE ENGINE
+
+for prod in SBILIFE ; do val=1; taskset -c 10  ../changeSize.sh NSE_$prod _MM *.cfg ${val} ;  done
+pwd ~/ATHENA/CONFIG_NSE_CM_MM_MQ_HP_NEW2
+
+/home/dvcinfra/raghu/SmartDaemonController.sh CONTROL_SHM_WRITER START
+
+export ZF_ATTR=interface=ens4f1np1
+/home/dvctrader/ATHENA/onload_start_real_trading.sh /home/dvctrader/ATHENA/CONFIG_NSE_CM_MM_MQ_HP_NEW2/LIVE_FILE_J_Z_raghu.csv 20210127 IST_1100 IST_1500 909090 OFF AF OFF &> /spare/local/logs/tradelogs/queryoutput/sms.20210127.909090 2>&1
+
+grep -i sbilife /home/dvctrader/ATHENA/CONFIG_NSE_CM_MM_MQ_HP_NEW2/PositionLimits.csv
+NSE_SBILIFE_MAXLONGPOS = 6
+NSE_SBILIFE_MAXSHORTPOS = 6
+NSE_SBILIFE_MAXLONGEXPOSURE = 12
+NSE_SBILIFE_MAXSHORTEXPOSURE = 12
+
+/home/pengine/prod/live_scripts/ors_control.pl NSE MSEQ9 ADDTRADINGSYMBOL NSE_SBILIFE 12 12 12 24
+
+/home/pengine/prod/live_execs/nse_audit_log_reader AUDIT_IN NSE_EQ /spare/local/ORSlogs/NSE_EQ/MSEQ9/audit.43606.`date +%Y%m%d`.in | egrep -a 'SBILIFE|JINDALSTEL|LUPIN|MGL' | tail
+
+to start strat:
+/home/pengine/prod/live_execs/user_msg --traderid $i --start ; 
+
+to stop strat:
+/home/dvctrader/ATHENA/get_flat_running.sh
+/home/pengine/prod/live_execs/user_msg --traderid ${i} --getflat
+
+after that cehck if pos are remaining or not
+/home/pengine/prod/live_execs/user_msg --traderid $i --dumpposition
+
+u have to check logs
+and at last if positions are 0 then u can stop it using below cmd:
+/home/dvctrader/ATHENA/stop_real_trading.sh $tid
+
+
+/home/pengine/prod/live_execs/nse_audit_log_reader AUDIT_IN NSE_EQ /spare/local/ORSlogs/NSE_EQ/MSEQ9/audit.43606.`date +%Y%m%d`.in | egrep -a 'SBILIFE|JINDALSTEL|LUPIN|MGL' | grep executed | wc
+
+/home/pengine/prod/live_execs/nse_audit_log_reader AUDIT_IN NSE_EQ /spare/local/ORSlogs/NSE_EQ/MSEQ9/audit.43606.`date +%Y%m%d`.in | grep -a -v "error code: 0 " | grep -a "ProcessedOrderResponse" | awk '{print $4,$5,$(NF-5),$(NF-4)}' | sort | uniq -c
+
+
+/home/pengine/prod/live_execs/nse_audit_log_reader AUDIT_IN NSE_EQ /spare/local/ORSlogs/NSE_EQ/MSEQ9/audit.43606.`date +%Y%m%d`.in | grep -a -v "error code: 0 " | grep -a "ProcessedOrderResponse" | awk '{print $4,$5,$(NF-5),$(NF-4)}' | sort | uniq -c
+
+
+giving start to strats as well.
+CMD eg:
+#for i in 123515 123516 123517 123518 123520 123521 123525 ; do /home/pengine/prod/live_ex
+ecs/user_msg --traderid $i --start ; done
+
+If need to check whether the start got to particular strat or not, one can check in the tradelog files and one can run the below cmd as well on IND15:
+
+[ dvctrader@sdv-ind-srv15 ~ ] #for server in 10.23.227.81 10.23.227.82 10.23.227.83 10.23.227.65 10.23.227.69 10.23.227.
+84 10.23.227.64 ; do echo $server" "`ssh -q $server < important/check_start_given.sh` ; done
+------------------------------------------------------------------------------------------------------------------------------------------------------------------
+
+CPU AFFINITY
+
+dvccode/Utils/CPUAffinity.hpp
+---------------------------------------------------------------------------------------------------------------------------------------------
+
+SWAP USAGE
+
+/home/pengine/prod/live_scripts/get_swap_usage.sh (update this script to our important script branch in infracore repo and all machine)
+-----------------------------------------------------------------------------------------------------------------------------------------------
+
+TRADE MISMATCH 
+
+midterm trademissmatch check ( how to handle)
+alias: tradematch on ind12 dvctrader
+in infra11
+we need to send the SAOS cancel cntrol cmd for that
+/home/pengine/prod/live_scripts/ors_control.pl NSE MSFO GEN BroadcastForceCancelSAOS
+this control command need to send if three is trademissmatch
+Yes and u need to check shortcode that is stuck and send its last trade saos
+/home/pengine/prod/live_scripts/ors_control.pl NSE MSFO GEN BroadcastForceTradeSAOS
+
+only 1 live order in notional, missmatch
+/home/pengine/prod/live_scripts/ors_control.pl NSE MSFO GEN BroadcastForceCancelSAOS 13 (when we have sent order using console)
+/home/pengine/prod/live_scripts/ors_control.pl NSE MSFO GEN BroadcastForceTradeSAOS 10
+1st Knone
+2nd conf
+intraday.. -> ind11
+after mkt hours ind12
+/spare/local/ORSlogs/NSE_FO/MSFO ] grep NSE1358588 log.20210524 (to find which saos need to broadcast)
+GOT TRADE: SAOS (last entry)
+
+grep BANKNIFTY_CE_35000.00_0_W /spare/local/logs/alllogs/MediumTerm/*_execlogic_dbglog.20210610 | grep -i saos | grep -i trade | tail
+grep BANKNIFTY_CE_35000.00_0_W /spare/local/logs/alllogs/MediumTerm/*execlogic_trades_20210610.dat | tail
+grep NSE1384065 /spare/local/ORSlogs/NSE_FO/MSFO/log.20210610 | grep "GOT TRADE" | tail
+
+-------------------------------------------------------------------------------------------------------------------------------------------------------
+
+STRAT NO START 
+IND16: 123614
+we don't give start,,we give start at the end of mkt
+
+-------------------------------------------------------------------------------------------------------------------------------------------------------
+
+STRAT LOGS VERIFICATION FO
+STRAT LOGS VERIFICATION CM
+
+Expiry handling: [Covered]
+Day before expiry we have to adjust FUT0 bar data. Once the EOD jobs completed run the following script on worker:
+
+~/EOD_SCRIPTS/on_expiry.sh <Date_before_expiry>
+
+Note: Please run this script in background
+NOTE: On exp In the morning Check for FUT1 & FUT2 for oebu in IND15 and ind19 and FUT1 in CASH machines non START RATIO
+Day after expiry check FUT2 should not be there in IND15,ind19, and FUT0 should be there on cash machines
+
+
+--------------------------------------------------------------------------------------------------------------------------------------------------------
+
+ADJUSTMENT OF FUTURE OPTIONS CONTRACTS
+
+1. once NSE data copy is completed then run the below script in worker , (NOTE: take backup of PRODUCT file in  BARDATA)
+    [ dvctrader@ip-172-31-29-156 ~/EOD_SCRIPTS ] corp_adj_new.sh NMDC <ratio>
+	
+2. after running the above script go to below path.
+    cd /spare/local/BarData 
+	tail NMDC , then check if the adjustment is done correctly or not , like compare the last backup one.
+	
+3. run the below script which checks 
+    [ dvctrader@sdv-ny4-srv26 ~/important/handling_Updates ] ./check_new_product.sh 20211213 NMDC
+	add adjustment /spare/local/tradeinfo/NSE_Files/corporate_actions.csv
+	[ dvctrader@sdv-ny4-srv26 ~/important/handling_Updates ] temp_divident_update.sh
+	[ dvcinfra@sdv-ny4-srv26 /NAS1/data/MFGlobalTrades/ind_pnls/FO/eod_positions ] egrep 'NSE154|NSE32' ind_pos_20211214.txt (do price changes manually [substraction or addition which ever is mentioned in circular])
+
+FOR MIDETM REFER MIDTERM INFRA DOC
+https://docs.google.com/document/d/1Q25SdueG6AC4YzFIAnkRq9RbT9QLyrlQGeIRGzcxGD0/edit?pli=1
+Corporate Action
+
+FOR HFT HANDLING REFER HARDIK DETAILS
+https://docs.google.com/document/d/1UNDtHoseivh5G-i3Oh2VDOatwH9q__xMJ9VS8u-2-SA/edit
+Corporate Adjustment of any FO product
+
+--------------------------------------------------------------------------------------------------------------------------------------------------------
+
+RUN USING CRON NOT IN BASH BACKGROUND
+
+[ dvcinfra@sdv-ny4-srv62 ~ ] 20 13 * * 1-5 /home/pengine/prod/live_scripts/sync_pull_all_bse_data_from_indb.sh
+[ dvcinfra@sdv-ind-srv12 ~ ] 09 10 * * 1-5 export LD_LIBRARY_PATH=/opt/glibc-2.14/lib; /home/pengine/prod/live_scripts/convert_nse_logged_data_ind12_only_CE.sh
+
+--------------------------------------------------------------------------------------------------------------------------------------------------------
+
+Difference in contract files IND12
+if this is diff .. we need to manually adjust strat pos
+if there are diff in lot and accordingly we need to update them also in position.
+tarun has written one but from past 3 months we didn''t got any instance
+
+--------------------------------------------------------------------------------------------------------------------------------------------------------

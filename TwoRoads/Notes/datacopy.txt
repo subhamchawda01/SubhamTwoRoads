@@ -1,0 +1,161 @@
+DATA CONVERSION:
+
+IND12
+START : 10:09 
+/home/pengine/prod/live_scripts/convert_nse_logged_data_ind12_only_CE.sh > /home/dvcinfra/trash/datacopy.txt
+
+Sends CE data to ind12, ind12 converts the data in batches of 2 and sends it back to 227.63
+
+1.  echo "SYCING DATA FILES FROM IND13"
+     /home/pengine/prod/live_scripts/Sync_generic_from_ind13.sh
+	 /spare/local/MDSlogs/GENERIC_NIFTY/ | grep '_CE_'  | wc -l ;   /spare/local/MDSlogs/GENERIC/ | grep '_CE_'  | wc -l,
+	 sync : _CE_ , /spare/local/MDSlogs/GENERIC_NIFTY/, /spare/local/MDSlogs/GENERIC/, /spare/local/MDSlogs/GENERIC/ALLDATA_date (IND13) to 
+	                        /spare/local/MDSlogs/GENERIC
+	 if sync failed : Problem with IND12 CE SYNC FROM IND13 sCOUNT13
+	 else : IND12 CE SYNC FROM IND13 COUNT13:
+	 REMOVING FILES TO CREATE SPACE ON IND13 : rm /spare/local/MDSlogs/GENERIC_NIFTY/NSE_B*
+
+2.  $status_sync -ne 0 : Problem with IND13 sync please check manuall not running conversion
+
+  generic_data_dir="/spare/local/MDSlogs/GENERIC/"
+  data_dir="/spare/local/MDSlogs/GENERIC/ALLDATA_${date}/"
+  data_to_convert_dir="${data_dir}/DATA_TO_CONVERT/"
+  data_alpha="${data_dir}/ALPHA_DATA"
+  converted_dest_dir="/spare/local/MDSlogs/NSE/"
+  dest_data_dir="/spare/local/MDSlogs/${yyyy}/${mm}/${dd}/"
+  data_copy_info_file="/spare/local/data_copy_update.txt"
+
+
+3.  check time if its less than 10 ( production time)
+
+4.  move older data : mv $converted_dest_dir /spare/local/MDSlogs/NSE_$date
+
+5.  move ${generic_data_dir} grep -v ORS_NSE | grep NSE_ | grep $date  --> ${data_dir} : CHANGES -> can avoid copying to GENERIC , copy directly to ALLDATA
+
+6.  start_data_convertion_space_opt CE
+     mv ${data_to_convert_dir}* ${data_dir} (empty dataconvert , move to alldata)
+	 mv `ls | grep _CE_` cd ${data_dir} ${data_to_convert_dir} (mv all CE data from alldata to dataconvert)
+	 mv `ls | egrep "NSE_[A-J a-j]."` ${data_to_convert_dir} ${data_alpha} (mv product A-J from dataconvert to dataalpha)
+	 /home/pengine/prod/live_scripts/convert_nse_generic_to_dotex_New_options_ind12.sh $date ${data_alpha} ${converted_dest_dir}
+	     find $CONVERTED_DATA_DIR -type f -mtime +2 -exec rm -f {} \; (delete converted files older than 2 day)
+		 converting files 1 by 1 , by passing each file to exec , and dumping the output in $CONVERTED_DATA_DIR$basefilename
+		 assigning multiple core to do the above task so that task can be completed faster
+		 then zippiing the converted files
+		 check if all files are converted successfully
+		 Generic to dotex conversion failed (egrep 'FATAL|EMAIL' /spare/local/logs/alllogs/nse_generic_to_dotex_converter.log.20210917)
+		 
+     mv ${converted_dest_dir}* ${dest_data_dir}
+     mv ${data_alpha}* ${data_to_convert_dir}
+     mv `ls | egrep "NSE_[^A-J a-j]."` ${data_to_convert_dir}  ${data_alpha} (mv product other than A-J from dataconvert to dataalpha)
+	 rsync -avz --progress /spare/local/MDSlogs/${yyyy}/${mm}/${dd} 10.23.5.66:/NAS1/data/NSELoggedData/NSE/${yyyy}/${mm} &
+	 /home/pengine/prod/live_scripts/convert_nse_generic_to_dotex_New_options_ind12.sh $date ${data_alpha} ${converted_dest_dir}
+	 
+	 mv ${converted_dest_dir}* ${dest_data_dir}
+     mv ${data_alpha}* ${data_to_convert_dir}
+	 mv ${data_to_convert_dir}* ${data_dir}
+	 
+7.  rsync -avz /spare/local/MDSlogs/${yyyy}/${mm}/${dd}/ 10.23.5.66:/NAS1/data/NSELoggedData/NSE/${yyyy}/${mm}/${dd}
+     rsync -avz /spare/local/MDSlogs/${yyyy}/${mm}/${dd}/ 10.23.227.63:/spare/local/MDSlogs/${yyyy}/${mm}/${dd}
+	 
+8.  Problem with IND12 CE CONVERT or sync  GENERICCOUNT12: $ind13_files NSEconvert13: $ind13_conver
+     IND13 CE convert GENERICCOUNT12: $ind13_files NSEConvert12: $ind13_conver
+	 
+9.  gzip files on ind13 GENERIC_NIFTY
+
+10. gzip $data_dir
+
+
+IND13
+START : 10:36
+/home/pengine/prod/live_scripts/convert_nse_logged_data.sh > /home/dvcinfra/trash/datacopy.txt
+
+1. we are not syncing any data to IND13 as we the data is already present in IND13.
+2. not sync any data to 5.66.
+
+does the same which mentioned in above (cash , fut , PE)
+
+IND 22 
+START : 11:36
+/home/pengine/prod/live_scripts/convert_nse_logged_data_IND24.sh > /home/dvcinfra/trash/datacopy.txt
+
+1. we are not syncing any data from IND13 as we are doing in IND12. (coying CE data, as data is already present in IND22)
+2. data sync to 5.66 we are not doing after converting 1 bach of data as we are doing in IND12.
+3. we are not gipping any data of IND13 as we are doing in IND12. (data is present in IND22 only)
+
+does the same which mentioned in above (some channels nifty and bank nifty options, currency data, and spot index)
+converted in batches of 2  and sends data to 5.66 and 227.63
+
+
+---------------------------------------------------------------------------------------------------------------------------------------
+script will run in loop
+will check if server is accessible or not
+will check if script is running or not (as the time mentioned in cron, will set flag if the process running or not )
+from the output logs of the script will check where the process or script is currently is , and using that will check if that part is running or not (example : ps aux  | grep  gzip)
+if not running will check the count and raise an alert for that particular task (like gzip)
+once all process completed will send detailed (like total count , and total converted)
+
+----------------------------------------------------------------------------------------------------------------------------------------
+
+IND12
+
+echo "SYCING DATA FILES FROM IND13"
+/home/pengine/prod/live_scripts/Sync_generic_from_ind13.sh
+    echo "IND13 FILES $ind13_files"
+    echo "SYNC CE from ind13"
+	only 10.23.115.63:/spare/local/MDSlogs/GENERIC_NIFTY/
+	echo "SYNC CE from ind13"
+	echo "IND12 FILES $files12 IND13 $ind13_files"
+	if [[ $ind13_files -gt $files12 ]]
+	    exit 1
+	 echo "REMOVING FILES TO CREATE SPACE ON IND13"
+       exit 0
+if [[ $status_sync -ne 0 ]]
+    echo "Problem with IND13 sync please check manuall not running conversion  "
+    exit 1
+echo "CREATING DATA DIR ${data_dir}"
+echo "MOVING DATA TO ${data_dir}"
+echo "DATA COUNT NOW ${count}";
+echo "RUNNING FUT AND OPTIONS "
+STARTING CE DATA CONVESRIONS, COUNT : 8429
+/home/pengine/prod/live_scripts/convert_nse_generic_to_dotex_New_options_ind12.sh
+    /spare/local/logs/alllogs/nse_generic_to_dotex_converter.log.date
+	echo "EMAIL  Starting Conversion all GENERIC at `date`" >> above log
+	echo "EMAIL  Converted all GENERIC at `date`" >> bove log
+	echo "EMAIL start gzip all converted files at `date`" >> above log
+	echo "EMAIL gzipped all converted files at `date`" >> above log
+	echo "GENERIC FILE COUNT : $total_files_in_generic";
+	echo "FILES CONVERTED : $total_files_converted";
+	echo "EMAIL $total_files_converted files successfully converted" >> above log OR
+	echo "EMAIL Generic to dotex conversion failed" >> above log &  echo "EMAIL Total Files: $total_files_in_generic Files Converted: $total_files_converted" >> above 
+	
+DONE CE DATA CONVESRIONS, COUNT : 8429
+RUNNING SYNC IN BACKGROUND
+STARTING CE DATA CONVESRIONS, COUNT : 6574
+/home/pengine/prod/live_scripts/convert_nse_generic_to_dotex_New_options_ind12.sh
+    /spare/local/logs/alllogs/nse_generic_to_dotex_converter.log.date
+	echo "EMAIL  Starting Conversion all GENERIC at `date`" >> above log
+	echo "EMAIL  Converted all GENERIC at `date`" >> bove log
+	echo "EMAIL start gzip all converted files at `date`" >> above log
+	echo "EMAIL gzipped all converted files at `date`" >> above log
+	echo "GENERIC FILE COUNT : $total_files_in_generic";
+	echo "FILES CONVERTED : $total_files_converted";
+	echo "EMAIL $total_files_converted files successfully converted" >> above log OR
+	echo "EMAIL Generic to dotex conversion failed" >> above log &  echo "EMAIL Total Files: $total_files_in_generic Files Converted: $total_files_converted" >> above 
+	
+DONE CE DATA CONVESRIONS, COUNT : 6574
+echo "$date $data_type $count_total completed" >> /spare/local/data_copy_update.txt
+grep rsync  | grep 10.23.227.63 | grep MDSlogs | wc = 0
+     files13=`ssh 10.23.227.63 "ls $data_dir | grep '_CE_'  | wc -l"`
+     files13_nif=`ssh 10.23.227.63 "ls /spare/local/MDSlogs/GENERIC_NIFTY/ | grep '_CE_'  | wc -l"`
+     ind13_files=$(( files13_nif + files13 ))
+
+     ind13_files=`ls $data_dir | grep '_CE_'  | wc -l`
+     ind13_conver=`ssh 10.23.227.63 "ls ${dest_data_dir} | grep '_CE_'  | wc -l"`
+     if [[ $ind13_files -gt $ind13_conver ]] ;then
+	   problem with sync
+echo "gzip files on ind13 GENERIC_NIFTY in back" >> /home/dvcinfra/trash/datacopy.txt
+grep gzip | wc =0 (script completed can send details report)
+
+ --------------------------------------------------------------------------------------------------------------------------------------------------
+ sync check we cannot do ind 22, ind12, 
+

@@ -1,0 +1,63 @@
+cat *_execlogic_dbglog.20200928 | awk '/^==> / {a=substr($0, 5, length-8); next} {print a":"$0}' | egrep "Rej|ALERT|ERROR" > alertchecking
+
+shortcode_to_max_orders_disp
+shortcode_to_max_orders_manual
+shortcode_to_max_orders_midterm
+-----------------------FO----------------------
+ind11
+
+Multisessions 1
+UserName 34353
+UserName-1 34353
+
+ind14
+
+Multisessions 1,2
+UserName-1 36277
+UserName-2 36474
+UserName-3 34459
+UserName-4 35693
+
+ind15
+
+Multisessions 1,2
+UserName-1 36298
+UserName-2 34110
+UserName-3 34459
+UserName-4 35693
+
+ind19
+
+Multisessions 1,2
+UserName-1 37709
+UserName-2 36975
+UserName-3 36298
+
+ind20
+
+Multisessions 1,2
+UserName-1 35693
+UserName-2 34459
+UserName-3 35814
+UserName-4 34110
+
+--------------------CM--------------------------
+ind16
+
+Multisessions 1,2
+UserName-1 43965
+UserName-2 43740
+
+ind17
+
+Multisessions 1,2
+UserName-1 43706
+UserName-2 43605
+
+ind18
+
+Multisessions 1,2
+UserName-1 43603
+UserName-2 43966
+UserName-3 43603
+
