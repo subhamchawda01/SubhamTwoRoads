@@ -1,0 +1,12 @@
+
+project : usage-requirements <include>$(PROJECT_INSTALL) ;
+
+lib Profiler : [ glob *.cpp ] : <link>static ;
+
+install libProfiler
+  : Profiler
+  : <install-type>LIB
+    <variant>release:<location>"$(PROJECT_LIB_INSTALL)"
+    <variant>debug:<location>"$(PROJECT_LIB_INSTALL_DEBUG)"
+  : release debug
+  ;

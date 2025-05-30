@@ -1,0 +1,1391 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<?xml-stylesheet type="text/xsl" href="./ClientHTML.xsl"?><protocol>
+<version>351</version>
+<revisions>
+    <revision type="Final" version="351" author="MNI News" date="03/13/2017"/>
+  </revisions>
+<category name="Gilt_Outright_Auction_Result">
+<description>Gilt Outright Auction Result</description>
+<country>UK</country>
+<category_id>21511</category_id>
+<data>
+<datum>
+<short_description>Maturity year</short_description>
+<description>Maturity year</description>
+<datum_type>year</datum_type>
+<datum_id>1</datum_id>
+</datum>
+<datum>
+<short_description>Highest Accepted Yield</short_description>
+<description>Highest Accepted Yield</description>
+<datum_type>%</datum_type>
+<datum_id>2</datum_id>
+</datum>
+<datum>
+<short_description>Bid to Cover Ratio</short_description>
+<description>Bid to Cover Ratio</description>
+<datum_type>%</datum_type>
+<datum_id>3</datum_id>
+</datum>
+<datum>
+<short_description>Competitive Bids Allotted</short_description>
+<description>Competitive Bids Allotted</description>
+<datum_scale>M</datum_scale>
+<datum_type>GBP</datum_type>
+<datum_id>4</datum_id>
+</datum>
+<datum>
+<short_description>Yield Tail</short_description>
+<description>Yield Tail</description>
+<datum_type>basis_points</datum_type>
+<datum_id>5</datum_id>
+</datum>
+</data>
+<messages>
+<message>
+<message_type>release</message_type>
+<message_version>2</message_version>
+<start_date>2016-03-16</start_date>
+<multicast_group>EU_GROUP_2</multicast_group>
+<fields>
+<field>
+<datum_id>1</datum_id>
+<field_type>short</field_type>
+<example_value>2027</example_value>
+</field>
+<field>
+<datum_id>2</datum_id>
+<field_type>float</field_type>
+<example_value>4.003</example_value>
+</field>
+<field>
+<datum_id>3</datum_id>
+<field_type>float</field_type>
+<example_value>1.85</example_value>
+</field>
+<field>
+<datum_id>4</datum_id>
+<field_type>float</field_type>
+<example_value>2024.5</example_value>
+</field>
+<field>
+<datum_id>5</datum_id>
+<field_type>float</field_type>
+<example_value>.2</example_value>
+</field>
+</fields>
+</message>
+</messages>
+</category>
+<category name="Index_Linked_Gilt_Outright_Auction_Result">
+<description>Index Linked Gilt Outright Auction Result</description>
+<country>UK</country>
+<category_id>21512</category_id>
+<data>
+<datum>
+<short_description>Maturity year</short_description>
+<description>Maturity year</description>
+<datum_type>year</datum_type>
+<datum_id>1</datum_id>
+</datum>
+<datum>
+<short_description>Real Yield</short_description>
+<description>Real Yield</description>
+<datum_type>%</datum_type>
+<datum_id>2</datum_id>
+</datum>
+<datum>
+<short_description>Bid to Cover Ratio</short_description>
+<description>Bid to Cover Ratio</description>
+<datum_type>%</datum_type>
+<datum_id>3</datum_id>
+</datum>
+<datum>
+<short_description>Competitive Bids Allotted</short_description>
+<description>Competitive Bids Allotted</description>
+<datum_scale>M</datum_scale>
+<datum_type>GBP</datum_type>
+<datum_id>4</datum_id>
+</datum>
+</data>
+<messages>
+<message>
+<message_type>release</message_type>
+<message_version>1</message_version>
+<multicast_group>EU_GROUP_2</multicast_group>
+<fields>
+<field>
+<datum_id>1</datum_id>
+<field_type>short</field_type>
+<example_value>2040</example_value>
+</field>
+<field>
+<datum_id>2</datum_id>
+<field_type>float</field_type>
+<example_value>0.587</example_value>
+</field>
+<field>
+<datum_id>3</datum_id>
+<field_type>float</field_type>
+<example_value>2.33</example_value>
+</field>
+<field>
+<datum_id>4</datum_id>
+<field_type>float</field_type>
+<example_value>908.71</example_value>
+</field>
+</fields>
+</message>
+</messages>
+</category>
+<category name="UK_Bill_01_Month_Treasury_Auction_Result">
+<description>Bill 1 Month UK Treasury Auction Result</description>
+<country>UK</country>
+<category_id>21513</category_id>
+<data>
+<datum>
+<short_description>Maturity Date</short_description>
+<description>Maturity Date</description>
+<datum_type>date</datum_type>
+<datum_id>1</datum_id>
+</datum>
+<datum>
+<short_description>Amount Tendered For</short_description>
+<description>Amount Tendered For</description>
+<datum_scale>M</datum_scale>
+<datum_type>GBP</datum_type>
+<datum_id>2</datum_id>
+</datum>
+<datum>
+<short_description>Amount Allotted</short_description>
+<description>Amount Allotted</description>
+<datum_scale>M</datum_scale>
+<datum_type>GBP</datum_type>
+<datum_id>3</datum_id>
+</datum>
+<datum>
+<short_description>Residual Amount</short_description>
+<description>Residual Amount</description>
+<datum_scale>M</datum_scale>
+<datum_type>GBP</datum_type>
+<datum_id>4</datum_id>
+</datum>
+<datum>
+<short_description>Lowest Accepted Yield</short_description>
+<description>Lowest Accepted Yield</description>
+<datum_type>%</datum_type>
+<datum_id>5</datum_id>
+</datum>
+<datum>
+<short_description>Average Yield</short_description>
+<description>Average Yield</description>
+<datum_type>%</datum_type>
+<datum_id>6</datum_id>
+</datum>
+<datum>
+<short_description>Highest Accepted Yield</short_description>
+<description>Highest Accepted Yield</description>
+<datum_type>%</datum_type>
+<datum_id>7</datum_id>
+</datum>
+<datum>
+<short_description>Highest Accepted Yield - Percent Allotted</short_description>
+<description>Highest Accepted Yield - Percent Allotted</description>
+<datum_type>%</datum_type>
+<datum_id>8</datum_id>
+</datum>
+</data>
+<messages>
+<message>
+<message_type>release</message_type>
+<message_version>1</message_version>
+<multicast_group>EU_GROUP_2</multicast_group>
+<fields>
+<field>
+<datum_id>1</datum_id>
+<field_type>date</field_type>
+<example_value>2011-07-18</example_value>
+</field>
+<field>
+<datum_id>2</datum_id>
+<field_type>float</field_type>
+<example_value>5026.35</example_value>
+</field>
+<field>
+<datum_id>3</datum_id>
+<field_type>float</field_type>
+<example_value>1499.99925</example_value>
+</field>
+<field>
+<datum_id>4</datum_id>
+<field_type>float</field_type>
+<example_value>0.00075</example_value>
+</field>
+<field>
+<datum_id>5</datum_id>
+<field_type>float</field_type>
+<example_value>0.479</example_value>
+</field>
+<field>
+<datum_id>6</datum_id>
+<field_type>float</field_type>
+<example_value>0.498629</example_value>
+</field>
+<field>
+<datum_id>7</datum_id>
+<field_type>float</field_type>
+<example_value>0.510</example_value>
+</field>
+<field>
+<datum_id>8</datum_id>
+<field_type>float</field_type>
+<example_value>67.55</example_value>
+</field>
+</fields>
+</message>
+</messages>
+</category>
+<category name="UK_Bill_03_Month_Treasury_Auction_Result">
+<description>Bill 3 Month UK Treasury Auction Result</description>
+<country>UK</country>
+<category_id>21514</category_id>
+<data>
+<datum>
+<short_description>Maturity Date</short_description>
+<description>Maturity Date</description>
+<datum_type>date</datum_type>
+<datum_id>1</datum_id>
+</datum>
+<datum>
+<short_description>Amount Tendered For</short_description>
+<description>Amount Tendered For</description>
+<datum_scale>M</datum_scale>
+<datum_type>GBP</datum_type>
+<datum_id>2</datum_id>
+</datum>
+<datum>
+<short_description>Amount Allotted</short_description>
+<description>Amount Allotted</description>
+<datum_scale>M</datum_scale>
+<datum_type>GBP</datum_type>
+<datum_id>3</datum_id>
+</datum>
+<datum>
+<short_description>Residual Amount</short_description>
+<description>Residual Amount</description>
+<datum_scale>M</datum_scale>
+<datum_type>GBP</datum_type>
+<datum_id>4</datum_id>
+</datum>
+<datum>
+<short_description>Lowest Accepted Yield</short_description>
+<description>Lowest Accepted Yield</description>
+<datum_type>%</datum_type>
+<datum_id>5</datum_id>
+</datum>
+<datum>
+<short_description>Average Yield</short_description>
+<description>Average Yield</description>
+<datum_type>%</datum_type>
+<datum_id>6</datum_id>
+</datum>
+<datum>
+<short_description>Highest Accepted Yield</short_description>
+<description>Highest Accepted Yield</description>
+<datum_type>%</datum_type>
+<datum_id>7</datum_id>
+</datum>
+<datum>
+<short_description>Highest Accepted Yield - Percent Allotted</short_description>
+<description>Highest Accepted Yield - Percent Allotted</description>
+<datum_type>%</datum_type>
+<datum_id>8</datum_id>
+</datum>
+</data>
+<messages>
+<message>
+<message_type>release</message_type>
+<message_version>1</message_version>
+<multicast_group>EU_GROUP_2</multicast_group>
+<fields>
+<field>
+<datum_id>1</datum_id>
+<field_type>date</field_type>
+<example_value>2011-09-19</example_value>
+</field>
+<field>
+<datum_id>2</datum_id>
+<field_type>float</field_type>
+<example_value>5325.5</example_value>
+</field>
+<field>
+<datum_id>3</datum_id>
+<field_type>float</field_type>
+<example_value>999.9875</example_value>
+</field>
+<field>
+<datum_id>4</datum_id>
+<field_type>float</field_type>
+<example_value>0.0125</example_value>
+</field>
+<field>
+<datum_id>5</datum_id>
+<field_type>float</field_type>
+<example_value>0.49</example_value>
+</field>
+<field>
+<datum_id>6</datum_id>
+<field_type>float</field_type>
+<example_value>0.517969</example_value>
+</field>
+<field>
+<datum_id>7</datum_id>
+<field_type>float</field_type>
+<example_value>0.523</example_value>
+</field>
+<field>
+<datum_id>8</datum_id>
+<field_type>float</field_type>
+<example_value>65.55</example_value>
+</field>
+</fields>
+</message>
+</messages>
+</category>
+<category name="UK_Bill_06_Month_Treasury_Auction_Result">
+<description>Bill 6 Month UK Treasury Auction Result</description>
+<country>UK</country>
+<category_id>21515</category_id>
+<data>
+<datum>
+<short_description>Maturity Date</short_description>
+<description>Maturity Date</description>
+<datum_type>date</datum_type>
+<datum_id>1</datum_id>
+</datum>
+<datum>
+<short_description>Amount Tendered For</short_description>
+<description>Amount Tendered For</description>
+<datum_scale>M</datum_scale>
+<datum_type>GBP</datum_type>
+<datum_id>2</datum_id>
+</datum>
+<datum>
+<short_description>Amount Allotted</short_description>
+<description>Amount Allotted</description>
+<datum_scale>M</datum_scale>
+<datum_type>GBP</datum_type>
+<datum_id>3</datum_id>
+</datum>
+<datum>
+<short_description>Residual Amount</short_description>
+<description>Residual Amount</description>
+<datum_scale>M</datum_scale>
+<datum_type>GBP</datum_type>
+<datum_id>4</datum_id>
+</datum>
+<datum>
+<short_description>Lowest Accepted Yield</short_description>
+<description>Lowest Accepted Yield</description>
+<datum_type>%</datum_type>
+<datum_id>5</datum_id>
+</datum>
+<datum>
+<short_description>Average Yield</short_description>
+<description>Average Yield</description>
+<datum_type>%</datum_type>
+<datum_id>6</datum_id>
+</datum>
+<datum>
+<short_description>Highest Accepted Yield</short_description>
+<description>Highest Accepted Yield</description>
+<datum_type>%</datum_type>
+<datum_id>7</datum_id>
+</datum>
+<datum>
+<short_description>Highest Accepted Yield - Percent Allotted</short_description>
+<description>Highest Accepted Yield - Percent Allotted</description>
+<datum_type>%</datum_type>
+<datum_id>8</datum_id>
+</datum>
+</data>
+<messages>
+<message>
+<message_type>release</message_type>
+<message_version>1</message_version>
+<multicast_group>EU_GROUP_2</multicast_group>
+<fields>
+<field>
+<datum_id>1</datum_id>
+<field_type>date</field_type>
+<example_value>2011-12-19</example_value>
+</field>
+<field>
+<datum_id>2</datum_id>
+<field_type>float</field_type>
+<example_value>8210.5</example_value>
+</field>
+<field>
+<datum_id>3</datum_id>
+<field_type>float</field_type>
+<example_value>1500.0</example_value>
+</field>
+<field>
+<datum_id>4</datum_id>
+<field_type>float</field_type>
+<example_value>0.00000</example_value>
+</field>
+<field>
+<datum_id>5</datum_id>
+<field_type>float</field_type>
+<example_value>0.525</example_value>
+</field>
+<field>
+<datum_id>6</datum_id>
+<field_type>float</field_type>
+<example_value>0.537417</example_value>
+</field>
+<field>
+<datum_id>7</datum_id>
+<field_type>float</field_type>
+<example_value>0.548</example_value>
+</field>
+<field>
+<datum_id>8</datum_id>
+<field_type>float</field_type>
+<example_value>54.00</example_value>
+</field>
+</fields>
+</message>
+</messages>
+</category>
+<category name="UK_Bill_12_Month_Treasury_Auction_Result">
+<description>Bill 12 Month UK Treasury Auction Result</description>
+<country>UK</country>
+<category_id>21516</category_id>
+<data>
+<datum>
+<short_description>Maturity Date</short_description>
+<description>Maturity Date</description>
+<datum_type>date</datum_type>
+<datum_id>1</datum_id>
+</datum>
+<datum>
+<short_description>Amount Tendered For</short_description>
+<description>Amount Tendered For</description>
+<datum_scale>M</datum_scale>
+<datum_type>GBP</datum_type>
+<datum_id>2</datum_id>
+</datum>
+<datum>
+<short_description>Amount Allotted</short_description>
+<description>Amount Allotted</description>
+<datum_scale>M</datum_scale>
+<datum_type>GBP</datum_type>
+<datum_id>3</datum_id>
+</datum>
+<datum>
+<short_description>Residual Amount</short_description>
+<description>Residual Amount</description>
+<datum_scale>M</datum_scale>
+<datum_type>GBP</datum_type>
+<datum_id>4</datum_id>
+</datum>
+<datum>
+<short_description>Lowest Accepted Yield</short_description>
+<description>Lowest Accepted Yield</description>
+<datum_type>%</datum_type>
+<datum_id>5</datum_id>
+</datum>
+<datum>
+<short_description>Average Yield</short_description>
+<description>Average Yield</description>
+<datum_type>%</datum_type>
+<datum_id>6</datum_id>
+</datum>
+<datum>
+<short_description>Highest Accepted Yield</short_description>
+<description>Highest Accepted Yield</description>
+<datum_type>%</datum_type>
+<datum_id>7</datum_id>
+</datum>
+<datum>
+<short_description>Highest Accepted Yield - Percent Allotted</short_description>
+<description>Highest Accepted Yield - Percent Allotted</description>
+<datum_type>%</datum_type>
+<datum_id>8</datum_id>
+</datum>
+</data>
+<messages>
+<message>
+<message_type>release</message_type>
+<message_version>1</message_version>
+<multicast_group>EU_GROUP_2</multicast_group>
+<fields>
+<field>
+<datum_id>1</datum_id>
+<field_type>date</field_type>
+<example_value>2012-06-19</example_value>
+</field>
+<field>
+<datum_id>2</datum_id>
+<field_type>float</field_type>
+<example_value>8210.5</example_value>
+</field>
+<field>
+<datum_id>3</datum_id>
+<field_type>float</field_type>
+<example_value>1500.0</example_value>
+</field>
+<field>
+<datum_id>4</datum_id>
+<field_type>float</field_type>
+<example_value>0.00000</example_value>
+</field>
+<field>
+<datum_id>5</datum_id>
+<field_type>float</field_type>
+<example_value>0.525</example_value>
+</field>
+<field>
+<datum_id>6</datum_id>
+<field_type>float</field_type>
+<example_value>0.537417</example_value>
+</field>
+<field>
+<datum_id>7</datum_id>
+<field_type>float</field_type>
+<example_value>0.548</example_value>
+</field>
+<field>
+<datum_id>8</datum_id>
+<field_type>float</field_type>
+<example_value>54.00</example_value>
+</field>
+</fields>
+</message>
+</messages>
+</category>
+<category name="Gilt_Syndication_Result">
+<description>Gilt Syndication Result</description>
+<country>UK</country>
+<category_id>21517</category_id>
+<data>
+<datum>
+<short_description>Maturity year</short_description>
+<description>Maturity year</description>
+<datum_type>year</datum_type>
+<datum_id>1</datum_id>
+</datum>
+<datum>
+<short_description>Auction Amount</short_description>
+<description>Auction Amount</description>
+<datum_scale>B</datum_scale>
+<datum_type>GBP</datum_type>
+<datum_id>2</datum_id>
+</datum>
+<datum>
+<short_description>Coupon Rate</short_description>
+<description>Coupon Rate</description>
+<datum_type>%</datum_type>
+<datum_id>3</datum_id>
+</datum>
+<datum>
+<short_description>Yield</short_description>
+<description>Yield</description>
+<datum_type>%</datum_type>
+<datum_id>4</datum_id>
+</datum>
+</data>
+<messages>
+<message>
+<message_type>release</message_type>
+<message_version>1</message_version>
+<multicast_group>EU_GROUP_2</multicast_group>
+<fields>
+<field>
+<datum_id>1</datum_id>
+<field_type>short</field_type>
+<example_value>2060</example_value>
+</field>
+<field>
+<datum_id>2</datum_id>
+<field_type>float</field_type>
+<example_value>5.0</example_value>
+</field>
+<field>
+<datum_id>3</datum_id>
+<field_type>float</field_type>
+<example_value>4</example_value>
+</field>
+<field>
+<datum_id>4</datum_id>
+<field_type>float</field_type>
+<example_value>4.1475</example_value>
+</field>
+</fields>
+</message>
+</messages>
+</category>
+<category name="Index_Linked_Gilt_Syndication_Result">
+<description>Gilt Index-Linked Syndication Result</description>
+<country>UK</country>
+<category_id>21518</category_id>
+<data>
+<datum>
+<short_description>Maturity year</short_description>
+<description>Maturity year</description>
+<datum_type>year</datum_type>
+<datum_id>1</datum_id>
+</datum>
+<datum>
+<short_description>Auction Amount</short_description>
+<description>Auction Amount</description>
+<datum_scale>B</datum_scale>
+<datum_type>GBP</datum_type>
+<datum_id>2</datum_id>
+</datum>
+<datum>
+<short_description>Coupon Rate</short_description>
+<description>Coupon Rate</description>
+<datum_type>%</datum_type>
+<datum_id>3</datum_id>
+</datum>
+<datum>
+<short_description>Real Yield</short_description>
+<description>Real Yield</description>
+<datum_type>%</datum_type>
+<datum_id>4</datum_id>
+</datum>
+</data>
+<messages>
+<message>
+<message_type>release</message_type>
+<message_version>1</message_version>
+<multicast_group>EU_GROUP_2</multicast_group>
+<fields>
+<field>
+<datum_id>1</datum_id>
+<field_type>short</field_type>
+<example_value>2034</example_value>
+</field>
+<field>
+<datum_id>2</datum_id>
+<field_type>float</field_type>
+<example_value>4.0</example_value>
+</field>
+<field>
+<datum_id>3</datum_id>
+<field_type>float</field_type>
+<example_value>0.75</example_value>
+</field>
+<field>
+<datum_id>4</datum_id>
+<field_type>float</field_type>
+<example_value>0.64</example_value>
+</field>
+</fields>
+</message>
+</messages>
+</category>
+<category name="Gilt_Auction_Announcement">
+<description>Gilt Auction Announcement</description>
+<country>UK</country>
+<category_id>21521</category_id>
+<data>
+<datum>
+<short_description>Auction Date</short_description>
+<description>Auction Date</description>
+<datum_type>date</datum_type>
+<datum_id>1</datum_id>
+</datum>
+<datum>
+<short_description>Amount</short_description>
+<description>Amount</description>
+<datum_scale>M</datum_scale>
+<datum_type>GBP</datum_type>
+<datum_id>2</datum_id>
+</datum>
+<datum>
+<short_description>Maturity Date</short_description>
+<description>Maturity Date</description>
+<datum_type>date</datum_type>
+<datum_id>3</datum_id>
+</datum>
+<datum>
+<short_description>Coupon Rate</short_description>
+<description>Coupon Rate</description>
+<datum_type>%</datum_type>
+<datum_id>4</datum_id>
+</datum>
+</data>
+<messages>
+<message>
+<message_type>release</message_type>
+<message_version>1</message_version>
+<multicast_group>EU_GROUP_2</multicast_group>
+<fields>
+<field>
+<datum_id>1</datum_id>
+<field_type>date</field_type>
+<example_value>2011-06-15</example_value>
+</field>
+<field>
+<datum_id>2</datum_id>
+<field_type>float</field_type>
+<example_value>2250</example_value>
+</field>
+<field>
+<datum_id>3</datum_id>
+<field_type>date</field_type>
+<example_value>2027-12-07</example_value>
+</field>
+<field>
+<datum_id>4</datum_id>
+<field_type>float</field_type>
+<example_value>4.25</example_value>
+</field>
+</fields>
+</message>
+</messages>
+</category>
+<category name="Index_Linked_Gilt_Auction_Announcement">
+<description>Index Linked Gilt Auction Announcement</description>
+<country>UK</country>
+<category_id>21522</category_id>
+<data>
+<datum>
+<short_description>Auction Date</short_description>
+<description>Auction Date</description>
+<datum_type>date</datum_type>
+<datum_id>1</datum_id>
+</datum>
+<datum>
+<short_description>Amount</short_description>
+<description>Amount</description>
+<datum_scale>M</datum_scale>
+<datum_type>GBP</datum_type>
+<datum_id>2</datum_id>
+</datum>
+<datum>
+<short_description>Maturity Date</short_description>
+<description>Maturity Date</description>
+<datum_type>date</datum_type>
+<datum_id>3</datum_id>
+</datum>
+<datum>
+<short_description>Coupon Rate</short_description>
+<description>Coupon Rate</description>
+<datum_type>%</datum_type>
+<datum_id>4</datum_id>
+</datum>
+</data>
+<messages>
+<message>
+<message_type>release</message_type>
+<message_version>1</message_version>
+<multicast_group>EU_GROUP_2</multicast_group>
+<fields>
+<field>
+<datum_id>1</datum_id>
+<field_type>date</field_type>
+<example_value>2011-06-21</example_value>
+</field>
+<field>
+<datum_id>2</datum_id>
+<field_type>float</field_type>
+<example_value>4750</example_value>
+</field>
+<field>
+<datum_id>3</datum_id>
+<field_type>date</field_type>
+<example_value>2016-01-22</example_value>
+</field>
+<field>
+<datum_id>4</datum_id>
+<field_type>float</field_type>
+<example_value>2.0</example_value>
+</field>
+</fields>
+</message>
+</messages>
+</category>
+<category name="UK_Bill_01_Month_Treasury_Auction_Announcement">
+<description>Bill 1 Month UK Treasury Auction Announcement</description>
+<country>UK</country>
+<category_id>21523</category_id>
+<data>
+<datum>
+<short_description>Auction Date</short_description>
+<description>Auction Date</description>
+<datum_type>date</datum_type>
+<datum_id>1</datum_id>
+</datum>
+<datum>
+<short_description>Maturity Date</short_description>
+<description>Maturity Date</description>
+<datum_type>date</datum_type>
+<datum_id>2</datum_id>
+</datum>
+<datum>
+<short_description>Amount</short_description>
+<description>Amount</description>
+<datum_scale>M</datum_scale>
+<datum_type>GBP</datum_type>
+<datum_id>3</datum_id>
+</datum>
+</data>
+<messages>
+<message>
+<message_type>release</message_type>
+<message_version>1</message_version>
+<multicast_group>EU_GROUP_2</multicast_group>
+<fields>
+<field>
+<datum_id>1</datum_id>
+<field_type>date</field_type>
+<example_value>2011-06-17</example_value>
+</field>
+<field>
+<datum_id>2</datum_id>
+<field_type>date</field_type>
+<example_value>2011-07-18</example_value>
+</field>
+<field>
+<datum_id>3</datum_id>
+<field_type>float</field_type>
+<example_value>1500</example_value>
+</field>
+</fields>
+</message>
+</messages>
+</category>
+<category name="UK_Bill_03_Month_Treasury_Auction_Announcement">
+<description>Bill 3 Month UK Treasury Auction Announcement</description>
+<country>UK</country>
+<category_id>21524</category_id>
+<data>
+<datum>
+<short_description>Auction Date</short_description>
+<description>Auction Date</description>
+<datum_type>date</datum_type>
+<datum_id>1</datum_id>
+</datum>
+<datum>
+<short_description>Maturity Date</short_description>
+<description>Maturity Date</description>
+<datum_type>date</datum_type>
+<datum_id>2</datum_id>
+</datum>
+<datum>
+<short_description>Amount</short_description>
+<description>Amount</description>
+<datum_scale>M</datum_scale>
+<datum_type>GBP</datum_type>
+<datum_id>3</datum_id>
+</datum>
+</data>
+<messages>
+<message>
+<message_type>release</message_type>
+<message_version>1</message_version>
+<multicast_group>EU_GROUP_2</multicast_group>
+<fields>
+<field>
+<datum_id>1</datum_id>
+<field_type>date</field_type>
+<example_value>2011-06-17</example_value>
+</field>
+<field>
+<datum_id>2</datum_id>
+<field_type>date</field_type>
+<example_value>2011-09-19</example_value>
+</field>
+<field>
+<datum_id>3</datum_id>
+<field_type>float</field_type>
+<example_value>1000</example_value>
+</field>
+</fields>
+</message>
+</messages>
+</category>
+<category name="UK_Bill_06_Month_Treasury_Auction_Announcement">
+<description>Bill 6 Month UK Treasury Auction Announcement</description>
+<country>UK</country>
+<category_id>21525</category_id>
+<data>
+<datum>
+<short_description>Auction Date</short_description>
+<description>Auction Date</description>
+<datum_type>date</datum_type>
+<datum_id>1</datum_id>
+</datum>
+<datum>
+<short_description>Maturity Date</short_description>
+<description>Maturity Date</description>
+<datum_type>date</datum_type>
+<datum_id>2</datum_id>
+</datum>
+<datum>
+<short_description>Amount</short_description>
+<description>Amount</description>
+<datum_scale>M</datum_scale>
+<datum_type>GBP</datum_type>
+<datum_id>3</datum_id>
+</datum>
+</data>
+<messages>
+<message>
+<message_type>release</message_type>
+<message_version>1</message_version>
+<multicast_group>EU_GROUP_2</multicast_group>
+<fields>
+<field>
+<datum_id>1</datum_id>
+<field_type>date</field_type>
+<example_value>2011-06-17</example_value>
+</field>
+<field>
+<datum_id>2</datum_id>
+<field_type>date</field_type>
+<example_value>2011-12-19</example_value>
+</field>
+<field>
+<datum_id>3</datum_id>
+<field_type>float</field_type>
+<example_value>1500</example_value>
+</field>
+</fields>
+</message>
+</messages>
+</category>
+<category name="UK_Bill_12_Month_Treasury_Auction_Announcement">
+<description>Bill 12 Month UK Treasury Auction Announcement</description>
+<country>UK</country>
+<category_id>21526</category_id>
+<data>
+<datum>
+<short_description>Auction Date</short_description>
+<description>Auction Date</description>
+<datum_type>date</datum_type>
+<datum_id>1</datum_id>
+</datum>
+<datum>
+<short_description>Maturity Date</short_description>
+<description>Maturity Date</description>
+<datum_type>date</datum_type>
+<datum_id>2</datum_id>
+</datum>
+<datum>
+<short_description>Amount</short_description>
+<description>Amount</description>
+<datum_scale>M</datum_scale>
+<datum_type>GBP</datum_type>
+<datum_id>3</datum_id>
+</datum>
+</data>
+<messages>
+<message>
+<message_type>release</message_type>
+<message_version>1</message_version>
+<multicast_group>EU_GROUP_2</multicast_group>
+<fields>
+<field>
+<datum_id>1</datum_id>
+<field_type>date</field_type>
+<example_value>2011-06-17</example_value>
+</field>
+<field>
+<datum_id>2</datum_id>
+<field_type>date</field_type>
+<example_value>2012-06-19</example_value>
+</field>
+<field>
+<datum_id>3</datum_id>
+<field_type>float</field_type>
+<example_value>1500</example_value>
+</field>
+</fields>
+</message>
+</messages>
+</category>
+<category name="Gilt_Tender_Result">
+<description>Gilt Tender Result</description>
+<country>UK</country>
+<category_id>21531</category_id>
+<data>
+<datum>
+<short_description>Maturity year</short_description>
+<description>Maturity year</description>
+<datum_type>year</datum_type>
+<datum_id>1</datum_id>
+</datum>
+<datum>
+<short_description>Yield</short_description>
+<description>Yield</description>
+<datum_type>%</datum_type>
+<datum_id>2</datum_id>
+</datum>
+<datum>
+<short_description>Bid to Cover Ratio</short_description>
+<description>Bid to Cover Ratio</description>
+<datum_type>%</datum_type>
+<datum_id>3</datum_id>
+</datum>
+<datum>
+<short_description>Competitive Bids Allotted</short_description>
+<description>Competitive Bids Allotted</description>
+<datum_scale>M</datum_scale>
+<datum_type>GBP</datum_type>
+<datum_id>4</datum_id>
+</datum>
+</data>
+<messages>
+<message>
+<message_type>release</message_type>
+<message_version>1</message_version>
+<multicast_group>EU_GROUP_2</multicast_group>
+<fields>
+<field>
+<datum_id>1</datum_id>
+<field_type>short</field_type>
+<example_value>2050</example_value>
+</field>
+<field>
+<datum_id>2</datum_id>
+<field_type>float</field_type>
+<example_value>0.499</example_value>
+</field>
+<field>
+<datum_id>3</datum_id>
+<field_type>float</field_type>
+<example_value>2.17</example_value>
+</field>
+<field>
+<datum_id>4</datum_id>
+<field_type>float</field_type>
+<example_value>450.0</example_value>
+</field>
+</fields>
+</message>
+</messages>
+</category>
+<category name="Index_Linked_Gilt_Tender_Result">
+<description>Index Linked Gilt Tender Result</description>
+<country>UK</country>
+<category_id>21532</category_id>
+<data>
+<datum>
+<short_description>Maturity year</short_description>
+<description>Maturity year</description>
+<datum_type>year</datum_type>
+<datum_id>1</datum_id>
+</datum>
+<datum>
+<short_description>Real Yield</short_description>
+<description>Real Yield</description>
+<datum_type>%</datum_type>
+<datum_id>2</datum_id>
+</datum>
+<datum>
+<short_description>Bid to Cover Ratio</short_description>
+<description>Bid to Cover Ratio</description>
+<datum_type>%</datum_type>
+<datum_id>3</datum_id>
+</datum>
+<datum>
+<short_description>Competitive Bids Allotted</short_description>
+<description>Competitive Bids Allotted</description>
+<datum_scale>M</datum_scale>
+<datum_type>GBP</datum_type>
+<datum_id>4</datum_id>
+</datum>
+</data>
+<messages>
+<message>
+<message_type>release</message_type>
+<message_version>1</message_version>
+<multicast_group>EU_GROUP_2</multicast_group>
+<fields>
+<field>
+<datum_id>1</datum_id>
+<field_type>short</field_type>
+<example_value>2050</example_value>
+</field>
+<field>
+<datum_id>2</datum_id>
+<field_type>float</field_type>
+<example_value>0.499</example_value>
+</field>
+<field>
+<datum_id>3</datum_id>
+<field_type>float</field_type>
+<example_value>2.17</example_value>
+</field>
+<field>
+<datum_id>4</datum_id>
+<field_type>float</field_type>
+<example_value>450.0</example_value>
+</field>
+</fields>
+</message>
+</messages>
+</category>
+<category name="Treasury_Stock_Result">
+<description>Treasury Stock Result</description>
+<country>UK</country>
+<category_id>21533</category_id>
+<data>
+<datum>
+<short_description>Maturity year</short_description>
+<description>Maturity year</description>
+<datum_type>year</datum_type>
+<datum_id>1</datum_id>
+</datum>
+<datum>
+<short_description>Yield</short_description>
+<description>Yield</description>
+<datum_type>%</datum_type>
+<datum_id>2</datum_id>
+</datum>
+<datum>
+<short_description>Bid to Cover Ratio</short_description>
+<description>Bid to Cover Ratio</description>
+<datum_type>%</datum_type>
+<datum_id>3</datum_id>
+</datum>
+<datum>
+<short_description>Competitive Bids Allotted</short_description>
+<description>Competitive Bids Allotted</description>
+<datum_scale>M</datum_scale>
+<datum_type>GBP</datum_type>
+<datum_id>4</datum_id>
+</datum>
+<datum>
+<short_description>Yield Tail</short_description>
+<description>Yield Tail</description>
+<datum_type>basis_points</datum_type>
+<datum_id>5</datum_id>
+</datum>
+</data>
+<messages>
+<message>
+<message_type>release</message_type>
+<message_version>2</message_version>
+<start_date>2016-03-16</start_date>
+<multicast_group>EU_GROUP_2</multicast_group>
+<fields>
+<field>
+<datum_id>1</datum_id>
+<field_type>short</field_type>
+<example_value>2032</example_value>
+</field>
+<field>
+<datum_id>2</datum_id>
+<field_type>float</field_type>
+<example_value>3.116</example_value>
+</field>
+<field>
+<datum_id>3</datum_id>
+<field_type>float</field_type>
+<example_value>1.63</example_value>
+</field>
+<field>
+<datum_id>4</datum_id>
+<field_type>float</field_type>
+<example_value>1799.6</example_value>
+</field>
+<field>
+<datum_id>5</datum_id>
+<field_type>float</field_type>
+<example_value>.8</example_value>
+</field>
+</fields>
+</message>
+</messages>
+</category>
+<category name="Gilt_Tender_Announcement">
+<description>Gilt Tender Announcement</description>
+<country>UK</country>
+<category_id>21541</category_id>
+<data>
+<datum>
+<short_description>Auction Date</short_description>
+<description>Auction Date</description>
+<datum_type>date</datum_type>
+<datum_id>1</datum_id>
+</datum>
+<datum>
+<short_description>Amount</short_description>
+<description>Amount</description>
+<datum_scale>M</datum_scale>
+<datum_type>GBP</datum_type>
+<datum_id>2</datum_id>
+</datum>
+<datum>
+<short_description>Maturity year</short_description>
+<description>Maturity year</description>
+<datum_type>year</datum_type>
+<datum_id>3</datum_id>
+</datum>
+<datum>
+<short_description>Coupon Rate</short_description>
+<description>Coupon Rate</description>
+<datum_type>%</datum_type>
+<datum_id>4</datum_id>
+</datum>
+</data>
+<messages>
+<message>
+<message_type>release</message_type>
+<message_version>1</message_version>
+<multicast_group>EU_GROUP_2</multicast_group>
+<fields>
+<field>
+<datum_id>1</datum_id>
+<field_type>date</field_type>
+<example_value>2011-06-23</example_value>
+</field>
+<field>
+<datum_id>2</datum_id>
+<field_type>float</field_type>
+<example_value>450</example_value>
+</field>
+<field>
+<datum_id>3</datum_id>
+<field_type>short</field_type>
+<example_value>2050</example_value>
+</field>
+<field>
+<datum_id>4</datum_id>
+<field_type>float</field_type>
+<example_value>0.5</example_value>
+</field>
+</fields>
+</message>
+</messages>
+</category>
+<category name="Index_Linked_Gilt_Tender_Announcement">
+<description>Index Linked Gilt Tender Announcement</description>
+<country>UK</country>
+<category_id>21542</category_id>
+<data>
+<datum>
+<short_description>Auction Date</short_description>
+<description>Auction Date</description>
+<datum_type>date</datum_type>
+<datum_id>1</datum_id>
+</datum>
+<datum>
+<short_description>Amount</short_description>
+<description>Amount</description>
+<datum_scale>M</datum_scale>
+<datum_type>GBP</datum_type>
+<datum_id>2</datum_id>
+</datum>
+<datum>
+<short_description>Maturity year</short_description>
+<description>Maturity year</description>
+<datum_type>year</datum_type>
+<datum_id>3</datum_id>
+</datum>
+<datum>
+<short_description>Coupon Rate</short_description>
+<description>Coupon Rate</description>
+<datum_type>%</datum_type>
+<datum_id>4</datum_id>
+</datum>
+</data>
+<messages>
+<message>
+<message_type>release</message_type>
+<message_version>1</message_version>
+<multicast_group>EU_GROUP_2</multicast_group>
+<fields>
+<field>
+<datum_id>1</datum_id>
+<field_type>date</field_type>
+<example_value>2011-06-23</example_value>
+</field>
+<field>
+<datum_id>2</datum_id>
+<field_type>float</field_type>
+<example_value>450</example_value>
+</field>
+<field>
+<datum_id>3</datum_id>
+<field_type>short</field_type>
+<example_value>2050</example_value>
+</field>
+<field>
+<datum_id>4</datum_id>
+<field_type>float</field_type>
+<example_value>0.5</example_value>
+</field>
+</fields>
+</message>
+</messages>
+</category>
+<category name="Treasury_Stock_Announcement">
+<description>Treasury Stock Announcement</description>
+<country>UK</country>
+<category_id>21543</category_id>
+<data>
+<datum>
+<short_description>Auction Date</short_description>
+<description>Auction Date</description>
+<datum_type>date</datum_type>
+<datum_id>1</datum_id>
+</datum>
+<datum>
+<short_description>Amount</short_description>
+<description>Amount</description>
+<datum_scale>M</datum_scale>
+<datum_type>GBP</datum_type>
+<datum_id>2</datum_id>
+</datum>
+<datum>
+<short_description>Maturity Date</short_description>
+<description>Maturity Date</description>
+<datum_type>date</datum_type>
+<datum_id>3</datum_id>
+</datum>
+<datum>
+<short_description>Coupon Rate</short_description>
+<description>Coupon Rate</description>
+<datum_type>%</datum_type>
+<datum_id>4</datum_id>
+</datum>
+</data>
+<messages>
+<message>
+<message_type>release</message_type>
+<message_version>1</message_version>
+<multicast_group>EU_GROUP_2</multicast_group>
+<fields>
+<field>
+<datum_id>1</datum_id>
+<field_type>date</field_type>
+<example_value>2011-11-03</example_value>
+</field>
+<field>
+<datum_id>2</datum_id>
+<field_type>float</field_type>
+<example_value>2000</example_value>
+</field>
+<field>
+<datum_id>3</datum_id>
+<field_type>date</field_type>
+<example_value>2032-06-07</example_value>
+</field>
+<field>
+<datum_id>4</datum_id>
+<field_type>float</field_type>
+<example_value>4.25</example_value>
+</field>
+</fields>
+</message>
+</messages>
+</category>
+</protocol>

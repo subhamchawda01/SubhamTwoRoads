@@ -1,0 +1,235 @@
+import modules ;
+import set ;
+import stage ;
+import package ;
+import path ;
+import common ;
+import os ;
+import regex ;
+import errors ;
+import "class" : new ;
+import common ;
+import sequence ;
+import pch ;
+
+if --bhelp in $(ARGV)
+{
+    ECHO "
+Usage:
+    b2 [options] [install|stage]
+
+    * install               Installs to the configured location(s).
+    * stage                 Stages the build products only to common stage location.
+
+Options:
+    --bhelp                  This message.
+
+Locations:
+
+Features:
+    --without-<library>     Do not build, stage, or install the specified
+                            <library>. By default all libraries attempt to build.
+    --build-mysqlclient     Build libraries and execs that depend on mysqlclient
+    --no_execs              Don't build execs
+" ;
+    EXIT "" ;
+}
+
+local only_target = "all" ;
+local install_loc = "../cvquant_install" ;
+local build_execs = "True" ;
+path-constant build-mysqlclient : false ;
+
+# Extract build requirements from command line options
+for option in [ modules.peek : ARGV ] {
+  local temporary = [ MATCH ([^=]+)= : $(option) ] ;
+
+  if $(temporary) {
+    value  = [ MATCH [^=]+=([^=]+)$ : $(option) ] ;
+    if $(value) && $(temporary) = "--only_target" {
+       if $(value) != "all" {
+           only_target = $(value) ;
+           ECHO "only target $(only_target)" ;
+       }
+    }
+    if $(value) && $(temporary) = "--mysqlclient" {
+       if $(value) = "needed" {
+           path-constant build-mysqlclient : true ;
+           ECHO "building sql execs too" ;
+       }
+    }
+    if $(value) && $(temporary) = "--execs" {
+       if $(value) = "no" {
+       	  build_execs = "" ;
+       	  ECHO "Not building execs" ;
+       }
+    }
+    if $(value) && $(temporary) = "--install_loc" {
+       install_loc = $(value) ;
+       ECHO "Install location changed to $(value)" ;
+    }    
+  }
+}
+
+# libraries to disable building, etc.
+local without-libraries = [ MATCH "^--without-(.*)" : $(ARGV) ] ;
+
+using gcc ;
+
+path-constant DVCCODE_PROJECT_ROOT : . ;
+path-constant PROJECT_ROOT : $(DVCCODE_PROJECT_ROOT) ;
+
+path-constant CVQUANT_INSTALL : $(install_loc) ;
+# If we are building our own copy of dvccode dvctrade etc
+# they will be installed in ../cvquant_install/dvccode and ../cvquant/dvctrade etc.
+# Or else we should use it from /apps/cvquant_install/dvccode /apps/cvquant_install/dvctrade
+# This requires that people will include dvccode headers as
+# `#include "dvccode/CDef/abc.hpp"` and not `#include "CDef/abc.hpp"`
+path-constant DVCCODE_INSTALL : $(CVQUANT_INSTALL)/dvccode ;
+path-constant DVCCODE_LIB_INSTALL : $(DVCCODE_INSTALL)/lib ;
+path-constant DVCTRADE_INSTALL : $(CVQUANT_INSTALL)/dvctrade ;
+path-constant DVCTRADE_LIB_INSTALL : $(DVCTRADE_INSTALL)/lib ;
+path-constant BASETRADE_INSTALL : $(CVQUANT_INSTALL)/basetrade ;
+path-constant BASETRADE_LIB_INSTALL : $(BASETRADE_INSTALL)/lib ;
+
+# This variable PROJECT_INSTALL is primarily used to get the location
+# of where to install headers, libraries and execs
+path-constant PROJECT_INSTALL : $(DVCCODE_INSTALL) ;
+path-constant PROJECT_BIN_INSTALL : $(PROJECT_INSTALL)/bin ;
+path-constant PROJECT_BIN_INSTALL_DEBUG : $(PROJECT_INSTALL)/bindebug ;
+path-constant PROJECT_LIB_INSTALL : $(PROJECT_INSTALL)/lib ;
+path-constant PROJECT_LIB_INSTALL_DEBUG : $(PROJECT_INSTALL)/libdebug ;
+
+BOOST_LIB_INSTALL = [ modules.peek : BOOST_LIB_INSTALL ] ;
+if ! $(BOOST_LIB_INSTALL) {
+   path-constant BOOST_LIB_INSTALL : /apps/boost/boost-install/lib ;
+} else {
+   path-constant BOOST_LIB_INSTALL : $(BOOST_LIB_INSTALL) ;
+}
+ 
+BOOST_INCLUDE_BASE = [ modules.peek : BOOST_INCLUDE_DIR ] ;
+if ! $(BOOST_INCLUDE_BASE) {
+   path-constant BOOST_INCLUDE_BASE : /apps/boost/boost-install/include ;
+} else {
+   path-constant BOOST_INCLUDE_BASE : $(BOOST_INCLUDE_BASE) ;
+}
+
+path-constant xerces_root_ : /apps/xerces ;
+path-constant XERCES_INCLUDE_BASE : $(xerces_root_)/include/ ;
+path-constant XERCES_LIB_BASE : $(xerces_root_)/lib/ ;
+
+path-constant onload_include_base : /apps/onload/include/ ;
+
+path-constant EXANIC_INCLUDE_BASE : /apps/exanic/libs/ ;
+
+path-constant MBOCHIP_FPGA_BASE : /apps/SiliconBharatMD_v1/api ;
+path-constant MBOCHIP_NSE_BASE : $(MBOCHIP_FPGA_BASE)/nse ;
+path-constant MBOCHIP_CME_BASE : $(MBOCHIP_FPGA_BASE)/cme ;
+
+path-constant bzip2_root_ : /apps/bzip2 ;
+path-constant BZIP2_INCLUDE_BASE : $(bzip2_root_)/include ;
+path-constant BZIP2_LIB_BASE : $(bzip2_root_)/lib ;
+
+path-constant MYSQLCPP_BASE : /apps/mysqlcpp/mysql-connector-c++-1.1.5_install ;
+path-constant MYSQLCPP_INCLUDE_PATH : $(MYSQLCPP_BASE)/include ;
+path-constant MYSQLCPP_LIB_PATH : $(MYSQLCPP_BASE)/lib ;
+
+# .cfg files
+local configfiles = [ path.glob-tree $(DVCCODE_PROJECT_ROOT) : *.cfg ] ;
+
+install configfiles
+    : $(configfiles)
+    : <location>$(DVCCODE_INSTALL)/Configs <install-source-root>$(DVCCODE_PROJECT_ROOT)
+    ;
+
+local pythonscripts = [ path.glob-tree $(DVCCODE_PROJECT_ROOT) : *.py ] ;
+
+install pythonscripts
+    : $(pythonscripts)
+    : <location>$(DVCCODE_INSTALL) <install-source-root>$(DVCCODE_PROJECT_ROOT)
+    ;
+
+local shellscripts = [ path.glob-tree $(DVCCODE_PROJECT_ROOT) : *.sh ] ;
+
+install shellscripts
+    : $(shellscripts)
+    : <location>$(DVCCODE_INSTALL) <install-source-root>$(DVCCODE_PROJECT_ROOT)
+    ;
+
+local perlscripts = [ path.glob-tree $(DVCCODE_PROJECT_ROOT) : *.pl ] ;
+
+install perlscripts
+    : $(perlscripts)
+    : <location>$(DVCCODE_INSTALL) <install-source-root>$(DVCCODE_PROJECT_ROOT)
+    ;
+
+local headers = [ path.glob-tree $(DVCCODE_PROJECT_ROOT) : *.hpp ] ;
+
+install headers
+    : $(headers)
+    : <location>$(DVCCODE_INSTALL) <install-source-root>$(DVCCODE_PROJECT_ROOT)
+    ;
+
+local Rscripts = [ path.glob-tree $(DVCCODE_PROJECT_ROOT) : *.R ] ;
+
+install Rscripts
+    : $(Rscripts)
+    : <location>$(DVCCODE_INSTALL) <install-source-root>$(DVCCODE_PROJECT_ROOT)
+    ;
+
+project dvccode
+	: requirements 
+	  <include>$(CVQUANT_INSTALL) # removed the individual includes since we will be including all files like "basetrade/InitLogic/blah.hpp"
+	  <include>$(BOOST_INCLUDE_BASE)
+	  <include>$(XERCES_INCLUDE_BASE)
+	  <include>$(onload_include_base)
+          <include>$(MYSQLCPP_INCLUDE_PATH)
+	  <include>$(EXANIC_INCLUDE_BASE)
+          <include>$(MBOCHIP_FPGA_BASE)
+          <include>$(MBOCHIP_NSE_BASE)
+          <include>$(MBOCHIP_CME_BASE)
+	  <architecture>x86
+	  <address-model>64
+	  <variant>debug:<inlining>off
+	  <variant>debug:<debug-symbols>on
+	  <variant>debug:<optimization>off
+	  <variant>debug:<warnings>on
+	  <variant>debug:<warnings-as-errors>on
+	  <variant>release:<warnings>on
+	  <variant>release:<warnings-as-errors>on
+	  <library-path>$(BZIP2_LIB_BASE)
+	  <library-path>$(BOOST_LIB_INSTALL)
+	  # <library-path>$(DVCCODE_LIB_INSTALL) # commenting this out to make sure that we include it in the right way according to boost
+	  # <library-path>$(DVCTRADE_LIB_INSTALL) # commenting this out to make sure that we include it in the right way according to boost
+	  # <library-path>$(BASETRADE_LIB_INSTALL) # commenting this out to make sure that we include it in the right way according to boost
+          <library-path>/apps/exanic/libs/exanic
+          <linkflags>-lcurl
+	  <linkflags>-lexanic
+          <linkflags>-lcrypto
+          <linkflags>-lz
+          <linkflags>-lsiliconmd_nse_event
+          <toolset>gcc:<cxxflags>-std=gnu++14 # changed to this from -std=gnu++0x to work with C++14
+          <toolset>gcc:<cxxflags>-fdiagnostics-color=always
+	  <cflags>-isystem$(BOOST_INCLUDE_BASE)
+	  <cflags>-Wunused-local-typedefs
+	  <variant>release:<cflags>-flto # Link time optimization has been enabled I think
+          <link>static
+	: default-build release
+	;
+
+# Executibles 
+build-project CDefCode ;
+build-project CommonDataStructuresCode ; 
+build-project CommonTradeUtilsCode ; 
+build-project ExternalDataCode ;
+build-project ProfilerCode ;
+build-project TradingInfo ;
+build-project UtilsCode ;
+build-project Papi ;
+build-project SpanMarginCode ;
+build-project FpgaMbochip ;
+if $(build_execs) {
+   # ECHO "still building execs" ;
+   build-project CommonTools ;
+#   build-project Tests ;
+}

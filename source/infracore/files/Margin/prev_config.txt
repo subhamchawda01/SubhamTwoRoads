@@ -1,0 +1,12 @@
+#Product	Max_Position	Max_Order_Size		Max_Num_LiveOrders	Exchange	Profile
+FGBS_0		100		10			50			EUREX		NTAPROD3
+FGBM_0		100		10			50			EUREX		NTAPROD3
+FGBL_0		100		10			50			EUREX		NTAPROD3
+FGBX_0		10		5			10			EUREX		NTAPROD3
+FESX_0		30		5			30			EUREX		NTAPROD3
+FDAX_0		5		2			5			EUREX		NTAPROD3
+FOAT_0		5		2			5			EUREX		NTAPROD3
+ZN_0		1		1			1			CME		HC0
+ZT_0		1		1			1			CME		J55
+ZF_0		1		1			1			CME		G52
+ZB_0		1		1			1			CME		VD4

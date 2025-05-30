@@ -1,0 +1,56 @@
+[core]
+	repositoryformatversion = 0
+	filemode = true
+	bare = false
+	logallrefupdates = true
+[remote "origin"]
+	url = git+ssh://git@github.com/two-roads-trading-pvt-ltd/tradeengine.git
+	fetch = +refs/heads/*:refs/remotes/origin/*
+[branch "master"]
+	remote = origin
+	merge = refs/heads/master
+[branch "BSE_ETI_20220407"]
+	remote = origin
+	merge = refs/heads/BSE_ETI_20220407
+[branch "L1_LOGGED_DATA"]
+	remote = origin
+	merge = refs/heads/L1_LOGGED_DATA
+[branch "LOG_LIVE_BARDATA"]
+	remote = origin
+	merge = refs/heads/LOG_LIVE_BARDATA
+[branch "nishit_mm_barsmm"]
+	remote = origin
+	merge = refs/heads/nishit_mm_barsmm
+[branch "midterm_master"]
+	remote = origin
+	merge = refs/heads/midterm_master
+[branch "midterm_master_CBOE_prototype"]
+	remote = origin
+	merge = refs/heads/midterm_master_CBOE_prototype
+[branch "IB_Infra"]
+	remote = origin
+	merge = refs/heads/IB_Infra
+[branch "L1_LOGGED_DATA_MASTER"]
+	remote = origin
+	merge = refs/heads/L1_LOGGED_DATA_MASTER
+[branch "L1_nishit_midterm"]
+	remote = origin
+	merge = refs/heads/L1_nishit_midterm
+[branch "midterm_master_l1_data"]
+	remote = origin
+	merge = refs/heads/midterm_master_l1_data
+[branch "midterm_master_l1_final"]
+	remote = origin
+	merge = refs/heads/midterm_master_l1_final
+[branch "midterm_master_holiday"]
+	remote = origin
+	merge = refs/heads/midterm_master_holiday
+[branch "nishit_mm_CBOE"]
+	remote = origin
+	merge = refs/heads/nishit_mm_CBOE
+[branch "NSE_POSEXEC_INSTANCE"]
+	remote = origin
+	merge = refs/heads/NSE_POSEXEC_INSTANCE
+[branch "L1_BUG_FIX"]
+	remote = origin
+	merge = refs/heads/L1_BUG_FIX

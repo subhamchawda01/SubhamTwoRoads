@@ -1,0 +1,14 @@
+Incremental-SideA-IP 233.71.185.177
+Incremental-SideA-Port 17510
+
+Incremental-SideB-IP 233.71.185.185
+Incremental-SideB-Port 17510
+
+Glance-Id DVCX1 
+Glance-Password Pjssword1
+Glance-IP 103.239.128.102
+Glance-Port 17810
+PasswordChangeDate 20170222
+
+Glance-IP-Secondary 103.239.128.103
+Glance-Port-Secondary 17810

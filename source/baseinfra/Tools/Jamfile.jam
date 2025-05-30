@@ -1,0 +1,365 @@
+project : usage-requirements <include>$(PROJECT_INSTALL) ;
+
+use-project /PDVCC : ../libdvccode ;
+use-project /POrderRouting : ../OrderRoutingCode ;
+use-project /PSmartOrderRouting : ../SmartOrderRoutingCode ;
+use-project /PSimPnls : ../SimPnlsCode ;
+use-project /PBaseUtils : ../BaseUtilsCode ;
+use-project /POptionsUtils : ../OptionsUtilsCode ;
+use-project /PMarketAdapter : ../MarketAdapterCode ;
+use-project /PVolatileTradingInfo : ../VolatileTradingInfo ;
+use-project /PFPGA : ../FPGA ;
+use-project /PBMFFPGA : ../FPGA/BMF_FPGA ;
+use-project /POrderRouting : ../OrderRoutingCode ;
+use-project /PBaseUtils : ../BaseUtilsCode ;
+use-project /POptionsUtils : ../OptionsUtilsCode ;
+use-project /PMarketAdapter : ../MarketAdapterCode ;
+use-project /PVolatileTradingInfo : ../VolatileTradingInfo ;
+
+exe console_trader
+    : smart_console_trader.cpp live_products_manager.cpp
+      /POrderRouting//libOrderRouting
+      /PDVCC//CommonTradeUtils
+      /PDVCC//CDef
+      /PDVCC//CommonDataStructures
+      /PDVCC//ExternalData
+      /PDVCC//TradingInfo
+      /PDVCC//Profiler
+      /PDVCC//Utils
+      /PBaseUtils//libBaseUtils
+      /POptionsUtils//libOptionsUtils
+      /PBaseUtils//libBaseUtils
+      /PMarketAdapter//libMarketAdapter
+      /PVolatileTradingInfo//libVolatileTradingInfo
+      /PFPGA//FpgaHeader
+      /spare/local/lib/tcpdirect/libonload_zf_static.a
+    :
+    : <variant>debug <variant>release
+      <linkflags>-lpthread
+      <linkflags>-lnsmsg
+    ;
+
+exe bse_console_trader
+    : bse_smart_console_trader.cpp
+      /POrderRouting//libOrderRouting
+      /PDVCC//CommonTradeUtils
+      /PDVCC//CDef
+      /PDVCC//CommonDataStructures
+      /PDVCC//ExternalData
+      /PDVCC//TradingInfo
+      /PDVCC//Profiler
+      /PDVCC//Utils
+      /PBaseUtils//libBaseUtils
+      /POptionsUtils//libOptionsUtils
+      /PBaseUtils//libBaseUtils
+      /PMarketAdapter//libMarketAdapter
+      /PVolatileTradingInfo//libVolatileTradingInfo
+      /PFPGA//FpgaHeader
+    :
+    : <variant>debug <variant>release
+      <linkflags>-lpthread
+      <linkflags>-lnsmsg
+    ;
+
+exe multi_console_trader
+    : multi_smart_console_trader.cpp
+      /POrderRouting//libOrderRouting
+      /PDVCC//CommonTradeUtils
+      /PDVCC//CDef
+      /PDVCC//CommonDataStructures
+      /PDVCC//ExternalData
+      /PDVCC//TradingInfo
+      /PDVCC//Profiler
+      /PDVCC//Utils
+      /PBaseUtils//libBaseUtils
+      /POptionsUtils//libOptionsUtils
+      /PBaseUtils//libBaseUtils
+      /PMarketAdapter//libMarketAdapter
+      /PVolatileTradingInfo//libVolatileTradingInfo
+      /PFPGA//FpgaHeader
+    :
+    : <variant>debug <variant>release
+      <linkflags>-lpthread
+      <linkflags>-lnsmsg
+    ;
+
+exe multi_prod_console_trader
+    : multi_prod_smart_console_trader.cpp
+      /POrderRouting//libOrderRouting
+      /PDVCC//CommonTradeUtils
+      /PDVCC//CDef
+      /PDVCC//CommonDataStructures
+      /PDVCC//ExternalData
+      /PDVCC//TradingInfo
+      /PDVCC//Profiler
+      /PDVCC//Utils
+      /PBaseUtils//libBaseUtils
+      /POptionsUtils//libOptionsUtils
+      /PBaseUtils//libBaseUtils
+      /PMarketAdapter//libMarketAdapter
+      /PVolatileTradingInfo//libVolatileTradingInfo
+      /PFPGA//FpgaHeader
+    :
+    : <variant>debug <variant>release
+      <linkflags>-lpthread
+      <linkflags>-lnsmsg
+    ;
+
+exe bse_multi_prod_console_trader
+    : bse_multi_prod_smart_console_trader.cpp live_products_manager.cpp
+      /POrderRouting//libOrderRouting
+      /PDVCC//CommonTradeUtils
+      /PDVCC//CDef
+      /PDVCC//CommonDataStructures
+      /PDVCC//ExternalData
+      /PDVCC//TradingInfo
+      /PDVCC//Profiler
+      /PDVCC//Utils
+      /PBaseUtils//libBaseUtils
+      /POptionsUtils//libOptionsUtils
+      /PBaseUtils//libBaseUtils
+      /PMarketAdapter//libMarketAdapter
+      /PVolatileTradingInfo//libVolatileTradingInfo
+      /PFPGA//FpgaHeader
+      /spare/local/lib/tcpdirect/libonload_zf_static.a
+    :
+    : <variant>debug <variant>release
+      <linkflags>-lpthread
+      <linkflags>-lnsmsg
+    ;
+
+#exe bmf_fpga_data_daemon
+#    : # sources
+#      bmf_fpga_data_daemon.cpp
+#      /PDVCC//Utils
+#      /PDVCC//CDef
+#      /PDVCC//CommonTradeUtils
+#      /PDVCC//Profiler
+#      /PBMFFPGA//BmfFpgaHeader
+#    :
+#    : <variant>debug <variant>release
+#      <linkflags>-lpthread
+#      <linkflags>-lnsmsg
+#      <linkflags>-lsqlite3
+#    ;
+
+exe cme_fpga_data_logger
+    : # sources
+      fpga_data_logger.cpp
+      /PDVCC//Utils
+      /PDVCC//CDef
+      /PDVCC//CommonTradeUtils
+      /PFPGA//FpgaHeader
+    :
+    : <variant>debug <variant>release
+      <linkflags>-lpthread
+      <linkflags>-lnsmsg
+      <linkflags>-lsqlite3
+    ;
+
+exe check_cme_ors_mkt_arb_instances
+    : check_cme_ors_mkt_arb_instances.cpp
+      /PDVCC//CDef
+      /PDVCC//ExternalData
+      /PDVCC//CommonTradeUtils
+      /PDVCC//CommonDataStructures
+      /PMarketAdapter//libMarketAdapter
+      /PLoggedSources//libLoggedSources
+    : 
+    <linkflags>-lboost_date_time
+    : <variant>debug <variant>release
+    ;
+
+exe cme_ors_mkt_arb
+    : cme_ors_mkt_arb.cpp
+      /PDVCC//CDef
+      /PDVCC//ExternalData
+      /PDVCC//CommonTradeUtils
+      /PDVCC//CommonDataStructures
+      /PDVCC//TradingInfo
+      /PDVCC//Profiler
+      /PMarketAdapter//libMarketAdapter
+      /PLoggedSources//libLoggedSources
+    : 
+    <linkflags>-lboost_date_time
+    : <variant>debug <variant>release
+    ;
+exe throttle_ors_update
+    : throttle_ors_update.cpp
+      /POrderRouting//libOrderRouting
+      /PDVCC//CommonTradeUtils
+      /PDVCC//CDef
+      /PDVCC//CommonDataStructures
+      /PDVCC//ExternalData
+      /PDVCC//TradingInfo
+      /PDVCC//Profiler
+      /PDVCC//Utils
+      /PBaseUtils//libBaseUtils
+      /POptionsUtils//libOptionsUtils
+      /PBaseUtils//libBaseUtils
+      /PMarketAdapter//libMarketAdapter
+      /PVolatileTradingInfo//libVolatileTradingInfo
+      /PFPGA//FpgaHeader
+    :
+    : <variant>debug <variant>release
+      <linkflags>-lpthread
+      <linkflags>-lnsmsg
+    ;
+
+exe get_bse_commission
+    : get_bse_commission.cpp
+      /PDVCC//Utils
+      /PDVCC//CDef
+      /PDVCC//CommonDataStructures
+      /PDVCC//CommonTradeUtils
+      /PVolatileTradingInfo//libVolatileTradingInfo
+    :
+    <linkflags>-lboost_date_time
+    : <variant>debug <variant>release
+    ;
+
+exe get_nse_commission
+    : get_nse_commission.cpp
+      /PDVCC//Utils
+      /PDVCC//CDef
+      /PDVCC//CommonDataStructures
+      /PDVCC//CommonTradeUtils
+      /PVolatileTradingInfo//libVolatileTradingInfo
+    :
+    <linkflags>-lboost_date_time
+    : <variant>debug <variant>release
+    ;
+
+
+exe get_commission_from_shortcode_file
+    : get_commission_from_shortcode_file.cpp
+      /PDVCC//Utils
+      /PDVCC//CDef
+      /PDVCC//CommonDataStructures
+      /PDVCC//CommonTradeUtils
+      /PVolatileTradingInfo//libVolatileTradingInfo
+    :
+    <linkflags>-lboost_date_time
+    : <variant>debug <variant>release
+    ;
+
+
+exe get_commission_from_shortcode
+    : get_commission_from_shortcode.cpp
+      /PDVCC//Utils
+      /PDVCC//CDef
+      /PDVCC//CommonDataStructures
+      /PDVCC//CommonTradeUtils
+      /PVolatileTradingInfo//libVolatileTradingInfo
+    :
+    <linkflags>-lboost_date_time
+    : <variant>debug <variant>release
+    ;
+
+
+exe get_contract_specs
+    : get_contract_specs.cpp
+      /PDVCC//Utils
+      /PDVCC//CommonTradeUtils
+      /PVolatileTradingInfo//libVolatileTradingInfo
+    :
+    <linkflags>-lboost_date_time
+    : <variant>debug <variant>release
+    ;
+
+exe our_extended_bidask_mkt_book_util_nse_web_multishm
+    : our_extended_bidask_mkt_book_util_nse_web_multishm.cpp
+      /PDVCC//CDef
+      /PDVCC//TradingInfo
+      /POptionsUtils//libOptionsUtils
+      /PDVCC//CommonTradeUtils
+      /PDVCC//ExternalData
+      /PMarketAdapter//libMarketAdapter
+      /POrderRouting//libOrderRouting
+      /PVolatileTradingInfo//libVolatileTradingInfo
+      /PSmartOrderRouting//libSmartOrderRouting
+      /PSimPnls//libSimPnls
+      /PDVCC//Profiler
+      /PDVCC//TradingInfo
+      /PBaseUtils//libBaseUtils
+      /PDVCC//Utils
+      /PDVCC//CommonDataStructures
+    :
+    : <variant>debug <variant>release
+      <linkflags>-lpthread
+      <linkflags>-lnsmsg
+    ;
+
+exe our_extended_bidask_mkt_book_util_generic_web_multishm
+    : our_extended_bidask_mkt_book_util_generic_web_multishm.cpp live_products_manager.cpp
+      /PDVCC//CDef
+      /PDVCC//TradingInfo
+      /POptionsUtils//libOptionsUtils
+      /PDVCC//CommonTradeUtils
+      /PDVCC//ExternalData
+      /PMarketAdapter//libMarketAdapter
+      /POrderRouting//libOrderRouting
+      /PVolatileTradingInfo//libVolatileTradingInfo
+      /PSmartOrderRouting//libSmartOrderRouting
+      /PSimPnls//libSimPnls
+      /PDVCC//Profiler
+      /PDVCC//TradingInfo
+      /PBaseUtils//libBaseUtils
+      /PDVCC//Utils
+      /PDVCC//CommonDataStructures
+      /spare/local/lib/tcpdirect/libonload_zf_static.a
+    :
+    : <variant>debug <variant>release
+      <linkflags>-lpthread
+      <linkflags>-lnsmsg
+   ;
+      
+exe simple_console_trader
+    : simple_console_trader.cpp
+      /POrderRouting//libOrderRouting
+      /PDVCC//CommonTradeUtils
+      /PDVCC//CDef
+      /PDVCC//CommonDataStructures
+      /PDVCC//ExternalData
+      /PDVCC//TradingInfo
+      /PDVCC//Profiler
+      /PDVCC//Utils
+      /PBaseUtils//libBaseUtils
+      /POptionsUtils//libOptionsUtils
+      /PBaseUtils//libBaseUtils
+      /PMarketAdapter//libMarketAdapter
+      /PVolatileTradingInfo//libVolatileTradingInfo
+      /PFPGA//FpgaHeader
+    :
+    : <variant>debug <variant>release
+      <linkflags>-lpthread
+      <linkflags>-lnsmsg
+    ;
+
+exe get_price_info_for_day
+    : get_price_info_for_day.cpp
+      /PDVCC//CDef
+      /POptionsUtils//libOptionsUtils
+      /PDVCC//CommonTradeUtils
+      /PLoggedSources//libLoggedSources
+      /PDVCC//Profiler
+      /PDVCC//TradingInfo
+      /PDVCC//ExternalData
+      /PMarketAdapter//libMarketAdapter
+      /POrderRouting//libOrderRouting
+      /PBaseUtils//libBaseUtils
+      /PDVCC//Utils
+      /PDVCC//CommonDataStructures
+    :
+    : <variant>debug <variant>release
+      <linkflags>-lpthread
+      <linkflags>-lnsmsg
+    ;
+
+
+install install-bin
+    : console_trader simple_console_trader multi_console_trader multi_prod_console_trader cme_fpga_data_logger cme_ors_mkt_arb throttle_ors_update get_contract_specs get_bse_commission bse_console_trader our_extended_bidask_mkt_book_util_nse_web_multishm our_extended_bidask_mkt_book_util_generic_web_multishm get_nse_commission get_commission_from_shortcode get_commission_from_shortcode_file get_price_info_for_day bse_multi_prod_console_trader
+    : <variant>release:<location>"$(PROJECT_BIN_INSTALL)"
+      <variant>debug:<location>"$(PROJECT_BIN_INSTALL_DEBUG)"
+        : release debug
+    ;

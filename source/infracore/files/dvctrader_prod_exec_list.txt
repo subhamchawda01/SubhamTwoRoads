@@ -1,0 +1,3 @@
+/home/pengine/codebase/devmodel_install/bin/get_exchange_symbol
+/home/pengine/codebase/devtrade_install/bin/tradeinit
+/home/pengine/codebase/devtrade_install/bin/user_msg

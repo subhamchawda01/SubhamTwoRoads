@@ -1,0 +1,46 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<?xml-stylesheet type="text/xsl" href="./ClientHTML.xsl"?><protocol>
+<version>351</version>
+<revisions>
+    <revision type="Final" version="351" author="MNI News" date="03/13/2017"/>
+  </revisions>
+<category name="BE_BNB_BUSINESS_SENTIMENT">
+<description>Belgium National Bank Sentiment</description>
+<country>BE</country>
+<category_id>60001</category_id>
+<data>
+<datum>
+<short_description>Current month BNB Business Sentiment</short_description>
+<description>Current Month, Belgium National Business Sentiment Index</description>
+<datum_type>index</datum_type>
+<datum_id>1</datum_id>
+</datum>
+</data>
+<messages>
+<message>
+<message_type>release</message_type>
+<message_version>1</message_version>
+<multicast_group>EU_GROUP_2</multicast_group>
+<fields>
+<field>
+<datum_id>1</datum_id>
+<field_type>float</field_type>
+<example_value>0.7</example_value>
+</field>
+</fields>
+</message>
+<message>
+<message_type>estimate</message_type>
+<message_version>1</message_version>
+<multicast_group>EU_ESTIMATES</multicast_group>
+<fields>
+<field>
+<datum_id>1</datum_id>
+<field_type>float</field_type>
+<example_value>0.7</example_value>
+</field>
+</fields>
+</message>
+</messages>
+</category>
+</protocol>

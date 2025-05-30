@@ -1,0 +1,229 @@
+0000000000000000000000000000000000000000 908c35791c2d787b42d0ca51dc4dff4f70cba3d1 subhamchawda01 <subham.chawda@tworoads-trading.co.in> 1630990334 +0000	clone: from https://github.com/two-roads-trading-pvt-ltd/dvccode.git
+908c35791c2d787b42d0ca51dc4dff4f70cba3d1 50872d7b7b4ee6e3c71c78bc7cc4eb033cee3ff1 subhamchawda01 <subham.chawda@tworoads-trading.co.in> 1639703488 +0000	pull: Fast-forward
+50872d7b7b4ee6e3c71c78bc7cc4eb033cee3ff1 50872d7b7b4ee6e3c71c78bc7cc4eb033cee3ff1 subhamchawda01 <subham.chawda@tworoads-trading.co.in> 1639727396 +0000	checkout: moving from master to local_disk_handling
+50872d7b7b4ee6e3c71c78bc7cc4eb033cee3ff1 a1077b296637bf5291fbb46ead934f48af5c7268 subhamchawda01 <subham.chawda@tworoads-trading.co.in> 1639727452 +0000	commit: ComputeNextExpiryCurrency issue fix
+a1077b296637bf5291fbb46ead934f48af5c7268 50872d7b7b4ee6e3c71c78bc7cc4eb033cee3ff1 subhamchawda01 <subham.chawda@tworoads-trading.co.in> 1642490601 +0000	checkout: moving from local_disk_handling to master
+50872d7b7b4ee6e3c71c78bc7cc4eb033cee3ff1 6e20f606875ae2ecbf7eeb3d656072fd8cbd3ced subhamchawda01 <subham.chawda@tworoads-trading.co.in> 1642490607 +0000	pull: Fast-forward
+6e20f606875ae2ecbf7eeb3d656072fd8cbd3ced e0207c0342840f4bab5bf3a2311569609224a399 subhamchawda01 <subham.chawda@tworoads-trading.co.in> 1642490621 +0000	checkout: moving from master to T2T_2020
+e0207c0342840f4bab5bf3a2311569609224a399 6e20f606875ae2ecbf7eeb3d656072fd8cbd3ced subhamchawda01 <subham.chawda@tworoads-trading.co.in> 1642490863 +0000	checkout: moving from T2T_2020 to master
+6e20f606875ae2ecbf7eeb3d656072fd8cbd3ced e0207c0342840f4bab5bf3a2311569609224a399 subhamchawda01 <subham.chawda@tworoads-trading.co.in> 1642490889 +0000	checkout: moving from master to T2T_2020
+e0207c0342840f4bab5bf3a2311569609224a399 6e20f606875ae2ecbf7eeb3d656072fd8cbd3ced subhamchawda01 <subham.chawda@tworoads-trading.co.in> 1643056308 +0000	checkout: moving from T2T_2020 to master
+6e20f606875ae2ecbf7eeb3d656072fd8cbd3ced eeaa7ecbcc90fac152ec4bbc1548c1e9d50a42bb subhamchawda01 <subham.chawda@tworoads-trading.co.in> 1647250773 +0000	pull: Fast-forward
+eeaa7ecbcc90fac152ec4bbc1548c1e9d50a42bb 3941df3a2a8dee4ce4a51e7fdda5ba3e3166fd11 subhamchawda01 <subham.chawda@tworoads-trading.co.in> 1652687906 +0000	pull: Fast-forward
+3941df3a2a8dee4ce4a51e7fdda5ba3e3166fd11 37066934ae5ff8cae5b3fd88ee8aa3b4d67d1133 subhamchawda01 <subham.chawda@tworoads-trading.co.in> 1652687910 +0000	checkout: moving from master to BSE_ETI_20220407
+37066934ae5ff8cae5b3fd88ee8aa3b4d67d1133 7f0ab913187496c7c029f19a6b0bbfe99d704822 subhamchawda01 <subham.chawda@tworoads-trading.co.in> 1652688199 +0000	pull: Fast-forward
+7f0ab913187496c7c029f19a6b0bbfe99d704822 3941df3a2a8dee4ce4a51e7fdda5ba3e3166fd11 subhamchawda01 <subham.chawda@tworoads-trading.co.in> 1652769458 +0000	checkout: moving from BSE_ETI_20220407 to master
+3941df3a2a8dee4ce4a51e7fdda5ba3e3166fd11 051c558f37dae4385d95cb773309c24364421682 subhamchawda01 <subham.chawda@tworoads-trading.co.in> 1655801160 +0000	pull: Fast-forward
+051c558f37dae4385d95cb773309c24364421682 ae4cc250bddf06fa8a647703f26a614a45a28fd3 subhamchawda01 <subham.chawda@tworoads-trading.co.in> 1659615154 +0000	pull: Fast-forward
+ae4cc250bddf06fa8a647703f26a614a45a28fd3 ae4cc250bddf06fa8a647703f26a614a45a28fd3 subhamchawda01 <subham.chawda@tworoads-trading.co.in> 1661147182 +0000	checkout: moving from master to THROTTLE_MAX_OF
+ae4cc250bddf06fa8a647703f26a614a45a28fd3 78fd9e76fb27e63c927c85927d7e671680814e96 subhamchawda01 <subham.chawda@tworoads-trading.co.in> 1661147201 +0000	commit: added max count OF
+78fd9e76fb27e63c927c85927d7e671680814e96 ae4cc250bddf06fa8a647703f26a614a45a28fd3 subhamchawda01 <subham.chawda@tworoads-trading.co.in> 1661147216 +0000	checkout: moving from THROTTLE_MAX_OF to master
+ae4cc250bddf06fa8a647703f26a614a45a28fd3 dbcc02356b1d47a83610b2b94d1881381bc2238a subhamchawda01 <subham.chawda@tworoads-trading.co.in> 1661147224 +0000	pull: Fast-forward
+dbcc02356b1d47a83610b2b94d1881381bc2238a 78fd9e76fb27e63c927c85927d7e671680814e96 subhamchawda01 <subham.chawda@tworoads-trading.co.in> 1661147235 +0000	checkout: moving from master to THROTTLE_MAX_OF
+78fd9e76fb27e63c927c85927d7e671680814e96 f279210ae1fe069fa7781841afee9cbad7006b1a subhamchawda01 <subham.chawda@tworoads-trading.co.in> 1661147258 +0000	merge origin/master: Merge made by the 'recursive' strategy.
+f279210ae1fe069fa7781841afee9cbad7006b1a dbcc02356b1d47a83610b2b94d1881381bc2238a subhamchawda01 <subham.chawda@tworoads-trading.co.in> 1661147718 +0000	checkout: moving from THROTTLE_MAX_OF to master
+dbcc02356b1d47a83610b2b94d1881381bc2238a dbcc02356b1d47a83610b2b94d1881381bc2238a subhamchawda01 <subham.chawda@tworoads-trading.co.in> 1662100137 +0000	checkout: moving from master to ORS_REPORT_FO
+dbcc02356b1d47a83610b2b94d1881381bc2238a 8d5f059ac24da64c00a551fa5a802631974dc831 subhamchawda01 <subham.chawda@tworoads-trading.co.in> 1662100149 +0000	commit: ors report fo changes
+8d5f059ac24da64c00a551fa5a802631974dc831 dbcc02356b1d47a83610b2b94d1881381bc2238a subhamchawda01 <subham.chawda@tworoads-trading.co.in> 1662100174 +0000	checkout: moving from ORS_REPORT_FO to master
+dbcc02356b1d47a83610b2b94d1881381bc2238a d603a7f83afb8239188506c8030c8bbf64f91511 subhamchawda01 <subham.chawda@tworoads-trading.co.in> 1662100180 +0000	pull: Fast-forward
+d603a7f83afb8239188506c8030c8bbf64f91511 8d5f059ac24da64c00a551fa5a802631974dc831 subhamchawda01 <subham.chawda@tworoads-trading.co.in> 1662100192 +0000	checkout: moving from master to ORS_REPORT_FO
+8d5f059ac24da64c00a551fa5a802631974dc831 8c1df3cee8f8566f8d23bfbcac6d31a88adaa944 subhamchawda01 <subham.chawda@tworoads-trading.co.in> 1662100214 +0000	merge origin/master: Merge made by the 'recursive' strategy.
+8c1df3cee8f8566f8d23bfbcac6d31a88adaa944 d603a7f83afb8239188506c8030c8bbf64f91511 subhamchawda01 <subham.chawda@tworoads-trading.co.in> 1662100515 +0000	checkout: moving from ORS_REPORT_FO to master
+d603a7f83afb8239188506c8030c8bbf64f91511 b6e78cd205ed249e8f6e748368d7ed0d2669d05f subhamchawda01 <subham.chawda@tworoads-trading.co.in> 1662964280 +0000	pull: Fast-forward
+b6e78cd205ed249e8f6e748368d7ed0d2669d05f 33fcdaa708ea23a6e8142de84292606a4acad833 subhamchawda01 <subham.chawda@tworoads-trading.co.in> 1662964378 +0000	checkout: moving from master to CRYPTO_DATA_READ
+33fcdaa708ea23a6e8142de84292606a4acad833 53fc90682dcfde9f655735f156f2003047e4eb39 subhamchawda01 <subham.chawda@tworoads-trading.co.in> 1663224897 +0000	commit: view changes bid ask
+53fc90682dcfde9f655735f156f2003047e4eb39 b6e78cd205ed249e8f6e748368d7ed0d2669d05f subhamchawda01 <subham.chawda@tworoads-trading.co.in> 1663573625 +0000	checkout: moving from CRYPTO_DATA_READ to master
+b6e78cd205ed249e8f6e748368d7ed0d2669d05f ecce64d099fd88cabbbe517a7a9a3570e8dffb5c subhamchawda01 <subham.chawda@tworoads-trading.co.in> 1664277359 +0000	pull: Fast-forward
+ecce64d099fd88cabbbe517a7a9a3570e8dffb5c ecce64d099fd88cabbbe517a7a9a3570e8dffb5c subhamchawda01 <subham.chawda@tworoads-trading.co.in> 1666068840 +0000	checkout: moving from master to FO_ORS_REPORT
+ecce64d099fd88cabbbe517a7a9a3570e8dffb5c 299fd1a063788717f025dbfbf8373649c19c5c45 subhamchawda01 <subham.chawda@tworoads-trading.co.in> 1666069098 +0000	commit: added 2sec sleep in ors report live
+299fd1a063788717f025dbfbf8373649c19c5c45 ecce64d099fd88cabbbe517a7a9a3570e8dffb5c subhamchawda01 <subham.chawda@tworoads-trading.co.in> 1666069151 +0000	checkout: moving from FO_ORS_REPORT to master
+ecce64d099fd88cabbbe517a7a9a3570e8dffb5c ddddfcbf77ee942e9e4983d99fa6b3b769cf5a55 subhamchawda01 <subham.chawda@tworoads-trading.co.in> 1666069164 +0000	pull: Fast-forward
+ddddfcbf77ee942e9e4983d99fa6b3b769cf5a55 299fd1a063788717f025dbfbf8373649c19c5c45 subhamchawda01 <subham.chawda@tworoads-trading.co.in> 1666069172 +0000	checkout: moving from master to FO_ORS_REPORT
+299fd1a063788717f025dbfbf8373649c19c5c45 4b500ec1742b9c88a54c9ea2505c20b0663d57d2 subhamchawda01 <subham.chawda@tworoads-trading.co.in> 1666069199 +0000	merge origin/master: Merge made by the 'recursive' strategy.
+4b500ec1742b9c88a54c9ea2505c20b0663d57d2 ddddfcbf77ee942e9e4983d99fa6b3b769cf5a55 subhamchawda01 <subham.chawda@tworoads-trading.co.in> 1666069619 +0000	checkout: moving from FO_ORS_REPORT to master
+ddddfcbf77ee942e9e4983d99fa6b3b769cf5a55 49dbe10cf2af4963c0d9064fa56fab21f712d78c subhamchawda01 <subham.chawda@tworoads-trading.co.in> 1666069626 +0000	pull: Fast-forward
+49dbe10cf2af4963c0d9064fa56fab21f712d78c 49dbe10cf2af4963c0d9064fa56fab21f712d78c subhamchawda01 <subham.chawda@tworoads-trading.co.in> 1666070111 +0000	checkout: moving from master to SLACK_EXEC
+49dbe10cf2af4963c0d9064fa56fab21f712d78c fc36fd997013a446f0690af5420ca7283527edcd subhamchawda01 <subham.chawda@tworoads-trading.co.in> 1666070132 +0000	commit: added new slack channel for BSE
+fc36fd997013a446f0690af5420ca7283527edcd 49dbe10cf2af4963c0d9064fa56fab21f712d78c subhamchawda01 <subham.chawda@tworoads-trading.co.in> 1666070153 +0000	checkout: moving from SLACK_EXEC to master
+49dbe10cf2af4963c0d9064fa56fab21f712d78c fc36fd997013a446f0690af5420ca7283527edcd subhamchawda01 <subham.chawda@tworoads-trading.co.in> 1666070167 +0000	checkout: moving from master to SLACK_EXEC
+fc36fd997013a446f0690af5420ca7283527edcd 49dbe10cf2af4963c0d9064fa56fab21f712d78c subhamchawda01 <subham.chawda@tworoads-trading.co.in> 1666070293 +0000	checkout: moving from SLACK_EXEC to master
+49dbe10cf2af4963c0d9064fa56fab21f712d78c f8ab6381c32cb5daa9b583ebbfe5aaa7abffe8a5 subhamchawda01 <subham.chawda@tworoads-trading.co.in> 1668414571 +0000	pull: Fast-forward
+f8ab6381c32cb5daa9b583ebbfe5aaa7abffe8a5 f8ab6381c32cb5daa9b583ebbfe5aaa7abffe8a5 subhamchawda01 <subham.chawda@tworoads-trading.co.in> 1668423387 +0000	checkout: moving from master to STRUCT_TIMESTAMP
+f8ab6381c32cb5daa9b583ebbfe5aaa7abffe8a5 732f274d7dc9cb75fe1090cf9163331dde63ff2e subhamchawda01 <subham.chawda@tworoads-trading.co.in> 1668423623 +0000	commit: watch nsec time issue in trade logs
+732f274d7dc9cb75fe1090cf9163331dde63ff2e f8ab6381c32cb5daa9b583ebbfe5aaa7abffe8a5 subhamchawda01 <subham.chawda@tworoads-trading.co.in> 1671088318 +0000	checkout: moving from STRUCT_TIMESTAMP to master
+f8ab6381c32cb5daa9b583ebbfe5aaa7abffe8a5 f741a990566c61e6ec645d5dc5cd43dd843e2956 subhamchawda01 <subham.chawda@tworoads-trading.co.in> 1671088326 +0000	pull: Fast-forward
+f741a990566c61e6ec645d5dc5cd43dd843e2956 63d1f43047ebea40128afb046382eb65b227b731 subhamchawda01 <subham.chawda@tworoads-trading.co.in> 1673803278 +0000	checkout: moving from master to Crypto_coinbase
+63d1f43047ebea40128afb046382eb65b227b731 cde1ff5e4da7ef9e373edf3c735b3dd172ce1953 subhamchawda01 <subham.chawda@tworoads-trading.co.in> 1673803284 +0000	pull: Fast-forward
+cde1ff5e4da7ef9e373edf3c735b3dd172ce1953 f741a990566c61e6ec645d5dc5cd43dd843e2956 subhamchawda01 <subham.chawda@tworoads-trading.co.in> 1673803481 +0000	checkout: moving from Crypto_coinbase to master
+f741a990566c61e6ec645d5dc5cd43dd843e2956 31aeb241342d3aea186a0f15ab49a4b2e73ce3e5 subhamchawda01 <subham.chawda@tworoads-trading.co.in> 1673803490 +0000	pull: Fast-forward
+31aeb241342d3aea186a0f15ab49a4b2e73ce3e5 e212f9fb56aafc0ee7c62f415dcc40989bcb9841 subhamchawda01 <subham.chawda@tworoads-trading.co.in> 1674192694 +0000	pull: Fast-forward
+e212f9fb56aafc0ee7c62f415dcc40989bcb9841 6604872a35c64b64e8d59317613467eee8f8c989 subhamchawda01 <subham.chawda@tworoads-trading.co.in> 1674640656 +0000	pull: Fast-forward
+6604872a35c64b64e8d59317613467eee8f8c989 32fea1c31c0ccd57996b4892b49199393527f851 subhamchawda01 <subham.chawda@tworoads-trading.co.in> 1675152814 +0000	pull: Fast-forward
+32fea1c31c0ccd57996b4892b49199393527f851 32fea1c31c0ccd57996b4892b49199393527f851 subhamchawda01 <subham.chawda@tworoads-trading.co.in> 1675157842 +0000	checkout: moving from master to INDEX_BHAV
+32fea1c31c0ccd57996b4892b49199393527f851 29cb91a81bd68d8e0e4cc08721bac1c0c1ca2656 subhamchawda01 <subham.chawda@tworoads-trading.co.in> 1675157879 +0000	commit: added handling for index bhav
+29cb91a81bd68d8e0e4cc08721bac1c0c1ca2656 32fea1c31c0ccd57996b4892b49199393527f851 subhamchawda01 <subham.chawda@tworoads-trading.co.in> 1675158133 +0000	checkout: moving from INDEX_BHAV to master
+32fea1c31c0ccd57996b4892b49199393527f851 32fea1c31c0ccd57996b4892b49199393527f851 subhamchawda01 <subham.chawda@tworoads-trading.co.in> 1676972158 +0000	checkout: moving from master to L1_LOGGED_DATA
+32fea1c31c0ccd57996b4892b49199393527f851 4ca090d9b693f2419b9944cd5a01b77a3afaaf93 subhamchawda01 <subham.chawda@tworoads-trading.co.in> 1676972207 +0000	commit: mkt_trade_logger with L1 data handling
+4ca090d9b693f2419b9944cd5a01b77a3afaaf93 eabdd62ff6131f7b99b7969f5c5fcf3e4e45a544 subhamchawda01 <subham.chawda@tworoads-trading.co.in> 1677578938 +0000	commit: invalid price in trade book
+eabdd62ff6131f7b99b7969f5c5fcf3e4e45a544 73051731b44403723a86439106fa11e405334cd6 subhamchawda01 <subham.chawda@tworoads-trading.co.in> 1677644214 +0000	commit: added intermediate field in l1 structure
+73051731b44403723a86439106fa11e405334cd6 32fea1c31c0ccd57996b4892b49199393527f851 subhamchawda01 <subham.chawda@tworoads-trading.co.in> 1681716137 +0000	checkout: moving from L1_LOGGED_DATA to master
+32fea1c31c0ccd57996b4892b49199393527f851 3d21dba786e2f096061a6aade29c60cfdefd7c00 subhamchawda01 <subham.chawda@tworoads-trading.co.in> 1681716143 +0000	pull: Fast-forward
+3d21dba786e2f096061a6aade29c60cfdefd7c00 cc726b812452e4dab16faf35251763e03871dd3c subhamchawda01 <subham.chawda@tworoads-trading.co.in> 1682061046 +0000	checkout: moving from master to LOG_LIVE_BARDATA
+cc726b812452e4dab16faf35251763e03871dd3c 3d21dba786e2f096061a6aade29c60cfdefd7c00 subhamchawda01 <subham.chawda@tworoads-trading.co.in> 1682068879 +0000	checkout: moving from LOG_LIVE_BARDATA to master
+3d21dba786e2f096061a6aade29c60cfdefd7c00 cc726b812452e4dab16faf35251763e03871dd3c subhamchawda01 <subham.chawda@tworoads-trading.co.in> 1682315497 +0000	checkout: moving from master to LOG_LIVE_BARDATA
+cc726b812452e4dab16faf35251763e03871dd3c 3d21dba786e2f096061a6aade29c60cfdefd7c00 subhamchawda01 <subham.chawda@tworoads-trading.co.in> 1684135821 +0000	checkout: moving from LOG_LIVE_BARDATA to master
+3d21dba786e2f096061a6aade29c60cfdefd7c00 46aaefb0a3622e507089ef6293f2c71f54ec9a09 subhamchawda01 <subham.chawda@tworoads-trading.co.in> 1684135827 +0000	pull: Fast-forward
+46aaefb0a3622e507089ef6293f2c71f54ec9a09 cc726b812452e4dab16faf35251763e03871dd3c subhamchawda01 <subham.chawda@tworoads-trading.co.in> 1684465632 +0000	checkout: moving from master to LOG_LIVE_BARDATA
+cc726b812452e4dab16faf35251763e03871dd3c e48577bd29ecb8ff1d98b475582a6d772000f7a3 subhamchawda01 <subham.chawda@tworoads-trading.co.in> 1684465638 +0000	pull: Fast-forward
+e48577bd29ecb8ff1d98b475582a6d772000f7a3 46aaefb0a3622e507089ef6293f2c71f54ec9a09 subhamchawda01 <subham.chawda@tworoads-trading.co.in> 1687261736 +0000	checkout: moving from LOG_LIVE_BARDATA to master
+46aaefb0a3622e507089ef6293f2c71f54ec9a09 9f3bb588cff53543da4805de7180dc0801a04f81 subhamchawda01 <subham.chawda@tworoads-trading.co.in> 1687261744 +0000	pull: Fast-forward
+9f3bb588cff53543da4805de7180dc0801a04f81 1802d385f54679acca2722de19330528c23b677e subhamchawda01 <subham.chawda@tworoads-trading.co.in> 1687263150 +0000	checkout: moving from master to BANKNIFTY_EXPIRY_CHANGES
+1802d385f54679acca2722de19330528c23b677e 1802d385f54679acca2722de19330528c23b677e subhamchawda01 <subham.chawda@tworoads-trading.co.in> 1687342927 +0000	checkout: moving from BANKNIFTY_EXPIRY_CHANGES to ORS_FO_REPORT
+1802d385f54679acca2722de19330528c23b677e 9f3bb588cff53543da4805de7180dc0801a04f81 subhamchawda01 <subham.chawda@tworoads-trading.co.in> 1687342989 +0000	checkout: moving from ORS_FO_REPORT to master
+9f3bb588cff53543da4805de7180dc0801a04f81 9f3bb588cff53543da4805de7180dc0801a04f81 subhamchawda01 <subham.chawda@tworoads-trading.co.in> 1687343073 +0000	checkout: moving from master to ORS_FO_REPORT
+9f3bb588cff53543da4805de7180dc0801a04f81 1802d385f54679acca2722de19330528c23b677e subhamchawda01 <subham.chawda@tworoads-trading.co.in> 1687343087 +0000	checkout: moving from ORS_FO_REPORT to BANKNIFTY_EXPIRY_CHANGES
+1802d385f54679acca2722de19330528c23b677e 9f3bb588cff53543da4805de7180dc0801a04f81 subhamchawda01 <subham.chawda@tworoads-trading.co.in> 1687343097 +0000	checkout: moving from BANKNIFTY_EXPIRY_CHANGES to ORS_FO_REPORT
+9f3bb588cff53543da4805de7180dc0801a04f81 1802d385f54679acca2722de19330528c23b677e subhamchawda01 <subham.chawda@tworoads-trading.co.in> 1687343127 +0000	merge origin/BANKNIFTY_EXPIRY_CHANGES: Fast-forward
+1802d385f54679acca2722de19330528c23b677e 59aff564210b65fa676039db26abedd908061602 subhamchawda01 <subham.chawda@tworoads-trading.co.in> 1687347531 +0000	commit: added new machine details ors reply report fo
+59aff564210b65fa676039db26abedd908061602 9f3bb588cff53543da4805de7180dc0801a04f81 subhamchawda01 <subham.chawda@tworoads-trading.co.in> 1687928433 +0000	checkout: moving from ORS_FO_REPORT to master
+9f3bb588cff53543da4805de7180dc0801a04f81 2c0ab93ce0692ada69a3f67568304c24d789006a subhamchawda01 <subham.chawda@tworoads-trading.co.in> 1687928439 +0000	pull: Fast-forward
+2c0ab93ce0692ada69a3f67568304c24d789006a e48577bd29ecb8ff1d98b475582a6d772000f7a3 subhamchawda01 <subham.chawda@tworoads-trading.co.in> 1688629127 +0000	checkout: moving from master to LOG_LIVE_BARDATA
+e48577bd29ecb8ff1d98b475582a6d772000f7a3 7c811d4fb6a907495e5c256a9982201142b48919 subhamchawda01 <subham.chawda@tworoads-trading.co.in> 1688629135 +0000	pull: Fast-forward
+7c811d4fb6a907495e5c256a9982201142b48919 2c0ab93ce0692ada69a3f67568304c24d789006a subhamchawda01 <subham.chawda@tworoads-trading.co.in> 1689150151 +0000	checkout: moving from LOG_LIVE_BARDATA to master
+2c0ab93ce0692ada69a3f67568304c24d789006a ab53c0840fd70f1549392967b17d4b7ca9a97663 subhamchawda01 <subham.chawda@tworoads-trading.co.in> 1689150157 +0000	pull: Fast-forward
+ab53c0840fd70f1549392967b17d4b7ca9a97663 5d9deb38b5fc9e1b4f0e7ab219a1d20965c9dde4 subhamchawda01 <subham.chawda@tworoads-trading.co.in> 1689579675 +0000	pull: Fast-forward
+5d9deb38b5fc9e1b4f0e7ab219a1d20965c9dde4 59aff564210b65fa676039db26abedd908061602 subhamchawda01 <subham.chawda@tworoads-trading.co.in> 1689579715 +0000	checkout: moving from master to ORS_FO_REPORT
+59aff564210b65fa676039db26abedd908061602 fa019ea6a98891ffe27e849f80ace75e6b2a6c4b subhamchawda01 <subham.chawda@tworoads-trading.co.in> 1689579813 +0000	commit: removed banknifty expiry changes not required
+fa019ea6a98891ffe27e849f80ace75e6b2a6c4b 5d9deb38b5fc9e1b4f0e7ab219a1d20965c9dde4 subhamchawda01 <subham.chawda@tworoads-trading.co.in> 1689668653 +0000	checkout: moving from ORS_FO_REPORT to master
+5d9deb38b5fc9e1b4f0e7ab219a1d20965c9dde4 1c39b472df8750b46aeda5042ec8674fcd945b92 subhamchawda01 <subham.chawda@tworoads-trading.co.in> 1689668659 +0000	pull: Fast-forward
+1c39b472df8750b46aeda5042ec8674fcd945b92 7c811d4fb6a907495e5c256a9982201142b48919 subhamchawda01 <subham.chawda@tworoads-trading.co.in> 1689748496 +0000	checkout: moving from master to LOG_LIVE_BARDATA
+7c811d4fb6a907495e5c256a9982201142b48919 ff96c7e39b0389208deb91736f9862133d2b100e subhamchawda01 <subham.chawda@tworoads-trading.co.in> 1690188545 +0000	checkout: moving from LOG_LIVE_BARDATA to ORS_COMPATIBILITY_OTHER_SERIES
+ff96c7e39b0389208deb91736f9862133d2b100e 1c39b472df8750b46aeda5042ec8674fcd945b92 subhamchawda01 <subham.chawda@tworoads-trading.co.in> 1690782510 +0000	checkout: moving from ORS_COMPATIBILITY_OTHER_SERIES to master
+1c39b472df8750b46aeda5042ec8674fcd945b92 892bde2be12a35caa46fcf1bcc5784417a5917a4 subhamchawda01 <subham.chawda@tworoads-trading.co.in> 1690782516 +0000	pull: Fast-forward
+892bde2be12a35caa46fcf1bcc5784417a5917a4 9d8faae422c4e68b740f45052bb6503cc3805daa raghunandan95 <raghunandan.sharma@tworoads-trading.co.in> 1705472754 +0000	pull: Fast-forward
+9d8faae422c4e68b740f45052bb6503cc3805daa 7d89a4ebdaba7e45a88f9679355e67c76aa49efb raghunandan95 <raghunandan.sharma@tworoads-trading.co.in> 1706692904 +0000	pull: Fast-forward
+7d89a4ebdaba7e45a88f9679355e67c76aa49efb 1a1514f8c0fb4389b53fb57751a94c61c2b8f7c6 raghunandan95 <raghunandan.sharma@tworoads-trading.co.in> 1706769307 +0000	pull: Fast-forward
+1a1514f8c0fb4389b53fb57751a94c61c2b8f7c6 ec6954129074f96f90237010c8f637573f1015ba subhamchawda01 <subham.chawda@tworoads-trading.co.in> 1707385033 +0000	pull: Fast-forward
+ec6954129074f96f90237010c8f637573f1015ba ba5b7c4f15fe7cf1deb0424be5bb316eeb2f0a35 subhamchawda01 <subham.chawda@tworoads-trading.co.in> 1707733804 +0000	pull: Fast-forward
+ba5b7c4f15fe7cf1deb0424be5bb316eeb2f0a35 46cdfaf3c7772fa5ba8ce07dbff67d00afcb884e subhamchawda01 <subham.chawda@tworoads-trading.co.in> 1708406112 +0000	pull: Fast-forward
+46cdfaf3c7772fa5ba8ce07dbff67d00afcb884e 1e930bf76a0eb15d26efa0c994a57b5229e2d201 subhamchawda01 <subham.chawda@tworoads-trading.co.in> 1708653287 +0000	pull: Fast-forward
+1e930bf76a0eb15d26efa0c994a57b5229e2d201 1e930bf76a0eb15d26efa0c994a57b5229e2d201 subhamchawda01 <subham.chawda@tworoads-trading.co.in> 1708942975 +0000	checkout: moving from master to GET_TOTAL_TRADE
+1e930bf76a0eb15d26efa0c994a57b5229e2d201 102462eb4d620d993a1999254e2094d0f86c306f subhamchawda01 <subham.chawda@tworoads-trading.co.in> 1708943007 +0000	commit: tool to get total trade qty from market data
+102462eb4d620d993a1999254e2094d0f86c306f 1e930bf76a0eb15d26efa0c994a57b5229e2d201 subhamchawda01 <subham.chawda@tworoads-trading.co.in> 1708943131 +0000	checkout: moving from GET_TOTAL_TRADE to master
+1e930bf76a0eb15d26efa0c994a57b5229e2d201 0e7fddc0b8d0dc2f64714d3debda8075303d7e46 subhamchawda01 <subham.chawda@tworoads-trading.co.in> 1708943243 +0000	pull: Fast-forward
+0e7fddc0b8d0dc2f64714d3debda8075303d7e46 0e7fddc0b8d0dc2f64714d3debda8075303d7e46 subhamchawda01 <subham.chawda@tworoads-trading.co.in> 1708943460 +0000	checkout: moving from master to NSE_ETF_TICK
+0e7fddc0b8d0dc2f64714d3debda8075303d7e46 ff88ce940c57a816d050537b8a5e7343592fd942 subhamchawda01 <subham.chawda@tworoads-trading.co.in> 1708945600 +0000	commit: nse etf tick size changes
+ff88ce940c57a816d050537b8a5e7343592fd942 0e7fddc0b8d0dc2f64714d3debda8075303d7e46 subhamchawda01 <subham.chawda@tworoads-trading.co.in> 1708946194 +0000	checkout: moving from NSE_ETF_TICK to master
+0e7fddc0b8d0dc2f64714d3debda8075303d7e46 0e7fddc0b8d0dc2f64714d3debda8075303d7e46 subhamchawda01 <subham.chawda@tworoads-trading.co.in> 1710745080 +0000	checkout: moving from master to NSE_ORS_REPLY_THREAD
+0e7fddc0b8d0dc2f64714d3debda8075303d7e46 11ecf7ac56b93e0a30c9c489edbc0b047b1fcf41 subhamchawda01 <subham.chawda@tworoads-trading.co.in> 1710745102 +0000	commit: nse ors reply thread changes
+11ecf7ac56b93e0a30c9c489edbc0b047b1fcf41 0e7fddc0b8d0dc2f64714d3debda8075303d7e46 subhamchawda01 <subham.chawda@tworoads-trading.co.in> 1710745165 +0000	checkout: moving from NSE_ORS_REPLY_THREAD to master
+0e7fddc0b8d0dc2f64714d3debda8075303d7e46 c4ee2c8cdb67f61328f333d94c39dd3f7d3beff2 subhamchawda01 <subham.chawda@tworoads-trading.co.in> 1710745171 +0000	pull: Fast-forward
+c4ee2c8cdb67f61328f333d94c39dd3f7d3beff2 11ecf7ac56b93e0a30c9c489edbc0b047b1fcf41 subhamchawda01 <subham.chawda@tworoads-trading.co.in> 1710750917 +0000	checkout: moving from master to NSE_ORS_REPLY_THREAD
+11ecf7ac56b93e0a30c9c489edbc0b047b1fcf41 694dac6d2dddd1fbdad000d135346c25731fc12c subhamchawda01 <subham.chawda@tworoads-trading.co.in> 1710750939 +0000	merge origin/master: Merge made by the 'recursive' strategy.
+694dac6d2dddd1fbdad000d135346c25731fc12c c4ee2c8cdb67f61328f333d94c39dd3f7d3beff2 subhamchawda01 <subham.chawda@tworoads-trading.co.in> 1713422393 +0000	checkout: moving from NSE_ORS_REPLY_THREAD to master
+c4ee2c8cdb67f61328f333d94c39dd3f7d3beff2 d84097887f61768f0719de5842eef00dd6189f71 subhamchawda01 <subham.chawda@tworoads-trading.co.in> 1713422406 +0000	pull: Fast-forward
+d84097887f61768f0719de5842eef00dd6189f71 694dac6d2dddd1fbdad000d135346c25731fc12c subhamchawda01 <subham.chawda@tworoads-trading.co.in> 1713422410 +0000	checkout: moving from master to NSE_ORS_REPLY_THREAD
+694dac6d2dddd1fbdad000d135346c25731fc12c 4298d349e208d81fb75505920b568c83e1b01ef8 subhamchawda01 <subham.chawda@tworoads-trading.co.in> 1713422419 +0000	merge origin/master: Merge made by the 'recursive' strategy.
+4298d349e208d81fb75505920b568c83e1b01ef8 d84097887f61768f0719de5842eef00dd6189f71 subhamchawda01 <subham.chawda@tworoads-trading.co.in> 1715578255 +0000	checkout: moving from NSE_ORS_REPLY_THREAD to master
+d84097887f61768f0719de5842eef00dd6189f71 8fc40fc15013ed0ec614afbb874b1b09cf4fd452 subhamchawda01 <subham.chawda@tworoads-trading.co.in> 1715578260 +0000	pull: Fast-forward
+8fc40fc15013ed0ec614afbb874b1b09cf4fd452 4298d349e208d81fb75505920b568c83e1b01ef8 subhamchawda01 <subham.chawda@tworoads-trading.co.in> 1715578276 +0000	checkout: moving from master to NSE_ORS_REPLY_THREAD
+4298d349e208d81fb75505920b568c83e1b01ef8 d77fc52b4a6e96f3293373f2f6ef8d0aecfc7089 subhamchawda01 <subham.chawda@tworoads-trading.co.in> 1715578289 +0000	merge origin/master: Merge made by the 'recursive' strategy.
+d77fc52b4a6e96f3293373f2f6ef8d0aecfc7089 0168899e1e2912dd76e93de8503e7005e7f8d40a subhamchawda01 <subham.chawda@tworoads-trading.co.in> 1718870427 +0000	commit: optimised queue for latency
+0168899e1e2912dd76e93de8503e7005e7f8d40a 8fc40fc15013ed0ec614afbb874b1b09cf4fd452 subhamchawda01 <subham.chawda@tworoads-trading.co.in> 1721644906 +0000	checkout: moving from NSE_ORS_REPLY_THREAD to master
+8fc40fc15013ed0ec614afbb874b1b09cf4fd452 3a21bb2d590624c1b6cdc0347871c94cf910ac7d subhamchawda01 <subham.chawda@tworoads-trading.co.in> 1721644912 +0000	pull: Fast-forward
+3a21bb2d590624c1b6cdc0347871c94cf910ac7d 0168899e1e2912dd76e93de8503e7005e7f8d40a subhamchawda01 <subham.chawda@tworoads-trading.co.in> 1721644949 +0000	checkout: moving from master to NSE_ORS_REPLY_THREAD
+0168899e1e2912dd76e93de8503e7005e7f8d40a 6f9c471d535e340543851c6e8b47ba49a6fe3af8 subhamchawda01 <subham.chawda@tworoads-trading.co.in> 1721644979 +0000	merge origin/master: Merge made by the 'recursive' strategy.
+6f9c471d535e340543851c6e8b47ba49a6fe3af8 cd0760eb8b46c3fea1452f4d0b9e3a797e768bcf subhamchawda01 <subham.chawda@tworoads-trading.co.in> 1721814889 +0000	commit: bug fix ors thread , modify request same price and size after getting throttle reject
+cd0760eb8b46c3fea1452f4d0b9e3a797e768bcf 3a21bb2d590624c1b6cdc0347871c94cf910ac7d subhamchawda01 <subham.chawda@tworoads-trading.co.in> 1726738583 +0000	checkout: moving from NSE_ORS_REPLY_THREAD to master
+3a21bb2d590624c1b6cdc0347871c94cf910ac7d d00fdb0bd30ceb2a4e3ee43d1dc52443fad2713a subhamchawda01 <subham.chawda@tworoads-trading.co.in> 1726738589 +0000	pull: Fast-forward
+d00fdb0bd30ceb2a4e3ee43d1dc52443fad2713a cd0760eb8b46c3fea1452f4d0b9e3a797e768bcf subhamchawda01 <subham.chawda@tworoads-trading.co.in> 1726738602 +0000	checkout: moving from master to NSE_ORS_REPLY_THREAD
+cd0760eb8b46c3fea1452f4d0b9e3a797e768bcf f884fcdc751fcbae5db1c0a7e7eb3c84d015e5e7 subhamchawda01 <subham.chawda@tworoads-trading.co.in> 1726738613 +0000	merge origin/master: Merge made by the 'recursive' strategy.
+f884fcdc751fcbae5db1c0a7e7eb3c84d015e5e7 d00fdb0bd30ceb2a4e3ee43d1dc52443fad2713a subhamchawda01 <subham.chawda@tworoads-trading.co.in> 1728023879 +0000	checkout: moving from NSE_ORS_REPLY_THREAD to master
+d00fdb0bd30ceb2a4e3ee43d1dc52443fad2713a 1f22d91f55622cd21038bb1b6508d4458abd2a68 subhamchawda01 <subham.chawda@tworoads-trading.co.in> 1728023886 +0000	pull: Fast-forward
+1f22d91f55622cd21038bb1b6508d4458abd2a68 0753be5ef5213f1f9eebc6dbbfbc989824fd2e61 subhamchawda01 <subham.chawda@tworoads-trading.co.in> 1729491136 +0000	pull: Fast-forward
+0753be5ef5213f1f9eebc6dbbfbc989824fd2e61 4147b7e35e4bf2ce6d2a9af27e8b707b88454945 subhamchawda01 <subham.chawda@tworoads-trading.co.in> 1729491138 +0000	checkout: moving from master to IB_Infra
+4147b7e35e4bf2ce6d2a9af27e8b707b88454945 a530fbf5bc140e861b5055e011bce5bd247d6bbb subhamchawda01 <subham.chawda@tworoads-trading.co.in> 1729512138 +0000	commit: cboe get datasourcename from shortcode
+a530fbf5bc140e861b5055e011bce5bd247d6bbb f1f990cd8f9722009a866f19b60c90b17822ba37 subhamchawda01 <subham.chawda@tworoads-trading.co.in> 1729512166 +0000	pull: Merge made by the 'recursive' strategy.
+f1f990cd8f9722009a866f19b60c90b17822ba37 30e55e1ca3c99f63b2f864e27c72ad13e3f38c6b subhamchawda01 <subham.chawda@tworoads-trading.co.in> 1730182835 +0000	pull: Fast-forward
+30e55e1ca3c99f63b2f864e27c72ad13e3f38c6b 22696d3f6fb617d8102a2effb767862ea1448ba2 subhamchawda01 <subham.chawda@tworoads-trading.co.in> 1730183487 +0000	commit: commented CBOE option stike check in bhavcopy
+22696d3f6fb617d8102a2effb767862ea1448ba2 0753be5ef5213f1f9eebc6dbbfbc989824fd2e61 subhamchawda01 <subham.chawda@tworoads-trading.co.in> 1731910471 +0000	checkout: moving from IB_Infra to master
+0753be5ef5213f1f9eebc6dbbfbc989824fd2e61 93e4fe29ccb9fa93f15734988fc3eed30a93bb70 subhamchawda01 <subham.chawda@tworoads-trading.co.in> 1731910478 +0000	pull: Fast-forward
+93e4fe29ccb9fa93f15734988fc3eed30a93bb70 6932da990606b4628e881d725516ced6d659cfa6 subhamchawda01 <subham.chawda@tworoads-trading.co.in> 1732872000 +0000	pull: Fast-forward
+6932da990606b4628e881d725516ced6d659cfa6 f38c5212bc314ad8d7a95841ac0c4f0d48c64786 subhamchawda01 <subham.chawda@tworoads-trading.co.in> 1733809098 +0000	pull: Fast-forward
+f38c5212bc314ad8d7a95841ac0c4f0d48c64786 22696d3f6fb617d8102a2effb767862ea1448ba2 subhamchawda01 <subham.chawda@tworoads-trading.co.in> 1734001119 +0000	checkout: moving from master to IB_Infra
+22696d3f6fb617d8102a2effb767862ea1448ba2 bac941f850ac005cf7b68948299a43bdbe86645c subhamchawda01 <subham.chawda@tworoads-trading.co.in> 1734001127 +0000	pull: Fast-forward
+bac941f850ac005cf7b68948299a43bdbe86645c bac941f850ac005cf7b68948299a43bdbe86645c subhamchawda01 <subham.chawda@tworoads-trading.co.in> 1734077564 +0000	checkout: moving from IB_Infra to IB_Infra_bardata
+bac941f850ac005cf7b68948299a43bdbe86645c 8ab07854d2acaa3eab898aa2a8b5dc3f19e14a5a subhamchawda01 <subham.chawda@tworoads-trading.co.in> 1734077577 +0000	commit: cboe bardata changes
+8ab07854d2acaa3eab898aa2a8b5dc3f19e14a5a 025f0c190405530801f99a409b9c77256ef204dc subhamchawda01 <subham.chawda@tworoads-trading.co.in> 1734329559 +0000	checkout: moving from IB_Infra_bardata to IB_Infra_BookKeep
+025f0c190405530801f99a409b9c77256ef204dc bac941f850ac005cf7b68948299a43bdbe86645c subhamchawda01 <subham.chawda@tworoads-trading.co.in> 1734329840 +0000	checkout: moving from IB_Infra_BookKeep to IB_Infra
+bac941f850ac005cf7b68948299a43bdbe86645c 5536981becb5dba1aa77520b8c7bd0d260fffb57 subhamchawda01 <subham.chawda@tworoads-trading.co.in> 1734329845 +0000	pull: Fast-forward
+5536981becb5dba1aa77520b8c7bd0d260fffb57 8ab07854d2acaa3eab898aa2a8b5dc3f19e14a5a subhamchawda01 <subham.chawda@tworoads-trading.co.in> 1734330674 +0000	checkout: moving from IB_Infra to IB_Infra_bardata
+8ab07854d2acaa3eab898aa2a8b5dc3f19e14a5a 5536981becb5dba1aa77520b8c7bd0d260fffb57 subhamchawda01 <subham.chawda@tworoads-trading.co.in> 1734331223 +0000	checkout: moving from IB_Infra_bardata to IB_Infra
+5536981becb5dba1aa77520b8c7bd0d260fffb57 8ab07854d2acaa3eab898aa2a8b5dc3f19e14a5a subhamchawda01 <subham.chawda@tworoads-trading.co.in> 1734332529 +0000	checkout: moving from IB_Infra to IB_Infra_bardata
+8ab07854d2acaa3eab898aa2a8b5dc3f19e14a5a 5536981becb5dba1aa77520b8c7bd0d260fffb57 subhamchawda01 <subham.chawda@tworoads-trading.co.in> 1734334684 +0000	checkout: moving from IB_Infra_bardata to IB_Infra
+5536981becb5dba1aa77520b8c7bd0d260fffb57 0dbd671f5b70254da17970e3d16144445059aef7 subhamchawda01 <subham.chawda@tworoads-trading.co.in> 1734335385 +0000	commit: INVALID shortcode bug fix CBOE
+0dbd671f5b70254da17970e3d16144445059aef7 8ab07854d2acaa3eab898aa2a8b5dc3f19e14a5a subhamchawda01 <subham.chawda@tworoads-trading.co.in> 1734335589 +0000	checkout: moving from IB_Infra to IB_Infra_bardata
+8ab07854d2acaa3eab898aa2a8b5dc3f19e14a5a c5678bc4603d64b954427525527611fabb194d46 subhamchawda01 <subham.chawda@tworoads-trading.co.in> 1734335617 +0000	merge origin/IB_Infra: Merge made by the 'recursive' strategy.
+c5678bc4603d64b954427525527611fabb194d46 0dbd671f5b70254da17970e3d16144445059aef7 subhamchawda01 <subham.chawda@tworoads-trading.co.in> 1734413457 +0000	checkout: moving from IB_Infra_bardata to IB_Infra
+0dbd671f5b70254da17970e3d16144445059aef7 4c29875e95c1ef46fefa784d1e4d30dea3fddfdb subhamchawda01 <subham.chawda@tworoads-trading.co.in> 1734413464 +0000	pull: Fast-forward
+4c29875e95c1ef46fefa784d1e4d30dea3fddfdb 67e87234ec20508c102375aee36afcee60eb29c5 subhamchawda01 <subham.chawda@tworoads-trading.co.in> 1734418144 +0000	commit: cboe spot changes
+67e87234ec20508c102375aee36afcee60eb29c5 c5678bc4603d64b954427525527611fabb194d46 subhamchawda01 <subham.chawda@tworoads-trading.co.in> 1734418187 +0000	checkout: moving from IB_Infra to IB_Infra_bardata
+c5678bc4603d64b954427525527611fabb194d46 67e87234ec20508c102375aee36afcee60eb29c5 subhamchawda01 <subham.chawda@tworoads-trading.co.in> 1734418209 +0000	checkout: moving from IB_Infra_bardata to IB_Infra
+67e87234ec20508c102375aee36afcee60eb29c5 c5678bc4603d64b954427525527611fabb194d46 subhamchawda01 <subham.chawda@tworoads-trading.co.in> 1734418216 +0000	checkout: moving from IB_Infra to IB_Infra_bardata
+c5678bc4603d64b954427525527611fabb194d46 7ded3ee58f79089680965b589dbc075e76adbf8a subhamchawda01 <subham.chawda@tworoads-trading.co.in> 1734418227 +0000	merge origin/IB_Infra: Merge made by the 'recursive' strategy.
+7ded3ee58f79089680965b589dbc075e76adbf8a 67e87234ec20508c102375aee36afcee60eb29c5 subhamchawda01 <subham.chawda@tworoads-trading.co.in> 1734420429 +0000	checkout: moving from IB_Infra_bardata to IB_Infra
+67e87234ec20508c102375aee36afcee60eb29c5 c9b2bb1f118fb4316dac406203e4422acf7dda90 subhamchawda01 <subham.chawda@tworoads-trading.co.in> 1734420446 +0000	pull: Fast-forward
+c9b2bb1f118fb4316dac406203e4422acf7dda90 025f0c190405530801f99a409b9c77256ef204dc subhamchawda01 <subham.chawda@tworoads-trading.co.in> 1735018334 +0000	checkout: moving from IB_Infra to IB_Infra_BookKeep
+025f0c190405530801f99a409b9c77256ef204dc 5768e52b61fbc61338d99d6c638d70e0d63b4ba4 subhamchawda01 <subham.chawda@tworoads-trading.co.in> 1735018340 +0000	pull: Fast-forward
+5768e52b61fbc61338d99d6c638d70e0d63b4ba4 f38c5212bc314ad8d7a95841ac0c4f0d48c64786 subhamchawda01 <subham.chawda@tworoads-trading.co.in> 1735284416 +0000	checkout: moving from IB_Infra_BookKeep to master
+f38c5212bc314ad8d7a95841ac0c4f0d48c64786 87c5e3b4922da33a821480a5f0e5719c852f3d16 subhamchawda01 <subham.chawda@tworoads-trading.co.in> 1735284421 +0000	pull: Fast-forward
+87c5e3b4922da33a821480a5f0e5719c852f3d16 87c5e3b4922da33a821480a5f0e5719c852f3d16 subhamchawda01 <subham.chawda@tworoads-trading.co.in> 1735623721 +0000	checkout: moving from master to ORS_LS_HANDLING
+87c5e3b4922da33a821480a5f0e5719c852f3d16 112afd03ea1076c4405694179b898bc8ba7dff19 subhamchawda01 <subham.chawda@tworoads-trading.co.in> 1735623778 +0000	commit: added handling in ors for L/S field
+112afd03ea1076c4405694179b898bc8ba7dff19 87c5e3b4922da33a821480a5f0e5719c852f3d16 subhamchawda01 <subham.chawda@tworoads-trading.co.in> 1736249306 +0000	checkout: moving from ORS_LS_HANDLING to master
+87c5e3b4922da33a821480a5f0e5719c852f3d16 aead61e9329a3a5fdacc12ef2d8a9988ae30dff0 subhamchawda01 <subham.chawda@tworoads-trading.co.in> 1736249311 +0000	pull: Fast-forward
+aead61e9329a3a5fdacc12ef2d8a9988ae30dff0 5768e52b61fbc61338d99d6c638d70e0d63b4ba4 subhamchawda01 <subham.chawda@tworoads-trading.co.in> 1736322305 +0000	checkout: moving from master to IB_Infra_BookKeep
+5768e52b61fbc61338d99d6c638d70e0d63b4ba4 63afd7ee4a9849ab2d34e36e3ecee7737acf5e06 subhamchawda01 <subham.chawda@tworoads-trading.co.in> 1736322311 +0000	pull: Fast-forward
+63afd7ee4a9849ab2d34e36e3ecee7737acf5e06 63afd7ee4a9849ab2d34e36e3ecee7737acf5e06 subhamchawda01 <subham.chawda@tworoads-trading.co.in> 1736323012 +0000	reset: moving to HEAD
+63afd7ee4a9849ab2d34e36e3ecee7737acf5e06 63afd7ee4a9849ab2d34e36e3ecee7737acf5e06 subhamchawda01 <subham.chawda@tworoads-trading.co.in> 1736323056 +0000	checkout: moving from IB_Infra_BookKeep to IB_Infra_BookKeep_olddate
+63afd7ee4a9849ab2d34e36e3ecee7737acf5e06 483c0cb760f09d19f2e2323ffa07b6b1e1123af7 subhamchawda01 <subham.chawda@tworoads-trading.co.in> 1736323084 +0000	commit: added old date handling cboe
+483c0cb760f09d19f2e2323ffa07b6b1e1123af7 63afd7ee4a9849ab2d34e36e3ecee7737acf5e06 subhamchawda01 <subham.chawda@tworoads-trading.co.in> 1736327517 +0000	checkout: moving from IB_Infra_BookKeep_olddate to IB_Infra_BookKeep
+63afd7ee4a9849ab2d34e36e3ecee7737acf5e06 2a7217b2b0949595b6531ac427441bb066efc3e3 subhamchawda01 <subham.chawda@tworoads-trading.co.in> 1736327523 +0000	pull: Fast-forward
+2a7217b2b0949595b6531ac427441bb066efc3e3 5e8d381df1500020055c4debb116cda278ae93cb subhamchawda01 <subham.chawda@tworoads-trading.co.in> 1736834305 +0000	pull: Fast-forward
+5e8d381df1500020055c4debb116cda278ae93cb aead61e9329a3a5fdacc12ef2d8a9988ae30dff0 subhamchawda01 <subham.chawda@tworoads-trading.co.in> 1737532718 +0000	checkout: moving from IB_Infra_BookKeep to master
+aead61e9329a3a5fdacc12ef2d8a9988ae30dff0 c659eeaac561f338539407018a6bcbe45f783fc1 subhamchawda01 <subham.chawda@tworoads-trading.co.in> 1737532724 +0000	pull: Fast-forward
+c659eeaac561f338539407018a6bcbe45f783fc1 c9b2bb1f118fb4316dac406203e4422acf7dda90 subhamchawda01 <subham.chawda@tworoads-trading.co.in> 1737704601 +0000	checkout: moving from master to IB_Infra
+c9b2bb1f118fb4316dac406203e4422acf7dda90 56f4a00e281509ac74645801d7e8d6e0778388a1 subhamchawda01 <subham.chawda@tworoads-trading.co.in> 1737704606 +0000	pull: Fast-forward
+56f4a00e281509ac74645801d7e8d6e0778388a1 c659eeaac561f338539407018a6bcbe45f783fc1 subhamchawda01 <subham.chawda@tworoads-trading.co.in> 1737887419 +0000	checkout: moving from IB_Infra to master
+c659eeaac561f338539407018a6bcbe45f783fc1 c659eeaac561f338539407018a6bcbe45f783fc1 subhamchawda01 <subham.chawda@tworoads-trading.co.in> 1737887423 +0000	checkout: moving from master to master
+c659eeaac561f338539407018a6bcbe45f783fc1 e75e8d5ac186b28e7833d22254b1628f4bbafdde subhamchawda01 <subham.chawda@tworoads-trading.co.in> 1737887433 +0000	pull: Fast-forward
+e75e8d5ac186b28e7833d22254b1628f4bbafdde 15eecca5746fd9556d3a3041381f1e37e15c0c59 subhamchawda01 <subham.chawda@tworoads-trading.co.in> 1738141840 +0000	checkout: moving from master to L1_LOGGED_DATA_MASTER
+15eecca5746fd9556d3a3041381f1e37e15c0c59 e75e8d5ac186b28e7833d22254b1628f4bbafdde subhamchawda01 <subham.chawda@tworoads-trading.co.in> 1738141847 +0000	checkout: moving from L1_LOGGED_DATA_MASTER to master
+e75e8d5ac186b28e7833d22254b1628f4bbafdde 3e385d4edc50dfa97805bdcc4f75f860f580f24e subhamchawda01 <subham.chawda@tworoads-trading.co.in> 1738141851 +0000	pull: Fast-forward
+3e385d4edc50dfa97805bdcc4f75f860f580f24e 15eecca5746fd9556d3a3041381f1e37e15c0c59 subhamchawda01 <subham.chawda@tworoads-trading.co.in> 1738141866 +0000	checkout: moving from master to L1_LOGGED_DATA_MASTER
+15eecca5746fd9556d3a3041381f1e37e15c0c59 85114c14d1e8b028f87105572512ec119f5a0050 subhamchawda01 <subham.chawda@tworoads-trading.co.in> 1738141879 +0000	merge origin/master: Merge made by the 'recursive' strategy.
+85114c14d1e8b028f87105572512ec119f5a0050 3f405efe2016ed06c49774c7b937827f93469749 subhamchawda01 <subham.chawda@tworoads-trading.co.in> 1739509787 +0000	commit: bse l1 data changes
+3f405efe2016ed06c49774c7b937827f93469749 85114c14d1e8b028f87105572512ec119f5a0050 subhamchawda01 <subham.chawda@tworoads-trading.co.in> 1739515268 +0000	checkout: moving from L1_LOGGED_DATA_MASTER to 85114c14d1e8b028f87105572512ec119f5a0050
+85114c14d1e8b028f87105572512ec119f5a0050 3e385d4edc50dfa97805bdcc4f75f860f580f24e subhamchawda01 <subham.chawda@tworoads-trading.co.in> 1740047431 +0000	checkout: moving from 85114c14d1e8b028f87105572512ec119f5a0050 to master
+3e385d4edc50dfa97805bdcc4f75f860f580f24e 3f405efe2016ed06c49774c7b937827f93469749 subhamchawda01 <subham.chawda@tworoads-trading.co.in> 1740121799 +0000	checkout: moving from master to L1_LOGGED_DATA_MASTER
+3f405efe2016ed06c49774c7b937827f93469749 3e385d4edc50dfa97805bdcc4f75f860f580f24e subhamchawda01 <subham.chawda@tworoads-trading.co.in> 1741343964 +0000	checkout: moving from L1_LOGGED_DATA_MASTER to master
+3e385d4edc50dfa97805bdcc4f75f860f580f24e 1e1bde6d388d9a0a8719ec2180a33672ed453a21 subhamchawda01 <subham.chawda@tworoads-trading.co.in> 1742191963 +0000	pull: Fast-forward
+1e1bde6d388d9a0a8719ec2180a33672ed453a21 d6b7b0b034501dcfcd3b93da62f83588e48de066 subhamchawda01 <subham.chawda@tworoads-trading.co.in> 1742811610 +0000	commit: NSE sec def change for wide and narrow range strike schema
+d6b7b0b034501dcfcd3b93da62f83588e48de066 d6b7b0b034501dcfcd3b93da62f83588e48de066 subhamchawda01 <subham.chawda@tworoads-trading.co.in> 1742811624 +0000	reset: moving to HEAD
+d6b7b0b034501dcfcd3b93da62f83588e48de066 1e1bde6d388d9a0a8719ec2180a33672ed453a21 subhamchawda01 <subham.chawda@tworoads-trading.co.in> 1742811727 +0000	reset: moving to HEAD~1
+1e1bde6d388d9a0a8719ec2180a33672ed453a21 1e1bde6d388d9a0a8719ec2180a33672ed453a21 subhamchawda01 <subham.chawda@tworoads-trading.co.in> 1742811740 +0000	reset: moving to HEAD
+1e1bde6d388d9a0a8719ec2180a33672ed453a21 1e1bde6d388d9a0a8719ec2180a33672ed453a21 subhamchawda01 <subham.chawda@tworoads-trading.co.in> 1742811794 +0000	checkout: moving from master to NSE_SECDEF_STIKE_SCHEMA
+1e1bde6d388d9a0a8719ec2180a33672ed453a21 d3c645a2625f8876d808bfd2219ceea4f97e25f7 subhamchawda01 <subham.chawda@tworoads-trading.co.in> 1742811801 +0000	commit: NSE sec def change for wide and narrow range strike schema
+d3c645a2625f8876d808bfd2219ceea4f97e25f7 1e1bde6d388d9a0a8719ec2180a33672ed453a21 subhamchawda01 <subham.chawda@tworoads-trading.co.in> 1743141312 +0000	checkout: moving from NSE_SECDEF_STIKE_SCHEMA to master
+1e1bde6d388d9a0a8719ec2180a33672ed453a21 0a750bf11b611601de4d1cd5335f6b3ca650323a subhamchawda01 <subham.chawda@tworoads-trading.co.in> 1743141319 +0000	pull: Fast-forward
+0a750bf11b611601de4d1cd5335f6b3ca650323a 2e6e7704e6eb580a68457f48c8990e05bcad57c4 subhamchawda01 <subham.chawda@tworoads-trading.co.in> 1743494960 +0000	pull: Fast-forward
+2e6e7704e6eb580a68457f48c8990e05bcad57c4 54f436e8d0794908ede9d26b80d5083a07884823 subhamchawda01 <subham.chawda@tworoads-trading.co.in> 1744792163 +0000	pull: Fast-forward
+54f436e8d0794908ede9d26b80d5083a07884823 56f4a00e281509ac74645801d7e8d6e0778388a1 subhamchawda01 <subham.chawda@tworoads-trading.co.in> 1744792191 +0000	checkout: moving from master to IB_Infra
+56f4a00e281509ac74645801d7e8d6e0778388a1 5acd003c5fb08ca4d818e8283fd451beabc49580 subhamchawda01 <subham.chawda@tworoads-trading.co.in> 1744792206 +0000	pull: Fast-forward
+5acd003c5fb08ca4d818e8283fd451beabc49580 70e1c5087bf330f328a789993332351af3aeac45 subhamchawda01 <subham.chawda@tworoads-trading.co.in> 1744792208 +0000	merge origin/master: Merge made by the 'recursive' strategy.
+70e1c5087bf330f328a789993332351af3aeac45 54f436e8d0794908ede9d26b80d5083a07884823 subhamchawda01 <subham.chawda@tworoads-trading.co.in> 1745301669 +0000	checkout: moving from IB_Infra to master
+54f436e8d0794908ede9d26b80d5083a07884823 70e1c5087bf330f328a789993332351af3aeac45 subhamchawda01 <subham.chawda@tworoads-trading.co.in> 1747192510 +0000	checkout: moving from master to IB_Infra
+70e1c5087bf330f328a789993332351af3aeac45 3094ccc070115936e9e87f4ba95fc1c0d66a7aaf subhamchawda01 <subham.chawda@tworoads-trading.co.in> 1747206914 +0000	commit: added function in date_time class to GetESTSeconds
+3094ccc070115936e9e87f4ba95fc1c0d66a7aaf 54f436e8d0794908ede9d26b80d5083a07884823 subhamchawda01 <subham.chawda@tworoads-trading.co.in> 1747212879 +0000	checkout: moving from IB_Infra to master
+54f436e8d0794908ede9d26b80d5083a07884823 7f91c4392ee961f1723fe23b33f7700f55bced75 subhamchawda01 <subham.chawda@tworoads-trading.co.in> 1747212889 +0000	pull: Fast-forward
+7f91c4392ee961f1723fe23b33f7700f55bced75 c20307535be433b88b346572202162d56e18b95d subhamchawda01 <subham.chawda@tworoads-trading.co.in> 1747301239 +0000	checkout: moving from master to OI_BARDATA_NSE
+c20307535be433b88b346572202162d56e18b95d 7f91c4392ee961f1723fe23b33f7700f55bced75 subhamchawda01 <subham.chawda@tworoads-trading.co.in> 1748505282 +0000	checkout: moving from OI_BARDATA_NSE to master

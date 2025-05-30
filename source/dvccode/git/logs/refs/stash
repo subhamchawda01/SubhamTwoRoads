@@ -1,0 +1,7 @@
+0000000000000000000000000000000000000000 08f38cf96691132914ffadd124765382239c4e0e subhamchawda01 <subham.chawda@tworoads-trading.co.in> 1643604515 +0000	On master: spot issue NIFTY50DIVPOINT bardata not getting generated
+08f38cf96691132914ffadd124765382239c4e0e 08fd7bc1ac572c38f06de7e95a89f3651768a90b subhamchawda01 <subham.chawda@tworoads-trading.co.in> 1647250896 +0000	On master: disable logger MDS SHM
+08fd7bc1ac572c38f06de7e95a89f3651768a90b 3bdb726a3ffadee88630ff7d55e2a99075c38017 subhamchawda01 <subham.chawda@tworoads-trading.co.in> 1651037343 +0000	On master: nse bse latency for nse data on bse
+3bdb726a3ffadee88630ff7d55e2a99075c38017 5d614b37037f185532ed7e6f387a673a40798bbc subhamchawda01 <subham.chawda@tworoads-trading.co.in> 1652326742 +0000	On master: nse bse time stamp lat diff
+5d614b37037f185532ed7e6f387a673a40798bbc 922c096d7bd309244b4a3d2369e903f4359098ba subhamchawda01 <subham.chawda@tworoads-trading.co.in> 1652937835 +0000	On master: nse bse time stamp lat diff bug fix .09 .9
+922c096d7bd309244b4a3d2369e903f4359098ba e1e8c2f1fed3595ff204947186707c60cd268da4 subhamchawda01 <subham.chawda@tworoads-trading.co.in> 1655665198 +0000	On master: nse bse time stamp lat diff bug fix .09 .9 greater 0
+e1e8c2f1fed3595ff204947186707c60cd268da4 e9b4af24c9759e9163b6d50b5697fa67a3cfb921 subhamchawda01 <subham.chawda@tworoads-trading.co.in> 1677059087 +0000	On L1_LOGGED_DATA: generic l1 struct changes

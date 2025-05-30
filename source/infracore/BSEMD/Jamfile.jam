@@ -1,0 +1,15 @@
+use-project /PDVCC : ../libdvccode ;
+
+project : usage-requirements <include>$(PROJECT_INSTALL) ;
+
+lib BSEMD : [ glob *.cpp ] : <link>static ;
+
+install libBSEMD
+  : BSEMD
+  : <install-type>LIB
+    <variant>release:<location>"$(PROJECT_INSTALL)/lib"
+    <variant>debug:<location>"$(PROJECT_INSTALL)/libdebug"
+  : release debug
+  ;
+
+

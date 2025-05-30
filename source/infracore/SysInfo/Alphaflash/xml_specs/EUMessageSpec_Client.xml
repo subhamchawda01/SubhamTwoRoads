@@ -1,0 +1,1134 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<?xml-stylesheet type="text/xsl" href="./ClientHTML.xsl"?><protocol>
+<version>351</version>
+<revisions>
+    <revision type="Final" version="351" author="MNI News" date="03/13/2017"/>
+  </revisions>
+<category name="EU_Euro_Area_Final_HICP_Inflation_Rate">
+<description>Euro Area 'Final' HICP Inflation Rate</description>
+<country>EU</country>
+<category_id>20026</category_id>
+<data>
+<datum>
+<short_description>Year/Year</short_description>
+<description>Year/Year</description>
+<datum_type>%</datum_type>
+<datum_id>1</datum_id>
+</datum>
+<datum>
+<short_description>Month/Month</short_description>
+<description>Month/Month</description>
+<datum_type>%</datum_type>
+<datum_id>2</datum_id>
+</datum>
+</data>
+<messages>
+<message>
+<message_type>release</message_type>
+<message_version>1</message_version>
+<multicast_group>EU_GROUP_2</multicast_group>
+<fields>
+<field>
+<datum_id>1</datum_id>
+<field_type>float</field_type>
+<example_value>-0.1</example_value>
+</field>
+<field>
+<datum_id>2</datum_id>
+<field_type>float</field_type>
+<example_value>0.2</example_value>
+</field>
+</fields>
+</message>
+<message>
+<message_type>estimate</message_type>
+<message_version>1</message_version>
+<multicast_group>EU_ESTIMATES</multicast_group>
+<fields>
+<field>
+<datum_id>1</datum_id>
+<field_type>float</field_type>
+<example_value>-0.1</example_value>
+</field>
+<field>
+<datum_id>2</datum_id>
+<field_type>float</field_type>
+<example_value>0.2</example_value>
+</field>
+</fields>
+</message>
+</messages>
+</category>
+<category name="EU_Euro_Area_Flash_Inflation_Estimate">
+<description>Euro Area 'Flash' Inflation Estimate</description>
+<country>EU</country>
+<category_id>20027</category_id>
+<data>
+<datum>
+<short_description>Annual Rate</short_description>
+<description>Annual Rate</description>
+<datum_type>%</datum_type>
+<datum_id>1</datum_id>
+</datum>
+<datum>
+<short_description>All items ex-energy, food, alcohol, tobacco, y/y</short_description>
+<description>All items ex-energy, food, alcohol and tobacco, y/y</description>
+<datum_type>%</datum_type>
+<datum_id>2</datum_id>
+<optional_numeric>true</optional_numeric>
+</datum>
+</data>
+<messages>
+<message>
+<message_type>release</message_type>
+<message_version>2</message_version>
+<start_date>2014-11-28</start_date>
+<multicast_group>EU_GROUP_2</multicast_group>
+<fields>
+<field>
+<datum_id>1</datum_id>
+<field_type>float</field_type>
+<example_value>0.4</example_value>
+</field>
+<field>
+<datum_id>2</datum_id>
+<field_type>float</field_type>
+<example_value>0.7</example_value>
+</field>
+</fields>
+</message>
+<message>
+<message_type>estimate</message_type>
+<message_version>2</message_version>
+<start_date>2014-11-28</start_date>
+<multicast_group>EU_ESTIMATES</multicast_group>
+<fields>
+<field>
+<datum_id>1</datum_id>
+<field_type>float</field_type>
+<example_value>0.4</example_value>
+</field>
+<field>
+<datum_id>2</datum_id>
+<field_type>float</field_type>
+<example_value>0.7</example_value>
+</field>
+</fields>
+</message>
+</messages>
+</category>
+<category name="EU_Euro_Area_Unemployment_Rate">
+<description>Euro Area Unemployment Rate</description>
+<country>EU</country>
+<category_id>20028</category_id>
+<data>
+<datum>
+<short_description>Rate</short_description>
+<description>Rate</description>
+<datum_type>%</datum_type>
+<datum_id>1</datum_id>
+</datum>
+</data>
+<messages>
+<message>
+<message_type>release</message_type>
+<message_version>1</message_version>
+<multicast_group>EU_GROUP_2</multicast_group>
+<fields>
+<field>
+<datum_id>1</datum_id>
+<field_type>float</field_type>
+<example_value>9.5</example_value>
+</field>
+</fields>
+</message>
+<message>
+<message_type>estimate</message_type>
+<message_version>1</message_version>
+<multicast_group>EU_ESTIMATES</multicast_group>
+<fields>
+<field>
+<datum_id>1</datum_id>
+<field_type>float</field_type>
+<example_value>9.5</example_value>
+</field>
+</fields>
+</message>
+</messages>
+</category>
+<category name="EU_Euro_Area_Retail_Trade">
+<description>Euro Area Retail Trade</description>
+<country>EU</country>
+<category_id>20029</category_id>
+<data>
+<datum>
+<short_description>Month/Month (Seasonally Adjusted)</short_description>
+<description>Month/Month (Seasonally Adjusted)</description>
+<datum_type>%</datum_type>
+<datum_id>1</datum_id>
+</datum>
+<datum>
+<short_description>Year/Year (working-day adjusted)</short_description>
+<description>Year/Year (working-day adjusted)</description>
+<datum_type>%</datum_type>
+<datum_id>2</datum_id>
+</datum>
+</data>
+<messages>
+<message>
+<message_type>release</message_type>
+<message_version>1</message_version>
+<multicast_group>EU_GROUP_2</multicast_group>
+<fields>
+<field>
+<datum_id>1</datum_id>
+<field_type>float</field_type>
+<example_value>-0.4</example_value>
+</field>
+<field>
+<datum_id>2</datum_id>
+<field_type>float</field_type>
+<example_value>-3.3</example_value>
+</field>
+</fields>
+</message>
+<message>
+<message_type>estimate</message_type>
+<message_version>1</message_version>
+<multicast_group>EU_ESTIMATES</multicast_group>
+<fields>
+<field>
+<datum_id>1</datum_id>
+<field_type>float</field_type>
+<example_value>-0.4</example_value>
+</field>
+<field>
+<datum_id>2</datum_id>
+<field_type>float</field_type>
+<example_value>-3.3</example_value>
+</field>
+</fields>
+</message>
+</messages>
+</category>
+<category name="EU_Euro_Area_Industrial_Production">
+<description>Euro Area Industrial Production</description>
+<country>EU</country>
+<category_id>20030</category_id>
+<data>
+<datum>
+<short_description>Month/Month, seasonally adjusted</short_description>
+<description>Month/Month, seasonally adjusted</description>
+<datum_type>%</datum_type>
+<datum_id>1</datum_id>
+</datum>
+<datum>
+<short_description>Year/Year (working-day adjusted)</short_description>
+<description>Year/Year (working-day adjusted)</description>
+<datum_type>%</datum_type>
+<datum_id>2</datum_id>
+</datum>
+</data>
+<messages>
+<message>
+<message_type>release</message_type>
+<message_version>1</message_version>
+<multicast_group>EU_GROUP_2</multicast_group>
+<fields>
+<field>
+<datum_id>1</datum_id>
+<field_type>float</field_type>
+<example_value>0.5</example_value>
+</field>
+<field>
+<datum_id>2</datum_id>
+<field_type>float</field_type>
+<example_value>-17.0</example_value>
+</field>
+</fields>
+</message>
+<message>
+<message_type>estimate</message_type>
+<message_version>1</message_version>
+<multicast_group>EU_ESTIMATES</multicast_group>
+<fields>
+<field>
+<datum_id>1</datum_id>
+<field_type>float</field_type>
+<example_value>0.5</example_value>
+</field>
+<field>
+<datum_id>2</datum_id>
+<field_type>float</field_type>
+<example_value>-17.0</example_value>
+</field>
+</fields>
+</message>
+</messages>
+</category>
+<category name="EU_Euro_Area_Industrial_Producer_Prices">
+<description>Euro Area Industrial Producer Prices (Figures are for total industry excluding construction)</description>
+<country>EU</country>
+<category_id>20031</category_id>
+<data>
+<datum>
+<short_description>Month/Month</short_description>
+<description>Month/Month</description>
+<datum_type>%</datum_type>
+<datum_id>1</datum_id>
+</datum>
+<datum>
+<short_description>Year/Year</short_description>
+<description>Year/Year</description>
+<datum_type>%</datum_type>
+<datum_id>2</datum_id>
+</datum>
+</data>
+<messages>
+<message>
+<message_type>release</message_type>
+<message_version>1</message_version>
+<multicast_group>EU_GROUP_2</multicast_group>
+<fields>
+<field>
+<datum_id>1</datum_id>
+<field_type>float</field_type>
+<example_value>-0.2</example_value>
+</field>
+<field>
+<datum_id>2</datum_id>
+<field_type>float</field_type>
+<example_value>-5.8</example_value>
+</field>
+</fields>
+</message>
+<message>
+<message_type>estimate</message_type>
+<message_version>1</message_version>
+<multicast_group>EU_ESTIMATES</multicast_group>
+<fields>
+<field>
+<datum_id>1</datum_id>
+<field_type>float</field_type>
+<example_value>-0.2</example_value>
+</field>
+<field>
+<datum_id>2</datum_id>
+<field_type>float</field_type>
+<example_value>-5.8</example_value>
+</field>
+</fields>
+</message>
+</messages>
+</category>
+<category name="EU_Euro_Area_Industrial_New_Orders">
+<description>Euro Area Industrial New Orders</description>
+<country>EU</country>
+<category_id>20032</category_id>
+<data>
+<datum>
+<short_description>Month/Month (Seasonally Adjusted)</short_description>
+<description>Month/Month (Seasonally Adjusted)</description>
+<datum_type>%</datum_type>
+<datum_id>1</datum_id>
+</datum>
+<datum>
+<short_description>Year/Year</short_description>
+<description>Year/Year</description>
+<datum_type>%</datum_type>
+<datum_id>2</datum_id>
+</datum>
+</data>
+<messages>
+<message>
+<message_type>release</message_type>
+<message_version>1</message_version>
+<multicast_group>EU_GROUP_2</multicast_group>
+<fields>
+<field>
+<datum_id>1</datum_id>
+<field_type>float</field_type>
+<example_value>-1</example_value>
+</field>
+<field>
+<datum_id>2</datum_id>
+<field_type>float</field_type>
+<example_value>-35</example_value>
+</field>
+</fields>
+</message>
+<message>
+<message_type>estimate</message_type>
+<message_version>1</message_version>
+<multicast_group>EU_ESTIMATES</multicast_group>
+<fields>
+<field>
+<datum_id>1</datum_id>
+<field_type>float</field_type>
+<example_value>-1</example_value>
+</field>
+<field>
+<datum_id>2</datum_id>
+<field_type>float</field_type>
+<example_value>-35</example_value>
+</field>
+</fields>
+</message>
+</messages>
+</category>
+<category name="EU_Euro_Area_Construction_Output">
+<description>Euro Area Construction Output</description>
+<country>EU</country>
+<category_id>20033</category_id>
+<data>
+<datum>
+<short_description>Month/Month, seasonally adjusted</short_description>
+<description>Month/Month, seasonally adjusted</description>
+<datum_type>%</datum_type>
+<datum_id>1</datum_id>
+</datum>
+<datum>
+<short_description>Year/Year (working-day adjusted)</short_description>
+<description>Year/Year (working-day adjusted)</description>
+<datum_type>%</datum_type>
+<datum_id>2</datum_id>
+</datum>
+</data>
+<messages>
+<message>
+<message_type>release</message_type>
+<message_version>1</message_version>
+<multicast_group>EU_GROUP_2</multicast_group>
+<fields>
+<field>
+<datum_id>1</datum_id>
+<field_type>float</field_type>
+<example_value>-2.0</example_value>
+</field>
+<field>
+<datum_id>2</datum_id>
+<field_type>float</field_type>
+<example_value>-8.0</example_value>
+</field>
+</fields>
+</message>
+<message>
+<message_type>estimate</message_type>
+<message_version>1</message_version>
+<multicast_group>EU_ESTIMATES</multicast_group>
+<fields>
+<field>
+<datum_id>1</datum_id>
+<field_type>float</field_type>
+<example_value>-2.0</example_value>
+</field>
+<field>
+<datum_id>2</datum_id>
+<field_type>float</field_type>
+<example_value>-8.0</example_value>
+</field>
+</fields>
+</message>
+</messages>
+</category>
+<category name="EU_EZ_Quarterly_GDP_Flash_Estimates">
+<description>EZ Quarterly GDP 'Flash' Estimates</description>
+<country>EU</country>
+<category_id>20034</category_id>
+<data>
+<datum>
+<short_description>Quarter/Quarter</short_description>
+<description>Quarter/Quarter</description>
+<datum_type>%</datum_type>
+<datum_id>1</datum_id>
+</datum>
+<datum>
+<short_description>Year/Year</short_description>
+<description>Year/Year</description>
+<datum_type>%</datum_type>
+<datum_id>2</datum_id>
+</datum>
+</data>
+<messages>
+<message>
+<message_type>release</message_type>
+<message_version>1</message_version>
+<multicast_group>EU_GROUP_2</multicast_group>
+<fields>
+<field>
+<datum_id>1</datum_id>
+<field_type>float</field_type>
+<example_value>1</example_value>
+</field>
+<field>
+<datum_id>2</datum_id>
+<field_type>float</field_type>
+<example_value>2.6</example_value>
+</field>
+</fields>
+</message>
+<message>
+<message_type>estimate</message_type>
+<message_version>1</message_version>
+<multicast_group>EU_ESTIMATES</multicast_group>
+<fields>
+<field>
+<datum_id>1</datum_id>
+<field_type>float</field_type>
+<example_value>1</example_value>
+</field>
+<field>
+<datum_id>2</datum_id>
+<field_type>float</field_type>
+<example_value>2.6</example_value>
+</field>
+</fields>
+</message>
+</messages>
+</category>
+<category name="EU_EZ_Quarterly_GDP_First_Estimates">
+<description>EZ Quarterly GDP 'First' Estimates</description>
+<country>EU</country>
+<category_id>20035</category_id>
+<data>
+<datum>
+<short_description>Quarter/Quarter</short_description>
+<description>Quarter/Quarter</description>
+<datum_type>%</datum_type>
+<datum_id>1</datum_id>
+</datum>
+<datum>
+<short_description>Year/Year</short_description>
+<description>Year/Year</description>
+<datum_type>%</datum_type>
+<datum_id>2</datum_id>
+</datum>
+</data>
+<messages>
+<message>
+<message_type>release</message_type>
+<message_version>1</message_version>
+<multicast_group>EU_GROUP_2</multicast_group>
+<fields>
+<field>
+<datum_id>1</datum_id>
+<field_type>float</field_type>
+<example_value>1</example_value>
+</field>
+<field>
+<datum_id>2</datum_id>
+<field_type>float</field_type>
+<example_value>2.6</example_value>
+</field>
+</fields>
+</message>
+<message>
+<message_type>estimate</message_type>
+<message_version>1</message_version>
+<multicast_group>EU_ESTIMATES</multicast_group>
+<fields>
+<field>
+<datum_id>1</datum_id>
+<field_type>float</field_type>
+<example_value>1</example_value>
+</field>
+<field>
+<datum_id>2</datum_id>
+<field_type>float</field_type>
+<example_value>2.6</example_value>
+</field>
+</fields>
+</message>
+</messages>
+</category>
+<category name="EU_EZ_Quarterly_GDP_Preliminary_Flash_Estimates">
+<description>EZ Quarterly GDP Preliminary 'Flash' Estimates</description>
+<country>EU</country>
+<category_id>20058</category_id>
+<data>
+<datum>
+<short_description>Preliminary Flash GDP Q/Q</short_description>
+<description>Preliminary Flash GDP Q/Q</description>
+<datum_type>%</datum_type>
+<datum_id>1</datum_id>
+</datum>
+</data>
+<messages>
+<message>
+<message_type>release</message_type>
+<message_version>1</message_version>
+<start_date>2016-04-29</start_date>
+<multicast_group>US_GROUP_2</multicast_group>
+<fields>
+<field>
+<datum_id>1</datum_id>
+<field_type>float</field_type>
+<example_value>1.2</example_value>
+</field>
+</fields>
+</message>
+<message>
+<message_type>estimate</message_type>
+<message_version>1</message_version>
+<start_date>2016-04-29</start_date>
+<multicast_group>EU_ESTIMATES</multicast_group>
+<fields>
+<field>
+<datum_id>1</datum_id>
+<field_type>float</field_type>
+<example_value>1.2</example_value>
+</field>
+</fields>
+</message>
+</messages>
+</category>
+<category name="EU_EZ_Current_Account">
+<description>EZ Current Account</description>
+<country>EU</country>
+<category_id>30015</category_id>
+<data>
+<datum>
+<short_description>Eurozone Current Account</short_description>
+<description>Eurozone Current Account</description>
+<datum_scale>B</datum_scale>
+<datum_type>Euro</datum_type>
+<datum_id>1</datum_id>
+</datum>
+<datum>
+<short_description>Eurozone Current Account Revised</short_description>
+<description>Prior Eurozone Current Account Revised</description>
+<datum_scale>B</datum_scale>
+<datum_type>Euro</datum_type>
+<datum_id>2</datum_id>
+</datum>
+</data>
+<messages>
+<message>
+<message_type>release</message_type>
+<message_version>2</message_version>
+<multicast_group>EU_GROUP_3</multicast_group>
+<fields>
+<field>
+<datum_id>1</datum_id>
+<field_type>float</field_type>
+<example_value>-15.3</example_value>
+</field>
+<field>
+<datum_id>2</datum_id>
+<field_type>float</field_type>
+<example_value>-7.5</example_value>
+</field>
+</fields>
+</message>
+<message>
+<message_type>estimate</message_type>
+<message_version>2</message_version>
+<multicast_group>EU_ESTIMATES</multicast_group>
+<fields>
+<field>
+<datum_id>1</datum_id>
+<field_type>float</field_type>
+<example_value>-15.3</example_value>
+</field>
+<field>
+<datum_id>2</datum_id>
+<field_type>float</field_type>
+<example_value>-7.5</example_value>
+</field>
+</fields>
+</message>
+</messages>
+</category>
+<category name="EU_ECB">
+<description>ECB Rate Decision</description>
+<country>EU</country>
+<category_id>30020</category_id>
+<data>
+<datum>
+<short_description>Refinancing Rate %</short_description>
+<description>Refinancing Rate</description>
+<datum_type>%</datum_type>
+<datum_id>1</datum_id>
+</datum>
+</data>
+<messages>
+<message>
+<message_type>release</message_type>
+<message_version>1</message_version>
+<multicast_group>EU_GROUP_3</multicast_group>
+<fields>
+<field>
+<datum_id>1</datum_id>
+<field_type>float</field_type>
+<example_value>.75</example_value>
+</field>
+</fields>
+</message>
+<message>
+<message_type>estimate</message_type>
+<message_version>1</message_version>
+<multicast_group>EU_ESTIMATES</multicast_group>
+<fields>
+<field>
+<datum_id>1</datum_id>
+<field_type>float</field_type>
+<example_value>.75</example_value>
+</field>
+</fields>
+</message>
+</messages>
+</category>
+<category name="EU_Euro_Sentix_EZ_Economic_Index">
+<description>Sentix EZ Economic Index</description>
+<country>EU</country>
+<category_id>30022</category_id>
+<data>
+<datum>
+<short_description>Total (Gesamt Index, Euroland)</short_description>
+<description>Total (Gesamt Index, Euroland)</description>
+<datum_type>index</datum_type>
+<datum_id>1</datum_id>
+</datum>
+<datum>
+<short_description>Situation (Headline Index, Aktuelle Lage, Euroland)</short_description>
+<description>Situation (Headline Index, Aktuelle Lage, Euroland)</description>
+<datum_type>index</datum_type>
+<datum_id>2</datum_id>
+</datum>
+<datum>
+<short_description>Expectations (Headline Index, Erwartung, Euroland)</short_description>
+<description>Expectations (Headline Index, Erwartung, Euroland)</description>
+<datum_type>index</datum_type>
+<datum_id>3</datum_id>
+</datum>
+</data>
+<messages>
+<message>
+<message_type>release</message_type>
+<message_version>1</message_version>
+<multicast_group>EU_GROUP_3</multicast_group>
+<fields>
+<field>
+<datum_id>1</datum_id>
+<field_type>float</field_type>
+<example_value>-3.7</example_value>
+</field>
+<field>
+<datum_id>2</datum_id>
+<field_type>float</field_type>
+<example_value>-24.25</example_value>
+</field>
+<field>
+<datum_id>3</datum_id>
+<field_type>float</field_type>
+<example_value>11.75</example_value>
+</field>
+</fields>
+</message>
+<message>
+<message_type>estimate</message_type>
+<message_version>1</message_version>
+<multicast_group>EU_ESTIMATES</multicast_group>
+<fields>
+<field>
+<datum_id>1</datum_id>
+<field_type>float</field_type>
+<example_value>-3.7</example_value>
+</field>
+<field>
+<datum_id>2</datum_id>
+<field_type>float</field_type>
+<example_value>-24.25</example_value>
+</field>
+<field>
+<datum_id>3</datum_id>
+<field_type>float</field_type>
+<example_value>11.75</example_value>
+</field>
+</fields>
+</message>
+</messages>
+</category>
+<category name="EU_ECB_Direction">
+<description>This tells whether or not the ECB uses two words in the announcement of changes or no changes in the interest rate structure. The trip word “decided”, as in “At today’s meeting the Governing Council of the ECB decided that the interest rate on...” indicates rates will remain unchanged. The trip word “took”, as in “At today’s meeting the Governing Council of the ECB took the following monetary policy decisions...” indicates a change to interest rates. This has so far always proved a reliable indicator of its intentions, several seconds before those intentions are spelled out in detail. It is, however, possible that the ECB may change its word formula to accommodate new and different circumstances. The ECB might not use either "decided" or "took," or it could use "decided" in a phrase preceeding an interest rate change.
+		Additionally, this is an unconfirmed indicator, meaning that it is sent as soon as the
+			reporter types it, without another reporter verifying it. Unconfirmed
+			indicators inherently have a higher risk of error than confirmed
+			indicators.</description>
+<country>EU</country>
+<category_id>30026</category_id>
+<data>
+<datum>
+<short_description>Wording seems to indicate ECB rate change?</short_description>
+<description>Wording seems to indicate a change in the ECB rates?</description>
+<datum_type>index</datum_type>
+<datum_id>2</datum_id>
+</datum>
+</data>
+<messages>
+<message>
+<message_type>release</message_type>
+<message_version>2</message_version>
+<start_date>2010-11-04</start_date>
+<multicast_group>EU_GROUP_3</multicast_group>
+<fields>
+<field>
+<datum_id>2</datum_id>
+<field_type>enumeration</field_type>
+<example_value>1</example_value>
+<allowed_values optional_value_allowed="true">
+              <allowed_value value="0" description="Decided (no change)"/>
+              <allowed_value value="1" description="Took (changed)"/>
+            </allowed_values>
+</field>
+</fields>
+</message>
+<message>
+<message_type>estimate</message_type>
+<message_version>2</message_version>
+<start_date>2010-11-04</start_date>
+<multicast_group>EU_GROUP_3</multicast_group>
+<fields>
+<field>
+<datum_id>2</datum_id>
+<field_type>enumeration</field_type>
+<example_value>1</example_value>
+<allowed_values optional_value_allowed="true">
+              <allowed_value value="0" description="Decided (no change)"/>
+              <allowed_value value="1" description="Took (changed)"/>
+            </allowed_values>
+</field>
+</fields>
+</message>
+</messages>
+</category>
+<category name="EU_ECB_Lending">
+<description>ECB Lending Rate</description>
+<country>EU</country>
+<category_id>30028</category_id>
+<data>
+<datum>
+<short_description>Lending Rate %</short_description>
+<description>Lending Rate</description>
+<datum_type>%</datum_type>
+<datum_id>1</datum_id>
+</datum>
+</data>
+<messages>
+<message>
+<message_type>release</message_type>
+<message_version>1</message_version>
+<multicast_group>EU_GROUP_3</multicast_group>
+<fields>
+<field>
+<datum_id>1</datum_id>
+<field_type>float</field_type>
+<example_value>1.50</example_value>
+</field>
+</fields>
+</message>
+<message>
+<message_type>estimate</message_type>
+<message_version>1</message_version>
+<multicast_group>EU_ESTIMATES</multicast_group>
+<fields>
+<field>
+<datum_id>1</datum_id>
+<field_type>float</field_type>
+<example_value>1.50</example_value>
+</field>
+</fields>
+</message>
+</messages>
+</category>
+<category name="EU_ECB_Deposit">
+<description>ECB Deposit Rate</description>
+<country>EU</country>
+<category_id>30029</category_id>
+<data>
+<datum>
+<short_description>Deposit Rate %</short_description>
+<description>Deposit Rate</description>
+<datum_type>%</datum_type>
+<datum_id>1</datum_id>
+</datum>
+</data>
+<messages>
+<message>
+<message_type>release</message_type>
+<message_version>1</message_version>
+<multicast_group>EU_GROUP_3</multicast_group>
+<fields>
+<field>
+<datum_id>1</datum_id>
+<field_type>float</field_type>
+<example_value>0.0</example_value>
+</field>
+</fields>
+</message>
+<message>
+<message_type>estimate</message_type>
+<message_version>1</message_version>
+<multicast_group>EU_ESTIMATES</multicast_group>
+<fields>
+<field>
+<datum_id>1</datum_id>
+<field_type>float</field_type>
+<example_value>0.0</example_value>
+</field>
+</fields>
+</message>
+</messages>
+</category>
+<category name="EU_Economic_Sentiment_Indicator">
+<description>EZ Economic Sentiment Indicator</description>
+<country>EU</country>
+<category_id>30030</category_id>
+<data>
+<datum>
+<short_description>Indicator (euro area)</short_description>
+<description>EZ Economic Sentiment Indicator (euro area)</description>
+<datum_type>index</datum_type>
+<datum_id>1</datum_id>
+</datum>
+</data>
+<messages>
+<message>
+<message_type>release</message_type>
+<message_version>1</message_version>
+<start_date>2013-03-27</start_date>
+<multicast_group>EU_GROUP_3</multicast_group>
+<fields>
+<field>
+<datum_id>1</datum_id>
+<field_type>float</field_type>
+<example_value>93.7</example_value>
+</field>
+</fields>
+</message>
+<message>
+<message_type>estimate</message_type>
+<message_version>1</message_version>
+<start_date>2013-03-27</start_date>
+<multicast_group>EU_ESTIMATES</multicast_group>
+<fields>
+<field>
+<datum_id>1</datum_id>
+<field_type>float</field_type>
+<example_value>93.7</example_value>
+</field>
+</fields>
+</message>
+</messages>
+</category>
+<category name="EU_ECB_Press_Conference_Question">
+<description>EU ECB Press Conference Question</description>
+<country>EU</country>
+<category_id>30032</category_id>
+<data>
+<datum>
+<short_description>Does the ECB say that further monetary policy decisions will be announced at the regular press conference?</short_description>
+<description>Does the ECB say that further monetary policy decisions will be announced at the regular press conference?</description>
+<datum_type>yes_no_na</datum_type>
+<datum_id>1</datum_id>
+</datum>
+</data>
+<messages>
+<message>
+<message_type>release</message_type>
+<message_version>1</message_version>
+<start_date>2016-01-20</start_date>
+<multicast_group>EU_GROUP_3</multicast_group>
+<fields>
+<field>
+<datum_id>1</datum_id>
+<field_type>yes_no_na</field_type>
+<example_value>1</example_value>
+</field>
+</fields>
+</message>
+</messages>
+</category>
+<category name="EMU PRELIMINARY FLASH GDP Q/Q">
+<description>EMU PRELIMINARY FLASH GDP Q/Q</description>
+<country>EU</country>
+<category_id>30034</category_id>
+<data>
+<datum>
+<short_description>EMU PRELIMINARY FLASH GDP Q/Q</short_description>
+<description>EMU PRELIMINARY FLASH GDP Q/Q</description>
+<datum_type>%</datum_type>
+<datum_id>1</datum_id>
+</datum>
+</data>
+<messages>
+<message>
+<message_type>release</message_type>
+<message_version>1</message_version>
+<multicast_group>EU_GROUP_3</multicast_group>
+<fields>
+<field>
+<datum_id>1</datum_id>
+<field_type>float</field_type>
+<example_value>2.8</example_value>
+</field>
+</fields>
+</message>
+<message>
+<message_type>estimate</message_type>
+<message_version>1</message_version>
+<multicast_group>EU_ESTIMATES</multicast_group>
+<fields>
+<field>
+<datum_id>1</datum_id>
+<field_type>float</field_type>
+<example_value>2.8</example_value>
+</field>
+</fields>
+</message>
+</messages>
+</category>
+<category name="EMU PRELIMINARY FLASH GDP Y/Y">
+<description>EMU PRELIMINARY FLASH GDP Y/Y</description>
+<country>EU</country>
+<category_id>30035</category_id>
+<data>
+<datum>
+<short_description>EMU PRELIMINARY FLASH GDP Y/Y</short_description>
+<description>EMU PRELIMINARY FLASH GDP Y/Y</description>
+<datum_type>%</datum_type>
+<datum_id>1</datum_id>
+</datum>
+</data>
+<messages>
+<message>
+<message_type>release</message_type>
+<message_version>1</message_version>
+<multicast_group>EU_GROUP_3</multicast_group>
+<fields>
+<field>
+<datum_id>1</datum_id>
+<field_type>float</field_type>
+<example_value>1.2</example_value>
+</field>
+</fields>
+</message>
+<message>
+<message_type>estimate</message_type>
+<message_version>1</message_version>
+<multicast_group>EU_ESTIMATES</multicast_group>
+<fields>
+<field>
+<datum_id>1</datum_id>
+<field_type>float</field_type>
+<example_value>1.2</example_value>
+</field>
+</fields>
+</message>
+</messages>
+</category>
+<category name="ECB Rate Decision">
+<description>ECB Rate Decision</description>
+<country>EU</country>
+<category_id>30036</category_id>
+<data>
+<datum>
+<short_description>Interest Rate on Main Refinancing Operations</short_description>
+<description>Interest Rate on Main Refinancing Operations</description>
+<datum_type>%</datum_type>
+<datum_id>1</datum_id>
+</datum>
+<datum>
+<short_description>Interest Rate on Marginal Lending Facility</short_description>
+<description>Interest Rate on Marginal Lending Facility</description>
+<datum_type>%</datum_type>
+<datum_id>2</datum_id>
+</datum>
+<datum>
+<short_description>Interest Rate on Deposit Facility</short_description>
+<description>Interest Rate on Deposit Facility</description>
+<datum_type>%</datum_type>
+<datum_id>3</datum_id>
+</datum>
+</data>
+<messages>
+<message>
+<message_type>release</message_type>
+<message_version>1</message_version>
+<multicast_group>EU_GROUP_3</multicast_group>
+<fields>
+<field>
+<datum_id>1</datum_id>
+<field_type>float</field_type>
+<example_value>0.00</example_value>
+</field>
+<field>
+<datum_id>2</datum_id>
+<field_type>float</field_type>
+<example_value>0.25</example_value>
+</field>
+<field>
+<datum_id>3</datum_id>
+<field_type>float</field_type>
+<example_value>-0.40</example_value>
+</field>
+</fields>
+</message>
+</messages>
+</category>
+<category name="EU_EZ_Quarterly_GDP_Second_Estimates">
+<description>EZ Quarterly GDP 'Second' Estimates</description>
+<country>EU</country>
+<category_id>55001</category_id>
+<data>
+<datum>
+<short_description>Quarter/Quarter</short_description>
+<description>Quarter/Quarter</description>
+<datum_type>%</datum_type>
+<datum_id>1</datum_id>
+</datum>
+<datum>
+<short_description>Year/Year</short_description>
+<description>Year/Year</description>
+<datum_type>%</datum_type>
+<datum_id>2</datum_id>
+</datum>
+</data>
+<messages>
+<message>
+<message_type>release</message_type>
+<message_version>1</message_version>
+<multicast_group>EU_GROUP_2</multicast_group>
+<fields>
+<field>
+<datum_id>1</datum_id>
+<field_type>float</field_type>
+<example_value>1</example_value>
+</field>
+<field>
+<datum_id>2</datum_id>
+<field_type>float</field_type>
+<example_value>2.6</example_value>
+</field>
+</fields>
+</message>
+<message>
+<message_type>estimate</message_type>
+<message_version>1</message_version>
+<multicast_group>EU_ESTIMATES</multicast_group>
+<fields>
+<field>
+<datum_id>1</datum_id>
+<field_type>float</field_type>
+<example_value>1</example_value>
+</field>
+<field>
+<datum_id>2</datum_id>
+<field_type>float</field_type>
+<example_value>2.6</example_value>
+</field>
+</fields>
+</message>
+</messages>
+</category>
+</protocol>

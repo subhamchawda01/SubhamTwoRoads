@@ -1,0 +1,168 @@
+use-project /PDVCC : ../libdvccode ;
+use-project /PTheoCalc : ../TheoCalcCode ;
+use-project /PExecutioner : ../ExecutionerCode ;
+use-project /PIndicator : ../IndicatorCode ;
+
+lib boost_program_options : : <name>boost_program_options <search>$(BOOST_LIB_INSTALL) ;
+
+project : requirements <library>boost_program_options
+        : usage-requirements ;
+
+exe trade_engine
+    : trade_engine.cpp
+      /PDVCC//CDef
+      /PDVCC//TradingInfo
+      /PDVCC//CommonTradeUtils
+      /PDVCC//ExternalData
+      /PDVCC//LoggedSources
+      /PDVCC//OptionsUtils
+      /PDVCC//SmartOrderRouting
+      /PDVCC//OrderRouting
+      /PDVCC//MarketAdapter
+      /PDVCC//BaseUtils
+      /PDVCC//Utils
+      /PDVCC//CommonDataStructures
+      /PDVCC//SimPnls
+      /PDVCC//SimMarketMaker
+      /PDVCC//TradeUtils
+      /PDVCC//VolatileTradingInfo
+      /PExecutioner//libExecutioner
+      /PTheoCalc//libTheoCalc
+      /PIndicator//libIndicator
+      /PDVCC//FpgaHeader
+    :
+    : <variant>debug <variant>release
+      <linkflags>-lnsmsg
+      <linkflags>-lpthread
+    ;
+
+exe trade_engine_live
+    : trade_engine_live.cpp live_products_manager.cpp
+      /PDVCC//CDef
+      /PDVCC//TradingInfo
+      /PDVCC//CommonTradeUtils
+      /PDVCC//ExternalData
+      /PDVCC//LoggedSources
+      /PDVCC//OptionsUtils
+      /PDVCC//SmartOrderRouting
+      /PDVCC//OrderRouting
+      /PDVCC//MarketAdapter
+      /PDVCC//BaseUtils
+      /PDVCC//SimMarketMaker
+      /PDVCC//Utils
+      /PDVCC//CommonDataStructures
+      /PDVCC//LivePnls
+      /PDVCC//TradeUtils
+      /PDVCC//VolatileTradingInfo
+      /PExecutioner//libExecutioner
+      /PTheoCalc//libTheoCalc
+      /PIndicator//libIndicator
+      /PDVCC//FpgaHeader
+      /spare/local/lib/tcpdirect/libonload_zf_static.a
+    :
+    : <variant>debug <variant>release
+      <linkflags>-lnsmsg
+      <linkflags>-lpthread
+    ;
+
+
+exe pos_exec
+    : pos_exec.cpp live_products_manager.cpp
+      /PDVCC//CDef
+      /PDVCC//TradingInfo
+      /PDVCC//CommonTradeUtils
+      /PDVCC//ExternalData
+      /PDVCC//LoggedSources
+      /PDVCC//OptionsUtils
+      /PDVCC//SmartOrderRouting
+      /PDVCC//OrderRouting
+      /PDVCC//MarketAdapter
+      /PDVCC//BaseUtils
+      /PDVCC//SimMarketMaker
+      /PDVCC//Utils
+      /PDVCC//CommonDataStructures
+      /PDVCC//SimPnls
+      /PDVCC//LivePnls
+      /PDVCC//TradeUtils
+      /PDVCC//VolatileTradingInfo
+      /PExecutioner//libExecutioner
+      /PTheoCalc//libTheoCalc
+      /PIndicator//libIndicator
+      /PDVCC//FpgaHeader
+      /spare/local/lib/tcpdirect/libonload_zf_static.a
+    :
+    : <variant>debug <variant>release
+      <linkflags>-lnsmsg
+      <linkflags>-lpthread
+    ;
+
+exe pos_exec_instance_nocore
+    : pos_exec_instance_nocore.cpp live_products_manager.cpp
+      /PDVCC//CDef
+      /PDVCC//TradingInfo
+      /PDVCC//CommonTradeUtils
+      /PDVCC//ExternalData
+      /PDVCC//LoggedSources
+      /PDVCC//OptionsUtils
+      /PDVCC//SmartOrderRouting
+      /PDVCC//OrderRouting
+      /PDVCC//MarketAdapter
+      /PDVCC//BaseUtils
+      /PDVCC//SimMarketMaker
+      /PDVCC//Utils
+      /PDVCC//CommonDataStructures
+      /PDVCC//SimPnls
+      /PDVCC//LivePnls
+      /PDVCC//TradeUtils
+      /PDVCC//VolatileTradingInfo
+      /PExecutioner//libExecutioner
+      /PTheoCalc//libTheoCalc
+      /PIndicator//libIndicator
+      /PDVCC//FpgaHeader
+      /spare/local/lib/tcpdirect/libonload_zf_static.a
+    :
+    : <variant>debug <variant>release
+      <linkflags>-lnsmsg
+      <linkflags>-lpthread
+    ;
+
+exe post_market_exec
+    : post_market_exec.cpp live_products_manager.cpp
+      /PDVCC//CDef
+      /PDVCC//TradingInfo
+      /PDVCC//CommonTradeUtils
+      /PDVCC//ExternalData
+      /PDVCC//LoggedSources
+      /PDVCC//OptionsUtils
+      /PDVCC//SmartOrderRouting
+      /PDVCC//OrderRouting
+      /PDVCC//MarketAdapter
+      /PDVCC//BaseUtils
+      /PDVCC//SimMarketMaker
+      /PDVCC//Utils
+      /PDVCC//CommonDataStructures
+      /PDVCC//SimPnls
+      /PDVCC//LivePnls
+      /PDVCC//TradeUtils
+      /PDVCC//VolatileTradingInfo
+      /PExecutioner//libExecutioner
+      /PTheoCalc//libTheoCalc
+      /PIndicator//libIndicator
+      /PDVCC//FpgaHeader
+      /spare/local/lib/tcpdirect/libonload_zf_static.a
+    :
+    : <variant>debug <variant>release
+      <linkflags>-lnsmsg
+      <linkflags>-lpthread
+    ;
+install install-bin
+	: trade_engine
+	  trade_engine_live
+          pos_exec
+          pos_exec_instance_nocore
+          post_market_exec
+	: <variant>release:<location>"$(PROJECT_INSTALL)/bin"
+    	  <variant>debug:<location>"$(PROJECT_INSTALL)/bindebug"
+  	: release debug
+	;
+

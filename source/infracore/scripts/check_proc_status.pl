@@ -1,0 +1,57 @@
+#!/usr/bin/perl
+
+my @procs_to_check = split(/\n/, ` grep  -vi -f /spare/local/files/filter /spare/local/files/procs_to_monitor.txt | sed '/^#/d; /^[ \t]*\$/d; s/[ \t][ \t]*/ /g'`);
+
+my $curr_time = `date '+%M'` + 60 * `date '+%k'`; 
+
+for my $proc_to_check (@procs_to_check) {
+	
+	@tmp_arr = split(" ", $proc_to_check);
+	my $trd_server = $tmp_arr[0];
+	my $st_time = (split(":", $tmp_arr[1]))[0]  + 60 * (split(":", $tmp_arr[1]))[1];
+	my $e_time = (split(":", $tmp_arr[2]))[0]  + 60 * (split(":", $tmp_arr[2]))[1];
+	my $r_exp = $tmp_arr[3];
+	
+	$ps_cmd = " ps -eaf | grep \"".$r_exp."\" | grep -v grep | wc -l";
+	$cmd = "ssh -o ConnectTimeout=30 ".$trd_server." ' ".$ps_cmd." ' |";
+	
+	my $expected_to_run = 1;
+	
+	if($st_time < $e_time){
+	  if($curr_time < $st_time || $e_time < $curr_time)
+          {
+    	    $expected_to_run = 0;
+          }
+	}
+	else {
+	  if( ( $curr_time < $st_time ) && ( $e_time < $curr_time ) )
+	  {
+	    $expected_to_run = 0;
+	  }
+	}  
+    my $grace_period_in_miutes = 2;
+    my $allow_grace_period = 0;
+    if ( abs($st_time-$curr_time) < $grace_period_in_miutes  || abs($e_time - $curr_time) < $grace_period_in_miutes  ) {
+       $allow_grace_period = 1;
+    }
+       
+    open(F, $cmd);
+    if(defined($ret_val = <F>)){
+	chomp($ret_val);
+    	if( $ret_val == $expected_to_run ){
+          	print "OK running_status:".$ret_val." ".$proc_to_check."\n";
+        }
+        elsif( $allow_grace_period == 1){
+            print "OK_grace_period running_status:".$ret_val." ".$proc_to_check."\n"
+        }
+        else
+        {
+          	print "ALERT running_status:".$ret_val." ".$proc_to_check."\n"
+        }
+    }
+    else
+    {
+    	#some alert of error to ssh ?//figure out
+    }
+    
+}

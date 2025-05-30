@@ -1,0 +1,6 @@
+"country","date","name","actual","consensus","previous","volatility"
+"China","20130309 01:30:00","Consumer Price Index (MoM)","","0.800  %","1.000  %","2"
+"China","20130309 01:30:00","Consumer Price Index (YoY)","","3.000  %","2.000  %","2"
+"China","20130309 01:30:00","Producer Price Index (YoY)","","-1.500  %","-1.600  %","2"
+"China","20130309 02:00:00","New Loans",""," 750.000 "," 1,070.000 ","2"
+"China","20130309 05:30:00","Industrial Production (YoY)","","10.500  %","10.300  %","2"

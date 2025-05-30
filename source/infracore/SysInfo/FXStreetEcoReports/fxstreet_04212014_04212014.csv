@@ -1,0 +1,5 @@
+"country","date","name","actual","consensus","previous","volatility"
+"United States","20140421 12:30:00","Chicago Fed National Activity Index ","",""," 0.140 ","2"
+"United States","20140421 14:00:00","CB Leading Indicator (MoM)","","0.700  %","0.500  %","2"
+"United States","20140421 15:30:00","3-Month Bill Auction","","","0.035  %","1"
+"United States","20140421 15:30:00","6-Month Bill Auction","","","0.050  %","1"

@@ -1,0 +1,8 @@
+"country","date","name","actual","consensus","previous","volatility"
+"New Zealand","20141130 19:45:00","RBNZ Governor Wheeler Speech","","","","3"
+"New Zealand","20141130 21:45:00","Terms of Trade Index","","-4.800  %","0.300  %","1"
+"Australia","20141130 22:30:00","AiG Performance of Mfg Index","",""," 49.400 ","2"
+"Australia","20141130 23:30:00","TD Securities Inflation (YoY)","","","2.300  %","1"
+"Australia","20141130 23:30:00","TD Securities Inflation (MoM)","","","0.200  %","1"
+"Japan","20141130 23:50:00","BSI Large Manufacturing (QoQ)","",""," 12.700 ","2"
+"Japan","20141130 23:50:00","Capital Spending","","","3.000  %","2"

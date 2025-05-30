@@ -1,0 +1,33 @@
+#Service_Id	Stream_Type	Feed	Address		Port
+# Real-Time Service Config - Incremental streams
+2		I		A	224.0.64.3	50002
+2		I		B	224.0.65.3	50006
+4		I		A	224.0.64.5	50001
+4		I		B	224.0.65.5	50005
+6		I		A	224.0.64.7	50001
+6		I		B	224.0.65.7	50005
+21		I		A	224.0.64.14	50001
+21		I		B	224.0.65.14	50005
+22		I		A	224.0.64.17	50001
+22		I		B	224.0.65.17	50005
+25		I		A	224.0.64.15	50001
+25		I		B	224.0.65.15	50005
+26		I		A	224.0.64.19	50001
+26		I		B	224.0.65.19	50005
+28		I		A	224.0.64.16	50001
+28		I		B	224.0.65.16	50005
+29		I		A	224.0.64.21	50001
+29		I		B	224.0.65.21	50005
+31		I		A	224.0.64.12	50001
+31		I		B	224.0.65.12	50005
+32		I		A	224.0.64.13	50001
+32		I		B	224.0.65.13	50005
+33		I		A	224.0.64.10	50001
+33		I		B	224.0.65.10	50005
+35		I		A	224.0.64.9	50001
+35		I		B	224.0.65.9	50005
+36		I		A	224.0.64.8	50001
+36		I		B	224.0.65.8	50005
+# Retransmission Service Config - Get a few dropped packets via TCP
+# Refresh Service Request Config - TCP channels to send a request for snapshot data
+# Refresh Service Response Config - MCast streams containing snapshot data , available after explicit request on "Refresh Service Request Config"

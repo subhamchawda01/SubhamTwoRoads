@@ -1,0 +1,16 @@
+
+project : usage-requirements <include>$(PROJECT_INSTALL) 
+<linkflags>-lboost_system
+;
+
+lib CommonDataStructures : [ glob *.cpp ] : <link>static ;
+
+install libCommonDataStructures
+  : CommonDataStructures
+  : <install-type>LIB
+    <variant>release:<location>"$(PROJECT_LIB_INSTALL)"
+    <variant>debug:<location>"$(PROJECT_LIB_INSTALL_DEBUG)"
+  : release debug
+  ;
+
+

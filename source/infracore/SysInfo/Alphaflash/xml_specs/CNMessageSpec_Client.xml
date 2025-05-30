@@ -1,0 +1,167 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<?xml-stylesheet type="text/xsl" href="./ClientHTML.xsl"?><protocol>
+<version>351</version>
+<revisions>
+    <revision type="Final" version="351" author="MNI News" date="03/13/2017"/>
+  </revisions>
+<category name="CN_Industrial_Output">
+<description>Industrial Output</description>
+<country>CN</country>
+<category_id>7002</category_id>
+<data>
+<datum>
+<short_description>Monthly Industrial Output y/y</short_description>
+<description>Monthly Industrial Output, year-over-year</description>
+<datum_type>%</datum_type>
+<datum_id>1</datum_id>
+</datum>
+</data>
+<messages>
+<message>
+<message_type>release</message_type>
+<message_version>2</message_version>
+<start_date>2012-06-09</start_date>
+<multicast_group>ASIAPAC</multicast_group>
+<fields>
+<field>
+<datum_id>1</datum_id>
+<field_type>float</field_type>
+<example_value>18.5</example_value>
+</field>
+</fields>
+</message>
+<message>
+<message_type>estimate</message_type>
+<message_version>2</message_version>
+<start_date>2012-06-09</start_date>
+<multicast_group>ASIAPAC_ESTIMATES</multicast_group>
+<fields>
+<field>
+<datum_id>1</datum_id>
+<field_type>float</field_type>
+<example_value>18.5</example_value>
+</field>
+</fields>
+</message>
+</messages>
+</category>
+<category name="CN_Retail_Sales">
+<description>Retail Sales</description>
+<country>CN</country>
+<category_id>7003</category_id>
+<data>
+<datum>
+<short_description>Monthly Retail Sales y/y</short_description>
+<description>Monthly Retail Sales, year-over-year</description>
+<datum_type>%</datum_type>
+<datum_id>1</datum_id>
+</datum>
+</data>
+<messages>
+<message>
+<message_type>release</message_type>
+<message_version>2</message_version>
+<start_date>2012-06-09</start_date>
+<multicast_group>ASIAPAC</multicast_group>
+<fields>
+<field>
+<datum_id>1</datum_id>
+<field_type>float</field_type>
+<example_value>17.5</example_value>
+</field>
+</fields>
+</message>
+<message>
+<message_type>estimate</message_type>
+<message_version>2</message_version>
+<start_date>2012-06-09</start_date>
+<multicast_group>ASIAPAC_ESTIMATES</multicast_group>
+<fields>
+<field>
+<datum_id>1</datum_id>
+<field_type>float</field_type>
+<example_value>17.5</example_value>
+</field>
+</fields>
+</message>
+</messages>
+</category>
+<category name="CN_Fixed-Asset_Investment">
+<description>Fixed-Asset Investment</description>
+<country>CN</country>
+<category_id>7005</category_id>
+<data>
+<datum>
+<short_description>Year-to-date fixed-asset "urban" investment y/y</short_description>
+<description>Year-to-date fixed-asset "urban" investment, year-over-year. This is not the same as the total investment figure that is released quarterly. The total investment is urban + rural, and urban is the more dynamic figure.</description>
+<datum_type>%</datum_type>
+<datum_id>2</datum_id>
+</datum>
+</data>
+<messages>
+<message>
+<message_type>release</message_type>
+<message_version>2</message_version>
+<multicast_group>ASIAPAC</multicast_group>
+<fields>
+<field>
+<datum_id>2</datum_id>
+<field_type>float</field_type>
+<example_value>30.5</example_value>
+</field>
+</fields>
+</message>
+<message>
+<message_type>estimate</message_type>
+<message_version>2</message_version>
+<multicast_group>ASIAPAC_ESTIMATES</multicast_group>
+<fields>
+<field>
+<datum_id>2</datum_id>
+<field_type>float</field_type>
+<example_value>30.5</example_value>
+</field>
+</fields>
+</message>
+</messages>
+</category>
+<category name="CN_GDP">
+<description>Chinese GDP</description>
+<country>CN</country>
+<category_id>7006</category_id>
+<data>
+<datum>
+<short_description>Quarterly GDP, y/y</short_description>
+<description>Quarterly GDP, year over year</description>
+<datum_type>%</datum_type>
+<datum_id>2</datum_id>
+</datum>
+</data>
+<messages>
+<message>
+<message_type>release</message_type>
+<message_version>2</message_version>
+<multicast_group>ASIAPAC</multicast_group>
+<fields>
+<field>
+<datum_id>2</datum_id>
+<field_type>float</field_type>
+<example_value>10.7</example_value>
+</field>
+</fields>
+</message>
+<message>
+<message_type>estimate</message_type>
+<message_version>2</message_version>
+<multicast_group>ASIAPAC_ESTIMATES</multicast_group>
+<fields>
+<field>
+<datum_id>2</datum_id>
+<field_type>float</field_type>
+<example_value>10.7</example_value>
+</field>
+</fields>
+</message>
+</messages>
+</category>
+</protocol>

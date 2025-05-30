@@ -1,0 +1,4 @@
+0000000000000000000000000000000000000000 9f3bb588cff53543da4805de7180dc0801a04f81 subhamchawda01 <subham.chawda@tworoads-trading.co.in> 1687343073 +0000	branch: Created from HEAD
+9f3bb588cff53543da4805de7180dc0801a04f81 1802d385f54679acca2722de19330528c23b677e subhamchawda01 <subham.chawda@tworoads-trading.co.in> 1687343127 +0000	merge origin/BANKNIFTY_EXPIRY_CHANGES: Fast-forward
+1802d385f54679acca2722de19330528c23b677e 59aff564210b65fa676039db26abedd908061602 subhamchawda01 <subham.chawda@tworoads-trading.co.in> 1687347531 +0000	commit: added new machine details ors reply report fo
+59aff564210b65fa676039db26abedd908061602 fa019ea6a98891ffe27e849f80ace75e6b2a6c4b subhamchawda01 <subham.chawda@tworoads-trading.co.in> 1689579813 +0000	commit: removed banknifty expiry changes not required

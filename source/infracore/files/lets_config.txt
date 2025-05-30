@@ -1,0 +1,9 @@
+LetsSocketIP 200.143.33.126
+LetsSocketPort 13605
+SenderCompID DVCSBC
+TargetCompID LNKSBC 
+Password DVC
+OptimizeAssumptions N
+HeartBtInt 30
+BCAST_IP 225.9.9.9
+BCAST_PORT 12345

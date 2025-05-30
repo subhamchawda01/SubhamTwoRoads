@@ -1,0 +1,99 @@
+#! /bin/bash
+#
+# chkconfig: 2345 95 20
+# description: This application was developed by me and is tested on this server
+# processname: dvc_chkdata
+# dvcservice Bring up/down custom services 
+# Author : Ravi Parikh (c)
+#
+# description: This keeps track of data availability to queries and report when queries are not getting ready 
+#
+### BEGIN INIT INFO
+# Provides: custom functionality 
+### END INIT INFO
+
+# Source function library.
+. /etc/init.d/functions
+
+PIDFILE="/tmp/checkdata.pid"
+RETVAL=0 
+
+start () {
+
+  echo "Starting Up CheckRunningQueries..." 
+  sudo runuser -l dvctrader -c '/home/pengine/prod/live_scripts/check_data_availability.sh >/dev/null 2>/dev/null &' 
+  PID=`ps -ef |grep check_data_availability | grep -v grep | awk '{print $2}'` ;
+  echo $PID > $PIDFILE ;
+  is_alive=`ps -ef |grep $PID | grep -v grep | wc -l` ;
+  action "Checking If Daemon Was Brought Up" [ "$is_alive" != "0" ]
+  return $RETVAL 
+
+}
+
+stop () {
+
+  echo "Shutting Down CheckDataAvailability..."
+  PID=`ps -ef |grep check_data_availability | grep -v grep | awk '{print $2}'`
+
+  if [ -f $PIDFILE ] ; then
+
+    sudo kill -s SIGINT `cat $PIDFILE` >/dev/null 2>/dev/null
+
+  else
+
+    #unusual, but we could make sure to terminate all instances 
+    sudo killall -SIGINT check_data_availability >/dev/null 2>/dev/null
+
+  fi
+
+  is_alive=`ps -ef |grep check_data_availability | grep -v grep | wc -l` ;
+
+  if [ $is_alive -gt 0 ] ; then
+    sudo kill -9 `ps -ef |grep check_data_availability | grep -v grep | awk '{print $2}'` ;
+  fi
+
+  is_alive=`ps -ef |grep check_data_availability | grep -v grep | wc -l` ;
+
+  action "Checking If Daemon Has Been Brought Down" [ "$is_alive" == "0" ]
+  rm -rf $PIDFILE ;
+
+  return $RETVAL 
+
+}
+
+dostatus () {
+
+  if [ -f "/etc/init.d/functions" ]; then
+    status check_data_availability.sh
+  fi
+   
+}
+
+restart () {
+
+  stop 
+  start 
+
+}
+
+# See how we were called.
+case "$1" in
+  start)
+        start
+        ;;
+  stop)
+        stop
+        ;;
+  restart)
+    restart
+    ;;
+  status)
+        dostatus
+        ;;
+  *)
+        echo "Usage: dvc_chkdata {start|stop|restart|status}"
+        exit 1
+esac
+
+exit $RETVAL
+

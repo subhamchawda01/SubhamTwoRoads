@@ -1,0 +1,1 @@
+export PYTHONPATH=$HOME/basetrade:$PYTHONPATH

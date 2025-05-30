@@ -1,0 +1,1460 @@
+Date Time,,,,Event,,Survey,Actual,Prior,Revised,Relevance,Ticker
+01/02/2014 08:30,US,1),,Initial Jobless Claims,28-Dec,344K,339K,338K,341K,98.2301,INJCJC Index
+01/02/2014 08:30,US,2),,Continuing Claims,21-Dec,2900K,2833K,2923K,2931K,68.7611,INJCSP Index
+01/02/2014 08:58,US,3),,Markit US PMI Final,Dec,54.7,55,54.7,--,7.9646,ECONMUSF Index
+01/02/2014 09:45,US,4),,Bloomberg Consumer Comfort,29-Dec,--,-28.7,-27.4,--,63.7168,COMFCOMF Index
+01/02/2014 10:00,US,5),,ISM Manufacturing,Dec,56.8,--,57.3,--,94.6903,NAPMPMI Index
+01/02/2014 10:00,US,6),,ISM Prices Paid,Dec,53,--,52.5,--,69.9115,NAPMPRIC Index
+01/02/2014 10:00,US,7),,Construction Spending MoM,Nov,0.60%,--,0.80%,--,77.8761,CNSTTMOM Index
+01/03/2014 09:45,US,8),,ISM New York,Dec,--,--,69.5,--,10.6195,NYPMCURR Index
+01/03/2014 17:00,US,9),,Total Vehicle Sales,Dec,16.00M,--,16.31M,--,40.708,SAARTOTL Index
+01/03/2014 17:00,US,10),,Domestic Vehicle Sales,Dec,12.50M,--,12.62M,--,33.6283,SAARDTOT Index
+01/06/2014 10:00,US,11),,ISM Non-Manf. Composite,Dec,54.5,--,53.9,--,73.4513,NAPMNMI Index
+01/06/2014 10:00,US,12),,Factory Orders,Nov,1.70%,--,-0.90%,--,84.0708,TMNOCHNG Index
+01/07/2014 08:30,US,13),,Trade Balance,Nov,-$40.0B,--,-$40.6B,--,82.3009,USTBTOT Index
+01/07/2014 10:00,US,14),,IBD/TIPP Economic Optimism,Jan,--,--,43.1,--,15.0442,ECONUSIB Index
+01/08/2014 07:00,US,15),,MBA Mortgage Applications,3-Jan,--,--,-6.30%,--,92.3077,MBAVCHNG Index
+01/08/2014 08:15,US,16),,ADP Employment Change,Dec,195K,--,215K,--,80.531,ADP CHNG Index
+01/08/2014 14:00,US,17),,Fed Releases Minutes from Dec 17-18 FOMC Meeting,,,,,,0,
+01/08/2014 15:00,US,18),,Consumer Credit,Nov,$13.250B,--,$18.186B,--,39.823,CICRTOT Index
+01/09/2014 07:30,US,19),,Challenger Job Cuts YoY,Dec,--,--,-20.60%,--,32.7434,CHALYOY% Index
+01/09/2014 07:30,US,20),,RBC Consumer Outlook Index,Jan,--,--,49.7,--,13.2743,ICSHNATL Index
+01/09/2014 08:30,US,21),,Initial Jobless Claims,4-Jan,--,--,339K,--,98.2301,INJCJC Index
+01/09/2014 08:30,US,22),,Continuing Claims,28-Dec,--,--,2833K,--,68.7611,INJCSP Index
+01/09/2014 09:45,US,23),,Bloomberg Consumer Comfort,5-Jan,--,--,-28.7,--,63.7168,COMFCOMF Index
+01/10/2014 08:30,US,24),,Two-Month Payroll Net Revision,Dec,--,--,8K,--,4.42478,ECONGECC Index
+01/10/2014 08:30,US,25),,Revision of Seasonally Adjusted Household Survey Data,,,,,,0,
+01/10/2014 08:30,US,26),,Change in Nonfarm Payrolls,Dec,195K,--,203K,--,99.115,NFP TCH Index
+01/10/2014 08:30,US,27),,Change in Private Payrolls,Dec,193K,--,196K,--,23.0088,NFP PCH Index
+01/10/2014 08:30,US,28),,Change in Manufact. Payrolls,Dec,15K,--,27K,--,69.3805,USMMMNCH Index
+01/10/2014 08:30,US,29),,Unemployment Rate,Dec,7.00%,--,7.00%,--,89.2035,USURTOT Index
+01/10/2014 08:30,US,30),,Average Hourly Earnings MoM,Dec,0.20%,--,0.20%,--,19.469,AHE MOM% Index
+01/10/2014 08:30,US,31),,Average Hourly Earnings YoY,Dec,--,--,2.00%,--,17.6991,AHE YOY% Index
+01/10/2014 08:30,US,32),,Average Weekly Hours All Employees,Dec,34.5,--,34.5,--,18.5841,AWH TOTL Index
+01/10/2014 08:30,US,33),,Change in Household Employment,Dec,--,--,818,--,14.1593,USEMNCHG Index
+01/10/2014 08:30,US,34),,Underemployment Rate,Dec,--,--,13.20%,--,12.3894,USUDMAER Index
+01/10/2014 08:30,US,35),,Labor Force Participation Rate,Dec,--,--,63.00%,--,0.884956,PRUSTOT Index
+01/10/2014 10:00,US,36),,Wholesale Trade Sales MoM,Nov,0.60%,--,1.00%,--,2.65487,MWSLCHNG Index
+01/10/2014 10:00,US,37),,Wholesale Inventories MoM,Nov,0.40%,--,1.40%,--,78.7611,MWINCHNG Index
+01/13/2014 14:00,US,38),,Monthly Budget Statement,Dec,--,--,-$135.2B,--,74.3363,FDDSSD Index
+01/14/2014 07:30,US,39),,NFIB Small Business Optimism,Dec,--,--,92.5,--,58.4071,SBOITOTL Index
+01/14/2014 08:30,US,40),,Retail Sales Advance MoM,Dec,--,--,0.70%,--,89.3805,RSTAMOM Index
+01/14/2014 08:30,US,41),,Retail Sales Ex Auto MoM,Dec,--,--,0.40%,--,62.5664,RSTAXMOM Index
+01/14/2014 08:30,US,42),,Retail Sales Ex Auto and Gas,Dec,--,--,0.60%,--,60.177,RSTAXAG% Index
+01/14/2014 08:30,US,43),,Retail Sales Control Group,Dec,--,--,0.50%,--,9.73451,RSTAXAGM Index
+01/14/2014 08:30,US,44),,Import Price Index MoM,Dec,--,--,-0.60%,--,76.9912,IMP1CHNG Index
+01/14/2014 08:30,US,45),,Import Price Index YoY,Dec,--,--,-1.50%,--,29.2035,IMP1YOY% Index
+01/14/2014 10:00,US,46),,Business Inventories,Nov,--,--,0.70%,--,38.0531,MTIBCHNG Index
+01/15/2014 07:00,US,47),,MBA Mortgage Applications,10-Jan,--,--,--,--,92.3077,MBAVCHNG Index
+01/15/2014 08:30,US,48),,Empire Manufacturing,Jan,--,--,0.98,--,81.4159,EMPRGBCI Index
+01/15/2014 08:30,US,49),,PPI MoM,Dec,--,--,-0.10%,--,85.8407,PPI CHNG Index
+01/15/2014 08:30,US,50),,PPI Ex Food and Energy MoM,Dec,--,--,0.10%,--,68.6726,PXFECHNG Index
+01/15/2014 08:30,US,51),,PPI YoY,Dec,--,--,0.70%,--,68.1416,PPI YOY Index
+01/15/2014 08:30,US,52),,PPI Ex Food and Energy YoY,Dec,--,--,1.30%,--,66.3717,PPI XYOY Index
+01/15/2014 14:00,US,53),,U.S. Federal Reserve Releases Beige Book Report,,,,,,0,
+01/16/2014 08:30,US,54),,CPI MoM,Dec,--,--,0.00%,--,93.8053,CPI CHNG Index
+01/16/2014 08:30,US,55),,CPI Ex Food and Energy MoM,Dec,--,--,0.20%,--,75.0442,CPUPXCHG Index
+01/16/2014 08:30,US,56),,CPI YoY,Dec,--,--,1.20%,--,57.5221,CPI YOY Index
+01/16/2014 08:30,US,57),,CPI Ex Food and Energy YoY,Dec,--,--,1.70%,--,46.0177,CPI XYOY Index
+01/16/2014 08:30,US,58),,CPI Core Index SA,Dec,--,--,235.24,--,35.3982,CPUPAXFE Index
+01/16/2014 08:30,US,59),,Initial Jobless Claims,11-Jan,--,--,--,--,98.2301,INJCJC Index
+01/16/2014 08:30,US,60),,CPI Index NSA,Dec,--,--,233.069,--,30.9735,CPURNSA Index
+01/16/2014 08:30,US,61),,Continuing Claims,4-Jan,--,--,--,--,68.7611,INJCSP Index
+01/16/2014 08:45,US,62),,Bloomberg Jan. United States Economic Survey,,,,,,0,
+01/16/2014 09:00,US,63),,Total Net TIC Flows,Nov,--,--,$194.9B,--,65.4867,FRNTTNET Index
+01/16/2014 09:00,US,64),,Net Long-term TIC Flows,Nov,--,--,$35.4B,--,72.5664,FRNTTOTL Index
+01/16/2014 09:45,US,65),,Bloomberg Economic Expectations,Jan,--,--,-11,--,25.6637,COMFBTWR Index
+01/16/2014 09:45,US,66),,Bloomberg Consumer Comfort,12-Jan,--,--,--,--,63.7168,COMFCOMF Index
+01/16/2014 10:00,US,67),,Philadelphia Fed Business Outlook,Jan,--,--,7,--,76.1062,OUTFGAF Index
+01/16/2014 10:00,US,68),,NAHB Housing Market Index,Jan,--,--,58,--,41.5929,USHBMIDX Index
+01/17/2014 08:30,US,69),,Housing Starts,Dec,--,--,1091K,--,88.4956,NHSPSTOT Index
+01/17/2014 08:30,US,70),,Housing Starts MoM,Dec,--,--,22.70%,--,22.1239,NHCHSTCH Index
+01/17/2014 08:30,US,71),,Building Permits,Dec,--,--,1007K,1017K,61.9469,NHSPATOT Index
+01/17/2014 08:30,US,72),,Building Permits MoM,Dec,--,--,-3.10%,-2.10%,20.354,NHCHATCH Index
+01/17/2014 09:15,US,73),,Industrial Production MoM,Dec,--,--,1.10%,--,86.7257,IP CHNG Index
+01/17/2014 09:15,US,74),,Capacity Utilization,Dec,--,--,79.00%,--,60.708,CPTICHNG Index
+01/17/2014 09:15,US,75),,Manufacturing (SIC) Production,Dec,--,--,0.60%,--,6.19469,IPMGCHNG Index
+01/17/2014 09:55,US,76),,Univ. of Michigan Confidence,Jan P,--,--,82.5,--,92.9204,CONSSENT Index
+01/17/2014 10:00,US,77),,JOLTs Job Openings,Nov,--,--,3925,--,15.9292,JOLTTOTL Index
+01/22/2014 07:00,US,78),,MBA Mortgage Applications,17-Jan,--,--,--,--,92.3077,MBAVCHNG Index
+01/23/2014 08:30,US,79),,Chicago Fed Nat Activity Index,Dec,--,--,0.6,--,61.0619,CFNAI Index
+01/23/2014 08:30,US,80),,Initial Jobless Claims,18-Jan,--,--,--,--,98.2301,INJCJC Index
+01/23/2014 08:30,US,81),,Continuing Claims,11-Jan,--,--,--,--,68.7611,INJCSP Index
+01/23/2014 08:58,US,82),,Markit US PMI Preliminary,Jan,--,--,54.4,--,8.84956,ECONMUS Index
+01/23/2014 09:00,US,83),,House Price Index MoM,Nov,--,--,0.50%,--,67.2566,HPIMMOM% Index
+01/23/2014 09:45,US,84),,Bloomberg Consumer Comfort,19-Jan,--,--,--,--,63.7168,COMFCOMF Index
+01/23/2014 10:00,US,85),,Existing Home Sales MoM,Dec,--,--,-4.30%,--,49.5575,ETSLMOM Index
+01/23/2014 10:00,US,86),,Existing Home Sales,Dec,--,--,4.90M,--,87.6106,ETSLTOTL Index
+01/23/2014 10:00,US,87),,Leading Index,Dec,--,--,0.80%,--,83.1858,LEI CHNG Index
+01/23/2014 11:00,US,88),,Kansas City Fed Manf. Activity,Jan,--,--,-3,--,11.5044,KCLSSACI Index
+01/27/2014 10:00,US,89),,New Home Sales MoM,Dec,--,--,-2.10%,--,47.7876,NHSLCHNG Index
+01/27/2014 10:00,US,90),,New Home Sales,Dec,--,--,464K,--,90.2655,NHSLTOT Index
+01/27/2014 10:30,US,91),,Dallas Fed Manf. Activity,Jan,--,--,3.1,--,62.8319,DFEDGBA Index
+01/28/2014 08:30,US,92),,Durable Goods Orders,Dec,--,--,3.50%,--,91.1504,DGNOCHNG Index
+01/28/2014 08:30,US,93),,Durables Ex Transportation,Dec,--,--,1.20%,--,72.9204,DGNOXTCH Index
+01/28/2014 08:30,US,94),,Cap Goods Orders Nondef Ex Air,Dec,--,--,4.50%,--,56.6372,CGNOXAI% Index
+01/28/2014 08:30,US,95),,Cap Goods Ship Nondef Ex Air,Dec,--,--,2.80%,--,55.7522,CGSHXAI% Index
+01/28/2014 09:00,US,96),,S&P/CS 20 City MoM SA,Nov,--,--,1.05%,--,21.2389,SPCS20SM Index
+01/28/2014 09:00,US,97),,S&P/CS Composite-20 YoY,Nov,--,--,13.61%,--,46.9027,SPCS20Y% Index
+01/28/2014 09:00,US,98),,S&P/CaseShiller Home Price Index NSA,Nov,--,--,165.91,--,53.9823,SPCS20 Index
+01/28/2014 10:00,US,99),,Consumer Confidence Index,Jan,--,--,78.1,--,95.5752,CONCCONF Index
+01/28/2014 10:00,US,100),,Richmond Fed Manufact. Index,Jan,--,--,13,--,69.0265,RCHSINDX Index
+01/29/2014 07:00,US,101),,MBA Mortgage Applications,24-Jan,--,--,--,--,92.3077,MBAVCHNG Index
+01/29/2014 14:00,US,102),,Fed QE3 Pace,Jan,--,--,$75 ,--,0,TREFAMSP Index
+01/29/2014 14:00,US,103),,Fed Pace of Treasury Pur,Jan,--,--,$40 ,--,3.53982,TREFPACE Index
+01/29/2014 14:00,US,104),,Fed Pace of MBS Purchases,Jan,--,--,$35 ,--,1.76991,AMSPPACE Index
+01/29/2014 14:00,US,105),,FOMC Rate Decision,29-Jan,--,--,0.25%,--,97.3451,FDTR Index
+01/30/2014 08:30,US,106),,GDP Annualized QoQ,4Q A,--,--,4.10%,--,96.4602,GDP CQOQ Index
+01/30/2014 08:30,US,107),,GDP Price Index,4Q A,--,--,2.00%,--,77.1681,GDP PIQQ Index
+01/30/2014 08:30,US,108),,Core PCE QoQ,4Q A,--,--,1.40%,--,67.5221,GDPCPCEC Index
+01/30/2014 08:30,US,109),,Personal Consumption,4Q A,--,--,2.00%,--,67.5221,GDPCTOT% Index
+01/30/2014 08:30,US,110),,Initial Jobless Claims,25-Jan,--,--,--,--,98.2301,INJCJC Index
+01/30/2014 08:30,US,111),,Continuing Claims,18-Jan,--,--,--,--,68.7611,INJCSP Index
+01/30/2014 09:45,US,112),,Bloomberg Consumer Comfort,26-Jan,--,--,--,--,63.7168,COMFCOMF Index
+01/30/2014 10:00,US,113),,Pending Home Sales MoM,Dec,--,--,0.20%,--,75.2212,USPHTMOM Index
+01/30/2014 10:00,US,114),,Pending Home Sales YoY,Dec,--,--,-4.00%,--,23.8938,USPHTYOY Index
+01/31/2014 08:30,US,115),,Employment Cost Index,4Q,--,--,0.40%,--,71.6814,ECI SA% Index
+01/31/2014 08:30,US,116),,Personal Income,Dec,--,--,0.20%,--,84.9558,PITLCHNG Index
+01/31/2014 08:30,US,117),,Personal Spending,Dec,--,--,0.50%,--,84.9558,PCE CRCH Index
+01/31/2014 08:30,US,118),,PCE Deflator MoM,Dec,--,--,0.00%,--,7.07965,PCE DEFM Index
+01/31/2014 08:30,US,119),,PCE Deflator YoY,Dec,--,--,0.90%,--,34.5133,PCE DEFY Index
+01/31/2014 08:30,US,120),,PCE Core MoM,Dec,--,--,0.10%,--,59.469,PCE CMOM Index
+01/31/2014 08:30,US,121),,PCE Core YoY,Dec,--,--,1.10%,--,37.1681,PCE CYOY Index
+01/31/2014 09:00,US,122),,ISM Milwaukee,Jan,--,--,54.27,--,30.0885,MAPMINDX Index
+01/31/2014 09:45,US,123),,Chicago Purchasing Manager,Jan,--,--,59.1,--,79.646,CHPMINDX Index
+01/31/2014 09:45,US,124),,Bloomberg Consumer Comfort,28-Dec,--,--,--,--,63.7168,COMFCOMF Index
+01/31/2014 09:55,US,125),,Univ. of Michigan Confidence,Jan F,--,--,--,--,92.9204,CONSSENT Index
+02/03/2014 08:58,US,126),,Markit US PMI Final,Jan,--,--,--,--,7.9646,ECONMUSF Index
+02/03/2014 10:00,US,127),,ISM Manufacturing,Jan,--,--,--,--,94.6903,NAPMPMI Index
+02/03/2014 10:00,US,128),,ISM Prices Paid,Jan,--,--,--,--,69.9115,NAPMPRIC Index
+02/03/2014 10:00,US,129),,Construction Spending MoM,Dec,--,--,--,--,77.8761,CNSTTMOM Index
+02/03/2014,US,130),,Domestic Vehicle Sales,Jan,--,--,--,--,33.6283,SAARDTOT Index
+02/03/2014,US,131),,Total Vehicle Sales,Jan,--,--,--,--,40.708,SAARTOTL Index
+02/04/2014 09:45,US,132),,ISM New York,Jan,--,--,--,--,10.6195,NYPMCURR Index
+02/04/2014 10:00,US,133),,IBD/TIPP Economic Optimism,Feb,--,--,--,--,15.0442,ECONUSIB Index
+02/04/2014 10:00,US,134),,Factory Orders,Dec,--,--,--,--,84.0708,TMNOCHNG Index
+02/05/2014 07:00,US,135),,MBA Mortgage Applications,31-Jan,--,--,--,--,92.3077,MBAVCHNG Index
+02/05/2014 08:15,US,136),,ADP Employment Change,Jan,--,--,--,--,80.531,ADP CHNG Index
+02/05/2014 10:00,US,137),,ISM Non-Manf. Composite,Jan,--,--,--,--,73.4513,NAPMNMI Index
+02/06/2014 07:30,US,138),,Challenger Job Cuts YoY,Jan,--,--,--,--,32.7434,CHALYOY% Index
+02/06/2014 07:30,US,139),,RBC Consumer Outlook Index,Feb,--,--,--,--,13.2743,ICSHNATL Index
+02/06/2014 08:30,US,140),,Unit Labor Costs,4Q P,--,--,-1.40%,--,31.8584,COSTNFR% Index
+02/06/2014 08:30,US,141),,Nonfarm Productivity,4Q P,--,--,3.00%,--,38.9381,PRODNFR% Index
+02/06/2014 08:30,US,142),,Initial Jobless Claims,1-Feb,--,--,--,--,98.2301,INJCJC Index
+02/06/2014 08:30,US,143),,Continuing Claims,25-Jan,--,--,--,--,68.7611,INJCSP Index
+02/06/2014 08:30,US,144),,Trade Balance,Dec,--,--,--,--,82.3009,USTBTOT Index
+02/06/2014 09:45,US,145),,Bloomberg Consumer Comfort,2-Feb,--,--,--,--,63.7168,COMFCOMF Index
+02/07/2014 08:30,US,146),,Two-Month Payroll Net Revision,Jan,--,--,--,--,4.42478,ECONGECC Index
+02/07/2014 08:30,US,147),,Change in Nonfarm Payrolls,Jan,--,--,--,--,99.115,NFP TCH Index
+02/07/2014 08:30,US,148),,Change in Private Payrolls,Jan,--,--,--,--,23.0088,NFP PCH Index
+02/07/2014 08:30,US,149),,Change in Manufact. Payrolls,Jan,--,--,--,--,69.3805,USMMMNCH Index
+02/07/2014 08:30,US,150),,Unemployment Rate,Jan,--,--,--,--,89.2035,USURTOT Index
+02/07/2014 08:30,US,151),,Average Hourly Earnings MoM,Jan,--,--,--,--,19.469,AHE MOM% Index
+02/07/2014 08:30,US,152),,Average Hourly Earnings YoY,Jan,--,--,--,--,17.6991,AHE YOY% Index
+02/07/2014 08:30,US,153),,Average Weekly Hours All Employees,Jan,--,--,--,--,18.5841,AWH TOTL Index
+02/07/2014 08:30,US,154),,Change in Household Employment,Jan,--,--,--,--,14.1593,USEMNCHG Index
+02/07/2014 08:30,US,155),,Underemployment Rate,Jan,--,--,--,--,12.3894,USUDMAER Index
+02/07/2014 15:00,US,156),,Consumer Credit,Dec,--,--,--,--,39.823,CICRTOT Index
+02/07/2014 15:00,US,157),,Labor Force Participation Rate,Jan,--,--,--,--,0.884956,PRUSTOT Index
+02/10/2014 02/14,US,158),,Mortgage Delinquencies,4Q,--,--,6.41%,--,28.3186,DLQTDLQT Index
+02/10/2014 02/14,US,159),,MBA Mortgage Foreclosures,4Q,--,--,3.08%,--,16.8142,FORLTOTL Index
+02/11/2014 07:30,US,160),,NFIB Small Business Optimism,Jan,--,--,--,--,58.4071,SBOITOTL Index
+02/11/2014 10:00,US,161),,Wholesale Trade Sales MoM,Dec,--,--,--,--,2.65487,MWSLCHNG Index
+02/11/2014 10:00,US,162),,JOLTs Job Openings,Dec,--,--,--,--,15.9292,JOLTTOTL Index
+02/11/2014 10:00,US,163),,Wholesale Inventories MoM,Dec,--,--,--,--,78.7611,MWINCHNG Index
+02/12/2014 07:00,US,164),,MBA Mortgage Applications,7-Feb,--,--,--,--,92.3077,MBAVCHNG Index
+02/12/2014 14:00,US,165),,Monthly Budget Statement,Jan,--,--,--,--,74.3363,FDDSSD Index
+02/13/2014 08:30,US,166),,Retail Sales Advance MoM,Jan,--,--,--,--,89.3805,RSTAMOM Index
+02/13/2014 08:30,US,167),,Retail Sales Ex Auto MoM,Jan,--,--,--,--,62.5664,RSTAXMOM Index
+02/13/2014 08:30,US,168),,Retail Sales Ex Auto and Gas,Jan,--,--,--,--,60.177,RSTAXAG% Index
+02/13/2014 08:30,US,169),,Retail Sales Control Group,Jan,--,--,--,--,9.73451,RSTAXAGM Index
+02/13/2014 08:30,US,170),,Initial Jobless Claims,8-Feb,--,--,--,--,98.2301,INJCJC Index
+02/13/2014 08:30,US,171),,Continuing Claims,1-Feb,--,--,--,--,68.7611,INJCSP Index
+02/13/2014 09:45,US,172),,Bloomberg Consumer Comfort,9-Feb,--,--,--,--,63.7168,COMFCOMF Index
+02/13/2014 10:00,US,173),,Business Inventories,Dec,--,--,--,--,38.0531,MTIBCHNG Index
+02/14/2014 08:30,US,174),,Import Price Index MoM,Jan,--,--,--,--,76.9912,IMP1CHNG Index
+02/14/2014 08:30,US,175),,Import Price Index YoY,Jan,--,--,--,--,29.2035,IMP1YOY% Index
+02/14/2014 09:15,US,176),,Industrial Production MoM,Jan,--,--,--,--,86.7257,IP CHNG Index
+02/14/2014 09:15,US,177),,Capacity Utilization,Jan,--,--,--,--,60.708,CPTICHNG Index
+02/14/2014 09:15,US,178),,Manufacturing (SIC) Production,Jan,--,--,--,--,6.19469,IPMGCHNG Index
+02/14/2014 09:55,US,179),,Univ. of Michigan Confidence,Feb P,--,--,--,--,92.9204,CONSSENT Index
+02/18/2014 08:30,US,180),,Empire Manufacturing,Feb,--,--,--,--,81.4159,EMPRGBCI Index
+02/18/2014 09:00,US,181),,Total Net TIC Flows,Dec,--,--,--,--,65.4867,FRNTTNET Index
+02/18/2014 09:00,US,182),,Net Long-term TIC Flows,Dec,--,--,--,--,72.5664,FRNTTOTL Index
+02/18/2014 10:00,US,183),,NAHB Housing Market Index,Feb,--,--,--,--,41.5929,USHBMIDX Index
+02/19/2014 07:00,US,184),,MBA Mortgage Applications,14-Feb,--,--,--,--,92.3077,MBAVCHNG Index
+02/19/2014 08:30,US,185),,Housing Starts,Jan,--,--,--,--,88.4956,NHSPSTOT Index
+02/19/2014 08:30,US,186),,PPI MoM,Jan,--,--,--,--,85.8407,PPI CHNG Index
+02/19/2014 08:30,US,187),,Housing Starts MoM,Jan,--,--,--,--,22.1239,NHCHSTCH Index
+02/19/2014 08:30,US,188),,Building Permits,Jan,--,--,--,--,61.9469,NHSPATOT Index
+02/19/2014 08:30,US,189),,PPI Ex Food and Energy MoM,Jan,--,--,--,--,68.6726,PXFECHNG Index
+02/19/2014 08:30,US,190),,PPI YoY,Jan,--,--,--,--,68.1416,PPI YOY Index
+02/19/2014 08:30,US,191),,Building Permits MoM,Jan,--,--,--,--,20.354,NHCHATCH Index
+02/19/2014 08:30,US,192),,PPI Ex Food and Energy YoY,Jan,--,--,--,--,66.3717,PPI XYOY Index
+02/19/2014 14:00,US,193),,Fed Releases Minutes from Jan 28-29 FOMC Meeting,,,,,,0,
+02/20/2014 08:30,US,194),,CPI MoM,Jan,--,--,--,--,93.8053,CPI CHNG Index
+02/20/2014 08:30,US,195),,CPI Ex Food and Energy MoM,Jan,--,--,--,--,75.0442,CPUPXCHG Index
+02/20/2014 08:30,US,196),,CPI YoY,Jan,--,--,--,--,57.5221,CPI YOY Index
+02/20/2014 08:30,US,197),,CPI Ex Food and Energy YoY,Jan,--,--,--,--,46.0177,CPI XYOY Index
+02/20/2014 08:30,US,198),,Initial Jobless Claims,15-Feb,--,--,--,--,98.2301,INJCJC Index
+02/20/2014 08:30,US,199),,CPI Core Index SA,Jan,--,--,--,--,35.3982,CPUPAXFE Index
+02/20/2014 08:30,US,200),,Continuing Claims,8-Feb,--,--,--,--,68.7611,INJCSP Index
+02/20/2014 08:30,US,201),,CPI Index NSA,Jan,--,--,--,--,30.9735,CPURNSA Index
+02/20/2014 08:58,US,202),,Markit US PMI Preliminary,Feb,--,--,--,--,8.84956,ECONMUS Index
+02/20/2014 09:45,US,203),,Bloomberg Economic Expectations,Feb,--,--,--,--,25.6637,COMFBTWR Index
+02/20/2014 09:45,US,204),,Bloomberg Consumer Comfort,16-Feb,--,--,--,--,63.7168,COMFCOMF Index
+02/20/2014 10:00,US,205),,Philadelphia Fed Business Outlook,Feb,--,--,--,--,76.1062,OUTFGAF Index
+02/20/2014 10:00,US,206),,Leading Index,Jan,--,--,--,--,83.1858,LEI CHNG Index
+02/21/2014 10:00,US,207),,Existing Home Sales MoM,Jan,--,--,--,--,49.5575,ETSLMOM Index
+02/21/2014 10:00,US,208),,Existing Home Sales,Jan,--,--,--,--,87.6106,ETSLTOTL Index
+02/24/2014 08:30,US,209),,Chicago Fed Nat Activity Index,Jan,--,--,--,--,61.0619,CFNAI Index
+02/24/2014 10:30,US,210),,Dallas Fed Manf. Activity,Feb,--,--,--,--,62.8319,DFEDGBA Index
+02/25/2014 09:00,US,211),,House Price Index MoM,Dec,--,--,--,--,67.2566,HPIMMOM% Index
+02/25/2014 09:00,US,212),,House Price Purchase Index QoQ,4Q,--,--,1.96%,--,24.7788,HPI PURQ Index
+02/25/2014 09:00,US,213),,S&P/CS 20 City MoM SA,Dec,--,--,--,--,21.2389,SPCS20SM Index
+02/25/2014 09:00,US,214),,S&P/CS Composite-20 YoY,Dec,--,--,--,--,46.9027,SPCS20Y% Index
+02/25/2014 09:00,US,215),,S&P/CaseShiller Home Price Index NSA,Dec,--,--,--,--,53.9823,SPCS20 Index
+02/25/2014 09:00,US,216),,S&P/Case-Shiller US HPI NSA,4Q,--,--,150.92,--,26.5487,SPCSUSA Index
+02/25/2014 09:00,US,217),,S&P/Case-Shiller US HPI YoY,4Q,--,--,11.18%,--,27.4336,SPCSUSAY Index
+02/25/2014 10:00,US,218),,Consumer Confidence Index,Feb,--,--,--,--,95.5752,CONCCONF Index
+02/25/2014 10:00,US,219),,Richmond Fed Manufact. Index,Feb,--,--,--,--,69.0265,RCHSINDX Index
+02/26/2014 07:00,US,220),,MBA Mortgage Applications,21-Feb,--,--,--,--,92.3077,MBAVCHNG Index
+02/26/2014 10:00,US,221),,New Home Sales MoM,Jan,--,--,--,--,47.7876,NHSLCHNG Index
+02/26/2014 10:00,US,222),,New Home Sales,Jan,--,--,--,--,90.2655,NHSLTOT Index
+02/27/2014 08:30,US,223),,Durable Goods Orders,Jan,--,--,--,--,91.1504,DGNOCHNG Index
+02/27/2014 08:30,US,224),,Durables Ex Transportation,Jan,--,--,--,--,72.9204,DGNOXTCH Index
+02/27/2014 08:30,US,225),,Cap Goods Orders Nondef Ex Air,Jan,--,--,--,--,56.6372,CGNOXAI% Index
+02/27/2014 08:30,US,226),,Initial Jobless Claims,22-Feb,--,--,--,--,98.2301,INJCJC Index
+02/27/2014 08:30,US,227),,Cap Goods Ship Nondef Ex Air,Jan,--,--,--,--,55.7522,CGSHXAI% Index
+02/27/2014 08:30,US,228),,Continuing Claims,15-Feb,--,--,--,--,68.7611,INJCSP Index
+02/27/2014 09:45,US,229),,Bloomberg Consumer Comfort,23-Feb,--,--,--,--,63.7168,COMFCOMF Index
+02/27/2014 11:00,US,230),,Kansas City Fed Manf. Activity,Feb,--,--,--,--,11.5044,KCLSSACI Index
+02/28/2014 08:30,US,231),,GDP Annualized QoQ,4Q S,--,--,--,--,96.4602,GDP CQOQ Index
+02/28/2014 08:30,US,232),,GDP Price Index,4Q S,--,--,--,--,77.1681,GDP PIQQ Index
+02/28/2014 08:30,US,233),,Core PCE QoQ,4Q S,--,--,--,--,67.5221,GDPCPCEC Index
+02/28/2014 08:30,US,234),,Personal Consumption,4Q S,--,--,--,--,67.5221,GDPCTOT% Index
+02/28/2014 09:00,US,235),,ISM Milwaukee,Feb,--,--,--,--,30.0885,MAPMINDX Index
+02/28/2014 09:45,US,236),,Chicago Purchasing Manager,Feb,--,--,--,--,79.646,CHPMINDX Index
+02/28/2014 09:55,US,237),,Univ. of Michigan Confidence,Feb F,--,--,--,--,92.9204,CONSSENT Index
+02/28/2014 10:00,US,238),,Pending Home Sales MoM,Jan,--,--,--,--,75.2212,USPHTMOM Index
+02/28/2014 10:00,US,239),,Pending Home Sales YoY,Jan,--,--,--,--,23.8938,USPHTYOY Index
+03/03/2014 08:30,US,240),,Personal Income,Jan,--,--,--,--,84.9558,PITLCHNG Index
+03/03/2014 08:30,US,241),,Personal Spending,Jan,--,--,--,--,84.9558,PCE CRCH Index
+03/03/2014 08:30,US,242),,PCE Deflator MoM,Jan,--,--,--,--,7.07965,PCE DEFM Index
+03/03/2014 08:30,US,243),,PCE Deflator YoY,Jan,--,--,--,--,34.5133,PCE DEFY Index
+03/03/2014 08:30,US,244),,PCE Core MoM,Jan,--,--,--,--,59.469,PCE CMOM Index
+03/03/2014 08:30,US,245),,PCE Core YoY,Jan,--,--,--,--,37.1681,PCE CYOY Index
+03/03/2014 08:58,US,246),,Markit US PMI Final,Feb,--,--,--,--,7.9646,ECONMUSF Index
+03/03/2014 10:00,US,247),,ISM Manufacturing,Feb,--,--,--,--,94.6903,NAPMPMI Index
+03/03/2014 10:00,US,248),,ISM Prices Paid,Feb,--,--,--,--,69.9115,NAPMPRIC Index
+03/03/2014 10:00,US,249),,Construction Spending MoM,Jan,--,--,--,--,77.8761,CNSTTMOM Index
+03/03/2014,US,250),,Domestic Vehicle Sales,Feb,--,--,--,--,33.6283,SAARDTOT Index
+03/03/2014,US,251),,Total Vehicle Sales,Feb,--,--,--,--,40.708,SAARTOTL Index
+03/04/2014 09:45,US,252),,ISM New York,Feb,--,--,--,--,10.6195,NYPMCURR Index
+03/04/2014 10:00,US,253),,IBD/TIPP Economic Optimism,Mar,--,--,--,--,15.0442,ECONUSIB Index
+03/04/2014 03/10,US,254),,Household Change in Net Worth,4Q,--,--,$1922B,--,5.30973,NWORCHNG Index
+03/05/2014 07:00,US,255),,MBA Mortgage Applications,28-Feb,--,--,--,--,92.3077,MBAVCHNG Index
+03/05/2014 08:15,US,256),,ADP Employment Change,Feb,--,--,--,--,80.531,ADP CHNG Index
+03/05/2014 10:00,US,257),,ISM Non-Manf. Composite,Feb,--,--,--,--,73.4513,NAPMNMI Index
+03/05/2014 14:00,US,258),,U.S. Federal Reserve Releases Beige Book Report,,,,,,0,
+03/06/2014 07:30,US,259),,Challenger Job Cuts YoY,Feb,--,--,--,--,32.7434,CHALYOY% Index
+03/06/2014 07:30,US,260),,RBC Consumer Outlook Index,Mar,--,--,--,--,13.2743,ICSHNATL Index
+03/06/2014 08:30,US,261),,Unit Labor Costs,4Q F,--,--,--,--,31.8584,COSTNFR% Index
+03/06/2014 08:30,US,262),,Nonfarm Productivity,4Q F,--,--,--,--,38.9381,PRODNFR% Index
+03/06/2014 08:30,US,263),,Initial Jobless Claims,1-Mar,--,--,--,--,98.2301,INJCJC Index
+03/06/2014 08:30,US,264),,Continuing Claims,22-Feb,--,--,--,--,68.7611,INJCSP Index
+03/06/2014 09:45,US,265),,Bloomberg Consumer Comfort,2-Mar,--,--,--,--,63.7168,COMFCOMF Index
+03/06/2014 10:00,US,266),,Factory Orders,Jan,--,--,--,--,84.0708,TMNOCHNG Index
+03/07/2014 08:30,US,267),,Two-Month Payroll Net Revision,Feb,--,--,--,--,4.42478,ECONGECC Index
+03/07/2014 08:30,US,268),,Change in Nonfarm Payrolls,Feb,--,--,--,--,99.115,NFP TCH Index
+03/07/2014 08:30,US,269),,Change in Private Payrolls,Feb,--,--,--,--,23.0088,NFP PCH Index
+03/07/2014 08:30,US,270),,Change in Manufact. Payrolls,Feb,--,--,--,--,69.3805,USMMMNCH Index
+03/07/2014 08:30,US,271),,Unemployment Rate,Feb,--,--,--,--,89.2035,USURTOT Index
+03/07/2014 08:30,US,272),,Average Hourly Earnings MoM,Feb,--,--,--,--,19.469,AHE MOM% Index
+03/07/2014 08:30,US,273),,Average Hourly Earnings YoY,Feb,--,--,--,--,17.6991,AHE YOY% Index
+03/07/2014 08:30,US,274),,Average Weekly Hours All Employees,Feb,--,--,--,--,18.5841,AWH TOTL Index
+03/07/2014 08:30,US,275),,Change in Household Employment,Feb,--,--,--,--,14.1593,USEMNCHG Index
+03/07/2014 08:30,US,276),,Underemployment Rate,Feb,--,--,--,--,12.3894,USUDMAER Index
+03/07/2014 08:30,US,277),,Trade Balance,Jan,--,--,--,--,82.3009,USTBTOT Index
+03/07/2014 15:00,US,278),,Consumer Credit,Jan,--,--,--,--,39.823,CICRTOT Index
+03/07/2014 15:00,US,279),,Labor Force Participation Rate,Feb,--,--,--,--,0.884956,PRUSTOT Index
+03/11/2014 07:30,US,280),,NFIB Small Business Optimism,Feb,--,--,--,--,58.4071,SBOITOTL Index
+03/11/2014 10:00,US,281),,Wholesale Trade Sales MoM,Jan,--,--,--,--,2.65487,MWSLCHNG Index
+03/11/2014 10:00,US,282),,JOLTs Job Openings,Jan,--,--,--,--,15.9292,JOLTTOTL Index
+03/11/2014 10:00,US,283),,Wholesale Inventories MoM,Jan,--,--,--,--,78.7611,MWINCHNG Index
+03/12/2014 07:00,US,284),,MBA Mortgage Applications,7-Mar,--,--,--,--,92.3077,MBAVCHNG Index
+03/12/2014 14:00,US,285),,Monthly Budget Statement,Feb,--,--,--,--,74.3363,FDDSSD Index
+03/13/2014 08:30,US,286),,Retail Sales Advance MoM,Feb,--,--,--,--,89.3805,RSTAMOM Index
+03/13/2014 08:30,US,287),,Retail Sales Ex Auto MoM,Feb,--,--,--,--,62.5664,RSTAXMOM Index
+03/13/2014 08:30,US,288),,Retail Sales Ex Auto and Gas,Feb,--,--,--,--,60.177,RSTAXAG% Index
+03/13/2014 08:30,US,289),,Retail Sales Control Group,Feb,--,--,--,--,9.73451,RSTAXAGM Index
+03/13/2014 08:30,US,290),,Initial Jobless Claims,8-Mar,--,--,--,--,98.2301,INJCJC Index
+03/13/2014 08:30,US,291),,Continuing Claims,1-Mar,--,--,--,--,68.7611,INJCSP Index
+03/13/2014 08:30,US,292),,Import Price Index MoM,Feb,--,--,--,--,76.9912,IMP1CHNG Index
+03/13/2014 08:30,US,293),,Import Price Index YoY,Feb,--,--,--,--,29.2035,IMP1YOY% Index
+03/13/2014 09:45,US,294),,Bloomberg Consumer Comfort,9-Mar,--,--,--,--,63.7168,COMFCOMF Index
+03/13/2014 10:00,US,295),,Business Inventories,Jan,--,--,--,--,38.0531,MTIBCHNG Index
+03/14/2014 08:30,US,296),,PPI MoM,Feb,--,--,--,--,85.8407,PPI CHNG Index
+03/14/2014 08:30,US,297),,PPI Ex Food and Energy MoM,Feb,--,--,--,--,68.6726,PXFECHNG Index
+03/14/2014 08:30,US,298),,PPI YoY,Feb,--,--,--,--,68.1416,PPI YOY Index
+03/14/2014 08:30,US,299),,PPI Ex Food and Energy YoY,Feb,--,--,--,--,66.3717,PPI XYOY Index
+03/14/2014 09:55,US,300),,Univ. of Michigan Confidence,Mar P,--,--,--,--,92.9204,CONSSENT Index
+03/17/2014 08:30,US,301),,Empire Manufacturing,Mar,--,--,--,--,81.4159,EMPRGBCI Index
+03/17/2014 09:00,US,302),,Total Net TIC Flows,Jan,--,--,--,--,65.4867,FRNTTNET Index
+03/17/2014 09:00,US,303),,Net Long-term TIC Flows,Jan,--,--,--,--,72.5664,FRNTTOTL Index
+03/17/2014 09:15,US,304),,Industrial Production MoM,Feb,--,--,--,--,86.7257,IP CHNG Index
+03/17/2014 09:15,US,305),,Capacity Utilization,Feb,--,--,--,--,60.708,CPTICHNG Index
+03/17/2014 09:15,US,306),,Manufacturing (SIC) Production,Feb,--,--,--,--,6.19469,IPMGCHNG Index
+03/17/2014 10:00,US,307),,NAHB Housing Market Index,Mar,--,--,--,--,41.5929,USHBMIDX Index
+03/18/2014 08:30,US,308),,CPI MoM,Feb,--,--,--,--,93.8053,CPI CHNG Index
+03/18/2014 08:30,US,309),,CPI Ex Food and Energy MoM,Feb,--,--,--,--,75.0442,CPUPXCHG Index
+03/18/2014 08:30,US,310),,Housing Starts,Feb,--,--,--,--,88.4956,NHSPSTOT Index
+03/18/2014 08:30,US,311),,CPI YoY,Feb,--,--,--,--,57.5221,CPI YOY Index
+03/18/2014 08:30,US,312),,Housing Starts MoM,Feb,--,--,--,--,22.1239,NHCHSTCH Index
+03/18/2014 08:30,US,313),,CPI Ex Food and Energy YoY,Feb,--,--,--,--,46.0177,CPI XYOY Index
+03/18/2014 08:30,US,314),,Building Permits,Feb,--,--,--,--,61.9469,NHSPATOT Index
+03/18/2014 08:30,US,315),,CPI Core Index SA,Feb,--,--,--,--,35.3982,CPUPAXFE Index
+03/18/2014 08:30,US,316),,Building Permits MoM,Feb,--,--,--,--,20.354,NHCHATCH Index
+03/18/2014 08:30,US,317),,CPI Index NSA,Feb,--,--,--,--,30.9735,CPURNSA Index
+03/19/2014 07:00,US,318),,MBA Mortgage Applications,14-Mar,--,--,--,--,92.3077,MBAVCHNG Index
+03/19/2014 08:30,US,319),,Current Account Balance,4Q,--,--,-$94.8B,--,70.7965,USCABAL Index
+03/19/2014 14:00,US,320),,Fed QE3 Pace,Mar,--,--,--,--,0,TREFAMSP Index
+03/19/2014 14:00,US,321),,Fed Pace of Treasury Pur,Mar,--,--,--,--,3.53982,TREFPACE Index
+03/19/2014 14:00,US,322),,Fed Pace of MBS Purchases,Mar,--,--,--,--,1.76991,AMSPPACE Index
+03/19/2014 14:00,US,323),,FOMC Rate Decision,19-Mar,--,--,--,--,97.3451,FDTR Index
+03/20/2014 08:30,US,324),,Initial Jobless Claims,15-Mar,--,--,--,--,98.2301,INJCJC Index
+03/20/2014 08:30,US,325),,Continuing Claims,8-Mar,--,--,--,--,68.7611,INJCSP Index
+03/20/2014 09:45,US,326),,Bloomberg Economic Expectations,Mar,--,--,--,--,25.6637,COMFBTWR Index
+03/20/2014 09:45,US,327),,Bloomberg Consumer Comfort,16-Mar,--,--,--,--,63.7168,COMFCOMF Index
+03/20/2014 10:00,US,328),,Philadelphia Fed Business Outlook,Mar,--,--,--,--,76.1062,OUTFGAF Index
+03/20/2014 10:00,US,329),,Existing Home Sales MoM,Feb,--,--,--,--,49.5575,ETSLMOM Index
+03/20/2014 10:00,US,330),,Existing Home Sales,Feb,--,--,--,--,87.6106,ETSLTOTL Index
+03/20/2014 10:00,US,331),,Leading Index,Feb,--,--,--,--,83.1858,LEI CHNG Index
+03/24/2014 08:30,US,332),,Chicago Fed Nat Activity Index,Feb,--,--,--,--,61.0619,CFNAI Index
+03/24/2014 08:58,US,333),,Markit US PMI Preliminary,Mar,--,--,--,--,8.84956,ECONMUS Index
+03/25/2014 08:30,US,334),,Personal Income,Feb,--,--,--,--,84.9558,PITLCHNG Index
+03/25/2014 08:30,US,335),,Personal Spending,Feb,--,--,--,--,84.9558,PCE CRCH Index
+03/25/2014 08:30,US,336),,PCE Deflator MoM,Feb,--,--,--,--,7.07965,PCE DEFM Index
+03/25/2014 08:30,US,337),,PCE Deflator YoY,Feb,--,--,--,--,34.5133,PCE DEFY Index
+03/25/2014 08:30,US,338),,PCE Core MoM,Feb,--,--,--,--,59.469,PCE CMOM Index
+03/25/2014 08:30,US,339),,PCE Core YoY,Feb,--,--,--,--,37.1681,PCE CYOY Index
+03/25/2014 09:00,US,340),,House Price Index MoM,Jan,--,--,--,--,67.2566,HPIMMOM% Index
+03/25/2014 09:00,US,341),,S&P/CS 20 City MoM SA,Feb,--,--,--,--,21.2389,SPCS20SM Index
+03/25/2014 09:00,US,342),,S&P/CS Composite-20 YoY,Feb,--,--,--,--,46.9027,SPCS20Y% Index
+03/25/2014 09:00,US,343),,S&P/CaseShiller Home Price Index NSA,Feb,--,--,--,--,53.9823,SPCS20 Index
+03/25/2014 10:00,US,344),,New Home Sales MoM,Feb,--,--,--,--,47.7876,NHSLCHNG Index
+03/25/2014 10:00,US,345),,New Home Sales,Feb,--,--,--,--,90.2655,NHSLTOT Index
+03/25/2014 10:00,US,346),,Consumer Confidence Index,Mar,--,--,--,--,95.5752,CONCCONF Index
+03/25/2014 10:00,US,347),,Richmond Fed Manufact. Index,Mar,--,--,--,--,69.0265,RCHSINDX Index
+03/26/2014 07:00,US,348),,MBA Mortgage Applications,21-Mar,--,--,--,--,92.3077,MBAVCHNG Index
+03/26/2014 08:30,US,349),,Durable Goods Orders,Feb,--,--,--,--,91.1504,DGNOCHNG Index
+03/26/2014 08:30,US,350),,Durables Ex Transportation,Feb,--,--,--,--,72.9204,DGNOXTCH Index
+03/26/2014 08:30,US,351),,Cap Goods Orders Nondef Ex Air,Feb,--,--,--,--,56.6372,CGNOXAI% Index
+03/26/2014 08:30,US,352),,Cap Goods Ship Nondef Ex Air,Feb,--,--,--,--,55.7522,CGSHXAI% Index
+03/27/2014 08:30,US,353),,GDP Annualized QoQ,4Q T,--,--,--,--,96.4602,GDP CQOQ Index
+03/27/2014 08:30,US,354),,GDP Price Index,4Q T,--,--,--,--,77.1681,GDP PIQQ Index
+03/27/2014 08:30,US,355),,Core PCE QoQ,4Q T,--,--,--,--,67.5221,GDPCPCEC Index
+03/27/2014 08:30,US,356),,Personal Consumption,4Q T,--,--,--,--,67.5221,GDPCTOT% Index
+03/27/2014 08:30,US,357),,Initial Jobless Claims,22-Mar,--,--,--,--,98.2301,INJCJC Index
+03/27/2014 08:30,US,358),,Continuing Claims,15-Mar,--,--,--,--,68.7611,INJCSP Index
+03/27/2014 09:45,US,359),,Bloomberg Consumer Comfort,23-Mar,--,--,--,--,63.7168,COMFCOMF Index
+03/27/2014 10:00,US,360),,Pending Home Sales MoM,Feb,--,--,--,--,75.2212,USPHTMOM Index
+03/27/2014 10:00,US,361),,Pending Home Sales YoY,Feb,--,--,--,--,23.8938,USPHTYOY Index
+03/27/2014 11:00,US,362),,Kansas City Fed Manf. Activity,Mar,--,--,--,--,11.5044,KCLSSACI Index
+03/28/2014 09:55,US,363),,Univ. of Michigan Confidence,Mar F,--,--,--,--,92.9204,CONSSENT Index
+03/31/2014 09:00,US,364),,ISM Milwaukee,Mar,--,--,--,--,30.0885,MAPMINDX Index
+03/31/2014 09:45,US,365),,Chicago Purchasing Manager,Mar,--,--,--,--,79.646,CHPMINDX Index
+03/31/2014 10:30,US,366),,Dallas Fed Manf. Activity,Mar,--,--,--,--,62.8319,DFEDGBA Index
+04/01/2014 08:58,US,367),,Markit US PMI Final,Mar,--,--,--,--,7.9646,ECONMUSF Index
+04/01/2014 10:00,US,368),,IBD/TIPP Economic Optimism,Apr,--,--,--,--,15.0442,ECONUSIB Index
+04/01/2014 10:00,US,369),,ISM Manufacturing,Mar,--,--,--,--,94.6903,NAPMPMI Index
+04/01/2014 10:00,US,370),,ISM Prices Paid,Mar,--,--,--,--,69.9115,NAPMPRIC Index
+04/01/2014 10:00,US,371),,Construction Spending MoM,Feb,--,--,--,--,77.8761,CNSTTMOM Index
+04/01/2014,US,372),,Domestic Vehicle Sales,Mar,--,--,--,--,33.6283,SAARDTOT Index
+04/01/2014,US,373),,Total Vehicle Sales,Mar,--,--,--,--,40.708,SAARTOTL Index
+04/02/2014 07:00,US,374),,MBA Mortgage Applications,28-Mar,--,--,--,--,92.3077,MBAVCHNG Index
+04/02/2014 08:15,US,375),,ADP Employment Change,Mar,--,--,--,--,80.531,ADP CHNG Index
+04/02/2014 09:45,US,376),,ISM New York,Mar,--,--,--,--,10.6195,NYPMCURR Index
+04/02/2014 10:00,US,377),,Factory Orders,Feb,--,--,--,--,84.0708,TMNOCHNG Index
+04/03/2014 07:30,US,378),,Challenger Job Cuts YoY,Mar,--,--,--,--,32.7434,CHALYOY% Index
+04/03/2014 07:30,US,379),,RBC Consumer Outlook Index,Apr,--,--,--,--,13.2743,ICSHNATL Index
+04/03/2014 08:30,US,380),,Initial Jobless Claims,29-Mar,--,--,--,--,98.2301,INJCJC Index
+04/03/2014 08:30,US,381),,Continuing Claims,22-Mar,--,--,--,--,68.7611,INJCSP Index
+04/03/2014 08:30,US,382),,Trade Balance,Feb,--,--,--,--,82.3009,USTBTOT Index
+04/03/2014 09:45,US,383),,Bloomberg Consumer Comfort,30-Mar,--,--,--,--,63.7168,COMFCOMF Index
+04/03/2014 10:00,US,384),,ISM Non-Manf. Composite,Mar,--,--,--,--,73.4513,NAPMNMI Index
+04/04/2014 08:30,US,385),,Two-Month Payroll Net Revision,Mar,--,--,--,--,4.42478,ECONGECC Index
+04/04/2014 08:30,US,386),,Change in Nonfarm Payrolls,Mar,--,--,--,--,99.115,NFP TCH Index
+04/04/2014 08:30,US,387),,Change in Private Payrolls,Mar,--,--,--,--,23.0088,NFP PCH Index
+04/04/2014 08:30,US,388),,Change in Manufact. Payrolls,Mar,--,--,--,--,69.3805,USMMMNCH Index
+04/04/2014 08:30,US,389),,Unemployment Rate,Mar,--,--,--,--,89.2035,USURTOT Index
+04/04/2014 08:30,US,390),,Average Hourly Earnings MoM,Mar,--,--,--,--,19.469,AHE MOM% Index
+04/04/2014 08:30,US,391),,Average Hourly Earnings YoY,Mar,--,--,--,--,17.6991,AHE YOY% Index
+04/04/2014 08:30,US,392),,Average Weekly Hours All Employees,Mar,--,--,--,--,18.5841,AWH TOTL Index
+04/04/2014 08:30,US,393),,Change in Household Employment,Mar,--,--,--,--,14.1593,USEMNCHG Index
+04/04/2014 08:30,US,394),,Underemployment Rate,Mar,--,--,--,--,12.3894,USUDMAER Index
+04/04/2014 15:00,US,395),,Labor Force Participation Rate,Mar,--,--,--,--,0.884956,PRUSTOT Index
+04/07/2014 15:00,US,396),,Consumer Credit,Feb,--,--,--,--,39.823,CICRTOT Index
+04/08/2014 07:30,US,397),,NFIB Small Business Optimism,Mar,--,--,--,--,58.4071,SBOITOTL Index
+04/08/2014 10:00,US,398),,JOLTs Job Openings,Feb,--,--,--,--,15.9292,JOLTTOTL Index
+04/09/2014 07:00,US,399),,MBA Mortgage Applications,4-Apr,--,--,--,--,92.3077,MBAVCHNG Index
+04/09/2014 10:00,US,400),,Wholesale Trade Sales MoM,Feb,--,--,--,--,2.65487,MWSLCHNG Index
+04/09/2014 10:00,US,401),,Wholesale Inventories MoM,Feb,--,--,--,--,78.7611,MWINCHNG Index
+04/09/2014 14:00,US,402),,Fed Releases Minutes from March 18-19 FOMC meeting,,,,,,0,
+04/10/2014 08:30,US,403),,Initial Jobless Claims,5-Apr,--,--,--,--,98.2301,INJCJC Index
+04/10/2014 08:30,US,404),,Continuing Claims,29-Mar,--,--,--,--,68.7611,INJCSP Index
+04/10/2014 08:30,US,405),,Import Price Index MoM,Mar,--,--,--,--,76.9912,IMP1CHNG Index
+04/10/2014 08:30,US,406),,Import Price Index YoY,Mar,--,--,--,--,29.2035,IMP1YOY% Index
+04/10/2014 09:45,US,407),,Bloomberg Consumer Comfort,6-Apr,--,--,--,--,63.7168,COMFCOMF Index
+04/10/2014 14:00,US,408),,Monthly Budget Statement,Mar,--,--,--,--,74.3363,FDDSSD Index
+04/11/2014 08:30,US,409),,PPI MoM,Mar,--,--,--,--,85.8407,PPI CHNG Index
+04/11/2014 08:30,US,410),,PPI Ex Food and Energy MoM,Mar,--,--,--,--,68.6726,PXFECHNG Index
+04/11/2014 08:30,US,411),,PPI YoY,Mar,--,--,--,--,68.1416,PPI YOY Index
+04/11/2014 08:30,US,412),,PPI Ex Food and Energy YoY,Mar,--,--,--,--,66.3717,PPI XYOY Index
+04/11/2014 09:55,US,413),,Univ. of Michigan Confidence,Apr P,--,--,--,--,92.9204,CONSSENT Index
+04/14/2014 08:30,US,414),,Retail Sales Advance MoM,Mar,--,--,--,--,89.3805,RSTAMOM Index
+04/14/2014 08:30,US,415),,Retail Sales Ex Auto MoM,Mar,--,--,--,--,62.5664,RSTAXMOM Index
+04/14/2014 08:30,US,416),,Retail Sales Ex Auto and Gas,Mar,--,--,--,--,60.177,RSTAXAG% Index
+04/14/2014 08:30,US,417),,Retail Sales Control Group,Mar,--,--,--,--,9.73451,RSTAXAGM Index
+04/14/2014 10:00,US,418),,Business Inventories,Feb,--,--,--,--,38.0531,MTIBCHNG Index
+04/15/2014 08:30,US,419),,Empire Manufacturing,Apr,--,--,--,--,81.4159,EMPRGBCI Index
+04/15/2014 08:30,US,420),,CPI MoM,Mar,--,--,--,--,93.8053,CPI CHNG Index
+04/15/2014 08:30,US,421),,CPI Ex Food and Energy MoM,Mar,--,--,--,--,75.0442,CPUPXCHG Index
+04/15/2014 08:30,US,422),,CPI YoY,Mar,--,--,--,--,57.5221,CPI YOY Index
+04/15/2014 08:30,US,423),,CPI Ex Food and Energy YoY,Mar,--,--,--,--,46.0177,CPI XYOY Index
+04/15/2014 08:30,US,424),,CPI Core Index SA,Mar,--,--,--,--,35.3982,CPUPAXFE Index
+04/15/2014 08:30,US,425),,CPI Index NSA,Mar,--,--,--,--,30.9735,CPURNSA Index
+04/15/2014 09:00,US,426),,Total Net TIC Flows,Feb,--,--,--,--,65.4867,FRNTTNET Index
+04/15/2014 09:00,US,427),,Net Long-term TIC Flows,Feb,--,--,--,--,72.5664,FRNTTOTL Index
+04/15/2014 10:00,US,428),,NAHB Housing Market Index,Apr,--,--,--,--,41.5929,USHBMIDX Index
+04/16/2014 07:00,US,429),,MBA Mortgage Applications,11-Apr,--,--,--,--,92.3077,MBAVCHNG Index
+04/16/2014 08:30,US,430),,Housing Starts,Mar,--,--,--,--,88.4956,NHSPSTOT Index
+04/16/2014 08:30,US,431),,Housing Starts MoM,Mar,--,--,--,--,22.1239,NHCHSTCH Index
+04/16/2014 08:30,US,432),,Building Permits,Mar,--,--,--,--,61.9469,NHSPATOT Index
+04/16/2014 08:30,US,433),,Building Permits MoM,Mar,--,--,--,--,20.354,NHCHATCH Index
+04/16/2014 09:15,US,434),,Industrial Production MoM,Mar,--,--,--,--,86.7257,IP CHNG Index
+04/16/2014 09:15,US,435),,Capacity Utilization,Mar,--,--,--,--,60.708,CPTICHNG Index
+04/16/2014 09:15,US,436),,Manufacturing (SIC) Production,Mar,--,--,--,--,6.19469,IPMGCHNG Index
+04/16/2014 14:00,US,437),,U.S. Federal Reserve Releases Beige Book Report,,,,,,0,
+04/17/2014 08:30,US,438),,Initial Jobless Claims,12-Apr,--,--,--,--,98.2301,INJCJC Index
+04/17/2014 08:30,US,439),,Continuing Claims,5-Apr,--,--,--,--,68.7611,INJCSP Index
+04/17/2014 09:45,US,440),,Bloomberg Economic Expectations,Apr,--,--,--,--,25.6637,COMFBTWR Index
+04/17/2014 09:45,US,441),,Bloomberg Consumer Comfort,13-Apr,--,--,--,--,63.7168,COMFCOMF Index
+04/17/2014 10:00,US,442),,Philadelphia Fed Business Outlook,Apr,--,--,--,--,76.1062,OUTFGAF Index
+04/18/2014 10:00,US,443),,Leading Index,Mar,--,--,--,--,83.1858,LEI CHNG Index
+04/21/2014 08:30,US,444),,Chicago Fed Nat Activity Index,Mar,--,--,--,--,61.0619,CFNAI Index
+04/22/2014 09:00,US,445),,House Price Index MoM,Feb,--,--,--,--,67.2566,HPIMMOM% Index
+04/22/2014 10:00,US,446),,Existing Home Sales MoM,Mar,--,--,--,--,49.5575,ETSLMOM Index
+04/22/2014 10:00,US,447),,Existing Home Sales,Mar,--,--,--,--,87.6106,ETSLTOTL Index
+04/22/2014 10:00,US,448),,Richmond Fed Manufact. Index,Apr,--,--,--,--,69.0265,RCHSINDX Index
+04/23/2014 07:00,US,449),,MBA Mortgage Applications,18-Apr,--,--,--,--,92.3077,MBAVCHNG Index
+04/23/2014 08:58,US,450),,Markit US PMI Preliminary,Apr,--,--,--,--,8.84956,ECONMUS Index
+04/23/2014 10:00,US,451),,New Home Sales MoM,Mar,--,--,--,--,47.7876,NHSLCHNG Index
+04/23/2014 10:00,US,452),,New Home Sales,Mar,--,--,--,--,90.2655,NHSLTOT Index
+04/24/2014 08:30,US,453),,Durable Goods Orders,Mar,--,--,--,--,91.1504,DGNOCHNG Index
+04/24/2014 08:30,US,454),,Durables Ex Transportation,Mar,--,--,--,--,72.9204,DGNOXTCH Index
+04/24/2014 08:30,US,455),,Cap Goods Orders Nondef Ex Air,Mar,--,--,--,--,56.6372,CGNOXAI% Index
+04/24/2014 08:30,US,456),,Initial Jobless Claims,19-Apr,--,--,--,--,98.2301,INJCJC Index
+04/24/2014 08:30,US,457),,Cap Goods Ship Nondef Ex Air,Mar,--,--,--,--,55.7522,CGSHXAI% Index
+04/24/2014 08:30,US,458),,Continuing Claims,12-Apr,--,--,--,--,68.7611,INJCSP Index
+04/24/2014 09:45,US,459),,Bloomberg Consumer Comfort,20-Apr,--,--,--,--,63.7168,COMFCOMF Index
+04/24/2014 11:00,US,460),,Kansas City Fed Manf. Activity,Apr,--,--,--,--,11.5044,KCLSSACI Index
+04/25/2014 09:55,US,461),,Univ. of Michigan Confidence,Apr F,--,--,--,--,92.9204,CONSSENT Index
+04/28/2014 10:00,US,462),,Pending Home Sales MoM,Mar,--,--,--,--,75.2212,USPHTMOM Index
+04/28/2014 10:00,US,463),,Pending Home Sales YoY,Mar,--,--,--,--,23.8938,USPHTYOY Index
+04/28/2014 10:30,US,464),,Dallas Fed Manf. Activity,Apr,--,--,--,--,62.8319,DFEDGBA Index
+04/29/2014 09:00,US,465),,S&P/CS 20 City MoM SA,Mar,--,--,--,--,21.2389,SPCS20SM Index
+04/29/2014 09:00,US,466),,S&P/CS Composite-20 YoY,Mar,--,--,--,--,46.9027,SPCS20Y% Index
+04/29/2014 09:00,US,467),,S&P/CaseShiller Home Price Index NSA,Mar,--,--,--,--,53.9823,SPCS20 Index
+04/29/2014 09:00,US,468),,S&P/Case-Shiller US HPI NSA,1Q,--,--,--,--,26.5487,SPCSUSA Index
+04/29/2014 09:00,US,469),,S&P/Case-Shiller US HPI YoY,1Q,--,--,--,--,27.4336,SPCSUSAY Index
+04/29/2014 10:00,US,470),,Consumer Confidence Index,Apr,--,--,--,--,95.5752,CONCCONF Index
+04/30/2014 07:00,US,471),,MBA Mortgage Applications,25-Apr,--,--,--,--,92.3077,MBAVCHNG Index
+04/30/2014 08:15,US,472),,ADP Employment Change,Apr,--,--,--,--,80.531,ADP CHNG Index
+04/30/2014 08:30,US,473),,GDP Annualized QoQ,1Q A,--,--,--,--,96.4602,GDP CQOQ Index
+04/30/2014 08:30,US,474),,GDP Price Index,1Q A,--,--,--,--,77.1681,GDP PIQQ Index
+04/30/2014 08:30,US,475),,Employment Cost Index,1Q,--,--,--,--,71.6814,ECI SA% Index
+04/30/2014 08:30,US,476),,Core PCE QoQ,1Q A,--,--,--,--,67.5221,GDPCPCEC Index
+04/30/2014 08:30,US,477),,Personal Consumption,1Q A,--,--,--,--,67.5221,GDPCTOT% Index
+04/30/2014 09:00,US,478),,ISM Milwaukee,Apr,--,--,--,--,30.0885,MAPMINDX Index
+04/30/2014 09:45,US,479),,Chicago Purchasing Manager,Apr,--,--,--,--,79.646,CHPMINDX Index
+04/30/2014 14:00,US,480),,Fed QE3 Pace,Apr,--,--,--,--,0,TREFAMSP Index
+04/30/2014 14:00,US,481),,Fed Pace of Treasury Pur,Apr,--,--,--,--,3.53982,TREFPACE Index
+04/30/2014 14:00,US,482),,Fed Pace of MBS Purchases,Apr,--,--,--,--,1.76991,AMSPPACE Index
+04/30/2014 14:00,US,483),,FOMC Rate Decision,30-Apr,--,--,--,--,97.3451,FDTR Index
+05/01/2014 07:30,US,484),,Challenger Job Cuts YoY,Apr,--,--,--,--,32.7434,CHALYOY% Index
+05/01/2014 07:30,US,485),,RBC Consumer Outlook Index,May,--,--,--,--,13.2743,ICSHNATL Index
+05/01/2014 08:30,US,486),,Initial Jobless Claims,26-Apr,--,--,--,--,98.2301,INJCJC Index
+05/01/2014 08:30,US,487),,Continuing Claims,19-Apr,--,--,--,--,68.7611,INJCSP Index
+05/01/2014 08:30,US,488),,Personal Income,Mar,--,--,--,--,84.9558,PITLCHNG Index
+05/01/2014 08:30,US,489),,Personal Spending,Mar,--,--,--,--,84.9558,PCE CRCH Index
+05/01/2014 08:30,US,490),,PCE Deflator MoM,Mar,--,--,--,--,7.07965,PCE DEFM Index
+05/01/2014 08:30,US,491),,PCE Deflator YoY,Mar,--,--,--,--,34.5133,PCE DEFY Index
+05/01/2014 08:30,US,492),,PCE Core MoM,Mar,--,--,--,--,59.469,PCE CMOM Index
+05/01/2014 08:30,US,493),,PCE Core YoY,Mar,--,--,--,--,37.1681,PCE CYOY Index
+05/01/2014 08:58,US,494),,Markit US PMI Final,Apr,--,--,--,--,7.9646,ECONMUSF Index
+05/01/2014 09:45,US,495),,Bloomberg Consumer Comfort,27-Apr,--,--,--,--,63.7168,COMFCOMF Index
+05/01/2014 10:00,US,496),,ISM Manufacturing,Apr,--,--,--,--,94.6903,NAPMPMI Index
+05/01/2014 10:00,US,497),,ISM Prices Paid,Apr,--,--,--,--,69.9115,NAPMPRIC Index
+05/01/2014 10:00,US,498),,Construction Spending MoM,Mar,--,--,--,--,77.8761,CNSTTMOM Index
+05/01/2014,US,499),,Domestic Vehicle Sales,Apr,--,--,--,--,33.6283,SAARDTOT Index
+05/01/2014,US,500),,Total Vehicle Sales,Apr,--,--,--,--,40.708,SAARTOTL Index
+05/02/2014 08:30,US,501),,Two-Month Payroll Net Revision,Apr,--,--,--,--,4.42478,ECONGECC Index
+05/02/2014 08:30,US,502),,Change in Nonfarm Payrolls,Apr,--,--,--,--,99.115,NFP TCH Index
+05/02/2014 08:30,US,503),,Change in Private Payrolls,Apr,--,--,--,--,23.0088,NFP PCH Index
+05/02/2014 08:30,US,504),,Change in Manufact. Payrolls,Apr,--,--,--,--,69.3805,USMMMNCH Index
+05/02/2014 08:30,US,505),,Unemployment Rate,Apr,--,--,--,--,89.2035,USURTOT Index
+05/02/2014 08:30,US,506),,Average Hourly Earnings MoM,Apr,--,--,--,--,19.469,AHE MOM% Index
+05/02/2014 08:30,US,507),,Average Hourly Earnings YoY,Apr,--,--,--,--,17.6991,AHE YOY% Index
+05/02/2014 08:30,US,508),,Average Weekly Hours All Employees,Apr,--,--,--,--,18.5841,AWH TOTL Index
+05/02/2014 08:30,US,509),,Change in Household Employment,Apr,--,--,--,--,14.1593,USEMNCHG Index
+05/02/2014 08:30,US,510),,Underemployment Rate,Apr,--,--,--,--,12.3894,USUDMAER Index
+05/02/2014 09:45,US,511),,ISM New York,Apr,--,--,--,--,10.6195,NYPMCURR Index
+05/02/2014 10:00,US,512),,Factory Orders,Mar,--,--,--,--,84.0708,TMNOCHNG Index
+05/02/2014 15:00,US,513),,Labor Force Participation Rate,Apr,--,--,--,--,0.884956,PRUSTOT Index
+05/05/2014 10:00,US,514),,ISM Non-Manf. Composite,Apr,--,--,--,--,73.4513,NAPMNMI Index
+05/06/2014 08:30,US,515),,Trade Balance,Mar,--,--,--,--,82.3009,USTBTOT Index
+05/06/2014 10:00,US,516),,IBD/TIPP Economic Optimism,May,--,--,--,--,15.0442,ECONUSIB Index
+05/07/2014 07:00,US,517),,MBA Mortgage Applications,2-May,--,--,--,--,92.3077,MBAVCHNG Index
+05/07/2014 08:30,US,518),,Unit Labor Costs,1Q P,--,--,--,--,31.8584,COSTNFR% Index
+05/07/2014 08:30,US,519),,Nonfarm Productivity,1Q P,--,--,--,--,38.9381,PRODNFR% Index
+05/07/2014 15:00,US,520),,Consumer Credit,Mar,--,--,--,--,39.823,CICRTOT Index
+05/08/2014 08:30,US,521),,Initial Jobless Claims,3-May,--,--,--,--,98.2301,INJCJC Index
+05/08/2014 08:30,US,522),,Continuing Claims,26-Apr,--,--,--,--,68.7611,INJCSP Index
+05/08/2014 09:45,US,523),,Bloomberg Consumer Comfort,4-May,--,--,--,--,63.7168,COMFCOMF Index
+05/09/2014 10:00,US,524),,Wholesale Trade Sales MoM,Mar,--,--,--,--,2.65487,MWSLCHNG Index
+05/09/2014 10:00,US,525),,JOLTs Job Openings,Mar,--,--,--,--,15.9292,JOLTTOTL Index
+05/09/2014 10:00,US,526),,Wholesale Inventories MoM,Mar,--,--,--,--,78.7611,MWINCHNG Index
+05/12/2014 14:00,US,527),,Monthly Budget Statement,Apr,--,--,--,--,74.3363,FDDSSD Index
+05/12/2014 05/16,US,528),,Mortgage Delinquencies,1Q,--,--,--,--,28.3186,DLQTDLQT Index
+05/12/2014 05/16,US,529),,MBA Mortgage Foreclosures,1Q,--,--,--,--,16.8142,FORLTOTL Index
+05/13/2014 07:30,US,530),,NFIB Small Business Optimism,Apr,--,--,--,--,58.4071,SBOITOTL Index
+05/13/2014 08:30,US,531),,Retail Sales Advance MoM,Apr,--,--,--,--,89.3805,RSTAMOM Index
+05/13/2014 08:30,US,532),,Retail Sales Ex Auto MoM,Apr,--,--,--,--,62.5664,RSTAXMOM Index
+05/13/2014 08:30,US,533),,Retail Sales Ex Auto and Gas,Apr,--,--,--,--,60.177,RSTAXAG% Index
+05/13/2014 08:30,US,534),,Retail Sales Control Group,Apr,--,--,--,--,9.73451,RSTAXAGM Index
+05/13/2014 08:30,US,535),,Import Price Index MoM,Apr,--,--,--,--,76.9912,IMP1CHNG Index
+05/13/2014 08:30,US,536),,Import Price Index YoY,Apr,--,--,--,--,29.2035,IMP1YOY% Index
+05/13/2014 10:00,US,537),,Business Inventories,Mar,--,--,--,--,38.0531,MTIBCHNG Index
+05/14/2014 07:00,US,538),,MBA Mortgage Applications,9-May,--,--,--,--,92.3077,MBAVCHNG Index
+05/14/2014 08:30,US,539),,PPI MoM,Apr,--,--,--,--,85.8407,PPI CHNG Index
+05/14/2014 08:30,US,540),,PPI Ex Food and Energy MoM,Apr,--,--,--,--,68.6726,PXFECHNG Index
+05/14/2014 08:30,US,541),,PPI YoY,Apr,--,--,--,--,68.1416,PPI YOY Index
+05/14/2014 08:30,US,542),,PPI Ex Food and Energy YoY,Apr,--,--,--,--,66.3717,PPI XYOY Index
+05/15/2014 08:30,US,543),,Empire Manufacturing,May,--,--,--,--,81.4159,EMPRGBCI Index
+05/15/2014 08:30,US,544),,CPI MoM,Apr,--,--,--,--,93.8053,CPI CHNG Index
+05/15/2014 08:30,US,545),,CPI Ex Food and Energy MoM,Apr,--,--,--,--,75.0442,CPUPXCHG Index
+05/15/2014 08:30,US,546),,CPI YoY,Apr,--,--,--,--,57.5221,CPI YOY Index
+05/15/2014 08:30,US,547),,CPI Ex Food and Energy YoY,Apr,--,--,--,--,46.0177,CPI XYOY Index
+05/15/2014 08:30,US,548),,Initial Jobless Claims,10-May,--,--,--,--,98.2301,INJCJC Index
+05/15/2014 08:30,US,549),,CPI Core Index SA,Apr,--,--,--,--,35.3982,CPUPAXFE Index
+05/15/2014 08:30,US,550),,Continuing Claims,3-May,--,--,--,--,68.7611,INJCSP Index
+05/15/2014 08:30,US,551),,CPI Index NSA,Apr,--,--,--,--,30.9735,CPURNSA Index
+05/15/2014 09:00,US,552),,Total Net TIC Flows,Mar,--,--,--,--,65.4867,FRNTTNET Index
+05/15/2014 09:00,US,553),,Net Long-term TIC Flows,Mar,--,--,--,--,72.5664,FRNTTOTL Index
+05/15/2014 09:15,US,554),,Industrial Production MoM,Apr,--,--,--,--,86.7257,IP CHNG Index
+05/15/2014 09:15,US,555),,Capacity Utilization,Apr,--,--,--,--,60.708,CPTICHNG Index
+05/15/2014 09:15,US,556),,Manufacturing (SIC) Production,Apr,--,--,--,--,6.19469,IPMGCHNG Index
+05/15/2014 09:45,US,557),,Bloomberg Consumer Comfort,11-May,--,--,--,--,63.7168,COMFCOMF Index
+05/15/2014 10:00,US,558),,Philadelphia Fed Business Outlook,May,--,--,--,--,76.1062,OUTFGAF Index
+05/15/2014 10:00,US,559),,NAHB Housing Market Index,May,--,--,--,--,41.5929,USHBMIDX Index
+05/16/2014 08:30,US,560),,Housing Starts,Apr,--,--,--,--,88.4956,NHSPSTOT Index
+05/16/2014 08:30,US,561),,Housing Starts MoM,Apr,--,--,--,--,22.1239,NHCHSTCH Index
+05/16/2014 08:30,US,562),,Building Permits,Apr,--,--,--,--,61.9469,NHSPATOT Index
+05/16/2014 08:30,US,563),,Building Permits MoM,Apr,--,--,--,--,20.354,NHCHATCH Index
+05/16/2014 09:55,US,564),,Univ. of Michigan Confidence,May P,--,--,--,--,92.9204,CONSSENT Index
+05/21/2014 07:00,US,565),,MBA Mortgage Applications,16-May,--,--,--,--,92.3077,MBAVCHNG Index
+05/21/2014 14:00,US,566),,Fed Releases Minutes from April 29-30 FOMC Meeting,,,,,,0,
+05/22/2014 08:30,US,567),,Chicago Fed Nat Activity Index,Apr,--,--,--,--,61.0619,CFNAI Index
+05/22/2014 08:30,US,568),,Initial Jobless Claims,17-May,--,--,--,--,98.2301,INJCJC Index
+05/22/2014 08:30,US,569),,Continuing Claims,10-May,--,--,--,--,68.7611,INJCSP Index
+05/22/2014 08:58,US,570),,Markit US PMI Preliminary,May,--,--,--,--,8.84956,ECONMUS Index
+05/22/2014 09:45,US,571),,Bloomberg Economic Expectations,May,--,--,--,--,25.6637,COMFBTWR Index
+05/22/2014 09:45,US,572),,Bloomberg Consumer Comfort,18-May,--,--,--,--,63.7168,COMFCOMF Index
+05/22/2014 10:00,US,573),,Existing Home Sales MoM,Apr,--,--,--,--,49.5575,ETSLMOM Index
+05/22/2014 10:00,US,574),,Existing Home Sales,Apr,--,--,--,--,87.6106,ETSLTOTL Index
+05/22/2014 10:00,US,575),,Leading Index,Apr,--,--,--,--,83.1858,LEI CHNG Index
+05/22/2014 11:00,US,576),,Kansas City Fed Manf. Activity,May,--,--,--,--,11.5044,KCLSSACI Index
+05/23/2014 10:00,US,577),,New Home Sales MoM,Apr,--,--,--,--,47.7876,NHSLCHNG Index
+05/23/2014 10:00,US,578),,New Home Sales,Apr,--,--,--,--,90.2655,NHSLTOT Index
+05/27/2014 08:30,US,579),,Durable Goods Orders,Apr,--,--,--,--,91.1504,DGNOCHNG Index
+05/27/2014 08:30,US,580),,Durables Ex Transportation,Apr,--,--,--,--,72.9204,DGNOXTCH Index
+05/27/2014 08:30,US,581),,Cap Goods Orders Nondef Ex Air,Apr,--,--,--,--,56.6372,CGNOXAI% Index
+05/27/2014 08:30,US,582),,Cap Goods Ship Nondef Ex Air,Apr,--,--,--,--,55.7522,CGSHXAI% Index
+05/27/2014 09:00,US,583),,House Price Index MoM,Mar,--,--,--,--,67.2566,HPIMMOM% Index
+05/27/2014 09:00,US,584),,House Price Purchase Index QoQ,1Q,--,--,--,--,24.7788,HPI PURQ Index
+05/27/2014 09:00,US,585),,S&P/CS 20 City MoM SA,Apr,--,--,--,--,21.2389,SPCS20SM Index
+05/27/2014 09:00,US,586),,S&P/CS Composite-20 YoY,Apr,--,--,--,--,46.9027,SPCS20Y% Index
+05/27/2014 09:00,US,587),,S&P/CaseShiller Home Price Index NSA,Apr,--,--,--,--,53.9823,SPCS20 Index
+05/27/2014 10:00,US,588),,Consumer Confidence Index,May,--,--,--,--,95.5752,CONCCONF Index
+05/27/2014 10:00,US,589),,Richmond Fed Manufact. Index,May,--,--,--,--,69.0265,RCHSINDX Index
+05/27/2014 10:30,US,590),,Dallas Fed Manf. Activity,May,--,--,--,--,62.8319,DFEDGBA Index
+05/28/2014 07:00,US,591),,MBA Mortgage Applications,23-May,--,--,--,--,92.3077,MBAVCHNG Index
+05/29/2014 08:30,US,592),,GDP Annualized QoQ,1Q S,--,--,--,--,96.4602,GDP CQOQ Index
+05/29/2014 08:30,US,593),,GDP Price Index,1Q S,--,--,--,--,77.1681,GDP PIQQ Index
+05/29/2014 08:30,US,594),,Core PCE QoQ,1Q S,--,--,--,--,67.5221,GDPCPCEC Index
+05/29/2014 08:30,US,595),,Personal Consumption,1Q S,--,--,--,--,67.5221,GDPCTOT% Index
+05/29/2014 08:30,US,596),,Initial Jobless Claims,24-May,--,--,--,--,98.2301,INJCJC Index
+05/29/2014 08:30,US,597),,Continuing Claims,17-May,--,--,--,--,68.7611,INJCSP Index
+05/29/2014 09:45,US,598),,Bloomberg Consumer Comfort,25-May,--,--,--,--,63.7168,COMFCOMF Index
+05/29/2014 10:00,US,599),,Pending Home Sales MoM,Apr,--,--,--,--,75.2212,USPHTMOM Index
+05/29/2014 10:00,US,600),,Pending Home Sales YoY,Apr,--,--,--,--,23.8938,USPHTYOY Index
+05/30/2014 08:30,US,601),,Personal Income,Apr,--,--,--,--,84.9558,PITLCHNG Index
+05/30/2014 08:30,US,602),,Personal Spending,Apr,--,--,--,--,84.9558,PCE CRCH Index
+05/30/2014 08:30,US,603),,PCE Deflator MoM,Apr,--,--,--,--,7.07965,PCE DEFM Index
+05/30/2014 08:30,US,604),,PCE Deflator YoY,Apr,--,--,--,--,34.5133,PCE DEFY Index
+05/30/2014 08:30,US,605),,PCE Core MoM,Apr,--,--,--,--,59.469,PCE CMOM Index
+05/30/2014 08:30,US,606),,PCE Core YoY,Apr,--,--,--,--,37.1681,PCE CYOY Index
+05/30/2014 09:00,US,607),,ISM Milwaukee,May,--,--,--,--,30.0885,MAPMINDX Index
+05/30/2014 09:45,US,608),,Chicago Purchasing Manager,May,--,--,--,--,79.646,CHPMINDX Index
+05/30/2014 09:55,US,609),,Univ. of Michigan Confidence,May F,--,--,--,--,92.9204,CONSSENT Index
+06/02/2014 08:58,US,610),,Markit US PMI Final,May,--,--,--,--,7.9646,ECONMUSF Index
+06/02/2014 10:00,US,611),,ISM Manufacturing,May,--,--,--,--,94.6903,NAPMPMI Index
+06/02/2014 10:00,US,612),,ISM Prices Paid,May,--,--,--,--,69.9115,NAPMPRIC Index
+06/02/2014 10:00,US,613),,Construction Spending MoM,Apr,--,--,--,--,77.8761,CNSTTMOM Index
+06/03/2014 09:45,US,614),,ISM New York,May,--,--,--,--,10.6195,NYPMCURR Index
+06/03/2014 10:00,US,615),,IBD/TIPP Economic Optimism,Jun,--,--,--,--,15.0442,ECONUSIB Index
+06/03/2014 10:00,US,616),,Factory Orders,Apr,--,--,--,--,84.0708,TMNOCHNG Index
+06/03/2014,US,617),,Domestic Vehicle Sales,May,--,--,--,--,33.6283,SAARDTOT Index
+06/03/2014,US,618),,Total Vehicle Sales,May,--,--,--,--,40.708,SAARTOTL Index
+06/04/2014 07:00,US,619),,MBA Mortgage Applications,30-May,--,--,--,--,92.3077,MBAVCHNG Index
+06/04/2014 08:15,US,620),,ADP Employment Change,May,--,--,--,--,80.531,ADP CHNG Index
+06/04/2014 08:30,US,621),,Unit Labor Costs,1Q F,--,--,--,--,31.8584,COSTNFR% Index
+06/04/2014 08:30,US,622),,Nonfarm Productivity,1Q F,--,--,--,--,38.9381,PRODNFR% Index
+06/04/2014 08:30,US,623),,Trade Balance,Apr,--,--,--,--,82.3009,USTBTOT Index
+06/04/2014 10:00,US,624),,ISM Non-Manf. Composite,May,--,--,--,--,73.4513,NAPMNMI Index
+06/04/2014 14:00,US,625),,U.S. Federal Reserve Releases Beige Book Report,,,,,,0,
+06/04/2014 06/09,US,626),,Household Change in Net Worth,1Q,--,--,--,--,5.30973,NWORCHNG Index
+06/05/2014 07:30,US,627),,Challenger Job Cuts YoY,May,--,--,--,--,32.7434,CHALYOY% Index
+06/05/2014 07:30,US,628),,RBC Consumer Outlook Index,Jun,--,--,--,--,13.2743,ICSHNATL Index
+06/05/2014 08:30,US,629),,Initial Jobless Claims,31-May,--,--,--,--,98.2301,INJCJC Index
+06/05/2014 08:30,US,630),,Continuing Claims,24-May,--,--,--,--,68.7611,INJCSP Index
+06/05/2014 09:45,US,631),,Bloomberg Consumer Comfort,1-Jun,--,--,--,--,63.7168,COMFCOMF Index
+06/06/2014 08:30,US,632),,Two-Month Payroll Net Revision,May,--,--,--,--,4.42478,ECONGECC Index
+06/06/2014 08:30,US,633),,Change in Nonfarm Payrolls,May,--,--,--,--,99.115,NFP TCH Index
+06/06/2014 08:30,US,634),,Change in Private Payrolls,May,--,--,--,--,23.0088,NFP PCH Index
+06/06/2014 08:30,US,635),,Change in Manufact. Payrolls,May,--,--,--,--,69.3805,USMMMNCH Index
+06/06/2014 08:30,US,636),,Unemployment Rate,May,--,--,--,--,89.2035,USURTOT Index
+06/06/2014 08:30,US,637),,Average Hourly Earnings MoM,May,--,--,--,--,19.469,AHE MOM% Index
+06/06/2014 08:30,US,638),,Average Hourly Earnings YoY,May,--,--,--,--,17.6991,AHE YOY% Index
+06/06/2014 08:30,US,639),,Average Weekly Hours All Employees,May,--,--,--,--,18.5841,AWH TOTL Index
+06/06/2014 08:30,US,640),,Change in Household Employment,May,--,--,--,--,14.1593,USEMNCHG Index
+06/06/2014 08:30,US,641),,Underemployment Rate,May,--,--,--,--,12.3894,USUDMAER Index
+06/06/2014 15:00,US,642),,Consumer Credit,Apr,--,--,--,--,39.823,CICRTOT Index
+06/06/2014 15:00,US,643),,Labor Force Participation Rate,May,--,--,--,--,0.884956,PRUSTOT Index
+06/10/2014 07:30,US,644),,NFIB Small Business Optimism,May,--,--,--,--,58.4071,SBOITOTL Index
+06/10/2014 10:00,US,645),,Wholesale Trade Sales MoM,Apr,--,--,--,--,2.65487,MWSLCHNG Index
+06/10/2014 10:00,US,646),,JOLTs Job Openings,Apr,--,--,--,--,15.9292,JOLTTOTL Index
+06/10/2014 10:00,US,647),,Wholesale Inventories MoM,Apr,--,--,--,--,78.7611,MWINCHNG Index
+06/11/2014 07:00,US,648),,MBA Mortgage Applications,6-Jun,--,--,--,--,92.3077,MBAVCHNG Index
+06/11/2014 14:00,US,649),,Monthly Budget Statement,May,--,--,--,--,74.3363,FDDSSD Index
+06/12/2014 08:30,US,650),,Retail Sales Advance MoM,May,--,--,--,--,89.3805,RSTAMOM Index
+06/12/2014 08:30,US,651),,Retail Sales Ex Auto MoM,May,--,--,--,--,62.5664,RSTAXMOM Index
+06/12/2014 08:30,US,652),,Retail Sales Ex Auto and Gas,May,--,--,--,--,60.177,RSTAXAG% Index
+06/12/2014 08:30,US,653),,Retail Sales Control Group,May,--,--,--,--,9.73451,RSTAXAGM Index
+06/12/2014 08:30,US,654),,Initial Jobless Claims,7-Jun,--,--,--,--,98.2301,INJCJC Index
+06/12/2014 08:30,US,655),,Continuing Claims,31-May,--,--,--,--,68.7611,INJCSP Index
+06/12/2014 08:30,US,656),,Import Price Index MoM,May,--,--,--,--,76.9912,IMP1CHNG Index
+06/12/2014 08:30,US,657),,Import Price Index YoY,May,--,--,--,--,29.2035,IMP1YOY% Index
+06/12/2014 09:45,US,658),,Bloomberg Consumer Comfort,8-Jun,--,--,--,--,63.7168,COMFCOMF Index
+06/12/2014 10:00,US,659),,Business Inventories,Apr,--,--,--,--,38.0531,MTIBCHNG Index
+06/13/2014 08:30,US,660),,PPI MoM,May,--,--,--,--,85.8407,PPI CHNG Index
+06/13/2014 08:30,US,661),,PPI Ex Food and Energy MoM,May,--,--,--,--,68.6726,PXFECHNG Index
+06/13/2014 08:30,US,662),,PPI YoY,May,--,--,--,--,68.1416,PPI YOY Index
+06/13/2014 08:30,US,663),,PPI Ex Food and Energy YoY,May,--,--,--,--,66.3717,PPI XYOY Index
+06/13/2014 09:55,US,664),,Univ. of Michigan Confidence,Jun P,--,--,--,--,92.9204,CONSSENT Index
+06/16/2014 08:30,US,665),,Empire Manufacturing,Jun,--,--,--,--,81.4159,EMPRGBCI Index
+06/16/2014 09:00,US,666),,Total Net TIC Flows,Apr,--,--,--,--,65.4867,FRNTTNET Index
+06/16/2014 09:00,US,667),,Net Long-term TIC Flows,Apr,--,--,--,--,72.5664,FRNTTOTL Index
+06/16/2014 09:15,US,668),,Industrial Production MoM,May,--,--,--,--,86.7257,IP CHNG Index
+06/16/2014 09:15,US,669),,Capacity Utilization,May,--,--,--,--,60.708,CPTICHNG Index
+06/16/2014 09:15,US,670),,Manufacturing (SIC) Production,May,--,--,--,--,6.19469,IPMGCHNG Index
+06/16/2014 10:00,US,671),,NAHB Housing Market Index,Jun,--,--,--,--,41.5929,USHBMIDX Index
+06/17/2014 08:30,US,672),,CPI MoM,May,--,--,--,--,93.8053,CPI CHNG Index
+06/17/2014 08:30,US,673),,CPI Ex Food and Energy MoM,May,--,--,--,--,75.0442,CPUPXCHG Index
+06/17/2014 08:30,US,674),,Housing Starts,May,--,--,--,--,88.4956,NHSPSTOT Index
+06/17/2014 08:30,US,675),,CPI YoY,May,--,--,--,--,57.5221,CPI YOY Index
+06/17/2014 08:30,US,676),,Housing Starts MoM,May,--,--,--,--,22.1239,NHCHSTCH Index
+06/17/2014 08:30,US,677),,CPI Ex Food and Energy YoY,May,--,--,--,--,46.0177,CPI XYOY Index
+06/17/2014 08:30,US,678),,Building Permits,May,--,--,--,--,61.9469,NHSPATOT Index
+06/17/2014 08:30,US,679),,CPI Core Index SA,May,--,--,--,--,35.3982,CPUPAXFE Index
+06/17/2014 08:30,US,680),,Building Permits MoM,May,--,--,--,--,20.354,NHCHATCH Index
+06/17/2014 08:30,US,681),,CPI Index NSA,May,--,--,--,--,30.9735,CPURNSA Index
+06/18/2014 07:00,US,682),,MBA Mortgage Applications,13-Jun,--,--,--,--,92.3077,MBAVCHNG Index
+06/18/2014 08:30,US,683),,Current Account Balance,1Q,--,--,--,--,70.7965,USCABAL Index
+06/18/2014 14:00,US,684),,Fed QE3 Pace,Jun,--,--,--,--,0,TREFAMSP Index
+06/18/2014 14:00,US,685),,Fed Pace of Treasury Pur,Jun,--,--,--,--,3.53982,TREFPACE Index
+06/18/2014 14:00,US,686),,Fed Pace of MBS Purchases,Jun,--,--,--,--,1.76991,AMSPPACE Index
+06/18/2014 14:00,US,687),,FOMC Rate Decision,18-Jun,--,--,--,--,97.3451,FDTR Index
+06/19/2014 08:30,US,688),,Initial Jobless Claims,14-Jun,--,--,--,--,98.2301,INJCJC Index
+06/19/2014 08:30,US,689),,Continuing Claims,7-Jun,--,--,--,--,68.7611,INJCSP Index
+06/19/2014 09:45,US,690),,Bloomberg Economic Expectations,Jun,--,--,--,--,25.6637,COMFBTWR Index
+06/19/2014 09:45,US,691),,Bloomberg Consumer Comfort,15-Jun,--,--,--,--,63.7168,COMFCOMF Index
+06/19/2014 10:00,US,692),,Philadelphia Fed Business Outlook,Jun,--,--,--,--,76.1062,OUTFGAF Index
+06/19/2014 10:00,US,693),,Leading Index,May,--,--,--,--,83.1858,LEI CHNG Index
+06/23/2014 08:30,US,694),,Chicago Fed Nat Activity Index,May,--,--,--,--,61.0619,CFNAI Index
+06/23/2014 08:58,US,695),,Markit US PMI Preliminary,Jun,--,--,--,--,8.84956,ECONMUS Index
+06/23/2014 10:00,US,696),,Existing Home Sales MoM,May,--,--,--,--,49.5575,ETSLMOM Index
+06/23/2014 10:00,US,697),,Existing Home Sales,May,--,--,--,--,87.6106,ETSLTOTL Index
+06/24/2014 09:00,US,698),,House Price Index MoM,Apr,--,--,--,--,67.2566,HPIMMOM% Index
+06/24/2014 09:00,US,699),,S&P/CS 20 City MoM SA,May,--,--,--,--,21.2389,SPCS20SM Index
+06/24/2014 09:00,US,700),,S&P/CS Composite-20 YoY,May,--,--,--,--,46.9027,SPCS20Y% Index
+06/24/2014 09:00,US,701),,S&P/CaseShiller Home Price Index NSA,May,--,--,--,--,53.9823,SPCS20 Index
+06/24/2014 10:00,US,702),,New Home Sales MoM,May,--,--,--,--,47.7876,NHSLCHNG Index
+06/24/2014 10:00,US,703),,New Home Sales,May,--,--,--,--,90.2655,NHSLTOT Index
+06/24/2014 10:00,US,704),,Consumer Confidence Index,Jun,--,--,--,--,95.5752,CONCCONF Index
+06/24/2014 10:00,US,705),,Richmond Fed Manufact. Index,Jun,--,--,--,--,69.0265,RCHSINDX Index
+06/25/2014 07:00,US,706),,MBA Mortgage Applications,20-Jun,--,--,--,--,92.3077,MBAVCHNG Index
+06/25/2014 08:30,US,707),,GDP Annualized QoQ,1Q T,--,--,--,--,96.4602,GDP CQOQ Index
+06/25/2014 08:30,US,708),,GDP Price Index,1Q T,--,--,--,--,77.1681,GDP PIQQ Index
+06/25/2014 08:30,US,709),,Core PCE QoQ,1Q T,--,--,--,--,67.5221,GDPCPCEC Index
+06/25/2014 08:30,US,710),,Personal Consumption,1Q T,--,--,--,--,67.5221,GDPCTOT% Index
+06/25/2014 08:30,US,711),,Durable Goods Orders,May,--,--,--,--,91.1504,DGNOCHNG Index
+06/25/2014 08:30,US,712),,Durables Ex Transportation,May,--,--,--,--,72.9204,DGNOXTCH Index
+06/25/2014 08:30,US,713),,Cap Goods Orders Nondef Ex Air,May,--,--,--,--,56.6372,CGNOXAI% Index
+06/25/2014 08:30,US,714),,Cap Goods Ship Nondef Ex Air,May,--,--,--,--,55.7522,CGSHXAI% Index
+06/26/2014 08:30,US,715),,Initial Jobless Claims,21-Jun,--,--,--,--,98.2301,INJCJC Index
+06/26/2014 08:30,US,716),,Continuing Claims,14-Jun,--,--,--,--,68.7611,INJCSP Index
+06/26/2014 08:30,US,717),,Personal Income,May,--,--,--,--,84.9558,PITLCHNG Index
+06/26/2014 08:30,US,718),,Personal Spending,May,--,--,--,--,84.9558,PCE CRCH Index
+06/26/2014 08:30,US,719),,PCE Deflator MoM,May,--,--,--,--,7.07965,PCE DEFM Index
+06/26/2014 08:30,US,720),,PCE Deflator YoY,May,--,--,--,--,34.5133,PCE DEFY Index
+06/26/2014 08:30,US,721),,PCE Core MoM,May,--,--,--,--,59.469,PCE CMOM Index
+06/26/2014 08:30,US,722),,PCE Core YoY,May,--,--,--,--,37.1681,PCE CYOY Index
+06/26/2014 09:45,US,723),,Bloomberg Consumer Comfort,22-Jun,--,--,--,--,63.7168,COMFCOMF Index
+06/26/2014 11:00,US,724),,Kansas City Fed Manf. Activity,Jun,--,--,--,--,11.5044,KCLSSACI Index
+06/27/2014 09:55,US,725),,Univ. of Michigan Confidence,Jun F,--,--,--,--,92.9204,CONSSENT Index
+06/30/2014 09:00,US,726),,ISM Milwaukee,Jun,--,--,--,--,30.0885,MAPMINDX Index
+06/30/2014 09:45,US,727),,Chicago Purchasing Manager,Jun,--,--,--,--,79.646,CHPMINDX Index
+06/30/2014 10:00,US,728),,Pending Home Sales MoM,May,--,--,--,--,75.2212,USPHTMOM Index
+06/30/2014 10:00,US,729),,Pending Home Sales YoY,May,--,--,--,--,23.8938,USPHTYOY Index
+06/30/2014 10:30,US,730),,Dallas Fed Manf. Activity,Jun,--,--,--,--,62.8319,DFEDGBA Index
+07/01/2014 08:58,US,731),,Markit US PMI Final,Jun,--,--,--,--,7.9646,ECONMUSF Index
+07/01/2014 10:00,US,732),,IBD/TIPP Economic Optimism,Jul,--,--,--,--,15.0442,ECONUSIB Index
+07/01/2014 10:00,US,733),,ISM Manufacturing,Jun,--,--,--,--,94.6903,NAPMPMI Index
+07/01/2014 10:00,US,734),,ISM Prices Paid,Jun,--,--,--,--,69.9115,NAPMPRIC Index
+07/01/2014 10:00,US,735),,Construction Spending MoM,May,--,--,--,--,77.8761,CNSTTMOM Index
+07/01/2014,US,736),,Domestic Vehicle Sales,Jun,--,--,--,--,33.6283,SAARDTOT Index
+07/01/2014,US,737),,Total Vehicle Sales,Jun,--,--,--,--,40.708,SAARTOTL Index
+07/02/2014 07:00,US,738),,MBA Mortgage Applications,27-Jun,--,--,--,--,92.3077,MBAVCHNG Index
+07/02/2014 07:30,US,739),,Challenger Job Cuts YoY,Jun,--,--,--,--,32.7434,CHALYOY% Index
+07/02/2014 07:30,US,740),,RBC Consumer Outlook Index,Jul,--,--,--,--,13.2743,ICSHNATL Index
+07/02/2014 08:15,US,741),,ADP Employment Change,Jun,--,--,--,--,80.531,ADP CHNG Index
+07/02/2014 09:45,US,742),,ISM New York,Jun,--,--,--,--,10.6195,NYPMCURR Index
+07/02/2014 10:00,US,743),,Factory Orders,May,--,--,--,--,84.0708,TMNOCHNG Index
+07/03/2014 08:30,US,744),,Two-Month Payroll Net Revision,Jun,--,--,--,--,4.42478,ECONGECC Index
+07/03/2014 08:30,US,745),,Change in Nonfarm Payrolls,Jun,--,--,--,--,99.115,NFP TCH Index
+07/03/2014 08:30,US,746),,Change in Private Payrolls,Jun,--,--,--,--,23.0088,NFP PCH Index
+07/03/2014 08:30,US,747),,Change in Manufact. Payrolls,Jun,--,--,--,--,69.3805,USMMMNCH Index
+07/03/2014 08:30,US,748),,Unemployment Rate,Jun,--,--,--,--,89.2035,USURTOT Index
+07/03/2014 08:30,US,749),,Initial Jobless Claims,28-Jun,--,--,--,--,98.2301,INJCJC Index
+07/03/2014 08:30,US,750),,Continuing Claims,21-Jun,--,--,--,--,68.7611,INJCSP Index
+07/03/2014 08:30,US,751),,Average Hourly Earnings MoM,Jun,--,--,--,--,19.469,AHE MOM% Index
+07/03/2014 08:30,US,752),,Average Hourly Earnings YoY,Jun,--,--,--,--,17.6991,AHE YOY% Index
+07/03/2014 08:30,US,753),,Average Weekly Hours All Employees,Jun,--,--,--,--,18.5841,AWH TOTL Index
+07/03/2014 08:30,US,754),,Change in Household Employment,Jun,--,--,--,--,14.1593,USEMNCHG Index
+07/03/2014 08:30,US,755),,Underemployment Rate,Jun,--,--,--,--,12.3894,USUDMAER Index
+07/03/2014 08:30,US,756),,Trade Balance,May,--,--,--,--,82.3009,USTBTOT Index
+07/03/2014 09:45,US,757),,Bloomberg Consumer Comfort,29-Jun,--,--,--,--,63.7168,COMFCOMF Index
+07/03/2014 10:00,US,758),,ISM Non-Manf. Composite,Jun,--,--,--,--,73.4513,NAPMNMI Index
+07/03/2014 15:00,US,759),,Labor Force Participation Rate,Jun,--,--,--,--,0.884956,PRUSTOT Index
+07/08/2014 07:30,US,760),,NFIB Small Business Optimism,Jun,--,--,--,--,58.4071,SBOITOTL Index
+07/08/2014 10:00,US,761),,JOLTs Job Openings,May,--,--,--,--,15.9292,JOLTTOTL Index
+07/08/2014 15:00,US,762),,Consumer Credit,May,--,--,--,--,39.823,CICRTOT Index
+07/09/2014 07:00,US,763),,MBA Mortgage Applications,4-Jul,--,--,--,--,92.3077,MBAVCHNG Index
+07/09/2014 14:00,US,764),,Fed Releases Minutes from June 17-18 FOMC Meeting,,,,,,0,
+07/10/2014 08:30,US,765),,Initial Jobless Claims,5-Jul,--,--,--,--,98.2301,INJCJC Index
+07/10/2014 08:30,US,766),,Continuing Claims,28-Jun,--,--,--,--,68.7611,INJCSP Index
+07/10/2014 09:45,US,767),,Bloomberg Consumer Comfort,6-Jul,--,--,--,--,63.7168,COMFCOMF Index
+07/10/2014 10:00,US,768),,Wholesale Trade Sales MoM,May,--,--,--,--,2.65487,MWSLCHNG Index
+07/10/2014 10:00,US,769),,Wholesale Inventories MoM,May,--,--,--,--,78.7611,MWINCHNG Index
+07/11/2014 14:00,US,770),,Monthly Budget Statement,Jun,--,--,--,--,74.3363,FDDSSD Index
+07/15/2014 08:30,US,771),,Empire Manufacturing,Jul,--,--,--,--,81.4159,EMPRGBCI Index
+07/15/2014 08:30,US,772),,Retail Sales Advance MoM,Jun,--,--,--,--,89.3805,RSTAMOM Index
+07/15/2014 08:30,US,773),,Retail Sales Ex Auto MoM,Jun,--,--,--,--,62.5664,RSTAXMOM Index
+07/15/2014 08:30,US,774),,Retail Sales Ex Auto and Gas,Jun,--,--,--,--,60.177,RSTAXAG% Index
+07/15/2014 08:30,US,775),,Retail Sales Control Group,Jun,--,--,--,--,9.73451,RSTAXAGM Index
+07/15/2014 08:30,US,776),,Import Price Index MoM,Jun,--,--,--,--,76.9912,IMP1CHNG Index
+07/15/2014 08:30,US,777),,Import Price Index YoY,Jun,--,--,--,--,29.2035,IMP1YOY% Index
+07/15/2014 10:00,US,778),,Business Inventories,May,--,--,--,--,38.0531,MTIBCHNG Index
+07/16/2014 07:00,US,779),,MBA Mortgage Applications,11-Jul,--,--,--,--,92.3077,MBAVCHNG Index
+07/16/2014 08:30,US,780),,PPI MoM,Jun,--,--,--,--,85.8407,PPI CHNG Index
+07/16/2014 08:30,US,781),,PPI Ex Food and Energy MoM,Jun,--,--,--,--,68.6726,PXFECHNG Index
+07/16/2014 08:30,US,782),,PPI YoY,Jun,--,--,--,--,68.1416,PPI YOY Index
+07/16/2014 08:30,US,783),,PPI Ex Food and Energy YoY,Jun,--,--,--,--,66.3717,PPI XYOY Index
+07/16/2014 09:00,US,784),,Total Net TIC Flows,May,--,--,--,--,65.4867,FRNTTNET Index
+07/16/2014 09:00,US,785),,Net Long-term TIC Flows,May,--,--,--,--,72.5664,FRNTTOTL Index
+07/16/2014 09:15,US,786),,Industrial Production MoM,Jun,--,--,--,--,86.7257,IP CHNG Index
+07/16/2014 09:15,US,787),,Capacity Utilization,Jun,--,--,--,--,60.708,CPTICHNG Index
+07/16/2014 09:15,US,788),,Manufacturing (SIC) Production,Jun,--,--,--,--,6.19469,IPMGCHNG Index
+07/16/2014 10:00,US,789),,NAHB Housing Market Index,Jul,--,--,--,--,41.5929,USHBMIDX Index
+07/16/2014 14:00,US,790),,U.S. Federal Reserve Releases Beige Book Report,,,,,,0,
+07/17/2014 08:30,US,791),,Housing Starts,Jun,--,--,--,--,88.4956,NHSPSTOT Index
+07/17/2014 08:30,US,792),,Housing Starts MoM,Jun,--,--,--,--,22.1239,NHCHSTCH Index
+07/17/2014 08:30,US,793),,Building Permits,Jun,--,--,--,--,61.9469,NHSPATOT Index
+07/17/2014 08:30,US,794),,Initial Jobless Claims,12-Jul,--,--,--,--,98.2301,INJCJC Index
+07/17/2014 08:30,US,795),,Building Permits MoM,Jun,--,--,--,--,20.354,NHCHATCH Index
+07/17/2014 08:30,US,796),,Continuing Claims,5-Jul,--,--,--,--,68.7611,INJCSP Index
+07/17/2014 09:45,US,797),,Bloomberg Economic Expectations,Jul,--,--,--,--,25.6637,COMFBTWR Index
+07/17/2014 09:45,US,798),,Bloomberg Consumer Comfort,13-Jul,--,--,--,--,63.7168,COMFCOMF Index
+07/17/2014 10:00,US,799),,Philadelphia Fed Business Outlook,Jul,--,--,--,--,76.1062,OUTFGAF Index
+07/18/2014 09:55,US,800),,Univ. of Michigan Confidence,Jul P,--,--,--,--,92.9204,CONSSENT Index
+07/18/2014 10:00,US,801),,Leading Index,Jun,--,--,--,--,83.1858,LEI CHNG Index
+07/21/2014 08:30,US,802),,Chicago Fed Nat Activity Index,Jun,--,--,--,--,61.0619,CFNAI Index
+07/22/2014 08:30,US,803),,CPI MoM,Jun,--,--,--,--,93.8053,CPI CHNG Index
+07/22/2014 08:30,US,804),,CPI Ex Food and Energy MoM,Jun,--,--,--,--,75.0442,CPUPXCHG Index
+07/22/2014 08:30,US,805),,CPI YoY,Jun,--,--,--,--,57.5221,CPI YOY Index
+07/22/2014 08:30,US,806),,CPI Ex Food and Energy YoY,Jun,--,--,--,--,46.0177,CPI XYOY Index
+07/22/2014 08:30,US,807),,CPI Core Index SA,Jun,--,--,--,--,35.3982,CPUPAXFE Index
+07/22/2014 08:30,US,808),,CPI Index NSA,Jun,--,--,--,--,30.9735,CPURNSA Index
+07/22/2014 09:00,US,809),,House Price Index MoM,May,--,--,--,--,67.2566,HPIMMOM% Index
+07/22/2014 10:00,US,810),,Existing Home Sales MoM,Jun,--,--,--,--,49.5575,ETSLMOM Index
+07/22/2014 10:00,US,811),,Existing Home Sales,Jun,--,--,--,--,87.6106,ETSLTOTL Index
+07/22/2014 10:00,US,812),,Richmond Fed Manufact. Index,Jul,--,--,--,--,69.0265,RCHSINDX Index
+07/23/2014 07:00,US,813),,MBA Mortgage Applications,18-Jul,--,--,--,--,92.3077,MBAVCHNG Index
+07/24/2014 08:30,US,814),,Initial Jobless Claims,19-Jul,--,--,--,--,98.2301,INJCJC Index
+07/24/2014 08:30,US,815),,Continuing Claims,12-Jul,--,--,--,--,68.7611,INJCSP Index
+07/24/2014 08:58,US,816),,Markit US PMI Preliminary,Jul,--,--,--,--,8.84956,ECONMUS Index
+07/24/2014 09:45,US,817),,Bloomberg Consumer Comfort,20-Jul,--,--,--,--,63.7168,COMFCOMF Index
+07/24/2014 10:00,US,818),,New Home Sales MoM,Jun,--,--,--,--,47.7876,NHSLCHNG Index
+07/24/2014 10:00,US,819),,New Home Sales,Jun,--,--,--,--,90.2655,NHSLTOT Index
+07/24/2014 11:00,US,820),,Kansas City Fed Manf. Activity,Jul,--,--,--,--,11.5044,KCLSSACI Index
+07/25/2014 08:30,US,821),,Durable Goods Orders,Jun,--,--,--,--,91.1504,DGNOCHNG Index
+07/25/2014 08:30,US,822),,Durables Ex Transportation,Jun,--,--,--,--,72.9204,DGNOXTCH Index
+07/25/2014 08:30,US,823),,Cap Goods Orders Nondef Ex Air,Jun,--,--,--,--,56.6372,CGNOXAI% Index
+07/25/2014 08:30,US,824),,Cap Goods Ship Nondef Ex Air,Jun,--,--,--,--,55.7522,CGSHXAI% Index
+07/28/2014 10:00,US,825),,Pending Home Sales MoM,Jun,--,--,--,--,75.2212,USPHTMOM Index
+07/28/2014 10:00,US,826),,Pending Home Sales YoY,Jun,--,--,--,--,23.8938,USPHTYOY Index
+07/28/2014 10:30,US,827),,Dallas Fed Manf. Activity,Jul,--,--,--,--,62.8319,DFEDGBA Index
+07/29/2014 09:00,US,828),,S&P/CS 20 City MoM SA,Jun,--,--,--,--,21.2389,SPCS20SM Index
+07/29/2014 09:00,US,829),,S&P/CS Composite-20 YoY,Jun,--,--,--,--,46.9027,SPCS20Y% Index
+07/29/2014 09:00,US,830),,S&P/CaseShiller Home Price Index NSA,Jun,--,--,--,--,53.9823,SPCS20 Index
+07/29/2014 09:00,US,831),,S&P/Case-Shiller US HPI NSA,2Q,--,--,--,--,26.5487,SPCSUSA Index
+07/29/2014 09:00,US,832),,S&P/Case-Shiller US HPI YoY,2Q,--,--,--,--,27.4336,SPCSUSAY Index
+07/29/2014 10:00,US,833),,Consumer Confidence Index,Jul,--,--,--,--,95.5752,CONCCONF Index
+07/30/2014 07:00,US,834),,MBA Mortgage Applications,25-Jul,--,--,--,--,92.3077,MBAVCHNG Index
+07/30/2014 08:15,US,835),,ADP Employment Change,Jul,--,--,--,--,80.531,ADP CHNG Index
+07/30/2014 08:30,US,836),,GDP Annualized QoQ,2Q A,--,--,--,--,96.4602,GDP CQOQ Index
+07/30/2014 08:30,US,837),,GDP Price Index,2Q A,--,--,--,--,77.1681,GDP PIQQ Index
+07/30/2014 08:30,US,838),,Core PCE QoQ,2Q A,--,--,--,--,67.5221,GDPCPCEC Index
+07/30/2014 08:30,US,839),,Personal Consumption,2Q A,--,--,--,--,67.5221,GDPCTOT% Index
+07/30/2014 14:00,US,840),,Fed Pace of Treasury Pur,Jul,--,--,--,--,3.53982,TREFPACE Index
+07/30/2014 14:00,US,841),,Fed Pace of MBS Purchases,Jul,--,--,--,--,1.76991,AMSPPACE Index
+07/30/2014 14:00,US,842),,FOMC Rate Decision,30-Jul,--,--,--,--,97.3451,FDTR Index
+07/31/2014 07:30,US,843),,Challenger Job Cuts YoY,Jul,--,--,--,--,32.7434,CHALYOY% Index
+07/31/2014 07:30,US,844),,RBC Consumer Outlook Index,Aug,--,--,--,--,13.2743,ICSHNATL Index
+07/31/2014 08:30,US,845),,Employment Cost Index,2Q,--,--,--,--,71.6814,ECI SA% Index
+07/31/2014 08:30,US,846),,Initial Jobless Claims,26-Jul,--,--,--,--,98.2301,INJCJC Index
+07/31/2014 08:30,US,847),,Continuing Claims,19-Jul,--,--,--,--,68.7611,INJCSP Index
+07/31/2014 09:00,US,848),,ISM Milwaukee,Jul,--,--,--,--,30.0885,MAPMINDX Index
+07/31/2014 09:45,US,849),,Chicago Purchasing Manager,Jul,--,--,--,--,79.646,CHPMINDX Index
+07/31/2014 09:45,US,850),,Bloomberg Consumer Comfort,27-Jul,--,--,--,--,63.7168,COMFCOMF Index
+08/01/2014 08:30,US,851),,Two-Month Payroll Net Revision,Jul,--,--,--,--,4.42478,ECONGECC Index
+08/01/2014 08:30,US,852),,Change in Nonfarm Payrolls,Jul,--,--,--,--,99.115,NFP TCH Index
+08/01/2014 08:30,US,853),,Change in Private Payrolls,Jul,--,--,--,--,23.0088,NFP PCH Index
+08/01/2014 08:30,US,854),,Change in Manufact. Payrolls,Jul,--,--,--,--,69.3805,USMMMNCH Index
+08/01/2014 08:30,US,855),,Unemployment Rate,Jul,--,--,--,--,89.2035,USURTOT Index
+08/01/2014 08:30,US,856),,Average Hourly Earnings MoM,Jul,--,--,--,--,19.469,AHE MOM% Index
+08/01/2014 08:30,US,857),,Average Hourly Earnings YoY,Jul,--,--,--,--,17.6991,AHE YOY% Index
+08/01/2014 08:30,US,858),,Average Weekly Hours All Employees,Jul,--,--,--,--,18.5841,AWH TOTL Index
+08/01/2014 08:30,US,859),,Change in Household Employment,Jul,--,--,--,--,14.1593,USEMNCHG Index
+08/01/2014 08:30,US,860),,Underemployment Rate,Jul,--,--,--,--,12.3894,USUDMAER Index
+08/01/2014 08:30,US,861),,Personal Income,Jun,--,--,--,--,84.9558,PITLCHNG Index
+08/01/2014 08:30,US,862),,Personal Spending,Jun,--,--,--,--,84.9558,PCE CRCH Index
+08/01/2014 08:30,US,863),,PCE Deflator MoM,Jun,--,--,--,--,7.07965,PCE DEFM Index
+08/01/2014 08:30,US,864),,PCE Deflator YoY,Jun,--,--,--,--,34.5133,PCE DEFY Index
+08/01/2014 08:30,US,865),,PCE Core MoM,Jun,--,--,--,--,59.469,PCE CMOM Index
+08/01/2014 08:30,US,866),,PCE Core YoY,Jun,--,--,--,--,37.1681,PCE CYOY Index
+08/01/2014 08:58,US,867),,Markit US PMI Final,Jul,--,--,--,--,7.9646,ECONMUSF Index
+08/01/2014 09:55,US,868),,Univ. of Michigan Confidence,Jul F,--,--,--,--,92.9204,CONSSENT Index
+08/01/2014 10:00,US,869),,ISM Manufacturing,Jul,--,--,--,--,94.6903,NAPMPMI Index
+08/01/2014 10:00,US,870),,ISM Prices Paid,Jul,--,--,--,--,69.9115,NAPMPRIC Index
+08/01/2014 10:00,US,871),,Construction Spending MoM,Jun,--,--,--,--,77.8761,CNSTTMOM Index
+08/01/2014 15:00,US,872),,Labor Force Participation Rate,Jul,--,--,--,--,0.884956,PRUSTOT Index
+08/01/2014,US,873),,Domestic Vehicle Sales,Jul,--,--,--,--,33.6283,SAARDTOT Index
+08/01/2014,US,874),,Total Vehicle Sales,Jul,--,--,--,--,40.708,SAARTOTL Index
+08/04/2014 09:45,US,875),,ISM New York,Jul,--,--,--,--,10.6195,NYPMCURR Index
+08/05/2014 10:00,US,876),,IBD/TIPP Economic Optimism,Aug,--,--,--,--,15.0442,ECONUSIB Index
+08/05/2014 10:00,US,877),,ISM Non-Manf. Composite,Jul,--,--,--,--,73.4513,NAPMNMI Index
+08/05/2014 10:00,US,878),,Factory Orders,Jun,--,--,--,--,84.0708,TMNOCHNG Index
+08/06/2014 07:00,US,879),,MBA Mortgage Applications,1-Aug,--,--,--,--,92.3077,MBAVCHNG Index
+08/06/2014 08:30,US,880),,Trade Balance,Jun,--,--,--,--,82.3009,USTBTOT Index
+08/07/2014 08:30,US,881),,Initial Jobless Claims,2-Aug,--,--,--,--,98.2301,INJCJC Index
+08/07/2014 08:30,US,882),,Continuing Claims,26-Jul,--,--,--,--,68.7611,INJCSP Index
+08/07/2014 09:45,US,883),,Bloomberg Consumer Comfort,3-Aug,--,--,--,--,63.7168,COMFCOMF Index
+08/07/2014 15:00,US,884),,Consumer Credit,Jun,--,--,--,--,39.823,CICRTOT Index
+08/08/2014 08:30,US,885),,Unit Labor Costs,2Q P,--,--,--,--,31.8584,COSTNFR% Index
+08/08/2014 08:30,US,886),,Nonfarm Productivity,2Q P,--,--,--,--,38.9381,PRODNFR% Index
+08/08/2014 10:00,US,887),,Wholesale Trade Sales MoM,Jun,--,--,--,--,2.65487,MWSLCHNG Index
+08/08/2014 10:00,US,888),,Wholesale Inventories MoM,Jun,--,--,--,--,78.7611,MWINCHNG Index
+08/11/2014 08/15,US,889),,Mortgage Delinquencies,2Q,--,--,--,--,28.3186,DLQTDLQT Index
+08/11/2014 08/15,US,890),,MBA Mortgage Foreclosures,2Q,--,--,--,--,16.8142,FORLTOTL Index
+08/12/2014 07:30,US,891),,NFIB Small Business Optimism,Jul,--,--,--,--,58.4071,SBOITOTL Index
+08/12/2014 10:00,US,892),,JOLTs Job Openings,Jun,--,--,--,--,15.9292,JOLTTOTL Index
+08/12/2014 14:00,US,893),,Monthly Budget Statement,Jul,--,--,--,--,74.3363,FDDSSD Index
+08/13/2014 07:00,US,894),,MBA Mortgage Applications,8-Aug,--,--,--,--,92.3077,MBAVCHNG Index
+08/13/2014 08:30,US,895),,Retail Sales Advance MoM,Jul,--,--,--,--,89.3805,RSTAMOM Index
+08/13/2014 08:30,US,896),,Retail Sales Ex Auto MoM,Jul,--,--,--,--,62.5664,RSTAXMOM Index
+08/13/2014 08:30,US,897),,Retail Sales Ex Auto and Gas,Jul,--,--,--,--,60.177,RSTAXAG% Index
+08/13/2014 08:30,US,898),,Retail Sales Control Group,Jul,--,--,--,--,9.73451,RSTAXAGM Index
+08/13/2014 10:00,US,899),,Business Inventories,Jun,--,--,--,--,38.0531,MTIBCHNG Index
+08/14/2014 08:30,US,900),,Initial Jobless Claims,9-Aug,--,--,--,--,98.2301,INJCJC Index
+08/14/2014 08:30,US,901),,Continuing Claims,2-Aug,--,--,--,--,68.7611,INJCSP Index
+08/14/2014 08:30,US,902),,Import Price Index MoM,Jul,--,--,--,--,76.9912,IMP1CHNG Index
+08/14/2014 08:30,US,903),,Import Price Index YoY,Jul,--,--,--,--,29.2035,IMP1YOY% Index
+08/14/2014 09:45,US,904),,Bloomberg Consumer Comfort,10-Aug,--,--,--,--,63.7168,COMFCOMF Index
+08/15/2014 08:30,US,905),,Empire Manufacturing,Aug,--,--,--,--,81.4159,EMPRGBCI Index
+08/15/2014 08:30,US,906),,PPI MoM,Jul,--,--,--,--,85.8407,PPI CHNG Index
+08/15/2014 08:30,US,907),,PPI Ex Food and Energy MoM,Jul,--,--,--,--,68.6726,PXFECHNG Index
+08/15/2014 08:30,US,908),,PPI YoY,Jul,--,--,--,--,68.1416,PPI YOY Index
+08/15/2014 08:30,US,909),,PPI Ex Food and Energy YoY,Jul,--,--,--,--,66.3717,PPI XYOY Index
+08/15/2014 09:00,US,910),,Total Net TIC Flows,Jun,--,--,--,--,65.4867,FRNTTNET Index
+08/15/2014 09:00,US,911),,Net Long-term TIC Flows,Jun,--,--,--,--,72.5664,FRNTTOTL Index
+08/15/2014 09:15,US,912),,Industrial Production MoM,Jul,--,--,--,--,86.7257,IP CHNG Index
+08/15/2014 09:15,US,913),,Capacity Utilization,Jul,--,--,--,--,60.708,CPTICHNG Index
+08/15/2014 09:15,US,914),,Manufacturing (SIC) Production,Jul,--,--,--,--,6.19469,IPMGCHNG Index
+08/15/2014 09:55,US,915),,Univ. of Michigan Confidence,Aug P,--,--,--,--,92.9204,CONSSENT Index
+08/18/2014 10:00,US,916),,NAHB Housing Market Index,Aug,--,--,--,--,41.5929,USHBMIDX Index
+08/19/2014 08:30,US,917),,CPI MoM,Jul,--,--,--,--,93.8053,CPI CHNG Index
+08/19/2014 08:30,US,918),,CPI Ex Food and Energy MoM,Jul,--,--,--,--,75.0442,CPUPXCHG Index
+08/19/2014 08:30,US,919),,Housing Starts,Jul,--,--,--,--,88.4956,NHSPSTOT Index
+08/19/2014 08:30,US,920),,CPI YoY,Jul,--,--,--,--,57.5221,CPI YOY Index
+08/19/2014 08:30,US,921),,Housing Starts MoM,Jul,--,--,--,--,22.1239,NHCHSTCH Index
+08/19/2014 08:30,US,922),,CPI Ex Food and Energy YoY,Jul,--,--,--,--,46.0177,CPI XYOY Index
+08/19/2014 08:30,US,923),,Building Permits,Jul,--,--,--,--,61.9469,NHSPATOT Index
+08/19/2014 08:30,US,924),,CPI Core Index SA,Jul,--,--,--,--,35.3982,CPUPAXFE Index
+08/19/2014 08:30,US,925),,Building Permits MoM,Jul,--,--,--,--,20.354,NHCHATCH Index
+08/19/2014 08:30,US,926),,CPI Index NSA,Jul,--,--,--,--,30.9735,CPURNSA Index
+08/20/2014 07:00,US,927),,MBA Mortgage Applications,15-Aug,--,--,--,--,92.3077,MBAVCHNG Index
+08/20/2014 14:00,US,928),,Fed Releases Minutes from July 29-30 FOMC Meeting,,,,,,0,
+08/21/2014 08:30,US,929),,Initial Jobless Claims,16-Aug,--,--,--,--,98.2301,INJCJC Index
+08/21/2014 08:30,US,930),,Continuing Claims,9-Aug,--,--,--,--,68.7611,INJCSP Index
+08/21/2014 08:58,US,931),,Markit US PMI Preliminary,Aug,--,--,--,--,8.84956,ECONMUS Index
+08/21/2014 09:45,US,932),,Bloomberg Economic Expectations,Aug,--,--,--,--,25.6637,COMFBTWR Index
+08/21/2014 09:45,US,933),,Bloomberg Consumer Comfort,17-Aug,--,--,--,--,63.7168,COMFCOMF Index
+08/21/2014 10:00,US,934),,Philadelphia Fed Business Outlook,Aug,--,--,--,--,76.1062,OUTFGAF Index
+08/21/2014 10:00,US,935),,Existing Home Sales MoM,Jul,--,--,--,--,49.5575,ETSLMOM Index
+08/21/2014 10:00,US,936),,Existing Home Sales,Jul,--,--,--,--,87.6106,ETSLTOTL Index
+08/21/2014 10:00,US,937),,Leading Index,Jul,--,--,--,--,83.1858,LEI CHNG Index
+08/25/2014 08:30,US,938),,Chicago Fed Nat Activity Index,Jul,--,--,--,--,61.0619,CFNAI Index
+08/25/2014 10:00,US,939),,New Home Sales MoM,Jul,--,--,--,--,47.7876,NHSLCHNG Index
+08/25/2014 10:00,US,940),,New Home Sales,Jul,--,--,--,--,90.2655,NHSLTOT Index
+08/25/2014 10:30,US,941),,Dallas Fed Manf. Activity,Aug,--,--,--,--,62.8319,DFEDGBA Index
+08/26/2014 08:30,US,942),,Durable Goods Orders,Jul,--,--,--,--,91.1504,DGNOCHNG Index
+08/26/2014 08:30,US,943),,Durables Ex Transportation,Jul,--,--,--,--,72.9204,DGNOXTCH Index
+08/26/2014 08:30,US,944),,Cap Goods Orders Nondef Ex Air,Jul,--,--,--,--,56.6372,CGNOXAI% Index
+08/26/2014 08:30,US,945),,Cap Goods Ship Nondef Ex Air,Jul,--,--,--,--,55.7522,CGSHXAI% Index
+08/26/2014 09:00,US,946),,House Price Index MoM,Jun,--,--,--,--,67.2566,HPIMMOM% Index
+08/26/2014 09:00,US,947),,House Price Purchase Index QoQ,2Q,--,--,--,--,24.7788,HPI PURQ Index
+08/26/2014 09:00,US,948),,S&P/CS 20 City MoM SA,Jul,--,--,--,--,21.2389,SPCS20SM Index
+08/26/2014 09:00,US,949),,S&P/CS Composite-20 YoY,Jul,--,--,--,--,46.9027,SPCS20Y% Index
+08/26/2014 09:00,US,950),,S&P/CaseShiller Home Price Index NSA,Jul,--,--,--,--,53.9823,SPCS20 Index
+08/26/2014 10:00,US,951),,Consumer Confidence Index,Aug,--,--,--,--,95.5752,CONCCONF Index
+08/26/2014 10:00,US,952),,Richmond Fed Manufact. Index,Aug,--,--,--,--,69.0265,RCHSINDX Index
+08/27/2014 07:00,US,953),,MBA Mortgage Applications,22-Aug,--,--,--,--,92.3077,MBAVCHNG Index
+08/28/2014 08:30,US,954),,GDP Annualized QoQ,2Q S,--,--,--,--,96.4602,GDP CQOQ Index
+08/28/2014 08:30,US,955),,GDP Price Index,2Q S,--,--,--,--,77.1681,GDP PIQQ Index
+08/28/2014 08:30,US,956),,Core PCE QoQ,2Q S,--,--,--,--,67.5221,GDPCPCEC Index
+08/28/2014 08:30,US,957),,Personal Consumption,2Q S,--,--,--,--,67.5221,GDPCTOT% Index
+08/28/2014 08:30,US,958),,Initial Jobless Claims,23-Aug,--,--,--,--,98.2301,INJCJC Index
+08/28/2014 08:30,US,959),,Continuing Claims,16-Aug,--,--,--,--,68.7611,INJCSP Index
+08/28/2014 09:45,US,960),,Bloomberg Consumer Comfort,24-Aug,--,--,--,--,63.7168,COMFCOMF Index
+08/28/2014 10:00,US,961),,Pending Home Sales MoM,Jul,--,--,--,--,75.2212,USPHTMOM Index
+08/28/2014 10:00,US,962),,Pending Home Sales YoY,Jul,--,--,--,--,23.8938,USPHTYOY Index
+08/28/2014 11:00,US,963),,Kansas City Fed Manf. Activity,Aug,--,--,--,--,11.5044,KCLSSACI Index
+08/29/2014 08:30,US,964),,Personal Income,Jul,--,--,--,--,84.9558,PITLCHNG Index
+08/29/2014 08:30,US,965),,Personal Spending,Jul,--,--,--,--,84.9558,PCE CRCH Index
+08/29/2014 08:30,US,966),,PCE Deflator MoM,Jul,--,--,--,--,7.07965,PCE DEFM Index
+08/29/2014 08:30,US,967),,PCE Deflator YoY,Jul,--,--,--,--,34.5133,PCE DEFY Index
+08/29/2014 08:30,US,968),,PCE Core MoM,Jul,--,--,--,--,59.469,PCE CMOM Index
+08/29/2014 08:30,US,969),,PCE Core YoY,Jul,--,--,--,--,37.1681,PCE CYOY Index
+08/29/2014 09:00,US,970),,ISM Milwaukee,Aug,--,--,--,--,30.0885,MAPMINDX Index
+08/29/2014 09:45,US,971),,Chicago Purchasing Manager,Aug,--,--,--,--,79.646,CHPMINDX Index
+08/29/2014 09:55,US,972),,Univ. of Michigan Confidence,Aug F,--,--,--,--,92.9204,CONSSENT Index
+09/02/2014 08:58,US,973),,Markit US PMI Final,Aug,--,--,--,--,7.9646,ECONMUSF Index
+09/02/2014 10:00,US,974),,IBD/TIPP Economic Optimism,Sep,--,--,--,--,15.0442,ECONUSIB Index
+09/02/2014 10:00,US,975),,ISM Manufacturing,Aug,--,--,--,--,94.6903,NAPMPMI Index
+09/02/2014 10:00,US,976),,ISM Prices Paid,Aug,--,--,--,--,69.9115,NAPMPRIC Index
+09/02/2014 10:00,US,977),,Construction Spending MoM,Jul,--,--,--,--,77.8761,CNSTTMOM Index
+09/03/2014 07:00,US,978),,MBA Mortgage Applications,29-Aug,--,--,--,--,92.3077,MBAVCHNG Index
+09/03/2014 09:45,US,979),,ISM New York,Aug,--,--,--,--,10.6195,NYPMCURR Index
+09/03/2014 10:00,US,980),,Factory Orders,Jul,--,--,--,--,84.0708,TMNOCHNG Index
+09/03/2014 14:00,US,981),,U.S. Federal Reserve Releases Beige Book Report,,,,,,0,
+09/03/2014,US,982),,Domestic Vehicle Sales,Aug,--,--,--,--,33.6283,SAARDTOT Index
+09/03/2014,US,983),,Total Vehicle Sales,Aug,--,--,--,--,40.708,SAARTOTL Index
+09/04/2014 07:30,US,984),,Challenger Job Cuts YoY,Aug,--,--,--,--,32.7434,CHALYOY% Index
+09/04/2014 07:30,US,985),,RBC Consumer Outlook Index,Sep,--,--,--,--,13.2743,ICSHNATL Index
+09/04/2014 08:15,US,986),,ADP Employment Change,Aug,--,--,--,--,80.531,ADP CHNG Index
+09/04/2014 08:30,US,987),,Unit Labor Costs,2Q F,--,--,--,--,31.8584,COSTNFR% Index
+09/04/2014 08:30,US,988),,Nonfarm Productivity,2Q F,--,--,--,--,38.9381,PRODNFR% Index
+09/04/2014 08:30,US,989),,Initial Jobless Claims,30-Aug,--,--,--,--,98.2301,INJCJC Index
+09/04/2014 08:30,US,990),,Continuing Claims,23-Aug,--,--,--,--,68.7611,INJCSP Index
+09/04/2014 08:30,US,991),,Trade Balance,Jul,--,--,--,--,82.3009,USTBTOT Index
+09/04/2014 09:45,US,992),,Bloomberg Consumer Comfort,31-Aug,--,--,--,--,63.7168,COMFCOMF Index
+09/04/2014 10:00,US,993),,ISM Non-Manf. Composite,Aug,--,--,--,--,73.4513,NAPMNMI Index
+09/04/2014 09/08,US,994),,Household Change in Net Worth,2Q,--,--,--,--,5.30973,NWORCHNG Index
+09/05/2014 08:30,US,995),,Two-Month Payroll Net Revision,Aug,--,--,--,--,4.42478,ECONGECC Index
+09/05/2014 08:30,US,996),,Change in Nonfarm Payrolls,Aug,--,--,--,--,99.115,NFP TCH Index
+09/05/2014 08:30,US,997),,Change in Private Payrolls,Aug,--,--,--,--,23.0088,NFP PCH Index
+09/05/2014 08:30,US,998),,Change in Manufact. Payrolls,Aug,--,--,--,--,69.3805,USMMMNCH Index
+09/05/2014 08:30,US,999),,Unemployment Rate,Aug,--,--,--,--,89.2035,USURTOT Index
+09/05/2014 08:30,US,1000),,Average Hourly Earnings MoM,Aug,--,--,--,--,19.469,AHE MOM% Index
+09/05/2014 08:30,US,1001),,Average Hourly Earnings YoY,Aug,--,--,--,--,17.6991,AHE YOY% Index
+09/05/2014 08:30,US,1002),,Average Weekly Hours All Employees,Aug,--,--,--,--,18.5841,AWH TOTL Index
+09/05/2014 08:30,US,1003),,Change in Household Employment,Aug,--,--,--,--,14.1593,USEMNCHG Index
+09/05/2014 08:30,US,1004),,Underemployment Rate,Aug,--,--,--,--,12.3894,USUDMAER Index
+09/05/2014 15:00,US,1005),,Labor Force Participation Rate,Aug,--,--,--,--,0.884956,PRUSTOT Index
+09/08/2014 15:00,US,1006),,Consumer Credit,Jul,--,--,--,--,39.823,CICRTOT Index
+09/09/2014 07:30,US,1007),,NFIB Small Business Optimism,Aug,--,--,--,--,58.4071,SBOITOTL Index
+09/09/2014 10:00,US,1008),,JOLTs Job Openings,Jul,--,--,--,--,15.9292,JOLTTOTL Index
+09/10/2014 07:00,US,1009),,MBA Mortgage Applications,5-Sep,--,--,--,--,92.3077,MBAVCHNG Index
+09/10/2014 10:00,US,1010),,Wholesale Trade Sales MoM,Jul,--,--,--,--,2.65487,MWSLCHNG Index
+09/10/2014 10:00,US,1011),,Wholesale Inventories MoM,Jul,--,--,--,--,78.7611,MWINCHNG Index
+09/11/2014 08:30,US,1012),,Initial Jobless Claims,6-Sep,--,--,--,--,98.2301,INJCJC Index
+09/11/2014 08:30,US,1013),,Continuing Claims,30-Aug,--,--,--,--,68.7611,INJCSP Index
+09/11/2014 09:45,US,1014),,Bloomberg Consumer Comfort,7-Sep,--,--,--,--,63.7168,COMFCOMF Index
+09/11/2014 14:00,US,1015),,Monthly Budget Statement,Aug,--,--,--,--,74.3363,FDDSSD Index
+09/12/2014 08:30,US,1016),,Retail Sales Advance MoM,Aug,--,--,--,--,89.3805,RSTAMOM Index
+09/12/2014 08:30,US,1017),,Retail Sales Ex Auto MoM,Aug,--,--,--,--,62.5664,RSTAXMOM Index
+09/12/2014 08:30,US,1018),,Retail Sales Ex Auto and Gas,Aug,--,--,--,--,60.177,RSTAXAG% Index
+09/12/2014 08:30,US,1019),,Retail Sales Control Group,Aug,--,--,--,--,9.73451,RSTAXAGM Index
+09/12/2014 08:30,US,1020),,Import Price Index MoM,Aug,--,--,--,--,76.9912,IMP1CHNG Index
+09/12/2014 08:30,US,1021),,Import Price Index YoY,Aug,--,--,--,--,29.2035,IMP1YOY% Index
+09/12/2014 09:55,US,1022),,Univ. of Michigan Confidence,Sep P,--,--,--,--,92.9204,CONSSENT Index
+09/12/2014 10:00,US,1023),,Business Inventories,Jul,--,--,--,--,38.0531,MTIBCHNG Index
+09/15/2014 08:30,US,1024),,Empire Manufacturing,Sep,--,--,--,--,81.4159,EMPRGBCI Index
+09/15/2014 09:15,US,1025),,Industrial Production MoM,Aug,--,--,--,--,86.7257,IP CHNG Index
+09/15/2014 09:15,US,1026),,Capacity Utilization,Aug,--,--,--,--,60.708,CPTICHNG Index
+09/15/2014 09:15,US,1027),,Manufacturing (SIC) Production,Aug,--,--,--,--,6.19469,IPMGCHNG Index
+09/16/2014 08:30,US,1028),,PPI MoM,Aug,--,--,--,--,85.8407,PPI CHNG Index
+09/16/2014 08:30,US,1029),,PPI Ex Food and Energy MoM,Aug,--,--,--,--,68.6726,PXFECHNG Index
+09/16/2014 08:30,US,1030),,PPI YoY,Aug,--,--,--,--,68.1416,PPI YOY Index
+09/16/2014 08:30,US,1031),,PPI Ex Food and Energy YoY,Aug,--,--,--,--,66.3717,PPI XYOY Index
+09/16/2014 09:00,US,1032),,Total Net TIC Flows,Jul,--,--,--,--,65.4867,FRNTTNET Index
+09/16/2014 09:00,US,1033),,Net Long-term TIC Flows,Jul,--,--,--,--,72.5664,FRNTTOTL Index
+09/17/2014 07:00,US,1034),,MBA Mortgage Applications,12-Sep,--,--,--,--,92.3077,MBAVCHNG Index
+09/17/2014 08:30,US,1035),,CPI MoM,Aug,--,--,--,--,93.8053,CPI CHNG Index
+09/17/2014 08:30,US,1036),,CPI Ex Food and Energy MoM,Aug,--,--,--,--,75.0442,CPUPXCHG Index
+09/17/2014 08:30,US,1037),,CPI YoY,Aug,--,--,--,--,57.5221,CPI YOY Index
+09/17/2014 08:30,US,1038),,CPI Ex Food and Energy YoY,Aug,--,--,--,--,46.0177,CPI XYOY Index
+09/17/2014 08:30,US,1039),,CPI Core Index SA,Aug,--,--,--,--,35.3982,CPUPAXFE Index
+09/17/2014 08:30,US,1040),,CPI Index NSA,Aug,--,--,--,--,30.9735,CPURNSA Index
+09/17/2014 08:30,US,1041),,Current Account Balance,2Q,--,--,--,--,70.7965,USCABAL Index
+09/17/2014 10:00,US,1042),,NAHB Housing Market Index,Sep,--,--,--,--,41.5929,USHBMIDX Index
+09/17/2014 14:00,US,1043),,Fed QE3 Pace,Sep,--,--,--,--,0,TREFAMSP Index
+09/17/2014 14:00,US,1044),,Fed Pace of Treasury Pur,Sep,--,--,--,--,3.53982,TREFPACE Index
+09/17/2014 14:00,US,1045),,Fed Pace of MBS Purchases,Sep,--,--,--,--,1.76991,AMSPPACE Index
+09/17/2014 14:00,US,1046),,FOMC Rate Decision,17-Sep,--,--,--,--,97.3451,FDTR Index
+09/18/2014 08:30,US,1047),,Housing Starts,Aug,--,--,--,--,88.4956,NHSPSTOT Index
+09/18/2014 08:30,US,1048),,Housing Starts MoM,Aug,--,--,--,--,22.1239,NHCHSTCH Index
+09/18/2014 08:30,US,1049),,Building Permits,Aug,--,--,--,--,61.9469,NHSPATOT Index
+09/18/2014 08:30,US,1050),,Initial Jobless Claims,13-Sep,--,--,--,--,98.2301,INJCJC Index
+09/18/2014 08:30,US,1051),,Building Permits MoM,Aug,--,--,--,--,20.354,NHCHATCH Index
+09/18/2014 08:30,US,1052),,Continuing Claims,6-Sep,--,--,--,--,68.7611,INJCSP Index
+09/18/2014 09:45,US,1053),,Bloomberg Economic Expectations,Sep,--,--,--,--,25.6637,COMFBTWR Index
+09/18/2014 09:45,US,1054),,Bloomberg Consumer Comfort,14-Sep,--,--,--,--,63.7168,COMFCOMF Index
+09/18/2014 10:00,US,1055),,Philadelphia Fed Business Outlook,Sep,--,--,--,--,76.1062,OUTFGAF Index
+09/19/2014 10:00,US,1056),,Leading Index,Aug,--,--,--,--,83.1858,LEI CHNG Index
+09/22/2014 08:30,US,1057),,Chicago Fed Nat Activity Index,Aug,--,--,--,--,61.0619,CFNAI Index
+09/22/2014 10:00,US,1058),,Existing Home Sales MoM,Aug,--,--,--,--,49.5575,ETSLMOM Index
+09/22/2014 10:00,US,1059),,Existing Home Sales,Aug,--,--,--,--,87.6106,ETSLTOTL Index
+09/23/2014 08:58,US,1060),,Markit US PMI Preliminary,Sep,--,--,--,--,8.84956,ECONMUS Index
+09/23/2014 09:00,US,1061),,House Price Index MoM,Jul,--,--,--,--,67.2566,HPIMMOM% Index
+09/23/2014 10:00,US,1062),,Richmond Fed Manufact. Index,Sep,--,--,--,--,69.0265,RCHSINDX Index
+09/24/2014 07:00,US,1063),,MBA Mortgage Applications,19-Sep,--,--,--,--,92.3077,MBAVCHNG Index
+09/24/2014 10:00,US,1064),,New Home Sales MoM,Aug,--,--,--,--,47.7876,NHSLCHNG Index
+09/24/2014 10:00,US,1065),,New Home Sales,Aug,--,--,--,--,90.2655,NHSLTOT Index
+09/25/2014 08:30,US,1066),,Durable Goods Orders,Aug,--,--,--,--,91.1504,DGNOCHNG Index
+09/25/2014 08:30,US,1067),,Durables Ex Transportation,Aug,--,--,--,--,72.9204,DGNOXTCH Index
+09/25/2014 08:30,US,1068),,Cap Goods Orders Nondef Ex Air,Aug,--,--,--,--,56.6372,CGNOXAI% Index
+09/25/2014 08:30,US,1069),,Initial Jobless Claims,20-Sep,--,--,--,--,98.2301,INJCJC Index
+09/25/2014 08:30,US,1070),,Cap Goods Ship Nondef Ex Air,Aug,--,--,--,--,55.7522,CGSHXAI% Index
+09/25/2014 08:30,US,1071),,Continuing Claims,13-Sep,--,--,--,--,68.7611,INJCSP Index
+09/25/2014 09:45,US,1072),,Bloomberg Consumer Comfort,21-Sep,--,--,--,--,63.7168,COMFCOMF Index
+09/25/2014 11:00,US,1073),,Kansas City Fed Manf. Activity,Sep,--,--,--,--,11.5044,KCLSSACI Index
+09/26/2014 08:30,US,1074),,GDP Annualized QoQ,2Q T,--,--,--,--,96.4602,GDP CQOQ Index
+09/26/2014 08:30,US,1075),,GDP Price Index,2Q T,--,--,--,--,77.1681,GDP PIQQ Index
+09/26/2014 08:30,US,1076),,Core PCE QoQ,2Q T,--,--,--,--,67.5221,GDPCPCEC Index
+09/26/2014 08:30,US,1077),,Personal Consumption,2Q T,--,--,--,--,67.5221,GDPCTOT% Index
+09/26/2014 09:55,US,1078),,Univ. of Michigan Confidence,Sep F,--,--,--,--,92.9204,CONSSENT Index
+09/29/2014 08:30,US,1079),,Personal Income,Aug,--,--,--,--,84.9558,PITLCHNG Index
+09/29/2014 08:30,US,1080),,Personal Spending,Aug,--,--,--,--,84.9558,PCE CRCH Index
+09/29/2014 08:30,US,1081),,PCE Deflator MoM,Aug,--,--,--,--,7.07965,PCE DEFM Index
+09/29/2014 08:30,US,1082),,PCE Deflator YoY,Aug,--,--,--,--,34.5133,PCE DEFY Index
+09/29/2014 08:30,US,1083),,PCE Core MoM,Aug,--,--,--,--,59.469,PCE CMOM Index
+09/29/2014 08:30,US,1084),,PCE Core YoY,Aug,--,--,--,--,37.1681,PCE CYOY Index
+09/29/2014 10:00,US,1085),,Pending Home Sales MoM,Aug,--,--,--,--,75.2212,USPHTMOM Index
+09/29/2014 10:00,US,1086),,Pending Home Sales YoY,Aug,--,--,--,--,23.8938,USPHTYOY Index
+09/29/2014 10:30,US,1087),,Dallas Fed Manf. Activity,Sep,--,--,--,--,62.8319,DFEDGBA Index
+09/30/2014 09:00,US,1088),,ISM Milwaukee,Sep,--,--,--,--,30.0885,MAPMINDX Index
+09/30/2014 09:00,US,1089),,S&P/CS 20 City MoM SA,Aug,--,--,--,--,21.2389,SPCS20SM Index
+09/30/2014 09:00,US,1090),,S&P/CS Composite-20 YoY,Aug,--,--,--,--,46.9027,SPCS20Y% Index
+09/30/2014 09:00,US,1091),,S&P/CaseShiller Home Price Index NSA,Aug,--,--,--,--,53.9823,SPCS20 Index
+09/30/2014 09:45,US,1092),,Chicago Purchasing Manager,Sep,--,--,--,--,79.646,CHPMINDX Index
+09/30/2014 10:00,US,1093),,Consumer Confidence Index,Sep,--,--,--,--,95.5752,CONCCONF Index
+10/01/2014 07:00,US,1094),,MBA Mortgage Applications,26-Sep,--,--,--,--,92.3077,MBAVCHNG Index
+10/01/2014 08:15,US,1095),,ADP Employment Change,Sep,--,--,--,--,80.531,ADP CHNG Index
+10/01/2014 08:58,US,1096),,Markit US PMI Final,Sep,--,--,--,--,7.9646,ECONMUSF Index
+10/01/2014 10:00,US,1097),,ISM Manufacturing,Sep,--,--,--,--,94.6903,NAPMPMI Index
+10/01/2014 10:00,US,1098),,ISM Prices Paid,Sep,--,--,--,--,69.9115,NAPMPRIC Index
+10/01/2014 10:00,US,1099),,Construction Spending MoM,Aug,--,--,--,--,77.8761,CNSTTMOM Index
+10/01/2014,US,1100),,Domestic Vehicle Sales,Sep,--,--,--,--,33.6283,SAARDTOT Index
+10/01/2014,US,1101),,Total Vehicle Sales,Sep,--,--,--,--,40.708,SAARTOTL Index
+10/02/2014 07:30,US,1102),,Challenger Job Cuts YoY,Sep,--,--,--,--,32.7434,CHALYOY% Index
+10/02/2014 07:30,US,1103),,RBC Consumer Outlook Index,Oct,--,--,--,--,13.2743,ICSHNATL Index
+10/02/2014 08:30,US,1104),,Initial Jobless Claims,27-Sep,--,--,--,--,98.2301,INJCJC Index
+10/02/2014 08:30,US,1105),,Continuing Claims,20-Sep,--,--,--,--,68.7611,INJCSP Index
+10/02/2014 09:45,US,1106),,Bloomberg Consumer Comfort,28-Sep,--,--,--,--,63.7168,COMFCOMF Index
+10/02/2014 09:45,US,1107),,ISM New York,Sep,--,--,--,--,10.6195,NYPMCURR Index
+10/02/2014 10:00,US,1108),,Factory Orders,Aug,--,--,--,--,84.0708,TMNOCHNG Index
+10/03/2014 08:30,US,1109),,Two-Month Payroll Net Revision,Sep,--,--,--,--,4.42478,ECONGECC Index
+10/03/2014 08:30,US,1110),,Change in Nonfarm Payrolls,Sep,--,--,--,--,99.115,NFP TCH Index
+10/03/2014 08:30,US,1111),,Change in Private Payrolls,Sep,--,--,--,--,23.0088,NFP PCH Index
+10/03/2014 08:30,US,1112),,Change in Manufact. Payrolls,Sep,--,--,--,--,69.3805,USMMMNCH Index
+10/03/2014 08:30,US,1113),,Unemployment Rate,Oct,--,--,--,--,89.2035,USURTOT Index
+10/03/2014 08:30,US,1114),,Average Hourly Earnings MoM,Sep,--,--,--,--,19.469,AHE MOM% Index
+10/03/2014 08:30,US,1115),,Average Hourly Earnings YoY,Sep,--,--,--,--,17.6991,AHE YOY% Index
+10/03/2014 08:30,US,1116),,Average Weekly Hours All Employees,Sep,--,--,--,--,18.5841,AWH TOTL Index
+10/03/2014 08:30,US,1117),,Change in Household Employment,Sep,--,--,--,--,14.1593,USEMNCHG Index
+10/03/2014 08:30,US,1118),,Underemployment Rate,Sep,--,--,--,--,12.3894,USUDMAER Index
+10/03/2014 08:30,US,1119),,Trade Balance,Aug,--,--,--,--,82.3009,USTBTOT Index
+10/03/2014 10:00,US,1120),,ISM Non-Manf. Composite,Sep,--,--,--,--,73.4513,NAPMNMI Index
+10/03/2014 15:00,US,1121),,Labor Force Participation Rate,Sep,--,--,--,--,0.884956,PRUSTOT Index
+10/07/2014 10:00,US,1122),,IBD/TIPP Economic Optimism,Oct,--,--,--,--,15.0442,ECONUSIB Index
+10/07/2014 10:00,US,1123),,JOLTs Job Openings,Aug,--,--,--,--,15.9292,JOLTTOTL Index
+10/07/2014 15:00,US,1124),,Consumer Credit,Aug,--,--,--,--,39.823,CICRTOT Index
+10/08/2014 07:00,US,1125),,MBA Mortgage Applications,3-Oct,--,--,--,--,92.3077,MBAVCHNG Index
+10/08/2014 14:00,US,1126),,Fed Releases Minutes from Sept. 16-17 FOMC Meeting,,,,,,0,
+10/09/2014 08:30,US,1127),,Initial Jobless Claims,4-Oct,--,--,--,--,98.2301,INJCJC Index
+10/09/2014 08:30,US,1128),,Continuing Claims,27-Sep,--,--,--,--,68.7611,INJCSP Index
+10/09/2014 09:45,US,1129),,Bloomberg Consumer Comfort,5-Oct,--,--,--,--,63.7168,COMFCOMF Index
+10/09/2014 10:00,US,1130),,Wholesale Trade Sales MoM,Aug,--,--,--,--,2.65487,MWSLCHNG Index
+10/09/2014 10:00,US,1131),,Wholesale Inventories MoM,Aug,--,--,--,--,78.7611,MWINCHNG Index
+10/10/2014 08:30,US,1132),,Import Price Index MoM,Sep,--,--,--,--,76.9912,IMP1CHNG Index
+10/10/2014 08:30,US,1133),,Import Price Index YoY,Sep,--,--,--,--,29.2035,IMP1YOY% Index
+10/10/2014 14:00,US,1134),,Monthly Budget Statement,Sep,--,--,--,--,74.3363,FDDSSD Index
+10/14/2014 07:30,US,1135),,NFIB Small Business Optimism,Sep,--,--,--,--,58.4071,SBOITOTL Index
+10/15/2014 07:00,US,1136),,MBA Mortgage Applications,10-Oct,--,--,--,--,92.3077,MBAVCHNG Index
+10/15/2014 08:30,US,1137),,Empire Manufacturing,Oct,--,--,--,--,81.4159,EMPRGBCI Index
+10/15/2014 08:30,US,1138),,Retail Sales Advance MoM,Sep,--,--,--,--,89.3805,RSTAMOM Index
+10/15/2014 08:30,US,1139),,Retail Sales Ex Auto MoM,Sep,--,--,--,--,62.5664,RSTAXMOM Index
+10/15/2014 08:30,US,1140),,Retail Sales Ex Auto and Gas,Sep,--,--,--,--,60.177,RSTAXAG% Index
+10/15/2014 08:30,US,1141),,PPI MoM,Sep,--,--,--,--,85.8407,PPI CHNG Index
+10/15/2014 08:30,US,1142),,Retail Sales Control Group,Sep,--,--,--,--,9.73451,RSTAXAGM Index
+10/15/2014 08:30,US,1143),,PPI Ex Food and Energy MoM,Sep,--,--,--,--,68.6726,PXFECHNG Index
+10/15/2014 08:30,US,1144),,PPI YoY,Sep,--,--,--,--,68.1416,PPI YOY Index
+10/15/2014 08:30,US,1145),,PPI Ex Food and Energy YoY,Sep,--,--,--,--,66.3717,PPI XYOY Index
+10/15/2014 10:00,US,1146),,Business Inventories,Aug,--,--,--,--,38.0531,MTIBCHNG Index
+10/15/2014 14:00,US,1147),,U.S. Federal Reserve Releases Beige Book Report,,,,,,0,
+10/16/2014 08:30,US,1148),,Initial Jobless Claims,11-Oct,--,--,--,--,98.2301,INJCJC Index
+10/16/2014 08:30,US,1149),,Continuing Claims,4-Oct,--,--,--,--,68.7611,INJCSP Index
+10/16/2014 09:00,US,1150),,Total Net TIC Flows,Aug,--,--,--,--,65.4867,FRNTTNET Index
+10/16/2014 09:00,US,1151),,Net Long-term TIC Flows,Aug,--,--,--,--,72.5664,FRNTTOTL Index
+10/16/2014 09:15,US,1152),,Industrial Production MoM,Sep,--,--,--,--,86.7257,IP CHNG Index
+10/16/2014 09:15,US,1153),,Capacity Utilization,Sep,--,--,--,--,60.708,CPTICHNG Index
+10/16/2014 09:15,US,1154),,Manufacturing (SIC) Production,Sep,--,--,--,--,6.19469,IPMGCHNG Index
+10/16/2014 09:45,US,1155),,Bloomberg Economic Expectations,Oct,--,--,--,--,25.6637,COMFBTWR Index
+10/16/2014 09:45,US,1156),,Bloomberg Consumer Comfort,12-Oct,--,--,--,--,63.7168,COMFCOMF Index
+10/16/2014 10:00,US,1157),,Philadelphia Fed Business Outlook,Oct,--,--,--,--,76.1062,OUTFGAF Index
+10/16/2014 10:00,US,1158),,NAHB Housing Market Index,Oct,--,--,--,--,41.5929,USHBMIDX Index
+10/17/2014 08:30,US,1159),,Housing Starts,Sep,--,--,--,--,88.4956,NHSPSTOT Index
+10/17/2014 08:30,US,1160),,Housing Starts MoM,Sep,--,--,--,--,22.1239,NHCHSTCH Index
+10/17/2014 08:30,US,1161),,Building Permits,Sep,--,--,--,--,61.9469,NHSPATOT Index
+10/17/2014 08:30,US,1162),,Building Permits MoM,Sep,--,--,--,--,20.354,NHCHATCH Index
+10/17/2014 09:55,US,1163),,Univ. of Michigan Confidence,Oct P,--,--,--,--,92.9204,CONSSENT Index
+10/21/2014 10:00,US,1164),,Existing Home Sales MoM,Sep,--,--,--,--,49.5575,ETSLMOM Index
+10/21/2014 10:00,US,1165),,Existing Home Sales,Sep,--,--,--,--,87.6106,ETSLTOTL Index
+10/22/2014 07:00,US,1166),,MBA Mortgage Applications,17-Oct,--,--,--,--,92.3077,MBAVCHNG Index
+10/22/2014 08:30,US,1167),,CPI MoM,Sep,--,--,--,--,93.8053,CPI CHNG Index
+10/22/2014 08:30,US,1168),,CPI Ex Food and Energy MoM,Sep,--,--,--,--,75.0442,CPUPXCHG Index
+10/22/2014 08:30,US,1169),,CPI YoY,Sep,--,--,--,--,57.5221,CPI YOY Index
+10/22/2014 08:30,US,1170),,CPI Ex Food and Energy YoY,Sep,--,--,--,--,46.0177,CPI XYOY Index
+10/22/2014 08:30,US,1171),,CPI Core Index SA,Sep,--,--,--,--,35.3982,CPUPAXFE Index
+10/22/2014 08:30,US,1172),,CPI Index NSA,Sep,--,--,--,--,30.9735,CPURNSA Index
+10/23/2014 08:30,US,1173),,Chicago Fed Nat Activity Index,Sep,--,--,--,--,61.0619,CFNAI Index
+10/23/2014 08:30,US,1174),,Initial Jobless Claims,18-Oct,--,--,--,--,98.2301,INJCJC Index
+10/23/2014 08:30,US,1175),,Continuing Claims,11-Oct,--,--,--,--,68.7611,INJCSP Index
+10/23/2014 08:58,US,1176),,Markit US PMI Preliminary,Oct,--,--,--,--,8.84956,ECONMUS Index
+10/23/2014 09:00,US,1177),,House Price Index MoM,Aug,--,--,--,--,67.2566,HPIMMOM% Index
+10/23/2014 09:45,US,1178),,Bloomberg Consumer Comfort,19-Oct,--,--,--,--,63.7168,COMFCOMF Index
+10/23/2014 10:00,US,1179),,Leading Index,Sep,--,--,--,--,83.1858,LEI CHNG Index
+10/23/2014 11:00,US,1180),,Kansas City Fed Manf. Activity,Oct,--,--,--,--,11.5044,KCLSSACI Index
+10/24/2014 10:00,US,1181),,New Home Sales MoM,Sep,--,--,--,--,47.7876,NHSLCHNG Index
+10/24/2014 10:00,US,1182),,New Home Sales,Sep,--,--,--,--,90.2655,NHSLTOT Index
+10/27/2014 10:00,US,1183),,Pending Home Sales MoM,Sep,--,--,--,--,75.2212,USPHTMOM Index
+10/27/2014 10:00,US,1184),,Pending Home Sales YoY,Sep,--,--,--,--,23.8938,USPHTYOY Index
+10/27/2014 10:30,US,1185),,Dallas Fed Manf. Activity,Oct,--,--,--,--,62.8319,DFEDGBA Index
+10/28/2014 08:30,US,1186),,Durable Goods Orders,Sep,--,--,--,--,91.1504,DGNOCHNG Index
+10/28/2014 08:30,US,1187),,Durables Ex Transportation,Sep,--,--,--,--,72.9204,DGNOXTCH Index
+10/28/2014 08:30,US,1188),,Cap Goods Orders Nondef Ex Air,Sep,--,--,--,--,56.6372,CGNOXAI% Index
+10/28/2014 08:30,US,1189),,Cap Goods Ship Nondef Ex Air,Sep,--,--,--,--,55.7522,CGSHXAI% Index
+10/28/2014 09:00,US,1190),,S&P/CS 20 City MoM SA,Sep,--,--,--,--,21.2389,SPCS20SM Index
+10/28/2014 09:00,US,1191),,S&P/CS Composite-20 YoY,Sep,--,--,--,--,46.9027,SPCS20Y% Index
+10/28/2014 09:00,US,1192),,S&P/CaseShiller Home Price Index NSA,Sep,--,--,--,--,53.9823,SPCS20 Index
+10/28/2014 09:00,US,1193),,S&P/Case-Shiller US HPI NSA,3Q,--,--,--,--,26.5487,SPCSUSA Index
+10/28/2014 09:00,US,1194),,S&P/Case-Shiller US HPI YoY,3Q,--,--,--,--,27.4336,SPCSUSAY Index
+10/28/2014 10:00,US,1195),,Consumer Confidence Index,Oct,--,--,--,--,95.5752,CONCCONF Index
+10/28/2014 10:00,US,1196),,Richmond Fed Manufact. Index,Oct,--,--,--,--,69.0265,RCHSINDX Index
+10/29/2014 07:00,US,1197),,MBA Mortgage Applications,24-Oct,--,--,--,--,92.3077,MBAVCHNG Index
+10/29/2014 14:00,US,1198),,Fed QE3 Pace,Oct,--,--,--,--,0,TREFAMSP Index
+10/29/2014 14:00,US,1199),,Fed Pace of Treasury Pur,Oct,--,--,--,--,3.53982,TREFPACE Index
+10/29/2014 14:00,US,1200),,Fed Pace of MBS Purchases,Oct,--,--,--,--,1.76991,AMSPPACE Index
+10/29/2014 14:00,US,1201),,FOMC Rate Decision,29-Oct,--,--,--,--,97.3451,FDTR Index
+10/30/2014 08:30,US,1202),,GDP Annualized QoQ,3Q A,--,--,--,--,96.4602,GDP CQOQ Index
+10/30/2014 08:30,US,1203),,GDP Price Index,3Q A,--,--,--,--,77.1681,GDP PIQQ Index
+10/30/2014 08:30,US,1204),,Core PCE QoQ,3Q A,--,--,--,--,67.5221,GDPCPCEC Index
+10/30/2014 08:30,US,1205),,Personal Consumption,3Q A,--,--,--,--,67.5221,GDPCTOT% Index
+10/30/2014 08:30,US,1206),,Initial Jobless Claims,25-Oct,--,--,--,--,98.2301,INJCJC Index
+10/30/2014 08:30,US,1207),,Continuing Claims,18-Oct,--,--,--,--,68.7611,INJCSP Index
+10/30/2014 09:45,US,1208),,Bloomberg Consumer Comfort,26-Oct,--,--,--,--,63.7168,COMFCOMF Index
+10/31/2014 08:30,US,1209),,Employment Cost Index,3Q,--,--,--,--,71.6814,ECI SA% Index
+10/31/2014 08:30,US,1210),,Personal Income,Sep,--,--,--,--,84.9558,PITLCHNG Index
+10/31/2014 08:30,US,1211),,Personal Spending,Sep,--,--,--,--,84.9558,PCE CRCH Index
+10/31/2014 08:30,US,1212),,PCE Deflator MoM,Sep,--,--,--,--,7.07965,PCE DEFM Index
+10/31/2014 08:30,US,1213),,PCE Deflator YoY,Sep,--,--,--,--,34.5133,PCE DEFY Index
+10/31/2014 08:30,US,1214),,PCE Core MoM,Sep,--,--,--,--,59.469,PCE CMOM Index
+10/31/2014 08:30,US,1215),,PCE Core YoY,Sep,--,--,--,--,37.1681,PCE CYOY Index
+10/31/2014 09:00,US,1216),,ISM Milwaukee,Oct,--,--,--,--,30.0885,MAPMINDX Index
+10/31/2014 09:45,US,1217),,Chicago Purchasing Manager,Oct,--,--,--,--,79.646,CHPMINDX Index
+10/31/2014 09:55,US,1218),,Univ. of Michigan Confidence,Oct F,--,--,--,--,92.9204,CONSSENT Index
+11/03/2014 08:58,US,1219),,Markit US PMI Final,Oct,--,--,--,--,7.9646,ECONMUSF Index
+11/03/2014 10:00,US,1220),,ISM Manufacturing,Oct,--,--,--,--,94.6903,NAPMPMI Index
+11/03/2014 10:00,US,1221),,ISM Prices Paid,Oct,--,--,--,--,69.9115,NAPMPRIC Index
+11/03/2014 10:00,US,1222),,Construction Spending MoM,Sep,--,--,--,--,77.8761,CNSTTMOM Index
+11/03/2014,US,1223),,Domestic Vehicle Sales,Oct,--,--,--,--,33.6283,SAARDTOT Index
+11/03/2014,US,1224),,Total Vehicle Sales,Oct,--,--,--,--,40.708,SAARTOTL Index
+11/04/2014 08:30,US,1225),,Trade Balance,Sep,--,--,--,--,82.3009,USTBTOT Index
+11/04/2014 09:45,US,1226),,ISM New York,Oct,--,--,--,--,10.6195,NYPMCURR Index
+11/04/2014 10:00,US,1227),,IBD/TIPP Economic Optimism,Nov,--,--,--,--,15.0442,ECONUSIB Index
+11/04/2014 10:00,US,1228),,Factory Orders,Sep,--,--,--,--,84.0708,TMNOCHNG Index
+11/05/2014 07:00,US,1229),,MBA Mortgage Applications,31-Oct,--,--,--,--,92.3077,MBAVCHNG Index
+11/05/2014 08:15,US,1230),,ADP Employment Change,Oct,--,--,--,--,80.531,ADP CHNG Index
+11/05/2014 10:00,US,1231),,ISM Non-Manf. Composite,Oct,--,--,--,--,73.4513,NAPMNMI Index
+11/06/2014 07:30,US,1232),,Challenger Job Cuts YoY,Oct,--,--,--,--,32.7434,CHALYOY% Index
+11/06/2014 07:30,US,1233),,RBC Consumer Outlook Index,Nov,--,--,--,--,13.2743,ICSHNATL Index
+11/06/2014 08:30,US,1234),,Unit Labor Costs,3Q P,--,--,--,--,31.8584,COSTNFR% Index
+11/06/2014 08:30,US,1235),,Nonfarm Productivity,3Q P,--,--,--,--,38.9381,PRODNFR% Index
+11/06/2014 08:30,US,1236),,Initial Jobless Claims,1-Nov,--,--,--,--,98.2301,INJCJC Index
+11/06/2014 08:30,US,1237),,Continuing Claims,25-Oct,--,--,--,--,68.7611,INJCSP Index
+11/06/2014 09:45,US,1238),,Bloomberg Consumer Comfort,2-Nov,--,--,--,--,63.7168,COMFCOMF Index
+11/07/2014 08:30,US,1239),,Two-Month Payroll Net Revision,Oct,--,--,--,--,4.42478,ECONGECC Index
+11/07/2014 08:30,US,1240),,Change in Nonfarm Payrolls,Oct,--,--,--,--,99.115,NFP TCH Index
+11/07/2014 08:30,US,1241),,Change in Private Payrolls,Oct,--,--,--,--,23.0088,NFP PCH Index
+11/07/2014 08:30,US,1242),,Change in Manufact. Payrolls,Oct,--,--,--,--,69.3805,USMMMNCH Index
+11/07/2014 08:30,US,1243),,Unemployment Rate,Nov,--,--,--,--,89.2035,USURTOT Index
+11/07/2014 08:30,US,1244),,Average Hourly Earnings MoM,Oct,--,--,--,--,19.469,AHE MOM% Index
+11/07/2014 08:30,US,1245),,Average Hourly Earnings YoY,Oct,--,--,--,--,17.6991,AHE YOY% Index
+11/07/2014 08:30,US,1246),,Average Weekly Hours All Employees,Oct,--,--,--,--,18.5841,AWH TOTL Index
+11/07/2014 08:30,US,1247),,Change in Household Employment,Oct,--,--,--,--,14.1593,USEMNCHG Index
+11/07/2014 08:30,US,1248),,Underemployment Rate,Oct,--,--,--,--,12.3894,USUDMAER Index
+11/07/2014 15:00,US,1249),,Consumer Credit,Sep,--,--,--,--,39.823,CICRTOT Index
+11/07/2014 15:00,US,1250),,Labor Force Participation Rate,Oct,--,--,--,--,0.884956,PRUSTOT Index
+11/10/2014 11/14,US,1251),,Mortgage Delinquencies,3Q,--,--,--,--,28.3186,DLQTDLQT Index
+11/10/2014 11/14,US,1252),,MBA Mortgage Foreclosures,3Q,--,--,--,--,16.8142,FORLTOTL Index
+11/11/2014 07:30,US,1253),,NFIB Small Business Optimism,Oct,--,--,--,--,58.4071,SBOITOTL Index
+11/12/2014 07:00,US,1254),,MBA Mortgage Applications,7-Nov,--,--,--,--,92.3077,MBAVCHNG Index
+11/12/2014 10:00,US,1255),,Wholesale Trade Sales MoM,Sep,--,--,--,--,2.65487,MWSLCHNG Index
+11/12/2014 10:00,US,1256),,Wholesale Inventories MoM,Sep,--,--,--,--,78.7611,MWINCHNG Index
+11/13/2014 08:30,US,1257),,Initial Jobless Claims,8-Nov,--,--,--,--,98.2301,INJCJC Index
+11/13/2014 08:30,US,1258),,Continuing Claims,1-Nov,--,--,--,--,68.7611,INJCSP Index
+11/13/2014 09:45,US,1259),,Bloomberg Consumer Comfort,9-Nov,--,--,--,--,63.7168,COMFCOMF Index
+11/13/2014 10:00,US,1260),,JOLTs Job Openings,Sep,--,--,--,--,15.9292,JOLTTOTL Index
+11/13/2014 14:00,US,1261),,Monthly Budget Statement,Oct,--,--,--,--,74.3363,FDDSSD Index
+11/14/2014 08:30,US,1262),,Retail Sales Advance MoM,Oct,--,--,--,--,89.3805,RSTAMOM Index
+11/14/2014 08:30,US,1263),,Retail Sales Ex Auto MoM,Oct,--,--,--,--,62.5664,RSTAXMOM Index
+11/14/2014 08:30,US,1264),,Retail Sales Ex Auto and Gas,Oct,--,--,--,--,60.177,RSTAXAG% Index
+11/14/2014 08:30,US,1265),,Retail Sales Control Group,Oct,--,--,--,--,9.73451,RSTAXAGM Index
+11/14/2014 08:30,US,1266),,Import Price Index MoM,Oct,--,--,--,--,76.9912,IMP1CHNG Index
+11/14/2014 08:30,US,1267),,Import Price Index YoY,Oct,--,--,--,--,29.2035,IMP1YOY% Index
+11/14/2014 09:55,US,1268),,Univ. of Michigan Confidence,Nov P,--,--,--,--,92.9204,CONSSENT Index
+11/14/2014 10:00,US,1269),,Business Inventories,Sep,--,--,--,--,38.0531,MTIBCHNG Index
+11/17/2014 08:30,US,1270),,Empire Manufacturing,Nov,--,--,--,--,81.4159,EMPRGBCI Index
+11/17/2014 09:15,US,1271),,Industrial Production MoM,Oct,--,--,--,--,86.7257,IP CHNG Index
+11/17/2014 09:15,US,1272),,Capacity Utilization,Oct,--,--,--,--,60.708,CPTICHNG Index
+11/17/2014 09:15,US,1273),,Manufacturing (SIC) Production,Oct,--,--,--,--,6.19469,IPMGCHNG Index
+11/18/2014 08:30,US,1274),,PPI MoM,Oct,--,--,--,--,85.8407,PPI CHNG Index
+11/18/2014 08:30,US,1275),,PPI Ex Food and Energy MoM,Oct,--,--,--,--,68.6726,PXFECHNG Index
+11/18/2014 08:30,US,1276),,PPI YoY,Oct,--,--,--,--,68.1416,PPI YOY Index
+11/18/2014 08:30,US,1277),,PPI Ex Food and Energy YoY,Oct,--,--,--,--,66.3717,PPI XYOY Index
+11/18/2014 09:00,US,1278),,Total Net TIC Flows,Sep,--,--,--,--,65.4867,FRNTTNET Index
+11/18/2014 09:00,US,1279),,Net Long-term TIC Flows,Sep,--,--,--,--,72.5664,FRNTTOTL Index
+11/18/2014 10:00,US,1280),,NAHB Housing Market Index,Nov,--,--,--,--,41.5929,USHBMIDX Index
+11/19/2014 07:00,US,1281),,MBA Mortgage Applications,14-Nov,--,--,--,--,92.3077,MBAVCHNG Index
+11/19/2014 08:30,US,1282),,Housing Starts,Oct,--,--,--,--,88.4956,NHSPSTOT Index
+11/19/2014 08:30,US,1283),,Housing Starts MoM,Oct,--,--,--,--,22.1239,NHCHSTCH Index
+11/19/2014 08:30,US,1284),,Building Permits,Oct,--,--,--,--,61.9469,NHSPATOT Index
+11/19/2014 08:30,US,1285),,Building Permits MoM,Oct,--,--,--,--,20.354,NHCHATCH Index
+11/19/2014 14:00,US,1286),,Fed Releases Minutes from Oct. 28-29 FOMC Meeting,,,,,,0,
+11/20/2014 08:30,US,1287),,CPI MoM,Oct,--,--,--,--,93.8053,CPI CHNG Index
+11/20/2014 08:30,US,1288),,CPI Ex Food and Energy MoM,Oct,--,--,--,--,75.0442,CPUPXCHG Index
+11/20/2014 08:30,US,1289),,CPI YoY,Oct,--,--,--,--,57.5221,CPI YOY Index
+11/20/2014 08:30,US,1290),,CPI Ex Food and Energy YoY,Oct,--,--,--,--,46.0177,CPI XYOY Index
+11/20/2014 08:30,US,1291),,Initial Jobless Claims,15-Nov,--,--,--,--,98.2301,INJCJC Index
+11/20/2014 08:30,US,1292),,CPI Core Index SA,Oct,--,--,--,--,35.3982,CPUPAXFE Index
+11/20/2014 08:30,US,1293),,Continuing Claims,8-Nov,--,--,--,--,68.7611,INJCSP Index
+11/20/2014 08:30,US,1294),,CPI Index NSA,Oct,--,--,--,--,30.9735,CPURNSA Index
+11/20/2014 08:58,US,1295),,Markit US PMI Preliminary,Nov,--,--,--,--,8.84956,ECONMUS Index
+11/20/2014 09:45,US,1296),,Bloomberg Economic Expectations,Nov,--,--,--,--,25.6637,COMFBTWR Index
+11/20/2014 09:45,US,1297),,Bloomberg Consumer Comfort,16-Nov,--,--,--,--,63.7168,COMFCOMF Index
+11/20/2014 10:00,US,1298),,Philadelphia Fed Business Outlook,Nov,--,--,--,--,76.1062,OUTFGAF Index
+11/20/2014 10:00,US,1299),,Existing Home Sales MoM,Oct,--,--,--,--,49.5575,ETSLMOM Index
+11/20/2014 10:00,US,1300),,Existing Home Sales,Oct,--,--,--,--,87.6106,ETSLTOTL Index
+11/20/2014 10:00,US,1301),,Leading Index,Oct,--,--,--,--,83.1858,LEI CHNG Index
+11/21/2014 11:00,US,1302),,Kansas City Fed Manf. Activity,Nov,--,--,--,--,11.5044,KCLSSACI Index
+11/24/2014 08:30,US,1303),,Chicago Fed Nat Activity Index,Oct,--,--,--,--,61.0619,CFNAI Index
+11/24/2014 10:30,US,1304),,Dallas Fed Manf. Activity,Nov,--,--,--,--,62.8319,DFEDGBA Index
+11/25/2014 08:30,US,1305),,GDP Annualized QoQ,3Q S,--,--,--,--,96.4602,GDP CQOQ Index
+11/25/2014 08:30,US,1306),,GDP Price Index,3Q S,--,--,--,--,77.1681,GDP PIQQ Index
+11/25/2014 08:30,US,1307),,Core PCE QoQ,3Q S,--,--,--,--,67.5221,GDPCPCEC Index
+11/25/2014 08:30,US,1308),,Personal Consumption,3Q S,--,--,--,--,67.5221,GDPCTOT% Index
+11/25/2014 09:00,US,1309),,House Price Index MoM,Sep,--,--,--,--,67.2566,HPIMMOM% Index
+11/25/2014 09:00,US,1310),,House Price Purchase Index QoQ,3Q,--,--,--,--,24.7788,HPI PURQ Index
+11/25/2014 09:00,US,1311),,S&P/CS 20 City MoM SA,Oct,--,--,--,--,21.2389,SPCS20SM Index
+11/25/2014 09:00,US,1312),,S&P/CS Composite-20 YoY,Oct,--,--,--,--,46.9027,SPCS20Y% Index
+11/25/2014 09:00,US,1313),,S&P/CaseShiller Home Price Index NSA,Oct,--,--,--,--,53.9823,SPCS20 Index
+11/25/2014 10:00,US,1314),,Consumer Confidence Index,Nov,--,--,--,--,95.5752,CONCCONF Index
+11/25/2014 10:00,US,1315),,Richmond Fed Manufact. Index,Nov,--,--,--,--,69.0265,RCHSINDX Index
+11/26/2014 07:00,US,1316),,MBA Mortgage Applications,21-Nov,--,--,--,--,92.3077,MBAVCHNG Index
+11/26/2014 08:30,US,1317),,Durable Goods Orders,Oct,--,--,--,--,91.1504,DGNOCHNG Index
+11/26/2014 08:30,US,1318),,Durables Ex Transportation,Oct,--,--,--,--,72.9204,DGNOXTCH Index
+11/26/2014 08:30,US,1319),,Cap Goods Orders Nondef Ex Air,Oct,--,--,--,--,56.6372,CGNOXAI% Index
+11/26/2014 08:30,US,1320),,Cap Goods Ship Nondef Ex Air,Oct,--,--,--,--,55.7522,CGSHXAI% Index
+11/26/2014 08:30,US,1321),,Personal Income,Oct,--,--,--,--,84.9558,PITLCHNG Index
+11/26/2014 08:30,US,1322),,Personal Spending,Oct,--,--,--,--,84.9558,PCE CRCH Index
+11/26/2014 08:30,US,1323),,PCE Deflator MoM,Oct,--,--,--,--,7.07965,PCE DEFM Index
+11/26/2014 08:30,US,1324),,PCE Deflator YoY,Oct,--,--,--,--,34.5133,PCE DEFY Index
+11/26/2014 08:30,US,1325),,PCE Core MoM,Oct,--,--,--,--,59.469,PCE CMOM Index
+11/26/2014 08:30,US,1326),,PCE Core YoY,Oct,--,--,--,--,37.1681,PCE CYOY Index
+11/26/2014 09:45,US,1327),,Chicago Purchasing Manager,Nov,--,--,--,--,79.646,CHPMINDX Index
+11/26/2014 09:45,US,1328),,Bloomberg Consumer Comfort,23-Nov,--,--,--,--,63.7168,COMFCOMF Index
+11/26/2014 09:55,US,1329),,Univ. of Michigan Confidence,Nov F,--,--,--,--,92.9204,CONSSENT Index
+11/26/2014 10:00,US,1330),,New Home Sales MoM,Oct,--,--,--,--,47.7876,NHSLCHNG Index
+11/26/2014 10:00,US,1331),,New Home Sales,Oct,--,--,--,--,90.2655,NHSLTOT Index
+11/26/2014 10:00,US,1332),,Pending Home Sales MoM,Oct,--,--,--,--,75.2212,USPHTMOM Index
+11/26/2014 10:00,US,1333),,Pending Home Sales YoY,Oct,--,--,--,--,23.8938,USPHTYOY Index
+11/28/2014 08:30,US,1334),,Initial Jobless Claims,22-Nov,--,--,--,--,98.2301,INJCJC Index
+11/28/2014 08:30,US,1335),,Continuing Claims,15-Nov,--,--,--,--,68.7611,INJCSP Index
+11/28/2014 09:00,US,1336),,ISM Milwaukee,Nov,--,--,--,--,30.0885,MAPMINDX Index
+12/01/2014 08:58,US,1337),,Markit US PMI Final,Nov,--,--,--,--,7.9646,ECONMUSF Index
+12/01/2014 10:00,US,1338),,ISM Manufacturing,Nov,--,--,--,--,94.6903,NAPMPMI Index
+12/01/2014 10:00,US,1339),,ISM Prices Paid,Nov,--,--,--,--,69.9115,NAPMPRIC Index
+12/02/2014 09:45,US,1340),,ISM New York,Nov,--,--,--,--,10.6195,NYPMCURR Index
+12/02/2014 10:00,US,1341),,Construction Spending MoM,Oct,--,--,--,--,77.8761,CNSTTMOM Index
+12/02/2014,US,1342),,Domestic Vehicle Sales,Nov,--,--,--,--,33.6283,SAARDTOT Index
+12/02/2014,US,1343),,Total Vehicle Sales,Nov,--,--,--,--,40.708,SAARTOTL Index
+12/03/2014 07:00,US,1344),,MBA Mortgage Applications,28-Nov,--,--,--,--,92.3077,MBAVCHNG Index
+12/03/2014 08:15,US,1345),,ADP Employment Change,Nov,--,--,--,--,80.531,ADP CHNG Index
+12/03/2014 08:30,US,1346),,Unit Labor Costs,3Q F,--,--,--,--,31.8584,COSTNFR% Index
+12/03/2014 08:30,US,1347),,Nonfarm Productivity,3Q F,--,--,--,--,38.9381,PRODNFR% Index
+12/03/2014 10:00,US,1348),,ISM Non-Manf. Composite,Nov,--,--,--,--,73.4513,NAPMNMI Index
+12/03/2014 14:00,US,1349),,U.S. Federal Reserve Releases Beige Book Report,,,,,,0,
+12/04/2014 07:30,US,1350),,Challenger Job Cuts YoY,Nov,--,--,--,--,32.7434,CHALYOY% Index
+12/04/2014 07:30,US,1351),,RBC Consumer Outlook Index,Dec,--,--,--,--,13.2743,ICSHNATL Index
+12/04/2014 08:30,US,1352),,Initial Jobless Claims,29-Nov,--,--,--,--,98.2301,INJCJC Index
+12/04/2014 08:30,US,1353),,Continuing Claims,22-Nov,--,--,--,--,68.7611,INJCSP Index
+12/04/2014 09:45,US,1354),,Bloomberg Consumer Comfort,30-Nov,--,--,--,--,63.7168,COMFCOMF Index
+12/04/2014 12/08,US,1355),,Household Change in Net Worth,3Q,--,--,--,--,5.30973,NWORCHNG Index
+12/05/2014 08:30,US,1356),,Two-Month Payroll Net Revision,Nov,--,--,--,--,4.42478,ECONGECC Index
+12/05/2014 08:30,US,1357),,Change in Nonfarm Payrolls,Nov,--,--,--,--,99.115,NFP TCH Index
+12/05/2014 08:30,US,1358),,Change in Private Payrolls,Nov,--,--,--,--,23.0088,NFP PCH Index
+12/05/2014 08:30,US,1359),,Change in Manufact. Payrolls,Nov,--,--,--,--,69.3805,USMMMNCH Index
+12/05/2014 08:30,US,1360),,Unemployment Rate,Dec,--,--,--,--,89.2035,USURTOT Index
+12/05/2014 08:30,US,1361),,Average Hourly Earnings MoM,Nov,--,--,--,--,19.469,AHE MOM% Index
+12/05/2014 08:30,US,1362),,Average Hourly Earnings YoY,Nov,--,--,--,--,17.6991,AHE YOY% Index
+12/05/2014 08:30,US,1363),,Average Weekly Hours All Employees,Nov,--,--,--,--,18.5841,AWH TOTL Index
+12/05/2014 08:30,US,1364),,Change in Household Employment,Nov,--,--,--,--,14.1593,USEMNCHG Index
+12/05/2014 08:30,US,1365),,Underemployment Rate,Nov,--,--,--,--,12.3894,USUDMAER Index
+12/05/2014 08:30,US,1366),,Trade Balance,Oct,--,--,--,--,82.3009,USTBTOT Index
+12/05/2014 10:00,US,1367),,Factory Orders,Oct,--,--,--,--,84.0708,TMNOCHNG Index
+12/05/2014 15:00,US,1368),,Consumer Credit,Oct,--,--,--,--,39.823,CICRTOT Index
+12/05/2014 15:00,US,1369),,Labor Force Participation Rate,Nov,--,--,--,--,0.884956,PRUSTOT Index
+12/09/2014 07:30,US,1370),,NFIB Small Business Optimism,Nov,--,--,--,--,58.4071,SBOITOTL Index
+12/09/2014 10:00,US,1371),,Wholesale Trade Sales MoM,Oct,--,--,--,--,2.65487,MWSLCHNG Index
+12/09/2014 10:00,US,1372),,IBD/TIPP Economic Optimism,Dec,--,--,--,--,15.0442,ECONUSIB Index
+12/09/2014 10:00,US,1373),,JOLTs Job Openings,Oct,--,--,--,--,15.9292,JOLTTOTL Index
+12/09/2014 10:00,US,1374),,Wholesale Inventories MoM,Oct,--,--,--,--,78.7611,MWINCHNG Index
+12/10/2014 07:00,US,1375),,MBA Mortgage Applications,5-Dec,--,--,--,--,92.3077,MBAVCHNG Index
+12/10/2014 14:00,US,1376),,Monthly Budget Statement,Nov,--,--,--,--,74.3363,FDDSSD Index
+12/11/2014 08:30,US,1377),,Retail Sales Advance MoM,Nov,--,--,--,--,89.3805,RSTAMOM Index
+12/11/2014 08:30,US,1378),,Retail Sales Ex Auto MoM,Nov,--,--,--,--,62.5664,RSTAXMOM Index
+12/11/2014 08:30,US,1379),,Retail Sales Ex Auto and Gas,Nov,--,--,--,--,60.177,RSTAXAG% Index
+12/11/2014 08:30,US,1380),,Retail Sales Control Group,Nov,--,--,--,--,9.73451,RSTAXAGM Index
+12/11/2014 08:30,US,1381),,Initial Jobless Claims,6-Dec,--,--,--,--,98.2301,INJCJC Index
+12/11/2014 08:30,US,1382),,Continuing Claims,29-Nov,--,--,--,--,68.7611,INJCSP Index
+12/11/2014 08:30,US,1383),,Import Price Index MoM,Nov,--,--,--,--,76.9912,IMP1CHNG Index
+12/11/2014 08:30,US,1384),,Import Price Index YoY,Nov,--,--,--,--,29.2035,IMP1YOY% Index
+12/11/2014 09:45,US,1385),,Bloomberg Consumer Comfort,7-Dec,--,--,--,--,63.7168,COMFCOMF Index
+12/11/2014 10:00,US,1386),,Business Inventories,Oct,--,--,--,--,38.0531,MTIBCHNG Index
+12/12/2014 08:30,US,1387),,PPI MoM,Nov,--,--,--,--,85.8407,PPI CHNG Index
+12/12/2014 08:30,US,1388),,PPI Ex Food and Energy MoM,Nov,--,--,--,--,68.6726,PXFECHNG Index
+12/12/2014 08:30,US,1389),,PPI YoY,Nov,--,--,--,--,68.1416,PPI YOY Index
+12/12/2014 08:30,US,1390),,PPI Ex Food and Energy YoY,Nov,--,--,--,--,66.3717,PPI XYOY Index
+12/12/2014 09:55,US,1391),,Univ. of Michigan Confidence,Dec P,--,--,--,--,92.9204,CONSSENT Index
+12/15/2014 08:30,US,1392),,Empire Manufacturing,Dec,--,--,--,--,81.4159,EMPRGBCI Index
+12/15/2014 09:00,US,1393),,Total Net TIC Flows,Oct,--,--,--,--,65.4867,FRNTTNET Index
+12/15/2014 09:00,US,1394),,Net Long-term TIC Flows,Oct,--,--,--,--,72.5664,FRNTTOTL Index
+12/15/2014 09:15,US,1395),,Industrial Production MoM,Nov,--,--,--,--,86.7257,IP CHNG Index
+12/15/2014 09:15,US,1396),,Capacity Utilization,Nov,--,--,--,--,60.708,CPTICHNG Index
+12/15/2014 09:15,US,1397),,Manufacturing (SIC) Production,Nov,--,--,--,--,6.19469,IPMGCHNG Index
+12/15/2014 10:00,US,1398),,NAHB Housing Market Index,Dec,--,--,--,--,41.5929,USHBMIDX Index
+12/16/2014 08:30,US,1399),,Housing Starts,Nov,--,--,--,--,88.4956,NHSPSTOT Index
+12/16/2014 08:30,US,1400),,Housing Starts MoM,Nov,--,--,--,--,22.1239,NHCHSTCH Index
+12/16/2014 08:30,US,1401),,Building Permits,Nov,--,--,--,--,61.9469,NHSPATOT Index
+12/16/2014 08:30,US,1402),,Building Permits MoM,Nov,--,--,--,--,20.354,NHCHATCH Index
+12/17/2014 07:00,US,1403),,MBA Mortgage Applications,12-Dec,--,--,--,--,92.3077,MBAVCHNG Index
+12/17/2014 08:30,US,1404),,CPI MoM,Nov,--,--,--,--,93.8053,CPI CHNG Index
+12/17/2014 08:30,US,1405),,CPI Ex Food and Energy MoM,Nov,--,--,--,--,75.0442,CPUPXCHG Index
+12/17/2014 08:30,US,1406),,CPI YoY,Nov,--,--,--,--,57.5221,CPI YOY Index
+12/17/2014 08:30,US,1407),,CPI Ex Food and Energy YoY,Nov,--,--,--,--,46.0177,CPI XYOY Index
+12/17/2014 08:30,US,1408),,CPI Core Index SA,Nov,--,--,--,--,35.3982,CPUPAXFE Index
+12/17/2014 08:30,US,1409),,CPI Index NSA,Nov,--,--,--,--,30.9735,CPURNSA Index
+12/17/2014 08:30,US,1410),,Current Account Balance,3Q,--,--,--,--,70.7965,USCABAL Index
+12/17/2014 14:00,US,1411),,Fed QE3 Pace,Dec,--,--,--,--,0,TREFAMSP Index
+12/17/2014 14:00,US,1412),,Fed Pace of Treasury Pur,Dec,--,--,--,--,3.53982,TREFPACE Index
+12/17/2014 14:00,US,1413),,Fed Pace of MBS Purchases,Dec,--,--,--,--,1.76991,AMSPPACE Index
+12/17/2014 14:00,US,1414),,FOMC Rate Decision,17-Dec,--,--,--,--,97.3451,FDTR Index
+12/18/2014 08:30,US,1415),,Initial Jobless Claims,13-Dec,--,--,--,--,98.2301,INJCJC Index
+12/18/2014 08:30,US,1416),,Continuing Claims,6-Dec,--,--,--,--,68.7611,INJCSP Index
+12/18/2014 09:45,US,1417),,Bloomberg Economic Expectations,Dec,--,--,--,--,25.6637,COMFBTWR Index
+12/18/2014 09:45,US,1418),,Bloomberg Consumer Comfort,14-Dec,--,--,--,--,63.7168,COMFCOMF Index
+12/18/2014 10:00,US,1419),,Philadelphia Fed Business Outlook,Dec,--,--,--,--,76.1062,OUTFGAF Index
+12/18/2014 10:00,US,1420),,Leading Index,Nov,--,--,--,--,83.1858,LEI CHNG Index
+12/19/2014 11:00,US,1421),,Kansas City Fed Manf. Activity,Dec,--,--,--,--,11.5044,KCLSSACI Index
+12/22/2014 08:30,US,1422),,Chicago Fed Nat Activity Index,Nov,--,--,--,--,61.0619,CFNAI Index
+12/22/2014 10:00,US,1423),,Existing Home Sales MoM,Dec,--,--,--,--,49.5575,ETSLMOM Index
+12/22/2014 10:00,US,1424),,Existing Home Sales,Nov,--,--,--,--,87.6106,ETSLTOTL Index
+12/23/2014 08:30,US,1425),,GDP Annualized QoQ,3Q T,--,--,--,--,96.4602,GDP CQOQ Index
+12/23/2014 08:30,US,1426),,GDP Price Index,3Q T,--,--,--,--,77.1681,GDP PIQQ Index
+12/23/2014 08:30,US,1427),,Core PCE QoQ,3Q T,--,--,--,--,67.5221,GDPCPCEC Index
+12/23/2014 08:30,US,1428),,Personal Consumption,3Q T,--,--,--,--,67.5221,GDPCTOT% Index
+12/23/2014 08:30,US,1429),,Durable Goods Orders,Nov,--,--,--,--,91.1504,DGNOCHNG Index
+12/23/2014 08:30,US,1430),,Durables Ex Transportation,Nov,--,--,--,--,72.9204,DGNOXTCH Index
+12/23/2014 08:30,US,1431),,Cap Goods Orders Nondef Ex Air,Nov,--,--,--,--,56.6372,CGNOXAI% Index
+12/23/2014 08:30,US,1432),,Cap Goods Ship Nondef Ex Air,Nov,--,--,--,--,55.7522,CGSHXAI% Index
+12/23/2014 08:30,US,1433),,Personal Income,Nov,--,--,--,--,84.9558,PITLCHNG Index
+12/23/2014 08:30,US,1434),,Personal Spending,Nov,--,--,--,--,84.9558,PCE CRCH Index
+12/23/2014 08:30,US,1435),,PCE Deflator MoM,Nov,--,--,--,--,7.07965,PCE DEFM Index
+12/23/2014 08:30,US,1436),,PCE Deflator YoY,Nov,--,--,--,--,34.5133,PCE DEFY Index
+12/23/2014 08:30,US,1437),,PCE Core MoM,Nov,--,--,--,--,59.469,PCE CMOM Index
+12/23/2014 08:30,US,1438),,PCE Core YoY,Nov,--,--,--,--,37.1681,PCE CYOY Index
+12/23/2014 09:00,US,1439),,House Price Index MoM,Oct,--,--,--,--,67.2566,HPIMMOM% Index
+12/23/2014 09:55,US,1440),,Univ. of Michigan Confidence,Dec F,--,--,--,--,92.9204,CONSSENT Index
+12/23/2014 10:00,US,1441),,New Home Sales MoM,Nov,--,--,--,--,47.7876,NHSLCHNG Index
+12/23/2014 10:00,US,1442),,New Home Sales,Nov,--,--,--,--,90.2655,NHSLTOT Index
+12/23/2014 10:00,US,1443),,Richmond Fed Manufact. Index,Dec,--,--,--,--,69.0265,RCHSINDX Index
+12/24/2014 07:00,US,1444),,MBA Mortgage Applications,19-Dec,--,--,--,--,92.3077,MBAVCHNG Index
+12/24/2014 09:45,US,1445),,Bloomberg Consumer Comfort,21-Dec,--,--,--,--,63.7168,COMFCOMF Index
+12/26/2014 08:30,US,1446),,Initial Jobless Claims,20-Dec,--,--,--,--,98.2301,INJCJC Index
+12/26/2014 08:30,US,1447),,Continuing Claims,13-Dec,--,--,--,--,68.7611,INJCSP Index
+12/29/2014 10:30,US,1448),,Dallas Fed Manf. Activity,Dec,--,--,--,--,62.8319,DFEDGBA Index
+12/30/2014 09:00,US,1449),,S&P/CS 20 City MoM SA,Nov,--,--,--,--,21.2389,SPCS20SM Index
+12/30/2014 09:00,US,1450),,S&P/CS Composite-20 YoY,Nov,--,--,--,--,46.9027,SPCS20Y% Index
+12/30/2014 09:00,US,1451),,S&P/CaseShiller Home Price Index NSA,Nov,--,--,--,--,53.9823,SPCS20 Index
+12/30/2014 10:00,US,1452),,Consumer Confidence Index,Dec,--,--,--,--,95.5752,CONCCONF Index
+12/31/2014 07:00,US,1453),,MBA Mortgage Applications,26-Dec,--,--,--,--,92.3077,MBAVCHNG Index
+12/31/2014 09:00,US,1454),,ISM Milwaukee,Dec,--,--,--,--,30.0885,MAPMINDX Index
+12/31/2014 09:45,US,1455),,Chicago Purchasing Manager,Dec,--,--,--,--,79.646,CHPMINDX Index
+12/31/2014 10:00,US,1456),,Pending Home Sales MoM,Nov,--,--,--,--,75.2212,USPHTMOM Index
+12/31/2014 10:00,US,1457),,Pending Home Sales YoY,Nov,--,--,--,--,23.8938,USPHTYOY Index
+,,,,,,,,,,,
+Download time: 02JAN2014_23:53:02.203,,,,,,,,,,,

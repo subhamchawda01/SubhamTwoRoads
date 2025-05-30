@@ -1,0 +1,16 @@
+
+project : usage-requirements 
+<linkflags>-lboost_date_time
+<linkflags>-lboost_iostreams
+;
+
+lib Utils : [ glob *.cpp ] : <link>static ;
+
+install libUtils
+  : Utils
+  : <install-type>LIB
+    <variant>release:<location>"$(PROJECT_LIB_INSTALL)"
+    <variant>debug:<location>"$(PROJECT_LIB_INSTALL_DEBUG)"
+  : release debug
+  ;
+ 

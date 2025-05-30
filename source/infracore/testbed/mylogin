@@ -1,0 +1,422 @@
+#!/bin/bash
+
+USAGE1="$0 USER LOCATION/IP NT LT/AT"
+EXAMPLE1="$0 ravi NY4 1 LT   ----  opens all NY locations and separates all locations in different tabbed window" 
+EXAMPLE2="$0 ravi ALL 1 LT   ----  opens ALL locations in location wise windows"
+EXAMPLE3="$0 ravi 10.23.74.51 5 AT   ----  opens 5 ssh on given loc/ip in 1 tabbed window"
+
+if [ $# -ne 4 ] ;
+then
+    echo "USAGE : ";
+    echo $USAGE1;
+    echo $EXAMPLE1;
+    echo $EXAMPLE2;
+    echo $EXAMPLE3;
+    exit;
+fi
+
+USER=$1
+LOC=$2
+NT=$3
+TO=$4
+
+## currently unused
+
+NY11=10.23.74.51
+NY12=10.23.74.52
+NY13=10.23.74.53
+NY14=10.23.74.54
+NY15=10.23.74.55
+CRT11=10.23.142.51
+
+FR11=10.23.102.51
+FR12=10.23.102.52
+FR13=10.23.102.53
+FR14=10.23.102.54
+
+CHI11=10.23.82.51
+CHI12=10.23.82.52
+CHI13=10.23.82.53
+CHI14=10.23.82.54
+
+BSL11=10.23.52.51
+BSL12=10.23.52.52
+BSL11=10.23.52.53
+
+TOR11=10.23.182.51
+TOR12=10.23.182.52
+
+BMF11=10.23.23.11
+BMF12=10.23.23.12
+BMF13=10.220.40.1
+
+ALLLIST=(
+
+
+  10.23.74.51
+  10.23.74.52
+  10.23.74.53
+  10.23.74.54
+  10.23.74.55
+  10.23.142.51
+  10.23.102.51
+  10.23.102.52
+  10.23.102.53
+  10.23.102.54
+  10.23.82.51 
+  10.23.82.52
+  10.23.82.53 
+  10.23.82.54 
+  10.23.52.51
+  10.23.52.52
+  10.23.52.53
+  10.23.182.51
+  10.23.182.52
+
+)
+
+NY4LIST=( 
+
+  10.23.74.51
+  10.23.74.52
+  10.23.74.53
+  10.23.74.54
+  10.23.74.55
+  
+)
+
+CRTLIST=(
+
+  10.23.142.51
+
+)
+
+FR2LIST=( 
+
+  10.23.102.51
+  10.23.102.52
+  10.23.102.53
+  10.23.102.54
+
+)
+
+
+CHILIST=( 
+
+  10.23.82.51 
+  10.23.82.52
+  10.23.82.53 
+  10.23.82.54 
+
+)
+
+BSLLIST=( 
+
+  10.23.52.51
+  10.23.52.52
+  10.23.52.53
+
+) 
+
+TORLIST=(
+
+  10.23.182.51
+  10.23.182.52
+
+)
+
+BRZLIST=(
+
+  10.23.23.11
+  10.23.23.12
+  10.220.40.1
+
+)
+
+case $LOC in
+
+     NY4|ny4) 
+
+        exec_cmd="gnome-terminal" 
+
+	title_counter=11;
+
+        for srv in "${NY4LIST[@]}"    
+        do  
+	
+	   exec_cmd=$exec_cmd" -e \"ssh $USER@$srv\" -t "NY$title_counter" --tab" ;
+
+	   ((title_counter++)) ;
+
+	done
+
+	echo $exec_cmd ; 
+
+     ;;
+
+     FR2|fr2) 
+
+        exec_cmd="gnome-terminal" 
+
+	title_counter=11;
+
+        for srv in "${FR2LIST[@]}"    
+        do  
+	
+	   exec_cmd=$exec_cmd" -e \"ssh $USER@$srv\" -t "FR$title_counter" --tab" ;
+
+	   ((title_counter++)) ;
+
+	done
+
+	echo $exec_cmd ; 
+
+     ;;
+
+     CHI|chi) 
+
+        exec_cmd="gnome-terminal" 
+
+	title_counter=11;
+
+        for srv in "${CHILIST[@]}"    
+        do  
+	
+	   exec_cmd=$exec_cmd" -e \"ssh $USER@$srv\" -t "CH$title_counter" --tab" ;
+
+	   ((title_counter++)) ;
+
+	done
+
+	echo $exec_cmd ; 
+
+     ;;
+
+     BSL|bsl) 
+
+        exec_cmd="gnome-terminal" 
+
+	title_counter=11;
+
+        for srv in "${BSLLIST[@]}"    
+        do  
+	
+	   exec_cmd=$exec_cmd" -e \"ssh $USER@$srv\" -t "BSL$title_counter" --tab" ;
+
+	   ((title_counter++)) ;
+
+	done
+
+	echo $exec_cmd ; 
+
+     ;;
+
+     TOR|tor) 
+
+        exec_cmd="gnome-terminal" 
+
+	title_counter=11;
+
+        for srv in "${TORLIST[@]}"    
+        do  
+	
+	   exec_cmd=$exec_cmd" -e \"ssh $USER@$srv\" -t "TR$title_counter" --tab" ;
+
+	   ((title_counter++)) ;
+
+	done
+
+	echo $exec_cmd ; 
+
+     ;;
+
+     BRZ|brz) 
+
+        exec_cmd="gnome-terminal" 
+
+	title_counter=11;
+
+        for srv in "${BRZLIST[@]}"    
+        do  
+	
+	   exec_cmd=$exec_cmd" -e \"ssh $USER@$srv\" -t "BR$title_counter" --tab" ;
+
+	   ((title_counter++)) ;
+
+	done
+
+	echo $exec_cmd ; 
+
+     ;;
+
+     ALL|all) 
+      
+       
+        case $TO in
+ 
+             LT ) 
+
+	        exec_cmd="gnome-terminal"
+
+	        title_counter=11;
+
+		i=0;
+
+                for srv in "${NY4LIST[@]}"    
+                do  
+
+                   if [ $i -eq 4 ] 
+                   then 
+ 
+	               exec_cmd=$exec_cmd" -e \"ssh $USER@$srv\" -t "NY$title_counter" --window" ;
+
+                   else
+
+	               exec_cmd=$exec_cmd" -e \"ssh $USER@$srv\" -t "NY$title_counter" --tab" ;
+
+                   fi
+
+	           ((title_counter++)) ;
+                   ((i++)) 
+
+	        done
+
+		i=0;
+
+	        title_counter=11;
+
+                for srv in "${FR2LIST[@]}"    
+                do  
+
+		   if [ $i -eq 3 ]
+		   then
+	
+	               exec_cmd=$exec_cmd" -e \"ssh $USER@$srv\" -t "FR$title_counter" --window" ;
+
+		   else
+
+	               exec_cmd=$exec_cmd" -e \"ssh $USER@$srv\" -t "FR$title_counter" --tab" ;
+
+		   fi
+
+	        ((title_counter++)) ;
+		((i++));
+		       
+	        done
+
+		i=0; 
+	        title_counter=11;
+
+                for srv in "${CHILIST[@]}"    
+                do  
+
+		   if [ $i -eq 3 ]
+		   then
+	
+	               exec_cmd=$exec_cmd" -e \"ssh $USER@$srv\" -t "CH$title_counter" --window" ;
+
+		   else
+
+	               exec_cmd=$exec_cmd" -e \"ssh $USER@$srv\" -t "CH$title_counter" --tab" ;
+
+		   fi
+
+	        ((title_counter++)) ;
+		((i++));
+		       
+	        done
+
+		i=0 ;
+	        title_counter=11;
+
+                for srv in "${TORLIST[@]}"    
+                do  
+
+		   if [ $i -eq 1 ]
+		   then
+	
+	               exec_cmd=$exec_cmd" -e \"ssh $USER@$srv\" -t "TR$title_counter" --window" ;
+
+		   else
+
+	               exec_cmd=$exec_cmd" -e \"ssh $USER@$srv\" -t "TR$title_counter" --tab" ;
+
+		   fi
+
+	        ((title_counter++)) ;
+		((i++));
+		       
+	        done
+
+		i=0 ;
+	        title_counter=11;
+
+                for srv in "${BSLLIST[@]}"    
+                do  
+
+		   if [ $i -eq 2 ]
+		   then
+	
+	               exec_cmd=$exec_cmd" -e \"ssh $USER@$srv\" -t "BSL$title_counter" --window" ;
+
+		   else
+
+	               exec_cmd=$exec_cmd" -e \"ssh $USER@$srv\" -t "BSL$title_counter" --tab" ;
+
+		   fi
+
+	        ((title_counter++)) ;
+		((i++));
+		       
+	        done
+     
+	        echo $exec_cmd ;
+
+	     ;;
+
+             AT ) 
+
+	        exec_cmd="gnome-terminal"
+
+                for srv in "${ALLLIST[@]}"    
+                do  
+
+	           exec_cmd=$exec_cmd" -e \"ssh $USER@$srv\" --tab" ;
+
+		done
+
+	     ;;
+
+	     *)
+
+	        echo "You didn't choose AT/LT" ;
+		exit ;
+
+	     ;;
+
+        esac
+
+     ;;
+
+     *)
+
+        i=0;
+
+        exec_cmd="gnome-terminal"
+
+	while [ $i -lt $NT ] 
+	do
+
+	   exec_cmd=$exec_cmd" -e \"ssh $USER@$LOC\" --tab" ;
+
+	   ((i++)) 
+
+	done   
+
+	echo $exec_cmd ;
+
+     ;;
+
+esac
+
+echo $exec_cmd | bash

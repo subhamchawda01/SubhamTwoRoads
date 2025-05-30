@@ -1,0 +1,6 @@
+"country","date","name","actual","consensus","previous","volatility"
+"United States","20121226 13:55:00","Redbook index (YoY)","","","2.400  %","1"
+"United States","20121226 13:55:00","Redbook index (MoM)","","","-0.200  %","1"
+"United States","20121226 14:00:00","S&P/Case-Shiller Home Price Indices (YoY)","","4.000  %","3.000  %","1"
+"United States","20121226 15:00:00","Richmond Fed Manufacturing Index",""," 12.000 "," 9.000 ","1"
+"Korea, Republic of","20121226 21:00:00","BOK Manufacturing BSI","",""," 70.000 ","1"

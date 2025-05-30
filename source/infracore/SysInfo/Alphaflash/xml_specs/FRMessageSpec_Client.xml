@@ -1,0 +1,842 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<?xml-stylesheet type="text/xsl" href="./ClientHTML.xsl"?><protocol>
+<version>351</version>
+<revisions>
+    <revision type="Final" version="351" author="MNI News" date="03/13/2017"/>
+  </revisions>
+<category name="FR_HICP_CPI">
+<description>French HICP and CPI</description>
+<country>FR</country>
+<category_id>50001</category_id>
+<data>
+<datum>
+<short_description>HICP change month on month</short_description>
+<description>Current Month, mo/mo change in French HICP</description>
+<datum_type>%</datum_type>
+<datum_id>1</datum_id>
+</datum>
+<datum>
+<short_description>CPI change month on month</short_description>
+<description>Current Month, mo/mo change in French CPI</description>
+<datum_type>%</datum_type>
+<datum_id>2</datum_id>
+</datum>
+<datum>
+<short_description>HICP change year on year</short_description>
+<description>Current Month, yr/yr change in French HICP</description>
+<datum_type>%</datum_type>
+<datum_id>3</datum_id>
+</datum>
+<datum>
+<short_description>CPI change year on year</short_description>
+<description>Current Month, yr/yr change in French CPI</description>
+<datum_type>%</datum_type>
+<datum_id>4</datum_id>
+</datum>
+</data>
+<messages>
+<message>
+<message_type>release</message_type>
+<message_version>1</message_version>
+<multicast_group>EU_GROUP_2</multicast_group>
+<fields>
+<field>
+<datum_id>1</datum_id>
+<field_type>float</field_type>
+<example_value>0.7</example_value>
+</field>
+<field>
+<datum_id>2</datum_id>
+<field_type>float</field_type>
+<example_value>3.2</example_value>
+</field>
+<field>
+<datum_id>3</datum_id>
+<field_type>float</field_type>
+<example_value>3.2</example_value>
+</field>
+<field>
+<datum_id>4</datum_id>
+<field_type>float</field_type>
+<example_value>3.2</example_value>
+</field>
+</fields>
+</message>
+<message>
+<message_type>estimate</message_type>
+<message_version>1</message_version>
+<multicast_group>EU_ESTIMATES</multicast_group>
+<fields>
+<field>
+<datum_id>1</datum_id>
+<field_type>float</field_type>
+<example_value>0.7</example_value>
+</field>
+<field>
+<datum_id>2</datum_id>
+<field_type>float</field_type>
+<example_value>3.2</example_value>
+</field>
+<field>
+<datum_id>3</datum_id>
+<field_type>float</field_type>
+<example_value>3.2</example_value>
+</field>
+<field>
+<datum_id>4</datum_id>
+<field_type>float</field_type>
+<example_value>3.2</example_value>
+</field>
+</fields>
+</message>
+</messages>
+</category>
+<category name="FR_PPI">
+<description>French PPI</description>
+<country>FR</country>
+<category_id>50002</category_id>
+<data>
+<datum>
+<short_description>PPI change month on month</short_description>
+<description>Current Month, mo/mo change in French PPI</description>
+<datum_type>%</datum_type>
+<datum_id>1</datum_id>
+</datum>
+<datum>
+<short_description>PPI change year on year</short_description>
+<description>Current Month, yr/yr change in French PPI</description>
+<datum_type>%</datum_type>
+<datum_id>2</datum_id>
+</datum>
+</data>
+<messages>
+<message>
+<message_type>release</message_type>
+<message_version>1</message_version>
+<multicast_group>EU_GROUP_2</multicast_group>
+<fields>
+<field>
+<datum_id>1</datum_id>
+<field_type>float</field_type>
+<example_value>0.7</example_value>
+</field>
+<field>
+<datum_id>2</datum_id>
+<field_type>float</field_type>
+<example_value>3.2</example_value>
+</field>
+</fields>
+</message>
+<message>
+<message_type>estimate</message_type>
+<message_version>1</message_version>
+<multicast_group>EU_ESTIMATES</multicast_group>
+<fields>
+<field>
+<datum_id>1</datum_id>
+<field_type>float</field_type>
+<example_value>0.7</example_value>
+</field>
+<field>
+<datum_id>2</datum_id>
+<field_type>float</field_type>
+<example_value>3.2</example_value>
+</field>
+</fields>
+</message>
+</messages>
+</category>
+<category name="FR_CONSUMER_SPENDING">
+<description>French Consumer Manufacturing Spending</description>
+<country>FR</country>
+<category_id>50004</category_id>
+<data>
+<datum>
+<short_description>Consumer Mfg Spending change month on month</short_description>
+<description>Current Month, mo/mo change in French Consumer Mfg Spending</description>
+<datum_type>%</datum_type>
+<datum_id>1</datum_id>
+</datum>
+<datum>
+<short_description>Consumer Mfg Spending change year on year</short_description>
+<description>Current Month, yr/yr change in French Consumer Mfg Spending</description>
+<datum_type>%</datum_type>
+<datum_id>2</datum_id>
+</datum>
+<datum>
+<short_description>Total Consumer spending change month on month</short_description>
+<description>Current Month, mo/mo change in French Total Consumer Spending</description>
+<datum_type>%</datum_type>
+<datum_id>3</datum_id>
+</datum>
+<datum>
+<short_description>Total Consumer Spending change year on year</short_description>
+<description>Current Month, yr/yr change in French Total Consumer Spending</description>
+<datum_type>%</datum_type>
+<datum_id>4</datum_id>
+</datum>
+</data>
+<messages>
+<message>
+<message_type>release</message_type>
+<message_version>2</message_version>
+<multicast_group>EU_GROUP_2</multicast_group>
+<fields>
+<field>
+<datum_id>1</datum_id>
+<field_type>float</field_type>
+<example_value>0.7</example_value>
+</field>
+<field>
+<datum_id>2</datum_id>
+<field_type>float</field_type>
+<example_value>3.2</example_value>
+</field>
+<field>
+<datum_id>3</datum_id>
+<field_type>float</field_type>
+<example_value>-0.7</example_value>
+</field>
+<field>
+<datum_id>4</datum_id>
+<field_type>float</field_type>
+<example_value>-2.4</example_value>
+</field>
+</fields>
+</message>
+<message>
+<message_type>estimate</message_type>
+<message_version>2</message_version>
+<multicast_group>EU_ESTIMATES</multicast_group>
+<fields>
+<field>
+<datum_id>1</datum_id>
+<field_type>float</field_type>
+<example_value>0.7</example_value>
+</field>
+<field>
+<datum_id>2</datum_id>
+<field_type>float</field_type>
+<example_value>3.2</example_value>
+</field>
+<field>
+<datum_id>3</datum_id>
+<field_type>float</field_type>
+<example_value>-0.7</example_value>
+</field>
+<field>
+<datum_id>4</datum_id>
+<field_type>float</field_type>
+<example_value>-2.4</example_value>
+</field>
+</fields>
+</message>
+</messages>
+</category>
+<category name="FR_MFG_SENTIMENT">
+<description>French Manufacturing Sentiment</description>
+<country>FR</country>
+<category_id>50005</category_id>
+<data>
+<datum>
+<short_description>French Manufacturing Sentiment</short_description>
+<description>Current Month, French Manufacturing Sentiment Index</description>
+<datum_type>index</datum_type>
+<datum_id>1</datum_id>
+</datum>
+</data>
+<messages>
+<message>
+<message_type>release</message_type>
+<message_version>1</message_version>
+<multicast_group>EU_GROUP_2</multicast_group>
+<fields>
+<field>
+<datum_id>1</datum_id>
+<field_type>float</field_type>
+<example_value>0.7</example_value>
+</field>
+</fields>
+</message>
+<message>
+<message_type>estimate</message_type>
+<message_version>1</message_version>
+<multicast_group>EU_ESTIMATES</multicast_group>
+<fields>
+<field>
+<datum_id>1</datum_id>
+<field_type>float</field_type>
+<example_value>0.7</example_value>
+</field>
+</fields>
+</message>
+</messages>
+</category>
+<category name="FR_CONSUMER_SENTIMENT">
+<description>French Consumer Sentiment</description>
+<country>FR</country>
+<category_id>50006</category_id>
+<data>
+<datum>
+<short_description>French Consumer Sentiment</short_description>
+<description>Current Month, French Consumer Sentiment Index</description>
+<datum_type>index</datum_type>
+<datum_id>1</datum_id>
+</datum>
+</data>
+<messages>
+<message>
+<message_type>release</message_type>
+<message_version>1</message_version>
+<multicast_group>EU_GROUP_2</multicast_group>
+<fields>
+<field>
+<datum_id>1</datum_id>
+<field_type>float</field_type>
+<example_value>0.7</example_value>
+</field>
+</fields>
+</message>
+<message>
+<message_type>estimate</message_type>
+<message_version>1</message_version>
+<multicast_group>EU_ESTIMATES</multicast_group>
+<fields>
+<field>
+<datum_id>1</datum_id>
+<field_type>float</field_type>
+<example_value>0.7</example_value>
+</field>
+</fields>
+</message>
+</messages>
+</category>
+<category name="FR_BANK_OF_FRANCE_SURVEY">
+<description>Bank of France Business Survey</description>
+<country>FR</country>
+<category_id>50007</category_id>
+<data>
+<datum>
+<short_description>BOF Manufacturing Sentiment Index</short_description>
+<description>Current Month, BOF Manufacturing Sentiment Index</description>
+<datum_type>index</datum_type>
+<datum_id>1</datum_id>
+</datum>
+<datum>
+<short_description>BOF Services Sentiment Index</short_description>
+<description>Current Month, BOF Services Sentiment Index</description>
+<datum_type>index</datum_type>
+<datum_id>2</datum_id>
+</datum>
+</data>
+<messages>
+<message>
+<message_type>release</message_type>
+<message_version>1</message_version>
+<multicast_group>EU_GROUP_2</multicast_group>
+<fields>
+<field>
+<datum_id>1</datum_id>
+<field_type>float</field_type>
+<example_value>0.7</example_value>
+</field>
+<field>
+<datum_id>2</datum_id>
+<field_type>float</field_type>
+<example_value>3.2</example_value>
+</field>
+</fields>
+</message>
+<message>
+<message_type>estimate</message_type>
+<message_version>1</message_version>
+<multicast_group>EU_ESTIMATES</multicast_group>
+<fields>
+<field>
+<datum_id>1</datum_id>
+<field_type>float</field_type>
+<example_value>0.7</example_value>
+</field>
+<field>
+<datum_id>2</datum_id>
+<field_type>float</field_type>
+<example_value>3.2</example_value>
+</field>
+</fields>
+</message>
+</messages>
+</category>
+<category name="FR_NON_FARM_PAYROLLS">
+<description>French Non-Farm Payrolls</description>
+<country>FR</country>
+<category_id>50008</category_id>
+<data>
+<datum>
+<short_description>French Payrolls change year on year</short_description>
+<description>Current Month, yr/yr change in French Payrolls</description>
+<datum_type>%</datum_type>
+<datum_id>2</datum_id>
+</datum>
+<datum>
+<short_description>French Payrolls change q/q</short_description>
+<description>French Payrolls change, quarter on quarter</description>
+<datum_type>%</datum_type>
+<datum_id>3</datum_id>
+</datum>
+</data>
+<messages>
+<message>
+<message_type>release</message_type>
+<message_version>2</message_version>
+<start_date>2010-05-19</start_date>
+<multicast_group>EU_GROUP_2</multicast_group>
+<fields>
+<field>
+<datum_id>2</datum_id>
+<field_type>float</field_type>
+<example_value>3.2</example_value>
+</field>
+<field>
+<datum_id>3</datum_id>
+<field_type>float</field_type>
+<example_value>0.7</example_value>
+</field>
+</fields>
+</message>
+<message>
+<message_type>estimate</message_type>
+<message_version>2</message_version>
+<start_date>2010-05-19</start_date>
+<multicast_group>EU_ESTIMATES</multicast_group>
+<fields>
+<field>
+<datum_id>2</datum_id>
+<field_type>float</field_type>
+<example_value>3.2</example_value>
+</field>
+<field>
+<datum_id>3</datum_id>
+<field_type>float</field_type>
+<example_value>0.7</example_value>
+</field>
+</fields>
+</message>
+</messages>
+</category>
+<category name="FR_FRENCH_ELECTION_POLL">
+<description>Poll results leading up to the 2012 French Election.</description>
+<country>FR</country>
+<category_id>50009</category_id>
+<data>
+<datum>
+<short_description>Hollande (% voter intentions 1st round)</short_description>
+<description>Hollande (% voter intentions in first round)</description>
+<datum_type>%</datum_type>
+<datum_id>1</datum_id>
+</datum>
+<datum>
+<short_description>Sarkozy (% voter intentions 1st round)</short_description>
+<description>Sarkozy (% voter intentions in first round)</description>
+<datum_type>%</datum_type>
+<datum_id>2</datum_id>
+</datum>
+<datum>
+<short_description>Third Runner-Up (% voter intentions 1st round)</short_description>
+<description>Third Runner-Up (% voter intentions in first round)</description>
+<datum_type>%</datum_type>
+<datum_id>3</datum_id>
+</datum>
+<datum>
+<short_description>Hollande (% voter intentions 2nd round)</short_description>
+<description>Hollande (% voter intentions in second round)</description>
+<datum_type>%</datum_type>
+<datum_id>4</datum_id>
+</datum>
+<datum>
+<short_description>Sarkozy (% voter intentions 2nd round)</short_description>
+<description>Sarkozy (% voter intentions in second round)</description>
+<datum_type>%</datum_type>
+<datum_id>5</datum_id>
+</datum>
+</data>
+<messages>
+<message>
+<message_type>release</message_type>
+<message_version>2</message_version>
+<start_date>2012-04-10</start_date>
+<multicast_group>EU_GROUP_2</multicast_group>
+<fields>
+<field>
+<datum_id>1</datum_id>
+<field_type>float</field_type>
+<example_value>28.5</example_value>
+</field>
+<field>
+<datum_id>2</datum_id>
+<field_type>float</field_type>
+<example_value>30</example_value>
+</field>
+<field>
+<datum_id>3</datum_id>
+<field_type>float</field_type>
+<example_value>18.5</example_value>
+</field>
+<field>
+<datum_id>4</datum_id>
+<field_type>float</field_type>
+<example_value>29</example_value>
+</field>
+<field>
+<datum_id>5</datum_id>
+<field_type>float</field_type>
+<example_value>31</example_value>
+</field>
+</fields>
+</message>
+<message>
+<message_type>estimate</message_type>
+<message_version>2</message_version>
+<start_date>2012-04-10</start_date>
+<multicast_group>EU_ESTIMATES</multicast_group>
+<fields>
+<field>
+<datum_id>1</datum_id>
+<field_type>float</field_type>
+<example_value>28.5</example_value>
+</field>
+<field>
+<datum_id>2</datum_id>
+<field_type>float</field_type>
+<example_value>30</example_value>
+</field>
+<field>
+<datum_id>3</datum_id>
+<field_type>float</field_type>
+<example_value>18.5</example_value>
+</field>
+<field>
+<datum_id>4</datum_id>
+<field_type>float</field_type>
+<example_value>29</example_value>
+</field>
+<field>
+<datum_id>5</datum_id>
+<field_type>float</field_type>
+<example_value>31</example_value>
+</field>
+</fields>
+</message>
+</messages>
+</category>
+<category name="FR_FRENCH_PARLIAMENTARY_ELECTION_POLL">
+<description>Poll results leading up to the 2012 French Parliamentary Election.</description>
+<country>FR</country>
+<category_id>50010</category_id>
+<data>
+<datum>
+<short_description>Total Extreme Left (%)</short_description>
+<description>Total Extreme Left (% of voters polled who intend to vote for)</description>
+<datum_type>%</datum_type>
+<datum_id>1</datum_id>
+</datum>
+<datum>
+<short_description>Total Left (%)</short_description>
+<description>Total Left (% of voters polled who intend to vote for)</description>
+<datum_type>%</datum_type>
+<datum_id>2</datum_id>
+</datum>
+<datum>
+<short_description>Total Right (%)</short_description>
+<description>Total Right (% of votes polled who intend to vote for)</description>
+<datum_type>%</datum_type>
+<datum_id>3</datum_id>
+</datum>
+</data>
+<messages>
+<message>
+<message_type>release</message_type>
+<message_version>1</message_version>
+<start_date>2012-05-22</start_date>
+<multicast_group>EU_GROUP_2</multicast_group>
+<fields>
+<field>
+<datum_id>1</datum_id>
+<field_type>float</field_type>
+<example_value>1.5</example_value>
+</field>
+<field>
+<datum_id>2</datum_id>
+<field_type>float</field_type>
+<example_value>44</example_value>
+</field>
+<field>
+<datum_id>3</datum_id>
+<field_type>float</field_type>
+<example_value>32</example_value>
+</field>
+</fields>
+</message>
+<message>
+<message_type>estimate</message_type>
+<message_version>1</message_version>
+<start_date>2012-05-22</start_date>
+<multicast_group>EU_ESTIMATES</multicast_group>
+<fields>
+<field>
+<datum_id>1</datum_id>
+<field_type>float</field_type>
+<example_value>1.5</example_value>
+</field>
+<field>
+<datum_id>2</datum_id>
+<field_type>float</field_type>
+<example_value>44</example_value>
+</field>
+<field>
+<datum_id>3</datum_id>
+<field_type>float</field_type>
+<example_value>32</example_value>
+</field>
+</fields>
+</message>
+</messages>
+</category>
+<category name="FR_JOBSEEKERS">
+<description>French Labour Ministry Jobseekers</description>
+<country>FR</country>
+<category_id>50011</category_id>
+<data>
+<datum>
+<short_description>Jobseekers net change seasonally adjusted</short_description>
+<description>Jobseekers net change seasonally adjusted</description>
+<datum_type>units</datum_type>
+<datum_id>2</datum_id>
+</datum>
+</data>
+<messages>
+<message>
+<message_type>release</message_type>
+<message_version>2</message_version>
+<multicast_group>EU_GROUP_2</multicast_group>
+<fields>
+<field>
+<datum_id>2</datum_id>
+<field_type>float</field_type>
+<example_value>15400</example_value>
+</field>
+</fields>
+</message>
+<message>
+<message_type>estimate</message_type>
+<message_version>2</message_version>
+<multicast_group>EU_ESTIMATES</multicast_group>
+<fields>
+<field>
+<datum_id>2</datum_id>
+<field_type>float</field_type>
+<example_value>15400</example_value>
+</field>
+</fields>
+</message>
+</messages>
+</category>
+<category name="FR_Flash_GDP">
+<description>French Flash GDP</description>
+<country>FR</country>
+<category_id>50012</category_id>
+<data>
+<datum>
+<short_description>GDP change quarter on quarter</short_description>
+<description>Current Month, qtr/qtr change in GDP</description>
+<datum_type>%</datum_type>
+<datum_id>1</datum_id>
+</datum>
+<datum>
+<short_description>GDP change year on year</short_description>
+<description>Current Month, yr/yr change in GDP</description>
+<datum_type>%</datum_type>
+<datum_id>2</datum_id>
+</datum>
+</data>
+<messages>
+<message>
+<message_type>release</message_type>
+<message_version>1</message_version>
+<multicast_group>EU_GROUP_2</multicast_group>
+<fields>
+<field>
+<datum_id>1</datum_id>
+<field_type>float</field_type>
+<example_value>0.7</example_value>
+</field>
+<field>
+<datum_id>2</datum_id>
+<field_type>float</field_type>
+<example_value>3.2</example_value>
+</field>
+</fields>
+</message>
+<message>
+<message_type>estimate</message_type>
+<message_version>1</message_version>
+<multicast_group>EU_ESTIMATES</multicast_group>
+<fields>
+<field>
+<datum_id>1</datum_id>
+<field_type>float</field_type>
+<example_value>0.7</example_value>
+</field>
+<field>
+<datum_id>2</datum_id>
+<field_type>float</field_type>
+<example_value>3.2</example_value>
+</field>
+</fields>
+</message>
+</messages>
+</category>
+<category name="FR_Final_GDP">
+<description>French Final GDP</description>
+<country>FR</country>
+<category_id>50013</category_id>
+<data>
+<datum>
+<short_description>GDP change quarter on quarter</short_description>
+<description>Current Month, qtr/qtr change in GDP</description>
+<datum_type>%</datum_type>
+<datum_id>1</datum_id>
+</datum>
+<datum>
+<short_description>GDP change year on year</short_description>
+<description>Current Month, yr/yr change in GDP</description>
+<datum_type>%</datum_type>
+<datum_id>2</datum_id>
+</datum>
+</data>
+<messages>
+<message>
+<message_type>release</message_type>
+<message_version>1</message_version>
+<multicast_group>EU_GROUP_2</multicast_group>
+<fields>
+<field>
+<datum_id>1</datum_id>
+<field_type>float</field_type>
+<example_value>0.8</example_value>
+</field>
+<field>
+<datum_id>2</datum_id>
+<field_type>float</field_type>
+<example_value>3.4</example_value>
+</field>
+</fields>
+</message>
+<message>
+<message_type>estimate</message_type>
+<message_version>1</message_version>
+<multicast_group>EU_ESTIMATES</multicast_group>
+<fields>
+<field>
+<datum_id>1</datum_id>
+<field_type>float</field_type>
+<example_value>0.8</example_value>
+</field>
+<field>
+<datum_id>2</datum_id>
+<field_type>float</field_type>
+<example_value>3.4</example_value>
+</field>
+</fields>
+</message>
+</messages>
+</category>
+<category name="FR_FLASH_HICP_CPI">
+<description>French Flash HICP and CPI</description>
+<country>FR</country>
+<category_id>50014</category_id>
+<data>
+<datum>
+<short_description>Current Month Flash, mo/mo change in French HICP</short_description>
+<description>Current Month Flash, mo/mo change in French HICP</description>
+<datum_type>%</datum_type>
+<datum_id>1</datum_id>
+</datum>
+<datum>
+<short_description>Current Month Flash, mo/mo change in French CPI</short_description>
+<description>Current Month Flash, mo/mo change in French CPI</description>
+<datum_type>%</datum_type>
+<datum_id>2</datum_id>
+</datum>
+<datum>
+<short_description>Current Month Flash, yr/yr change in French HICP</short_description>
+<description>Current Month Flash, yr/yr change in French HICP</description>
+<datum_type>%</datum_type>
+<datum_id>3</datum_id>
+</datum>
+<datum>
+<short_description>Current Month Flash, yr/yr change in French CPI</short_description>
+<description>Current Month Flash, yr/yr change in French CPI</description>
+<datum_type>%</datum_type>
+<datum_id>4</datum_id>
+</datum>
+</data>
+<messages>
+<message>
+<message_type>release</message_type>
+<message_version>1</message_version>
+<start_date>2016-02-26</start_date>
+<multicast_group>EU_GROUP_2</multicast_group>
+<fields>
+<field>
+<datum_id>1</datum_id>
+<field_type>float</field_type>
+<example_value>0.7</example_value>
+</field>
+<field>
+<datum_id>2</datum_id>
+<field_type>float</field_type>
+<example_value>0.5</example_value>
+</field>
+<field>
+<datum_id>3</datum_id>
+<field_type>float</field_type>
+<example_value>0.2</example_value>
+</field>
+<field>
+<datum_id>4</datum_id>
+<field_type>float</field_type>
+<example_value>0.1</example_value>
+</field>
+</fields>
+</message>
+<message>
+<message_type>estimate</message_type>
+<message_version>1</message_version>
+<start_date>2016-02-26</start_date>
+<multicast_group>EU_ESTIMATES</multicast_group>
+<fields>
+<field>
+<datum_id>1</datum_id>
+<field_type>float</field_type>
+<example_value>0.7</example_value>
+</field>
+<field>
+<datum_id>2</datum_id>
+<field_type>float</field_type>
+<example_value>0.5</example_value>
+</field>
+<field>
+<datum_id>3</datum_id>
+<field_type>float</field_type>
+<example_value>0.2</example_value>
+</field>
+<field>
+<datum_id>4</datum_id>
+<field_type>float</field_type>
+<example_value>0.1</example_value>
+</field>
+</fields>
+</message>
+</messages>
+</category>
+</protocol>

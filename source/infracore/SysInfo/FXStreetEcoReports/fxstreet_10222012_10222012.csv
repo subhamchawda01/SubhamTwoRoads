@@ -1,0 +1,8 @@
+"country","date","name","actual","consensus","previous","volatility"
+"Australia","20121022 00:00:00","RBA Assist Gov Debelle Speech","","","","2"
+"Japan","20121022 00:30:00","BoJ's Governor Shirakawa Speech","","","","2"
+"United Kingdom","20121022 06:00:00","Nationwide Housing Prices n.s.a (YoY)","","","-1.400  %","2"
+"Switzerland","20121022 07:00:00","Monthly Statistical Bulletin","","","","2"
+"Poland","20121022 12:00:00","Net Inflation","","","2.100  %","1"
+"Mexico","20121022 13:00:00","Retail Sales (MoM)","","","-1.400  %","1"
+"Mexico","20121022 13:00:00","Retail Sales (YoY)","","","2.600  %","1"

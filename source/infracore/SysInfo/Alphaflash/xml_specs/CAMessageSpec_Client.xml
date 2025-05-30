@@ -1,0 +1,1462 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<?xml-stylesheet type="text/xsl" href="./ClientHTML.xsl"?><protocol>
+<version>351</version>
+<revisions>
+    <revision type="Final" version="351" author="MNI News" date="03/13/2017"/>
+  </revisions>
+<category name="CA_Building_Permits">
+<description>Building Permits</description>
+<country>CA</country>
+<category_id>40001</category_id>
+<data>
+<datum>
+<short_description>Combined Month to Month</short_description>
+<description>Combined Month to Month</description>
+<datum_type>%</datum_type>
+<datum_id>1</datum_id>
+</datum>
+<datum>
+<short_description>Residential Month to Month</short_description>
+<description>Residential Month to Month</description>
+<datum_type>%</datum_type>
+<datum_id>2</datum_id>
+</datum>
+<datum>
+<short_description>Non-Residential Month to Month</short_description>
+<description>Non-Residential Month to Month</description>
+<datum_type>%</datum_type>
+<datum_id>3</datum_id>
+</datum>
+</data>
+<messages>
+<message>
+<message_type>release</message_type>
+<message_version>1</message_version>
+<multicast_group>CA_STATISTICS_CANADA</multicast_group>
+<fields>
+<field>
+<datum_id>1</datum_id>
+<field_type>float</field_type>
+<example_value>-1.0</example_value>
+</field>
+<field>
+<datum_id>2</datum_id>
+<field_type>float</field_type>
+<example_value>18.2</example_value>
+</field>
+<field>
+<datum_id>3</datum_id>
+<field_type>float</field_type>
+<example_value>-25.6</example_value>
+</field>
+</fields>
+</message>
+<message>
+<message_type>estimate</message_type>
+<message_version>1</message_version>
+<multicast_group>CA_ESTIMATES</multicast_group>
+<fields>
+<field>
+<datum_id>1</datum_id>
+<field_type>float</field_type>
+<example_value>-1.0</example_value>
+</field>
+<field>
+<datum_id>2</datum_id>
+<field_type>float</field_type>
+<example_value>18.2</example_value>
+</field>
+<field>
+<datum_id>3</datum_id>
+<field_type>float</field_type>
+<example_value>-25.6</example_value>
+</field>
+</fields>
+</message>
+</messages>
+</category>
+<category name="CA_Capacity_Utilization">
+<description>Capacity Utilization</description>
+<country>CA</country>
+<category_id>40002</category_id>
+<data>
+<datum>
+<short_description>Industrial Capacity Use Rate</short_description>
+<description>Industrial Capacity Use Rate</description>
+<datum_type>%</datum_type>
+<datum_id>3</datum_id>
+</datum>
+<datum>
+<short_description>Manufacturing Capacity Use Rate</short_description>
+<description>Manufacturing Capacity Use Rate</description>
+<datum_type>%</datum_type>
+<datum_id>4</datum_id>
+</datum>
+</data>
+<messages>
+<message>
+<message_type>release</message_type>
+<message_version>2</message_version>
+<start_date>2015-12-10</start_date>
+<multicast_group>CA_STATISTICS_CANADA</multicast_group>
+<fields>
+<field>
+<datum_id>3</datum_id>
+<field_type>float</field_type>
+<example_value>83.2</example_value>
+</field>
+<field>
+<datum_id>4</datum_id>
+<field_type>float</field_type>
+<example_value>89.6</example_value>
+</field>
+</fields>
+</message>
+<message>
+<message_type>estimate</message_type>
+<message_version>2</message_version>
+<start_date>2015-12-10</start_date>
+<multicast_group>CA_ESTIMATES</multicast_group>
+<fields>
+<field>
+<datum_id>3</datum_id>
+<field_type>float</field_type>
+<example_value>83.2</example_value>
+</field>
+<field>
+<datum_id>4</datum_id>
+<field_type>float</field_type>
+<example_value>89.6</example_value>
+</field>
+</fields>
+</message>
+</messages>
+</category>
+<category name="CA_Consumer_Price_Index">
+<description>Consumer Price Index</description>
+<country>CA</country>
+<category_id>40003</category_id>
+<data>
+<datum>
+<short_description>Headline CPI Month on Month</short_description>
+<description>Headline CPI Month on Month</description>
+<datum_type>%</datum_type>
+<datum_id>1</datum_id>
+</datum>
+<datum>
+<short_description>Excluding Food and Energy Month on Month</short_description>
+<description>Excluding Food and Energy Month on Month</description>
+<datum_type>%</datum_type>
+<datum_id>2</datum_id>
+</datum>
+<datum>
+<short_description>Headline CPI Year on Year</short_description>
+<description>Headline CPI Year on Year</description>
+<datum_type>%</datum_type>
+<datum_id>4</datum_id>
+</datum>
+<datum>
+<short_description>CPI-trim (Y/Y)</short_description>
+<description>CPI-trim (Y/Y)</description>
+<datum_type>%</datum_type>
+<datum_id>6</datum_id>
+</datum>
+<datum>
+<short_description>CPI-median (Y/Y)</short_description>
+<description>CPI-median (Y/Y)</description>
+<datum_type>%</datum_type>
+<datum_id>7</datum_id>
+</datum>
+<datum>
+<short_description>CPI-common (Y/Y)</short_description>
+<description>CPI-common (Y/Y)</description>
+<datum_type>%</datum_type>
+<datum_id>8</datum_id>
+</datum>
+</data>
+<messages>
+<message>
+<message_type>release</message_type>
+<message_version>2</message_version>
+<start_date>2016-12-22</start_date>
+<multicast_group>CA_STATISTICS_CANADA</multicast_group>
+<fields>
+<field>
+<datum_id>1</datum_id>
+<field_type>float</field_type>
+<example_value>0.7</example_value>
+</field>
+<field>
+<datum_id>2</datum_id>
+<field_type>float</field_type>
+<example_value>0.0</example_value>
+</field>
+<field>
+<datum_id>4</datum_id>
+<field_type>float</field_type>
+<example_value>3.1</example_value>
+</field>
+<field>
+<datum_id>6</datum_id>
+<field_type>float</field_type>
+<example_value>1.5</example_value>
+</field>
+<field>
+<datum_id>7</datum_id>
+<field_type>float</field_type>
+<example_value>1.7</example_value>
+</field>
+<field>
+<datum_id>8</datum_id>
+<field_type>float</field_type>
+<example_value>1.8</example_value>
+</field>
+</fields>
+</message>
+<message>
+<message_type>estimate</message_type>
+<message_version>2</message_version>
+<start_date>2016-12-22</start_date>
+<multicast_group>CA_ESTIMATES</multicast_group>
+<fields>
+<field>
+<datum_id>1</datum_id>
+<field_type>float</field_type>
+<example_value>0.7</example_value>
+</field>
+<field>
+<datum_id>2</datum_id>
+<field_type>float</field_type>
+<example_value>0.0</example_value>
+</field>
+<field>
+<datum_id>4</datum_id>
+<field_type>float</field_type>
+<example_value>3.1</example_value>
+</field>
+<field>
+<datum_id>6</datum_id>
+<field_type>float</field_type>
+<example_value>1.5</example_value>
+</field>
+<field>
+<datum_id>7</datum_id>
+<field_type>float</field_type>
+<example_value>1.7</example_value>
+</field>
+<field>
+<datum_id>8</datum_id>
+<field_type>float</field_type>
+<example_value>1.8</example_value>
+</field>
+</fields>
+</message>
+</messages>
+</category>
+<category name="CA_Gross_Domestic_Product_by_Industry">
+<description>Gross Domestic Product by Industry</description>
+<country>CA</country>
+<category_id>40005</category_id>
+<data>
+<datum>
+<short_description>Headline GDP change (all industries) Monthly</short_description>
+<description>Headline GDP change (all industries) Monthly</description>
+<datum_type>%</datum_type>
+<datum_id>1</datum_id>
+</datum>
+<datum>
+<short_description>Goods Producing Industries change Monthly</short_description>
+<description>Goods Producing Industries change Monthly</description>
+<datum_type>%</datum_type>
+<datum_id>2</datum_id>
+</datum>
+<datum>
+<short_description>Service Producing Industries change Monthly</short_description>
+<description>Service Producing Industries change Monthly</description>
+<datum_type>%</datum_type>
+<datum_id>3</datum_id>
+</datum>
+</data>
+<messages>
+<message>
+<message_type>release</message_type>
+<message_version>1</message_version>
+<multicast_group>CA_STATISTICS_CANADA</multicast_group>
+<fields>
+<field>
+<datum_id>1</datum_id>
+<field_type>float</field_type>
+<example_value>0.4</example_value>
+</field>
+<field>
+<datum_id>2</datum_id>
+<field_type>float</field_type>
+<example_value>0.4</example_value>
+</field>
+<field>
+<datum_id>3</datum_id>
+<field_type>float</field_type>
+<example_value>0.4</example_value>
+</field>
+</fields>
+</message>
+<message>
+<message_type>estimate</message_type>
+<message_version>1</message_version>
+<multicast_group>CA_ESTIMATES</multicast_group>
+<fields>
+<field>
+<datum_id>1</datum_id>
+<field_type>float</field_type>
+<example_value>0.4</example_value>
+</field>
+<field>
+<datum_id>2</datum_id>
+<field_type>float</field_type>
+<example_value>0.4</example_value>
+</field>
+<field>
+<datum_id>3</datum_id>
+<field_type>float</field_type>
+<example_value>0.4</example_value>
+</field>
+</fields>
+</message>
+</messages>
+</category>
+<category name="CA_Housing_Starts_CMHC">
+<description>Housing Starts – CMHC</description>
+<country>CA</country>
+<category_id>40006</category_id>
+<data>
+<datum>
+<short_description>Housing starts</short_description>
+<description>Housing starts</description>
+<datum_scale>K</datum_scale>
+<datum_type>index</datum_type>
+<datum_id>1</datum_id>
+</datum>
+<datum>
+<short_description>Revised housing starts</short_description>
+<description>Revised housing starts</description>
+<datum_scale>K</datum_scale>
+<datum_type>index</datum_type>
+<datum_id>2</datum_id>
+</datum>
+</data>
+<messages>
+<message>
+<message_type>release</message_type>
+<message_version>1</message_version>
+<multicast_group>CA_GROUP_2</multicast_group>
+<fields>
+<field>
+<datum_id>1</datum_id>
+<field_type>float</field_type>
+<example_value>217.8</example_value>
+</field>
+<field>
+<datum_id>2</datum_id>
+<field_type>float</field_type>
+<example_value>227.7</example_value>
+</field>
+</fields>
+</message>
+<message>
+<message_type>estimate</message_type>
+<message_version>1</message_version>
+<multicast_group>CA_ESTIMATES</multicast_group>
+<fields>
+<field>
+<datum_id>1</datum_id>
+<field_type>float</field_type>
+<example_value>217.8</example_value>
+</field>
+<field>
+<datum_id>2</datum_id>
+<field_type>float</field_type>
+<example_value>227.7</example_value>
+</field>
+</fields>
+</message>
+</messages>
+</category>
+<category name="CA_Industrial_Product_Raw_Material_Price_Index">
+<description>Industrial Product and Raw Material Price Index</description>
+<country>CA</country>
+<category_id>40007</category_id>
+<data>
+<datum>
+<short_description>IPPI (MoM Industrial Product Price Index)</short_description>
+<description>IPPI (MoM Industrial Product Price Index)</description>
+<datum_type>%</datum_type>
+<datum_id>1</datum_id>
+</datum>
+<datum>
+<short_description>RMPI (MoM Raw Material Price Index)</short_description>
+<description>RMPI (MoM Raw Material Price Index)</description>
+<datum_type>%</datum_type>
+<datum_id>3</datum_id>
+</datum>
+<datum>
+<short_description>Ex Energy and Petroleum</short_description>
+<description>Ex Energy and Petroleum</description>
+<datum_type>%</datum_type>
+<datum_id>5</datum_id>
+</datum>
+<datum>
+<short_description>Ex Crude Energy</short_description>
+<description>Ex Crude Energy</description>
+<datum_type>%</datum_type>
+<datum_id>6</datum_id>
+</datum>
+</data>
+<messages>
+<message>
+<message_type>release</message_type>
+<message_version>2</message_version>
+<start_date>2015-11-27</start_date>
+<multicast_group>CA_STATISTICS_CANADA</multicast_group>
+<fields>
+<field>
+<datum_id>1</datum_id>
+<field_type>float</field_type>
+<example_value>0.7</example_value>
+</field>
+<field>
+<datum_id>3</datum_id>
+<field_type>float</field_type>
+<example_value>0.1</example_value>
+</field>
+<field>
+<datum_id>5</datum_id>
+<field_type>float</field_type>
+<example_value>3.2</example_value>
+</field>
+<field>
+<datum_id>6</datum_id>
+<field_type>float</field_type>
+<example_value>1.2</example_value>
+</field>
+</fields>
+</message>
+<message>
+<message_type>estimate</message_type>
+<message_version>2</message_version>
+<start_date>2015-11-27</start_date>
+<multicast_group>CA_ESTIMATES</multicast_group>
+<fields>
+<field>
+<datum_id>1</datum_id>
+<field_type>float</field_type>
+<example_value>0.7</example_value>
+</field>
+<field>
+<datum_id>3</datum_id>
+<field_type>float</field_type>
+<example_value>0.1</example_value>
+</field>
+<field>
+<datum_id>5</datum_id>
+<field_type>float</field_type>
+<example_value>3.2</example_value>
+</field>
+<field>
+<datum_id>6</datum_id>
+<field_type>float</field_type>
+<example_value>1.2</example_value>
+</field>
+</fields>
+</message>
+</messages>
+</category>
+<category name="CA_Interest_Rate_Announcement_Bank_of_Canada">
+<description>Interest Rate Announcement Bank of Canada</description>
+<country>CA</country>
+<category_id>40008</category_id>
+<data>
+<datum>
+<short_description>Overnight Rate Target (level)</short_description>
+<description>Overnight Rate Target (level)</description>
+<datum_type>%</datum_type>
+<datum_id>2</datum_id>
+</datum>
+<datum>
+<short_description>Does BoC indicate further easing may become appropriate?</short_description>
+<description>Does BoC indicate further easing may become appropriate?</description>
+<datum_type>yes_no_na</datum_type>
+<datum_id>3</datum_id>
+</datum>
+<datum>
+<short_description>Does BoC rule out further easing?</short_description>
+<description>Does BoC rule out further easing?</description>
+<datum_type>yes_no_na</datum_type>
+<datum_id>4</datum_id>
+</datum>
+<datum>
+<short_description>Does BoC indicate the current degree of monetary policy stimulus is appropriate?</short_description>
+<description>Does BoC indicate the current degree of monetary policy stimulus is appropriate?</description>
+<datum_type>yes_no_na</datum_type>
+<datum_id>5</datum_id>
+</datum>
+<datum>
+<short_description>Does BoC indicate the use of unconventional tools is possible?</short_description>
+<description>Does BoC indicate the use of unconventional tools is possible?</description>
+<datum_type>yes_no_na</datum_type>
+<datum_id>6</datum_id>
+</datum>
+<datum>
+<short_description>Does BoC indicate a more hawkish tilt compared to its last release (less likely to cut or more likely to hike)?</short_description>
+<description>Does BoC indicate a more hawkish tilt compared to its last release (less likely to cut or more likely to hike)?</description>
+<datum_type>yes_no_na</datum_type>
+<datum_id>7</datum_id>
+</datum>
+<datum>
+<short_description>Does BoC indicate a more dovish tilt compared to its last release (less likely to hike or more likely to cut)?</short_description>
+<description>Does BoC indicate a more dovish tilt compared to its last release (less likely to hike or more likely to cut)?</description>
+<datum_type>yes_no_na</datum_type>
+<datum_id>8</datum_id>
+</datum>
+<datum>
+<short_description>Does BoC indicate risks to inflation are “roughly balanced”?</short_description>
+<description>Does BoC indicate risks to inflation are “roughly balanced”?</description>
+<datum_type>yes_no_na</datum_type>
+<datum_id>9</datum_id>
+</datum>
+<datum>
+<short_description>Does BoC indicate a more hawkish inflation outlook (less downside risks or more upside risks)?</short_description>
+<description>Does BoC indicate a more hawkish inflation outlook (less downside risks or more upside risks)?</description>
+<datum_type>yes_no_na</datum_type>
+<datum_id>10</datum_id>
+</datum>
+<datum>
+<short_description>Does BoC indicate a more dovish inflation outlook (more downside risks or less upside risks)?</short_description>
+<description>Does BoC indicate a more dovish inflation outlook (more downside risks or less upside risks)?</description>
+<datum_type>yes_no_na</datum_type>
+<datum_id>11</datum_id>
+</datum>
+<datum>
+<short_description>Does BoC indicate “financial vulnerabilities" are decreasing?</short_description>
+<description>Does BoC indicate “financial vulnerabilities" are decreasing?</description>
+<datum_type>yes_no_na</datum_type>
+<datum_id>12</datum_id>
+</datum>
+<datum>
+<short_description>Does the BOC indicate that financial vulnerabilities are increasing faster than the previous statement?</short_description>
+<description>Does the BOC indicate that financial vulnerabilities are increasing faster than the previous statement?</description>
+<datum_type>yes_no_na</datum_type>
+<datum_id>13</datum_id>
+</datum>
+<datum>
+<short_description>Does the BOC indicate that the overall balance of risks turned to the downside?</short_description>
+<description>Does the BOC indicate that the overall balance of risks turned to the downside?</description>
+<datum_type>yes_no_na</datum_type>
+<datum_id>15</datum_id>
+</datum>
+<datum>
+<short_description>Does the BOC indicate that the overall balance of risks turned to the upside?</short_description>
+<description>Does the BOC indicate that the overall balance of risks turned to the upside?</description>
+<datum_type>yes_no_na</datum_type>
+<datum_id>16</datum_id>
+</datum>
+<datum>
+<short_description>Does BoC change the output gap closing "around mid-2018," to indicate a shorter time horizon?</short_description>
+<description>Does BoC change the output gap closing "around mid-2018," to indicate a shorter time horizon?</description>
+<datum_type>yes_no_na</datum_type>
+<datum_id>18</datum_id>
+</datum>
+<datum>
+<short_description>Does BoC change the output gap closing "around mid-2018," to indicate a longer time horizon?</short_description>
+<description>Does BoC change the output gap closing "around mid-2018," to indicate a longer time horizon?</description>
+<datum_type>yes_no_na</datum_type>
+<datum_id>19</datum_id>
+</datum>
+<datum>
+<short_description>Does the BOC indicate that the overall balance of risks the same as in January?</short_description>
+<description>Does the BOC indicate that the overall balance of risks the same as in January?</description>
+<datum_type>yes_no_na</datum_type>
+<datum_id>20</datum_id>
+</datum>
+</data>
+<messages>
+<message>
+<message_type>release</message_type>
+<message_version>5</message_version>
+<start_date>2017-03-01</start_date>
+<multicast_group>CA_BANK_OF_CANADA</multicast_group>
+<fields>
+<field>
+<datum_id>2</datum_id>
+<field_type>float</field_type>
+<example_value>0.50</example_value>
+</field>
+<field>
+<datum_id>3</datum_id>
+<field_type>yes_no_na</field_type>
+<example_value>0</example_value>
+</field>
+<field>
+<datum_id>4</datum_id>
+<field_type>yes_no_na</field_type>
+<example_value>0</example_value>
+</field>
+<field>
+<datum_id>5</datum_id>
+<field_type>yes_no_na</field_type>
+<example_value>0</example_value>
+</field>
+<field>
+<datum_id>6</datum_id>
+<field_type>yes_no_na</field_type>
+<example_value>0</example_value>
+</field>
+<field>
+<datum_id>7</datum_id>
+<field_type>yes_no_na</field_type>
+<example_value>0</example_value>
+</field>
+<field>
+<datum_id>8</datum_id>
+<field_type>yes_no_na</field_type>
+<example_value>0</example_value>
+</field>
+<field>
+<datum_id>9</datum_id>
+<field_type>yes_no_na</field_type>
+<example_value>0</example_value>
+</field>
+<field>
+<datum_id>10</datum_id>
+<field_type>yes_no_na</field_type>
+<example_value>0</example_value>
+</field>
+<field>
+<datum_id>11</datum_id>
+<field_type>yes_no_na</field_type>
+<example_value>0</example_value>
+</field>
+<field>
+<datum_id>12</datum_id>
+<field_type>yes_no_na</field_type>
+<example_value>0</example_value>
+</field>
+<field>
+<datum_id>13</datum_id>
+<field_type>yes_no_na</field_type>
+<example_value>0</example_value>
+</field>
+<field>
+<datum_id>15</datum_id>
+<field_type>yes_no_na</field_type>
+<example_value>0</example_value>
+</field>
+<field>
+<datum_id>16</datum_id>
+<field_type>yes_no_na</field_type>
+<example_value>0</example_value>
+</field>
+<field>
+<datum_id>18</datum_id>
+<field_type>yes_no_na</field_type>
+<example_value>1</example_value>
+</field>
+<field>
+<datum_id>19</datum_id>
+<field_type>yes_no_na</field_type>
+<example_value>0</example_value>
+</field>
+<field>
+<datum_id>20</datum_id>
+<field_type>yes_no_na</field_type>
+<example_value>0</example_value>
+</field>
+</fields>
+</message>
+</messages>
+</category>
+<category name="CA_International_Merchandise_Trade">
+<description>International Merchandise Trade (Trade Balance)</description>
+<country>CA</country>
+<category_id>40009</category_id>
+<data>
+<datum>
+<short_description>Merchandise Trade Balance Month on Month (billion Canadian $)</short_description>
+<description>Merchandise Trade Balance Month on Month (billion Canadian $)</description>
+<datum_scale>B</datum_scale>
+<datum_type>CAD</datum_type>
+<datum_id>1</datum_id>
+</datum>
+<datum>
+<short_description>Exports Month on Month (billion Canadian $)</short_description>
+<description>Exports Month on Month (billion Canadian $)</description>
+<datum_scale>B</datum_scale>
+<datum_type>CAD</datum_type>
+<datum_id>2</datum_id>
+</datum>
+<datum>
+<short_description>Imports Month on Month (billion Canadian $)</short_description>
+<description>Imports Month on Month (billion Canadian $)</description>
+<datum_scale>B</datum_scale>
+<datum_type>CAD</datum_type>
+<datum_id>3</datum_id>
+</datum>
+</data>
+<messages>
+<message>
+<message_type>release</message_type>
+<message_version>1</message_version>
+<multicast_group>CA_STATISTICS_CANADA</multicast_group>
+<fields>
+<field>
+<datum_id>1</datum_id>
+<field_type>float</field_type>
+<example_value>5.1</example_value>
+</field>
+<field>
+<datum_id>2</datum_id>
+<field_type>float</field_type>
+<example_value>39.86</example_value>
+</field>
+<field>
+<datum_id>3</datum_id>
+<field_type>float</field_type>
+<example_value>34.75</example_value>
+</field>
+</fields>
+</message>
+<message>
+<message_type>estimate</message_type>
+<message_version>1</message_version>
+<multicast_group>CA_ESTIMATES</multicast_group>
+<fields>
+<field>
+<datum_id>1</datum_id>
+<field_type>float</field_type>
+<example_value>5.1</example_value>
+</field>
+<field>
+<datum_id>2</datum_id>
+<field_type>float</field_type>
+<example_value>39.86</example_value>
+</field>
+<field>
+<datum_id>3</datum_id>
+<field_type>float</field_type>
+<example_value>34.75</example_value>
+</field>
+</fields>
+</message>
+</messages>
+</category>
+<category name="CA_International_Canadian_Transaction_Securities">
+<description>International Canadian Transaction in Securities</description>
+<country>CA</country>
+<category_id>40010</category_id>
+<data>
+<datum>
+<short_description>Inflows Month on Month</short_description>
+<description>Inflows Month on Month</description>
+<datum_scale>M</datum_scale>
+<datum_type>CAD</datum_type>
+<datum_id>1</datum_id>
+</datum>
+<datum>
+<short_description>Outflows Month on Month</short_description>
+<description>Outflows Month on Month</description>
+<datum_scale>M</datum_scale>
+<datum_type>CAD</datum_type>
+<datum_id>2</datum_id>
+</datum>
+</data>
+<messages>
+<message>
+<message_type>release</message_type>
+<message_version>1</message_version>
+<multicast_group>CA_STATISTICS_CANADA</multicast_group>
+<fields>
+<field>
+<datum_id>1</datum_id>
+<field_type>float</field_type>
+<example_value>9.75</example_value>
+</field>
+<field>
+<datum_id>2</datum_id>
+<field_type>float</field_type>
+<example_value>6.0</example_value>
+</field>
+</fields>
+</message>
+<message>
+<message_type>estimate</message_type>
+<message_version>1</message_version>
+<multicast_group>CA_ESTIMATES</multicast_group>
+<fields>
+<field>
+<datum_id>1</datum_id>
+<field_type>float</field_type>
+<example_value>9.75</example_value>
+</field>
+<field>
+<datum_id>2</datum_id>
+<field_type>float</field_type>
+<example_value>6.0</example_value>
+</field>
+</fields>
+</message>
+</messages>
+</category>
+<category name="CA_Labour_Force_Survey">
+<description>Labour Force Survey</description>
+<country>CA</country>
+<category_id>40011</category_id>
+<data>
+<datum>
+<short_description>Net Change in Employment Month on Month</short_description>
+<description>Net Change in Employment Month on Month</description>
+<datum_scale>K</datum_scale>
+<datum_type>units</datum_type>
+<datum_id>1</datum_id>
+</datum>
+<datum>
+<short_description>Unemployment rate Month on Month</short_description>
+<description>Unemployment rate Month on Month</description>
+<datum_type>%</datum_type>
+<datum_id>2</datum_id>
+</datum>
+<datum>
+<short_description>Change in Full-Time Employment m/m</short_description>
+<description>Net Change in Full-Time Employment Month on month</description>
+<datum_scale>K</datum_scale>
+<datum_type>units</datum_type>
+<datum_id>3</datum_id>
+</datum>
+<datum>
+<short_description>Change in Part-Time Employment m/m</short_description>
+<description>Net Change in Part-Time Employment Month on month</description>
+<datum_scale>K</datum_scale>
+<datum_type>units</datum_type>
+<datum_id>4</datum_id>
+</datum>
+</data>
+<messages>
+<message>
+<message_type>release</message_type>
+<message_version>2</message_version>
+<multicast_group>CA_STATISTICS_CANADA</multicast_group>
+<fields>
+<field>
+<datum_id>1</datum_id>
+<field_type>float</field_type>
+<example_value>19.2</example_value>
+</field>
+<field>
+<datum_id>2</datum_id>
+<field_type>float</field_type>
+<example_value>6.1</example_value>
+</field>
+<field>
+<datum_id>3</datum_id>
+<field_type>float</field_type>
+<example_value>9.2</example_value>
+</field>
+<field>
+<datum_id>4</datum_id>
+<field_type>float</field_type>
+<example_value>4.1</example_value>
+</field>
+</fields>
+</message>
+<message>
+<message_type>estimate</message_type>
+<message_version>2</message_version>
+<multicast_group>CA_ESTIMATES</multicast_group>
+<fields>
+<field>
+<datum_id>1</datum_id>
+<field_type>float</field_type>
+<example_value>19.2</example_value>
+</field>
+<field>
+<datum_id>2</datum_id>
+<field_type>float</field_type>
+<example_value>6.1</example_value>
+</field>
+<field>
+<datum_id>3</datum_id>
+<field_type>float</field_type>
+<example_value>9.2</example_value>
+</field>
+<field>
+<datum_id>4</datum_id>
+<field_type>float</field_type>
+<example_value>4.1</example_value>
+</field>
+</fields>
+</message>
+</messages>
+</category>
+<category name="CA_Labour_Productivity_Costs">
+<description>Labour Productivity and Costs</description>
+<country>CA</country>
+<category_id>40012</category_id>
+<data>
+<datum>
+<short_description>Labour productivity Q/Q</short_description>
+<description>Labour productivity Q/Q</description>
+<datum_type>%</datum_type>
+<datum_id>1</datum_id>
+</datum>
+<datum>
+<short_description>Hourly compensation Quarterly</short_description>
+<description>Hourly compensation Quarterly</description>
+<datum_type>%</datum_type>
+<datum_id>2</datum_id>
+</datum>
+<datum>
+<short_description>Unit Labour costs Quarterly</short_description>
+<description>Unit Labour costs Quarterly</description>
+<datum_type>%</datum_type>
+<datum_id>3</datum_id>
+</datum>
+</data>
+<messages>
+<message>
+<message_type>release</message_type>
+<message_version>1</message_version>
+<multicast_group>CA_STATISTICS_CANADA</multicast_group>
+<fields>
+<field>
+<datum_id>1</datum_id>
+<field_type>float</field_type>
+<example_value>0.8</example_value>
+</field>
+<field>
+<datum_id>2</datum_id>
+<field_type>float</field_type>
+<example_value>0.6</example_value>
+</field>
+<field>
+<datum_id>3</datum_id>
+<field_type>float</field_type>
+<example_value>1.4</example_value>
+</field>
+</fields>
+</message>
+<message>
+<message_type>estimate</message_type>
+<message_version>1</message_version>
+<multicast_group>CA_ESTIMATES</multicast_group>
+<fields>
+<field>
+<datum_id>1</datum_id>
+<field_type>float</field_type>
+<example_value>0.8</example_value>
+</field>
+<field>
+<datum_id>2</datum_id>
+<field_type>float</field_type>
+<example_value>0.6</example_value>
+</field>
+<field>
+<datum_id>3</datum_id>
+<field_type>float</field_type>
+<example_value>1.4</example_value>
+</field>
+</fields>
+</message>
+</messages>
+</category>
+<category name="CA_Monthly_Survey_Manufacturing">
+<description>Monthly Survey of Manufacturing</description>
+<country>CA</country>
+<category_id>40014</category_id>
+<data>
+<datum>
+<short_description>Change in Inventories</short_description>
+<description>Change in Inventories</description>
+<datum_type>%</datum_type>
+<datum_id>1</datum_id>
+</datum>
+<datum>
+<short_description>Change in Inventories Excluding Petroleum</short_description>
+<description>Change in Inventories Excluding Petroleum</description>
+<datum_type>%</datum_type>
+<datum_id>2</datum_id>
+</datum>
+<datum>
+<short_description>Change in Sales (shipments)</short_description>
+<description>Change in Sales (shipments)</description>
+<datum_type>%</datum_type>
+<datum_id>3</datum_id>
+</datum>
+<datum>
+<short_description>Inventory/Sales ratio</short_description>
+<description>Inventory/Sales ratio</description>
+<datum_type>ratio</datum_type>
+<datum_id>4</datum_id>
+</datum>
+</data>
+<messages>
+<message>
+<message_type>release</message_type>
+<message_version>1</message_version>
+<multicast_group>CA_STATISTICS_CANADA</multicast_group>
+<fields>
+<field>
+<datum_id>1</datum_id>
+<field_type>float</field_type>
+<example_value>0.4</example_value>
+</field>
+<field>
+<datum_id>2</datum_id>
+<field_type>float</field_type>
+<example_value>0.1</example_value>
+</field>
+<field>
+<datum_id>3</datum_id>
+<field_type>float</field_type>
+<example_value>2.0</example_value>
+</field>
+<field>
+<datum_id>4</datum_id>
+<field_type>float</field_type>
+<example_value>1.31</example_value>
+</field>
+</fields>
+</message>
+<message>
+<message_type>estimate</message_type>
+<message_version>1</message_version>
+<multicast_group>CA_ESTIMATES</multicast_group>
+<fields>
+<field>
+<datum_id>1</datum_id>
+<field_type>float</field_type>
+<example_value>0.4</example_value>
+</field>
+<field>
+<datum_id>2</datum_id>
+<field_type>float</field_type>
+<example_value>0.1</example_value>
+</field>
+<field>
+<datum_id>3</datum_id>
+<field_type>float</field_type>
+<example_value>2.0</example_value>
+</field>
+<field>
+<datum_id>4</datum_id>
+<field_type>float</field_type>
+<example_value>1.31</example_value>
+</field>
+</fields>
+</message>
+</messages>
+</category>
+<category name="CA_New_Housing_Price_Index">
+<description>New Housing Price Index</description>
+<country>CA</country>
+<category_id>40015</category_id>
+<data>
+<datum>
+<short_description>Canada Total Change YoY</short_description>
+<description>Canada Total Change YoY</description>
+<datum_type>%</datum_type>
+<datum_id>1</datum_id>
+</datum>
+<datum>
+<short_description>Canada Total Change MoM</short_description>
+<description>Canada Total Change MoM</description>
+<datum_type>%</datum_type>
+<datum_id>2</datum_id>
+</datum>
+<datum>
+<short_description>House only change MoM</short_description>
+<description>House only change MoM</description>
+<datum_type>%</datum_type>
+<datum_id>3</datum_id>
+</datum>
+<datum>
+<short_description>Land only change MoM</short_description>
+<description>Land only change MoM</description>
+<datum_type>%</datum_type>
+<datum_id>4</datum_id>
+</datum>
+</data>
+<messages>
+<message>
+<message_type>release</message_type>
+<message_version>1</message_version>
+<multicast_group>CA_STATISTICS_CANADA</multicast_group>
+<fields>
+<field>
+<datum_id>1</datum_id>
+<field_type>float</field_type>
+<example_value>6.1</example_value>
+</field>
+<field>
+<datum_id>2</datum_id>
+<field_type>float</field_type>
+<example_value>0.2</example_value>
+</field>
+<field>
+<datum_id>3</datum_id>
+<field_type>float</field_type>
+<example_value>0.1</example_value>
+</field>
+<field>
+<datum_id>4</datum_id>
+<field_type>float</field_type>
+<example_value>0.4</example_value>
+</field>
+</fields>
+</message>
+<message>
+<message_type>estimate</message_type>
+<message_version>1</message_version>
+<multicast_group>CA_ESTIMATES</multicast_group>
+<fields>
+<field>
+<datum_id>1</datum_id>
+<field_type>float</field_type>
+<example_value>6.1</example_value>
+</field>
+<field>
+<datum_id>2</datum_id>
+<field_type>float</field_type>
+<example_value>0.2</example_value>
+</field>
+<field>
+<datum_id>3</datum_id>
+<field_type>float</field_type>
+<example_value>0.1</example_value>
+</field>
+<field>
+<datum_id>4</datum_id>
+<field_type>float</field_type>
+<example_value>0.4</example_value>
+</field>
+</fields>
+</message>
+</messages>
+</category>
+<category name="CA_Retail_Trade">
+<description>Retail Trade</description>
+<country>CA</country>
+<category_id>40017</category_id>
+<data>
+<datum>
+<short_description>Total Retail Sales % Change m/m</short_description>
+<description>SA Percent Change in Total Retail Sales, m/m</description>
+<datum_type>%</datum_type>
+<datum_id>1</datum_id>
+</datum>
+<datum>
+<short_description>% Change in Total Retail Sales Ex vehicles and parts dealers</short_description>
+<description>SA Percent Change in Total Retail Sales Ex-Motor Vehicle Parts and Dealers, m/m</description>
+<datum_type>%</datum_type>
+<datum_id>2</datum_id>
+</datum>
+<datum>
+<short_description>% Change Retail Sales Ex Autos, Parts Dealers, and Gas Stations</short_description>
+<description>SA Percent Change in Total Retail Sales Ex-Motor Vehicle, Parts Dealers, and Gas Stations</description>
+<datum_type>%</datum_type>
+<datum_id>3</datum_id>
+<optional_numeric>true</optional_numeric>
+</datum>
+</data>
+<messages>
+<message>
+<message_type>release</message_type>
+<message_version>3</message_version>
+<multicast_group>CA_STATISTICS_CANADA</multicast_group>
+<fields>
+<field>
+<datum_id>1</datum_id>
+<field_type>float</field_type>
+<example_value>1.1</example_value>
+</field>
+<field>
+<datum_id>2</datum_id>
+<field_type>float</field_type>
+<example_value>0.6</example_value>
+</field>
+<field>
+<datum_id>3</datum_id>
+<field_type>float</field_type>
+<example_value>-1.1</example_value>
+</field>
+</fields>
+</message>
+<message>
+<message_type>estimate</message_type>
+<message_version>3</message_version>
+<multicast_group>CA_ESTIMATES</multicast_group>
+<fields>
+<field>
+<datum_id>1</datum_id>
+<field_type>float</field_type>
+<example_value>1.1</example_value>
+</field>
+<field>
+<datum_id>2</datum_id>
+<field_type>float</field_type>
+<example_value>0.6</example_value>
+</field>
+<field>
+<datum_id>3</datum_id>
+<field_type>float</field_type>
+<example_value>-1.1</example_value>
+</field>
+</fields>
+</message>
+</messages>
+</category>
+<category name="CA_Wholesale_Trade">
+<description>Wholesale Trade</description>
+<country>CA</country>
+<category_id>40018</category_id>
+<data>
+<datum>
+<short_description>Inventories Month on Month Seasonally Adjusted</short_description>
+<description>Inventories Month on Month Seasonally Adjusted</description>
+<datum_type>%</datum_type>
+<datum_id>1</datum_id>
+</datum>
+<datum>
+<short_description>Sales Month on Month Seasonally Adjusted</short_description>
+<description>Sales Month on Month Seasonally Adjusted</description>
+<datum_type>%</datum_type>
+<datum_id>2</datum_id>
+</datum>
+<datum>
+<short_description>Sales Ex-Autos Month on Month Seasonally Adjusted</short_description>
+<description>Sales Ex-Autos Month on Month Seasonally Adjusted</description>
+<datum_type>%</datum_type>
+<datum_id>3</datum_id>
+</datum>
+</data>
+<messages>
+<message>
+<message_type>release</message_type>
+<message_version>1</message_version>
+<multicast_group>CA_STATISTICS_CANADA</multicast_group>
+<fields>
+<field>
+<datum_id>1</datum_id>
+<field_type>float</field_type>
+<example_value>0.3</example_value>
+</field>
+<field>
+<datum_id>2</datum_id>
+<field_type>float</field_type>
+<example_value>1.4</example_value>
+</field>
+<field>
+<datum_id>3</datum_id>
+<field_type>float</field_type>
+<example_value>1.8</example_value>
+</field>
+</fields>
+</message>
+<message>
+<message_type>estimate</message_type>
+<message_version>1</message_version>
+<multicast_group>CA_ESTIMATES</multicast_group>
+<fields>
+<field>
+<datum_id>1</datum_id>
+<field_type>float</field_type>
+<example_value>0.3</example_value>
+</field>
+<field>
+<datum_id>2</datum_id>
+<field_type>float</field_type>
+<example_value>1.4</example_value>
+</field>
+<field>
+<datum_id>3</datum_id>
+<field_type>float</field_type>
+<example_value>1.8</example_value>
+</field>
+</fields>
+</message>
+</messages>
+</category>
+<category name="CA_Home_Sales_CREA">
+<description>Home Sales – CREA</description>
+<country>CA</country>
+<category_id>40023</category_id>
+<data>
+<datum>
+<short_description>Existing Home Sales (% change from previous month)</short_description>
+<description>Existing Home Sales (% change from previous month)</description>
+<datum_type>index</datum_type>
+<datum_id>1</datum_id>
+</datum>
+</data>
+<messages>
+<message>
+<message_type>release</message_type>
+<message_version>1</message_version>
+<multicast_group>BETA_7</multicast_group>
+<fields>
+<field>
+<datum_id>1</datum_id>
+<field_type>float</field_type>
+<example_value>3.6</example_value>
+</field>
+</fields>
+</message>
+<message>
+<message_type>estimate</message_type>
+<message_version>1</message_version>
+<multicast_group>CA_ESTIMATES</multicast_group>
+<fields>
+<field>
+<datum_id>1</datum_id>
+<field_type>float</field_type>
+<example_value>3.6</example_value>
+</field>
+</fields>
+</message>
+</messages>
+</category>
+<category name="CA_GDP_by_Industry_GDP_Canadian_Economic_Accounts_Combined">
+<description>CA GDP by Industry and GDP Canadian Economic Accounts Combined</description>
+<country>CA</country>
+<category_id>40024</category_id>
+<data>
+<datum>
+<short_description>Headline GDP change (all industries) Monthly</short_description>
+<description>Headline GDP change (all industries) Monthly</description>
+<datum_type>%</datum_type>
+<datum_id>1</datum_id>
+</datum>
+<datum>
+<short_description>Goods Producing Industries change Monthly</short_description>
+<description>Goods Producing Industries change Monthly</description>
+<datum_type>%</datum_type>
+<datum_id>2</datum_id>
+</datum>
+<datum>
+<short_description>Service Producing Industries change Monthly</short_description>
+<description>Service Producing Industries change Monthly</description>
+<datum_type>%</datum_type>
+<datum_id>3</datum_id>
+</datum>
+<datum>
+<short_description>GDP-Real Quarterly Change</short_description>
+<description>GDP-Real Quarterly Change</description>
+<datum_type>%</datum_type>
+<datum_id>4</datum_id>
+</datum>
+<datum>
+<short_description>GDP services producing industries Quarterly</short_description>
+<description>GDP services producing industries Quarterly</description>
+<datum_type>%</datum_type>
+<datum_id>5</datum_id>
+</datum>
+<datum>
+<short_description>Household final consumption expenditure quarterly</short_description>
+<description>Household final consumption expenditure quarterly</description>
+<datum_type>%</datum_type>
+<datum_id>6</datum_id>
+</datum>
+<datum>
+<short_description>GDP Quarterly Annualized</short_description>
+<description>GDP Quarterly Annualized</description>
+<datum_type>%</datum_type>
+<datum_id>7</datum_id>
+</datum>
+</data>
+<messages>
+<message>
+<message_type>release</message_type>
+<message_version>1</message_version>
+<start_date>2015-12-22</start_date>
+<multicast_group>CA_STATISTICS_CANADA</multicast_group>
+<fields>
+<field>
+<datum_id>1</datum_id>
+<field_type>float</field_type>
+<example_value>.4</example_value>
+</field>
+<field>
+<datum_id>2</datum_id>
+<field_type>float</field_type>
+<example_value>.4</example_value>
+</field>
+<field>
+<datum_id>3</datum_id>
+<field_type>float</field_type>
+<example_value>.4</example_value>
+</field>
+<field>
+<datum_id>4</datum_id>
+<field_type>float</field_type>
+<example_value>-.1</example_value>
+</field>
+<field>
+<datum_id>5</datum_id>
+<field_type>float</field_type>
+<example_value>.5</example_value>
+</field>
+<field>
+<datum_id>6</datum_id>
+<field_type>float</field_type>
+<example_value>.8</example_value>
+</field>
+<field>
+<datum_id>7</datum_id>
+<field_type>float</field_type>
+<example_value>-.1</example_value>
+</field>
+</fields>
+</message>
+<message>
+<message_type>estimate</message_type>
+<message_version>1</message_version>
+<start_date>2015-12-22</start_date>
+<multicast_group>US_ESTIMATES</multicast_group>
+<fields>
+<field>
+<datum_id>1</datum_id>
+<field_type>float</field_type>
+<example_value>.4</example_value>
+</field>
+<field>
+<datum_id>2</datum_id>
+<field_type>float</field_type>
+<example_value>.4</example_value>
+</field>
+<field>
+<datum_id>3</datum_id>
+<field_type>float</field_type>
+<example_value>.4</example_value>
+</field>
+<field>
+<datum_id>4</datum_id>
+<field_type>float</field_type>
+<example_value>-.1</example_value>
+</field>
+<field>
+<datum_id>5</datum_id>
+<field_type>float</field_type>
+<example_value>.5</example_value>
+</field>
+<field>
+<datum_id>6</datum_id>
+<field_type>float</field_type>
+<example_value>.8</example_value>
+</field>
+<field>
+<datum_id>7</datum_id>
+<field_type>float</field_type>
+<example_value>-.1</example_value>
+</field>
+</fields>
+</message>
+</messages>
+</category>
+</protocol>

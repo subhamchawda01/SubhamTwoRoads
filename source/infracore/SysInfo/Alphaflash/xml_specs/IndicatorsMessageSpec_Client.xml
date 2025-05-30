@@ -1,0 +1,256 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<?xml-stylesheet type="text/xsl" href="./ClientHTML.xsl"?><protocol>
+<version>351</version>
+<revisions>
+    <revision type="Final" version="351" author="MNI News" date="03/13/2017"/>
+  </revisions>
+<category name="MNI_RUSSIA_BUSINESS_SENTIMENT">
+<description>MNI Russia Business Sentiment</description>
+<country>RU</country>
+<category_id>29001</category_id>
+<data>
+<datum>
+<short_description>MNI Russia Business Sentiment Indicator Current Conditions</short_description>
+<description>MNI Russia Business Sentiment Indicator Current Conditions</description>
+<datum_type>index</datum_type>
+<datum_id>1</datum_id>
+</datum>
+<datum>
+<short_description>MNI Russia Business Sentiment Indicator Future Expectations</short_description>
+<description>MNI Russia Business Sentiment Indicator Future Expectations</description>
+<datum_type>index</datum_type>
+<datum_id>2</datum_id>
+</datum>
+</data>
+<messages>
+<message>
+<message_type>release</message_type>
+<message_version>1</message_version>
+<multicast_group>MNI_INDICATORS</multicast_group>
+<fields>
+<field>
+<datum_id>1</datum_id>
+<field_type>float</field_type>
+<example_value>51.3</example_value>
+</field>
+<field>
+<datum_id>2</datum_id>
+<field_type>float</field_type>
+<example_value>55.2</example_value>
+</field>
+</fields>
+</message>
+</messages>
+</category>
+<category name="MNI_INDIA_BUSINESS_SENTIMENT">
+<description>MNI India Business Sentiment</description>
+<country>IN</country>
+<category_id>29002</category_id>
+<data>
+<datum>
+<short_description>MNI India Business Sentiment Indicator Current Conditions</short_description>
+<description>MNI India Business Sentiment Indicator Current Conditions</description>
+<datum_type>index</datum_type>
+<datum_id>1</datum_id>
+</datum>
+<datum>
+<short_description>MNI India Business Sentiment Indicator Future Expectations</short_description>
+<description>MNI India Business Sentiment Indicator Future Expectations</description>
+<datum_type>index</datum_type>
+<datum_id>2</datum_id>
+</datum>
+</data>
+<messages>
+<message>
+<message_type>release</message_type>
+<message_version>1</message_version>
+<multicast_group>MNI_INDICATORS</multicast_group>
+<fields>
+<field>
+<datum_id>1</datum_id>
+<field_type>float</field_type>
+<example_value>62.3</example_value>
+</field>
+<field>
+<datum_id>2</datum_id>
+<field_type>float</field_type>
+<example_value>74.2</example_value>
+</field>
+</fields>
+</message>
+</messages>
+</category>
+<category name="MNI_CHINA_BUSINESS_SENTIMENT">
+<description>MNI China Business Sentiment</description>
+<country>CN</country>
+<category_id>29003</category_id>
+<data>
+<datum>
+<short_description>MNI China Business Sentiment Indicator Current Conditions</short_description>
+<description>MNI China Business Sentiment Indicator Current Conditions</description>
+<datum_type>index</datum_type>
+<datum_id>1</datum_id>
+</datum>
+<datum>
+<short_description>MNI China Business Sentiment Indicator Future Expectations</short_description>
+<description>MNI China Business Sentiment Indicator Future Expectations</description>
+<datum_type>index</datum_type>
+<datum_id>2</datum_id>
+</datum>
+</data>
+<messages>
+<message>
+<message_type>release</message_type>
+<message_version>1</message_version>
+<multicast_group>MNI_INDICATORS</multicast_group>
+<fields>
+<field>
+<datum_id>1</datum_id>
+<field_type>float</field_type>
+<example_value>49.7</example_value>
+</field>
+<field>
+<datum_id>2</datum_id>
+<field_type>float</field_type>
+<example_value>53.8</example_value>
+</field>
+</fields>
+</message>
+</messages>
+</category>
+<category name="MNI_INDIA_CONSUMER_SENTIMENT">
+<description>MNI India Consumer Sentiment</description>
+<country>IN</country>
+<category_id>29004</category_id>
+<data>
+<datum>
+<short_description>MNI India Consumer Sentiment Indicator</short_description>
+<description>MNI India Consumer Sentiment Indicator</description>
+<datum_type>index</datum_type>
+<datum_id>1</datum_id>
+</datum>
+</data>
+<messages>
+<message>
+<message_type>release</message_type>
+<message_version>1</message_version>
+<multicast_group>MNI_INDICATORS</multicast_group>
+<fields>
+<field>
+<datum_id>1</datum_id>
+<field_type>float</field_type>
+<example_value>119.6</example_value>
+</field>
+</fields>
+</message>
+</messages>
+</category>
+<category name="MNI_RUSSIA_CONSUMER_SENTIMENT">
+<description>MNI Russia Consumer Sentiment</description>
+<country>RU</country>
+<category_id>29005</category_id>
+<data>
+<datum>
+<short_description>MNI Russia Consumer Sentiment Indicator</short_description>
+<description>MNI Russia Consumer Sentiment Indicator</description>
+<datum_type>index</datum_type>
+<datum_id>1</datum_id>
+</datum>
+</data>
+<messages>
+<message>
+<message_type>release</message_type>
+<message_version>1</message_version>
+<multicast_group>MNI_INDICATORS</multicast_group>
+<fields>
+<field>
+<datum_id>1</datum_id>
+<field_type>float</field_type>
+<example_value>72.8</example_value>
+</field>
+</fields>
+</message>
+</messages>
+</category>
+<category name="MNI_WESTPAC_CHINA_CONSUMER_SENTIMENT">
+<description>Westpac MNI China Consumer Sentiment</description>
+<country>CN</country>
+<category_id>29006</category_id>
+<data>
+<datum>
+<short_description>Westpac MNI China Consumer Sentiment Indicator</short_description>
+<description>Westpac MNI China Consumer Sentiment Indicator</description>
+<datum_type>index</datum_type>
+<datum_id>1</datum_id>
+</datum>
+</data>
+<messages>
+<message>
+<message_type>release</message_type>
+<message_version>1</message_version>
+<multicast_group>MNI_INDICATORS</multicast_group>
+<fields>
+<field>
+<datum_id>1</datum_id>
+<field_type>float</field_type>
+<example_value>111.1</example_value>
+</field>
+</fields>
+</message>
+</messages>
+</category>
+<category name="MNI_NIGERIA_BUSINESS_SENTIMENT">
+<description>MNI Nigeria Business Sentiment</description>
+<country>NG</country>
+<category_id>29007</category_id>
+<data>
+<datum>
+<short_description>Standard Chartered MNI Nigeria Business Sentiment Indicator</short_description>
+<description>Standard Chartered MNI Nigeria Business Sentiment Indicator</description>
+<datum_type>index</datum_type>
+<datum_id>1</datum_id>
+</datum>
+</data>
+<messages>
+<message>
+<message_type>release</message_type>
+<message_version>1</message_version>
+<multicast_group>MNI_INDICATORS</multicast_group>
+<fields>
+<field>
+<datum_id>1</datum_id>
+<field_type>float</field_type>
+<example_value>61.4</example_value>
+</field>
+</fields>
+</message>
+</messages>
+</category>
+<category name="MNI_KENYA_BUSINESS_SENTIMENT">
+<description>MNI Kenya Business Sentiment</description>
+<country>KE</country>
+<category_id>29008</category_id>
+<data>
+<datum>
+<short_description>Standard Chartered MNI Kenya Business Sentiment Indicator</short_description>
+<description>Standard Chartered MNI Kenya Business Sentiment Indicator</description>
+<datum_type>index</datum_type>
+<datum_id>1</datum_id>
+</datum>
+</data>
+<messages>
+<message>
+<message_type>release</message_type>
+<message_version>1</message_version>
+<multicast_group>MNI_INDICATORS</multicast_group>
+<fields>
+<field>
+<datum_id>1</datum_id>
+<field_type>float</field_type>
+<example_value>66.9</example_value>
+</field>
+</fields>
+</message>
+</messages>
+</category>
+</protocol>

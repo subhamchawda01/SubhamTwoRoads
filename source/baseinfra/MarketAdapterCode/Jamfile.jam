@@ -1,0 +1,13 @@
+
+project : usage-requirements <include>$(PROJECT_INSTALL) ;
+
+lib MarketAdapter : [ glob *.cpp ] : <link>static ;
+
+install libMarketAdapter
+  : MarketAdapter
+  : <install-type>LIB
+    <variant>release:<location>"$(PROJECT_LIB_INSTALL)"
+    <variant>debug:<location>"$(PROJECT_LIB_INSTALL_DEBUG)"
+  : release debug
+  ;
+

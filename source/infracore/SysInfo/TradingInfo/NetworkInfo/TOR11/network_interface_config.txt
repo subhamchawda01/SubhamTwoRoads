@@ -1,0 +1,31 @@
+# APP name
+# MD = raw_mkt_data_receiver   , low_latency
+# MM = processed_mkt_data_mcast_sender , low_latency
+# LS = Live_data or processed_mkt_data_mcast_receiver , low_latency
+# CONTROL
+# ORS = ors bcast, (exchange replies etc..)
+# ORS_LS = ors_livesource, 
+#LOCATION  EXCHANGE  APP_NAME  INTERFACE  
+#TOR
+TOR        CME       LS       eth6.2462
+TOR        EUREX     LS       eth6.2462
+TOR        ICE       LS       eth6.2462
+TOR        TMX       MD       eth6.10
+TOR        TMX       MD_A     eth6.10
+TOR        TMX       MD_B     eth6.10
+TOR        TMX       MD_C     eth6.10
+TOR        CME       MD       eth6.2235
+TOR        CME       MD_A     eth6.2235
+TOR        CME       MD_B     eth6.2235
+TOR        CME       MD_C     eth6.2235
+TOR        CMEMDP    MD       eth6.2235
+TOR        CMEMDP    MD_A     eth6.2235
+TOR        CMEMDP    MD_B     eth6.2235
+TOR        CMEMDP    MD_C     eth6.2235
+TOR        TMX       LS       eth6.2462
+TOR        TMX       MM       eth6.2462
+TOR        AFLASH    LS       eth6.2462
+TOR                  CONTROL  eth6.2462
+TOR                  ORS      eth6.2462
+TOR                  ORS_LS   eth6.2462
+

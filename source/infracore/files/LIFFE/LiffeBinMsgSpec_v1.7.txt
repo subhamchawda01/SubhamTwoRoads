@@ -1,0 +1,1087 @@
+// LIFFE Binary API Messages
+//
+// Shows the correct field order and fillers to use when constructing
+// messages to send and parsing messsage received.
+//
+// Byte Ordering: All integers in the structures are expected to be in
+// network byte order (i.e. Big Endian).
+//
+// Version: v1.6
+// Release: $Change: 677100 $
+// Date   : $Date: 2010/09/09 $
+//
+// Copyright  NYSE Euronext, 2010
+//
+
+// Message Signature Macros.  The message signature is an unsigned 16-bit
+// integer value and is contained in the 1st 2 bytes of the message.
+
+// NOTE: These mappings are not guaranteed to be preserved from version to
+// version.
+//                                    MsgType Variant
+#define LIFFE_MSG_01   (0x0001)  //   0       01
+#define LIFFE_MSG_11   (0x0011)  //   1       01
+#define LIFFE_MSG_A1   (0x0021)  //   A       01
+#define LIFFE_MSG_51   (0x0031)  //   5       01
+#define LIFFE_MSG_D1   (0x0041)  //   D       01
+#define LIFFE_MSG_E1   (0x0051)  //   E       01
+#define LIFFE_MSG_F1   (0x0061)  //   F       01
+#define LIFFE_MSG_G1   (0x0071)  //   G       01
+#define LIFFE_MSG_s1   (0x0081)  //   s       01
+#define LIFFE_MSG_a1   (0x0091)  //   a       01
+#define LIFFE_MSG_81   (0x00A1)  //   8       01
+#define LIFFE_MSG_91   (0x00B1)  //   9       01
+#define LIFFE_MSG_N1   (0x00C1)  //   N       01
+#define LIFFE_MSG_I1   (0x00D1)  //   I       01
+#define LIFFE_MSG_b1   (0x00E1)  //   b       01
+#define LIFFE_MSG_U71  (0x00F1)  //   U7      01
+#define LIFFE_MSG_U31  (0x0101)  //   U3      01
+#define LIFFE_MSG_q1   (0x0111)  //   q       01
+#define LIFFE_MSG_U81  (0x0121)  //   U8      01
+#define LIFFE_MSG_U41  (0x0131)  //   U4      01
+#define LIFFE_MSG_L1   (0x0141)  //   L       01
+#define LIFFE_MSG_r1   (0x0151)  //   r       01
+#define LIFFE_MSG_AF1  (0x0161)  //   AF      01
+#define LIFFE_MSG_U51  (0x0171)  //   U5      01
+#define LIFFE_MSG_U11  (0x0181)  //   U1      01
+#define LIFFE_MSG_UA1  (0x0191)  //   UA      01
+#define LIFFE_MSG_UB1  (0x01A1)  //   UB      01
+#define LIFFE_MSG_AG1  (0x01B1)  //   AG      01
+#define LIFFE_MSG_R1   (0x01C1)  //   R       01
+#define LIFFE_MSG_d1   (0x01E1)  //   d       01
+#define LIFFE_MSG_c1   (0x01F1)  //   c       01
+#define LIFFE_MSG_U61  (0x0201)  //   U6      01
+#define LIFFE_MSG_U21  (0x0211)  //   U2      01
+#define LIFFE_MSG_U91  (0x0221)  //   U9      01
+#define LIFFE_MSG_U01  (0x0231)  //   U0      01
+#define LIFFE_MSG_CB1  (0x0241)  //   CB      01
+#define LIFFE_MSG_UC1  (0x0251)  //   UC      01
+#define LIFFE_MSG_UD1  (0x0261)  //   UD      01
+
+// Header common to all messages.
+//
+// Note that the header has to end on a double-word boundary to
+// allow for 64 bit elements to follow in the message body.
+#define LIFFE_HEADER \
+    uint16_t  MsgId;        /* message signature        */  \
+    uint16_t  iLen;         /* total message length     */  \
+    int32_t   lSeqNum;      /* internal sequence number */
+
+struct Liffe_Header
+{
+    LIFFE_HEADER;
+};
+
+// ----------------------------------------------------------------
+// Message Structures
+// ----------------------------------------------------------------
+
+// Name:                 Heartbeat
+// FIX Type:             0
+// Variant:              1
+// Message length:       Fixed
+struct LiffeBinApi_HeartBeat_01
+{
+    LIFFE_HEADER;
+    uint64_t TestReqID;
+};
+
+// Name:                 Test Message
+// FIX Type:             1
+// Variant:              1
+// Message length:       Fixed
+struct LiffeBinApi_TestMsg_11
+{
+    LIFFE_HEADER;
+    uint64_t TestReqID;
+};
+
+// Name:                 Adjust MM Position Request Ack
+// FIX Type:             U7
+// Variant:              1
+// Message length:       Fixed
+struct LiffeBinApi_AdjustMMPositionReqAck_U71
+{
+    LIFFE_HEADER;
+
+    uint32_t AdjustMMPositionID;
+    int32_t  ProductPosition;
+    int32_t  ExpiryProtectionPosition;
+    uint32_t MMPUpdateReason;
+    uint32_t ProductProtectionStatus;
+    uint32_t ExpiryProtectionStatus;
+    uint32_t MaturityMonthYear;
+    uint16_t RejectReasonCode;
+    uint8_t  ProtectionType;
+    char     ProductLimitBreached;
+    char     ProductQuotesPulled;
+    char     ExpiryLimitBreached;
+    char     ExpiryQuotesPulled;
+    char     Text[40];
+    char     SecurityIDSource;
+    char     SecurityID[15];
+};
+
+// Name:                 Adjust MM Position Request
+// FIX Type:             U3
+// Variant:              1
+// Message length:       Fixed
+struct LiffeBinApi_AdjustMMPositionReq_U31
+{
+    LIFFE_HEADER;
+
+    uint32_t AdjustMMPositionID;
+    int32_t  PositionShift;
+    uint32_t RequestLevel;
+    uint32_t MaturityMonthYear;
+    uint8_t  ProtectionType;
+    char     SecurityIDSource;
+    char     SecurityID[15];
+};
+
+// Name:                 Cancel Order Request
+// FIX Type:             F
+// Variant:              1
+// Message length:       Fixed
+struct LiffeBinApi_CancelOrderReq_F1
+{
+    LIFFE_HEADER;
+
+    uint64_t OrderID;
+    uint32_t ClOrdID;
+    uint32_t OrigClOrdID;
+    char     SecurityIDSource;
+    char     SecurityID[15];
+    char     RiskID[5];
+};
+
+// Name:                 Mass Cancel Request
+// FIX Type:             q
+// Variant:              1
+// Message length:       Fixed
+struct LiffeBinApi_MassCancelOrderReq_q1
+{
+    LIFFE_HEADER;
+
+    uint32_t ClOrdID;
+    uint32_t MaturityMonthYear;
+    char     MassCancelRequestType;
+    char     SecurityIDSource;
+    char     SecurityID[15];
+    char     RiskID[5];
+};
+
+// Name:                 New Order Cross
+// FIX Type:             s
+// Variant:              1
+// Message length:       Variable
+// Varying length array: LegDetail
+// Array size field:     NoLegs
+struct LiffeBinApi_CrossOrderReq_s1
+{
+    LIFFE_HEADER;
+
+    uint32_t CrossID;
+    uint32_t ClOrdLinkID;
+    int32_t  Price;
+    uint32_t OrderQty;
+    uint32_t OtherLegLastPx;
+    uint8_t  CrossType;
+    uint8_t  WholesaleTradeType;
+    char     SecurityIDSource;
+    char     SecurityID[15];
+    char     MatchingCode[3];
+    char     OtherParty[3];
+    char     OrderCapacity;
+    char     OtherLegSecurityIDSource;
+    char     OtherLegSecurityID[15];
+    char     OtherLegReferenceNo[14];
+
+    uint8_t  NoSides;
+
+    //char     Filler1[2];
+
+    // Fixed length array - fill unused records with NULLs
+    struct side_detail
+    {
+        uint32_t ClOrdID;
+        uint16_t ClearingInstruction;
+        uint8_t     CustOrderCapacity;
+        uint8_t     PartyRole;
+        char     Side;
+        char     AccountCode;
+        char     SecondaryClOrdID[16];
+        char     PartyID[4];
+        char     Account[14];
+        char     ClientInfo[14];
+        char     PackageID[12];
+        char     PostingAction[4];
+        char     OrderOrigin;
+        char     Filler[1];
+    } SideDetail[2];
+
+    uint8_t     NoLegs;
+    char     Filler2[3];
+
+    // Variable length array
+    struct leg_detail
+    {
+        uint32_t LegPrice;
+        uint32_t LegOrderQty;
+        char     LegSecurityIDSource;
+        char     LegSecurityID[15];
+    } LegDetail[32];
+
+    enum { MSGTYPE = LIFFE_MSG_s1 };
+    enum { MSGVARIANT = 1 };
+};
+
+// Name:                 Execution Report
+// FIX Type:             8
+// Variant:                 1
+// Message length:         Variable
+// Varying length array: LegDetail
+// Array size field:     NoLegs
+struct LiffeBinApi_ExecReport_81
+{
+    LIFFE_HEADER;
+
+    uint64_t OrderID;
+    uint64_t TradeID;
+    uint64_t ExecID;
+
+    uint32_t ClOrdID;
+    uint32_t OrigClOrdID;
+    uint32_t CrossID;
+    uint32_t ListID;
+    uint32_t TransactTime;
+    uint32_t ClOrdLinkID;
+    int32_t     LastPx;
+    int32_t     Price;
+    int32_t     StopPx;
+    uint32_t ReturnCode;
+    uint32_t ExpireDate;
+    uint32_t CumQty;
+    uint32_t LastQty;
+    uint32_t OrderQty;
+    uint32_t MinQty;
+    uint32_t LeavesQty;
+    int32_t     QtyDelta;
+    uint32_t MassStatusReqID;
+    uint32_t OtherLegLastPx;
+
+    uint16_t OrdRejReason;
+    uint16_t ClearingInstruction;
+
+    uint8_t     TradingSessionID;
+    uint8_t     CrossType;
+    uint8_t     CustOrderCapacity;
+    uint8_t     PartyRole;
+
+    char     ExecRefID[20];
+    char     OrigCompID[5];
+    char     LastRptRequested;
+    char     Text[40];
+    char     SecondaryClOrdID[16];
+    char     SecurityIDSource;
+    char     SecurityID[15];
+    char     Account[14];
+    char     PackageID[12];
+    char     SecondaryOrderID[8];
+    char     RiskID[5];
+    char     MatchingCode[3];
+    char     TradeInputDevice[3];
+    char     OtherParty[3];
+    char     OrdStatus;
+    char     OrdType;
+    char     Side;
+    char     TimeInForce;
+    char     ExecType;
+    char     OrderOrigin;
+    char     OrderCapacity;
+    char     TradeInputSource;
+    char     AccountCode;
+    char     ClientInfo[14];
+    char     PartyID[4];
+    char     PostingAction[4];
+    char     OtherLegSecurityIDSource;
+    char     OtherLegSecurityID[15];
+    char     OtherLegReferenceNo[14];
+
+    uint8_t     NoLegs;
+
+    struct leg_detail
+    {
+        uint32_t LegLastPx;
+        uint32_t LegLastQty;
+        char     LegSecurityIDSource;
+        char     LegSecurityID[15];
+    } LegDetail[32];
+
+    enum { MSGTYPE = LIFFE_MSG_81 };
+    enum { MSGVARIANT = 1 };
+};
+
+// Name:                 Order Acknowledgement
+// FIX Type:             a
+// Variant:                 1
+// Message length:         Fixed
+struct LiffeBinApi_OrderAck_a1
+{
+    LIFFE_HEADER;
+    uint64_t OrderID;
+    uint32_t ClOrdID;
+
+    enum { MSGTYPE = LIFFE_MSG_a1 };
+    enum { MSGVARIANT = 1 };
+};
+
+// Name:                 Get MM Protection Request Ack
+// FIX Type:             U8
+// Variant:                 1
+// Message length:         Variable
+// Varying length array: ExpiryDetail
+// Array size field:     NoExpiries
+struct LiffeBinApi_GetMMProtectionReqAck_U81
+{
+    LIFFE_HEADER;
+
+    uint32_t GetMMProtectionStatusID;
+    uint32_t ProductProtectionPeriod;
+    int32_t     ProductProtectionPosition;
+    uint32_t ProductProtectionStatus;
+    uint32_t ProductLimit;
+    uint32_t ProductLimitBreachAct;
+    uint16_t RejectReasonCode;
+    char     ProductProtectionActive;
+    char     ProductLimitBreached;
+    char     ProductQuotesPulled;
+    char     Text[40];
+    char     SecurityIDSource;
+    char     SecurityID[15];
+
+    uint8_t     NoExpiries;
+    char     Filler1[2];
+
+    struct expiry_detail
+    {
+        uint32_t MaturityMonthYear;
+        int32_t     ExpiryProtectionPosition;
+        uint32_t ExpiryLimit;
+        uint32_t ExpiryProtectionStatus;
+        char     ExpiryLimitBreached;
+        char     ExpiryQuotesPulled;
+        char     Filler[2];
+    } ExpiryDetail[100];
+
+    enum { MSGTYPE = LIFFE_MSG_U81 };
+    enum { MSGVARIANT = 1 };
+};
+
+// Name:                 Get MM Protection Request
+// FIX Type:             U4
+// Variant:                 1
+// Message length:         Variable
+// Varying length array: ExpiryDetail
+// Array size field:     NoExpiries
+struct LiffeBinApi_GetMMProtectionReq_U41
+{
+    LIFFE_HEADER;
+
+    uint32_t GetMMProtectionStatusID;
+    uint32_t RequestLevel;
+    uint8_t     ProtectionType;
+    char     SecurityIDSource;
+    char     SecurityID[15];
+
+    uint8_t     NoExpiries;
+    char     Filler1[2];
+
+    struct expiry_detail
+    {
+        uint32_t MaturityMonthYear;
+    } ExpiryDetail[100];
+
+    enum { MSGTYPE = LIFFE_MSG_U41 };
+    enum { MSGVARIANT = 1 };
+};
+
+// Name:                 List Status
+// FIX Type:             N
+// Variant:                 1
+// Message length:         Variable
+// Varying length array: ListStatusDetail
+// Array size field:     NoOrders
+struct LiffeBinApi_ListStatus_N1
+{
+    LIFFE_HEADER;
+
+    uint32_t ListID;
+    uint16_t ListRejectReason;
+    char     Text[40];
+
+    uint8_t     NoOrders;
+    char     Filler1;
+
+    struct list_status_detail
+    {
+        uint64_t OrderID;
+        uint32_t ClOrdID;
+        uint32_t OrigClOrdID;
+        char     OrdStatus;
+        char     Filler[7];
+    } ListStatusDetail[32];
+
+    enum { MSGTYPE = LIFFE_MSG_N1 };
+    enum { MSGVARIANT = 1 };
+};
+
+// Name:                 Logon Rejection
+// FIX Type:             L
+// Variant:                 1
+// Message length:         Fixed
+struct LiffeBinApi_LogonReject_L1
+{
+    LIFFE_HEADER;
+    uint32_t LastRcvdSeqNumber;
+    uint32_t LastSentSeqNumber;
+    uint16_t RejectReasonCode;
+    char     Text[40];
+
+    enum { MSGTYPE = LIFFE_MSG_L1 };
+    enum { MSGVARIANT = 1 };
+};
+
+#define MSG_SLOT_COUNT 14
+
+// Name:                 Logon Request
+// FIX Type:             A
+// Variant:                 1
+// Message length:         Fixed
+struct LiffeBinApi_LogonRequest_A1
+{
+    LIFFE_HEADER;
+    int32_t LastSeqNum;
+    int16_t HeartBtInt;
+    char    SenderCompId[5];
+    char    SenderSubId[4];
+    char    Versions[3*MSG_SLOT_COUNT];
+    char    CancelOnDisconnect;
+
+    enum { MSGTYPE = LIFFE_MSG_A1 };
+    enum { MSGVARIANT = 1 };
+};
+
+// Name:                 Logout Request
+// FIX Type:             5
+// Variant:                 1
+// Message length:         Fixed
+struct LiffeBinApi_LogoutRequest_51
+{
+    LIFFE_HEADER;
+
+    enum { MSGTYPE = LIFFE_MSG_51 };
+    enum { MSGVARIANT = 1 };
+};
+
+// Name:                 Mass Cancel Report
+// FIX Type:             r
+// Variant:                 1
+// Message length:         Fixed
+struct LiffeBinApi_MassCancelReport_r1
+{
+    LIFFE_HEADER;
+
+    uint32_t ClOrdID;
+    uint32_t TotalAffectedOrders;
+    uint16_t MassCanelRejectReason;
+    char     MassCancelRequestType;
+    char     Text[40];
+    char     RiskID[5];
+    char     MassCancelResponse;
+
+    enum { MSGTYPE = LIFFE_MSG_r1 };
+    enum { MSGVARIANT = 1 };
+};
+
+// Name:                 Order Mass Status Request
+// FIX Type:             AF
+// Variant:                 1
+// Message length:         Fixed
+struct LiffeBinApi_MassOrderStatusReq_AF1
+{
+    LIFFE_HEADER;
+
+    uint32_t MassStatusReqID;
+    uint8_t     MassStatusReqType;
+    char     SecurityIDSource;
+    char     SecurityID[15];
+
+    enum { MSGTYPE = LIFFE_MSG_AF1 };
+    enum { MSGVARIANT = 1 };
+};
+
+// Name:                 Market Maker Configuration Status Ack
+// FIX Type:             U5
+// Variant:                 1
+// Message length:         Variable
+// Varying length array: BatchDetail
+// Array size field:     NoBatchSize
+struct LiffeBinApi_MMConfigStatusReqAck_U51
+{
+    LIFFE_HEADER;
+
+    uint32_t MMConfigStatusRequestID;
+    uint32_t ConfigRequestStatus;
+    uint16_t RejectReasonCode;
+    char     Text[40];
+
+    uint8_t     NoBatchSize;
+
+    struct batch_detail
+    {
+        uint8_t     BatchSize;
+        char     SecurityIDSource;
+        char     SecurityID[15];
+    } BatchDetail[200];
+
+    enum { MSGTYPE = LIFFE_MSG_U51 };
+    enum { MSGVARIANT = 1 };
+};
+
+// Name:                 Market Maker Config Status Request
+// FIX Type:             U1
+// Variant:                 1
+// Message length:         Fixed
+struct LiffeBinApi_MMConfigStatusReq_U11
+{
+    LIFFE_HEADER;
+
+    uint32_t MMConfigStatusRequestID;
+
+    enum { MSGTYPE = LIFFE_MSG_U11 };
+    enum { MSGVARIANT = 1 };
+};
+
+// Name:                 New Order (Single)
+// FIX Type:             D
+// Variant:                 1
+// Message length:         Fixed
+struct LiffeBinApi_NewOrderReq_D1
+{
+    LIFFE_HEADER;
+
+    uint32_t ClOrdID;
+    int32_t     Price;
+    int32_t     StopPx;
+    uint32_t ExpireDate;
+    uint32_t OrderQty;
+    uint32_t MinQty;
+    uint16_t ClearingInstruction;
+    uint8_t     TradingSessionID;
+    uint8_t     PartyRole;
+    uint8_t     CustOrderCapacity;
+    char     SecondaryClOrdID[16];
+    char     SecurityIDSource;
+    char     SecurityID[15];
+    char     Account[14];
+    char     TradeInputSource;
+    char     TradeInputDevice[3];
+    char     OrdType;
+    char     Side;
+    char     TimeInForce;
+    char     OrderOrigin;
+    char     AccountCode;
+    char     ClientInfo[14];
+    char     PartyID[4];
+    char     PostingAction[4];
+
+    enum { MSGTYPE = LIFFE_MSG_D1 };
+    enum { MSGVARIANT = 1 };
+};
+
+// Name:                 New Order List
+// FIX Type:             E
+// Variant:                 1
+// Message length:         Variable
+// Varying length array: OrderDetail
+// Array size field:     NoOrders
+struct LiffeBinApi_NewOrderListReq_E1
+{
+    LIFFE_HEADER;
+
+    uint32_t ListID;
+    uint8_t     NoOrders;
+    char     Filler1[3];
+
+    struct order_detail
+    {
+        uint32_t ClOrdID;
+        int32_t     Price;
+        int32_t     StopPx;
+        uint32_t ExpireDate;
+        uint32_t OrderQty;
+        uint32_t MinQty;
+        uint16_t ClearingInstruction;
+        uint8_t     TradingSessionID;
+        uint8_t     PartyRole;
+        uint8_t     CustOrderCapacity;
+        char     SecondaryClOrdID[16];
+        char     SecurityIDSource;
+        char     SecurityID[15];
+        char     Account[14];
+        char     TradeInputSource;
+        char     TradeInputDevice[3];
+        char     OrdType;
+        char     Side;
+        char     TimeInForce;
+        char     OrderOrigin;
+        char     AccountCode;
+        char     ClientInfo[14];
+        char     PartyID[4];
+        char     PostingAction[4];
+        char     Filler[2];
+    } OrderDetail[16];
+
+    enum { MSGTYPE = LIFFE_MSG_E1 };
+    enum { MSGVARIANT = 1 };
+};
+
+// Name:                 Order Cancel Reject
+// FIX Type:             9
+// Variant:                 1
+// Message length:         Fixed
+struct LiffeBinApi_OrderCancelReject_91
+{
+    LIFFE_HEADER;
+
+    uint64_t OrderID;
+    uint32_t ClOrdID;
+    uint32_t OrigClOrdID;
+    uint32_t ReturnCode;
+    uint16_t CxlRejReason;
+    char     CxlRejResponseTo;
+    char     Text[40];
+    char     RiskID[5];
+
+    enum { MSGTYPE = LIFFE_MSG_91 };
+    enum { MSGVARIANT = 1 };
+};
+
+// Name:                 Order Revision Request
+// FIX Type:             G
+// Variant:                 1
+// Message length:         Fixed
+struct LiffeBinApi_OrderRevisionReq_G1
+{
+    LIFFE_HEADER;
+
+    uint64_t OrderID;
+    uint32_t ClOrdID;
+    uint32_t OrigClOrdID;
+    int32_t     Price;
+    int32_t     StopPx;
+    uint32_t ExpireDate;
+    uint32_t OrderQty;
+    char     SecurityIDSource;
+    char     SecurityID[15];
+
+    enum { MSGTYPE = LIFFE_MSG_G1 };
+    enum { MSGVARIANT = 1 };
+};
+
+// Name:                 Order Revision List
+// FIX Type:             UA
+// Variant:                 1
+// Message length:         Variable
+// Varying length array: RevisionDetail
+// Array size field:     NoOrders
+struct LiffeBinApi_OrderRevisionListReq_UA1
+{
+    LIFFE_HEADER;
+
+    uint32_t ListID;
+    char     SecurityIDSource;
+    char     SecurityID[15];
+    uint8_t     NoOrders;
+    char     Filler1[3];
+
+    struct order_revision_detail
+    {
+        uint64_t OrderID;
+        uint32_t OrigClOrdID;
+        int32_t     Price;
+        int32_t     StopPx;
+        uint32_t ExpireDate;
+        uint32_t OrderQty;
+        char     Filler[4];
+    } RevisionDetail[32];
+
+    enum { MSGTYPE = LIFFE_MSG_UA1 };
+    enum { MSGVARIANT = 1 };
+};
+
+// Name:                 Order Cancellation List
+// FIX Type:             UB
+// Variant:                 1
+// Message length:         Variable
+// Varying length array: Orders
+// Array size field:     NoOrders
+struct LiffeBinApi_OrderCancelListReq_UB1
+{
+    LIFFE_HEADER;
+
+    uint32_t ListID;
+    char     SecurityIDSource;
+    char     SecurityID[15];
+    uint8_t     NoOrders;
+    char     Filler1[3];
+
+    struct order_id_detail
+    {
+        uint64_t OrderID;
+        uint32_t OrigClOrdID;
+        char     Filler[4];
+    } Orders[32];
+
+    enum { MSGTYPE = LIFFE_MSG_UB1 };
+    enum { MSGVARIANT = 1 };
+};
+
+// Name:                 Cancel Notification
+// FIX Type:             UD
+// Variant:                 1
+// Message length:         Variable
+// Varying length array: CancelledOrders
+// Array size field:     NoOrders
+struct LiffeBinApi_CancelNotification_UD1
+{
+    LIFFE_HEADER;
+
+    uint32_t ClOrdID;
+    uint32_t ListID;
+    uint32_t ReturnCode;
+    char     OrigCompID[5];
+    char     LastRptRequested;
+    char     RiskID[5];
+    char     OrdStatus;
+    uint8_t     NoOrders;
+    char     Filler1[7];
+
+    struct cancelled_order_detail
+    {
+        uint64_t OrderID;
+        uint32_t OrigClOrdID;
+        char     Filler[4];
+    } CancelledOrders[40];
+
+    enum { MSGTYPE = LIFFE_MSG_UD1 };
+    enum { MSGVARIANT = 1 };
+};
+
+// Name:                 Contract Availability
+// FIX Type:             UC
+// Variant:                 1
+// Message length:         Variable
+// Varying length array: Contracts
+// Array size field:     NoContracts
+struct LiffeBinApi_ContractAvailability_UC1
+{
+    LIFFE_HEADER;
+
+    uint32_t ContractAvailabilityID;
+    char     SecurityIDSource;
+    char     AvailabilityStatus;
+    char     LastRptRequested;
+    uint8_t     NoContracts;
+
+    struct contract_list_detail
+    {
+        char SecurityID[15];
+    } ContractList[200];
+
+    enum { MSGTYPE = LIFFE_MSG_UC1 };
+    enum { MSGVARIANT = 1 };
+};
+
+// Name:                 Quote Request Reject
+// FIX Type:             AG
+// Variant:                 1
+// Message length:         Fixed
+struct LiffeBinApi_QuoteRequestReject_AG1
+{
+    LIFFE_HEADER;
+    uint32_t QuoteReqID;
+    uint32_t ReturnCode;
+    uint16_t QuoteRejectReason;
+    char     Text[40];
+
+    enum { MSGTYPE = LIFFE_MSG_AG1 };
+    enum { MSGVARIANT = 1 };
+};
+
+// Name:                 Mass Quote Request Ack
+// FIX Type:             b
+// Variant:                 1
+// Message length:         Variable
+// Varying length array: QuotesDetail
+// Array size field:     NoQuotes
+struct LiffeBinApi_MassQuoteReqAck_b1
+{
+    LIFFE_HEADER;
+    uint32_t QuoteReqID;
+    uint16_t QuoteRejectReason;
+    char     Text[40];
+    char     Filler1[1];
+    uint8_t     NoQuotes;
+
+    struct quotes_detail
+    {
+        uint64_t BuyOrderID;
+        uint64_t SellOrderID;
+        uint32_t BuyStatus;
+        uint32_t SellStatus;
+        char     BuyRevisionFlag;
+        char     SellRevisionFlag;
+        char     Filler[6];
+    } QuotesDetail[65];
+
+    enum { MSGTYPE = LIFFE_MSG_b1 };
+    enum { MSGVARIANT = 1 };
+};
+
+// Name:                 Quote Request
+// FIX Type:             R
+// Variant:                 1
+// Message length:         Fixed
+struct LiffeBinApi_QuoteReq_R1
+{
+    LIFFE_HEADER;
+
+    uint32_t QuoteReqID;
+    char     SecurityIDSource;
+    char     SecurityID[15];
+    uint32_t OrderQty;
+
+    enum { MSGTYPE = LIFFE_MSG_R1 };
+    enum { MSGVARIANT = 1 };
+};
+
+// Name:                 Mass Quote Request
+// FIX Type:             I
+// Variant:                 1
+// Message length:         Variable
+// Varying length array: QuotesDetail
+// Array size field:     NoQuotes
+struct LiffeBinApi_MassQuoteReq_I1
+{
+    LIFFE_HEADER;
+
+    uint32_t QuoteID;
+    uint16_t ClearingInstruction;
+    uint8_t     CustOrderCapacity;
+    char     AccountCode;
+    char     SecondaryClOrdID[16];
+    char     ClientInfo[14];
+    char     SecurityIDSource;
+    uint8_t     NoQuotes;
+
+    struct quotes_detail
+    {
+        int32_t     BidPx;
+        int32_t     OfferPx;
+        uint32_t BidSize;
+        uint32_t OfferSize;
+        char     SideRevised;
+        char     SecurityID[15];
+    } QuotesDetail[65];
+
+    enum { MSGTYPE = LIFFE_MSG_I1 };
+    enum { MSGVARIANT = 1 };
+};
+
+// Name:                 Security Defn Update Report
+// FIX Type:             d
+// Variant:                 1
+// Message length:         Fixed
+struct LiffeBinApi_SecurityDefn_d1
+{
+    LIFFE_HEADER;
+
+    uint32_t SecurityReqID;
+    uint32_t ReturnCode;
+    uint16_t RejectReasonCode;
+    char     Text[40];
+    char     SecurityIDSource;
+    char     SecurityID[15];
+
+    enum { MSGTYPE = LIFFE_MSG_d1 };
+    enum { MSGVARIANT = 1 };
+};
+
+// Name:                 Security Defn Request
+// FIX Type:             c
+// Variant:                 1
+// Message length:         Variable
+// Varying length array: LegDetail
+// Array size field:     NoLegs
+struct LiffeBinApi_SecurityDefReq_c1
+{
+    LIFFE_HEADER;
+
+    uint32_t SecurityReqID;
+    uint8_t     SecurityRequestType;
+    char     SecurityIDSource;
+    char     SecurityID[15];
+    char     SecuritySubType[2];
+    uint8_t     NoLegs;
+
+    struct leg_detail
+    {
+        uint32_t LegRatioQty;
+        uint32_t LegPrice;
+        uint32_t LegStrikePrice;
+        uint32_t LegMaturityMonthYear;
+        char     LegSecurityIDSource;
+        char     LegSecurityID[15];
+        char     LegSecurityType[4];
+        char     LegPutOrCall;
+        char     LegSide;
+        char     Filler[2];
+    } LegDetail[32];
+
+    enum { MSGTYPE = LIFFE_MSG_c1 };
+    enum { MSGVARIANT = 1 };
+};
+
+// Name:                 Set MM Protection Request Ack
+// FIX Type:             U6
+// Variant:                 1
+// Message length:         Variable
+// Varying length array: ExpiryStatusDetail
+// Array size field:     NoExpiries
+struct LiffeBinApi_SetMMProtectionReqAck_U61
+{
+    LIFFE_HEADER;
+
+    uint32_t SetMMProtectionID;
+    uint32_t ProductProtectionStatus;
+    uint16_t RejectReasonCode;
+    char     Text[40];
+    char     SecurityIDSource;
+    char     SecurityID[15];
+    uint8_t     NoExpiries;
+    char     Filler1[1];
+
+    struct expiry_status_detail
+    {
+        uint32_t ExpiryProtectionStatus;
+    } ExpiryStatusDetail[100];
+
+    enum { MSGTYPE = LIFFE_MSG_U61 };
+    enum { MSGVARIANT = 1 };
+};
+
+// Name:                 Set MM Protection Request
+// FIX Type:             U2
+// Variant:                 1
+// Message length:         Variable
+// Varying length array: ExpiryDetail
+// Array size field:     NoExpiries
+struct LiffeBinApi_SetMMProtectionReq_U21
+{
+    LIFFE_HEADER;
+
+    uint32_t SetMMProtectionID;
+    uint32_t ProductProtectionPeriod;
+    uint32_t ProductLimit;
+    uint32_t ProductLimitBreachAct;
+    uint32_t ExpiryLimitBreachAct;
+    uint8_t     ProtectionType;
+    char     ProductProtectionActive;
+    char     SecurityIDSource;
+    char     SecurityID[15];
+
+    uint8_t     NoExpiries;
+    char     Filler1[1];
+
+    struct expiry_detail
+    {
+        uint32_t MaturityMonthYear;
+        uint32_t ExpiryLimit;
+    } ExpiryDetail[100];
+
+    enum { MSGTYPE = LIFFE_MSG_U21 };
+    enum { MSGVARIANT = 1 };
+};
+
+// Name:                 Stock Order Routing Request
+// FIX Type:             U9
+// Variant:                 1
+// Message length:         Fixed
+struct LiffeBinApi_StockOrdRoutingReq_U91
+{
+    LIFFE_HEADER;
+
+    uint64_t StockOrdTransactTime;
+    uint64_t SendingTime;
+    uint64_t OrderID;
+    uint32_t AccountNumber;
+    uint32_t StockOrderRequestID;
+    int32_t     LastPx;
+    int32_t     Price;
+    uint32_t LastQty;
+    uint32_t OrderQty;
+    uint32_t StockOrdStatus;
+    uint8_t     StockOrderRequestType;
+    char     OwnOrderID[12];
+    char     AccountType[2];
+    char     ClientDuplicate;
+    char     StockRef[16];
+    char     DelivertoCompID[5];
+    char     OnBehalfOfCompID[5];
+    char     FreeText[25];
+    char     StockFillID[12];
+    char     OrdType;
+    char     Side;
+
+    enum { MSGTYPE = LIFFE_MSG_U91 };
+    enum { MSGVARIANT = 1 };
+};
+
+// Name:                 Stock Order Routing Response
+// FIX Type:             U0
+// Variant:                 1
+// Message length:         Fixed
+struct LiffeBinApi_StockOrdRoutingResponse_U01
+{
+    LIFFE_HEADER;
+
+    uint64_t OrderID;
+    uint32_t StockOrderRequestID;
+    uint32_t ReturnCode;
+    uint16_t RejectReasonCode;
+    char     Text[40];
+
+    enum { MSGTYPE = LIFFE_MSG_U01 };
+    enum { MSGVARIANT = 1 };
+};
+
+// Name:                 User Notification
+// FIX Type:             CB
+// Variant:                 1
+// Message length:         Fixed
+struct LiffeBinApi_UserNotification_CB1
+{
+    LIFFE_HEADER;
+
+    uint32_t ReturnCode;
+    uint8_t     UserStatus;
+    char     Text[40];
+    char     SecurityIDSource;
+    char     SecurityID[15];
+    char     RiskID[5];
+
+    enum { MSGTYPE = LIFFE_MSG_CB1 };
+    enum { MSGVARIANT = 1 };
+};

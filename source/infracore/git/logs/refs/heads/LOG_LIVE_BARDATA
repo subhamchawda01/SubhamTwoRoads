@@ -1,0 +1,8 @@
+0000000000000000000000000000000000000000 5dec76ed05172b6ad39f2be6ecff6889ae53e8e2 subhamchawda01 <subham.chawda@tworoads-trading.co.in> 1682317755 +0000	branch: Created from refs/remotes/origin/LOG_LIVE_BARDATA
+5dec76ed05172b6ad39f2be6ecff6889ae53e8e2 237759864a1b3f4673adaf3c8ad7e8b6f0c4d98d subhamchawda01 <subham.chawda@tworoads-trading.co.in> 1683105769 +0000	commit: uncomment drop log & udp direct initialization
+237759864a1b3f4673adaf3c8ad7e8b6f0c4d98d 4e4dbd0cf979dd8068ac6946fcab9a11a52e680f subhamchawda01 <subham.chawda@tworoads-trading.co.in> 1683105897 +0000	commit: bug fix _W products log on last week of month
+4e4dbd0cf979dd8068ac6946fcab9a11a52e680f 2c7bd9ed6bb2bc69d72a4e8ec77c2515e128c908 subhamchawda01 <subham.chawda@tworoads-trading.co.in> 1684715815 +0000	commit: bug fix log _W products log on last week of month
+2c7bd9ed6bb2bc69d72a4e8ec77c2515e128c908 4331cda779b8a166ff07b6e0c26f44cf1b64578d subhamchawda01 <subham.chawda@tworoads-trading.co.in> 1684830067 +0000	pull: Fast-forward
+4331cda779b8a166ff07b6e0c26f44cf1b64578d 80d277eabccfc2e347ee304551b5ffc71a781d18 subhamchawda01 <subham.chawda@tworoads-trading.co.in> 1688629153 +0000	pull: Fast-forward
+80d277eabccfc2e347ee304551b5ffc71a781d18 e81ad6af8b858c5f9e6cd623cbec6b0da6abb1cd subhamchawda01 <subham.chawda@tworoads-trading.co.in> 1688635800 +0000	commit: added handling for spot in live bardata recovery
+e81ad6af8b858c5f9e6cd623cbec6b0da6abb1cd 3ed21c9496e8818ed823d5a3d5c07fc8716d7c28 subhamchawda01 <subham.chawda@tworoads-trading.co.in> 1689057894 +0000	commit: bardata recovery manager spot index data fix

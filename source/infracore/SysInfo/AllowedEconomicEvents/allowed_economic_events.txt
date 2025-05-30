@@ -1,0 +1,814 @@
+BR_DOL_0 USD Nonfarm_Payrolls 600 -10
+BR_DOL_0 USD Fed_Interest_Rate_Decision 600 -30
+DI1F17 USD Nonfarm_Payrolls 600 -10
+XT_0 AUD Unemployment Rate 600 -600
+YT_0 AUD Unemployment Rate 600 -600
+AP_0 AUD Unemployment Rate 600 -600
+IR_0 AUD Unemployment Rate 600 -600
+IR_1 AUD Unemployment Rate 600 -600
+IR_2 AUD Unemployment Rate 600 -600
+IR_3 AUD Unemployment Rate 600 -600
+IR_4 AUD Unemployment Rate 600 -600
+NKD_0 USD Nonfarm_Payrolls 600 -10 
+NIY_0 USD Nonfarm_Payrolls 600 -10
+NKD_0 USD Retail_Sales_(MoM) 300 -10
+NIY_0 USD Retail_Sales_(MoM) 300 -10
+NKD_0 USD Durable_Goods_Orders 300 -10
+NIY_0 USD Durable_Goods_Orders 300 -10
+NKD_0 USD Reuters/Michigan_Consumer_Sentiment_Index 300 -10
+NIY_0 USD Reuters/Michigan_Consumer_Sentiment_Index 300 -10
+NKD_0 USD Philadelphia_Fed_Manufacturing_Survey 300 -10
+NIY_0 USD Philadelphia_Fed_Manufacturing_Survey 300 -10
+NKD_0 USD Producer_Price_Index_ex_Food_&_Energy_(YoY) 300 -10
+NIY_0 USD Producer_Price_Index_ex_Food_&_Energy_(YoY) 300 -10
+NKD_0 USD Export_Price_Index_(YoY) 300 -10
+NIY_0 USD Export_Price_Index_(YoY) 300 -10
+NKD_0 USD ISM_Non-Manufacturing_PMI 300 -10
+NIY_0 USD ISM_Non-Manufacturing_PMI 300 -10
+NKD_0 USD ADP_Employment_Change 300 -10
+NIY_0 USD ADP_Employment_Change 300 -10
+NKD_0 USD ISM_Manufacturing_PMI 300 -10
+NIY_0 USD ISM_Manufacturing_PMI 300 -10
+NKD_0 USD Chicago_Purchasing_Managers'_Index 600 -10
+NIY_0 USD Chicago_Purchasing_Managers'_Index 600 -10
+NKD_0 USD Core_Personal_Consumption_Expenditure_-_Price_Index_(YoY) 300 -10
+NIY_0 USD Core_Personal_Consumption_Expenditure_-_Price_Index_(YoY) 300 -10
+NKD_0 USD Gross_Domestic_Product_Annualized 600 -10
+NIY_0 USD Gross_Domestic_Product_Annualized 600 -10
+LFZ_0 USD Labor_Market_Conditions_Index
+LFZ_0 USD JOLTS_Job_Openings
+LFZ_0 USD ISM_New_York_index
+LFZ_0 USD Redbook_index_(MoM)
+LFZ_0 USD Redbook_index_(YoY)
+LFZ_0 USD Net_Long-Term_TIC_Flows
+LFZ_0 USD Monthly_Budget_Statement
+LFZ_0 USD Total_Net_TIC_Flows
+LFZ_0 USD 3-Month_Bill_Auction
+LFZ_0 USD 6-Month_Bill_Auction
+LFZ_0 USD 4-Week_Bill_Auction
+LFZ_0 USD Total_Vehicle_Sales
+LFZ_0 USD Fed's_William_Dudley_speech
+LFZ_0 USD S&P/Case-Shiller_Home_Price_Indices_(YoY)
+LFZ_0 USD Richmond_Fed_Manufacturing_Index
+LFZ_0 USD Dallas_Fed_Manufacturing_Business_Index
+LFZ_0 USD Chicago_Fed_National_Activity_Index
+LFZ_0 USD Kansas_Fed_manufacturing_activity
+LFZ_0 USD FOMC_Member_Mester_speech
+LFZ_0 USD Fed_Minneapolis's_Narayana_Kocherlakota_speech
+LFZ_0 USD Fed's_Evans_Speech
+LFZ_0 USD NY_Empire_State_Manufacturing_Index
+LFZ_0 USD Fed's_Bullard_speech
+LFZ_0 USD Monthly_Budget_Statement
+LFZ_0 USD 52-Week_Bill_auction
+LFZ_0 USD Federal_Reserve_Bank_of_Boston_President_Rosengren_Speech
+LFZ_0 USD Fed's_Tarullo_speech
+LFZ_0 USD FOMC_Member_Powell_Speech
+LFZ_0 USD Fed's_Lacker_speech
+LFZ_0 USD Fed's_Richard_Fisher's_speech
+LFZ_0 USD Philadelphia_Fed's_Plosser_speech
+LFZ_0 USD Fed's_Lockhart_speech
+LFZ_0 USD Fed's_Beige_Book
+LFZ_0 USD Labor_Force_Participation_Rate
+LFZ_0 USD Initial_Jobless_Claims 300 0
+LFZ_0 USD Continuing_Jobless_Claims 300 0
+LFZ_0 USD Durable_Goods_Orders 300 -10
+LFZ_0 USD Durable_Goods_Orders_ex_Transportation 300 -10
+LFZ_0 USD Pending_Home_Sales_(YoY) 300 -10
+LFZ_0 USD Markit_Services_PMI 300 -10
+LFZ_0 USD Markit_PMI_Composite 300 -10
+LFZ_0 USD Pending_Home_Sales_(MoM) 300 -10
+LFZ_0 USD New_Home_Sales_Change_(MoM) 300 -10
+LFZ_0 USD New_Home_Sales_(MoM) 300 -10
+LFZ_0 USD Markit_Manufacturing_PMI 300 -10
+LFZ_0 USD CB_Leading_Indicator_(MoM) 
+LFZ_0 USD Existing_Home_Sales_(MoM) 
+LFZ_0 USD Existing_Home_Sales_Change_(MoM) 
+LFZ_0 USD Housing_Starts_(MoM) 
+LFZ_0 USD Building_Permits_(MoM) 
+LFZ_0 USD Reuters/Michigan_Consumer_Sentiment_Index 300 -10
+LFZ_0 USD Capacity_Utilization 300 -10
+LFZ_0 USD Industrial_Production_(MoM) 300 -10
+LFZ_0 USD NAHB_Housing_Market_Index 
+LFZ_0 USD Philadelphia_Fed_Manufacturing_Survey 300 -10
+LFZ_0 USD Retail_Sales_(MoM) 300 -10
+LFZ_0 USD Retail_Sales_ex_Autos_(MoM) 300 -10
+LFZ_0 USD Producer_Price_Index_ex_Food_&_Energy_(YoY) 300 -10
+LFZ_0 USD Producer_Price_Index_ex_Food_&_Energy_(MoM) 300 -10
+LFZ_0 USD Producer_Price_Index_(YoY) 300 -10
+LFZ_0 USD Producer_Price_Index_(MoM) 300 -10
+LFZ_0 USD Business_Inventories 300 0
+LFZ_0 USD Export_Price_Index_(MoM) 300 -10
+LFZ_0 USD Export_Price_Index_(YoY) 300 -10
+LFZ_0 USD Import_Price_Index_(MoM) 300 -10
+LFZ_0 USD Import_Price_Index_(YoY) 300 -10
+LFZ_0 USD Trade_Balance 300 -10
+LFZ_0 USD ISM_Non-Manufacturing_PMI 300 -10
+LFZ_0 USD Factory_Orders_(MoM) 300 -10
+LFZ_0 USD ADP_Employment_Change 300 -10
+LFZ_0 USD ISM_Manufacturing_PMI 300 -10
+LFZ_0 USD Construction_Spending_(MoM) 300 0
+LFZ_0 USD ISM_Prices_Paid 300 -10
+LFZ_0 USD Chicago_Purchasing_Managers'_Index 600 0
+LFZ_0 USD Consumer_Confidence 300 -10
+LFZ_0 USD Core_Personal_Consumption_Expenditure_-_Price_Index_(MoM) 300 -10
+LFZ_0 USD Core_Personal_Consumption_Expenditure_-_Price_Index_(YoY) 300 -10
+LFZ_0 USD Personal_Consumption_Expenditures_-_Price_Index_(MoM) 300 -10
+LFZ_0 USD Personal_Consumption_Expenditures_-_Price_Index_(YoY) 300 -10
+LFZ_0 USD Personal_Income_(MoM) 300 -10
+LFZ_0 USD Personal_Spending 300 -10
+LFZ_0 USD Gross_Domestic_Product_Annualized 300 -10
+LFZ_0 USD Gross_Domestic_Product_Price_Index 300 -10
+LFZ_0 USD Personal_Consumption_Expenditures_Prices_(QoQ) 300 -10
+LFZ_0 USD Reuters/Michigan_Consumer_Sentiment_Index 300 -10
+LFZ_0 USD 10-Year-Auction 300 0
+LFZ_0 USD 10-Year_Note_Auction 300 0
+LFZ_0 USD 30-Year-Auction 300 0
+LFZ_0 USD 30-Year_Note_Auction 300 0
+LFZ_0 USD 2-Year-Auction 
+LFZ_0 USD 2-Year_Note_Auction 
+LFZ_0 USD 5-Year-Auction 300 0
+LFZ_0 USD 5-Year_Note_Auction 300 0
+LFZ_0 USD 7-Year-Auction 300 0 
+LFZ_0 USD 7-Year_Note_Auction 300 0
+LFZ_0 USD 3-Year-Auction 300 0
+LFZ_0 USD 3-Year_Note_Auction 300 0
+UB_0 USD Labor_Market_Conditions_Index
+UB_0 USD JOLTS_Job_Openings
+UB_0 USD ISM_New_York_index
+UB_0 USD Redbook_index_(MoM)
+UB_0 USD Redbook_index_(YoY)
+UB_0 USD Net_Long-Term_TIC_Flows
+UB_0 USD Monthly_Budget_Statement
+UB_0 USD Total_Net_TIC_Flows
+UB_0 USD 3-Month_Bill_Auction
+UB_0 USD 6-Month_Bill_Auction
+UB_0 USD 4-Week_Bill_Auction
+UB_0 USD Total_Vehicle_Sales
+UB_0 USD Fed's_William_Dudley_speech
+UB_0 USD S&P/Case-Shiller_Home_Price_Indices_(YoY)
+UB_0 USD Richmond_Fed_Manufacturing_Index
+UB_0 USD Dallas_Fed_Manufacturing_Business_Index
+UB_0 USD Chicago_Fed_National_Activity_Index
+UB_0 USD Kansas_Fed_manufacturing_activity
+UB_0 USD FOMC_Member_Mester_speech
+UB_0 USD Fed_Minneapolis's_Narayana_Kocherlakota_speech
+UB_0 USD Fed's_Evans_Speech
+UB_0 USD NY_Empire_State_Manufacturing_Index
+UB_0 USD Fed's_Bullard_speech
+UB_0 USD Monthly_Budget_Statement
+UB_0 USD 52-Week_Bill_auction
+UB_0 USD Federal_Reserve_Bank_of_Boston_President_Rosengren_Speech
+UB_0 USD Fed's_Tarullo_speech
+UB_0 USD FOMC_Member_Powell_Speech
+UB_0 USD Fed's_Lacker_speech
+UB_0 USD Fed's_Richard_Fisher's_speech
+UB_0 USD Philadelphia_Fed's_Plosser_speech
+UB_0 USD Fed's_Lockhart_speech
+UB_0 USD Fed's_Beige_Book
+UB_0 USD Labor_Force_Participation_Rate
+ZF_0 USD Baker_Hughes_US_Oil_Rig_Count
+ZF_0 USD Labor_Market_Conditions_Index
+ZF_0 USD JOLTS_Job_Openings
+ZF_0 USD ISM_New_York_index
+ZF_0 USD Redbook_index_(MoM)
+ZF_0 USD Redbook_index_(YoY)
+ZF_0 USD Net_Long-Term_TIC_Flows
+ZF_0 USD Monthly_Budget_Statement
+ZF_0 USD Total_Net_TIC_Flows
+ZF_0 USD 3-Month_Bill_Auction
+ZF_0 USD 6-Month_Bill_Auction
+ZF_0 USD 4-Week_Bill_Auction
+ZF_0 USD Total_Vehicle_Sales
+ZF_0 USD Fed's_William_Dudley_speech
+ZF_0 USD S&P/Case-Shiller_Home_Price_Indices_(YoY)
+ZF_0 USD Richmond_Fed_Manufacturing_Index
+ZF_0 USD Dallas_Fed_Manufacturing_Business_Index
+ZF_0 USD Chicago_Fed_National_Activity_Index
+ZF_0 USD Kansas_Fed_manufacturing_activity
+ZF_0 USD FOMC_Member_Mester_speech
+ZF_0 USD Fed_Minneapolis's_Narayana_Kocherlakota_speech
+ZF_0 USD Fed's_Evans_Speech
+ZF_0 USD NY_Empire_State_Manufacturing_Index
+ZF_0 USD Fed's_Bullard_speech
+ZF_0 USD Monthly_Budget_Statement
+ZF_0 USD 52-Week_Bill_auction
+ZF_0 USD Federal_Reserve_Bank_of_Boston_President_Rosengren_Speech
+ZF_0 USD Fed's_Tarullo_speech
+ZF_0 USD FOMC_Member_Powell_Speech
+ZF_0 USD Fed's_Lacker_speech
+ZF_0 USD Fed's_Richard_Fisher's_speech
+ZF_0 USD Philadelphia_Fed's_Plosser_speech
+ZF_0 USD Fed's_Lockhart_speech
+ZF_0 USD Fed's_Beige_Book
+ZF_0 USD Labor_Force_Participation_Rate
+ZT_0 USD Labor_Market_Conditions_Index
+ZT_0 USD JOLTS_Job_Openings
+ZT_0 USD ISM_New_York_index
+ZT_0 USD Redbook_index_(MoM)
+ZT_0 USD Redbook_index_(YoY)
+ZT_0 USD Net_Long-Term_TIC_Flows
+ZT_0 USD Monthly_Budget_Statement
+ZT_0 USD Total_Net_TIC_Flows
+ZT_0 USD 3-Month_Bill_Auction
+ZT_0 USD 6-Month_Bill_Auction
+ZT_0 USD 4-Week_Bill_Auction
+ZT_0 USD Total_Vehicle_Sales
+ZT_0 USD Fed's_William_Dudley_speech
+ZT_0 USD S&P/Case-Shiller_Home_Price_Indices_(YoY)
+ZT_0 USD Richmond_Fed_Manufacturing_Index
+ZT_0 USD Dallas_Fed_Manufacturing_Business_Index
+ZT_0 USD Chicago_Fed_National_Activity_Index
+ZT_0 USD Kansas_Fed_manufacturing_activity
+ZT_0 USD FOMC_Member_Mester_speech
+ZT_0 USD Fed_Minneapolis's_Narayana_Kocherlakota_speech
+ZT_0 USD Fed's_Evans_Speech
+ZT_0 USD NY_Empire_State_Manufacturing_Index
+ZT_0 USD Fed's_Bullard_speech
+ZT_0 USD Monthly_Budget_Statement
+ZT_0 USD 52-Week_Bill_auction
+ZT_0 USD Federal_Reserve_Bank_of_Boston_President_Rosengren_Speech
+ZT_0 USD Fed's_Tarullo_speech
+ZT_0 USD FOMC_Member_Powell_Speech
+ZT_0 USD Fed's_Lacker_speech
+ZT_0 USD Fed's_Richard_Fisher's_speech
+ZT_0 USD Philadelphia_Fed's_Plosser_speech
+ZT_0 USD Fed's_Lockhart_speech
+ZT_0 USD Fed's_Beige_Book
+ZT_0 USD Labor_Force_Participation_Rate
+CGB_0 CAD Canadian_portfolio_investment_in_foreign_securities
+CGB_0 CAD Foreign_portfolio_investment_in_Canadian_securities
+CGB_0 CAD Ivey_Purchasing_Managers_Index
+CGB_0 CAD Ivey_Purchasing_Managers_Index_s.a
+CGB_0 EUR Markit_Manufacturing_PMI
+CGB_0 USD Average_Hourly_Earnings_(MoM)
+CGB_0 USD Average_Hourly_Earnings_(YoY)
+CGB_0 USD Average_Weekly_Hours
+CGB_0 USD Core_Personal_Consumption_Expenditure_-_Price_Index_(MoM)
+CGB_0 USD Core_Personal_Consumption_Expenditure_-_Price_Index_(YoY)
+CGB_0 USD Nonfarm_Payrolls 600 -10
+CGB_0 USD Personal_Consumption_Expenditures_-_Price_Index_(MoM)
+CGB_0 USD Personal_Consumption_Expenditures_-_Price_Index_(YoY)
+CGB_0 USD Personal_Income_(MoM)
+CGB_0 USD Personal_Spending
+CGB_0 USD Unemployment_Rate
+CGB_0 USD 30-Year-Auction
+CGB_0 USD 30-Year_Bond_Auction
+CGB_0 USD 3-Year-Auction
+CGB_0 USD ADP_Employment_Change
+CGB_0 USD Bloomberg_Consumer_Comfort
+CGB_0 USD Bloomberg_Economic_Expectations
+CGB_0 USD Business_Inventories
+CGB_0 USD Consumer_Credit_Change
+CGB_0 USD Continuing_Jobless_Claims
+CGB_0 USD CPI_Core_s.a
+CGB_0 USD CPI_Ex_Food_&_Energy_(MoM)
+CGB_0 USD CPI_Ex_Food_&_Energy_(YoY)
+CGB_0 USD CPI_(MoM)
+CGB_0 USD CPI_n.s.a_(MoM)
+CGB_0 USD CPI_(YoY)
+CGB_0 USD EIA_Natural_Gas_Storage_change
+CGB_0 USD Export_Price_Index_(MoM)
+CGB_0 USD Export_Price_Index_(YoY)
+CGB_0 USD Factory_Orders_(MoM)
+CGB_0 USD Fed's_William_Dudley_speech
+CGB_0 USD Import_Price_Index_(MoM)
+CGB_0 USD Import_Price_Index_(YoY)
+CGB_0 USD Industrial_Production_(MoM)
+CGB_0 USD Initial_Jobless_Claims
+CGB_0 USD ISM_Non-Manufacturing_PMI
+CGB_0 USD Markit_Manufacturing_PMI
+CGB_0 USD Monthly_Budget_Statement
+CGB_0 USD NAHB_Housing_Market_Index
+CGB_0 USD Net_Long-Term_TIC_Flows
+CGB_0 USD NY_Empire_State_Manufacturing_Index
+CGB_0 USD RBC_Consumer_Outlook_Index
+CGB_0 USD Redbook_index_(MoM)
+CGB_0 USD Redbook_index_(YoY)
+CGB_0 USD Total_Net_TIC_Flows
+CGB_0 USD Treasury_Sec_Lew_Speech
+CGB_0 USD JOLTS_Job_Openings
+CGB_0 USD 52-Week_Bill_auction
+CGB_0 USD FOMC_Member_Mester_speech
+CGB_0 USD Fed's_Stanley_Fischer_speech
+FGBL_0 EUR Producer_Price_Index_(YoY)
+FGBL_0 USD JOLTS_Job_Openings
+FGBL_0 USD 10-Year-Auction
+FGBL_0 USD 10-Year_Note_Auction
+FGBL_0 USD 30-Year-Auction
+FGBL_0 USD 30-Year_Bond_Auction
+FGBL_0 USD 3-Month_Bill_Auction
+FGBL_0 USD 4-Week_Bill_Auction
+FGBL_0 USD 6-Month_Bill_Auction
+FGBL_0 USD Capacity_Utilization
+FGBL_0 USD EIA_Crude_Oil_Stocks_change
+FGBL_0 USD EIA_Natural_Gas_Storage_change
+FGBL_0 USD Factory_Orders_(MoM)
+FGBL_0 USD Industrial_Production_(MoM)
+FGBL_0 USD NAHB_Housing_Market_Index
+FGBL_0 USD Net_Long-Term_TIC_Flows
+FGBL_0 USD NY_Empire_State_Manufacturing_Index
+FGBL_0 USD Producer_Price_Index_ex_Food_&_Energy_(MoM)
+FGBL_0 USD Producer_Price_Index_ex_Food_&_Energy_(YoY)
+FGBL_0 USD Producer_Price_Index_(MoM)
+FGBL_0 USD Producer_Price_Index_(YoY)
+FGBL_0 USD Redbook_index_(MoM)
+FGBL_0 USD Redbook_index_(YoY)
+FGBL_0 USD Total_Net_TIC_Flows
+FGBL_0 USD Treasury_Sec_Lew_Speech
+FGBX_0 USD JOLTS_Job_Openings
+FGBM_0 USD 3-Month_Bill_Auction
+FGBM_0 USD 4-Week_Bill_Auction
+FGBM_0 USD 6-Month_Bill_Auction
+FGBM_0 USD Average_Hourly_Earnings_(MoM)
+FGBM_0 USD Average_Hourly_Earnings_(YoY)
+FGBM_0 USD Average_Weekly_Hours
+FGBM_0 USD Bloomberg_Economic_Expectations
+FGBM_0 USD Business_Inventories
+FGBM_0 USD EIA_Crude_Oil_Stocks_change
+FGBM_0 USD EIA_Natural_Gas_Storage_change
+FGBM_0 USD ISM_New_York_index
+FGBM_0 USD Markit_Manufacturing_PMI
+FGBM_0 USD NAHB_Housing_Market_Index
+FGBM_0 USD NY_Empire_State_Manufacturing_Index
+FGBM_0 USD RBC_Consumer_Outlook_Index
+FGBM_0 USD Retail_Sales_ex_Autos_(MoM)
+FGBM_0 USD Treasury_Sec_Lew_Speech
+FGBS_0 USD 4-Week_Bill_Auction
+FGBS_0 USD Average_Hourly_Earnings_(MoM)
+FGBS_0 USD Average_Hourly_Earnings_(YoY)
+FGBS_0 USD Average_Weekly_Hours
+FGBS_0 USD Bloomberg_Consumer_Comfort
+FGBS_0 USD CPI_Core_s.a
+FGBS_0 USD CPI_Ex_Food_&_Energy_(MoM)
+FGBS_0 USD CPI_Ex_Food_&_Energy_(YoY)
+FGBS_0 USD CPI_(MoM)
+FGBS_0 USD CPI_n.s.a_(MoM)
+FGBS_0 USD CPI_(YoY)
+FGBS_0 USD EIA_Crude_Oil_Stocks_change
+FGBS_0 USD EIA_Natural_Gas_Storage_change
+FGBS_0 USD Export_Price_Index_(MoM)
+FGBS_0 USD Export_Price_Index_(YoY)
+FGBS_0 USD Import_Price_Index_(MoM)
+FGBS_0 USD Import_Price_Index_(YoY)
+FGBS_0 USD ISM_Non-Manufacturing_PMI
+FGBS_0 USD NY_Empire_State_Manufacturing_Index
+FGBS_0 USD Producer_Price_Index_ex_Food_&_Energy_(MoM)
+FGBS_0 USD Producer_Price_Index_ex_Food_&_Energy_(YoY)
+FGBS_0 USD Producer_Price_Index_(MoM)
+FGBS_0 USD Producer_Price_Index_(YoY)
+FGBS_0 USD Redbook_index_(MoM)
+FGBS_0 USD Redbook_index_(YoY)
+FGBS_0 USD Retail_Sales_ex_Autos_(MoM)
+FGBS_0 USD Retail_Sales_(MoM)
+FGBS_0 USD Treasury_Sec_Lew_Speech
+FGBS_0 USD Wholesale_Inventories
+FGBS_0 USD Fed's_Lockhart_speech
+FGBS_0 USD 3-Month_Bill_Auction
+FGBS_0 USD 6-Month_Bill_Auction
+FGBS_0 USD Labor_Market_Conditions_Index
+FGBS_0 USD FOMC_Member_Mester_speech
+FGBS_0 USD Fed's_Stanley_Fischer_speech
+FGBS_0 USD FOMC_Member_Mester_speech
+FGBS_0 USD Household_Change_in_Net_Worth
+FGBS_0 USD Fed's_Beige_Book
+FGBS_0 USD Markit_Services_PMI
+FGBS_0 USD Markit_PMI_Composite
+FGBS_0 USD Nonfarm_Productivity
+FGBS_0 USD Unit_Labor_Costs
+FGBS_0 USD ISM_New_York_index
+FGBS_0 USD Redbook_index_(MoM)
+FGBS_0 USD Total_Vehicle_Sales
+FGBS_0 USD Fed's_William_Dudley_speech
+FGBS_0 USD Richmond_Fed_Manufacturing_Index
+FGBS_0 USD S&P/Case-Shiller_Home_Price_Indices_(YoY)
+FGBS_0 USD Dallas_Fed_Manufacturing_Business_Index
+FGBS_0 USD Pending_Home_Sales_(YoY)
+FGBS_0 USD Pending_Home_Sales_(MoM)
+FGBS_0 USD New_Home_Sales_(MoM)
+FGBS_0 USD New_Home_Sales_Change_(MoM)
+FGBS_0 USD Chicago_Fed_National_Activity_Index
+FGBS_0 USD Markit_US_PMI_Preliminary
+FGBS_0 USD Markit_Manufacturing_PMI
+FGBS_0 USD CB_Leading_Indicator_(MoM)
+FGBS_0 USD Kansas_Fed_manufacturing_activity
+FGBS_0 USD Existing_Home_Sales_(MoM)
+FGBS_0 USD Housing_Starts_(MoM)
+FGBS_0 USD Fed_Minneapolis's_Narayana_Kocherlakota_speech
+FGBS_0 USD Fed's_Bullard_speech
+FGBS_0 USD Total_Net_TIC_Flows
+FGBS_0 USD Net_Long-Term_TIC_Flows
+FGBS_0 USD Capacity_Utilization
+FGBS_0 USD Industrial_Production_(MoM)
+FGBS_0 USD 52-Week_Bill_auction
+FGBS_0 USD Fed's_Evans_Speech
+FGBS_0 USD Fed's_Tarullo_speech
+FGBS_0 USD Philadelphia_Fed's_Plosser_speech
+FGBS_0 USD ISM_New_York_index
+FGBS_0 USD FOMC_Member_Powell_Speech
+FGBS_0 USD American_Petroleum_Institute_Monthly_Report
+FGBS_0 USD NAHB_Housing_Market_Index
+FGBS_0 USD JOLTS_Job_Openings
+LFR_0 USD Capacity_Utilization 300 -10
+LFR_0 USD Continuing_Jobless_Claims 300 -10
+LFR_0 USD CPI_Core_s.a 600 -30 
+LFR_0 USD CPI_Ex_Food_&_Energy_(MoM) 600 -30
+LFR_0 USD CPI_Ex_Food_&_Energy_(YoY) 600 -30 
+LFR_0 USD CPI_(MoM) 600 -30
+LFR_0 USD CPI_n.s.a_(MoM) 600 -30 
+LFR_0 USD CPI_(YoY) 300 -30
+LFR_0 USD EIA_Crude_Oil_Stocks_change
+LFR_0 USD Export_Price_Index_(MoM) 300 -10
+LFR_0 USD Export_Price_Index_(YoY) 300 -10
+LFR_0 USD Import_Price_Index_(MoM) 300 -10
+LFR_0 USD Import_Price_Index_(YoY) 300 -10
+LFR_0 USD Initial_Jobless_Claims 300 -10
+LFR_0 USD ISM_Non-Manufacturing_PMI 600 -30
+LFR_0 USD NAHB_Housing_Market_Index 
+LFR_0 USD NY_Empire_State_Manufacturing_Index
+LFR_0 USD Producer_Price_Index_ex_Food_&_Energy_(MoM) 300 -10
+LFR_0 USD Producer_Price_Index_ex_Food_&_Energy_(YoY) 300 -10
+LFR_0 USD Producer_Price_Index_(MoM) 300 -10
+LFR_0 USD Retail_Sales_ex_Autos_(MoM) 300 -10
+LFR_0 USD Labor_Market_Conditions_Index
+LFR_0 USD JOLTS_Job_Openings
+LFR_0 USD ISM_New_York_index
+LFR_0 USD Redbook_index_(MoM)
+LFR_0 USD Redbook_index_(YoY)
+LFR_0 USD Net_Long-Term_TIC_Flows
+LFR_0 USD Monthly_Budget_Statement
+LFR_0 USD Total_Net_TIC_Flows
+LFR_0 USD 3-Month_Bill_Auction
+LFR_0 USD 6-Month_Bill_Auction
+LFR_0 USD 4-Week_Bill_Auction
+LFR_0 USD Total_Vehicle_Sales
+LFR_0 USD Fed's_William_Dudley_speech
+LFR_0 USD S&P/Case-Shiller_Home_Price_Indices_(YoY)
+LFR_0 USD Richmond_Fed_Manufacturing_Index
+LFR_0 USD Dallas_Fed_Manufacturing_Business_Index
+LFR_0 USD Chicago_Fed_National_Activity_Index
+LFR_0 USD Kansas_Fed_manufacturing_activity
+LFR_0 USD FOMC_Member_Mester_speech
+LFR_0 USD Fed_Minneapolis's_Narayana_Kocherlakota_speech
+LFR_0 USD Fed's_Evans_Speech
+LFR_0 USD NY_Empire_State_Manufacturing_Index
+LFR_0 USD Fed's_Bullard_speech
+LFR_0 USD Monthly_Budget_Statement
+LFR_0 USD 52-Week_Bill_auction
+LFR_0 USD Federal_Reserve_Bank_of_Boston_President_Rosengren_Speech
+LFR_0 USD Fed's_Tarullo_speech
+LFR_0 USD FOMC_Member_Powell_Speech
+LFR_0 USD Fed's_Lacker_speech
+LFR_0 USD Fed's_Richard_Fisher's_speech
+LFR_0 USD Philadelphia_Fed's_Plosser_speech
+LFR_0 USD Fed's_Lockhart_speech
+LFR_0 USD Fed's_Beige_Book
+LFR_0 USD Labor_Force_Participation_Rate
+LFR_0 USD Durable_Goods_Orders 600 -30
+LFR_0 USD Durable_Goods_Orders_ex_Transportation 600 -30
+LFR_0 USD Pending_Home_Sales_(YoY) 300 -10
+LFR_0 USD Markit_Services_PMI 300 -10
+LFR_0 USD Markit_PMI_Composite 300 -10
+LFR_0 USD Pending_Home_Sales_(MoM) 300 -10
+LFR_0 USD New_Home_Sales_Change_(MoM) 300 -10
+LFR_0 USD New_Home_Sales_(MoM) 300 -10
+LFR_0 USD Markit_Manufacturing_PMI 300 -10
+LFR_0 USD CB_Leading_Indicator_(MoM) 
+LFR_0 USD Existing_Home_Sales_(MoM) 300 -10
+LFR_0 USD Existing_Home_Sales_Change_(MoM) 300 -10
+LFR_0 USD Housing_Starts_(MoM) 300 -10
+LFR_0 USD Building_Permits_(MoM) 300 -10
+LFR_0 USD Reuters/Michigan_Consumer_Sentiment_Index 300 -10
+LFR_0 USD Capacity_Utilization 
+LFR_0 USD Industrial_Production_(MoM) 
+LFR_0 USD NAHB_Housing_Market_Index 
+LFR_0 USD Philadelphia_Fed_Manufacturing_Survey 300 -10
+LFR_0 USD Retail_Sales_(MoM) 600 -60
+LFR_0 USD Retail_Sales_ex_Autos_(MoM) 600 -60
+LFR_0 USD Trade_Balance 300 -10
+LFR_0 USD ISM_Non-Manufacturing_PMI 600 -30
+LFR_0 USD Factory_Orders_(MoM) 300 -10
+LFR_0 USD ADP_Employment_Change 300 -10
+LFR_0 USD ISM_Manufacturing_PMI 600 -30
+LFR_0 USD Construction_Spending_(MoM) 600 -30
+LFR_0 USD ISM_Prices_Paid 600 -30
+LFR_0 USD Chicago_Purchasing_Managers'_Index 600 -30
+LFR_0 USD Consumer_Confidence 300 -30
+LFR_0 USD Core_Personal_Consumption_Expenditure_-_Price_Index_(MoM) 300 -30
+LFR_0 USD Core_Personal_Consumption_Expenditure_-_Price_Index_(YoY) 300 -30
+LFR_0 USD Personal_Consumption_Expenditures_-_Price_Index_(MoM) 300 -30
+LFR_0 USD Personal_Consumption_Expenditures_-_Price_Index_(YoY) 300 -30
+LFR_0 USD Personal_Income_(MoM) 300 -30
+LFR_0 USD Personal_Spending 300 -30
+LFR_0 USD Gross_Domestic_Product_Annualized 600 -30
+LFR_0 USD Gross_Domestic_Product_Price_Index 600 -30
+LFR_0 USD Personal_Consumption_Expenditures_Prices_(QoQ) 600 -30
+LFR_0 USD 10-Year-Auction 600 -200
+LFR_0 USD 10-Year_Note_Auction 600 -200
+LFR_0 USD 30-Year-Auction 600 -200
+LFR_0 USD 30-Year_Note_Auction 600 -200
+LFR_0 USD 2-Year-Auction 
+LFR_0 USD 2-Year_Note_Auction 
+LFR_0 USD 5-Year-Auction 600 -200
+LFR_0 USD 5-Year_Note_Auction 600 -200
+LFR_0 USD 7-Year-Auction 600 -200
+LFR_0 USD 7-Year_Note_Auction 600 -200
+LFR_0 USD 3-Year-Auction 
+LFR_0 USD 3-Year_Note_Auction 
+GE USD 10-Year-Auction 600 -60
+GE USD 2-Year-Auction 600 -60
+GE USD 30-Year-Auction 600 -60
+GE USD 3-Year-Auction 600 -60
+GE USD 5-Year-Auction 600 -60
+GE USD 7-Year-Auction 600 -60
+GE USD Bank_Stress_Test_Info 600 -60
+GE USD Consumer_Confidence 600 -60
+GE USD Core_Personal_Consumption_Expenditure_-_Price_Index_(YoY) 600 -30
+GE USD Core_Personal_Consumption_Expenditures_(QoQ) 600 -30
+GE USD CPI_Ex_Food_&_Energy_(MoM) 600 -30
+GE USD CPI_Ex_Food_&_Energy_(YoY) 600 -30
+GE USD CPI_(MoM) 600 -30
+GE USD CPI_(YoY) 600 -30
+GE USD Durable_Goods_Orders 600 -30
+GE USD Fed_Chairman_Nomination_Vote 600 -60
+GE USD Fed_Interest_Rate_Decision 600 -60
+GE USD Fed_Pace_of_MBS_Purchase_Program 600 -60
+GE USD Fed_Pace_of_Treasury_Purchase_Program 600 -60
+GE USD Fed's_Bernanke_Speech 600 -60
+GE USD Fed's_Monetary_Policy_Statement 600 -60
+GE USD Fed's_Monetary_Policy_Statement_and_press_conference 600 -60
+GE USD Fed's_Yellen_Speech 600 -60
+GE USD Fed's_Yellen_Speech_On_Labor_Markets_in_Jackson_Hole 600 -60
+GE USD Fed's_Yellen_testifies 600 -60
+GE USD Gross_Domestic_Product_Annualized 600 -60
+GE USD Gross_Domestic_Product_Price_Index 600 -60
+GE USD ISM_Manufacturing_PMI 600 -30
+GE USD ISM_Non-Manufacturing_PMI 600 -30
+GE USD Minutes_of_FOMC_Meeting 600 -60
+GE USD Nonfarm_Payrolls 600 -60
+GE USD Personal_Consumption_Expenditures_Prices_(QoQ) 600 -60
+GE USD Retail_Sales_(MoM) 600 -30
+GE USD Unemployment_Rate 600 -60
+GE USD ADP_Employment_Change 600 -60
+VX USD Unemployment_Rate 600 -10
+VX USD Nonfarm_Payrolls 600 -10
+VX USD Minutes_of_FOMC_Meeting 600 -10
+VX Fed_Interest_Rate_Decision 600 -10
+FVS_1 EUR ECB_Monetary_policy_statement_and_press_conference 1800 0
+FVS_1 EUR ECB_Interest_Rate_Decision 1800 0
+FVS_0 EUR ECB_Monetary_policy_statement_and_press_conference 1200 0
+FVS_0 EUR ECB_Interest_Rate_Decision 1200 0
+ED_0 EUR ECB_Monetary_policy_statement_and_press_conference 600 -5400
+ED_0 EUR ECB_Interest_Rate_Decision 600 -8100
+LFI_3 USD Nonfarm_Payrolls 1500 0
+LFI_4 USD Nonfarm_Payrolls 1500 0
+LFI_5 USD Nonfarm_Payrolls 1500 0
+LFI_6 USD Nonfarm_Payrolls 1500 0
+LFI_7 USD Nonfarm_Payrolls 1500 0
+LFI_8 USD Nonfarm_Payrolls 1500 0
+LFI_9 USD Nonfarm_Payrolls 1500 0
+EUR_RUB__TOM USD EIA_Crude_Oil_Stocks_change 600 -30
+USD000UTSTOM USD EIA_Crude_Oil_Stocks_change 600 0
+Si_0 USD EIA_Crude_Oil_Stocks_change 300 0
+RI_0 USD EIA_Crude_Oil_Stocks_change 300 0
+BR_0 USD EIA_Crude_Oil_Stocks_change 300 0
+6C_0 USD EIA_Crude_Oil_Stocks_change 300 0
+XT_0 USD Capacity_Utilization 
+XT_0 USD Continuing_Jobless_Claims 
+XT_0 USD EIA_Crude_Oil_Stocks_change
+XT_0 USD Initial_Jobless_Claims 
+XT_0 USD NAHB_Housing_Market_Index 
+XT_0 USD NY_Empire_State_Manufacturing_Index
+XT_0 USD Labor_Market_Conditions_Index
+XT_0 USD JOLTS_Job_Openings
+XT_0 USD ISM_New_York_index
+XT_0 USD Redbook_index_(MoM)
+XT_0 USD Redbook_index_(YoY)
+XT_0 USD Net_Long-Term_TIC_Flows
+XT_0 USD Monthly_Budget_Statement
+XT_0 USD Total_Net_TIC_Flows
+XT_0 USD 3-Month_Bill_Auction
+XT_0 USD 6-Month_Bill_Auction
+XT_0 USD 4-Week_Bill_Auction
+XT_0 USD Total_Vehicle_Sales
+XT_0 USD Fed's_William_Dudley_speech
+XT_0 USD S&P/Case-Shiller_Home_Price_Indices_(YoY)
+XT_0 USD Richmond_Fed_Manufacturing_Index
+XT_0 USD Dallas_Fed_Manufacturing_Business_Index
+XT_0 USD Chicago_Fed_National_Activity_Index
+XT_0 USD Kansas_Fed_manufacturing_activity
+XT_0 USD FOMC_Member_Mester_speech
+XT_0 USD Fed_Minneapolis's_Narayana_Kocherlakota_speech
+XT_0 USD Fed's_Evans_Speech
+XT_0 USD NY_Empire_State_Manufacturing_Index
+XT_0 USD Fed's_Bullard_speech
+XT_0 USD Monthly_Budget_Statement
+XT_0 USD 52-Week_Bill_auction
+XT_0 USD Federal_Reserve_Bank_of_Boston_President_Rosengren_Speech
+XT_0 USD Fed's_Tarullo_speech
+XT_0 USD FOMC_Member_Powell_Speech
+XT_0 USD Fed's_Lacker_speech
+XT_0 USD Fed's_Richard_Fisher's_speech
+XT_0 USD Philadelphia_Fed's_Plosser_speech
+XT_0 USD Fed's_Lockhart_speech
+XT_0 USD Fed's_Beige_Book
+XT_0 USD Labor_Force_Participation_Rate
+XT_0 USD Pending_Home_Sales_(YoY) 
+XT_0 USD Markit_Services_PMI 
+XT_0 USD Markit_PMI_Composite 
+XT_0 USD Pending_Home_Sales_(MoM) 
+XT_0 USD Markit_Manufacturing_PMI 
+XT_0 USD CB_Leading_Indicator_(MoM) 
+XT_0 USD Housing_Starts_(MoM) 
+XT_0 USD Building_Permits_(MoM) 
+XT_0 USD Reuters/Michigan_Consumer_Sentiment_Index 
+XT_0 USD Capacity_Utilization 
+XT_0 USD Industrial_Production_(MoM) 
+XT_0 USD NAHB_Housing_Market_Index 
+XT_0 USD 2-Year-Auction 
+XT_0 USD 2-Year_Note_Auction 
+XT_0 USD 3-Year-Auction 
+XT_0 USD 3-Year_Note_Auction 
+YT_0 AUD Unemployment Rate 600 -600
+YT_0 USD Capacity_Utilization 
+YT_0 USD Continuing_Jobless_Claims 
+YT_0 USD EIA_Crude_Oil_Stocks_change
+YT_0 USD Initial_Jobless_Claims 
+YT_0 USD NAHB_Housing_Market_Index 
+YT_0 USD NY_Empire_State_Manufacturing_Index
+YT_0 USD Labor_Market_Conditions_Index
+YT_0 USD JOLTS_Job_Openings
+YT_0 USD ISM_New_York_index
+YT_0 USD Redbook_index_(MoM)
+YT_0 USD Redbook_index_(YoY)
+YT_0 USD Net_Long-Term_TIC_Flows
+YT_0 USD Monthly_Budget_Statement
+YT_0 USD Total_Net_TIC_Flows
+YT_0 USD 3-Month_Bill_Auction
+YT_0 USD 6-Month_Bill_Auction
+YT_0 USD 4-Week_Bill_Auction
+YT_0 USD Total_Vehicle_Sales
+YT_0 USD Fed's_William_Dudley_speech
+YT_0 USD S&P/Case-Shiller_Home_Price_Indices_(YoY)
+YT_0 USD Richmond_Fed_Manufacturing_Index
+YT_0 USD Dallas_Fed_Manufacturing_Business_Index
+YT_0 USD Chicago_Fed_National_Activity_Index
+YT_0 USD Kansas_Fed_manufacturing_activity
+YT_0 USD FOMC_Member_Mester_speech
+YT_0 USD Fed_Minneapolis's_Narayana_Kocherlakota_speech
+YT_0 USD Fed's_Evans_Speech
+YT_0 USD NY_Empire_State_Manufacturing_Index
+YT_0 USD Fed's_Bullard_speech
+YT_0 USD Monthly_Budget_Statement
+YT_0 USD 52-Week_Bill_auction
+YT_0 USD Federal_Reserve_Bank_of_Boston_President_Rosengren_Speech
+YT_0 USD Fed's_Tarullo_speech
+YT_0 USD FOMC_Member_Powell_Speech
+YT_0 USD Fed's_Lacker_speech
+YT_0 USD Fed's_Richard_Fisher's_speech
+YT_0 USD Philadelphia_Fed's_Plosser_speech
+YT_0 USD Fed's_Lockhart_speech
+YT_0 USD Fed's_Beige_Book
+YT_0 USD Labor_Force_Participation_Rate
+YT_0 USD Pending_Home_Sales_(YoY) 
+YT_0 USD Markit_Services_PMI 
+YT_0 USD Markit_PMI_Composite 
+YT_0 USD Pending_Home_Sales_(MoM) 
+YT_0 USD Markit_Manufacturing_PMI 
+YT_0 USD CB_Leading_Indicator_(MoM) 
+YT_0 USD Housing_Starts_(MoM) 
+YT_0 USD Building_Permits_(MoM) 
+YT_0 USD Reuters/Michigan_Consumer_Sentiment_Index 
+YT_0 USD Capacity_Utilization 
+YT_0 USD Industrial_Production_(MoM) 
+YT_0 USD NAHB_Housing_Market_Index 
+YT_0 USD 2-Year-Auction 
+YT_0 USD 2-Year_Note_Auction 
+YT_0 USD 3-Year-Auction 
+YT_0 USD 3-Year_Note_Auction 
+AP_0 AUD Unemployment Rate 600 -600
+AP_0 USD Capacity_Utilization 
+AP_0 USD Continuing_Jobless_Claims 
+AP_0 USD EIA_Crude_Oil_Stocks_change
+AP_0 USD Initial_Jobless_Claims 
+AP_0 USD NAHB_Housing_Market_Index 
+AP_0 USD NY_Empire_State_Manufacturing_Index
+AP_0 USD Labor_Market_Conditions_Index
+AP_0 USD JOLTS_Job_Openings
+AP_0 USD ISM_New_York_index
+AP_0 USD Redbook_index_(MoM)
+AP_0 USD Redbook_index_(YoY)
+AP_0 USD Net_Long-Term_TIC_Flows
+AP_0 USD Monthly_Budget_Statement
+AP_0 USD Total_Net_TIC_Flows
+AP_0 USD 3-Month_Bill_Auction
+AP_0 USD 6-Month_Bill_Auction
+AP_0 USD 4-Week_Bill_Auction
+AP_0 USD Total_Vehicle_Sales
+AP_0 USD Fed's_William_Dudley_speech
+AP_0 USD S&P/Case-Shiller_Home_Price_Indices_(YoY)
+AP_0 USD Richmond_Fed_Manufacturing_Index
+AP_0 USD Dallas_Fed_Manufacturing_Business_Index
+AP_0 USD Chicago_Fed_National_Activity_Index
+AP_0 USD Kansas_Fed_manufacturing_activity
+AP_0 USD FOMC_Member_Mester_speech
+AP_0 USD Fed_Minneapolis's_Narayana_Kocherlakota_speech
+AP_0 USD Fed's_Evans_Speech
+AP_0 USD NY_Empire_State_Manufacturing_Index
+AP_0 USD Fed's_Bullard_speech
+AP_0 USD Monthly_Budget_Statement
+AP_0 USD 52-Week_Bill_auction
+AP_0 USD Federal_Reserve_Bank_of_Boston_President_Rosengren_Speech
+AP_0 USD Fed's_Tarullo_speech
+AP_0 USD FOMC_Member_Powell_Speech
+AP_0 USD Fed's_Lacker_speech
+AP_0 USD Fed's_Richard_Fisher's_speech
+AP_0 USD Philadelphia_Fed's_Plosser_speech
+AP_0 USD Fed's_Lockhart_speech
+AP_0 USD Fed's_Beige_Book
+AP_0 USD Labor_Force_Participation_Rate
+AP_0 USD Pending_Home_Sales_(YoY) 
+AP_0 USD Markit_Services_PMI
+AP_0 USD Markit_PMI_Composite 
+AP_0 USD Pending_Home_Sales_(MoM) 
+AP_0 USD Markit_Manufacturing_PMI 
+AP_0 USD CB_Leading_Indicator_(MoM) 
+AP_0 USD Housing_Starts_(MoM) 
+AP_0 USD Building_Permits_(MoM) 
+AP_0 USD Reuters/Michigan_Consumer_Sentiment_Index 
+AP_0 USD Capacity_Utilization 
+AP_0 USD Industrial_Production_(MoM) 
+AP_0 USD NAHB_Housing_Market_Index 
+AP_0 USD 2-Year-Auction 
+AP_0 USD 2-Year_Note_Auction 
+AP_0 USD 3-Year-Auction 
+AP_0 USD 3-Year_Note_Auction 
+IR AUD Unemployment Rate 600 -600
+IR USD Capacity_Utilization 
+IR USD Continuing_Jobless_Claims 
+IR USD EIA_Crude_Oil_Stocks_change
+IR USD Initial_Jobless_Claims 
+IR USD NAHB_Housing_Market_Index 
+IR USD NY_Empire_State_Manufacturing_Index
+IR USD Labor_Market_Conditions_Index
+IR USD JOLTS_Job_Openings
+IR USD ISM_New_York_index
+IR USD Redbook_index_(MoM)
+IR USD Redbook_index_(YoY)
+IR USD Net_Long-Term_TIC_Flows
+IR USD Monthly_Budget_Statement
+IR USD Total_Net_TIC_Flows
+IR USD 3-Month_Bill_Auction
+IR USD 6-Month_Bill_Auction
+IR USD 4-Week_Bill_Auction
+IR USD Total_Vehicle_Sales
+IR USD Fed's_William_Dudley_speech
+IR USD S&P/Case-Shiller_Home_Price_Indices_(YoY)
+IR USD Richmond_Fed_Manufacturing_Index
+IR USD Dallas_Fed_Manufacturing_Business_Index
+IR USD Chicago_Fed_National_Activity_Index
+IR USD Kansas_Fed_manufacturing_activity
+IR USD FOMC_Member_Mester_speech
+IR USD Fed_Minneapolis's_Narayana_Kocherlakota_speech
+IR USD Fed's_Evans_Speech
+IR USD NY_Empire_State_Manufacturing_Index
+IR USD Fed's_Bullard_speech
+IR USD Monthly_Budget_Statement
+IR USD 52-Week_Bill_auction
+IR USD Federal_Reserve_Bank_of_Boston_President_Rosengren_Speech
+IR USD Fed's_Tarullo_speech
+IR USD FOMC_Member_Powell_Speech
+IR USD Fed's_Lacker_speech
+IR USD Fed's_Richard_Fisher's_speech
+IR USD Philadelphia_Fed's_Plosser_speech
+IR USD Fed's_Lockhart_speech
+IR USD Fed's_Beige_Book
+IR USD Labor_Force_Participation_Rate
+IR USD Pending_Home_Sales_(YoY) 
+IR USD Markit_Services_PMI 
+IR USD Markit_PMI_Composite 
+IR USD Pending_Home_Sales_(MoM) 
+IR USD Markit_Manufacturing_PMI 
+IR USD CB_Leading_Indicator_(MoM) 
+IR USD Housing_Starts_(MoM) 
+IR USD Building_Permits_(MoM) 
+IR USD Reuters/Michigan_Consumer_Sentiment_Index 
+IR USD Capacity_Utilization 
+IR USD Industrial_Production_(MoM) 
+IR USD NAHB_Housing_Market_Index 
+IR USD 2-Year-Auction 
+IR USD 2-Year_Note_Auction 
+IR USD 3-Year-Auction 
+IR USD 3-Year_Note_Auction 
+6A_0 USD Baker_Hughes_US_Oil_Rig_Count
+6A_0 USD EIA_Natural_Gas_Storage_change 300 -300
+6A_0 USD Reuters/Michigan_Consumer_Sentiment_Index 300 -60
+6A_0 USD Gross_Domestic_Product_Annualized 300 -900
+6A_0 USD Gross_Domestic_Product_Price_Index 300 -900
+6A_0 USD Personal_Consumption_Expenditures_Prices 
+6A_0 USD Trade_Balance 300 -600
+6A_0 USD Core_Personal_Consumption_Expenditures_(QoQ) 
+6A_0 USD S&P/Case-Shiller_Home_Price_Indices_(YoY)
+6A_0 USD 10-Year_Note_Auction
+6A_0 USD Monthly_Budget_Statement
+6A_0 USD Industrial_Production_(MoM)
+6A_0 USD Capacity_Utilization

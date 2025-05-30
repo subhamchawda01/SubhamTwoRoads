@@ -1,0 +1,16 @@
+
+project : usage-requirements <include>$(PROJECT_INSTALL) ;
+
+use-project /PCDef : ../CDefCode ;
+
+lib CommonTradeUtils : [ glob *.cpp ] : <link>static ;
+
+install libCommonTradeUtils
+  : CommonTradeUtils
+  : <install-type>LIB
+    <variant>release:<location>"$(PROJECT_LIB_INSTALL)"
+    <variant>debug:<location>"$(PROJECT_LIB_INSTALL_DEBUG)"
+  : release debug
+  ;
+
+

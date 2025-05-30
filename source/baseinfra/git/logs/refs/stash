@@ -1,0 +1,4 @@
+0000000000000000000000000000000000000000 7e2ee87d1d43714cfee717da3e16155ada9cac3c subhamchawda01 <subham.chawda@tworoads-trading.co.in> 1643604589 +0000	On master: spot issue NIFTY50DIVPOINT bardata not getting generated
+7e2ee87d1d43714cfee717da3e16155ada9cac3c d20e9e0f3e10e0cb6b4668683dae71999180ae1d subhamchawda01 <subham.chawda@tworoads-trading.co.in> 1674642766 +0000	On OEBU_FIX_MASTER: oebu CM report changes
+d20e9e0f3e10e0cb6b4668683dae71999180ae1d a62ada425d9c222b7e8ada67b54b0881cd3a20a3 subhamchawda01 <subham.chawda@tworoads-trading.co.in> 1677059122 +0000	On L1_LOGGED_DATA: generic l1 struct changes
+a62ada425d9c222b7e8ada67b54b0881cd3a20a3 321bcf4a13bd88b899abbcb6e9f90040429ee331 subhamchawda01 <subham.chawda@tworoads-trading.co.in> 1677138067 +0000	On L1_LOGGED_DATA: profiling l1 mkt trade logger

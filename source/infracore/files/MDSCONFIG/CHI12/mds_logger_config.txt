@@ -1,0 +1,3 @@
+#EXCHANGE       START_TIME      END_TIME        TIMEZONE        TOLERANCE(SEC)
+LIFFE           0010            0600            UTC             1800
+OSE_L1           0600            0800             UTC            1800

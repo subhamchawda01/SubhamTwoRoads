@@ -1,0 +1,21 @@
+50308,Trade for Trade,https://archives.nseindia.com/content/circulars/CML50308.zip,Listing
+50307,Listing of Government Securities on capital market segment,https://archives.nseindia.com/content/circulars/CML50307.pdf,Listing
+50306,Early Pay-in of Securities for STEEL STRIPS WHEELS LIMITED (SSWL) - Face Value Split,https://archives.nseindia.com/content/circulars/CMPT50306.pdf,NSE Clearing - Capital Market
+50305,Trade for Trade,https://archives.nseindia.com/content/circulars/SURV50305.zip,Surveillance & Investigation
+50304,Listing of further issues of securities,https://archives.nseindia.com/content/circulars/CML50304.pdf,Listing
+50302,Listing of privately placed securities on the debt segment of the Exchange,https://archives.nseindia.com/content/circulars/CML50302.pdf,Debt Segment
+50301,Review of Volatility Scan Range (VSR) for Option Contracts in Commodity Derivatives Segment,https://archives.nseindia.com/content/circulars/COM50301.pdf,Commodity Derivatives
+50300,Trade for Trade - Sigachi Industries Limited,https://archives.nseindia.com/content/circulars/CML50300.pdf,Listing
+50299,Applicability of Short -Term Additional Surveillance Measure (ST- ASM),https://archives.nseindia.com/content/circulars/SURV50299.zip,Surveillance & Investigation
+50298,Applicability of Additional Surveillance Measure (ASM),https://archives.nseindia.com/content/circulars/SURV50298.zip,Surveillance & Investigation
+50308 , Trade for Trade , https://archives.nseindia.com/content/circulars/CML50308.zip , Listing
+50307 , Listing of Government Securities on capital market segment , https://archives.nseindia.com/content/circulars/CML50307.pdf , Listing
+50306 , Early Pay-in of Securities for STEEL STRIPS WHEELS LIMITED (SSWL) - Face Value Split , https://archives.nseindia.com/content/circulars/CMPT50306.pdf , NSE Clearing - Capital Market
+50305 , Trade for Trade , https://archives.nseindia.com/content/circulars/SURV50305.zip , Surveillance & Investigation
+50304 , Listing of further issues of securities , https://archives.nseindia.com/content/circulars/CML50304.pdf , Listing
+50302 , Listing of privately placed securities on the debt segment of the Exchange , https://archives.nseindia.com/content/circulars/CML50302.pdf , Debt Segment
+50301 , Review of Volatility Scan Range (VSR) for Option Contracts in Commodity Derivatives Segment , https://archives.nseindia.com/content/circulars/COM50301.pdf , Commodity Derivatives
+50300 , Trade for Trade - Sigachi Industries Limited , https://archives.nseindia.com/content/circulars/CML50300.pdf , Listing
+50299 , Applicability of Short -Term Additional Surveillance Measure (ST- ASM) , https://archives.nseindia.com/content/circulars/SURV50299.zip , Surveillance & Investigation
+50298 , Applicability of Additional Surveillance Measure (ASM) , https://archives.nseindia.com/content/circulars/SURV50298.zip , Surveillance & Investigation
+50297 , Commodity Derivatives Segment - Settlement Calendar for December 2021 , https://archives.nseindia.com/content/circulars/COM50297.zip , Commodity Derivatives

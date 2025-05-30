@@ -1,0 +1,111 @@
+project : usage-requirements <include>$(PROJECT_INSTALL) ;
+
+use-project /PDVCC : ../libdvccode ;
+use-project /POrderRouting : ../OrderRoutingCode ;
+use-project /PBaseUtils : ../BaseUtilsCode ;
+use-project /POptionsUtils : ../OptionsUtilsCode ;
+use-project /PMarketAdapter : ../MarketAdapterCode ;
+use-project /PVolatileTradingInfo : ../VolatileTradingInfo ;
+use-project /PDMMinuteBar : ../MinuteBarCode ;
+use-project /PFPGA : ../FPGA ;
+use-project /PBMFFPGA : ../FPGA/BMF_FPGA ;
+
+exe db_nse_update_for_day 
+    : db_nse_update_for_day.cpp
+      /PDVCC//CDef
+      /PDVCC//CommonTradeUtils
+      /PLoggedSources//libLoggedSources
+      /PDVCC//Profiler
+      /PDVCC//TradingInfo
+      /PDVCC//ExternalData
+      /PMarketAdapter//libMarketAdapter
+      /POptionsUtils//libOptionsUtils
+      /POrderRouting//libOrderRouting
+      /PBaseUtils//libBaseUtils
+      /PDVCC//Utils
+      /PDVCC//CommonDataStructures
+      /PDMMinuteBar//libMinuteBar
+    :
+    <linkflags>-lpthread
+    <linkflags>-lmysqlcppconn
+    : <variant>debug <variant>release
+    ;
+
+exe db_nse_update_for_day_Whole_Book_faster
+    : db_nse_update_for_day_Whole_Book_faster.cpp
+      /PDVCC//CDef
+      /PDVCC//CommonTradeUtils
+      /PLoggedSources//libLoggedSources
+      /PDVCC//Profiler
+      /PDVCC//TradingInfo
+      /PDVCC//ExternalData
+      /PMarketAdapter//libMarketAdapter
+      /POptionsUtils//libOptionsUtils
+      /POrderRouting//libOrderRouting
+      /PBaseUtils//libBaseUtils
+      /PDVCC//Utils
+      /PDVCC//CommonDataStructures
+      /PDMMinuteBar//libMinuteBar
+    :
+    <linkflags>-lpthread
+    <linkflags>-lmysqlcppconn
+    : <variant>debug <variant>release
+    ;
+
+exe db_bhavcopy_techincalIndicator_update_for_day
+    : db_bhavcopy_techincalIndicator_update_for_day.cpp
+      /PDVCC//CDef
+      /PDVCC//CommonTradeUtils
+      /PLoggedSources//libLoggedSources
+      /PDVCC//Profiler
+      /PDVCC//TradingInfo
+      /PDVCC//ExternalData
+      /PMarketAdapter//libMarketAdapter
+      /POptionsUtils//libOptionsUtils
+      /POrderRouting//libOrderRouting
+      /PBaseUtils//libBaseUtils
+      /PDVCC//Utils 
+      /PDVCC//CommonDataStructures
+      /PDMMinuteBar//libMinuteBar
+    :
+    <linkflags>-lpthread
+    <linkflags>-lmysqlcppconn
+    : <variant>debug <variant>release
+    ;
+
+exe db_check_local
+    : db_check_local.cpp
+    /PDVCC//Utils
+    :
+    <linkflags>-lpthread
+    <linkflags>-lmysqlcppconn
+    <library-path>$(MYSQLCPP_LIB_PATH)
+    : <variant>debug <variant>release
+    ;
+
+exe db_create_handle_2
+    : db_create_handle_2.cpp
+    /PDVCC//Utils
+    :
+    <linkflags>-lpthread
+    <linkflags>-lmysqlcppconn
+    <library-path>$(MYSQLCPP_LIB_PATH)
+    : <variant>debug <variant>release
+    ;
+
+exe db_test_connection
+    : db_test_connection.cpp
+    /PDVCC//Utils
+    :
+    <linkflags>-lpthread
+    <linkflags>-lmysqlcppconn
+    <library-path>$(MYSQLCPP_LIB_PATH)
+    : <variant>debug <variant>release
+    ;
+
+install install-bin
+    : db_nse_update_for_day db_check_local db_create_handle_2 db_test_connection db_nse_update_for_day_Whole_Book_faster db_bhavcopy_techincalIndicator_update_for_day
+    : <variant>release:<location>"$(PROJECT_BIN_INSTALL)"
+      <variant>debug:<location>"$(PROJECT_BIN_INSTALL_DEBUG)"
+        : release debug
+    ;

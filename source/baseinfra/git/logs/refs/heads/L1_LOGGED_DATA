@@ -1,0 +1,13 @@
+0000000000000000000000000000000000000000 a7ec85faed2ea42044a99f710655b315c9f9cfca subhamchawda01 <subham.chawda@tworoads-trading.co.in> 1676972263 +0000	branch: Created from HEAD
+a7ec85faed2ea42044a99f710655b315c9f9cfca befbdb6412ba878515630bcdad7217765c06f79d subhamchawda01 <subham.chawda@tworoads-trading.co.in> 1676972274 +0000	commit: mkt_trade_logger with L1 data handling
+befbdb6412ba878515630bcdad7217765c06f79d 9105485b48eb3e88ffb27ff907765b0ac85db28e subhamchawda01 <subham.chawda@tworoads-trading.co.in> 1676993966 +0000	commit: bug fix empty book
+9105485b48eb3e88ffb27ff907765b0ac85db28e 6ab72dc6a8d5b1ff5e5ab3fb8c5110fede8442cc subhamchawda01 <subham.chawda@tworoads-trading.co.in> 1677051750 +0000	commit: added handling for bid_info bid_int_price and ask
+6ab72dc6a8d5b1ff5e5ab3fb8c5110fede8442cc 0790f33045dfb95934f548ce5da93ad5cdd50d44 subhamchawda01 <subham.chawda@tworoads-trading.co.in> 1677143204 +0000	commit: latency improvement for l1 data
+0790f33045dfb95934f548ce5da93ad5cdd50d44 2d9556c97dd6a6e57fcf9ec24ff7aaeb8f068916 subhamchawda01 <subham.chawda@tworoads-trading.co.in> 1677219482 +0000	commit: speed improvements clubbed multiple functions
+2d9556c97dd6a6e57fcf9ec24ff7aaeb8f068916 3daaa0a5b09987477bcecec1f7caf7243a2df348 subhamchawda01 <subham.chawda@tworoads-trading.co.in> 1677578966 +0000	commit: invalid price in trade book
+3daaa0a5b09987477bcecec1f7caf7243a2df348 0b5ed3a81960fb8b6ac0e5fd3af02ff7a9c8a00d subhamchawda01 <subham.chawda@tworoads-trading.co.in> 1677585789 +0000	pull: Fast-forward
+0b5ed3a81960fb8b6ac0e5fd3af02ff7a9c8a00d f5ef3caf2da3eb9fc424ef5c6da16ba407e2f6d3 subhamchawda01 <subham.chawda@tworoads-trading.co.in> 1677653795 +0000	pull: Fast-forward
+f5ef3caf2da3eb9fc424ef5c6da16ba407e2f6d3 4e9a5679caaf97ece6fb3aba46c727e4e3e82ce4 subhamchawda01 <subham.chawda@tworoads-trading.co.in> 1677653960 +0000	commit: removed cout
+4e9a5679caaf97ece6fb3aba46c727e4e3e82ce4 5e5eb793de450c94e5d9138918f6231f5f9f6112 subhamchawda01 <subham.chawda@tworoads-trading.co.in> 1677654073 +0000	commit: commented NotifyListenersOnLevelChange to avoid multiple entries of OnMarketUpdate
+5e5eb793de450c94e5d9138918f6231f5f9f6112 061b909da7ed18dcc9622ef89a6bfcf5fbd2beea subhamchawda01 <subham.chawda@tworoads-trading.co.in> 1678971716 +0000	commit: uncommented NotifyListenersOnLevelChange for multiple entries of OnMarketUpdate (normal one)
+061b909da7ed18dcc9622ef89a6bfcf5fbd2beea 7c980849ac20356934117e686ba4c28c540c10d1 subhamchawda01 <subham.chawda@tworoads-trading.co.in> 1681176794 +0000	pull: Fast-forward

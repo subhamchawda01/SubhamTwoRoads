@@ -1,0 +1,7 @@
+"country","date","name","actual","consensus","previous","volatility"
+"Switzerland","20150329 01:00:00","Daylight Saving Time ","","","","0"
+"European Monetary Union","20150329 01:00:00","Daylight Saving Time","","","","0"
+"United Kingdom","20150329 01:00:00","Daylight Saving Time","","","","0"
+"South Korea","20150329 22:00:00","BOK Manufacturing BSI","",""," 79.000 ","1"
+"Japan","20150329 23:50:00","Industrial Production (YoY)","","","-2.800  %","2"
+"Japan","20150329 23:50:00","Industrial Production (MoM)","","","3.700  %","1"

@@ -1,0 +1,23 @@
+# APP name
+# MD = raw_mkt_data_receiver   , low_latency
+# MM = processed_mkt_data_mcast_sender , low_latency
+# LS = Live_data or processed_mkt_data_mcast_receiver , low_latency
+# CONTROL
+# ORS = ors bcast, (exchange replies etc..)
+# ORS_LS = ors_livesource, 
+#LOCATION  EXCHANGE  APP_NAME  INTERFACE  
+#CHI
+#HKEX
+HK        HKOMD    LS       p2p2.2312
+HK        HKOMD    MM       p2p2.2312
+HK        HONGKONG LS       p2p2.2312
+HK        OSE      LS       p2p2.2312
+HK        EUREX    LS       p2p2.2312
+HK        CME      LS       p2p2.2312
+HK        OSE      LS       p2p2.2312
+HK        OSE_L1   LS       p2p2.2312
+HK                 CONTROL  em1
+HK                 ORS      em1
+HK                 ORS_LS   em1
+
+

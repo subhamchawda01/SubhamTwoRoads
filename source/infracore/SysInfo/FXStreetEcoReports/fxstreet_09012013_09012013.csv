@@ -1,0 +1,8 @@
+"country","date","name","actual","consensus","previous","volatility"
+"China","20130901 01:00:00","NBS Manufacturing PMI",""," 50.600 "," 50.300 ","2"
+"New Zealand","20130901 22:45:00","Terms of Trade Index","","3.900  %","4.100  %","1"
+"Korea, Republic of","20130901 23:00:00","Consumer Price Index Growth","","","0.200  %","1"
+"Korea, Republic of","20130901 23:00:00","Consumer Price Index Growth (YoY)","","","1.400  %","1"
+"United Kingdom","20130901 23:01:00","Hometrack Housing Prices s.a (MoM)","","","0.300  %","1"
+"Australia","20130901 23:30:00","AiG Performance of Mfg Index","",""," 42.000 ","2"
+"Japan","20130901 23:50:00","Capital Spending","","-2.000  %","-3.900  %","2"

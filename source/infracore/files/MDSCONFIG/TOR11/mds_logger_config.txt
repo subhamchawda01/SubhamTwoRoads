@@ -1,0 +1,3 @@
+#EXCHANGE	START_TIME	END_TIME	TIMEZONE	TOLERANCE(SEC)
+TMX             0730            1100            UTC             60000
+TMX             1950            2030            UTC             600

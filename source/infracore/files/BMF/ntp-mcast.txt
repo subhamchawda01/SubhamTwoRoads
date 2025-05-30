@@ -1,0 +1,16 @@
+#Product	 StreamType	 StreamService	 Ip	 Port
+1	 Snapshot	 A	 233.252.8.4	 30101
+3	 Snapshot	 A	 233.252.8.22	 30103
+5	 Snapshot	 A	 233.252.8.40	 30105
+7	 Snapshot	 A	 233.252.8.58	 30107
+10	 Snapshot	 A	 233.252.8.85	 30110
+1	 Increment	 A	 233.252.8.5	 20101
+3	 Increment	 A	 233.252.8.23	 20103
+5	 Increment	 A	 233.252.8.41	 20105
+7	 Increment	 A	 233.252.8.59	 20107
+10	 Increment	 A	 233.252.8.86	 20110
+1	 Reference	 A	 233.252.8.3	 10001
+3	 Reference	 A	 233.252.8.21	 10003
+5	 Reference	 A	 233.252.8.39	 10005
+7	 Reference	 A	 233.252.8.57	 10007
+10	 Reference	 A	 233.252.8.84	 10010

@@ -1,0 +1,12 @@
+project : usage-requirements <include>$(PROJECT_INSTALL) ;
+
+lib NSET : [ glob *.cpp NSET/NSEEngine.cpp ] : <link>static ;
+
+install libNSET
+  : NSET
+  : <install-type>LIB
+    <variant>release:<location>"$(PROJECT_INSTALL)/lib"
+    <variant>debug:<location>"$(PROJECT_INSTALL)/libdebug"
+  : release debug
+  ;
+

@@ -1,0 +1,3 @@
+0000000000000000000000000000000000000000 ecce64d099fd88cabbbe517a7a9a3570e8dffb5c subhamchawda01 <subham.chawda@tworoads-trading.co.in> 1666068840 +0000	branch: Created from HEAD
+ecce64d099fd88cabbbe517a7a9a3570e8dffb5c 299fd1a063788717f025dbfbf8373649c19c5c45 subhamchawda01 <subham.chawda@tworoads-trading.co.in> 1666069098 +0000	commit: added 2sec sleep in ors report live
+299fd1a063788717f025dbfbf8373649c19c5c45 4b500ec1742b9c88a54c9ea2505c20b0663d57d2 subhamchawda01 <subham.chawda@tworoads-trading.co.in> 1666069199 +0000	merge origin/master: Merge made by the 'recursive' strategy.

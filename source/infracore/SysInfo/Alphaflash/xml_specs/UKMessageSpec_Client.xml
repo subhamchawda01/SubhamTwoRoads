@@ -1,0 +1,3889 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<?xml-stylesheet type="text/xsl" href="./ClientHTML.xsl"?><protocol>
+<version>351</version>
+<revisions>
+    <revision type="Final" version="351" author="MNI News" date="03/13/2017"/>
+  </revisions>
+<category name="UK_Consumer_Price_Index">
+<description>UK Consumer Price Index - CPI</description>
+<country>UK</country>
+<category_id>20001</category_id>
+<data>
+<datum>
+<short_description>CPI change Year-on-Year</short_description>
+<description>CPI change Year-on-Year</description>
+<datum_type>%</datum_type>
+<datum_id>1</datum_id>
+</datum>
+<datum>
+<short_description>CPI change Month-on-Month</short_description>
+<description>CPI change Month-on-Month</description>
+<datum_type>%</datum_type>
+<datum_id>2</datum_id>
+</datum>
+<datum>
+<short_description>CORE CPI change year on year</short_description>
+<description>CORE CPI change year on year</description>
+<datum_type>%</datum_type>
+<datum_id>3</datum_id>
+</datum>
+<datum>
+<short_description>CORE CPI change month on month</short_description>
+<description>CORE CPI change month on month</description>
+<datum_type>%</datum_type>
+<datum_id>4</datum_id>
+</datum>
+<datum>
+<short_description>RPI Year-on-Year (based on weighted-average of mortgage rates)</short_description>
+<description>RPI Year-on-Year, based on weighted-average of mortgage rates</description>
+<datum_type>%</datum_type>
+<datum_id>5</datum_id>
+</datum>
+<datum>
+<short_description>RPI Month-on-Month (based on weighted-average of mortgage rates)</short_description>
+<description>RPI Month-on-Month, based on weighted-average of mortgage rates</description>
+<datum_type>%</datum_type>
+<datum_id>6</datum_id>
+</datum>
+<datum>
+<short_description>RPI Ex Mortgage Payments year on year</short_description>
+<description>RPI Ex Mortgage Payments year on year</description>
+<datum_type>%</datum_type>
+<datum_id>7</datum_id>
+</datum>
+</data>
+<messages>
+<message>
+<message_type>release</message_type>
+<message_version>1</message_version>
+<multicast_group>UK_OFC_NATL_STATISTICS</multicast_group>
+<fields>
+<field>
+<datum_id>1</datum_id>
+<field_type>float</field_type>
+<example_value>3.3</example_value>
+</field>
+<field>
+<datum_id>2</datum_id>
+<field_type>float</field_type>
+<example_value>0.6</example_value>
+</field>
+<field>
+<datum_id>3</datum_id>
+<field_type>float</field_type>
+<example_value>1.5</example_value>
+</field>
+<field>
+<datum_id>4</datum_id>
+<field_type>float</field_type>
+<example_value>0.3</example_value>
+</field>
+<field>
+<datum_id>5</datum_id>
+<field_type>float</field_type>
+<example_value>4.3</example_value>
+</field>
+<field>
+<datum_id>6</datum_id>
+<field_type>float</field_type>
+<example_value>0.5</example_value>
+</field>
+<field>
+<datum_id>7</datum_id>
+<field_type>float</field_type>
+<example_value>4.4</example_value>
+</field>
+</fields>
+</message>
+<message>
+<message_type>estimate</message_type>
+<message_version>1</message_version>
+<multicast_group>UK_ESTIMATES</multicast_group>
+<fields>
+<field>
+<datum_id>1</datum_id>
+<field_type>float</field_type>
+<example_value>3.3</example_value>
+</field>
+<field>
+<datum_id>2</datum_id>
+<field_type>float</field_type>
+<example_value>0.6</example_value>
+</field>
+<field>
+<datum_id>3</datum_id>
+<field_type>float</field_type>
+<example_value>1.5</example_value>
+</field>
+<field>
+<datum_id>4</datum_id>
+<field_type>float</field_type>
+<example_value>0.3</example_value>
+</field>
+<field>
+<datum_id>5</datum_id>
+<field_type>float</field_type>
+<example_value>4.3</example_value>
+</field>
+<field>
+<datum_id>6</datum_id>
+<field_type>float</field_type>
+<example_value>0.5</example_value>
+</field>
+<field>
+<datum_id>7</datum_id>
+<field_type>float</field_type>
+<example_value>4.4</example_value>
+</field>
+</fields>
+</message>
+</messages>
+</category>
+<category name="UK_Producer_Prices">
+<description>UK Producer Prices</description>
+<country>UK</country>
+<category_id>20003</category_id>
+<data>
+<datum>
+<short_description>PPI Output Month-on-Month</short_description>
+<description>PPI Output Month-on-Month</description>
+<datum_type>%</datum_type>
+<datum_id>1</datum_id>
+</datum>
+<datum>
+<short_description>PPI Input Month-on-Month</short_description>
+<description>PPI Input Month-on-Month</description>
+<datum_type>%</datum_type>
+<datum_id>2</datum_id>
+</datum>
+<datum>
+<short_description>PPI Core Output Mos-on-Mos</short_description>
+<description>PPI Core Output Mos-on-Mos</description>
+<datum_type>%</datum_type>
+<datum_id>3</datum_id>
+</datum>
+<datum>
+<short_description>PPI Output Year-on-Year</short_description>
+<description>PPI Output Year-on-Year</description>
+<datum_type>%</datum_type>
+<datum_id>4</datum_id>
+</datum>
+<datum>
+<short_description>PPI Input Year-on-Year</short_description>
+<description>PPI Input Year-on-Year</description>
+<datum_type>%</datum_type>
+<datum_id>5</datum_id>
+</datum>
+<datum>
+<short_description>PPI Output Core Year-on-Year</short_description>
+<description>PPI Output Core Year-on-Year</description>
+<datum_type>%</datum_type>
+<datum_id>6</datum_id>
+</datum>
+</data>
+<messages>
+<message>
+<message_type>release</message_type>
+<message_version>1</message_version>
+<multicast_group>UK_OFC_NATL_STATISTICS</multicast_group>
+<fields>
+<field>
+<datum_id>1</datum_id>
+<field_type>float</field_type>
+<example_value>0.3</example_value>
+</field>
+<field>
+<datum_id>2</datum_id>
+<field_type>float</field_type>
+<example_value>0.8</example_value>
+</field>
+<field>
+<datum_id>3</datum_id>
+<field_type>float</field_type>
+<example_value>1.2</example_value>
+</field>
+<field>
+<datum_id>4</datum_id>
+<field_type>float</field_type>
+<example_value>8.9</example_value>
+</field>
+<field>
+<datum_id>5</datum_id>
+<field_type>float</field_type>
+<example_value>20.5</example_value>
+</field>
+<field>
+<datum_id>6</datum_id>
+<field_type>float</field_type>
+<example_value>5.9</example_value>
+</field>
+</fields>
+</message>
+<message>
+<message_type>estimate</message_type>
+<message_version>1</message_version>
+<multicast_group>UK_ESTIMATES</multicast_group>
+<fields>
+<field>
+<datum_id>1</datum_id>
+<field_type>float</field_type>
+<example_value>0.3</example_value>
+</field>
+<field>
+<datum_id>2</datum_id>
+<field_type>float</field_type>
+<example_value>0.8</example_value>
+</field>
+<field>
+<datum_id>3</datum_id>
+<field_type>float</field_type>
+<example_value>1.2</example_value>
+</field>
+<field>
+<datum_id>4</datum_id>
+<field_type>float</field_type>
+<example_value>8.9</example_value>
+</field>
+<field>
+<datum_id>5</datum_id>
+<field_type>float</field_type>
+<example_value>20.5</example_value>
+</field>
+<field>
+<datum_id>6</datum_id>
+<field_type>float</field_type>
+<example_value>5.9</example_value>
+</field>
+</fields>
+</message>
+</messages>
+</category>
+<category name="UK_Labour_Report">
+<description>UK Labour Report</description>
+<country>UK</country>
+<category_id>20004</category_id>
+<data>
+<datum>
+<short_description>Claimant Count Change</short_description>
+<description>Claimant Count Change</description>
+<datum_type>units</datum_type>
+<datum_id>2</datum_id>
+</datum>
+<datum>
+<short_description>Claimant Count Rate</short_description>
+<description>Claimant Count Rate</description>
+<datum_type>%</datum_type>
+<datum_id>3</datum_id>
+</datum>
+<datum>
+<short_description>Average Weekly Earnings annual rate, Including Bonuses, 3mos/3mos</short_description>
+<description>Average Weekly Earnings annual rate, Including Bonuses, 3mos/3mos. This was first published in January, 2010.</description>
+<datum_type>%</datum_type>
+<datum_id>5</datum_id>
+</datum>
+<datum>
+<short_description>Average Weekly Earnings annual rate, Excluding Bonuses, 3mos/3mos</short_description>
+<description>Average Weekly Earnings annual rate, Excluding Bonuses, 3mos/3mos. This was first published in January, 2010.</description>
+<datum_type>%</datum_type>
+<datum_id>6</datum_id>
+</datum>
+<datum>
+<short_description>ILO Unemployment Rate</short_description>
+<description>ILO Unemployment Rate (3 month rolling average)</description>
+<datum_type>%</datum_type>
+<datum_id>7</datum_id>
+</datum>
+<datum>
+<short_description>Prior Revised UK Claimant Count Change</short_description>
+<description>Prior Revised UK Claimant Count Change</description>
+<datum_type>units</datum_type>
+<datum_id>8</datum_id>
+</datum>
+</data>
+<messages>
+<message>
+<message_type>release</message_type>
+<message_version>4</message_version>
+<start_date>2010-10-13</start_date>
+<multicast_group>UK_OFC_NATL_STATISTICS</multicast_group>
+<fields>
+<field>
+<datum_id>2</datum_id>
+<field_type>int</field_type>
+<example_value>9000</example_value>
+</field>
+<field>
+<datum_id>3</datum_id>
+<field_type>float</field_type>
+<example_value>3.8</example_value>
+</field>
+<field>
+<datum_id>5</datum_id>
+<field_type>float</field_type>
+<example_value>2.5</example_value>
+</field>
+<field>
+<datum_id>6</datum_id>
+<field_type>float</field_type>
+<example_value>3.9</example_value>
+</field>
+<field>
+<datum_id>7</datum_id>
+<field_type>float</field_type>
+<example_value>7.8</example_value>
+</field>
+<field>
+<datum_id>8</datum_id>
+<field_type>int</field_type>
+<example_value>9000</example_value>
+</field>
+</fields>
+</message>
+<message>
+<message_type>estimate</message_type>
+<message_version>4</message_version>
+<start_date>2010-10-13</start_date>
+<multicast_group>UK_ESTIMATES</multicast_group>
+<fields>
+<field>
+<datum_id>2</datum_id>
+<field_type>int</field_type>
+<example_value>9000</example_value>
+</field>
+<field>
+<datum_id>3</datum_id>
+<field_type>float</field_type>
+<example_value>3.8</example_value>
+</field>
+<field>
+<datum_id>5</datum_id>
+<field_type>float</field_type>
+<example_value>2.5</example_value>
+</field>
+<field>
+<datum_id>6</datum_id>
+<field_type>float</field_type>
+<example_value>3.9</example_value>
+</field>
+<field>
+<datum_id>7</datum_id>
+<field_type>float</field_type>
+<example_value>7.8</example_value>
+</field>
+<field>
+<datum_id>8</datum_id>
+<field_type>int</field_type>
+<example_value>9000</example_value>
+</field>
+</fields>
+</message>
+</messages>
+</category>
+<category name="UK_GDP_First_Estimate">
+<description>UK GDP First Estimate</description>
+<country>UK</country>
+<category_id>20005</category_id>
+<data>
+<datum>
+<short_description>First Estimate GDP Quarter on Quarter</short_description>
+<description>First Estimate GDP Quarter on Quarter</description>
+<datum_type>%</datum_type>
+<datum_id>1</datum_id>
+</datum>
+<datum>
+<short_description>First Estimate GDP Year on Year</short_description>
+<description>First Estimate GDP Year on Year</description>
+<datum_type>%</datum_type>
+<datum_id>2</datum_id>
+</datum>
+</data>
+<messages>
+<message>
+<message_type>release</message_type>
+<message_version>1</message_version>
+<multicast_group>UK_OFC_NATL_STATISTICS</multicast_group>
+<fields>
+<field>
+<datum_id>1</datum_id>
+<field_type>float</field_type>
+<example_value>0.6</example_value>
+</field>
+<field>
+<datum_id>2</datum_id>
+<field_type>float</field_type>
+<example_value>2.9</example_value>
+</field>
+</fields>
+</message>
+<message>
+<message_type>estimate</message_type>
+<message_version>1</message_version>
+<multicast_group>UK_ESTIMATES</multicast_group>
+<fields>
+<field>
+<datum_id>1</datum_id>
+<field_type>float</field_type>
+<example_value>0.6</example_value>
+</field>
+<field>
+<datum_id>2</datum_id>
+<field_type>float</field_type>
+<example_value>2.9</example_value>
+</field>
+</fields>
+</message>
+</messages>
+</category>
+<category name="UK_Public_Sector_Finances">
+<description>Public Sector Finances</description>
+<country>UK</country>
+<category_id>20007</category_id>
+<data>
+<datum>
+<short_description>GBP BLN PSNCR - Public Sector Net Cash Requirement</short_description>
+<description>GBP BLN PSNCR - Public Sector Net Cash Requirement</description>
+<datum_scale>B</datum_scale>
+<datum_type>GBP</datum_type>
+<datum_id>1</datum_id>
+</datum>
+<datum>
+<short_description>GBP BLN PSNB - Public Sector Net Borrowing</short_description>
+<description>GBP BLN PSNB - Public Sector Net Borrowing, including financial intervensions</description>
+<datum_scale>B</datum_scale>
+<datum_type>GBP</datum_type>
+<datum_id>2</datum_id>
+</datum>
+<datum>
+<short_description>GBP BLN PSNB - Ex-Financial Intervetion</short_description>
+<description>GBP BLN PSNB - Ex-Financial Intervetion</description>
+<datum_scale>B</datum_scale>
+<datum_type>GBP</datum_type>
+<datum_id>3</datum_id>
+</datum>
+<datum>
+<short_description>Central Government Net Cash Requirement</short_description>
+<description>Central Government Net Cash Requirement</description>
+<datum_scale>B</datum_scale>
+<datum_type>GBP</datum_type>
+<datum_id>4</datum_id>
+</datum>
+</data>
+<messages>
+<message>
+<message_type>release</message_type>
+<message_version>3</message_version>
+<start_date>2011-09-21</start_date>
+<multicast_group>UK_OFC_NATL_STATISTICS</multicast_group>
+<fields>
+<field>
+<datum_id>1</datum_id>
+<field_type>float</field_type>
+<example_value>10.987</example_value>
+</field>
+<field>
+<datum_id>2</datum_id>
+<field_type>float</field_type>
+<example_value>11</example_value>
+</field>
+<field>
+<datum_id>3</datum_id>
+<field_type>float</field_type>
+<example_value>7</example_value>
+</field>
+<field>
+<datum_id>4</datum_id>
+<field_type>float</field_type>
+<example_value>-4.366</example_value>
+</field>
+</fields>
+</message>
+<message>
+<message_type>estimate</message_type>
+<message_version>3</message_version>
+<start_date>2011-09-21</start_date>
+<multicast_group>UK_ESTIMATES</multicast_group>
+<fields>
+<field>
+<datum_id>1</datum_id>
+<field_type>float</field_type>
+<example_value>10.987</example_value>
+</field>
+<field>
+<datum_id>2</datum_id>
+<field_type>float</field_type>
+<example_value>11</example_value>
+</field>
+<field>
+<datum_id>3</datum_id>
+<field_type>float</field_type>
+<example_value>7</example_value>
+</field>
+<field>
+<datum_id>4</datum_id>
+<field_type>float</field_type>
+<example_value>-4.366</example_value>
+</field>
+</fields>
+</message>
+</messages>
+</category>
+<category name="UK_Trade_Balance">
+<description>UK Trade Balance</description>
+<country>UK</country>
+<category_id>20008</category_id>
+<data>
+<datum>
+<short_description>GBP BLN Visible Trade Balance</short_description>
+<description>GBP BLN Visible Trade Balance</description>
+<datum_scale>B</datum_scale>
+<datum_type>GBP</datum_type>
+<datum_id>1</datum_id>
+</datum>
+<datum>
+<short_description>Non-EU Trade Balance</short_description>
+<description>Non-EU Trade Balance</description>
+<datum_scale>B</datum_scale>
+<datum_type>GBP</datum_type>
+<datum_id>2</datum_id>
+</datum>
+<datum>
+<short_description>Total Trade Balance</short_description>
+<description>Total Trade Balance</description>
+<datum_scale>B</datum_scale>
+<datum_type>GBP</datum_type>
+<datum_id>3</datum_id>
+</datum>
+</data>
+<messages>
+<message>
+<message_type>release</message_type>
+<message_version>1</message_version>
+<multicast_group>UK_OFC_NATL_STATISTICS</multicast_group>
+<fields>
+<field>
+<datum_id>1</datum_id>
+<field_type>float</field_type>
+<example_value>3.526</example_value>
+</field>
+<field>
+<datum_id>2</datum_id>
+<field_type>float</field_type>
+<example_value>3.183</example_value>
+</field>
+<field>
+<datum_id>3</datum_id>
+<field_type>float</field_type>
+<example_value>7.822</example_value>
+</field>
+</fields>
+</message>
+<message>
+<message_type>estimate</message_type>
+<message_version>1</message_version>
+<multicast_group>UK_ESTIMATES</multicast_group>
+<fields>
+<field>
+<datum_id>1</datum_id>
+<field_type>float</field_type>
+<example_value>3.526</example_value>
+</field>
+<field>
+<datum_id>2</datum_id>
+<field_type>float</field_type>
+<example_value>3.183</example_value>
+</field>
+<field>
+<datum_id>3</datum_id>
+<field_type>float</field_type>
+<example_value>7.822</example_value>
+</field>
+</fields>
+</message>
+</messages>
+</category>
+<category name="UK_Industrial_Production">
+<description>UK Industrial Production</description>
+<country>UK</country>
+<category_id>20009</category_id>
+<data>
+<datum>
+<short_description>IP Month on Month</short_description>
+<description>IP Month on Month</description>
+<datum_type>%</datum_type>
+<datum_id>1</datum_id>
+</datum>
+<datum>
+<short_description>Manufacturing Month on Month</short_description>
+<description>Manufacturing Month on Month</description>
+<datum_type>%</datum_type>
+<datum_id>2</datum_id>
+</datum>
+<datum>
+<short_description>IP Year-On-Year</short_description>
+<description>IP Year-On-Year</description>
+<datum_type>%</datum_type>
+<datum_id>3</datum_id>
+</datum>
+<datum>
+<short_description>Manufacturing Output Year on Year</short_description>
+<description>Manufacturing Output Year on Year</description>
+<datum_type>%</datum_type>
+<datum_id>4</datum_id>
+</datum>
+</data>
+<messages>
+<message>
+<message_type>release</message_type>
+<message_version>1</message_version>
+<multicast_group>UK_OFC_NATL_STATISTICS</multicast_group>
+<fields>
+<field>
+<datum_id>1</datum_id>
+<field_type>float</field_type>
+<example_value>0.2</example_value>
+</field>
+<field>
+<datum_id>2</datum_id>
+<field_type>float</field_type>
+<example_value>0.1</example_value>
+</field>
+<field>
+<datum_id>3</datum_id>
+<field_type>float</field_type>
+<example_value>0.2</example_value>
+</field>
+<field>
+<datum_id>4</datum_id>
+<field_type>float</field_type>
+<example_value>0.1</example_value>
+</field>
+</fields>
+</message>
+<message>
+<message_type>estimate</message_type>
+<message_version>1</message_version>
+<multicast_group>UK_ESTIMATES</multicast_group>
+<fields>
+<field>
+<datum_id>1</datum_id>
+<field_type>float</field_type>
+<example_value>0.2</example_value>
+</field>
+<field>
+<datum_id>2</datum_id>
+<field_type>float</field_type>
+<example_value>0.1</example_value>
+</field>
+<field>
+<datum_id>3</datum_id>
+<field_type>float</field_type>
+<example_value>0.2</example_value>
+</field>
+<field>
+<datum_id>4</datum_id>
+<field_type>float</field_type>
+<example_value>0.1</example_value>
+</field>
+</fields>
+</message>
+</messages>
+</category>
+<category name="UK_GDP_Second_Estimate">
+<description>UK GDP Second Estimate</description>
+<country>UK</country>
+<category_id>20010</category_id>
+<data>
+<datum>
+<short_description>Second Estimate GDP Quarter on Quarter</short_description>
+<description>Second Estimate GDP Quarter on Quarter</description>
+<datum_type>%</datum_type>
+<datum_id>1</datum_id>
+</datum>
+<datum>
+<short_description>Second Estimate GDP Year on Year</short_description>
+<description>Second Estimate GDP Year on Year</description>
+<datum_type>%</datum_type>
+<datum_id>2</datum_id>
+</datum>
+<datum>
+<short_description>Private Consumption</short_description>
+<description>Private Consumption</description>
+<datum_type>%</datum_type>
+<datum_id>3</datum_id>
+<optional_numeric>true</optional_numeric>
+</datum>
+<datum>
+<short_description>Government Spending</short_description>
+<description>Government Spending</description>
+<datum_type>%</datum_type>
+<datum_id>4</datum_id>
+<optional_numeric>true</optional_numeric>
+</datum>
+<datum>
+<short_description>Capital Formation</short_description>
+<description>Capital Formation</description>
+<datum_type>%</datum_type>
+<datum_id>5</datum_id>
+<optional_numeric>true</optional_numeric>
+</datum>
+<datum>
+<short_description>Exports</short_description>
+<description>Exports</description>
+<datum_type>%</datum_type>
+<datum_id>6</datum_id>
+<optional_numeric>true</optional_numeric>
+</datum>
+<datum>
+<short_description>Imports</short_description>
+<description>Imports</description>
+<datum_type>%</datum_type>
+<datum_id>7</datum_id>
+<optional_numeric>true</optional_numeric>
+</datum>
+</data>
+<messages>
+<message>
+<message_type>release</message_type>
+<message_version>4</message_version>
+<start_date>2014-08-13</start_date>
+<multicast_group>UK_OFC_NATL_STATISTICS</multicast_group>
+<fields>
+<field>
+<datum_id>1</datum_id>
+<field_type>float</field_type>
+<example_value>0.6</example_value>
+</field>
+<field>
+<datum_id>2</datum_id>
+<field_type>float</field_type>
+<example_value>2.9</example_value>
+</field>
+<field>
+<datum_id>3</datum_id>
+<field_type>float</field_type>
+<example_value>0.2</example_value>
+</field>
+<field>
+<datum_id>4</datum_id>
+<field_type>float</field_type>
+<example_value>0.9</example_value>
+</field>
+<field>
+<datum_id>5</datum_id>
+<field_type>float</field_type>
+<example_value>-0.5</example_value>
+</field>
+<field>
+<datum_id>6</datum_id>
+<field_type>float</field_type>
+<example_value>-0.5</example_value>
+</field>
+<field>
+<datum_id>7</datum_id>
+<field_type>float</field_type>
+<example_value>-1.2</example_value>
+</field>
+</fields>
+</message>
+<message>
+<message_type>estimate</message_type>
+<message_version>4</message_version>
+<start_date>2014-08-13</start_date>
+<multicast_group>UK_ESTIMATES</multicast_group>
+<fields>
+<field>
+<datum_id>1</datum_id>
+<field_type>float</field_type>
+<example_value>0.6</example_value>
+</field>
+<field>
+<datum_id>2</datum_id>
+<field_type>float</field_type>
+<example_value>2.9</example_value>
+</field>
+<field>
+<datum_id>3</datum_id>
+<field_type>float</field_type>
+<example_value>0.2</example_value>
+</field>
+<field>
+<datum_id>4</datum_id>
+<field_type>float</field_type>
+<example_value>0.9</example_value>
+</field>
+<field>
+<datum_id>5</datum_id>
+<field_type>float</field_type>
+<example_value>-0.5</example_value>
+</field>
+<field>
+<datum_id>6</datum_id>
+<field_type>float</field_type>
+<example_value>-0.5</example_value>
+</field>
+<field>
+<datum_id>7</datum_id>
+<field_type>float</field_type>
+<example_value>-1.2</example_value>
+</field>
+</fields>
+</message>
+</messages>
+</category>
+<category name="UK_GDP_Third_Estimate">
+<description>UK GDP Third Estimate</description>
+<country>UK</country>
+<category_id>20011</category_id>
+<data>
+<datum>
+<short_description>Third Estimate GDP Quarter on Quarter</short_description>
+<description>Third Estimate GDP Quarter on Quarter</description>
+<datum_type>%</datum_type>
+<datum_id>1</datum_id>
+</datum>
+<datum>
+<short_description>Third Estimate GDP Year on Year</short_description>
+<description>Third Estimate GDP Year on Year</description>
+<datum_type>%</datum_type>
+<datum_id>2</datum_id>
+</datum>
+<datum>
+<short_description>Private Consumption</short_description>
+<description>Private Consumption</description>
+<datum_type>%</datum_type>
+<datum_id>3</datum_id>
+</datum>
+<datum>
+<short_description>Government Spending</short_description>
+<description>Government Spending</description>
+<datum_type>%</datum_type>
+<datum_id>4</datum_id>
+</datum>
+<datum>
+<short_description>Capital Formation</short_description>
+<description>Capital Formation</description>
+<datum_type>%</datum_type>
+<datum_id>5</datum_id>
+</datum>
+<datum>
+<short_description>Exports</short_description>
+<description>Exports</description>
+<datum_type>%</datum_type>
+<datum_id>6</datum_id>
+</datum>
+<datum>
+<short_description>Imports</short_description>
+<description>Imports</description>
+<datum_type>%</datum_type>
+<datum_id>7</datum_id>
+</datum>
+</data>
+<messages>
+<message>
+<message_type>release</message_type>
+<message_version>1</message_version>
+<multicast_group>UK_OFC_NATL_STATISTICS</multicast_group>
+<fields>
+<field>
+<datum_id>1</datum_id>
+<field_type>float</field_type>
+<example_value>0.6</example_value>
+</field>
+<field>
+<datum_id>2</datum_id>
+<field_type>float</field_type>
+<example_value>2.8</example_value>
+</field>
+<field>
+<datum_id>3</datum_id>
+<field_type>float</field_type>
+<example_value>0.1</example_value>
+</field>
+<field>
+<datum_id>4</datum_id>
+<field_type>float</field_type>
+<example_value>-0.5</example_value>
+</field>
+<field>
+<datum_id>5</datum_id>
+<field_type>float</field_type>
+<example_value>1.8</example_value>
+</field>
+<field>
+<datum_id>6</datum_id>
+<field_type>float</field_type>
+<example_value>-0.5</example_value>
+</field>
+<field>
+<datum_id>7</datum_id>
+<field_type>float</field_type>
+<example_value>-1.0</example_value>
+</field>
+</fields>
+</message>
+<message>
+<message_type>estimate</message_type>
+<message_version>1</message_version>
+<multicast_group>UK_ESTIMATES</multicast_group>
+<fields>
+<field>
+<datum_id>1</datum_id>
+<field_type>float</field_type>
+<example_value>0.6</example_value>
+</field>
+<field>
+<datum_id>2</datum_id>
+<field_type>float</field_type>
+<example_value>2.8</example_value>
+</field>
+<field>
+<datum_id>3</datum_id>
+<field_type>float</field_type>
+<example_value>0.1</example_value>
+</field>
+<field>
+<datum_id>4</datum_id>
+<field_type>float</field_type>
+<example_value>-0.5</example_value>
+</field>
+<field>
+<datum_id>5</datum_id>
+<field_type>float</field_type>
+<example_value>1.8</example_value>
+</field>
+<field>
+<datum_id>6</datum_id>
+<field_type>float</field_type>
+<example_value>-0.5</example_value>
+</field>
+<field>
+<datum_id>7</datum_id>
+<field_type>float</field_type>
+<example_value>-1.0</example_value>
+</field>
+</fields>
+</message>
+</messages>
+</category>
+<category name="UK_CBI_Distributive_Trades">
+<description>CBI Distributive Trades</description>
+<country>UK</country>
+<category_id>20012</category_id>
+<data>
+<datum>
+<short_description> Sales Reported Balance</short_description>
+<description>Sales Reported Balance (Current Month)</description>
+<datum_type>units</datum_type>
+<datum_id>1</datum_id>
+</datum>
+<datum>
+<short_description>Sales Expected Balance</short_description>
+<description>Sales Expected Balance (Next Month)</description>
+<datum_type>units</datum_type>
+<datum_id>2</datum_id>
+</datum>
+</data>
+<messages>
+<message>
+<message_type>release</message_type>
+<message_version>1</message_version>
+<multicast_group>EU_GROUP_2</multicast_group>
+<fields>
+<field>
+<datum_id>1</datum_id>
+<field_type>float</field_type>
+<example_value>-8</example_value>
+</field>
+<field>
+<datum_id>2</datum_id>
+<field_type>float</field_type>
+<example_value>-1</example_value>
+</field>
+</fields>
+</message>
+<message>
+<message_type>estimate</message_type>
+<message_version>1</message_version>
+<multicast_group>UK_ESTIMATES</multicast_group>
+<fields>
+<field>
+<datum_id>1</datum_id>
+<field_type>float</field_type>
+<example_value>-8</example_value>
+</field>
+<field>
+<datum_id>2</datum_id>
+<field_type>float</field_type>
+<example_value>-1</example_value>
+</field>
+</fields>
+</message>
+</messages>
+</category>
+<category name="UK_CBI_Industrial_Trends">
+<description>CBI Industrial Trends</description>
+<country>UK</country>
+<category_id>20013</category_id>
+<data>
+<datum>
+<short_description>Order Books Balance</short_description>
+<description>Order Books Balance</description>
+<datum_type>units</datum_type>
+<datum_id>1</datum_id>
+</datum>
+<datum>
+<short_description>Price Intentions Balance</short_description>
+<description>Price Intentions Balance</description>
+<datum_type>units</datum_type>
+<datum_id>2</datum_id>
+</datum>
+</data>
+<messages>
+<message>
+<message_type>release</message_type>
+<message_version>1</message_version>
+<multicast_group>EU_GROUP_2</multicast_group>
+<fields>
+<field>
+<datum_id>1</datum_id>
+<field_type>float</field_type>
+<example_value>-36</example_value>
+</field>
+<field>
+<datum_id>2</datum_id>
+<field_type>float</field_type>
+<example_value>8</example_value>
+</field>
+</fields>
+</message>
+<message>
+<message_type>estimate</message_type>
+<message_version>1</message_version>
+<multicast_group>UK_ESTIMATES</multicast_group>
+<fields>
+<field>
+<datum_id>1</datum_id>
+<field_type>float</field_type>
+<example_value>-36</example_value>
+</field>
+<field>
+<datum_id>2</datum_id>
+<field_type>float</field_type>
+<example_value>8</example_value>
+</field>
+</fields>
+</message>
+</messages>
+</category>
+<category name="UK_Nationwide_House_Prices">
+<description>Nationwide UK House Prices</description>
+<country>UK</country>
+<category_id>20014</category_id>
+<data>
+<datum>
+<short_description>Month-on-Month</short_description>
+<description>Month-on-Month</description>
+<datum_type>%</datum_type>
+<datum_id>1</datum_id>
+</datum>
+<datum>
+<short_description>Year-on-Year</short_description>
+<description>Year-on-Year</description>
+<datum_type>%</datum_type>
+<datum_id>2</datum_id>
+</datum>
+</data>
+<messages>
+<message>
+<message_type>release</message_type>
+<message_version>1</message_version>
+<multicast_group>EU_GROUP_2</multicast_group>
+<fields>
+<field>
+<datum_id>1</datum_id>
+<field_type>float</field_type>
+<example_value>1.2</example_value>
+</field>
+<field>
+<datum_id>2</datum_id>
+<field_type>float</field_type>
+<example_value>-5.4</example_value>
+</field>
+</fields>
+</message>
+<message>
+<message_type>estimate</message_type>
+<message_version>1</message_version>
+<multicast_group>UK_ESTIMATES</multicast_group>
+<fields>
+<field>
+<datum_id>1</datum_id>
+<field_type>float</field_type>
+<example_value>1.2</example_value>
+</field>
+<field>
+<datum_id>2</datum_id>
+<field_type>float</field_type>
+<example_value>-5.4</example_value>
+</field>
+</fields>
+</message>
+</messages>
+</category>
+<category name="UK_Index_of_Services">
+<description>UK Index of Services</description>
+<country>UK</country>
+<category_id>20015</category_id>
+<data>
+<datum>
+<short_description>Month/Month (Seasonally Adjusted)</short_description>
+<description>Month/Month (Seasonally Adjusted)</description>
+<datum_type>%</datum_type>
+<datum_id>1</datum_id>
+</datum>
+<datum>
+<short_description>3 Month/3 Month (Seasonally Adjusted)</short_description>
+<description>3 Month/3 Month (Seasonally Adjusted)</description>
+<datum_type>%</datum_type>
+<datum_id>2</datum_id>
+</datum>
+</data>
+<messages>
+<message>
+<message_type>release</message_type>
+<message_version>1</message_version>
+<multicast_group>UK_OFC_NATL_STATISTICS</multicast_group>
+<fields>
+<field>
+<datum_id>1</datum_id>
+<field_type>float</field_type>
+<example_value>1.2</example_value>
+</field>
+<field>
+<datum_id>2</datum_id>
+<field_type>float</field_type>
+<example_value>-5.4</example_value>
+</field>
+</fields>
+</message>
+<message>
+<message_type>estimate</message_type>
+<message_version>1</message_version>
+<multicast_group>UK_ESTIMATES</multicast_group>
+<fields>
+<field>
+<datum_id>1</datum_id>
+<field_type>float</field_type>
+<example_value>1.2</example_value>
+</field>
+<field>
+<datum_id>2</datum_id>
+<field_type>float</field_type>
+<example_value>-5.4</example_value>
+</field>
+</fields>
+</message>
+</messages>
+</category>
+<category name="UK_BOE_Interest_Rate">
+<description>Bank Of England Interest Rate</description>
+<country>UK</country>
+<category_id>20016</category_id>
+<data>
+<datum>
+<short_description>Interest Rate</short_description>
+<description>Interest Rate</description>
+<datum_type>%</datum_type>
+<datum_id>1</datum_id>
+</datum>
+</data>
+<messages>
+<message>
+<message_type>release</message_type>
+<message_version>1</message_version>
+<multicast_group>UK_BOE</multicast_group>
+<fields>
+<field>
+<datum_id>1</datum_id>
+<field_type>float</field_type>
+<example_value>1.2</example_value>
+</field>
+</fields>
+</message>
+<message>
+<message_type>estimate</message_type>
+<message_version>1</message_version>
+<multicast_group>UK_ESTIMATES</multicast_group>
+<fields>
+<field>
+<datum_id>1</datum_id>
+<field_type>float</field_type>
+<example_value>1.2</example_value>
+</field>
+</fields>
+</message>
+</messages>
+</category>
+<category name="UK_BBA">
+<description>BBA (British Banker's Association)</description>
+<country>UK</country>
+<category_id>20017</category_id>
+<data>
+<datum>
+<short_description>Loans for House Purchase</short_description>
+<description>Loans for House Purchase (actual number of loans made to purchase homes)</description>
+<datum_type>units</datum_type>
+<datum_id>1</datum_id>
+</datum>
+</data>
+<messages>
+<message>
+<message_type>release</message_type>
+<message_version>1</message_version>
+<multicast_group>EU_GROUP_2</multicast_group>
+<fields>
+<field>
+<datum_id>1</datum_id>
+<field_type>float</field_type>
+<example_value>35417.0</example_value>
+</field>
+</fields>
+</message>
+<message>
+<message_type>estimate</message_type>
+<message_version>1</message_version>
+<multicast_group>UK_ESTIMATES</multicast_group>
+<fields>
+<field>
+<datum_id>1</datum_id>
+<field_type>float</field_type>
+<example_value>35417.0</example_value>
+</field>
+</fields>
+</message>
+</messages>
+</category>
+<category name="UK_BOE_Lending_to_Individuals">
+<description>Bank fo England Lending to Individuals</description>
+<country>UK</country>
+<category_id>20018</category_id>
+<data>
+<datum>
+<short_description>Mortgage Approvals</short_description>
+<description>Mortgage Approvals</description>
+<datum_type>units</datum_type>
+<datum_id>1</datum_id>
+</datum>
+<datum>
+<short_description>Net Lending on Dwellings</short_description>
+<description>Net Lending on Dwellings</description>
+<datum_scale>B</datum_scale>
+<datum_type>GBP</datum_type>
+<datum_id>2</datum_id>
+</datum>
+<datum>
+<short_description>Net Consumer Credit</short_description>
+<description>Net Consumer Credit</description>
+<datum_scale>B</datum_scale>
+<datum_type>GBP</datum_type>
+<datum_id>3</datum_id>
+</datum>
+</data>
+<messages>
+<message>
+<message_type>release</message_type>
+<message_version>1</message_version>
+<multicast_group>UK_BOE</multicast_group>
+<fields>
+<field>
+<datum_id>1</datum_id>
+<field_type>float</field_type>
+<example_value>58000</example_value>
+</field>
+<field>
+<datum_id>2</datum_id>
+<field_type>float</field_type>
+<example_value>6.4</example_value>
+</field>
+<field>
+<datum_id>3</datum_id>
+<field_type>float</field_type>
+<example_value>0.9</example_value>
+</field>
+</fields>
+</message>
+<message>
+<message_type>estimate</message_type>
+<message_version>1</message_version>
+<multicast_group>UK_ESTIMATES</multicast_group>
+<fields>
+<field>
+<datum_id>1</datum_id>
+<field_type>float</field_type>
+<example_value>58000</example_value>
+</field>
+<field>
+<datum_id>2</datum_id>
+<field_type>float</field_type>
+<example_value>6.4</example_value>
+</field>
+<field>
+<datum_id>3</datum_id>
+<field_type>float</field_type>
+<example_value>0.9</example_value>
+</field>
+</fields>
+</message>
+</messages>
+</category>
+<category name="UK_Retail_Sales">
+<description>UK Retail Sales</description>
+<country>UK</country>
+<category_id>20021</category_id>
+<data>
+<datum>
+<short_description>Sales, Excluding Fuel – M/M</short_description>
+<description>Sales, Excluding Fuel, Month on Month</description>
+<datum_type>%</datum_type>
+<datum_id>1</datum_id>
+</datum>
+<datum>
+<short_description>Sales, Excluding Fuel – Y/Y</short_description>
+<description>Sales, Excluding Fuel,  Year on Year</description>
+<datum_type>%</datum_type>
+<datum_id>2</datum_id>
+</datum>
+<datum>
+<short_description>Sales, Including Fuel – M/M</short_description>
+<description>Sales, Including Fuel, Month on Month</description>
+<datum_type>%</datum_type>
+<datum_id>3</datum_id>
+</datum>
+<datum>
+<short_description>Sales, Including Fuel – Y/Y</short_description>
+<description>Sales, Including Fuel,  Year on Year</description>
+<datum_type>%</datum_type>
+<datum_id>4</datum_id>
+</datum>
+<datum>
+<short_description>Prior month sales, Including Fuel – M/M</short_description>
+<description>Prior month sales, Including Fuel, Month on Month</description>
+<datum_type>%</datum_type>
+<datum_id>5</datum_id>
+</datum>
+<datum>
+<short_description>Prior month sales, Including Fuel – Y/Y</short_description>
+<description>Prior month sales, Including Fuel,  Year on Year</description>
+<datum_type>%</datum_type>
+<datum_id>6</datum_id>
+</datum>
+<datum>
+<short_description>Prior month sales, Excluding Fuel – M/M</short_description>
+<description>Prior month sales, Excluding Fuel, Month on Month</description>
+<datum_type>%</datum_type>
+<datum_id>7</datum_id>
+</datum>
+<datum>
+<short_description>Prior month sales, Excluding Fuel – Y/Y</short_description>
+<description>Prior month sales, Excluding Fuel,  Year on Year</description>
+<datum_type>%</datum_type>
+<datum_id>8</datum_id>
+</datum>
+</data>
+<messages>
+<message>
+<message_type>release</message_type>
+<message_version>2</message_version>
+<start_date>2010-04-22</start_date>
+<multicast_group>UK_OFC_NATL_STATISTICS</multicast_group>
+<fields>
+<field>
+<datum_id>1</datum_id>
+<field_type>float</field_type>
+<example_value>1.6</example_value>
+</field>
+<field>
+<datum_id>2</datum_id>
+<field_type>float</field_type>
+<example_value>5.4</example_value>
+</field>
+<field>
+<datum_id>3</datum_id>
+<field_type>float</field_type>
+<example_value>-2.1</example_value>
+</field>
+<field>
+<datum_id>4</datum_id>
+<field_type>float</field_type>
+<example_value>3.5</example_value>
+</field>
+<field>
+<datum_id>5</datum_id>
+<field_type>float</field_type>
+<example_value>-3.0</example_value>
+</field>
+<field>
+<datum_id>6</datum_id>
+<field_type>float</field_type>
+<example_value>-0.8</example_value>
+</field>
+<field>
+<datum_id>7</datum_id>
+<field_type>float</field_type>
+<example_value>-2.0</example_value>
+</field>
+<field>
+<datum_id>8</datum_id>
+<field_type>float</field_type>
+<example_value>1.8</example_value>
+</field>
+</fields>
+</message>
+<message>
+<message_type>estimate</message_type>
+<message_version>2</message_version>
+<start_date>2010-04-22</start_date>
+<multicast_group>UK_ESTIMATES</multicast_group>
+<fields>
+<field>
+<datum_id>1</datum_id>
+<field_type>float</field_type>
+<example_value>1.6</example_value>
+</field>
+<field>
+<datum_id>2</datum_id>
+<field_type>float</field_type>
+<example_value>5.4</example_value>
+</field>
+<field>
+<datum_id>3</datum_id>
+<field_type>float</field_type>
+<example_value>-2.1</example_value>
+</field>
+<field>
+<datum_id>4</datum_id>
+<field_type>float</field_type>
+<example_value>3.5</example_value>
+</field>
+<field>
+<datum_id>5</datum_id>
+<field_type>float</field_type>
+<example_value>-3.0</example_value>
+</field>
+<field>
+<datum_id>6</datum_id>
+<field_type>float</field_type>
+<example_value>-0.8</example_value>
+</field>
+<field>
+<datum_id>7</datum_id>
+<field_type>float</field_type>
+<example_value>-2.0</example_value>
+</field>
+<field>
+<datum_id>8</datum_id>
+<field_type>float</field_type>
+<example_value>1.8</example_value>
+</field>
+</fields>
+</message>
+</messages>
+</category>
+<category name="UK_OECD_Composite_Leading_Indicator">
+<description>OECD Composite Leading Indicator Monthly Report (OECD Area)</description>
+<country>UK</country>
+<category_id>20022</category_id>
+<data>
+<datum>
+<short_description>Index Level</short_description>
+<description>Index Level</description>
+<datum_type>index</datum_type>
+<datum_id>1</datum_id>
+</datum>
+</data>
+<messages>
+<message>
+<message_type>release</message_type>
+<message_version>1</message_version>
+<multicast_group>EU_GROUP_2</multicast_group>
+<fields>
+<field>
+<datum_id>1</datum_id>
+<field_type>float</field_type>
+<example_value>94</example_value>
+</field>
+</fields>
+</message>
+<message>
+<message_type>estimate</message_type>
+<message_version>1</message_version>
+<multicast_group>UK_ESTIMATES</multicast_group>
+<fields>
+<field>
+<datum_id>1</datum_id>
+<field_type>float</field_type>
+<example_value>94</example_value>
+</field>
+</fields>
+</message>
+</messages>
+</category>
+<category name="UK_OECD_Consumer_Price_Index">
+<description>OECD Consumer Price Index Monthly Report (OECD Area)</description>
+<country>UK</country>
+<category_id>20023</category_id>
+<data>
+<datum>
+<short_description>Month/Month</short_description>
+<description>Month/Month</description>
+<datum_type>%</datum_type>
+<datum_id>1</datum_id>
+</datum>
+<datum>
+<short_description>Year/Year</short_description>
+<description>Year/Year</description>
+<datum_type>%</datum_type>
+<datum_id>2</datum_id>
+</datum>
+</data>
+<messages>
+<message>
+<message_type>release</message_type>
+<message_version>1</message_version>
+<multicast_group>EU_GROUP_2</multicast_group>
+<fields>
+<field>
+<datum_id>1</datum_id>
+<field_type>float</field_type>
+<example_value>0.5</example_value>
+</field>
+<field>
+<datum_id>2</datum_id>
+<field_type>float</field_type>
+<example_value>1.5</example_value>
+</field>
+</fields>
+</message>
+<message>
+<message_type>estimate</message_type>
+<message_version>1</message_version>
+<multicast_group>UK_ESTIMATES</multicast_group>
+<fields>
+<field>
+<datum_id>1</datum_id>
+<field_type>float</field_type>
+<example_value>0.5</example_value>
+</field>
+<field>
+<datum_id>2</datum_id>
+<field_type>float</field_type>
+<example_value>1.5</example_value>
+</field>
+</fields>
+</message>
+</messages>
+</category>
+<category name="UK_OECD_Quarterly_National_Accounts">
+<description>OECD Quarterly National Accounts or GDP (OECD Area)</description>
+<country>UK</country>
+<category_id>20024</category_id>
+<data>
+<datum>
+<short_description>Quarter/Quarter</short_description>
+<description>Quarter/Quarter</description>
+<datum_type>%</datum_type>
+<datum_id>1</datum_id>
+</datum>
+<datum>
+<short_description>Year/Year</short_description>
+<description>Year/Year</description>
+<datum_type>%</datum_type>
+<datum_id>2</datum_id>
+</datum>
+</data>
+<messages>
+<message>
+<message_type>release</message_type>
+<message_version>1</message_version>
+<multicast_group>EU_GROUP_2</multicast_group>
+<fields>
+<field>
+<datum_id>1</datum_id>
+<field_type>float</field_type>
+<example_value>-1.5</example_value>
+</field>
+<field>
+<datum_id>2</datum_id>
+<field_type>float</field_type>
+<example_value>-1.1</example_value>
+</field>
+</fields>
+</message>
+<message>
+<message_type>estimate</message_type>
+<message_version>1</message_version>
+<multicast_group>UK_ESTIMATES</multicast_group>
+<fields>
+<field>
+<datum_id>1</datum_id>
+<field_type>float</field_type>
+<example_value>-1.5</example_value>
+</field>
+<field>
+<datum_id>2</datum_id>
+<field_type>float</field_type>
+<example_value>-1.1</example_value>
+</field>
+</fields>
+</message>
+</messages>
+</category>
+<category name="UK_OECD_Unit_Labor_Costs">
+<description>OECD Unit Labor Costs for industry (OECD Area)</description>
+<country>UK</country>
+<category_id>20025</category_id>
+<data>
+<datum>
+<short_description>Quarter/Quarter</short_description>
+<description>Quarter/Quarter</description>
+<datum_type>%</datum_type>
+<datum_id>1</datum_id>
+</datum>
+<datum>
+<short_description>Year/Year</short_description>
+<description>Year/Year</description>
+<datum_type>%</datum_type>
+<datum_id>2</datum_id>
+</datum>
+</data>
+<messages>
+<message>
+<message_type>release</message_type>
+<message_version>1</message_version>
+<multicast_group>EU_GROUP_2</multicast_group>
+<fields>
+<field>
+<datum_id>1</datum_id>
+<field_type>float</field_type>
+<example_value>1</example_value>
+</field>
+<field>
+<datum_id>2</datum_id>
+<field_type>float</field_type>
+<example_value>2.6</example_value>
+</field>
+</fields>
+</message>
+<message>
+<message_type>estimate</message_type>
+<message_version>1</message_version>
+<multicast_group>UK_ESTIMATES</multicast_group>
+<fields>
+<field>
+<datum_id>1</datum_id>
+<field_type>float</field_type>
+<example_value>1</example_value>
+</field>
+<field>
+<datum_id>2</datum_id>
+<field_type>float</field_type>
+<example_value>2.6</example_value>
+</field>
+</fields>
+</message>
+</messages>
+</category>
+<category name="UK_BOE_QE">
+<description>The Bank Of England Monetary Policy Committee boosts the supply of money by purchasing assets like Government and corporate bonds - a policy often known as 'Quantitative Easing'.</description>
+<country>UK</country>
+<category_id>20036</category_id>
+<data>
+<datum>
+<short_description>Asset Purchase Programme amount</short_description>
+<description>Asset Purchase Programme amount</description>
+<datum_scale>B</datum_scale>
+<datum_type>GBP</datum_type>
+<datum_id>1</datum_id>
+</datum>
+</data>
+<messages>
+<message>
+<message_type>release</message_type>
+<message_version>1</message_version>
+<multicast_group>UK_BOE</multicast_group>
+<fields>
+<field>
+<datum_id>1</datum_id>
+<field_type>float</field_type>
+<example_value>200.00</example_value>
+</field>
+</fields>
+</message>
+<message>
+<message_type>estimate</message_type>
+<message_version>1</message_version>
+<multicast_group>UK_ESTIMATES</multicast_group>
+<fields>
+<field>
+<datum_id>1</datum_id>
+<field_type>float</field_type>
+<example_value>200.00</example_value>
+</field>
+</fields>
+</message>
+</messages>
+</category>
+<category name="UK_Shop_Sales">
+<description>BRC-KPMG Shop Sales Monitor (Measures Values Monthly)</description>
+<country>UK</country>
+<category_id>20037</category_id>
+<data>
+<datum>
+<short_description>Like for Like Sales (y/y)</short_description>
+<description>Like for Like Sales (y/y)</description>
+<datum_type>%</datum_type>
+<datum_id>1</datum_id>
+</datum>
+<datum>
+<short_description>Total (y/y)</short_description>
+<description>Total (y/y)</description>
+<datum_type>%</datum_type>
+<datum_id>2</datum_id>
+</datum>
+</data>
+<messages>
+<message>
+<message_type>release</message_type>
+<message_version>1</message_version>
+<multicast_group>EU_GROUP_2</multicast_group>
+<fields>
+<field>
+<datum_id>1</datum_id>
+<field_type>float</field_type>
+<example_value>1.8</example_value>
+</field>
+<field>
+<datum_id>2</datum_id>
+<field_type>float</field_type>
+<example_value>4.1</example_value>
+</field>
+</fields>
+</message>
+<message>
+<message_type>estimate</message_type>
+<message_version>1</message_version>
+<multicast_group>EU_ESTIMATES</multicast_group>
+<fields>
+<field>
+<datum_id>1</datum_id>
+<field_type>float</field_type>
+<example_value>1.8</example_value>
+</field>
+<field>
+<datum_id>2</datum_id>
+<field_type>float</field_type>
+<example_value>4.1</example_value>
+</field>
+</fields>
+</message>
+</messages>
+</category>
+<category name="UK_BOE_Final_M4">
+<description>BOE Final M4</description>
+<country>UK</country>
+<category_id>20038</category_id>
+<data>
+<datum>
+<short_description>Monthly</short_description>
+<description>Monthly</description>
+<datum_type>%</datum_type>
+<datum_id>1</datum_id>
+</datum>
+<datum>
+<short_description>Annual</short_description>
+<description>Annual</description>
+<datum_type>%</datum_type>
+<datum_id>2</datum_id>
+</datum>
+<datum>
+<short_description>Monthly M4 ex-Intermediate</short_description>
+<description>Monthly M4 ex-Intermediate, 'other financial corporations,' </description>
+<datum_type>%</datum_type>
+<datum_id>3</datum_id>
+</datum>
+<datum>
+<short_description>Annual M4 ex-Intermediate</short_description>
+<description>Annual M4 ex-Intermediate, 'other financial corporations,' </description>
+<datum_type>%</datum_type>
+<datum_id>4</datum_id>
+</datum>
+</data>
+<messages>
+<message>
+<message_type>release</message_type>
+<message_version>2</message_version>
+<start_date>2011-01-04</start_date>
+<multicast_group>UK_BOE</multicast_group>
+<fields>
+<field>
+<datum_id>1</datum_id>
+<field_type>float</field_type>
+<example_value>0.1</example_value>
+</field>
+<field>
+<datum_id>2</datum_id>
+<field_type>float</field_type>
+<example_value>2.1</example_value>
+</field>
+<field>
+<datum_id>3</datum_id>
+<field_type>float</field_type>
+<example_value>0.6</example_value>
+</field>
+<field>
+<datum_id>4</datum_id>
+<field_type>float</field_type>
+<example_value>1.3</example_value>
+</field>
+</fields>
+</message>
+<message>
+<message_type>estimate</message_type>
+<message_version>2</message_version>
+<start_date>2011-01-04</start_date>
+<multicast_group>EU_ESTIMATES</multicast_group>
+<fields>
+<field>
+<datum_id>1</datum_id>
+<field_type>float</field_type>
+<example_value>0.1</example_value>
+</field>
+<field>
+<datum_id>2</datum_id>
+<field_type>float</field_type>
+<example_value>2.1</example_value>
+</field>
+<field>
+<datum_id>3</datum_id>
+<field_type>float</field_type>
+<example_value>0.6</example_value>
+</field>
+<field>
+<datum_id>4</datum_id>
+<field_type>float</field_type>
+<example_value>1.3</example_value>
+</field>
+</fields>
+</message>
+</messages>
+</category>
+<category name="UK_BOE_Gfk_NOP_Inflation_Report">
+<description>Bank of England/TNS Inflation Attitudes Survey</description>
+<country>UK</country>
+<category_id>20039</category_id>
+<data>
+<datum>
+<short_description>median expectations 1-yr</short_description>
+<description>median expectations 1-yr</description>
+<datum_type>%</datum_type>
+<datum_id>1</datum_id>
+</datum>
+<datum>
+<short_description>median expectations 2-yr</short_description>
+<description>median expectations 2-yr</description>
+<datum_type>%</datum_type>
+<datum_id>2</datum_id>
+</datum>
+<datum>
+<short_description>median expectations 5-yr</short_description>
+<description>median expectations 5-yr</description>
+<datum_type>%</datum_type>
+<datum_id>3</datum_id>
+</datum>
+</data>
+<messages>
+<message>
+<message_type>release</message_type>
+<message_version>2</message_version>
+<start_date>2016-06-10</start_date>
+<multicast_group>UK_BOE</multicast_group>
+<fields>
+<field>
+<datum_id>1</datum_id>
+<field_type>float</field_type>
+<example_value>3.4</example_value>
+</field>
+<field>
+<datum_id>2</datum_id>
+<field_type>float</field_type>
+<example_value>5.6</example_value>
+</field>
+<field>
+<datum_id>3</datum_id>
+<field_type>float</field_type>
+<example_value>9.5</example_value>
+</field>
+</fields>
+</message>
+<message>
+<message_type>estimate</message_type>
+<message_version>2</message_version>
+<start_date>2016-06-10</start_date>
+<multicast_group>EU_ESTIMATES</multicast_group>
+<fields>
+<field>
+<datum_id>1</datum_id>
+<field_type>float</field_type>
+<example_value>3.4</example_value>
+</field>
+<field>
+<datum_id>2</datum_id>
+<field_type>float</field_type>
+<example_value>5.6</example_value>
+</field>
+<field>
+<datum_id>3</datum_id>
+<field_type>float</field_type>
+<example_value>9.5</example_value>
+</field>
+</fields>
+</message>
+</messages>
+</category>
+<category name="UK_BRC_Monthly_Shop_Price_Index">
+<description>BRC Monthly Shop Price Index</description>
+<country>UK</country>
+<category_id>20041</category_id>
+<data>
+<datum>
+<short_description>Month on Month</short_description>
+<description>Month on Month</description>
+<datum_type>%</datum_type>
+<datum_id>1</datum_id>
+</datum>
+<datum>
+<short_description>Year on Year</short_description>
+<description>Year on Year</description>
+<datum_type>%</datum_type>
+<datum_id>2</datum_id>
+</datum>
+</data>
+<messages>
+<message>
+<message_type>release</message_type>
+<message_version>1</message_version>
+<multicast_group>EU_GROUP_2</multicast_group>
+<fields>
+<field>
+<datum_id>1</datum_id>
+<field_type>float</field_type>
+<example_value>0.2</example_value>
+</field>
+<field>
+<datum_id>2</datum_id>
+<field_type>float</field_type>
+<example_value>2.3</example_value>
+</field>
+</fields>
+</message>
+<message>
+<message_type>estimate</message_type>
+<message_version>1</message_version>
+<multicast_group>EU_GROUP_2</multicast_group>
+<fields>
+<field>
+<datum_id>1</datum_id>
+<field_type>float</field_type>
+<example_value>0.2</example_value>
+</field>
+<field>
+<datum_id>2</datum_id>
+<field_type>float</field_type>
+<example_value>2.3</example_value>
+</field>
+</fields>
+</message>
+</messages>
+</category>
+<category name="UK_Gfk_Monthly_Consumer_Confidence">
+<description>Gfk Monthly Consumer Confidence</description>
+<country>UK</country>
+<category_id>20042</category_id>
+<data>
+<datum>
+<short_description>Index</short_description>
+<description>Index</description>
+<datum_type>index</datum_type>
+<datum_id>1</datum_id>
+</datum>
+</data>
+<messages>
+<message>
+<message_type>release</message_type>
+<message_version>2</message_version>
+<multicast_group>EU_GROUP_2</multicast_group>
+<fields>
+<field>
+<datum_id>1</datum_id>
+<field_type>short</field_type>
+<example_value>-19</example_value>
+</field>
+</fields>
+</message>
+<message>
+<message_type>estimate</message_type>
+<message_version>2</message_version>
+<multicast_group>EU_ESTIMATES</multicast_group>
+<fields>
+<field>
+<datum_id>1</datum_id>
+<field_type>short</field_type>
+<example_value>-19</example_value>
+</field>
+</fields>
+</message>
+</messages>
+</category>
+<category name="UK_BOE_Trends_In_Bank_Lending">
+<description>Trends In Bank Lending</description>
+<country>UK</country>
+<category_id>20044</category_id>
+<data>
+<datum>
+<short_description>Lending to UK businesses (quarterly) (Billion)</short_description>
+<description>Lending to UK businesses (quarterly)</description>
+<datum_scale>B</datum_scale>
+<datum_type>GBP</datum_type>
+<datum_id>5</datum_id>
+</datum>
+<datum>
+<short_description>Secured Lending (quarterly) (Billion)</short_description>
+<description>Secured Lending (quarterly)</description>
+<datum_scale>B</datum_scale>
+<datum_type>GBP</datum_type>
+<datum_id>6</datum_id>
+</datum>
+<datum>
+<short_description>Net Consumer Credit (quarterly) (Billion)</short_description>
+<description>Net Consumer Credit (quarterly)</description>
+<datum_scale>B</datum_scale>
+<datum_type>GBP</datum_type>
+<datum_id>7</datum_id>
+</datum>
+<datum>
+<short_description>Mortgage Approvals (quarterly)</short_description>
+<description>UK Mortgage Approvals (quarterly)</description>
+<datum_type>units</datum_type>
+<datum_id>8</datum_id>
+</datum>
+</data>
+<messages>
+<message>
+<message_type>release</message_type>
+<message_version>3</message_version>
+<start_date>2011-01-21</start_date>
+<multicast_group>UK_BOE</multicast_group>
+<fields>
+<field>
+<datum_id>5</datum_id>
+<field_type>float</field_type>
+<example_value>-4.3</example_value>
+</field>
+<field>
+<datum_id>6</datum_id>
+<field_type>float</field_type>
+<example_value>1.2</example_value>
+</field>
+<field>
+<datum_id>7</datum_id>
+<field_type>float</field_type>
+<example_value>0.1</example_value>
+</field>
+<field>
+<datum_id>8</datum_id>
+<field_type>float</field_type>
+<example_value>48000</example_value>
+</field>
+</fields>
+</message>
+<message>
+<message_type>estimate</message_type>
+<message_version>3</message_version>
+<start_date>2011-01-21</start_date>
+<multicast_group>EU_ESTIMATES</multicast_group>
+<fields>
+<field>
+<datum_id>5</datum_id>
+<field_type>float</field_type>
+<example_value>-4.3</example_value>
+</field>
+<field>
+<datum_id>6</datum_id>
+<field_type>float</field_type>
+<example_value>1.2</example_value>
+</field>
+<field>
+<datum_id>7</datum_id>
+<field_type>float</field_type>
+<example_value>0.1</example_value>
+</field>
+<field>
+<datum_id>8</datum_id>
+<field_type>float</field_type>
+<example_value>48000</example_value>
+</field>
+</fields>
+</message>
+</messages>
+</category>
+<category name="UK_NIESR_Monthly_GDP_Estimate">
+<description>NIESR Monthly GDP Estimate</description>
+<country>UK</country>
+<category_id>20045</category_id>
+<data>
+<datum>
+<short_description>GDP percentage change 3-month over 3-month</short_description>
+<description>GDP percentage change 3-month over 3-month</description>
+<datum_type>%</datum_type>
+<datum_id>1</datum_id>
+</datum>
+</data>
+<messages>
+<message>
+<message_type>release</message_type>
+<message_version>1</message_version>
+<multicast_group>EU_GROUP_2</multicast_group>
+<fields>
+<field>
+<datum_id>1</datum_id>
+<field_type>float</field_type>
+<example_value>0.3</example_value>
+</field>
+</fields>
+</message>
+<message>
+<message_type>estimate</message_type>
+<message_version>1</message_version>
+<multicast_group>EU_ESTIMATES</multicast_group>
+<fields>
+<field>
+<datum_id>1</datum_id>
+<field_type>float</field_type>
+<example_value>0.3</example_value>
+</field>
+</fields>
+</message>
+</messages>
+</category>
+<category name="UK_BOE_Quarterly_Credit_Conditions">
+<description>BOE Quarterly Credit Conditions</description>
+<country>UK</country>
+<category_id>20047</category_id>
+<data>
+<datum>
+<short_description>Corporate Sector, Next 3 months</short_description>
+<description>Corporate Sector (Change in availability of credit), Next 3 months</description>
+<datum_type>index</datum_type>
+<datum_id>1</datum_id>
+</datum>
+<datum>
+<short_description>Corporate Sector, Past 3 months</short_description>
+<description>Corporate Sector (Change in availability of credit), Past 3 months</description>
+<datum_type>index</datum_type>
+<datum_id>2</datum_id>
+</datum>
+<datum>
+<short_description>Small Biz/Household unsecured lending, Next 3 months</short_description>
+<description>Small Business/Households (Change in unsecured lending), Next 3 months</description>
+<datum_type>index</datum_type>
+<datum_id>3</datum_id>
+</datum>
+<datum>
+<short_description>Small Biz/Household unsecured lending, Past 3 months</short_description>
+<description>Small Business/Households (Change in unsecured lending), Past 3 months</description>
+<datum_type>index</datum_type>
+<datum_id>4</datum_id>
+</datum>
+<datum>
+<short_description>Small Biz/Household secured lending, Next 3 months</short_description>
+<description>Small Business/Households (Change in secured lending), Next 3 months</description>
+<datum_type>index</datum_type>
+<datum_id>5</datum_id>
+</datum>
+<datum>
+<short_description>Small Biz/Household secured lending, Past 3 months</short_description>
+<description>Small Business/Households (Change in secured lending), Past 3 months</description>
+<datum_type>index</datum_type>
+<datum_id>6</datum_id>
+</datum>
+</data>
+<messages>
+<message>
+<message_type>release</message_type>
+<message_version>1</message_version>
+<multicast_group>UK_BOE</multicast_group>
+<fields>
+<field>
+<datum_id>1</datum_id>
+<field_type>float</field_type>
+<example_value>28.9</example_value>
+</field>
+<field>
+<datum_id>2</datum_id>
+<field_type>float</field_type>
+<example_value>24.8</example_value>
+</field>
+<field>
+<datum_id>3</datum_id>
+<field_type>float</field_type>
+<example_value>-12.1</example_value>
+</field>
+<field>
+<datum_id>4</datum_id>
+<field_type>float</field_type>
+<example_value>-9.0</example_value>
+</field>
+<field>
+<datum_id>5</datum_id>
+<field_type>float</field_type>
+<example_value>12.3</example_value>
+</field>
+<field>
+<datum_id>6</datum_id>
+<field_type>float</field_type>
+<example_value>-7.2</example_value>
+</field>
+</fields>
+</message>
+<message>
+<message_type>estimate</message_type>
+<message_version>1</message_version>
+<multicast_group>EU_ESTIMATES</multicast_group>
+<fields>
+<field>
+<datum_id>1</datum_id>
+<field_type>float</field_type>
+<example_value>28.9</example_value>
+</field>
+<field>
+<datum_id>2</datum_id>
+<field_type>float</field_type>
+<example_value>24.8</example_value>
+</field>
+<field>
+<datum_id>3</datum_id>
+<field_type>float</field_type>
+<example_value>-12.1</example_value>
+</field>
+<field>
+<datum_id>4</datum_id>
+<field_type>float</field_type>
+<example_value>-9.0</example_value>
+</field>
+<field>
+<datum_id>5</datum_id>
+<field_type>float</field_type>
+<example_value>12.3</example_value>
+</field>
+<field>
+<datum_id>6</datum_id>
+<field_type>float</field_type>
+<example_value>-7.2</example_value>
+</field>
+</fields>
+</message>
+</messages>
+</category>
+<category name="UK_MNI_Petrol_Index">
+<description>MNI UK Petrol Index</description>
+<country>UK</country>
+<category_id>20051</category_id>
+<data>
+<datum>
+<short_description>MNI Petrol Price Index % change m/m</short_description>
+<description>MNI Petrol Price Index Percent change, month-over-month</description>
+<datum_type>%</datum_type>
+<datum_id>1</datum_id>
+</datum>
+<datum>
+<short_description>Contribution to CPI y/y Change</short_description>
+<description>MNI Index Contribution to CPI y/y Change</description>
+<datum_type>%</datum_type>
+<datum_id>2</datum_id>
+</datum>
+</data>
+<messages>
+<message>
+<message_type>release</message_type>
+<message_version>1</message_version>
+<start_date>2011-01-01</start_date>
+<multicast_group>EU_GROUP_2</multicast_group>
+<fields>
+<field>
+<datum_id>1</datum_id>
+<field_type>float</field_type>
+<example_value>-1.9</example_value>
+</field>
+<field>
+<datum_id>2</datum_id>
+<field_type>float</field_type>
+<example_value>-0.24</example_value>
+</field>
+</fields>
+</message>
+<message>
+<message_type>estimate</message_type>
+<message_version>1</message_version>
+<start_date>2011-01-01</start_date>
+<multicast_group>UK_ESTIMATES</multicast_group>
+<fields>
+<field>
+<datum_id>1</datum_id>
+<field_type>float</field_type>
+<example_value>-1.9</example_value>
+</field>
+<field>
+<datum_id>2</datum_id>
+<field_type>float</field_type>
+<example_value>-0.24</example_value>
+</field>
+</fields>
+</message>
+</messages>
+</category>
+<category name="UK_Quarterly_Construction_Output">
+<description>UK Quarterly Construction Output, seasonally adjusted</description>
+<country>UK</country>
+<category_id>20052</category_id>
+<data>
+<datum>
+<short_description>UK Quarterly Construction Output, sa, q/q</short_description>
+<description>UK Quarterly Construction Output, seasonally adjusted, quarter on quarter</description>
+<datum_type>%</datum_type>
+<datum_id>1</datum_id>
+</datum>
+<datum>
+<short_description>UK Quarterly Construction Output, sa, y/y</short_description>
+<description>UK Quarterly Construction Output, seasonally adjusted, year on year</description>
+<datum_type>%</datum_type>
+<datum_id>2</datum_id>
+</datum>
+</data>
+<messages>
+<message>
+<message_type>release</message_type>
+<message_version>1</message_version>
+<start_date>2011-05-13</start_date>
+<multicast_group>UK_OFC_NATL_STATISTICS</multicast_group>
+<fields>
+<field>
+<datum_id>1</datum_id>
+<field_type>float</field_type>
+<example_value>-4.9</example_value>
+</field>
+<field>
+<datum_id>2</datum_id>
+<field_type>float</field_type>
+<example_value>15.3</example_value>
+</field>
+</fields>
+</message>
+<message>
+<message_type>estimate</message_type>
+<message_version>1</message_version>
+<start_date>2011-05-13</start_date>
+<multicast_group>EU_ESTIMATES</multicast_group>
+<fields>
+<field>
+<datum_id>1</datum_id>
+<field_type>float</field_type>
+<example_value>-4.9</example_value>
+</field>
+<field>
+<datum_id>2</datum_id>
+<field_type>float</field_type>
+<example_value>15.3</example_value>
+</field>
+</fields>
+</message>
+</messages>
+</category>
+<category name="UK_Monthly_Xpert_HR_Pay_Deals">
+<description>UK Monthly HR Pay Deals for Whole Economy</description>
+<country>UK</country>
+<category_id>20053</category_id>
+<data>
+<datum>
+<short_description>Median UK Pay Award (3mos)</short_description>
+<description>Median UK pay award (3mos) % Change</description>
+<datum_type>%</datum_type>
+<datum_id>1</datum_id>
+</datum>
+</data>
+<messages>
+<message>
+<message_type>release</message_type>
+<message_version>1</message_version>
+<start_date>2011-06-24</start_date>
+<multicast_group>EU_GROUP_2</multicast_group>
+<fields>
+<field>
+<datum_id>1</datum_id>
+<field_type>float</field_type>
+<example_value>2.5</example_value>
+</field>
+</fields>
+</message>
+<message>
+<message_type>estimate</message_type>
+<message_version>1</message_version>
+<start_date>2011-06-24</start_date>
+<multicast_group>EU_GROUP_2</multicast_group>
+<fields>
+<field>
+<datum_id>1</datum_id>
+<field_type>float</field_type>
+<example_value>2.5</example_value>
+</field>
+</fields>
+</message>
+</messages>
+</category>
+<category name="UK_Quarterly_Current_Account_Balance">
+<description>UK Quarterly Current Account Balance</description>
+<country>UK</country>
+<category_id>20054</category_id>
+<data>
+<datum>
+<short_description>Current Account Balance (stg blns)</short_description>
+<description>Current Account Balance (stg blns)</description>
+<datum_scale>B</datum_scale>
+<datum_type>GBP</datum_type>
+<datum_id>1</datum_id>
+</datum>
+</data>
+<messages>
+<message>
+<message_type>release</message_type>
+<message_version>1</message_version>
+<start_date>2011-06-28</start_date>
+<multicast_group>EU_GROUP_2</multicast_group>
+<fields>
+<field>
+<datum_id>1</datum_id>
+<field_type>float</field_type>
+<example_value>-10.5</example_value>
+</field>
+</fields>
+</message>
+<message>
+<message_type>estimate</message_type>
+<message_version>1</message_version>
+<start_date>2011-06-28</start_date>
+<multicast_group>EU_GROUP_2</multicast_group>
+<fields>
+<field>
+<datum_id>1</datum_id>
+<field_type>float</field_type>
+<example_value>-10.5</example_value>
+</field>
+</fields>
+</message>
+</messages>
+</category>
+<category name="UK_Markit_Household_Finance_Index_Survey">
+<description>UK Markit Household Finance Index Survey</description>
+<country>UK</country>
+<category_id>20055</category_id>
+<data>
+<datum>
+<short_description>UK Markit Household Finance Index (monthly)</short_description>
+<description>UK Markit Household Finance Index (monthly)e</description>
+<datum_type>index</datum_type>
+<datum_id>1</datum_id>
+</datum>
+</data>
+<messages>
+<message>
+<message_type>release</message_type>
+<message_version>1</message_version>
+<start_date>2011-12-12</start_date>
+<multicast_group>EU_GROUP_2</multicast_group>
+<fields>
+<field>
+<datum_id>1</datum_id>
+<field_type>float</field_type>
+<example_value>35.1</example_value>
+</field>
+</fields>
+</message>
+<message>
+<message_type>estimate</message_type>
+<message_version>1</message_version>
+<start_date>2011-12-12</start_date>
+<multicast_group>UK_ESTIMATES</multicast_group>
+<fields>
+<field>
+<datum_id>1</datum_id>
+<field_type>float</field_type>
+<example_value>35.1</example_value>
+</field>
+</fields>
+</message>
+</messages>
+</category>
+<category name="UK_Carney_Speech_Minutes">
+<description>UK Carney Speech Minutes</description>
+<country>UK</country>
+<category_id>20056</category_id>
+<data>
+<datum>
+<short_description>In the speech does Carney mention an Unemployment Rate threshold lower than 7.0% as guidance for rate hikes?</short_description>
+<description>In the speech does Carney mention an Unemployment Rate threshold lower than 7.0% as guidance for rate hikes?</description>
+<datum_type>yes_no_na</datum_type>
+<datum_id>1</datum_id>
+</datum>
+<datum>
+<short_description>In the speech does Carney mention a case for a forward guidance Unemployment Rate threshold of &lt; 7.0%</short_description>
+<description>In the speech does Carney mention a case for a forward guidance Unemployment Rate threshold of &lt; 7.0%</description>
+<datum_type>yes_no_na</datum_type>
+<datum_id>2</datum_id>
+</datum>
+<datum>
+<short_description>In the speech does Carney mention a case for a forward guidance Unemployment Rate threshold of &gt; 7.0%</short_description>
+<description>In the speech does Carney mention a case for a forward guidance Unemployment Rate threshold of &gt; 7.0%</description>
+<datum_type>yes_no_na</datum_type>
+<datum_id>3</datum_id>
+</datum>
+<datum>
+<short_description>In the speech does Carney mention a case for revising forward guidance Unemployment Rate threshold to &lt; 7.0%</short_description>
+<description>In the speech does Carney mention a case for revising forward guidance Unemployment Rate threshold to &lt; 7.0%</description>
+<datum_type>yes_no_na</datum_type>
+<datum_id>4</datum_id>
+</datum>
+<datum>
+<short_description>In the speech does Carney mention a case for increasing QE?</short_description>
+<description>In the speech does Carney mention a case for increasing QE?</description>
+<datum_type>yes_no_na</datum_type>
+<datum_id>5</datum_id>
+</datum>
+<datum>
+<short_description>In the speech does Carney suggest that QE is unlikely to increase further?</short_description>
+<description>In the speech does Carney suggest that QE is unlikely to increase further?</description>
+<datum_type>yes_no_na</datum_type>
+<datum_id>6</datum_id>
+</datum>
+<datum>
+<short_description>In the speech does Carney indicate that the UE rate could reach the 7.0% threshold earlier than  projected (Q3 2016)?</short_description>
+<description>In the speech does Carney indicate that the UE rate could reach the 7.0% threshold earlier than  projected (Q3 2016)?</description>
+<datum_type>yes_no_na</datum_type>
+<datum_id>7</datum_id>
+</datum>
+<datum>
+<short_description>In the speech does Carney suggest the market reaction to rate hike expectations is unwarranted/exaggerated?</short_description>
+<description>In the speech does Carney suggest the market reaction to rate hike expectations is unwarranted/exaggerated?</description>
+<datum_type>yes_no_na</datum_type>
+<datum_id>8</datum_id>
+</datum>
+<datum>
+<short_description>In the speech does Carney downplay the recent strength in UK data?</short_description>
+<description>In the speech does Carney downplay the recent strength in UK data?</description>
+<datum_type>yes_no_na</datum_type>
+<datum_id>9</datum_id>
+</datum>
+</data>
+<messages>
+<message>
+<message_type>release</message_type>
+<message_version>1</message_version>
+<start_date>2013-08-28</start_date>
+<multicast_group>EU_GROUP_2</multicast_group>
+<fields>
+<field>
+<datum_id>1</datum_id>
+<field_type>yes_no_na</field_type>
+<example_value>1</example_value>
+</field>
+<field>
+<datum_id>2</datum_id>
+<field_type>yes_no_na</field_type>
+<example_value>1</example_value>
+</field>
+<field>
+<datum_id>3</datum_id>
+<field_type>yes_no_na</field_type>
+<example_value>0</example_value>
+</field>
+<field>
+<datum_id>4</datum_id>
+<field_type>yes_no_na</field_type>
+<example_value>1</example_value>
+</field>
+<field>
+<datum_id>5</datum_id>
+<field_type>yes_no_na</field_type>
+<example_value>1</example_value>
+</field>
+<field>
+<datum_id>6</datum_id>
+<field_type>yes_no_na</field_type>
+<example_value>0</example_value>
+</field>
+<field>
+<datum_id>7</datum_id>
+<field_type>yes_no_na</field_type>
+<example_value>1</example_value>
+</field>
+<field>
+<datum_id>8</datum_id>
+<field_type>yes_no_na</field_type>
+<example_value>1</example_value>
+</field>
+<field>
+<datum_id>9</datum_id>
+<field_type>yes_no_na</field_type>
+<example_value>0</example_value>
+</field>
+</fields>
+</message>
+</messages>
+</category>
+<category name="UK_BOE_Minutes_Policy_Decision_Inflation_Report">
+<description>Combined BOE Minutes, Policy Decision, and Inflation Report.</description>
+<country>UK</country>
+<category_id>20057</category_id>
+<data>
+<datum>
+<short_description>BOE Bank Rate %</short_description>
+<description>BOE Bank Rate %</description>
+<datum_type>%</datum_type>
+<datum_id>1</datum_id>
+</datum>
+<datum>
+<short_description>BOE Asset Purchase Purchase Programme Amount (billion sterling)</short_description>
+<description>BOE Asset Purchase Purchase Programme Amount (billion sterling)</description>
+<datum_scale>B</datum_scale>
+<datum_type>GBP</datum_type>
+<datum_id>2</datum_id>
+</datum>
+<datum>
+<short_description>Members voting for 25 bps rate increase</short_description>
+<description>Members voting for 25 bps rate increase</description>
+<datum_type>units</datum_type>
+<datum_id>3</datum_id>
+</datum>
+<datum>
+<short_description>Members voting for 50 bps, or more, rate increase</short_description>
+<description>Members voting for 50 bps, or more, rate increase</description>
+<datum_type>units</datum_type>
+<datum_id>4</datum_id>
+</datum>
+<datum>
+<short_description>Members voting for no rate change</short_description>
+<description>Members voting for no rate change</description>
+<datum_type>units</datum_type>
+<datum_id>5</datum_id>
+</datum>
+<datum>
+<short_description>Members voting to unwind any amount of QE</short_description>
+<description>Members voting to unwind any amount of QE</description>
+<datum_type>units</datum_type>
+<datum_id>6</datum_id>
+</datum>
+<datum>
+<short_description>Members voting for any increase in Bank Rate</short_description>
+<description>Members voting for any increase in Bank Rate</description>
+<datum_type>units</datum_type>
+<datum_id>8</datum_id>
+</datum>
+<datum>
+<short_description>Members voting for any decrease in Bank Rate</short_description>
+<description>Members voting for any decrease in Bank Rate</description>
+<datum_type>units</datum_type>
+<datum_id>9</datum_id>
+</datum>
+<datum>
+<short_description>Did BOE Governor Mark Carney vote for a rate increase?</short_description>
+<description>Did BOE Governor Mark Carney vote for a rate increase?</description>
+<datum_type>yes_no_na</datum_type>
+<datum_id>10</datum_id>
+</datum>
+<datum>
+<short_description>Did any of the Bank insiders (Carney, Cunliffe, Shafik, Haldane, Broadbent) vote for a rate hike ?</short_description>
+<description>Did any of the Bank insiders (Carney, Cunliffe, Shafik, Haldane, Broadbent) vote for a rate hike ?</description>
+<datum_type>yes_no_na</datum_type>
+<datum_id>14</datum_id>
+</datum>
+<datum>
+<short_description>UK CPI rate in two years’ time at market rates (mode)</short_description>
+<description>UK CPI rate in two years’ time at market rates (mode)</description>
+<datum_type>%</datum_type>
+<datum_id>15</datum_id>
+<optional_numeric>true</optional_numeric>
+</datum>
+<datum>
+<short_description>UK GDP in two years’ time on market rates (mode)</short_description>
+<description>UK GDP in two years’ time on market rates (mode)</description>
+<datum_type>%</datum_type>
+<datum_id>16</datum_id>
+<optional_numeric>true</optional_numeric>
+</datum>
+<datum>
+<short_description>Probability of inflation being above 2% target in two years</short_description>
+<description>Probability of inflation being above 2% target in two years</description>
+<datum_type>%</datum_type>
+<datum_id>17</datum_id>
+<optional_numeric>true</optional_numeric>
+</datum>
+<datum>
+<short_description>UK CPI rate in two years’ time on constant rates (mode)</short_description>
+<description>UK CPI rate in two years’ time on constant rates (mode)</description>
+<datum_type>%</datum_type>
+<datum_id>18</datum_id>
+<optional_numeric>true</optional_numeric>
+</datum>
+<datum>
+<short_description>Average weekly earnings four quarter growth forecast Q4 2017</short_description>
+<description>Average weekly earnings four quarter growth forecast Q4 2017</description>
+<datum_type>%</datum_type>
+<datum_id>20</datum_id>
+<optional_numeric>true</optional_numeric>
+</datum>
+<datum>
+<short_description>What value, or mid-point of a range, does the BOE use to estimate the medium-term equilibrium unemployment rate?</short_description>
+<description>What value, or mid-point of a range, does the BOE use to estimate the medium-term equilibrium unemployment rate?</description>
+<datum_type>%</datum_type>
+<datum_id>21</datum_id>
+<optional_numeric>true</optional_numeric>
+</datum>
+<datum>
+<short_description>What value, or mid-point of a range, does the BOE use to estimate, the long-term equilibrium unemployment rate?</short_description>
+<description>What value, or mid-point of a range, does the BOE use to estimate, the long-term equilibrium unemployment rate?</description>
+<datum_type>%</datum_type>
+<datum_id>22</datum_id>
+<optional_numeric>true</optional_numeric>
+</datum>
+<datum>
+<short_description>What value, or mid-point of a range, does the BOE use to estimate, the amount of spare capacity in the economy at present?</short_description>
+<description>What value, or mid-point of a range, does the BOE use to estimate, the amount of spare capacity in the economy at present?</description>
+<datum_type>%</datum_type>
+<datum_id>23</datum_id>
+<optional_numeric>true</optional_numeric>
+</datum>
+<datum>
+<short_description>UK CPI rate in three years’ time at market rates (mode)</short_description>
+<description>UK CPI rate in three years’ time at market rates (mode)</description>
+<datum_type>%</datum_type>
+<datum_id>24</datum_id>
+<optional_numeric>true</optional_numeric>
+</datum>
+<datum>
+<short_description>UK CPI rate in three years’ time on constant rates (mode)</short_description>
+<description>UK CPI rate in three years’ time on constant rates (mode)</description>
+<datum_type>%</datum_type>
+<datum_id>25</datum_id>
+<optional_numeric>true</optional_numeric>
+</datum>
+<datum>
+<short_description>Probability of inflation being above 2% target in three years</short_description>
+<description>Probability of inflation being above 2% target in three years</description>
+<datum_type>%</datum_type>
+<datum_id>26</datum_id>
+<optional_numeric>true</optional_numeric>
+</datum>
+<datum>
+<short_description>UK GDP in two years’ time on constant rates (mode)</short_description>
+<description>UK GDP in two years’ time on constant rates (mode)</description>
+<datum_type>%</datum_type>
+<datum_id>27</datum_id>
+<optional_numeric>true</optional_numeric>
+</datum>
+<datum>
+<short_description>UK GDP in three years’ time on market rates (mode)</short_description>
+<description>UK GDP in three years’ time on market rates (mode)</description>
+<datum_type>%</datum_type>
+<datum_id>28</datum_id>
+<optional_numeric>true</optional_numeric>
+</datum>
+<datum>
+<short_description>UK GDP in three years’ time on constant rates (mode)</short_description>
+<description>UK GDP in three years’ time on constant rates (mode)</description>
+<datum_type>%</datum_type>
+<datum_id>29</datum_id>
+<optional_numeric>true</optional_numeric>
+</datum>
+<datum>
+<short_description>Average weekly earnings four quarter growth forecast Q4 2018</short_description>
+<description>Average weekly earnings four quarter growth forecast Q4 2018</description>
+<datum_type>%</datum_type>
+<datum_id>30</datum_id>
+<optional_numeric>true</optional_numeric>
+</datum>
+<datum>
+<short_description>Q4 2017 jobless rate on market rates (mode)</short_description>
+<description>Q4 2017 jobless rate on market rates (mode)</description>
+<datum_type>%</datum_type>
+<datum_id>32</datum_id>
+<optional_numeric>true</optional_numeric>
+</datum>
+<datum>
+<short_description>BOE Corporate Bond Purchase Purchase Programme Amount (billion sterling)</short_description>
+<description>BOE Corporate Bond Purchase Purchase Programme Amount (billion sterling)</description>
+<datum_scale>B</datum_scale>
+<datum_type>GBP</datum_type>
+<datum_id>59</datum_id>
+</datum>
+<datum>
+<short_description>BOE Gilt Purchase Purchase Programme Amount (billion sterling)</short_description>
+<description>BOE Gilt Purchase Purchase Programme Amount (billion sterling)</description>
+<datum_scale>B</datum_scale>
+<datum_type>GBP</datum_type>
+<datum_id>60</datum_id>
+</datum>
+<datum>
+<short_description>Members voting for a cut of less than 25bps</short_description>
+<description>Members voting for a cut of less than 25bps</description>
+<datum_type>units</datum_type>
+<datum_id>61</datum_id>
+</datum>
+<datum>
+<short_description>Did BOE Governor Mark Carney vote for a rate decrease?</short_description>
+<description>Did BOE Governor Mark Carney vote for a rate decrease?</description>
+<datum_type>yes_no_na</datum_type>
+<datum_id>62</datum_id>
+</datum>
+<datum>
+<short_description>Did any of the other Bank insiders (Cunliffe, Shafik, Haldane, Broadbent) vote for a rate cut?</short_description>
+<description>Did any of the other Bank insiders (Cunliffe, Shafik, Haldane, Broadbent) vote for a rate cut?</description>
+<datum_type>yes_no_na</datum_type>
+<datum_id>63</datum_id>
+</datum>
+<datum>
+<short_description>Did “a number”, but less than the majority, of MPC members restate that the case for an immediate cut was “finely balanced”?</short_description>
+<description>Did “a number”, but less than the majority, of MPC members restate that the case for an immediate cut was “finely balanced”?</description>
+<datum_type>yes_no_na</datum_type>
+<datum_id>64</datum_id>
+</datum>
+<datum>
+<short_description>Did the majority of members state that the case for an immediate cut was “finely balanced”?</short_description>
+<description>Did the majority of members state that the case for an immediate cut was “finely balanced”?</description>
+<datum_type>yes_no_na</datum_type>
+<datum_id>65</datum_id>
+</datum>
+<datum>
+<short_description>Members voting for no change in the Gilt Purchase Programme</short_description>
+<description>Members voting for no change in the Gilt Purchase Programme</description>
+<datum_type>units</datum_type>
+<datum_id>66</datum_id>
+</datum>
+<datum>
+<short_description>Members voting for an increase in the Gilt Purchase Programme</short_description>
+<description>Members voting for an increase in the Gilt Purchase Programme</description>
+<datum_type>units</datum_type>
+<datum_id>67</datum_id>
+</datum>
+<datum>
+<short_description>Members voting for a decrease in the Gilt Purchase Programme</short_description>
+<description>Members voting for a decrease in the Gilt Purchase Programme</description>
+<datum_type>units</datum_type>
+<datum_id>68</datum_id>
+</datum>
+<datum>
+<short_description>Members voting for no change in the Corporate Bond Purchase Programme</short_description>
+<description>Members voting for no change in the Corporate Bond Purchase Programme</description>
+<datum_type>units</datum_type>
+<datum_id>69</datum_id>
+</datum>
+<datum>
+<short_description>Members voting for an increase in the Corporate Bond Purchase Programme</short_description>
+<description>Members voting for an increase in the Corporate Bond Purchase Programme</description>
+<datum_type>units</datum_type>
+<datum_id>70</datum_id>
+</datum>
+<datum>
+<short_description>Members voting for a decrease in the Corporate Bond Purchase Programme</short_description>
+<description>Members voting for a decrease in the Corporate Bond Purchase Programme</description>
+<datum_type>units</datum_type>
+<datum_id>71</datum_id>
+</datum>
+<datum>
+<short_description>UK CPI rate in one year's time at market rates (mode)</short_description>
+<description>UK CPI rate in one year's time at market rates (mode)</description>
+<datum_type>%</datum_type>
+<datum_id>72</datum_id>
+<optional_numeric>true</optional_numeric>
+</datum>
+<datum>
+<short_description>UK CPI rate in one year's time at constant rates (mode)</short_description>
+<description>UK CPI rate in one year's time at constant rates (mode)</description>
+<datum_type>%</datum_type>
+<datum_id>73</datum_id>
+<optional_numeric>true</optional_numeric>
+</datum>
+<datum>
+<short_description>UK GDP rate in one year's time at market rates (mode)</short_description>
+<description>UK GDP rate in one year's time at market rates (mode)</description>
+<datum_type>%</datum_type>
+<datum_id>74</datum_id>
+<optional_numeric>true</optional_numeric>
+</datum>
+<datum>
+<short_description>UK GDP rate in one year's time at constant rates (mode)</short_description>
+<description>UK GDP rate in one year's time at constant rates (mode)</description>
+<datum_type>%</datum_type>
+<datum_id>75</datum_id>
+<optional_numeric>true</optional_numeric>
+</datum>
+<datum>
+<short_description>Does the BOE MPC maintain its neutral bias?</short_description>
+<description>Does the BOE MPC maintain its neutral bias? (minutes state that “monetary policy can respond, in either direction, to changes to the economic outlook as they unfold to ensure a sustainable return of inflation to the 2% target”)</description>
+<datum_type>yes_no_na</datum_type>
+<datum_id>78</datum_id>
+</datum>
+<datum>
+<short_description>Does the BOE MPC adopt a hawkish tilt?</short_description>
+<description>Does the BOE MPC adopt a hawkish tilt? (minutes change from “monetary policy can respond, in either direction, to changes to the economic outlook as they unfold to ensure a sustainable return of inflation to the 2% target”)</description>
+<datum_type>yes_no_na</datum_type>
+<datum_id>79</datum_id>
+</datum>
+<datum>
+<short_description>Does the BOE MPC adopt a dovish tilt?</short_description>
+<description>Does the BOE MPC adopt a dovish tilt? (minutes change from “monetary policy can respond, in either direction, to changes to the economic outlook as they unfold to ensure a sustainable return of inflation to the 2% target”)</description>
+<datum_type>yes_no_na</datum_type>
+<datum_id>80</datum_id>
+</datum>
+<datum>
+<short_description>Average weekly earnings four quarter growth forecast Q4 2019</short_description>
+<description>Average weekly earnings four quarter growth forecast Q4 2019</description>
+<datum_type>%</datum_type>
+<datum_id>81</datum_id>
+<optional_numeric>true</optional_numeric>
+</datum>
+<datum>
+<short_description>Q1 2018 jobless rate on market rates (mode)</short_description>
+<description>Q1 2018 jobless rate on market rates (mode)</description>
+<datum_type>%</datum_type>
+<datum_id>82</datum_id>
+<optional_numeric>true</optional_numeric>
+</datum>
+<datum>
+<short_description>Q1 2019 jobless rate on market rates (mode)</short_description>
+<description>Q1 2019 jobless rate on market rates (mode)</description>
+<datum_type>%</datum_type>
+<datum_id>83</datum_id>
+<optional_numeric>true</optional_numeric>
+</datum>
+<datum>
+<short_description>Q1 2020 jobless rate on market rates (mode)</short_description>
+<description>Q1 2020 jobless rate on market rates (mode)</description>
+<datum_type>%</datum_type>
+<datum_id>84</datum_id>
+<optional_numeric>true</optional_numeric>
+</datum>
+<datum>
+<short_description>Did “a number”, but less than the majority, of MPC members state that the case for an immediate hike was “finely balanced”?</short_description>
+<description>Did “a number”, but less than the majority, of MPC members state that the case for an immediate hike was “finely balanced”?</description>
+<datum_type>yes_no_na</datum_type>
+<datum_id>85</datum_id>
+</datum>
+<datum>
+<short_description>Did the majority of members state that the case for an immediate hike was “finely balanced”?</short_description>
+<description>Did the majority of members state that the case for an immediate hike was “finely balanced”?</description>
+<datum_type>yes_no_na</datum_type>
+<datum_id>86</datum_id>
+</datum>
+<datum>
+<short_description>Did any members state that the next move in rates was likely to be up?</short_description>
+<description>Did any members state that the next move in rates was likely to be up?</description>
+<datum_type>yes_no_na</datum_type>
+<datum_id>87</datum_id>
+</datum>
+</data>
+<messages>
+<message>
+<message_type>release</message_type>
+<message_version>19</message_version>
+<start_date>2017-01-30</start_date>
+<multicast_group>UK_BOE</multicast_group>
+<fields>
+<field>
+<datum_id>1</datum_id>
+<field_type>float</field_type>
+<example_value>1.2</example_value>
+</field>
+<field>
+<datum_id>2</datum_id>
+<field_type>float</field_type>
+<example_value>200</example_value>
+</field>
+<field>
+<datum_id>3</datum_id>
+<field_type>enumeration</field_type>
+<example_value>0</example_value>
+<allowed_values optional_value_allowed="true">
+              <allowed_value value="-128" description="N/A"/>
+              <allowed_value value="0" description="zero members voting"/>
+              <allowed_value value="1" description="1 member voting"/>
+              <allowed_value value="2" description="2 members voting"/>
+              <allowed_value value="3" description="3 members voting"/>
+              <allowed_value value="4" description="4 members voting"/>
+              <allowed_value value="5" description="5 members voting"/>
+              <allowed_value value="6" description="6 members voting"/>
+              <allowed_value value="7" description="7 members voting"/>
+              <allowed_value value="8" description="8 members voting"/>
+              <allowed_value value="9" description="9 members voting"/>
+            </allowed_values>
+</field>
+<field>
+<datum_id>4</datum_id>
+<field_type>enumeration</field_type>
+<example_value>1</example_value>
+<allowed_values optional_value_allowed="true">
+              <allowed_value value="-128" description="N/A"/>
+              <allowed_value value="0" description="zero members voting"/>
+              <allowed_value value="1" description="1 member voting"/>
+              <allowed_value value="2" description="2 members voting"/>
+              <allowed_value value="3" description="3 members voting"/>
+              <allowed_value value="4" description="4 members voting"/>
+              <allowed_value value="5" description="5 members voting"/>
+              <allowed_value value="6" description="6 members voting"/>
+              <allowed_value value="7" description="7 members voting"/>
+              <allowed_value value="8" description="8 members voting"/>
+              <allowed_value value="9" description="9 members voting"/>
+            </allowed_values>
+</field>
+<field>
+<datum_id>5</datum_id>
+<field_type>enumeration</field_type>
+<example_value>0</example_value>
+<allowed_values optional_value_allowed="true">
+              <allowed_value value="-128" description="N/A"/>
+              <allowed_value value="0" description="zero members voting"/>
+              <allowed_value value="1" description="1 member voting"/>
+              <allowed_value value="2" description="2 members voting"/>
+              <allowed_value value="3" description="3 members voting"/>
+              <allowed_value value="4" description="4 members voting"/>
+              <allowed_value value="5" description="5 members voting"/>
+              <allowed_value value="6" description="6 members voting"/>
+              <allowed_value value="7" description="7 members voting"/>
+              <allowed_value value="8" description="8 members voting"/>
+              <allowed_value value="9" description="9 members voting"/>
+            </allowed_values>
+</field>
+<field>
+<datum_id>6</datum_id>
+<field_type>enumeration</field_type>
+<example_value>3</example_value>
+<allowed_values optional_value_allowed="true">
+              <allowed_value value="-128" description="N/A"/>
+              <allowed_value value="0" description="zero members voting"/>
+              <allowed_value value="1" description="1 member voting"/>
+              <allowed_value value="2" description="2 members voting"/>
+              <allowed_value value="3" description="3 members voting"/>
+              <allowed_value value="4" description="4 members voting"/>
+              <allowed_value value="5" description="5 members voting"/>
+              <allowed_value value="6" description="6 members voting"/>
+              <allowed_value value="7" description="7 members voting"/>
+              <allowed_value value="8" description="8 members voting"/>
+              <allowed_value value="9" description="9 members voting"/>
+            </allowed_values>
+</field>
+<field>
+<datum_id>8</datum_id>
+<field_type>enumeration</field_type>
+<example_value>4</example_value>
+<allowed_values optional_value_allowed="true">
+              <allowed_value value="-128" description="N/A"/>
+              <allowed_value value="0" description="zero members voting"/>
+              <allowed_value value="1" description="1 member voting"/>
+              <allowed_value value="2" description="2 members voting"/>
+              <allowed_value value="3" description="3 members voting"/>
+              <allowed_value value="4" description="4 members voting"/>
+              <allowed_value value="5" description="5 members voting"/>
+              <allowed_value value="6" description="6 members voting"/>
+              <allowed_value value="7" description="7 members voting"/>
+              <allowed_value value="8" description="8 members voting"/>
+              <allowed_value value="9" description="9 members voting"/>
+            </allowed_values>
+</field>
+<field>
+<datum_id>9</datum_id>
+<field_type>enumeration</field_type>
+<example_value>0</example_value>
+<allowed_values optional_value_allowed="true">
+              <allowed_value value="-128" description="N/A"/>
+              <allowed_value value="0" description="zero members voting"/>
+              <allowed_value value="1" description="1 member voting"/>
+              <allowed_value value="2" description="2 members voting"/>
+              <allowed_value value="3" description="3 members voting"/>
+              <allowed_value value="4" description="4 members voting"/>
+              <allowed_value value="5" description="5 members voting"/>
+              <allowed_value value="6" description="6 members voting"/>
+              <allowed_value value="7" description="7 members voting"/>
+              <allowed_value value="8" description="8 members voting"/>
+              <allowed_value value="9" description="9 members voting"/>
+            </allowed_values>
+</field>
+<field>
+<datum_id>10</datum_id>
+<field_type>yes_no_na</field_type>
+<example_value>0</example_value>
+</field>
+<field>
+<datum_id>14</datum_id>
+<field_type>yes_no_na</field_type>
+<example_value>0</example_value>
+</field>
+<field>
+<datum_id>15</datum_id>
+<field_type>float</field_type>
+<example_value>1.3</example_value>
+</field>
+<field>
+<datum_id>16</datum_id>
+<field_type>float</field_type>
+<example_value>1.3</example_value>
+</field>
+<field>
+<datum_id>17</datum_id>
+<field_type>float</field_type>
+<example_value>1.1</example_value>
+</field>
+<field>
+<datum_id>18</datum_id>
+<field_type>float</field_type>
+<example_value>1.4</example_value>
+</field>
+<field>
+<datum_id>20</datum_id>
+<field_type>float</field_type>
+<example_value>1.3</example_value>
+</field>
+<field>
+<datum_id>21</datum_id>
+<field_type>float</field_type>
+<example_value>1.6</example_value>
+</field>
+<field>
+<datum_id>22</datum_id>
+<field_type>float</field_type>
+<example_value>1.1</example_value>
+</field>
+<field>
+<datum_id>23</datum_id>
+<field_type>float</field_type>
+<example_value>1.2</example_value>
+</field>
+<field>
+<datum_id>24</datum_id>
+<field_type>float</field_type>
+<example_value>1.5</example_value>
+</field>
+<field>
+<datum_id>25</datum_id>
+<field_type>float</field_type>
+<example_value>1.6</example_value>
+</field>
+<field>
+<datum_id>26</datum_id>
+<field_type>float</field_type>
+<example_value>1.2</example_value>
+</field>
+<field>
+<datum_id>27</datum_id>
+<field_type>float</field_type>
+<example_value>1.4</example_value>
+</field>
+<field>
+<datum_id>28</datum_id>
+<field_type>float</field_type>
+<example_value>1.5</example_value>
+</field>
+<field>
+<datum_id>29</datum_id>
+<field_type>float</field_type>
+<example_value>1.6</example_value>
+</field>
+<field>
+<datum_id>30</datum_id>
+<field_type>float</field_type>
+<example_value>1.4</example_value>
+</field>
+<field>
+<datum_id>32</datum_id>
+<field_type>float</field_type>
+<example_value>1.3</example_value>
+</field>
+<field>
+<datum_id>59</datum_id>
+<field_type>float</field_type>
+<example_value>200</example_value>
+</field>
+<field>
+<datum_id>60</datum_id>
+<field_type>float</field_type>
+<example_value>200</example_value>
+</field>
+<field>
+<datum_id>61</datum_id>
+<field_type>enumeration</field_type>
+<example_value>2</example_value>
+<allowed_values optional_value_allowed="true">
+              <allowed_value value="-128" description="N/A"/>
+              <allowed_value value="0" description="zero members voting"/>
+              <allowed_value value="1" description="1 member voting"/>
+              <allowed_value value="2" description="2 members voting"/>
+              <allowed_value value="3" description="3 members voting"/>
+              <allowed_value value="4" description="4 members voting"/>
+              <allowed_value value="5" description="5 members voting"/>
+              <allowed_value value="6" description="6 members voting"/>
+              <allowed_value value="7" description="7 members voting"/>
+              <allowed_value value="8" description="8 members voting"/>
+              <allowed_value value="9" description="9 members voting"/>
+            </allowed_values>
+</field>
+<field>
+<datum_id>62</datum_id>
+<field_type>yes_no_na</field_type>
+<example_value>0</example_value>
+</field>
+<field>
+<datum_id>63</datum_id>
+<field_type>yes_no_na</field_type>
+<example_value>0</example_value>
+</field>
+<field>
+<datum_id>64</datum_id>
+<field_type>yes_no_na</field_type>
+<example_value>0</example_value>
+</field>
+<field>
+<datum_id>65</datum_id>
+<field_type>yes_no_na</field_type>
+<example_value>0</example_value>
+</field>
+<field>
+<datum_id>66</datum_id>
+<field_type>enumeration</field_type>
+<example_value>1</example_value>
+<allowed_values optional_value_allowed="true">
+              <allowed_value value="-128" description="N/A"/>
+              <allowed_value value="0" description="zero members voting"/>
+              <allowed_value value="1" description="1 member voting"/>
+              <allowed_value value="2" description="2 members voting"/>
+              <allowed_value value="3" description="3 members voting"/>
+              <allowed_value value="4" description="4 members voting"/>
+              <allowed_value value="5" description="5 members voting"/>
+              <allowed_value value="6" description="6 members voting"/>
+              <allowed_value value="7" description="7 members voting"/>
+              <allowed_value value="8" description="8 members voting"/>
+              <allowed_value value="9" description="9 members voting"/>
+            </allowed_values>
+</field>
+<field>
+<datum_id>67</datum_id>
+<field_type>enumeration</field_type>
+<example_value>0</example_value>
+<allowed_values optional_value_allowed="true">
+              <allowed_value value="-128" description="N/A"/>
+              <allowed_value value="0" description="zero members voting"/>
+              <allowed_value value="1" description="1 member voting"/>
+              <allowed_value value="2" description="2 members voting"/>
+              <allowed_value value="3" description="3 members voting"/>
+              <allowed_value value="4" description="4 members voting"/>
+              <allowed_value value="5" description="5 members voting"/>
+              <allowed_value value="6" description="6 members voting"/>
+              <allowed_value value="7" description="7 members voting"/>
+              <allowed_value value="8" description="8 members voting"/>
+              <allowed_value value="9" description="9 members voting"/>
+            </allowed_values>
+</field>
+<field>
+<datum_id>68</datum_id>
+<field_type>enumeration</field_type>
+<example_value>0</example_value>
+<allowed_values optional_value_allowed="true">
+              <allowed_value value="-128" description="N/A"/>
+              <allowed_value value="0" description="zero members voting"/>
+              <allowed_value value="1" description="1 member voting"/>
+              <allowed_value value="2" description="2 members voting"/>
+              <allowed_value value="3" description="3 members voting"/>
+              <allowed_value value="4" description="4 members voting"/>
+              <allowed_value value="5" description="5 members voting"/>
+              <allowed_value value="6" description="6 members voting"/>
+              <allowed_value value="7" description="7 members voting"/>
+              <allowed_value value="8" description="8 members voting"/>
+              <allowed_value value="9" description="9 members voting"/>
+            </allowed_values>
+</field>
+<field>
+<datum_id>69</datum_id>
+<field_type>enumeration</field_type>
+<example_value>1</example_value>
+<allowed_values optional_value_allowed="true">
+              <allowed_value value="-128" description="N/A"/>
+              <allowed_value value="0" description="zero members voting"/>
+              <allowed_value value="1" description="1 member voting"/>
+              <allowed_value value="2" description="2 members voting"/>
+              <allowed_value value="3" description="3 members voting"/>
+              <allowed_value value="4" description="4 members voting"/>
+              <allowed_value value="5" description="5 members voting"/>
+              <allowed_value value="6" description="6 members voting"/>
+              <allowed_value value="7" description="7 members voting"/>
+              <allowed_value value="8" description="8 members voting"/>
+              <allowed_value value="9" description="9 members voting"/>
+            </allowed_values>
+</field>
+<field>
+<datum_id>70</datum_id>
+<field_type>enumeration</field_type>
+<example_value>0</example_value>
+<allowed_values optional_value_allowed="true">
+              <allowed_value value="-128" description="N/A"/>
+              <allowed_value value="0" description="zero members voting"/>
+              <allowed_value value="1" description="1 member voting"/>
+              <allowed_value value="2" description="2 members voting"/>
+              <allowed_value value="3" description="3 members voting"/>
+              <allowed_value value="4" description="4 members voting"/>
+              <allowed_value value="5" description="5 members voting"/>
+              <allowed_value value="6" description="6 members voting"/>
+              <allowed_value value="7" description="7 members voting"/>
+              <allowed_value value="8" description="8 members voting"/>
+              <allowed_value value="9" description="9 members voting"/>
+            </allowed_values>
+</field>
+<field>
+<datum_id>71</datum_id>
+<field_type>enumeration</field_type>
+<example_value>1</example_value>
+<allowed_values optional_value_allowed="true">
+              <allowed_value value="-128" description="N/A"/>
+              <allowed_value value="0" description="zero members voting"/>
+              <allowed_value value="1" description="1 member voting"/>
+              <allowed_value value="2" description="2 members voting"/>
+              <allowed_value value="3" description="3 members voting"/>
+              <allowed_value value="4" description="4 members voting"/>
+              <allowed_value value="5" description="5 members voting"/>
+              <allowed_value value="6" description="6 members voting"/>
+              <allowed_value value="7" description="7 members voting"/>
+              <allowed_value value="8" description="8 members voting"/>
+              <allowed_value value="9" description="9 members voting"/>
+            </allowed_values>
+</field>
+<field>
+<datum_id>72</datum_id>
+<field_type>float</field_type>
+<example_value>1.1</example_value>
+</field>
+<field>
+<datum_id>73</datum_id>
+<field_type>float</field_type>
+<example_value>1.2</example_value>
+</field>
+<field>
+<datum_id>74</datum_id>
+<field_type>float</field_type>
+<example_value>1.1</example_value>
+</field>
+<field>
+<datum_id>75</datum_id>
+<field_type>float</field_type>
+<example_value>1.2</example_value>
+</field>
+<field>
+<datum_id>78</datum_id>
+<field_type>yes_no_na</field_type>
+<example_value>1</example_value>
+</field>
+<field>
+<datum_id>79</datum_id>
+<field_type>yes_no_na</field_type>
+<example_value>0</example_value>
+</field>
+<field>
+<datum_id>80</datum_id>
+<field_type>yes_no_na</field_type>
+<example_value>0</example_value>
+</field>
+<field>
+<datum_id>81</datum_id>
+<field_type>float</field_type>
+<example_value>1.5</example_value>
+</field>
+<field>
+<datum_id>82</datum_id>
+<field_type>float</field_type>
+<example_value>1.4</example_value>
+</field>
+<field>
+<datum_id>83</datum_id>
+<field_type>float</field_type>
+<example_value>1.5</example_value>
+</field>
+<field>
+<datum_id>84</datum_id>
+<field_type>float</field_type>
+<example_value>1.6</example_value>
+</field>
+<field>
+<datum_id>85</datum_id>
+<field_type>yes_no_na</field_type>
+<example_value>1</example_value>
+</field>
+<field>
+<datum_id>86</datum_id>
+<field_type>yes_no_na</field_type>
+<example_value>1</example_value>
+</field>
+<field>
+<datum_id>87</datum_id>
+<field_type>yes_no_na</field_type>
+<example_value>1</example_value>
+</field>
+</fields>
+</message>
+<message>
+<message_type>estimate</message_type>
+<message_version>19</message_version>
+<start_date>2017-01-30</start_date>
+<multicast_group>UK_ESTIMATES</multicast_group>
+<fields>
+<field>
+<datum_id>1</datum_id>
+<field_type>float</field_type>
+<example_value>1.2</example_value>
+</field>
+<field>
+<datum_id>2</datum_id>
+<field_type>float</field_type>
+<example_value>200</example_value>
+</field>
+<field>
+<datum_id>3</datum_id>
+<field_type>enumeration</field_type>
+<example_value>0</example_value>
+<allowed_values optional_value_allowed="true">
+              <allowed_value value="-128" description="N/A"/>
+              <allowed_value value="0" description="zero members voting"/>
+              <allowed_value value="1" description="1 member voting"/>
+              <allowed_value value="2" description="2 members voting"/>
+              <allowed_value value="3" description="3 members voting"/>
+              <allowed_value value="4" description="4 members voting"/>
+              <allowed_value value="5" description="5 members voting"/>
+              <allowed_value value="6" description="6 members voting"/>
+              <allowed_value value="7" description="7 members voting"/>
+              <allowed_value value="8" description="8 members voting"/>
+              <allowed_value value="9" description="9 members voting"/>
+            </allowed_values>
+</field>
+<field>
+<datum_id>4</datum_id>
+<field_type>enumeration</field_type>
+<example_value>1</example_value>
+<allowed_values optional_value_allowed="true">
+              <allowed_value value="-128" description="N/A"/>
+              <allowed_value value="0" description="zero members voting"/>
+              <allowed_value value="1" description="1 member voting"/>
+              <allowed_value value="2" description="2 members voting"/>
+              <allowed_value value="3" description="3 members voting"/>
+              <allowed_value value="4" description="4 members voting"/>
+              <allowed_value value="5" description="5 members voting"/>
+              <allowed_value value="6" description="6 members voting"/>
+              <allowed_value value="7" description="7 members voting"/>
+              <allowed_value value="8" description="8 members voting"/>
+              <allowed_value value="9" description="9 members voting"/>
+            </allowed_values>
+</field>
+<field>
+<datum_id>5</datum_id>
+<field_type>enumeration</field_type>
+<example_value>0</example_value>
+<allowed_values optional_value_allowed="true">
+              <allowed_value value="-128" description="N/A"/>
+              <allowed_value value="0" description="zero members voting"/>
+              <allowed_value value="1" description="1 member voting"/>
+              <allowed_value value="2" description="2 members voting"/>
+              <allowed_value value="3" description="3 members voting"/>
+              <allowed_value value="4" description="4 members voting"/>
+              <allowed_value value="5" description="5 members voting"/>
+              <allowed_value value="6" description="6 members voting"/>
+              <allowed_value value="7" description="7 members voting"/>
+              <allowed_value value="8" description="8 members voting"/>
+              <allowed_value value="9" description="9 members voting"/>
+            </allowed_values>
+</field>
+<field>
+<datum_id>6</datum_id>
+<field_type>enumeration</field_type>
+<example_value>3</example_value>
+<allowed_values optional_value_allowed="true">
+              <allowed_value value="-128" description="N/A"/>
+              <allowed_value value="0" description="zero members voting"/>
+              <allowed_value value="1" description="1 member voting"/>
+              <allowed_value value="2" description="2 members voting"/>
+              <allowed_value value="3" description="3 members voting"/>
+              <allowed_value value="4" description="4 members voting"/>
+              <allowed_value value="5" description="5 members voting"/>
+              <allowed_value value="6" description="6 members voting"/>
+              <allowed_value value="7" description="7 members voting"/>
+              <allowed_value value="8" description="8 members voting"/>
+              <allowed_value value="9" description="9 members voting"/>
+            </allowed_values>
+</field>
+<field>
+<datum_id>8</datum_id>
+<field_type>enumeration</field_type>
+<example_value>4</example_value>
+<allowed_values optional_value_allowed="true">
+              <allowed_value value="-128" description="N/A"/>
+              <allowed_value value="0" description="zero members voting"/>
+              <allowed_value value="1" description="1 member voting"/>
+              <allowed_value value="2" description="2 members voting"/>
+              <allowed_value value="3" description="3 members voting"/>
+              <allowed_value value="4" description="4 members voting"/>
+              <allowed_value value="5" description="5 members voting"/>
+              <allowed_value value="6" description="6 members voting"/>
+              <allowed_value value="7" description="7 members voting"/>
+              <allowed_value value="8" description="8 members voting"/>
+              <allowed_value value="9" description="9 members voting"/>
+            </allowed_values>
+</field>
+<field>
+<datum_id>9</datum_id>
+<field_type>enumeration</field_type>
+<example_value>0</example_value>
+<allowed_values optional_value_allowed="true">
+              <allowed_value value="-128" description="N/A"/>
+              <allowed_value value="0" description="zero members voting"/>
+              <allowed_value value="1" description="1 member voting"/>
+              <allowed_value value="2" description="2 members voting"/>
+              <allowed_value value="3" description="3 members voting"/>
+              <allowed_value value="4" description="4 members voting"/>
+              <allowed_value value="5" description="5 members voting"/>
+              <allowed_value value="6" description="6 members voting"/>
+              <allowed_value value="7" description="7 members voting"/>
+              <allowed_value value="8" description="8 members voting"/>
+              <allowed_value value="9" description="9 members voting"/>
+            </allowed_values>
+</field>
+<field>
+<datum_id>10</datum_id>
+<field_type>yes_no_na</field_type>
+<example_value>0</example_value>
+</field>
+<field>
+<datum_id>14</datum_id>
+<field_type>yes_no_na</field_type>
+<example_value>0</example_value>
+</field>
+<field>
+<datum_id>15</datum_id>
+<field_type>float</field_type>
+<example_value>1.3</example_value>
+</field>
+<field>
+<datum_id>16</datum_id>
+<field_type>float</field_type>
+<example_value>1.3</example_value>
+</field>
+<field>
+<datum_id>17</datum_id>
+<field_type>float</field_type>
+<example_value>1.1</example_value>
+</field>
+<field>
+<datum_id>18</datum_id>
+<field_type>float</field_type>
+<example_value>1.4</example_value>
+</field>
+<field>
+<datum_id>20</datum_id>
+<field_type>float</field_type>
+<example_value>1.3</example_value>
+</field>
+<field>
+<datum_id>21</datum_id>
+<field_type>float</field_type>
+<example_value>1.6</example_value>
+</field>
+<field>
+<datum_id>22</datum_id>
+<field_type>float</field_type>
+<example_value>1.1</example_value>
+</field>
+<field>
+<datum_id>23</datum_id>
+<field_type>float</field_type>
+<example_value>1.2</example_value>
+</field>
+<field>
+<datum_id>24</datum_id>
+<field_type>float</field_type>
+<example_value>1.5</example_value>
+</field>
+<field>
+<datum_id>25</datum_id>
+<field_type>float</field_type>
+<example_value>1.6</example_value>
+</field>
+<field>
+<datum_id>26</datum_id>
+<field_type>float</field_type>
+<example_value>1.2</example_value>
+</field>
+<field>
+<datum_id>27</datum_id>
+<field_type>float</field_type>
+<example_value>1.4</example_value>
+</field>
+<field>
+<datum_id>28</datum_id>
+<field_type>float</field_type>
+<example_value>1.5</example_value>
+</field>
+<field>
+<datum_id>29</datum_id>
+<field_type>float</field_type>
+<example_value>1.6</example_value>
+</field>
+<field>
+<datum_id>30</datum_id>
+<field_type>float</field_type>
+<example_value>1.4</example_value>
+</field>
+<field>
+<datum_id>32</datum_id>
+<field_type>float</field_type>
+<example_value>1.3</example_value>
+</field>
+<field>
+<datum_id>59</datum_id>
+<field_type>float</field_type>
+<example_value>200</example_value>
+</field>
+<field>
+<datum_id>60</datum_id>
+<field_type>float</field_type>
+<example_value>200</example_value>
+</field>
+<field>
+<datum_id>61</datum_id>
+<field_type>enumeration</field_type>
+<example_value>2</example_value>
+<allowed_values optional_value_allowed="true">
+              <allowed_value value="-128" description="N/A"/>
+              <allowed_value value="0" description="zero members voting"/>
+              <allowed_value value="1" description="1 member voting"/>
+              <allowed_value value="2" description="2 members voting"/>
+              <allowed_value value="3" description="3 members voting"/>
+              <allowed_value value="4" description="4 members voting"/>
+              <allowed_value value="5" description="5 members voting"/>
+              <allowed_value value="6" description="6 members voting"/>
+              <allowed_value value="7" description="7 members voting"/>
+              <allowed_value value="8" description="8 members voting"/>
+              <allowed_value value="9" description="9 members voting"/>
+            </allowed_values>
+</field>
+<field>
+<datum_id>62</datum_id>
+<field_type>yes_no_na</field_type>
+<example_value>0</example_value>
+</field>
+<field>
+<datum_id>63</datum_id>
+<field_type>yes_no_na</field_type>
+<example_value>0</example_value>
+</field>
+<field>
+<datum_id>64</datum_id>
+<field_type>yes_no_na</field_type>
+<example_value>0</example_value>
+</field>
+<field>
+<datum_id>65</datum_id>
+<field_type>yes_no_na</field_type>
+<example_value>0</example_value>
+</field>
+<field>
+<datum_id>66</datum_id>
+<field_type>enumeration</field_type>
+<example_value>1</example_value>
+<allowed_values optional_value_allowed="true">
+              <allowed_value value="-128" description="N/A"/>
+              <allowed_value value="0" description="zero members voting"/>
+              <allowed_value value="1" description="1 member voting"/>
+              <allowed_value value="2" description="2 members voting"/>
+              <allowed_value value="3" description="3 members voting"/>
+              <allowed_value value="4" description="4 members voting"/>
+              <allowed_value value="5" description="5 members voting"/>
+              <allowed_value value="6" description="6 members voting"/>
+              <allowed_value value="7" description="7 members voting"/>
+              <allowed_value value="8" description="8 members voting"/>
+              <allowed_value value="9" description="9 members voting"/>
+            </allowed_values>
+</field>
+<field>
+<datum_id>67</datum_id>
+<field_type>enumeration</field_type>
+<example_value>0</example_value>
+<allowed_values optional_value_allowed="true">
+              <allowed_value value="-128" description="N/A"/>
+              <allowed_value value="0" description="zero members voting"/>
+              <allowed_value value="1" description="1 member voting"/>
+              <allowed_value value="2" description="2 members voting"/>
+              <allowed_value value="3" description="3 members voting"/>
+              <allowed_value value="4" description="4 members voting"/>
+              <allowed_value value="5" description="5 members voting"/>
+              <allowed_value value="6" description="6 members voting"/>
+              <allowed_value value="7" description="7 members voting"/>
+              <allowed_value value="8" description="8 members voting"/>
+              <allowed_value value="9" description="9 members voting"/>
+            </allowed_values>
+</field>
+<field>
+<datum_id>68</datum_id>
+<field_type>enumeration</field_type>
+<example_value>0</example_value>
+<allowed_values optional_value_allowed="true">
+              <allowed_value value="-128" description="N/A"/>
+              <allowed_value value="0" description="zero members voting"/>
+              <allowed_value value="1" description="1 member voting"/>
+              <allowed_value value="2" description="2 members voting"/>
+              <allowed_value value="3" description="3 members voting"/>
+              <allowed_value value="4" description="4 members voting"/>
+              <allowed_value value="5" description="5 members voting"/>
+              <allowed_value value="6" description="6 members voting"/>
+              <allowed_value value="7" description="7 members voting"/>
+              <allowed_value value="8" description="8 members voting"/>
+              <allowed_value value="9" description="9 members voting"/>
+            </allowed_values>
+</field>
+<field>
+<datum_id>69</datum_id>
+<field_type>enumeration</field_type>
+<example_value>1</example_value>
+<allowed_values optional_value_allowed="true">
+              <allowed_value value="-128" description="N/A"/>
+              <allowed_value value="0" description="zero members voting"/>
+              <allowed_value value="1" description="1 member voting"/>
+              <allowed_value value="2" description="2 members voting"/>
+              <allowed_value value="3" description="3 members voting"/>
+              <allowed_value value="4" description="4 members voting"/>
+              <allowed_value value="5" description="5 members voting"/>
+              <allowed_value value="6" description="6 members voting"/>
+              <allowed_value value="7" description="7 members voting"/>
+              <allowed_value value="8" description="8 members voting"/>
+              <allowed_value value="9" description="9 members voting"/>
+            </allowed_values>
+</field>
+<field>
+<datum_id>70</datum_id>
+<field_type>enumeration</field_type>
+<example_value>0</example_value>
+<allowed_values optional_value_allowed="true">
+              <allowed_value value="-128" description="N/A"/>
+              <allowed_value value="0" description="zero members voting"/>
+              <allowed_value value="1" description="1 member voting"/>
+              <allowed_value value="2" description="2 members voting"/>
+              <allowed_value value="3" description="3 members voting"/>
+              <allowed_value value="4" description="4 members voting"/>
+              <allowed_value value="5" description="5 members voting"/>
+              <allowed_value value="6" description="6 members voting"/>
+              <allowed_value value="7" description="7 members voting"/>
+              <allowed_value value="8" description="8 members voting"/>
+              <allowed_value value="9" description="9 members voting"/>
+            </allowed_values>
+</field>
+<field>
+<datum_id>71</datum_id>
+<field_type>enumeration</field_type>
+<example_value>1</example_value>
+<allowed_values optional_value_allowed="true">
+              <allowed_value value="-128" description="N/A"/>
+              <allowed_value value="0" description="zero members voting"/>
+              <allowed_value value="1" description="1 member voting"/>
+              <allowed_value value="2" description="2 members voting"/>
+              <allowed_value value="3" description="3 members voting"/>
+              <allowed_value value="4" description="4 members voting"/>
+              <allowed_value value="5" description="5 members voting"/>
+              <allowed_value value="6" description="6 members voting"/>
+              <allowed_value value="7" description="7 members voting"/>
+              <allowed_value value="8" description="8 members voting"/>
+              <allowed_value value="9" description="9 members voting"/>
+            </allowed_values>
+</field>
+<field>
+<datum_id>72</datum_id>
+<field_type>float</field_type>
+<example_value>1.1</example_value>
+</field>
+<field>
+<datum_id>73</datum_id>
+<field_type>float</field_type>
+<example_value>1.2</example_value>
+</field>
+<field>
+<datum_id>74</datum_id>
+<field_type>float</field_type>
+<example_value>1.1</example_value>
+</field>
+<field>
+<datum_id>75</datum_id>
+<field_type>float</field_type>
+<example_value>1.2</example_value>
+</field>
+<field>
+<datum_id>78</datum_id>
+<field_type>yes_no_na</field_type>
+<example_value>1</example_value>
+</field>
+<field>
+<datum_id>79</datum_id>
+<field_type>yes_no_na</field_type>
+<example_value>0</example_value>
+</field>
+<field>
+<datum_id>80</datum_id>
+<field_type>yes_no_na</field_type>
+<example_value>0</example_value>
+</field>
+<field>
+<datum_id>81</datum_id>
+<field_type>float</field_type>
+<example_value>1.5</example_value>
+</field>
+<field>
+<datum_id>82</datum_id>
+<field_type>float</field_type>
+<example_value>1.4</example_value>
+</field>
+<field>
+<datum_id>83</datum_id>
+<field_type>float</field_type>
+<example_value>1.5</example_value>
+</field>
+<field>
+<datum_id>84</datum_id>
+<field_type>float</field_type>
+<example_value>1.6</example_value>
+</field>
+<field>
+<datum_id>85</datum_id>
+<field_type>yes_no_na</field_type>
+<example_value>1</example_value>
+</field>
+<field>
+<datum_id>86</datum_id>
+<field_type>yes_no_na</field_type>
+<example_value>1</example_value>
+</field>
+<field>
+<datum_id>87</datum_id>
+<field_type>yes_no_na</field_type>
+<example_value>1</example_value>
+</field>
+</fields>
+</message>
+</messages>
+</category>
+</protocol>

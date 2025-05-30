@@ -1,0 +1,56 @@
+[core]
+	repositoryformatversion = 0
+	filemode = true
+	bare = false
+	logallrefupdates = true
+[remote "origin"]
+	url = git+ssh://git@github.com/two-roads-trading-pvt-ltd/baseinfra.git
+	fetch = +refs/heads/*:refs/remotes/origin/*
+[branch "master"]
+	remote = origin
+	merge = refs/heads/master
+[branch "OEBU_FIX_MASTER_NEW"]
+	remote = origin
+	merge = refs/heads/OEBU_FIX_MASTER_NEW
+[branch "BSE_NEW"]
+	remote = origin
+	merge = refs/heads/BSE_NEW
+[branch "BSE_ETI"]
+	remote = origin
+	merge = refs/heads/BSE_ETI
+[branch "local_disk_handling"]
+	remote = origin
+	merge = refs/heads/local_disk_handling
+[branch "DB_PROJECT"]
+	remote = origin
+	merge = refs/heads/DB_PROJECT
+[branch "BSE_ETI_20220407"]
+	remote = origin
+	merge = refs/heads/BSE_ETI_20220407
+[branch "OEBU_FIX_MASTER"]
+	remote = origin
+	merge = refs/heads/OEBU_FIX_MASTER
+[branch "L1_LOGGED_DATA"]
+	remote = origin
+	merge = refs/heads/L1_LOGGED_DATA
+[branch "LOG_LIVE_BARDATA"]
+	remote = origin
+	merge = refs/heads/LOG_LIVE_BARDATA
+[branch "NSE_GET_PRICE_UNCONVERTED"]
+	remote = origin
+	merge = refs/heads/NSE_GET_PRICE_UNCONVERTED
+[branch "IB_Infra_BookKeep"]
+	remote = origin
+	merge = refs/heads/IB_Infra_BookKeep
+[branch "IB_Infra_BookKeep_commision_live"]
+	remote = origin
+	merge = refs/heads/IB_Infra_BookKeep_commision_live
+[branch "IB_Infra_BookKeep_comission"]
+	remote = origin
+	merge = refs/heads/IB_Infra_BookKeep_comission
+[branch "IB_Infra"]
+	remote = origin
+	merge = refs/heads/IB_Infra
+[branch "L1_LOGGED_DATA_MASTER"]
+	remote = origin
+	merge = refs/heads/L1_LOGGED_DATA_MASTER

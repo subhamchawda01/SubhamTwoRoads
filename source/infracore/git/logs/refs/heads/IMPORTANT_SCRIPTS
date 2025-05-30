@@ -1,0 +1,48 @@
+0000000000000000000000000000000000000000 215282d80fcc2f6b5f05c83775d304b1b8437b3e subhamchawda01 <subham.chawda@tworoads-trading.co.in> 1638334659 +0000	branch: Created from refs/remotes/origin/IMPORTANT_SCRIPTS
+215282d80fcc2f6b5f05c83775d304b1b8437b3e 75dbbe9086b2d9d451ddb936e1ed3d85c04e2b44 subhamchawda01 <subham.chawda@tworoads-trading.co.in> 1638334666 +0000	pull: Fast-forward
+75dbbe9086b2d9d451ddb936e1ed3d85c04e2b44 32132c19449045785bab1457cbdbca163384735e subhamchawda01 <subham.chawda@tworoads-trading.co.in> 1638335766 +0000	commit: gsm & nifty product filter
+32132c19449045785bab1457cbdbca163384735e 5b217ee2ca7c10ee7f4a61490f600ddf53c23c26 subhamchawda01 <subham.chawda@tworoads-trading.co.in> 1640166235 +0000	commit: bardata generation check for spot and currency
+5b217ee2ca7c10ee7f4a61490f600ddf53c23c26 9109ae8353e5354162a50e6fb905074916741f0a subhamchawda01 <subham.chawda@tworoads-trading.co.in> 1641734157 +0000	pull: Fast-forward
+9109ae8353e5354162a50e6fb905074916741f0a b1848669793068c1a512c22a6b858b7353c1e385 subhamchawda01 <subham.chawda@tworoads-trading.co.in> 1648436778 +0000	pull: Fast-forward
+b1848669793068c1a512c22a6b858b7353c1e385 f84b4eae2248d2318f5460dc70f5c5f636e5db90 subhamchawda01 <subham.chawda@tworoads-trading.co.in> 1650212864 +0000	pull: Fast-forward
+f84b4eae2248d2318f5460dc70f5c5f636e5db90 f8cf1e4b5f08680d6f31308ecfe0b300a8f7b8c0 subhamchawda01 <subham.chawda@tworoads-trading.co.in> 1650213026 +0000	commit: orsreject handling bug fix
+f8cf1e4b5f08680d6f31308ecfe0b300a8f7b8c0 bd2826fda76b114abfe9da6b4e65ff043a0d2bb5 subhamchawda01 <subham.chawda@tworoads-trading.co.in> 1650214415 +0000	commit: updated trade_export_to_pos_exec
+bd2826fda76b114abfe9da6b4e65ff043a0d2bb5 fd0db763c462db0ecb3e949ee27eebae0fe4a95f subhamchawda01 <subham.chawda@tworoads-trading.co.in> 1650216521 +0000	commit: added handling for ind22 FO in audit script
+fd0db763c462db0ecb3e949ee27eebae0fe4a95f 50efd71cf15bcdce10cefb9d73ebdb5b9845b29b subhamchawda01 <subham.chawda@tworoads-trading.co.in> 1650218808 +0000	commit: Script to filter monthly and weekly OEBU product. file on IND21
+50efd71cf15bcdce10cefb9d73ebdb5b9845b29b 59eaad2e2a2bec171b084833d85b114596e0fa5c subhamchawda01 <subham.chawda@tworoads-trading.co.in> 1650426187 +0000	commit: addts verification script updated
+59eaad2e2a2bec171b084833d85b114596e0fa5c 9448bbff25076b622819aa7e1af9fe2eb47d6461 subhamchawda01 <subham.chawda@tworoads-trading.co.in> 1650426236 +0000	pull: Merge made by the 'recursive' strategy.
+9448bbff25076b622819aa7e1af9fe2eb47d6461 81be40ba786bfcf1aac32a1c317e7d1590e5b52a subhamchawda01 <subham.chawda@tworoads-trading.co.in> 1650436376 +0000	commit: removed duplicate script and added comment in generate_bse_postion.sh
+81be40ba786bfcf1aac32a1c317e7d1590e5b52a 196a97ba7bd2fe1d15e53fdc3ed1126e52671d0c subhamchawda01 <subham.chawda@tworoads-trading.co.in> 1650438722 +0000	commit: script to generate trade file for bse from trade export
+196a97ba7bd2fe1d15e53fdc3ed1126e52671d0c cec8e15a7f5092fab3f1e3adf55f3d3063ad0ede subhamchawda01 <subham.chawda@tworoads-trading.co.in> 1650969079 +0000	commit: bug fix get_Stop_loss_Products.sh
+cec8e15a7f5092fab3f1e3adf55f3d3063ad0ede 7c3b772e986914957bd90d9a94e92b017768fd97 subhamchawda01 <subham.chawda@tworoads-trading.co.in> 1650969207 +0000	commit: script to monitor margin
+7c3b772e986914957bd90d9a94e92b017768fd97 01af5d9c2f79d940c255d0701b13ab47bef620eb subhamchawda01 <subham.chawda@tworoads-trading.co.in> 1651040842 +0000	commit: bug fix bse_ind11_drops.sh
+01af5d9c2f79d940c255d0701b13ab47bef620eb 1ea3896f84889b8bb1db071b64e363f2b113afd5 subhamchawda01 <subham.chawda@tworoads-trading.co.in> 1651041294 +0000	commit: bug fix bse_ind11_drops.sh
+1ea3896f84889b8bb1db071b64e363f2b113afd5 a663cb9026e9e5f3af35bf79f612991239642a0e subhamchawda01 <subham.chawda@tworoads-trading.co.in> 1653470983 +0000	pull: Fast-forward
+a663cb9026e9e5f3af35bf79f612991239642a0e c22fa2ec8c0893effa15474c57afed57cbb0b3bc subhamchawda01 <subham.chawda@tworoads-trading.co.in> 1653471153 +0000	commit: send bse audit info script
+c22fa2ec8c0893effa15474c57afed57cbb0b3bc 7d7525ae4e908a5ee1e56a612b82ef80dca1aa74 subhamchawda01 <subham.chawda@tworoads-trading.co.in> 1653476557 +0000	commit: bse addts verify script
+7d7525ae4e908a5ee1e56a612b82ef80dca1aa74 eb982329c2e399a993adb5c3bec24cadc623f02a subhamchawda01 <subham.chawda@tworoads-trading.co.in> 1653476766 +0000	commit: bse ors reject handling
+eb982329c2e399a993adb5c3bec24cadc623f02a b3d31c2492b164f562b6f7aa8d2a09e24d14c1ac subhamchawda01 <subham.chawda@tworoads-trading.co.in> 1655285210 +0000	pull: Fast-forward
+b3d31c2492b164f562b6f7aa8d2a09e24d14c1ac 88ecdc9ca0dae8732975a1b8f2a84359f2cdf3fd subhamchawda01 <subham.chawda@tworoads-trading.co.in> 1655285422 +0000	commit: bse throttle report script
+88ecdc9ca0dae8732975a1b8f2a84359f2cdf3fd d25c42bb05f7e4644b73d1b4e4584dcdc449e0fb subhamchawda01 <subham.chawda@tworoads-trading.co.in> 1655287537 +0000	commit: bse pnl report script
+d25c42bb05f7e4644b73d1b4e4584dcdc449e0fb 8dc7b9a9ee176e51829a696bc6e025395475f635 subhamchawda01 <subham.chawda@tworoads-trading.co.in> 1655457642 +0000	commit: seperate script for updating BSE fetch files
+8dc7b9a9ee176e51829a696bc6e025395475f635 d875f94219b23e2fdbafd400894d21c23ec85a79 subhamchawda01 <subham.chawda@tworoads-trading.co.in> 1661156273 +0000	pull: Fast-forward
+d875f94219b23e2fdbafd400894d21c23ec85a79 470fae12cd6236d73bb8048b1da39a0e97e8e74d subhamchawda01 <subham.chawda@tworoads-trading.co.in> 1661507656 +0000	commit: ors report script, generate fo positon py
+470fae12cd6236d73bb8048b1da39a0e97e8e74d 19e9dcb8040609953f6416157650aab5544f6735 subhamchawda01 <subham.chawda@tworoads-trading.co.in> 1662569151 +0000	pull: Fast-forward
+19e9dcb8040609953f6416157650aab5544f6735 e8ecc09556972755c6d619eb2fb7700d77751305 subhamchawda01 <subham.chawda@tworoads-trading.co.in> 1662569218 +0000	commit: script to get interaday adjust pnl
+e8ecc09556972755c6d619eb2fb7700d77751305 3cf92edf421f81f2f95a47b6c86a45db549f1f90 subhamchawda01 <subham.chawda@tworoads-trading.co.in> 1668748541 +0000	pull: Fast-forward
+3cf92edf421f81f2f95a47b6c86a45db549f1f90 807374764dfe9e3a24c69bdde53b9f758721cde0 subhamchawda01 <subham.chawda@tworoads-trading.co.in> 1668748606 +0000	commit: script to get open position for strat
+807374764dfe9e3a24c69bdde53b9f758721cde0 5e08f49b40a981420592060507094a1dda15fb1c subhamchawda01 <subham.chawda@tworoads-trading.co.in> 1668755539 +0000	commit: added handling for expiry type as input
+5e08f49b40a981420592060507094a1dda15fb1c 8dee4da31c8d2357b799f0d637aa6fa238c78dc2 subhamchawda01 <subham.chawda@tworoads-trading.co.in> 1674107672 +0000	pull: Fast-forward
+8dee4da31c8d2357b799f0d637aa6fa238c78dc2 2a2078898addfdc37dfde9b61808bd081189b9da subhamchawda01 <subham.chawda@tworoads-trading.co.in> 1674107788 +0000	commit: bug fix contract_stream_diff_mailer
+2a2078898addfdc37dfde9b61808bd081189b9da 7bfed6d50f10bce0797712dd312e0da08bc0d5fc subhamchawda01 <subham.chawda@tworoads-trading.co.in> 1683877001 +0000	pull: Fast-forward
+7bfed6d50f10bce0797712dd312e0da08bc0d5fc f93d55a53a08b8f068f0e300ab981a9b7f36400c subhamchawda01 <subham.chawda@tworoads-trading.co.in> 1683883054 +0000	commit: scripts
+f93d55a53a08b8f068f0e300ab981a9b7f36400c 056b431dc3ed3fdf05cfc17c8af93887131f31ee subhamchawda01 <subham.chawda@tworoads-trading.co.in> 1688378610 +0000	pull: Fast-forward
+056b431dc3ed3fdf05cfc17c8af93887131f31ee b18ef78e24f7be185d578b5a3c43376b3e38ba1c subhamchawda01 <subham.chawda@tworoads-trading.co.in> 1688378810 +0000	commit: script to generate pnl breakup for GRT
+b18ef78e24f7be185d578b5a3c43376b3e38ba1c 1373abf96298664481f9f820fd968007264a03bf subhamchawda01 <subham.chawda@tworoads-trading.co.in> 1688380843 +0000	commit: script to generate pnl breakup for GRT added pnl sell buy
+1373abf96298664481f9f820fd968007264a03bf 03413437cf0fd821db9cbd115fba6a4f7d57be1b subhamchawda01 <subham.chawda@tworoads-trading.co.in> 1714457884 +0000	pull: Fast-forward
+03413437cf0fd821db9cbd115fba6a4f7d57be1b dd17aae2fdb0a7411bced17063019e797d84f6f2 subhamchawda01 <subham.chawda@tworoads-trading.co.in> 1714457948 +0000	commit: sync holiday file to all server
+dd17aae2fdb0a7411bced17063019e797d84f6f2 b90210d4c94ea6f4b782a28af41b0ac8899b174f subhamchawda01 <subham.chawda@tworoads-trading.co.in> 1714465396 +0000	commit: bug fix NSE Contract File Generator scirpt
+b90210d4c94ea6f4b782a28af41b0ac8899b174f a7a190f1da4d064f19e977148174ffe52ef82292 subhamchawda01 <subham.chawda@tworoads-trading.co.in> 1714465433 +0000	commit: ~
+a7a190f1da4d064f19e977148174ffe52ef82292 90945f73223817985b42a6a0873b41293aabe0db subhamchawda01 <subham.chawda@tworoads-trading.co.in> 1714564398 +0000	commit: backup script update
+90945f73223817985b42a6a0873b41293aabe0db e2956a9829991800d8101a08bd0c6c43fbd52d79 subhamchawda01 <subham.chawda@tworoads-trading.co.in> 1733116765 +0000	pull: Fast-forward
+e2956a9829991800d8101a08bd0c6c43fbd52d79 19fb95f3b67e25a55b19fe4fca6b91169574f19f subhamchawda01 <subham.chawda@tworoads-trading.co.in> 1733123001 +0000	commit: added important scripts

@@ -1,0 +1,14 @@
+project : usage-requirements <include>$(PROJECT_INSTALL) 
+          <library>/spare/local/lib/mbochip/libsumdfEvent.so
+		;
+
+lib BmfFpgaHeader : [ glob *.cpp ] : <link>static ;
+
+install libBmfFpgaHeader
+  : BmfFpgaHeader
+  : <install-type>LIB
+    <variant>release:<location>"$(PROJECT_INSTALL)/lib"
+    <variant>debug:<location>"$(PROJECT_INSTALL)/libdebug"
+  : release debug
+  ;
+

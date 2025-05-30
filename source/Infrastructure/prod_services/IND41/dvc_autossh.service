@@ -1,0 +1,16 @@
+## /etc/systemd/system/dvc_autossh.service
+
+[Unit]
+Description=AutoSSH Tunnel Service
+After=network.target
+
+[Service]
+User=dvcinfra
+ExecStart=/usr/local/bin/autossh -M 0 -q -N -o "ServerAliveInterval 60" -o "ServerAliveCountMax 3" -o "ExitOnForwardFailure=yes" -L 8181:127.0.0.1:8181 10.23.5.50
+Restart=always
+RestartSec=5
+StandardOutput=null
+StandardError=null
+
+[Install]
+WantedBy=multi-user.target

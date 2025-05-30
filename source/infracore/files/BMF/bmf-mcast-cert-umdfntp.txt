@@ -1,0 +1,44 @@
+##Product:	StreamType:	StreamService:	Address:		Port:
+# These reference streams are the same for all 3 types of updates.
+1               Reference 	A		233.252.11.1		10001
+3               Reference 	A		233.252.11.9		10003
+5               Reference 	A		233.252.11.17		10005
+7               Reference 	A		233.252.11.25		10007
+10              Reference 	A		233.252.11.37		10010
+
+# Order depth
+1		Snapshot	A		233.252.11.1		30001
+3		Snapshot	A		233.252.11.9		30003
+5		Snapshot	A		233.252.11.17		30005
+7		Snapshot	A		233.252.11.25		30007
+10		Snapshot	A		233.252.11.37		30010
+1		Increment	A		233.252.11.2		20001
+3		Increment	A		233.252.11.10		20003
+5		Increment	A		233.252.11.18		20005
+7		Increment	A		233.252.11.26		20007
+10		Increment	A		233.252.11.38		20010
+
+# Price
+#10              Reference 	A		233.252.11.37		10110
+#1		Snapshot	A		233.252.11.1		30101
+#3		Snapshot	A		233.252.11.9		30103
+#5		Snapshot	A		233.252.11.17		30105
+#7		Snapshot	A		233.252.11.25		30107
+#10		Snapshot	A		233.252.11.37		30110
+#1		Increment	A		233.252.11.3		20101
+#3		Increment	A		233.252.11.11		20103
+#5		Increment	A		233.252.11.19		20105
+#7		Increment	A		233.252.11.27		20107
+#10		Increment	A		233.252.11.39		20110
+
+# Top of Book
+#1		Snapshot	A		233.252.11.1		30201
+#3		Snapshot	A		233.252.11.9		30203
+#5		Snapshot	A		233.252.11.17		30205
+#7		Snapshot	A		233.252.11.25		30207
+#10		Snapshot	A		233.252.11.37		30210
+#1		Increment	A		233.252.11.4		20201
+#3		Increment	A		233.252.11.12		20203
+#5		Increment	A		233.252.11.20		20205
+#7		Increment	A		233.252.11.28		20207
+#10		Increment	A		233.252.11.40		20210

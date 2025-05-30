@@ -1,0 +1,101 @@
+#! /bin/bash
+#
+# chkconfig: 2345 95 20
+# description: This application was developed by me and is tested on this server
+# processname: dvc_pullrequest
+# Author : Ravi Parikh (c)
+#
+# dvc_pullrequest Executes production update request and stores them in a centralized database for easy reverts 
+# description: Custom execs/scripts enabled as service 
+#
+### BEGIN INIT INFO
+# Provides: custom functionality 
+### END INIT INFO
+
+# Source function library.
+. /etc/init.d/functions
+
+PIDFILE="/tmp/pullrequest.pid"
+RETVAL=0 
+
+start () {
+
+  echo "Starting Up PullRequestServer..." 
+  sudo runuser -l pengine -c '/home/pengine/prod/live_scripts/pull_update_requests_and_execute.sh >/dev/null 2>/dev/null &'
+  PID=`ps -ef |grep pull_update_requests_and_execute | grep -v grep | awk '{print $2}'` ;
+  echo $PID > $PIDFILE ;
+  is_alive=`ps -ef |grep $PID | grep -v grep | wc -l` ;
+  action "Checking If Daemon Was Brought Up" [ "$is_alive" != "0" ]
+  return $RETVAL 
+
+}
+
+stop () {
+
+  echo "Shutting Down PullRequestServer..."
+
+  PID=`ps -ef |grep pull_update_requests_and_execute | grep -v grep | awk '{print $2}'`
+
+  if [ -f $PIDFILE ] ; then
+
+    sudo kill -s SIGINT `cat $PIDFILE` >/dev/null 2>/dev/null
+
+  else
+
+    #unusual, but we could make sure to terminate all instances 
+    sudo killall -SIGINT pull_update_requests_and_execute >/dev/null 2>/dev/null
+
+  fi
+
+  is_alive=`ps -ef |grep pull_update_requests_and_execute | grep -v grep | wc -l` ;
+
+  if [ $is_alive -gt 0 ] ; then
+    sudo kill -9 `ps -ef |grep pull_update_requests_and_execute | grep -v grep | awk '{print $2}'` ;
+  fi
+
+  is_alive=`ps -ef |grep pull_update_requests_and_execute | grep -v grep | wc -l` ;
+
+  action "Checking If Daemon Has Been Brought Down" [ "$is_alive" == "0" ]
+  rm -rf $PIDFILE ;
+  rm -rf /spare/local/.update_production_setup_lock.* ;  #Remove lock if the daemon couldn't do it 
+
+  return $RETVAL 
+
+}
+
+dostatus () {
+
+  if [ -f "/etc/init.d/functions" ]; then
+    status pull_update_requests_and_execute.sh
+  fi
+   
+}
+
+restart () {
+
+  stop 
+  start 
+
+}
+
+# See how we were called.
+case "$1" in
+  start)
+        start
+        ;;
+  stop)
+        stop
+        ;;
+  restart)
+    restart
+    ;;
+  status)
+        dostatus
+        ;;
+  *)
+        echo "Usage: dvc_pullrequest {start|stop|restart|status}"
+        exit 1
+esac
+
+exit $RETVAL
+

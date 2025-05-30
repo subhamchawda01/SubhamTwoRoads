@@ -1,0 +1,4 @@
+"country","date","name","actual","consensus","previous","volatility"
+"Mexico","20130527 13:00:00","Trade Balance s/a, $","","","$ -0.456 ","1"
+"Mexico","20130527 13:00:00","Trade Balance, $","","","$ 1.714 ","1"
+"Japan","20130527 23:50:00","Corporate Service Price (YoY)","","-0.200  %","-0.200  %","1"

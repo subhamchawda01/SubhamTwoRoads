@@ -1,0 +1,544 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<?xml-stylesheet type="text/xsl" href="./ClientHTML.xsl"?><protocol>
+<version>351</version>
+<revisions>
+    <revision type="Final" version="351" author="MNI News" date="03/13/2017"/>
+  </revisions>
+<category name="CH_KOF_Economic_Barometer">
+<description>KOF Economic Barometer</description>
+<country>CH</country>
+<category_id>21602</category_id>
+<data>
+<datum>
+<short_description>KOF Economic Barometer</short_description>
+<description>KOF Economic Barometer</description>
+<datum_type>index</datum_type>
+<datum_id>1</datum_id>
+</datum>
+</data>
+<messages>
+<message>
+<message_type>release</message_type>
+<message_version>1</message_version>
+<multicast_group>EU_GROUP_2</multicast_group>
+<fields>
+<field>
+<datum_id>1</datum_id>
+<field_type>float</field_type>
+<example_value>1.36</example_value>
+</field>
+</fields>
+</message>
+<message>
+<message_type>estimate</message_type>
+<message_version>1</message_version>
+<multicast_group>EU_ESTIMATES</multicast_group>
+<fields>
+<field>
+<datum_id>1</datum_id>
+<field_type>float</field_type>
+<example_value>1.36</example_value>
+</field>
+</fields>
+</message>
+</messages>
+</category>
+<category name="CH_GDP">
+<description>Swiss GDP</description>
+<country>CH</country>
+<category_id>21603</category_id>
+<data>
+<datum>
+<short_description>GDP, Q-on-Q SA</short_description>
+<description>GDP, quarter on quarter, seasonally adjusted</description>
+<datum_type>%</datum_type>
+<datum_id>1</datum_id>
+</datum>
+<datum>
+<short_description>GDP, Y-on-Y SA</short_description>
+<description>GDP, year on year, seasonally adjusted</description>
+<datum_type>%</datum_type>
+<datum_id>2</datum_id>
+</datum>
+</data>
+<messages>
+<message>
+<message_type>release</message_type>
+<message_version>1</message_version>
+<multicast_group>EU_GROUP_2</multicast_group>
+<fields>
+<field>
+<datum_id>1</datum_id>
+<field_type>float</field_type>
+<example_value>0.5</example_value>
+</field>
+<field>
+<datum_id>2</datum_id>
+<field_type>float</field_type>
+<example_value>2.5</example_value>
+</field>
+</fields>
+</message>
+<message>
+<message_type>estimate</message_type>
+<message_version>1</message_version>
+<multicast_group>EU_ESTIMATES</multicast_group>
+<fields>
+<field>
+<datum_id>1</datum_id>
+<field_type>float</field_type>
+<example_value>0.5</example_value>
+</field>
+<field>
+<datum_id>2</datum_id>
+<field_type>float</field_type>
+<example_value>2.5</example_value>
+</field>
+</fields>
+</message>
+</messages>
+</category>
+<category name="CH_Retail_Sales">
+<description>Swiss retail sales</description>
+<country>CH</country>
+<category_id>21604</category_id>
+<data>
+<datum>
+<short_description>Retail Sales, M-on-M SA</short_description>
+<description>Retail Sales, month on month, seasonally adjusted</description>
+<datum_type>%</datum_type>
+<datum_id>1</datum_id>
+</datum>
+<datum>
+<short_description>Retail Sales, Y-on-Y SA</short_description>
+<description>Retail Sales, year on year, seasonally adjusted</description>
+<datum_type>%</datum_type>
+<datum_id>2</datum_id>
+</datum>
+</data>
+<messages>
+<message>
+<message_type>release</message_type>
+<message_version>1</message_version>
+<multicast_group>EU_GROUP_2</multicast_group>
+<fields>
+<field>
+<datum_id>1</datum_id>
+<field_type>float</field_type>
+<example_value>0.5</example_value>
+</field>
+<field>
+<datum_id>2</datum_id>
+<field_type>float</field_type>
+<example_value>2.3</example_value>
+</field>
+</fields>
+</message>
+<message>
+<message_type>estimate</message_type>
+<message_version>1</message_version>
+<multicast_group>EU_ESTIMATES</multicast_group>
+<fields>
+<field>
+<datum_id>1</datum_id>
+<field_type>float</field_type>
+<example_value>0.5</example_value>
+</field>
+<field>
+<datum_id>2</datum_id>
+<field_type>float</field_type>
+<example_value>2.3</example_value>
+</field>
+</fields>
+</message>
+</messages>
+</category>
+<category name="CH_Unemployment">
+<description>Swiss unemployment</description>
+<country>CH</country>
+<category_id>21605</category_id>
+<data>
+<datum>
+<short_description>Unemployment, M-on-M SA</short_description>
+<description>Unemployment, month on month, seasonally adjusted</description>
+<datum_type>%</datum_type>
+<datum_id>1</datum_id>
+</datum>
+<datum>
+<short_description>Unemployment, Y-on-Y SA</short_description>
+<description>Unemployment, year on year, seasonally adjusted</description>
+<datum_type>%</datum_type>
+<datum_id>2</datum_id>
+</datum>
+<datum>
+<short_description>Unemployment, rate SA</short_description>
+<description>Unemployment, rate, seasonally adjusted</description>
+<datum_type>%</datum_type>
+<datum_id>3</datum_id>
+</datum>
+</data>
+<messages>
+<message>
+<message_type>release</message_type>
+<message_version>1</message_version>
+<multicast_group>EU_GROUP_2</multicast_group>
+<fields>
+<field>
+<datum_id>1</datum_id>
+<field_type>float</field_type>
+<example_value>10.5</example_value>
+</field>
+<field>
+<datum_id>2</datum_id>
+<field_type>float</field_type>
+<example_value>10.5</example_value>
+</field>
+<field>
+<datum_id>3</datum_id>
+<field_type>float</field_type>
+<example_value>10.5</example_value>
+</field>
+</fields>
+</message>
+<message>
+<message_type>estimate</message_type>
+<message_version>1</message_version>
+<multicast_group>EU_ESTIMATES</multicast_group>
+<fields>
+<field>
+<datum_id>1</datum_id>
+<field_type>float</field_type>
+<example_value>10.5</example_value>
+</field>
+<field>
+<datum_id>2</datum_id>
+<field_type>float</field_type>
+<example_value>10.5</example_value>
+</field>
+<field>
+<datum_id>3</datum_id>
+<field_type>float</field_type>
+<example_value>10.5</example_value>
+</field>
+</fields>
+</message>
+</messages>
+</category>
+<category name="CH_CPI">
+<description>Swiss CPI</description>
+<country>CH</country>
+<category_id>21606</category_id>
+<data>
+<datum>
+<short_description>CPI, M-on-M SA</short_description>
+<description>CPI, month on month, seasonally adjusted</description>
+<datum_type>%</datum_type>
+<datum_id>1</datum_id>
+</datum>
+<datum>
+<short_description>CPI, Y-on-Y SA</short_description>
+<description>CPI, year on year, seasonally adjusted</description>
+<datum_type>%</datum_type>
+<datum_id>2</datum_id>
+</datum>
+</data>
+<messages>
+<message>
+<message_type>release</message_type>
+<message_version>1</message_version>
+<multicast_group>EU_GROUP_2</multicast_group>
+<fields>
+<field>
+<datum_id>1</datum_id>
+<field_type>float</field_type>
+<example_value>-0.4</example_value>
+</field>
+<field>
+<datum_id>2</datum_id>
+<field_type>float</field_type>
+<example_value>0.0</example_value>
+</field>
+</fields>
+</message>
+<message>
+<message_type>estimate</message_type>
+<message_version>1</message_version>
+<multicast_group>EU_ESTIMATES</multicast_group>
+<fields>
+<field>
+<datum_id>1</datum_id>
+<field_type>float</field_type>
+<example_value>-0.4</example_value>
+</field>
+<field>
+<datum_id>2</datum_id>
+<field_type>float</field_type>
+<example_value>0.0</example_value>
+</field>
+</fields>
+</message>
+</messages>
+</category>
+<category name="CH_SNB_3_Month_Libor_Rate_Direction">
+<description>Swiss National Bank 3 Month Libor Rate Direction.</description>
+<country>CH</country>
+<category_id>21607</category_id>
+<data>
+<datum>
+<short_description>3 Month Libor Rate Direction</short_description>
+<description>3 Month Libor Rate Direction</description>
+<datum_type>index</datum_type>
+<datum_id>1</datum_id>
+</datum>
+</data>
+<messages>
+<message>
+<message_type>release</message_type>
+<message_version>1</message_version>
+<start_date>2015-03-18</start_date>
+<multicast_group>EU_GROUP_2</multicast_group>
+<fields>
+<field>
+<datum_id>1</datum_id>
+<field_type>directional</field_type>
+<example_value>1</example_value>
+</field>
+</fields>
+</message>
+<message>
+<message_type>estimate</message_type>
+<message_version>1</message_version>
+<start_date>2015-03-18</start_date>
+<multicast_group>EU_GROUP_2</multicast_group>
+<fields>
+<field>
+<datum_id>1</datum_id>
+<field_type>directional</field_type>
+<example_value>1</example_value>
+</field>
+</fields>
+</message>
+</messages>
+</category>
+<category name="CH_SNB_3_Month_Libor_Basis_Point_Change">
+<description>Swiss National Bank 3 Month Libor Basis Point change.</description>
+<country>CH</country>
+<category_id>21608</category_id>
+<data>
+<datum>
+<short_description>3 Month Libor Basis Point change</short_description>
+<description>3 Month Libor Basis Point change</description>
+<datum_type>index</datum_type>
+<datum_id>1</datum_id>
+</datum>
+</data>
+<messages>
+<message>
+<message_type>release</message_type>
+<message_version>1</message_version>
+<start_date>2015-03-18</start_date>
+<multicast_group>EU_GROUP_2</multicast_group>
+<fields>
+<field>
+<datum_id>1</datum_id>
+<field_type>short</field_type>
+<example_value>-50</example_value>
+</field>
+</fields>
+</message>
+<message>
+<message_type>estimate</message_type>
+<message_version>1</message_version>
+<start_date>2015-03-18</start_date>
+<multicast_group>EU_GROUP_2</multicast_group>
+<fields>
+<field>
+<datum_id>1</datum_id>
+<field_type>short</field_type>
+<example_value>-50</example_value>
+</field>
+</fields>
+</message>
+</messages>
+</category>
+<category name="CH_SNB_3_Month_Libor_Rate_Range">
+<description>Swiss National Bank 3 Month Libor Rate Range.</description>
+<country>CH</country>
+<category_id>21609</category_id>
+<data>
+<datum>
+<short_description>3 Month Libor Rate Lower Range</short_description>
+<description>3 Month Libor Rate Lower Range</description>
+<datum_type>%</datum_type>
+<datum_id>1</datum_id>
+</datum>
+<datum>
+<short_description>3 Month Libor Rate Upper Range</short_description>
+<description>3 Month Libor Rate Upper Range</description>
+<datum_type>%</datum_type>
+<datum_id>2</datum_id>
+</datum>
+</data>
+<messages>
+<message>
+<message_type>release</message_type>
+<message_version>1</message_version>
+<start_date>2015-03-18</start_date>
+<multicast_group>EU_GROUP_2</multicast_group>
+<fields>
+<field>
+<datum_id>1</datum_id>
+<field_type>float</field_type>
+<example_value>-1.25</example_value>
+</field>
+<field>
+<datum_id>2</datum_id>
+<field_type>float</field_type>
+<example_value>-0.25</example_value>
+</field>
+</fields>
+</message>
+<message>
+<message_type>estimate</message_type>
+<message_version>1</message_version>
+<start_date>2015-03-18</start_date>
+<multicast_group>EU_GROUP_2</multicast_group>
+<fields>
+<field>
+<datum_id>1</datum_id>
+<field_type>float</field_type>
+<example_value>-1.25</example_value>
+</field>
+<field>
+<datum_id>2</datum_id>
+<field_type>float</field_type>
+<example_value>-0.25</example_value>
+</field>
+</fields>
+</message>
+</messages>
+</category>
+<category name="CH_SNB_Interest_Rates_on_Sight_Deposits_Direction">
+<description>Swiss National Bank Interest Rates on Sight Deposits.</description>
+<country>CH</country>
+<category_id>21610</category_id>
+<data>
+<datum>
+<short_description>Interest Rates on Sight Deposits Direction</short_description>
+<description>Interest Rates on Sight Deposits Direction</description>
+<datum_type>index</datum_type>
+<datum_id>1</datum_id>
+</datum>
+</data>
+<messages>
+<message>
+<message_type>release</message_type>
+<message_version>1</message_version>
+<start_date>2015-03-18</start_date>
+<multicast_group>EU_GROUP_2</multicast_group>
+<fields>
+<field>
+<datum_id>1</datum_id>
+<field_type>directional</field_type>
+<example_value>1</example_value>
+</field>
+</fields>
+</message>
+<message>
+<message_type>estimate</message_type>
+<message_version>1</message_version>
+<start_date>2015-03-18</start_date>
+<multicast_group>EU_GROUP_2</multicast_group>
+<fields>
+<field>
+<datum_id>1</datum_id>
+<field_type>directional</field_type>
+<example_value>1</example_value>
+</field>
+</fields>
+</message>
+</messages>
+</category>
+<category name="CH_SNB_Interest_Rates_on_Sight_Deposits_Rate_Level">
+<description>Swiss National Bank Interest Rates on Sight Deposits Rate Level.</description>
+<country>CH</country>
+<category_id>21612</category_id>
+<data>
+<datum>
+<short_description>Interest Rates on Sight Deposits Rate Level</short_description>
+<description>Interest Rates on Sight Deposits Rate Level</description>
+<datum_type>%</datum_type>
+<datum_id>1</datum_id>
+</datum>
+</data>
+<messages>
+<message>
+<message_type>release</message_type>
+<message_version>1</message_version>
+<start_date>2015-03-18</start_date>
+<multicast_group>EU_GROUP_2</multicast_group>
+<fields>
+<field>
+<datum_id>1</datum_id>
+<field_type>float</field_type>
+<example_value>-0.75</example_value>
+</field>
+</fields>
+</message>
+<message>
+<message_type>estimate</message_type>
+<message_version>1</message_version>
+<start_date>2015-03-18</start_date>
+<multicast_group>EU_GROUP_2</multicast_group>
+<fields>
+<field>
+<datum_id>1</datum_id>
+<field_type>float</field_type>
+<example_value>-0.75</example_value>
+</field>
+</fields>
+</message>
+</messages>
+</category>
+<category name="CH_SNB_Interest_Rates_on_Sight_Deposits_Percentage_Point_Change">
+<description>Swiss National Bank Interest Rate on Sight Deposit Percentage Point Change.</description>
+<country>CH</country>
+<category_id>21613</category_id>
+<data>
+<datum>
+<short_description>Interest Rate on Sight Deposit Percentage Point Change</short_description>
+<description>Interest Rate on Sight Deposit Percentage Point Change</description>
+<datum_type>%</datum_type>
+<datum_id>1</datum_id>
+</datum>
+</data>
+<messages>
+<message>
+<message_type>release</message_type>
+<message_version>1</message_version>
+<start_date>2015-03-18</start_date>
+<multicast_group>EU_GROUP_2</multicast_group>
+<fields>
+<field>
+<datum_id>1</datum_id>
+<field_type>float</field_type>
+<example_value>.5</example_value>
+</field>
+</fields>
+</message>
+<message>
+<message_type>estimate</message_type>
+<message_version>1</message_version>
+<start_date>2015-03-18</start_date>
+<multicast_group>EU_GROUP_2</multicast_group>
+<fields>
+<field>
+<datum_id>1</datum_id>
+<field_type>float</field_type>
+<example_value>.5</example_value>
+</field>
+</fields>
+</message>
+</messages>
+</category>
+</protocol>
