@@ -1,0 +1,18 @@
+##StreamType:   Address:        Port:   
+#Production SS B
+#0               224.0.30.255    50099
+#Simulation SS B
+#0              233.49.81.255   50199
+#
+#
+
+
+#EMDI
+#Production_A_Snap DOES NOT WORK
+#0 224.0.50.0 59098 
+#MCAST Production_B_Snap 
+0 224.0.50.128 59098 
+##MCAST Simulation_A_Snap DOES NOT WORK
+#0 224.0.50.96 59598 
+#MCAST Simulation_B_Snap 
+#0 224.0.50.224 59598 

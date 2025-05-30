@@ -1,0 +1,269 @@
+MODELINIT DEPBASE TPX_0 MidPrice OfflineMixMMS
+MODELMATH LINEAR CHANGE
+INDICATORSTART
+INDICATOR 1.00 DiffEDAvgTPxBasepx TPX_0 10
+INDICATOR 1.00 BidAskToPay TPX_0 3 2000
+INDICATOR 1.00 SimpleBook TPX_0 2 0.4
+INDICATOR 1.00 BookSizeDiff TPX_0 4 0.6
+INDICATOR 1.00 DiffTDAvgTPxBasepx TPX_0 2.0
+INDICATOR 1.00 DiffTDAvgTPxBasepx TPX_0 0.25
+INDICATOR 1.00 BidAskToPay TPX_0 4 30
+INDICATOR 1.00 OfflineComputedCutoffPairsCombo TPX_0 USALL2 5.0 OfflineMixMMS
+INDICATOR 1.00 TrendReversal TPX_0 1.00 30.00 Midprice
+INDICATOR 1.00 MultMidOrderPrice TPX_0 2 0.4
+INDICATOR 1.00 TDLvlSumTType TPX_0 10.0
+INDICATOR 1.00 ScaledTrend 6J_0 5.0 OrderWPrice
+INDICATOR 1.00 DiffTRAvgTPxBasepx TPX_0 3
+INDICATOR 1.00 MultMktOrderPrice TPX_0 4 0.8
+INDICATOR 1.00 OfflineComputedCutoffPairsCombo TPX_0 USALL2 0.5 OfflineMixMMS
+INDICATOR 1.00 OnlineComputedCutoffPairMktEvents TPX_0 6J_0 300 OfflineMixMMS
+INDICATOR 1.00 AggressivePartyPrice 6J_0 2.0
+INDICATOR 1.00 DiffTDSizeAvgTPxBasepxLvl TPX_0 5.0
+INDICATOR 1.00 DiffEDSizeAvgTPxBasepx TPX_0 1
+INDICATOR 1.00 OfflineCorradjustedCutoffPairs TPX_0 YM_0 5.0 OfflineMixMMS
+INDICATOR 1.00 OnlineComputedCutoffPairCombo TPX_0 UEOSEEQL 5.0 OfflineMixMMS
+INDICATOR 1.00 MultMktComplexOrderPrice TPX_0 6 0.5
+INDICATOR 1.00 EDSumTDiffNSizeLvl TPX_0 3
+INDICATOR 1.00 MultMktComplexPrice TPX_0 5 0.4
+INDICATOR 1.00 DiffTDSizeAvgTPxBasepx TPX_0 0.5
+INDICATOR 1.00 OrderWBPMomentumCombo UEOSEEQL 1 0.4 1.0
+INDICATOR 1.00 DiffTDAvgTPxBasepx TPX_0 0.03
+INDICATOR 1.00 ScaledTrendMktEvents 6J_0 50 OrderWPrice
+INDICATOR 1.00 TradeAdjustedSimpleTrend ES_0 2.0 0.5 OfflineMixMMS
+INDICATOR 1.00 TrendReversalCombo USALL2 0.04 3.00 OfflineMixMMS
+INDICATOR 1.00 OfflineCorradjustedCutoffPairsPort TPX_0 USALL2 5.0 OfflineMixMMS
+INDICATOR 1.00 ScaledTrendPort USALL2 5.0 OrderWPrice
+INDICATOR 1.00 ScaledTrendCombo EEQUI 5.0 OrderWPrice
+INDICATOR 1.00 ScaledTrendMktEventsCombo UEOSEEQL 100 OfflineMixMMS
+INDICATOR 1.00 DiffTDAvgTPxBasepxLvl TPX_0 30.0
+INDICATOR 1.00 OfflineComputedCutoffPairsCombo TPX_0 UOSEEQL 5.0 OfflineMixMMS
+INDICATOR 1.00 OrderWBPMomentumCombo UEOSEEQL 3 0.8 5.0
+INDICATOR 1.00 ScaledTrend YM_0 90.0 OrderWPrice
+INDICATOR 1.00 TDSumTDiffNSizeOneLvl TPX_0 30.0
+INDICATOR 1.00 OrderWBPMomentum2Combo EEQUI 2 0.5 1.0
+INDICATOR 1.00 SimpleTrendMktEventsPort USALL2 600 OfflineMixMMS
+INDICATOR 1.00 OnlineComputedCutoffPairMktEventsPort TPX_0 USALL2 600 OfflineMixMMS
+INDICATOR 1.00 SizeWDiffTDSizeAvgTPxBasepx TPX_0 10.0
+INDICATOR 1.00 OnlineComputedCutoffPairMktEvents TPX_0 6J_0 30 OfflineMixMMS
+INDICATOR 1.00 BidAskToPay TPX_0 2 100
+INDICATOR 1.00 SizeWBPMomentumCombo UEQUI 3 0.6 5.0
+INDICATOR 1.00 OfflineCorradjustedCutoffPairs TPX_0 ES_0 90.0 OfflineMixMMS
+INDICATOR 1.00 TDSumTType TPX_0 0.25
+INDICATOR 1.00 AggressivePartyPrice 6J_0 10.0
+INDICATOR 1.00 OrderWBPMomentumCombo EEQUI 2 0.8 1.0
+INDICATOR 1.00 SizeWBPMomentumCombo UEEQFX 4 0.4 0.5
+INDICATOR 1.00 OnlineComputedCutoffPairMktEventsCombo TPX_0 UEOSEEQL 200 OfflineMixMMS
+INDICATOR 1.00 OrderWBPMomentum2Combo UEOSEEQL 2 0.8 1.0
+INDICATOR 1.00 OnlineComputedCutoffPair TPX_0 6J_0 1.0 OfflineMixMMS
+INDICATOR 1.00 SimpleTrendMktEventsPort EEQUI 300 OfflineMixMMS
+INDICATOR 1.00 TRSumTDiffNSize TPX_0 600
+INDICATOR 1.00 OfflineComputedCutoffPairs TPX_0 ES_0 5.0 OfflineMixMMS
+INDICATOR 1.00 SimpleTrendMktEventsCombo USALL2 200 OfflineMixMMS
+INDICATOR 1.00 OnlineComputedCutoffPairMktEventsCombo TPX_0 EEQUI 200 OfflineMixMMS
+INDICATOR 1.00 TrendReversal 6J_0 0.10 3.00 OrderWPrice
+INDICATOR 1.00 ScaledTrend NQ_0 5.0 OrderWPrice
+INDICATOR 1.00 TrendReversalCombo UEOSEEQL 0.04 3.00 OfflineMixMMS
+INDICATOR 1.00 DiffEDAvgTPxBasepx TPX_0 200
+INDICATOR 1.00 OfflineComputedCutoffPairsCombo TPX_0 UOSEEQL 60.0 OfflineMixMMS
+INDICATOR 1.00 OfflineCorradjustedCutoffPairsCombo TPX_0 UOSEEQL 30.0 OfflineMixMMS
+INDICATOR 1.00 OnlineComputedCutoffPairMktEvents TPX_0 6J_0 600 OfflineMixMMS
+INDICATOR 1.00 DiffPairPriceType TPX_0 MktSizeWPrice OrderWPrice
+INDICATOR 1.00 OfflineCorradjustedCutoffPairs TPX_0 FDAX_0 90.0 OfflineMixMMS
+INDICATOR 1.00 OnlineComputedCutoffPairMktEventsPort TPX_0 USALL2 200 OfflineMixMMS
+INDICATOR 1.00 TradeAdjustedSimpleTrendCombo UOSEEQL 0.5 0.5 OfflineMixMMS
+INDICATOR 1.00 ScaledTrendPort FGBLFESX 2.0 OrderWPrice
+INDICATOR 1.00 StableScaledTrend 6J_0 30.0 OfflineMixMMS
+INDICATOR 1.00 OfflineComputedCutoffPairsCombo TPX_0 USALL2 30.0 OfflineMixMMS
+INDICATOR 1.00 SizeWDiffTDSizeAvgTPxBasepx TPX_0 0.1
+INDICATOR 1.00 TRSumTType TPX_0 600
+INDICATOR 1.00 SimpleTrend YM_0 5.0 OfflineMixMMS
+INDICATOR 1.00 SizeWBPMomentumCombo EEQUI 2 0.6 10.0
+INDICATOR 1.00 SecondDerivativeCombo UEOSEEQL 10.00 60.00 OfflineMixMMS
+INDICATOR 1.00 OfflineComputedCutoffPairs TPX_0 NQ_0 60.0 OfflineMixMMS
+INDICATOR 1.00 ScaledTrendMktEventsCombo UEQUI 600 OrderWPrice
+INDICATOR 1.00 TDSumTTypeTSize TPX_0 0.01
+INDICATOR 1.00 OfflineCorradjustedPairsNormalizedCombo TPX_0 EEQUI 900.0 OfflineMixMMS
+INDICATOR 1.00 TrendReversal ES_0 0.04 3.00 OfflineMixMMS
+INDICATOR 1.00 OnlineRatioPairsComboFilter TPX_0 UOSEEQL 1.0 OfflineMixMMS
+INDICATOR 1.00 OnlineRatioPairsComboFilter TPX_0 UEOSEEQL 5 OfflineMixMMS
+INDICATOR 1.00 OnlineComputedCutoffPairMktEventsPort TPX_0 UEEQFX 600 OfflineMixMMS
+INDICATOR 1.00 MultMktComplexPriceTopOffCombo UNIK 2 0.8
+INDICATOR 1.00 OfflineCorradjustedCutoffPairs TPX_0 6J_0 5.0 OfflineMixMMS
+INDICATOR 1.00 ScaledTrendMktEvents 6J_0 300 OrderWPrice
+INDICATOR 1.00 BidAskToPay TPX_0 4 5
+INDICATOR 1.00 StableScaledTrend 6J_0 0.5 OrderWPrice
+INDICATOR 1.00 SimpleTrendPort USALL2 30.0 OfflineMixMMS
+INDICATOR 1.00 OrderWBPMomentumCombo UEQUI 1 0.4 1.0
+INDICATOR 1.00 OnlineComputedNegativelyCorrelatedPairMktEvents TPX_0 6J_0 60 OfflineMixMMS
+INDICATOR 1.00 OnlineComputedCutoffPairMktEvents TPX_0 6J_0 100 OfflineMixMMS
+INDICATOR 1.00 OfflineCorradjustedCutoffPairs TPX_0 FDAX_0 30.0 OfflineMixMMS
+INDICATOR 1.00 ScaledTrendMktEventsPort UEBE2 600 OrderWPrice
+INDICATOR 1.00 AggressivePartyPrice JGB_0 10.0
+INDICATOR 1.00 OfflineComputedCutoffPairs TPX_0 ES_0 30.0 OfflineMixMMS
+INDICATOR 1.00 ScaledTrendPort UEBE2 90.0 OfflineMixMMS
+INDICATOR 1.00 SimpleTrend ES_0 90.0 OfflineMixMMS
+INDICATOR 1.00 SecondDerivativeCombo USALL2 5.00 10.00 OfflineMixMMS
+INDICATOR 1.00 ScaledTrendMktEvents YM_0 50 OrderWPrice
+INDICATOR 1.00 TDSumTDiffNSizeLvl TPX_0 0.1
+INDICATOR 1.00 SizeWBPMomentumCombo UOSEEQL 4 0.4 10.0
+INDICATOR 1.00 StableScaledTrend ES_0 2.0 OrderWPrice
+INDICATOR 1.00 ScaledTrendMktEventsPort UEQFXC 600 OrderWPrice
+INDICATOR 1.00 ScaledTrendPort UOSEEQL 90.0 OrderWPrice
+INDICATOR 1.00 TDSumTTypeTSize TPX_0 3.0
+INDICATOR 1.00 MultMktComplexPriceTopOffCombo OSENIK 2 0.4
+INDICATOR 1.00 TradeAdjustedSimpleTrend 6J_0 5.0 1.0 OfflineMixMMS
+INDICATOR 1.00 OnlineComputedCutoffPair TPX_0 6J_0 20.0 OfflineMixMMS
+INDICATOR 1.00 OnlineComputedPairsPort TPX_0 UEQFXC 90 OfflineMixMMS
+INDICATOR 1.00 OnlineComputedNegativelyCorrelatedPairs TPX_0 6J_0 5.0 OfflineMixMMS
+INDICATOR 1.00 OfflineComputedCutoffPairs TPX_0 YM_0 60.0 OfflineMixMMS
+INDICATOR 1.00 TrendStarting 6J_0 0.04 3.00 OfflineMixMMS
+INDICATOR 1.00 OfflineCorradjustedCutoffPairsCombo TPX_0 EEQUI 5.0 OfflineMixMMS
+INDICATOR 1.00 ScaledTrendMktEventsPort FGBLFESX 300 OfflineMixMMS
+INDICATOR 1.00 MultMktComplexPriceTopOff TPX_0 7 0.9
+INDICATOR 1.00 TrendReversal FESX_0 1.00 30.00 OrderWPrice
+INDICATOR 1.00 OnlineComputedCutoffPairMktEventsPort TPX_0 FGBLFESX 300 OfflineMixMMS
+INDICATOR 1.00 ScaledTrendMktEventsPort EBFUT 600 OrderWPrice
+INDICATOR 1.00 OnlineComputedCutoffPairMktEventsPort TPX_0 EEQUI 100 OfflineMixMMS
+INDICATOR 1.00 OnlineComputedPairMktEvents TPX_0 TPX_0 200 OfflineMixMMS
+INDICATOR 1.00 OnlineComputedPair TPX_0 TPX_0 10.0 OfflineMixMMS
+INDICATOR 1.00 OnlineComputedCutoffPair TPX_0 6J_0 5.0 OfflineMixMMS
+INDICATOR 1.00 OfflineComputedCutoffPairsPort TPX_0 UEEQFX 120.0 OfflineMixMMS
+INDICATOR 1.00 OnlineComputedCutoffPair TPX_0 NQ_0 20.0 OfflineMixMMS
+INDICATOR 1.00 OnlineComputedCutoffPairMktEvents TPX_0 FDAX_0 600 OfflineMixMMS
+INDICATOR 1.00 ScaledTrend FDAX_0 30.0 OrderWPrice
+INDICATOR 1.00 OfflineComputedCutoffPairsCombo TPX_0 UEQFXC 900.0 OfflineMixMMS
+INDICATOR 1.00 SimpleTrendMktEventsPort UOSEEQL 200 OfflineMixMMS
+INDICATOR 1.00 ScaledTrendMktEvents JGB_0 50 OrderWPrice
+INDICATOR 1.00 OfflineCorradjustedCutoffPairsCombo TPX_0 UEQFXC 90.0 OfflineMixMMS
+INDICATOR 1.00 OfflineCorradjustedCutoffPairsPort TPX_0 UEQFXC 5.0 OfflineMixMMS
+INDICATOR 1.00 OnlineComputedCutoffPairMktEventsPort TPX_0 ZN_FL_ZB 600 OfflineMixMMS
+INDICATOR 1.00 OnlineComputedCutoffPairMktEventsPort TPX_0 FGBLFESX 600 OfflineMixMMS
+INDICATOR 1.00 OfflineVolumeCorradjustedPairs TPX_0 ES_0 5.0 OfflineMixMMS
+INDICATOR 1.00 TradeAdjustedSimpleTrend FDAX_0 90.0 1.0 OfflineMixMMS
+INDICATOR 1.00 OnlineComputedCutoffPairMktEventsPort TPX_0 EXALL 300 OfflineMixMMS
+INDICATOR 1.00 SizeWBPMomentumCombo UOSEEQL 3 0.6 2.0
+INDICATOR 1.00 OfflineCorradjustedCutoffPairsCombo TPX_0 UEOSEEQL 300.0 OfflineMixMMS
+INDICATOR 1.00 OnlineComputedCutoffPairCombo TPX_0 UEBFUT 5.0 OfflineMixMMS
+INDICATOR 1.00 OnlineComputedCutoffPairMktEventsCombo TPX_0 UEBFUT 600 OfflineMixMMS
+INDICATOR 1.00 OrderWBPMomentum2Combo UEEQFX 2 0.8 5.0
+INDICATOR 1.00 TradeAdjustedSimpleTrendCombo UEQUI 0.5 0.5 OfflineMixMMS
+INDICATOR 1.00 OnlineComputedCutoffPairMktEventsCombo TPX_0 EBFUT 100 OfflineMixMMS
+INDICATOR 1.00 StableScaledTrend JGB_0 30.0 OfflineMixMMS
+INDICATOR 1.00 ScaledTrendMktEvents FESX_0 50 OfflineMixMMS
+INDICATOR 1.00 ScaledTrend JGB_0 5.0 OrderWPrice
+INDICATOR 1.00 DiffTRAvgTPxBasepx TPX_0 300
+INDICATOR 1.00 OnlineComputedCutoffPairMktEvents TPX_0 YM_0 100 OfflineMixMMS
+INDICATOR 1.00 OfflineVolumeCorradjustedPairsCombo TPX_0 UOSEEQL 120.0 OfflineMixMMS
+INDICATOR 1.00 ScaledTrend NQ_0 30.0 OfflineMixMMS
+INDICATOR 1.00 DiffTDSizeAvgTPxBasepxLvl TPX_0 0.1
+INDICATOR 1.00 ScaledTrendMktEvents JGB_0 300 OrderWPrice
+INDICATOR 1.00 OfflineLowCorrelationPairsPort TPX_0 UOSENIK 30.0 OfflineMixMMS
+INDICATOR 1.00 StableScaledTrend 6J_0 5.0 OrderWPrice
+INDICATOR 1.00 OfflineCorradjustedCutoffPairsPort TPX_0 UOSENIK 90.0 OfflineMixMMS
+INDICATOR 1.00 OnlineComputedPairPort TPX_0 UEQFXC 5.0 OfflineMixMMS
+INDICATOR 1.00 OfflineComputedCutoffPairs TPX_0 TPX_0 120.0 OfflineMixMMS
+INDICATOR 1.00 OfflineComputedCutoffPairs TPX_0 FDAX_0 900.0 OfflineMixMMS
+INDICATOR 1.00 TDSumTTypeSqrtTSize TPX_0 0.01
+INDICATOR 1.00 StableScaledTrendCombo UOSEEQL 2.0 OrderWPrice
+INDICATOR 1.00 EDSumTDiffSqrtFSqrtSize TPX_0 1
+INDICATOR 1.00 OnlineComputedCutoffPair TPX_0 TPX_0 20.0 OfflineMixMMS
+INDICATOR 1.00 AggressivePartyPrice TPX_0 0.02
+INDICATOR 1.00 OnlineComputedCutoffPairMktEventsCombo TPX_0 EBFUT 600 OfflineMixMMS
+INDICATOR 1.00 OfflineComputedPairsPort TPX_0 UOSENIK 120.0 OfflineMixMMS
+INDICATOR 1.00 SizeWBPMomentumCombo UEOSEEQL 3 0.6 10.0
+INDICATOR 1.00 OnlineComputedCutoffPairMktEvents TPX_0 ES_0 300 OfflineMixMMS
+INDICATOR 1.00 OfflineCorradjustedCutoffPairsPort TPX_0 EXALL 5.0 OfflineMixMMS
+INDICATOR 1.00 StableScaledTrend NQ_0 2.0 OfflineMixMMS
+INDICATOR 1.00 OfflineComputedCutoffPairsPort TPX_0 EXALL 60.0 OfflineMixMMS
+INDICATOR 1.00 OfflineComputedCutoffPairsPort TPX_0 UNIK 120.0 OfflineMixMMS
+INDICATOR 1.00 AggressivePartyPrice ES_0 10.0
+INDICATOR 1.00 OnlineComputedCutoffPairMktEventsPort TPX_0 UEBE2 600 OfflineMixMMS
+INDICATOR 1.00 ScaledTrendMktEventsCombo EEQUI 25 OrderWPrice
+INDICATOR 1.00 OnlineComputedCutoffPair TPX_0 TPX_0 5.0 OfflineMixMMS
+INDICATOR 1.00 OrderWBPMomentum2Combo ZN_ZB 1 0.4 5.0
+INDICATOR 1.00 OfflineCorradjustedCutoffPairs TPX_0 FDAX_0 300.0 OfflineMixMMS
+INDICATOR 1.00 OfflineComputedCutoffPairsCombo TPX_0 USALL2 900.0 OfflineMixMMS
+INDICATOR 1.00 OfflineComputedCutoffPairsCombo TPX_0 USALL2 60.0 OfflineMixMMS
+INDICATOR 1.00 TDSumTTypeTSize TPX_0 0.5
+INDICATOR 1.00 OnlineComputedCutoffPairMktEventsCombo TPX_0 UEBFUT 30 OfflineMixMMS
+INDICATOR 1.00 OnlineComputedCutoffPairMktEvents TPX_0 JGB_0 100 OfflineMixMMS
+INDICATOR 1.00 OfflineComputedCutoffPairs TPX_0 FGBM_0 900.0 OfflineMixMMS
+INDICATOR 1.00 OfflineComputedCutoffPairsCombo TPX_0 UEOSEEQL 900.0 OfflineMixMMS
+INDICATOR 1.00 OnlineComputedCutoffPairMktEventsPort TPX_0 EXALL 100 OfflineMixMMS
+INDICATOR 1.00 OfflineLowCorrelationPairsPort TPX_0 EEQUI 300.0 OfflineMixMMS
+INDICATOR 1.00 OnlineComputedCutoffPairMktEventsCombo TPX_0 UOSEEQL 600 OfflineMixMMS
+INDICATOR 1.00 TRSumTDiffTSize TPX_0 600
+INDICATOR 1.00 OnlineComputedCutoffPairMktEventsCombo TPX_0 EBFUT 300 OfflineMixMMS
+INDICATOR 1.00 OnlineComputedCutoffPairMktEvents TPX_0 FGBM_0 100 OfflineMixMMS
+INDICATOR 1.00 OnlineComputedCutoffPairMktEvents TPX_0 TPX_0 600 OfflineMixMMS
+INDICATOR 1.00 ScaledTrendMktEvents FESX_0 600 OfflineMixMMS
+INDICATOR 1.00 OfflineCorradjustedCutoffPairs TPX_0 6J_0 30.0 OfflineMixMMS
+INDICATOR 1.00 OfflineVolumeCorradjustedPairs TPX_0 6J_0 30.0 OfflineMixMMS
+INDICATOR 1.00 OfflineComputedCutoffPairsPort TPX_0 UEEQFX 60.0 OfflineMixMMS
+INDICATOR 1.00 TradeAdjustedSimpleTrendCombo ZN_ZB 5.0 1.0 OfflineMixMMS
+INDICATOR 1.00 ScaledTrendCombo UEEQFX 90.0 OrderWPrice
+INDICATOR 1.00 OfflineCorradjustedCutoffPairsPort TPX_0 UNIK 300.0 OfflineMixMMS
+INDICATOR 1.00 OnlineComputedCutoffPair TPX_0 FGBM_0 40.0 OfflineMixMMS
+INDICATOR 1.00 ScaledTrendMktEventsPort EBFUT 100 OrderWPrice
+INDICATOR 1.00 AggressivePartyPrice FGBM_0 10.0
+INDICATOR 1.00 OfflineCorradjustedCutoffPairsCombo TPX_0 UEQFXC 30.0 OfflineMixMMS
+INDICATOR 1.00 OnlineRatioPairsComboFilter TPX_0 UOSEEQL 30 OfflineMixMMS
+INDICATOR 1.00 OnlineRatioPairsMktEventsCombo TPX_0 UEOSEEQL 300 OfflineMixMMS
+INDICATOR 1.00 OfflineVolumeCorradjustedPairs TPX_0 ES_0 300.0 OfflineMixMMS
+INDICATOR 1.00 ScaledTrendMktEventsCombo UEEQFX 100 OrderWPrice
+INDICATOR 1.00 OfflineComputedCutoffPairsPort TPX_0 EXALL 5.0 OfflineMixMMS
+INDICATOR 1.00 ScaledTrendMktEvents TPX_0 600 OrderWPrice
+INDICATOR 1.00 TrendReversalCombo EBFUT 2.00 30.00 OfflineMixMMS
+INDICATOR 1.00 OfflineVolumeCorradjustedPairs TPX_0 NK_0 120.0 OfflineMixMMS
+INDICATOR 1.00 TrendReversalCombo UEEQFX 0.10 3.00 OfflineMixMMS
+INDICATOR 1.00 OnlineComputedCutoffPair TPX_0 NK_0 40.0 OfflineMixMMS
+INDICATOR 1.00 OnlineComputedCutoffPairMktEventsPort TPX_0 UEOSEEQL 600 OfflineMixMMS
+INDICATOR 1.00 OfflineComputedCutoffPairs TPX_0 NQ_0 5.0 OfflineMixMMS
+INDICATOR 1.00 OfflineLowCorrelationPairsPort TPX_0 EXALL 90.0 OfflineMixMMS
+INDICATOR 1.00 OnlineComputedCutoffPair TPX_0 FESX_0 20.0 OfflineMixMMS
+INDICATOR 1.00 OfflineComputedCutoffPairsPort TPX_0 OSENIK 120.0 OfflineMixMMS
+INDICATOR 1.00 OfflineComputedCutoffPairsPort TPX_0 UNIK 360.0 OfflineMixMMS
+INDICATOR 1.00 AggressivePartyPrice FGBM_0 2.0
+INDICATOR 1.00 OnlineComputedCutoffPairCombo TPX_0 ZN_FL_ZB 40.0 OfflineMixMMS
+INDICATOR 1.00 TDSumTDiffFSizeOneLvl TPX_0 2.0
+INDICATOR 1.00 OnlineComputedCutoffPairMktEvents TPX_0 FGBM_0 300 OfflineMixMMS
+INDICATOR 1.00 OfflineCorradjustedCutoffPairs TPX_0 FGBM_0 300.0 OfflineMixMMS
+INDICATOR 1.00 TRSumTType TPX_0 3
+INDICATOR 1.00 OnlineComputedCutoffPairMktEventsPort TPX_0 EBFUT 300 OfflineMixMMS
+INDICATOR 1.00 OfflineComputedCutoffPairsCombo TPX_0 UEBFUT 30.0 OfflineMixMMS
+INDICATOR 1.00 OnlineComputedCutoffPairMktEventsPort TPX_0 UEBE2 300 OfflineMixMMS
+INDICATOR 1.00 OfflineCorradjustedCutoffPairsCombo TPX_0 EBFUT 90.0 OfflineMixMMS
+INDICATOR 1.00 OfflineComputedCutoffPairsPort TPX_0 UEBE2 900.0 OfflineMixMMS
+INDICATOR 1.00 TRSumTDiffSqrtTSize TPX_0 200
+INDICATOR 1.00 OfflineComputedCutoffPairs TPX_0 FGBM_0 120.0 OfflineMixMMS
+INDICATOR 1.00 OnlineComputedPairsMktEventsPort TPX_0 UEQFXC 600 OfflineMixMMS
+INDICATOR 1.00 MultMktComplexPriceTopOffCombo UEEQFX 5 0.8
+INDICATOR 1.00 AggressivePartyPrice JGB_0 0.5
+INDICATOR 1.00 OfflineCorradjustedCutoffPairsPort TPX_0 COMFXC 300.0 OfflineMixMMS
+INDICATOR 1.00 OfflineComputedCutoffPairsPort TPX_0 EXALL 30.0 OfflineMixMMS
+INDICATOR 1.00 OfflineComputedCutoffPairsCombo TPX_0 UEOSEEQL 120.0 OfflineMixMMS
+INDICATOR 1.00 OfflineCorradjustedCutoffPairsPort TPX_0 UOSENIK 300.0 OfflineMixMMS
+INDICATOR 1.00 OfflineComputedCutoffPairs TPX_0 FESX_0 120.0 OfflineMixMMS
+INDICATOR 1.00 TradeAdjustedSimpleTrend 6J_0 2.0 0.2 OfflineMixMMS
+INDICATOR 1.00 TradeAdjustedSimpleTrendCombo UOSENIK 0.01 0.01 OfflineMixMMS
+INDICATOR 1.00 OrderWBPMomentum2Combo EBFUT 4 0.8 5.0
+INDICATOR 1.00 SimpleTrendMktEvents 6J_0 10 OfflineMixMMS
+INDICATOR 1.00 TradeAdjustedSimpleTrend NK_0 90.0 1.0 OfflineMixMMS
+INDICATOR 1.00 OnlineComputedCutoffPairCombo TPX_0 OSENIK 20.0 OfflineMixMMS
+INDICATOR 1.00 TrendStartingCombo USALL2 0.04 3.00 OrderWPrice
+INDICATOR 1.00 OfflineCorradjustedCutoffPairs TPX_0 JGB_0 300.0 OfflineMixMMS
+INDICATOR 1.00 OfflineComputedCutoffPairsPort TPX_0 EBFUT 60.0 OfflineMixMMS
+INDICATOR 1.00 ScaledTrendMktEvents ZN_0 50 OrderWPrice
+INDICATOR 1.00 OfflineCorradjustedPairsMktEvents TPX_0 TPX_0 2400 OfflineMixMMS
+INDICATOR 1.00 MultMktComplexPriceTopOffCombo UNIK 7 0.7
+INDICATOR 1.00 OfflineComputedCutoffPairsPort TPX_0 UEQFXC 900.0 OfflineMixMMS
+INDICATOR 1.00 MultMktComplexPriceTopOffCombo EEQUI 6 0.7
+INDICATOR 1.00 MultMktComplexPriceTopOffCombo ZN_ZB 5 0.4
+INDICATOR 1.00 OnlineComputedCutoffPairMktEventsPort TPX_0 EXALL 200 OfflineMixMMS
+INDICATOR 1.00 OfflineVolumeCorradjustedPairs TPX_0 JGB_0 30.0 OfflineMixMMS
+INDICATOR 1.00 ScaledTrend NK_0 30.0 OrderWPrice
+INDICATOR 1.00 OfflineComputedCutoffPairsPort TPX_0 FGBLFESX 120.0 OfflineMixMMS
+INDICATOR 1.00 MultMktComplexPriceTopOffCombo ZN_FL_ZB 2 0.6
+INDICATOR 1.00 OfflineComputedCutoffPairs TPX_0 YM_0 360.0 OfflineMixMMS
+INDICATOR 1.00 ScaledTrendMktEvents TPX_0 300 OrderWPrice
+INDICATOREND

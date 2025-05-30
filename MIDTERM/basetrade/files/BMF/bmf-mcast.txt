@@ -1,0 +1,25 @@
+## equity channels
+##Product:	StreamType:	StreamService:	Address:	Port:	Comments:
+1	Snapshot	A	233.111.180.25	30050	#Cash markets - Symbols A-J
+2	Snapshot	A	233.111.180.27	30051	#Cash markets - Symbols K-T
+3	Snapshot	A	233.111.180.29	30052	#Cash markets - Symbols U-Z
+4	Snapshot	A	233.111.180.35	30055	#Stock Indexes and ETFs
+#5	Snapshot	A	233.111.180.37	30056	#Options markets - Symbols A-J
+#6	Snapshot	A	233.111.180.39	30057	#Options markets - Symbols K-T
+#7	Snapshot	A	233.111.180.41	30058	#Options markets - Symbols U-Z
+					
+1	Increment	A	233.111.180.26	20050	#Cash markets - Symbols A-J
+2	Increment	A	233.111.180.28	20051	#Cash markets - Symbols K-T
+3	Increment	A	233.111.180.30	20052	#Cash markets - Symbols U-Z
+4	Increment	A	233.111.180.36	20055	#Stock Indexes and ETFs
+#5	Increment	A	233.111.180.38	20056	#Options markets - Symbols A-J
+#6	Increment	A	233.111.180.40	20057	#Options markets - Symbols K-T
+#7	Increment	A	233.111.180.42	20058	#Options markets - Symbols U-Z
+					
+1	Reference	A	233.111.180.25	10050	#Cash markets - Symbols A-J
+2	Reference	A	233.111.180.27	10051	#Cash markets - Symbols K-T
+3	Reference	A	233.111.180.29	10052	#Cash markets - Symbols U-Z
+4	Reference	A	233.111.180.35	10055	#Stock Indexes and ETFs
+#5	Reference	A	233.111.180.37	10056	#Options markets - Symbols A-J
+#6	Reference	A	233.111.180.39	10057	#Options markets - Symbols K-T
+#7	Reference	A	233.111.180.41	10058	#Options markets - Symbols U-Z

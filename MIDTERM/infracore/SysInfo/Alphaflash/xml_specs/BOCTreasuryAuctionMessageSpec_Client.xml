@@ -1,0 +1,1580 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<?xml-stylesheet type="text/xsl" href="./ClientHTML.xsl"?><protocol>
+<version>351</version>
+<revisions>
+    <revision type="Final" version="351" author="MNI News" date="03/13/2017"/>
+  </revisions>
+<category name="BOC_Note_02_Year_Treasury_Auction_Result">
+<description>BOC Treasury Auction Result For 2 Year Note</description>
+<country>CA</country>
+<category_id>600</category_id>
+<data>
+<datum>
+<short_description>High Yield</short_description>
+<description>High Yield</description>
+<datum_type>%</datum_type>
+<datum_id>1</datum_id>
+</datum>
+<datum>
+<short_description>High Price</short_description>
+<description>High Price</description>
+<datum_type>CAD</datum_type>
+<datum_id>2</datum_id>
+</datum>
+<datum>
+<short_description>Allotment Ratio</short_description>
+<description>Allotment Ratio</description>
+<datum_type>%</datum_type>
+<datum_id>3</datum_id>
+</datum>
+<datum>
+<short_description>Value Bids Total</short_description>
+<description>Value Bids Total</description>
+<datum_type>CAD</datum_type>
+<datum_id>4</datum_id>
+</datum>
+<datum>
+<short_description>Value Bids Non-competitive</short_description>
+<description>Value Bids Non-competitive</description>
+<datum_type>CAD</datum_type>
+<datum_id>5</datum_id>
+</datum>
+</data>
+<messages>
+<message>
+<message_type>release</message_type>
+<message_version>1</message_version>
+<multicast_group>CA_GROUP_2</multicast_group>
+<fields>
+<field>
+<datum_id>1</datum_id>
+<field_type>float</field_type>
+<example_value>1.003</example_value>
+</field>
+<field>
+<datum_id>2</datum_id>
+<field_type>float</field_type>
+<example_value>99.73142</example_value>
+</field>
+<field>
+<datum_id>3</datum_id>
+<field_type>float</field_type>
+<example_value>10.59535</example_value>
+</field>
+<field>
+<datum_id>4</datum_id>
+<field_type>float</field_type>
+<example_value>13751100000</example_value>
+</field>
+<field>
+<datum_id>5</datum_id>
+<field_type>float</field_type>
+<example_value>11100000</example_value>
+</field>
+</fields>
+</message>
+</messages>
+</category>
+<category name="BOC_Note_03_Year_Treasury_Auction_Result">
+<description>BOC Treasury Auction Result For 3 Year Note</description>
+<country>CA</country>
+<category_id>601</category_id>
+<data>
+<datum>
+<short_description>High Yield</short_description>
+<description>High Yield</description>
+<datum_type>%</datum_type>
+<datum_id>1</datum_id>
+</datum>
+<datum>
+<short_description>High Price</short_description>
+<description>High Price</description>
+<datum_type>CAD</datum_type>
+<datum_id>2</datum_id>
+</datum>
+<datum>
+<short_description>Allotment Ratio</short_description>
+<description>Allotment Ratio</description>
+<datum_type>%</datum_type>
+<datum_id>3</datum_id>
+</datum>
+<datum>
+<short_description>Value Bids Total</short_description>
+<description>Value Bids Total</description>
+<datum_type>CAD</datum_type>
+<datum_id>4</datum_id>
+</datum>
+<datum>
+<short_description>Value Bids Non-competitive</short_description>
+<description>Value Bids Non-competitive</description>
+<datum_type>CAD</datum_type>
+<datum_id>5</datum_id>
+</datum>
+</data>
+<messages>
+<message>
+<message_type>release</message_type>
+<message_version>1</message_version>
+<multicast_group>CA_GROUP_2</multicast_group>
+<fields>
+<field>
+<datum_id>1</datum_id>
+<field_type>float</field_type>
+<example_value>1.003</example_value>
+</field>
+<field>
+<datum_id>2</datum_id>
+<field_type>float</field_type>
+<example_value>99.73142</example_value>
+</field>
+<field>
+<datum_id>3</datum_id>
+<field_type>float</field_type>
+<example_value>10.59535</example_value>
+</field>
+<field>
+<datum_id>4</datum_id>
+<field_type>float</field_type>
+<example_value>13751100000</example_value>
+</field>
+<field>
+<datum_id>5</datum_id>
+<field_type>float</field_type>
+<example_value>11100000</example_value>
+</field>
+</fields>
+</message>
+</messages>
+</category>
+<category name="BOC_Note_05_Year_Treasury_Auction_Result">
+<description>BOC Treasury Auction Result For 5 Year Note</description>
+<country>CA</country>
+<category_id>602</category_id>
+<data>
+<datum>
+<short_description>High Yield</short_description>
+<description>High Yield</description>
+<datum_type>%</datum_type>
+<datum_id>1</datum_id>
+</datum>
+<datum>
+<short_description>High Price</short_description>
+<description>High Price</description>
+<datum_type>CAD</datum_type>
+<datum_id>2</datum_id>
+</datum>
+<datum>
+<short_description>Allotment Ratio</short_description>
+<description>Allotment Ratio</description>
+<datum_type>%</datum_type>
+<datum_id>3</datum_id>
+</datum>
+<datum>
+<short_description>Value Bids Total</short_description>
+<description>Value Bids Total</description>
+<datum_type>CAD</datum_type>
+<datum_id>4</datum_id>
+</datum>
+<datum>
+<short_description>Value Bids Non-competitive</short_description>
+<description>Value Bids Non-competitive</description>
+<datum_type>CAD</datum_type>
+<datum_id>5</datum_id>
+</datum>
+</data>
+<messages>
+<message>
+<message_type>release</message_type>
+<message_version>1</message_version>
+<multicast_group>CA_GROUP_2</multicast_group>
+<fields>
+<field>
+<datum_id>1</datum_id>
+<field_type>float</field_type>
+<example_value>1.003</example_value>
+</field>
+<field>
+<datum_id>2</datum_id>
+<field_type>float</field_type>
+<example_value>99.73142</example_value>
+</field>
+<field>
+<datum_id>3</datum_id>
+<field_type>float</field_type>
+<example_value>10.59535</example_value>
+</field>
+<field>
+<datum_id>4</datum_id>
+<field_type>float</field_type>
+<example_value>13751100000</example_value>
+</field>
+<field>
+<datum_id>5</datum_id>
+<field_type>float</field_type>
+<example_value>11100000</example_value>
+</field>
+</fields>
+</message>
+</messages>
+</category>
+<category name="BOC_Note_10_Year_Treasury_Auction_Result">
+<description>BOC Treasury Auction Result For 10 Year Note</description>
+<country>CA</country>
+<category_id>604</category_id>
+<data>
+<datum>
+<short_description>High Yield</short_description>
+<description>High Yield</description>
+<datum_type>%</datum_type>
+<datum_id>1</datum_id>
+</datum>
+<datum>
+<short_description>High Price</short_description>
+<description>High Price</description>
+<datum_type>CAD</datum_type>
+<datum_id>2</datum_id>
+</datum>
+<datum>
+<short_description>Allotment Ratio</short_description>
+<description>Allotment Ratio</description>
+<datum_type>%</datum_type>
+<datum_id>3</datum_id>
+</datum>
+<datum>
+<short_description>Value Bids Total</short_description>
+<description>Value Bids Total</description>
+<datum_type>CAD</datum_type>
+<datum_id>4</datum_id>
+</datum>
+<datum>
+<short_description>Value Bids Non-competitive</short_description>
+<description>Value Bids Non-competitive</description>
+<datum_type>CAD</datum_type>
+<datum_id>5</datum_id>
+</datum>
+</data>
+<messages>
+<message>
+<message_type>release</message_type>
+<message_version>1</message_version>
+<multicast_group>CA_GROUP_2</multicast_group>
+<fields>
+<field>
+<datum_id>1</datum_id>
+<field_type>float</field_type>
+<example_value>1.003</example_value>
+</field>
+<field>
+<datum_id>2</datum_id>
+<field_type>float</field_type>
+<example_value>99.73142</example_value>
+</field>
+<field>
+<datum_id>3</datum_id>
+<field_type>float</field_type>
+<example_value>10.59535</example_value>
+</field>
+<field>
+<datum_id>4</datum_id>
+<field_type>float</field_type>
+<example_value>13751100000</example_value>
+</field>
+<field>
+<datum_id>5</datum_id>
+<field_type>float</field_type>
+<example_value>11100000</example_value>
+</field>
+</fields>
+</message>
+</messages>
+</category>
+<category name="BOC_Note_30_Year_Treasury_Auction_Result">
+<description>BOC Treasury Auction Result For 30 Year Note</description>
+<country>CA</country>
+<category_id>605</category_id>
+<data>
+<datum>
+<short_description>High Yield</short_description>
+<description>High Yield</description>
+<datum_type>%</datum_type>
+<datum_id>1</datum_id>
+</datum>
+<datum>
+<short_description>High Price</short_description>
+<description>High Price</description>
+<datum_type>CAD</datum_type>
+<datum_id>2</datum_id>
+</datum>
+<datum>
+<short_description>Allotment Ratio</short_description>
+<description>Allotment Ratio</description>
+<datum_type>%</datum_type>
+<datum_id>3</datum_id>
+</datum>
+<datum>
+<short_description>Value Bids Total</short_description>
+<description>Value Bids Total</description>
+<datum_type>CAD</datum_type>
+<datum_id>4</datum_id>
+</datum>
+<datum>
+<short_description>Value Bids Non-competitive</short_description>
+<description>Value Bids Non-competitive</description>
+<datum_type>CAD</datum_type>
+<datum_id>5</datum_id>
+</datum>
+</data>
+<messages>
+<message>
+<message_type>release</message_type>
+<message_version>1</message_version>
+<multicast_group>CA_GROUP_2</multicast_group>
+<fields>
+<field>
+<datum_id>1</datum_id>
+<field_type>float</field_type>
+<example_value>1.003</example_value>
+</field>
+<field>
+<datum_id>2</datum_id>
+<field_type>float</field_type>
+<example_value>99.73142</example_value>
+</field>
+<field>
+<datum_id>3</datum_id>
+<field_type>float</field_type>
+<example_value>10.59535</example_value>
+</field>
+<field>
+<datum_id>4</datum_id>
+<field_type>float</field_type>
+<example_value>13751100000</example_value>
+</field>
+<field>
+<datum_id>5</datum_id>
+<field_type>float</field_type>
+<example_value>11100000</example_value>
+</field>
+</fields>
+</message>
+</messages>
+</category>
+<category name="BOC_Note_Cash_Management_Treasury_Auction_Results">
+<description>BOC Treasury Auction Results For Cash Management Note</description>
+<country>CA</country>
+<category_id>606</category_id>
+<data>
+<datum>
+<short_description>Settlement</short_description>
+<description>Settlement</description>
+<datum_type>date</datum_type>
+<datum_id>1</datum_id>
+</datum>
+<datum>
+<short_description>Maturity</short_description>
+<description>Maturity</description>
+<datum_type>date</datum_type>
+<datum_id>2</datum_id>
+</datum>
+<datum>
+<short_description>Coupon</short_description>
+<description>Coupon</description>
+<datum_type>%</datum_type>
+<datum_id>3</datum_id>
+</datum>
+<datum>
+<short_description>Amount Repurchased</short_description>
+<description>Amount Repurchased</description>
+<datum_type>CAD</datum_type>
+<datum_id>4</datum_id>
+</datum>
+<datum>
+<short_description>Cutoff Yield</short_description>
+<description>Cutoff Yield</description>
+<datum_type>%</datum_type>
+<datum_id>5</datum_id>
+</datum>
+<datum>
+<short_description>Allotment Ratio</short_description>
+<description>Allotment Ratio</description>
+<datum_type>%</datum_type>
+<datum_id>6</datum_id>
+</datum>
+</data>
+<messages>
+<message>
+<message_type>release</message_type>
+<message_version>1</message_version>
+<multicast_group>CA_GROUP_2</multicast_group>
+<fields>
+<field>
+<datum_id>1</datum_id>
+<field_type>date</field_type>
+<example_value>2011-01-27</example_value>
+</field>
+<field>
+<datum_id>2</datum_id>
+<field_type>date</field_type>
+<example_value>2011-06-01</example_value>
+</field>
+<field>
+<datum_id>3</datum_id>
+<field_type>float</field_type>
+<example_value>1.250</example_value>
+</field>
+<field>
+<datum_id>4</datum_id>
+<field_type>float</field_type>
+<example_value>5072260000</example_value>
+</field>
+<field>
+<datum_id>5</datum_id>
+<field_type>float</field_type>
+<example_value>1.087</example_value>
+</field>
+<field>
+<datum_id>6</datum_id>
+<field_type>float</field_type>
+<example_value>100.000</example_value>
+</field>
+</fields>
+</message>
+</messages>
+</category>
+<category name="BOC_Note_Real_Return_Treasury_Auction_Result">
+<description>BOC Treasury Auction Result For Bond Real Return</description>
+<country>CA</country>
+<category_id>607</category_id>
+<data>
+<datum>
+<short_description>High Yield</short_description>
+<description>High Yield</description>
+<datum_type>%</datum_type>
+<datum_id>1</datum_id>
+</datum>
+<datum>
+<short_description>High Price</short_description>
+<description>High Price</description>
+<datum_type>CAD</datum_type>
+<datum_id>2</datum_id>
+</datum>
+<datum>
+<short_description>Allotment Ratio</short_description>
+<description>Allotment Ratio</description>
+<datum_type>%</datum_type>
+<datum_id>3</datum_id>
+</datum>
+<datum>
+<short_description>Value Bids Total</short_description>
+<description>Value Bids Total</description>
+<datum_type>CAD</datum_type>
+<datum_id>4</datum_id>
+</datum>
+<datum>
+<short_description>Value Bids Non-competitive</short_description>
+<description>Value Bids Non-competitive</description>
+<datum_type>CAD</datum_type>
+<datum_id>5</datum_id>
+</datum>
+</data>
+<messages>
+<message>
+<message_type>release</message_type>
+<message_version>1</message_version>
+<multicast_group>CA_GROUP_2</multicast_group>
+<fields>
+<field>
+<datum_id>1</datum_id>
+<field_type>float</field_type>
+<example_value>1.003</example_value>
+</field>
+<field>
+<datum_id>2</datum_id>
+<field_type>float</field_type>
+<example_value>99.73142</example_value>
+</field>
+<field>
+<datum_id>3</datum_id>
+<field_type>float</field_type>
+<example_value>10.59535</example_value>
+</field>
+<field>
+<datum_id>4</datum_id>
+<field_type>float</field_type>
+<example_value>13751100000</example_value>
+</field>
+<field>
+<datum_id>5</datum_id>
+<field_type>float</field_type>
+<example_value>11100000</example_value>
+</field>
+</fields>
+</message>
+</messages>
+</category>
+<category name="BOC_Bill_13_Week_Treasury_Auction_Result">
+<description>BOC Treasury Auction Result for 13 Week Bill</description>
+<country>CA</country>
+<category_id>651</category_id>
+<data>
+<datum>
+<short_description>High Yield</short_description>
+<description>High Yield</description>
+<datum_type>%</datum_type>
+<datum_id>1</datum_id>
+</datum>
+<datum>
+<short_description>High Price</short_description>
+<description>High Price</description>
+<datum_type>CAD</datum_type>
+<datum_id>2</datum_id>
+</datum>
+<datum>
+<short_description>Allotment Ratio</short_description>
+<description>Allotment Ratio</description>
+<datum_type>%</datum_type>
+<datum_id>3</datum_id>
+</datum>
+<datum>
+<short_description>Value Bids Total</short_description>
+<description>Value Bids Total</description>
+<datum_type>CAD</datum_type>
+<datum_id>4</datum_id>
+</datum>
+<datum>
+<short_description>Value Bids Non-competitive</short_description>
+<description>Value Bids Non-competitive</description>
+<datum_type>CAD</datum_type>
+<datum_id>5</datum_id>
+</datum>
+</data>
+<messages>
+<message>
+<message_type>release</message_type>
+<message_version>1</message_version>
+<multicast_group>CA_GROUP_2</multicast_group>
+<fields>
+<field>
+<datum_id>1</datum_id>
+<field_type>float</field_type>
+<example_value>1.003</example_value>
+</field>
+<field>
+<datum_id>2</datum_id>
+<field_type>float</field_type>
+<example_value>99.73142</example_value>
+</field>
+<field>
+<datum_id>3</datum_id>
+<field_type>float</field_type>
+<example_value>10.59535</example_value>
+</field>
+<field>
+<datum_id>4</datum_id>
+<field_type>float</field_type>
+<example_value>13751100000</example_value>
+</field>
+<field>
+<datum_id>5</datum_id>
+<field_type>float</field_type>
+<example_value>11100000</example_value>
+</field>
+</fields>
+</message>
+</messages>
+</category>
+<category name="BOC_Bill_26_Week_Treasury_Auction_Result">
+<description>BOC Treasury Auction Result for 26 Week Bill</description>
+<country>CA</country>
+<category_id>652</category_id>
+<data>
+<datum>
+<short_description>High Yield</short_description>
+<description>High Yield</description>
+<datum_type>%</datum_type>
+<datum_id>1</datum_id>
+</datum>
+<datum>
+<short_description>High Price</short_description>
+<description>High Price</description>
+<datum_type>CAD</datum_type>
+<datum_id>2</datum_id>
+</datum>
+<datum>
+<short_description>Allotment Ratio</short_description>
+<description>Allotment Ratio</description>
+<datum_type>%</datum_type>
+<datum_id>3</datum_id>
+</datum>
+<datum>
+<short_description>Value Bids Total</short_description>
+<description>Value Bids Total</description>
+<datum_type>CAD</datum_type>
+<datum_id>4</datum_id>
+</datum>
+<datum>
+<short_description>Value Bids Non-competitive</short_description>
+<description>Value Bids Non-competitive</description>
+<datum_type>CAD</datum_type>
+<datum_id>5</datum_id>
+</datum>
+</data>
+<messages>
+<message>
+<message_type>release</message_type>
+<message_version>1</message_version>
+<multicast_group>CA_GROUP_2</multicast_group>
+<fields>
+<field>
+<datum_id>1</datum_id>
+<field_type>float</field_type>
+<example_value>1.003</example_value>
+</field>
+<field>
+<datum_id>2</datum_id>
+<field_type>float</field_type>
+<example_value>99.73142</example_value>
+</field>
+<field>
+<datum_id>3</datum_id>
+<field_type>float</field_type>
+<example_value>10.59535</example_value>
+</field>
+<field>
+<datum_id>4</datum_id>
+<field_type>float</field_type>
+<example_value>13751100000</example_value>
+</field>
+<field>
+<datum_id>5</datum_id>
+<field_type>float</field_type>
+<example_value>11100000</example_value>
+</field>
+</fields>
+</message>
+</messages>
+</category>
+<category name="BOC_Bill_52_Week_Treasury_Auction_Result">
+<description>BOC Treasury Auction Result for 52 Week Bill</description>
+<country>CA</country>
+<category_id>653</category_id>
+<data>
+<datum>
+<short_description>High Yield</short_description>
+<description>High Yield</description>
+<datum_type>%</datum_type>
+<datum_id>1</datum_id>
+</datum>
+<datum>
+<short_description>High Price</short_description>
+<description>High Price</description>
+<datum_type>CAD</datum_type>
+<datum_id>2</datum_id>
+</datum>
+<datum>
+<short_description>Allotment Ratio</short_description>
+<description>Allotment Ratio</description>
+<datum_type>%</datum_type>
+<datum_id>3</datum_id>
+</datum>
+<datum>
+<short_description>Value Bids Total</short_description>
+<description>Value Bids Total</description>
+<datum_type>CAD</datum_type>
+<datum_id>4</datum_id>
+</datum>
+<datum>
+<short_description>Value Bids Non-competitive</short_description>
+<description>Value Bids Non-competitive</description>
+<datum_type>CAD</datum_type>
+<datum_id>5</datum_id>
+</datum>
+</data>
+<messages>
+<message>
+<message_type>release</message_type>
+<message_version>1</message_version>
+<multicast_group>CA_GROUP_2</multicast_group>
+<fields>
+<field>
+<datum_id>1</datum_id>
+<field_type>float</field_type>
+<example_value>1.003</example_value>
+</field>
+<field>
+<datum_id>2</datum_id>
+<field_type>float</field_type>
+<example_value>99.73142</example_value>
+</field>
+<field>
+<datum_id>3</datum_id>
+<field_type>float</field_type>
+<example_value>10.59535</example_value>
+</field>
+<field>
+<datum_id>4</datum_id>
+<field_type>float</field_type>
+<example_value>13751100000</example_value>
+</field>
+<field>
+<datum_id>5</datum_id>
+<field_type>float</field_type>
+<example_value>11100000</example_value>
+</field>
+</fields>
+</message>
+</messages>
+</category>
+<category name="BOC_Bill_Cash_Management_Treasury_Auction_Results">
+<description>BOC Treasury Auction Results For Cash Management Bill</description>
+<country>CA</country>
+<category_id>654</category_id>
+<data>
+<datum>
+<short_description>Amount</short_description>
+<description>Amount</description>
+<datum_type>CAD</datum_type>
+<datum_id>1</datum_id>
+</datum>
+<datum>
+<short_description>Issue date</short_description>
+<description>Issue Date</description>
+<datum_type>date</datum_type>
+<datum_id>2</datum_id>
+</datum>
+<datum>
+<short_description>Maturity</short_description>
+<description>Maturity</description>
+<datum_type>date</datum_type>
+<datum_id>3</datum_id>
+</datum>
+<datum>
+<short_description>Outstanding</short_description>
+<description>Outstanding</description>
+<datum_type>CAD</datum_type>
+<datum_id>4</datum_id>
+</datum>
+<datum>
+<short_description>High Yield</short_description>
+<description>High Yield</description>
+<datum_type>%</datum_type>
+<datum_id>5</datum_id>
+</datum>
+<datum>
+<short_description>High Price</short_description>
+<description>High Price</description>
+<datum_type>CAD</datum_type>
+<datum_id>6</datum_id>
+</datum>
+<datum>
+<short_description>Allotment Ratio</short_description>
+<description>Allotment Ratio</description>
+<datum_type>%</datum_type>
+<datum_id>7</datum_id>
+</datum>
+<datum>
+<short_description>Value Bids Total</short_description>
+<description>Value Bids Total</description>
+<datum_type>CAD</datum_type>
+<datum_id>8</datum_id>
+</datum>
+<datum>
+<short_description>Value Bids Non-competitive</short_description>
+<description>Value Bids Non-competitive</description>
+<datum_type>CAD</datum_type>
+<datum_id>9</datum_id>
+</datum>
+</data>
+<messages>
+<message>
+<message_type>release</message_type>
+<message_version>1</message_version>
+<multicast_group>CA_GROUP_2</multicast_group>
+<fields>
+<field>
+<datum_id>1</datum_id>
+<field_type>float</field_type>
+<example_value>1500000000</example_value>
+</field>
+<field>
+<datum_id>2</datum_id>
+<field_type>date</field_type>
+<example_value>2011-01-20</example_value>
+</field>
+<field>
+<datum_id>3</datum_id>
+<field_type>date</field_type>
+<example_value>2011-02-04</example_value>
+</field>
+<field>
+<datum_id>4</datum_id>
+<field_type>float</field_type>
+<example_value>1500000000</example_value>
+</field>
+<field>
+<datum_id>5</datum_id>
+<field_type>float</field_type>
+<example_value>1.003</example_value>
+</field>
+<field>
+<datum_id>6</datum_id>
+<field_type>float</field_type>
+<example_value>99.73142</example_value>
+</field>
+<field>
+<datum_id>7</datum_id>
+<field_type>float</field_type>
+<example_value>10.59535</example_value>
+</field>
+<field>
+<datum_id>8</datum_id>
+<field_type>float</field_type>
+<example_value>13751100000</example_value>
+</field>
+<field>
+<datum_id>9</datum_id>
+<field_type>float</field_type>
+<example_value>11100000</example_value>
+</field>
+</fields>
+</message>
+</messages>
+</category>
+<category name="BOC_Note_02_Year_Treasury_Auction_Announcement">
+<description>BOC Treasury Auction Announcement For 2 Year Note</description>
+<country>CA</country>
+<category_id>700</category_id>
+<data>
+<datum>
+<short_description>Amount</short_description>
+<description>Amount</description>
+<datum_type>CAD</datum_type>
+<datum_id>1</datum_id>
+</datum>
+<datum>
+<short_description>Issue date</short_description>
+<description>Issue Date</description>
+<datum_type>date</datum_type>
+<datum_id>2</datum_id>
+</datum>
+<datum>
+<short_description>Maturity</short_description>
+<description>Maturity</description>
+<datum_type>date</datum_type>
+<datum_id>3</datum_id>
+</datum>
+<datum>
+<short_description>Coupon</short_description>
+<description>Coupon</description>
+<datum_type>%</datum_type>
+<datum_id>4</datum_id>
+</datum>
+<datum>
+<short_description>Outstanding</short_description>
+<description>Outstanding</description>
+<datum_type>CAD</datum_type>
+<datum_id>5</datum_id>
+</datum>
+</data>
+<messages>
+<message>
+<message_type>release</message_type>
+<message_version>1</message_version>
+<multicast_group>CA_GROUP_2</multicast_group>
+<fields>
+<field>
+<datum_id>1</datum_id>
+<field_type>float</field_type>
+<example_value>3200000000</example_value>
+</field>
+<field>
+<datum_id>2</datum_id>
+<field_type>date</field_type>
+<example_value>2011-01-06</example_value>
+</field>
+<field>
+<datum_id>3</datum_id>
+<field_type>date</field_type>
+<example_value>2011-01-06</example_value>
+</field>
+<field>
+<datum_id>4</datum_id>
+<field_type>float</field_type>
+<example_value>2.000</example_value>
+</field>
+<field>
+<datum_id>5</datum_id>
+<field_type>float</field_type>
+<example_value>3500000000</example_value>
+</field>
+</fields>
+</message>
+</messages>
+</category>
+<category name="BOC_Note_03_Year_Treasury_Auction_Announcement">
+<description>BOC Treasury Auction Announcement For 3 Year Note</description>
+<country>CA</country>
+<category_id>701</category_id>
+<data>
+<datum>
+<short_description>Amount</short_description>
+<description>Amount</description>
+<datum_type>CAD</datum_type>
+<datum_id>1</datum_id>
+</datum>
+<datum>
+<short_description>Issue date</short_description>
+<description>Issue Date</description>
+<datum_type>date</datum_type>
+<datum_id>2</datum_id>
+</datum>
+<datum>
+<short_description>Maturity</short_description>
+<description>Maturity</description>
+<datum_type>date</datum_type>
+<datum_id>3</datum_id>
+</datum>
+<datum>
+<short_description>Coupon</short_description>
+<description>Coupon</description>
+<datum_type>%</datum_type>
+<datum_id>4</datum_id>
+</datum>
+<datum>
+<short_description>Outstanding</short_description>
+<description>Outstanding</description>
+<datum_type>CAD</datum_type>
+<datum_id>5</datum_id>
+</datum>
+</data>
+<messages>
+<message>
+<message_type>release</message_type>
+<message_version>1</message_version>
+<multicast_group>CA_GROUP_2</multicast_group>
+<fields>
+<field>
+<datum_id>1</datum_id>
+<field_type>float</field_type>
+<example_value>3200000000</example_value>
+</field>
+<field>
+<datum_id>2</datum_id>
+<field_type>date</field_type>
+<example_value>2011-01-06</example_value>
+</field>
+<field>
+<datum_id>3</datum_id>
+<field_type>date</field_type>
+<example_value>2011-01-06</example_value>
+</field>
+<field>
+<datum_id>4</datum_id>
+<field_type>float</field_type>
+<example_value>2.000</example_value>
+</field>
+<field>
+<datum_id>5</datum_id>
+<field_type>float</field_type>
+<example_value>3500000000</example_value>
+</field>
+</fields>
+</message>
+</messages>
+</category>
+<category name="BOC_Note_05_Year_Treasury_Auction_Announcement">
+<description>BOC Treasury Auction Announcement For 5 Year Note</description>
+<country>CA</country>
+<category_id>702</category_id>
+<data>
+<datum>
+<short_description>Amount</short_description>
+<description>Amount</description>
+<datum_type>CAD</datum_type>
+<datum_id>1</datum_id>
+</datum>
+<datum>
+<short_description>Issue date</short_description>
+<description>Issue Date</description>
+<datum_type>date</datum_type>
+<datum_id>2</datum_id>
+</datum>
+<datum>
+<short_description>Maturity</short_description>
+<description>Maturity</description>
+<datum_type>date</datum_type>
+<datum_id>3</datum_id>
+</datum>
+<datum>
+<short_description>Coupon</short_description>
+<description>Coupon</description>
+<datum_type>%</datum_type>
+<datum_id>4</datum_id>
+</datum>
+<datum>
+<short_description>Outstanding</short_description>
+<description>Outstanding</description>
+<datum_type>CAD</datum_type>
+<datum_id>5</datum_id>
+</datum>
+</data>
+<messages>
+<message>
+<message_type>release</message_type>
+<message_version>1</message_version>
+<multicast_group>CA_GROUP_2</multicast_group>
+<fields>
+<field>
+<datum_id>1</datum_id>
+<field_type>float</field_type>
+<example_value>3200000000</example_value>
+</field>
+<field>
+<datum_id>2</datum_id>
+<field_type>date</field_type>
+<example_value>2011-01-06</example_value>
+</field>
+<field>
+<datum_id>3</datum_id>
+<field_type>date</field_type>
+<example_value>2011-01-06</example_value>
+</field>
+<field>
+<datum_id>4</datum_id>
+<field_type>float</field_type>
+<example_value>2.000</example_value>
+</field>
+<field>
+<datum_id>5</datum_id>
+<field_type>float</field_type>
+<example_value>3500000000</example_value>
+</field>
+</fields>
+</message>
+</messages>
+</category>
+<category name="BOC_Note_10_Year_Treasury_Auction_Announcement">
+<description>BOC Treasury Auction Announcement For 10 Year Note</description>
+<country>CA</country>
+<category_id>704</category_id>
+<data>
+<datum>
+<short_description>Amount</short_description>
+<description>Amount</description>
+<datum_type>CAD</datum_type>
+<datum_id>1</datum_id>
+</datum>
+<datum>
+<short_description>Issue date</short_description>
+<description>Issue Date</description>
+<datum_type>date</datum_type>
+<datum_id>2</datum_id>
+</datum>
+<datum>
+<short_description>Maturity</short_description>
+<description>Maturity</description>
+<datum_type>date</datum_type>
+<datum_id>3</datum_id>
+</datum>
+<datum>
+<short_description>Coupon</short_description>
+<description>Coupon</description>
+<datum_type>%</datum_type>
+<datum_id>4</datum_id>
+</datum>
+<datum>
+<short_description>Outstanding</short_description>
+<description>Outstanding</description>
+<datum_type>CAD</datum_type>
+<datum_id>5</datum_id>
+</datum>
+</data>
+<messages>
+<message>
+<message_type>release</message_type>
+<message_version>1</message_version>
+<multicast_group>CA_GROUP_2</multicast_group>
+<fields>
+<field>
+<datum_id>1</datum_id>
+<field_type>float</field_type>
+<example_value>3200000000</example_value>
+</field>
+<field>
+<datum_id>2</datum_id>
+<field_type>date</field_type>
+<example_value>2011-01-06</example_value>
+</field>
+<field>
+<datum_id>3</datum_id>
+<field_type>date</field_type>
+<example_value>2011-01-06</example_value>
+</field>
+<field>
+<datum_id>4</datum_id>
+<field_type>float</field_type>
+<example_value>2.000</example_value>
+</field>
+<field>
+<datum_id>5</datum_id>
+<field_type>float</field_type>
+<example_value>3500000000</example_value>
+</field>
+</fields>
+</message>
+</messages>
+</category>
+<category name="BOC_Note_30_Year_Treasury_Auction_Announcement">
+<description>BOC Treasury Auction Announcement For 30 Year Note</description>
+<country>CA</country>
+<category_id>705</category_id>
+<data>
+<datum>
+<short_description>Amount</short_description>
+<description>Amount</description>
+<datum_type>CAD</datum_type>
+<datum_id>1</datum_id>
+</datum>
+<datum>
+<short_description>Issue date</short_description>
+<description>Issue Date</description>
+<datum_type>date</datum_type>
+<datum_id>2</datum_id>
+</datum>
+<datum>
+<short_description>Maturity</short_description>
+<description>Maturity</description>
+<datum_type>date</datum_type>
+<datum_id>3</datum_id>
+</datum>
+<datum>
+<short_description>Coupon</short_description>
+<description>Coupon</description>
+<datum_type>%</datum_type>
+<datum_id>4</datum_id>
+</datum>
+<datum>
+<short_description>Outstanding</short_description>
+<description>Outstanding</description>
+<datum_type>CAD</datum_type>
+<datum_id>5</datum_id>
+</datum>
+</data>
+<messages>
+<message>
+<message_type>release</message_type>
+<message_version>1</message_version>
+<multicast_group>CA_GROUP_2</multicast_group>
+<fields>
+<field>
+<datum_id>1</datum_id>
+<field_type>float</field_type>
+<example_value>3200000000</example_value>
+</field>
+<field>
+<datum_id>2</datum_id>
+<field_type>date</field_type>
+<example_value>2011-01-06</example_value>
+</field>
+<field>
+<datum_id>3</datum_id>
+<field_type>date</field_type>
+<example_value>2011-01-06</example_value>
+</field>
+<field>
+<datum_id>4</datum_id>
+<field_type>float</field_type>
+<example_value>2.000</example_value>
+</field>
+<field>
+<datum_id>5</datum_id>
+<field_type>float</field_type>
+<example_value>3500000000</example_value>
+</field>
+</fields>
+</message>
+</messages>
+</category>
+<category name="BOC_Note_Cash_Management_Treasury_Auction_Announcement">
+<description>BOC Treasury Auction Announcement For Cash Management Note</description>
+<country>CA</country>
+<category_id>706</category_id>
+<data>
+<datum>
+<short_description>Settlement</short_description>
+<description>Settlement</description>
+<datum_type>date</datum_type>
+<datum_id>1</datum_id>
+</datum>
+<datum>
+<short_description>Maturity</short_description>
+<description>Maturity</description>
+<datum_type>date</datum_type>
+<datum_id>2</datum_id>
+</datum>
+<datum>
+<short_description>Coupon</short_description>
+<description>Coupon</description>
+<datum_type>%</datum_type>
+<datum_id>3</datum_id>
+</datum>
+<datum>
+<short_description>Outstanding</short_description>
+<description>Outstanding</description>
+<datum_type>CAD</datum_type>
+<datum_id>4</datum_id>
+</datum>
+</data>
+<messages>
+<message>
+<message_type>release</message_type>
+<message_version>1</message_version>
+<multicast_group>CA_GROUP_2</multicast_group>
+<fields>
+<field>
+<datum_id>1</datum_id>
+<field_type>date</field_type>
+<example_value>2011-01-27</example_value>
+</field>
+<field>
+<datum_id>2</datum_id>
+<field_type>date</field_type>
+<example_value>2011-06-01</example_value>
+</field>
+<field>
+<datum_id>3</datum_id>
+<field_type>float</field_type>
+<example_value>1.250</example_value>
+</field>
+<field>
+<datum_id>4</datum_id>
+<field_type>float</field_type>
+<example_value>5072260000</example_value>
+</field>
+</fields>
+</message>
+</messages>
+</category>
+<category name="BOC_Note_Real_Return_Treasury_Auction_Announcement">
+<description>BOC Treasury Auction Announcement For Bond Real Return</description>
+<country>CA</country>
+<category_id>707</category_id>
+<data>
+<datum>
+<short_description>Amount</short_description>
+<description>Amount</description>
+<datum_type>CAD</datum_type>
+<datum_id>1</datum_id>
+</datum>
+<datum>
+<short_description>Issue date</short_description>
+<description>Issue Date</description>
+<datum_type>date</datum_type>
+<datum_id>2</datum_id>
+</datum>
+<datum>
+<short_description>Maturity</short_description>
+<description>Maturity</description>
+<datum_type>date</datum_type>
+<datum_id>3</datum_id>
+</datum>
+<datum>
+<short_description>Coupon</short_description>
+<description>Coupon</description>
+<datum_type>%</datum_type>
+<datum_id>4</datum_id>
+</datum>
+<datum>
+<short_description>Outstanding</short_description>
+<description>Outstanding</description>
+<datum_type>CAD</datum_type>
+<datum_id>5</datum_id>
+</datum>
+</data>
+<messages>
+<message>
+<message_type>release</message_type>
+<message_version>1</message_version>
+<multicast_group>CA_GROUP_2</multicast_group>
+<fields>
+<field>
+<datum_id>1</datum_id>
+<field_type>float</field_type>
+<example_value>400000000</example_value>
+</field>
+<field>
+<datum_id>2</datum_id>
+<field_type>date</field_type>
+<example_value>2011-02-28</example_value>
+</field>
+<field>
+<datum_id>3</datum_id>
+<field_type>date</field_type>
+<example_value>2044-12-01</example_value>
+</field>
+<field>
+<datum_id>4</datum_id>
+<field_type>float</field_type>
+<example_value>1.500</example_value>
+</field>
+<field>
+<datum_id>5</datum_id>
+<field_type>float</field_type>
+<example_value>1800000000</example_value>
+</field>
+</fields>
+</message>
+</messages>
+</category>
+<category name="BOC_Bill_13_Week_Treasury_Auction_Announcement">
+<description>BOC Treasury Auction Announcement for 13 Week Bill</description>
+<country>CA</country>
+<category_id>751</category_id>
+<data>
+<datum>
+<short_description>Amount</short_description>
+<description>Amount</description>
+<datum_type>CAD</datum_type>
+<datum_id>1</datum_id>
+</datum>
+<datum>
+<short_description>Issue date</short_description>
+<description>Issue Date</description>
+<datum_type>date</datum_type>
+<datum_id>2</datum_id>
+</datum>
+<datum>
+<short_description>Term</short_description>
+<description>Term</description>
+<datum_type>units</datum_type>
+<datum_id>3</datum_id>
+</datum>
+<datum>
+<short_description>Maturity</short_description>
+<description>Maturity</description>
+<datum_type>date</datum_type>
+<datum_id>4</datum_id>
+</datum>
+</data>
+<messages>
+<message>
+<message_type>release</message_type>
+<message_version>1</message_version>
+<multicast_group>CA_GROUP_2</multicast_group>
+<fields>
+<field>
+<datum_id>1</datum_id>
+<field_type>float</field_type>
+<example_value>29000000000.0</example_value>
+</field>
+<field>
+<datum_id>2</datum_id>
+<field_type>date</field_type>
+<example_value>2011-01-06</example_value>
+</field>
+<field>
+<datum_id>3</datum_id>
+<field_type>int</field_type>
+<example_value>98</example_value>
+</field>
+<field>
+<datum_id>4</datum_id>
+<field_type>date</field_type>
+<example_value>2011-01-06</example_value>
+</field>
+</fields>
+</message>
+</messages>
+</category>
+<category name="BOC_Bill_26_Week_Treasury_Auction_Announcement">
+<description>BOC Treasury Auction Announcement for 26 Week Bill</description>
+<country>CA</country>
+<category_id>752</category_id>
+<data>
+<datum>
+<short_description>Amount</short_description>
+<description>Amount</description>
+<datum_type>CAD</datum_type>
+<datum_id>1</datum_id>
+</datum>
+<datum>
+<short_description>Issue date</short_description>
+<description>Issue Date</description>
+<datum_type>date</datum_type>
+<datum_id>2</datum_id>
+</datum>
+<datum>
+<short_description>Term</short_description>
+<description>Term</description>
+<datum_type>units</datum_type>
+<datum_id>3</datum_id>
+</datum>
+<datum>
+<short_description>Maturity</short_description>
+<description>Maturity</description>
+<datum_type>date</datum_type>
+<datum_id>4</datum_id>
+</datum>
+</data>
+<messages>
+<message>
+<message_type>release</message_type>
+<message_version>1</message_version>
+<multicast_group>CA_GROUP_2</multicast_group>
+<fields>
+<field>
+<datum_id>1</datum_id>
+<field_type>float</field_type>
+<example_value>29000000000.0</example_value>
+</field>
+<field>
+<datum_id>2</datum_id>
+<field_type>date</field_type>
+<example_value>2011-01-06</example_value>
+</field>
+<field>
+<datum_id>3</datum_id>
+<field_type>int</field_type>
+<example_value>98</example_value>
+</field>
+<field>
+<datum_id>4</datum_id>
+<field_type>date</field_type>
+<example_value>2011-01-06</example_value>
+</field>
+</fields>
+</message>
+</messages>
+</category>
+<category name="BOC_Bill_52_Week_Treasury_Auction_Announcement">
+<description>BOC Treasury Auction Announcement for 52 Week Bill</description>
+<country>CA</country>
+<category_id>753</category_id>
+<data>
+<datum>
+<short_description>Amount</short_description>
+<description>Amount</description>
+<datum_type>CAD</datum_type>
+<datum_id>1</datum_id>
+</datum>
+<datum>
+<short_description>Issue date</short_description>
+<description>Issue Date</description>
+<datum_type>date</datum_type>
+<datum_id>2</datum_id>
+</datum>
+<datum>
+<short_description>Term</short_description>
+<description>Term</description>
+<datum_type>units</datum_type>
+<datum_id>3</datum_id>
+</datum>
+<datum>
+<short_description>Maturity</short_description>
+<description>Maturity</description>
+<datum_type>date</datum_type>
+<datum_id>4</datum_id>
+</datum>
+</data>
+<messages>
+<message>
+<message_type>release</message_type>
+<message_version>1</message_version>
+<multicast_group>CA_GROUP_2</multicast_group>
+<fields>
+<field>
+<datum_id>1</datum_id>
+<field_type>float</field_type>
+<example_value>29000000000.0</example_value>
+</field>
+<field>
+<datum_id>2</datum_id>
+<field_type>date</field_type>
+<example_value>2011-01-06</example_value>
+</field>
+<field>
+<datum_id>3</datum_id>
+<field_type>int</field_type>
+<example_value>98</example_value>
+</field>
+<field>
+<datum_id>4</datum_id>
+<field_type>date</field_type>
+<example_value>2011-01-06</example_value>
+</field>
+</fields>
+</message>
+</messages>
+</category>
+<category name="BOC_Bill_Cash_Management_Treasury_Auction_Announcement">
+<description>BOC Treasury Auction Announcement for Cash Management Bill</description>
+<country>CA</country>
+<category_id>754</category_id>
+<data>
+<datum>
+<short_description>Amount</short_description>
+<description>Amount</description>
+<datum_type>CAD</datum_type>
+<datum_id>1</datum_id>
+</datum>
+<datum>
+<short_description>Issue date</short_description>
+<description>Issue Date</description>
+<datum_type>date</datum_type>
+<datum_id>2</datum_id>
+</datum>
+<datum>
+<short_description>Term</short_description>
+<description>Term</description>
+<datum_type>units</datum_type>
+<datum_id>3</datum_id>
+</datum>
+<datum>
+<short_description>Maturity</short_description>
+<description>Maturity</description>
+<datum_type>date</datum_type>
+<datum_id>4</datum_id>
+</datum>
+<datum>
+<short_description>Outstanding</short_description>
+<description>Outstanding</description>
+<datum_type>CAD</datum_type>
+<datum_id>5</datum_id>
+</datum>
+</data>
+<messages>
+<message>
+<message_type>release</message_type>
+<message_version>1</message_version>
+<multicast_group>CA_GROUP_2</multicast_group>
+<fields>
+<field>
+<datum_id>1</datum_id>
+<field_type>float</field_type>
+<example_value>29000000000.0</example_value>
+</field>
+<field>
+<datum_id>2</datum_id>
+<field_type>date</field_type>
+<example_value>2011-01-06</example_value>
+</field>
+<field>
+<datum_id>3</datum_id>
+<field_type>int</field_type>
+<example_value>98</example_value>
+</field>
+<field>
+<datum_id>4</datum_id>
+<field_type>date</field_type>
+<example_value>2011-01-06</example_value>
+</field>
+<field>
+<datum_id>5</datum_id>
+<field_type>float</field_type>
+<example_value>14200000000</example_value>
+</field>
+</fields>
+</message>
+</messages>
+</category>
+</protocol>

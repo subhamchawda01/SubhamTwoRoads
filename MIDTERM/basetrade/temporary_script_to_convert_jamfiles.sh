@@ -1,0 +1,12 @@
+replace "/PUtils//libUtils" "/PDVCC//Utils" -- */*.jam ; 
+replace "/PCommonTradeUtils//libCommonTradeUtils" "/PDVCC//CommonTradeUtils" -- */*.jam ; 
+replace "/PExecLogic//libExecLogic" "/PDVCC//ExecLogic" -- */*.jam ; 
+replace "/PIndicators//libIndicators" "/PDVCC//Indicators" -- */*.jam ; 
+replace "/PBaseUtils//libBaseUtils" "/PDVCC//BaseUtils" -- */*.jam ; 
+replace "/PTradingInfo//libTradingInfo" "/PDVCC//TradingInfo" -- */*.jam ; 
+replace "/PExternalData//libExternalData" "/PDVCC//ExternalData" -- */*.jam ; 
+replace "/POrderRouting//lib" "/PDVCC//" -- */*.jam ; 
+replace "/PMarketAdapter//lib" "/PDVCC//" -- */*.jam ; 
+replace "/POptionsUtils//lib" "/PDVCC//" -- */*.jam ; 
+replace "/PModelMath//lib" "/PDVCC//" -- */*.jam ; 
+replace "/POptionsUtils//lib" "/PDVCC//" -- */*.jam ;

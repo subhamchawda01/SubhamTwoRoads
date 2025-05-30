@@ -1,0 +1,22 @@
+# We will need this project to have dependencies.
+use-project /PDVCC : ../../libdvccode ;
+use-project /PSimMarketMaker : ../../SimMarketMakerCode ;
+use-project /PSmartOrderRouting : ../../SmartOrderRoutingCode ;
+
+project : usage-requirements 
+;
+
+lib OrderRoutingTests
+: # sources
+[ glob *.cpp ] 
+: # requirements
+<link>static <use>/PSmartOrderRouting//SmartOrderRouting <use>/PDVCC//CDef <use>/PDVCC//CommonDataStructures <use>/PDVCC//Utils <use>/PSimMarketMaker//SimMarketMaker
+: 
+: # usage requirements
+<library>/PDVCC//boost_filesystem
+<library>/PDVCC//CDef 
+<library>/PDVCC//CommonDataStructures 
+<library>/PDVCC//Utils
+<library>/PSmartOrderRouting//SmartOrderRouting
+<library>/PSimMarketMaker//SimMarketMaker
+; 

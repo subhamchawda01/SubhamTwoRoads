@@ -1,0 +1,7 @@
+/**
+    \author: (c) Copyright Qplum Inc
+     Address:
+     	 185 Hudson St, Suite 1620
+	 Jersey City, NJ
+	 07311
+*/

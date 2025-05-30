@@ -1,0 +1,56 @@
+SHORTCODE
+NK_0
+
+EXEC_LOGIC
+PriceBasedAggressiveTrading
+
+START_TIME
+EST_800
+
+END_TIME
+UTC_1900
+
+STRAT_TYPE
+Regular
+          
+CONFIG_TYPE
+6
+
+EVENT_TOKEN
+INVALID
+          
+INIT_MODEL_FILE
+/home/dvctrader/modelling/models/NK_0/EST_800-UTC_1900/w_model_ilist_NK_0_US_Mkt_Mkt_lm_128_20161018_20170110_EST_800_UTC_2030_51481
+
+PARAM_FILE
+/home/dvctrader/modelling/params/NK_0/param_NK_0_US_PB_aa1_28037
+
+WALK_START_DATE
+20160920
+
+CONFIG_NAME
+w_config_ilist_NK_0_US_Mkt_Mkt_lm_1_aa1
+
+DDAYS_STRING
+20
+
+TRIGGER_STRING
+D0
+
+TD_STRING
+4000 C3 0
+
+RD_STRING
+na_t3 VOL 32
+
+RDATA_PROCESS_STRING
+fsr.5_3
+
+REG_STRING
+RIDGE 8 0.9
+
+MODEL_PROCESS_STRING
+1 1.86276
+
+NAME
+test

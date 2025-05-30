@@ -1,0 +1,151 @@
+<?xml version="1.0" encoding="utf-8"?>
+<?xml-stylesheet type="text/xsl" href="./InternalHTML.xsl"?>
+<validations>
+  <multicast_groups>
+    <multicast_group id='1' name='SYSTEM_HEARTBEAT' address='233.52.220.1' port='25001' />
+    <multicast_group id='2' name='US_DEPT_LABOR' address='233.52.220.2' port='25002' />
+    <multicast_group id='3' name='US_DEPT_COMMERCE' address='233.52.220.3' port='25003' />
+    <multicast_group id='4' name='US_DEPT_TREASURY' address='233.52.220.4' port='25004' />
+    <multicast_group id='5' name='US_DEPT_AGRICULTURE' address='233.52.220.6' port='25006' />
+    <multicast_group id='6' name='US_NATL_ASSOC_REALTORS' address='233.52.220.7' port='25007' />
+    <multicast_group id='7' name='US_GROUP_1' address='233.52.220.5' port='25005' />
+    <multicast_group id='8' name='US_GROUP_2' address='233.52.220.8' port='25008' />
+    <multicast_group id='9' name='US_GROUP_3' address='233.52.220.20' port='25020' />
+    <multicast_group id='10' name='US_GROUP_4' address='233.52.220.21' port='25021' />
+    <multicast_group id='11' name='US_ESTIMATES' address='233.52.220.13' port='25013' />
+    <multicast_group id='12' name='CHI_REPORT' address='233.52.220.29' port='25029' />
+    <multicast_group id='13' name='FITCH' address='233.52.220.30' port='25030' />
+    <multicast_group id='14' name='US_FED' address='233.52.220.32' port='25032' />
+    <multicast_group id='15' name='ISM' address='233.52.220.26' port='25026' />
+    <multicast_group id='16' name='UK_OFC_NATL_STATISTICS' address='233.52.220.9' port='25009' />
+    <multicast_group id='17' name='UK_BOE' address='233.52.220.25' port='25025' />
+    <multicast_group id='18' name='EU_GROUP_1' address='233.52.220.10' port='25010' />
+    <multicast_group id='19' name='EU_GROUP_2' address='233.52.220.11' port='25011' />
+    <multicast_group id='20' name='EU_GROUP_3' address='233.52.220.12' port='25012' />
+    <multicast_group id='21' name='EU_ESTIMATES' address='233.52.220.14' port='25014' />
+    <multicast_group id='22' name='UK_ESTIMATES' address='233.52.220.14' port='25014' />
+    <multicast_group id='23' name='DE_ESTIMATES' address='233.52.220.15' port='25015' />
+    <multicast_group id='24' name='CA_STATISTICS_CANADA' address='233.52.220.16' port='25016' />
+    <multicast_group id='25' name='CA_BANK_OF_CANADA' address='233.52.220.17' port='25017' />
+    <multicast_group id='26' name='CA_ESTIMATES' address='233.52.220.19' port='25019' />
+    <multicast_group id='27' name='CA_GROUP_2' address='233.52.220.22' port='25022' />
+    <multicast_group id='28' name='ASIAPAC' address='233.52.220.23' port='25023' />
+    <multicast_group id='29' name='ASIAPAC_ESTIMATES' address='233.52.220.24' port='25024' />
+    <multicast_group id='30' name='BETA_1' address='233.52.220.250' port='25250' />
+    <multicast_group id='31' name='BETA_2' address='233.52.220.251' port='25251' />
+    <multicast_group id='32' name='BETA_3' address='233.52.220.252' port='25252' />
+    <multicast_group id='33' name='BETA_4' address='233.52.220.253' port='25253' />
+    <multicast_group id='34' name='BETA_5' address='233.52.220.245' port='25245' />
+    <multicast_group id='35' name='BETA_6' address='233.52.220.246' port='25246' />
+    <multicast_group id='36' name='BETA_7' address='233.52.220.247' port='25247' />
+    <multicast_group id='37' name='BETA_8' address='233.52.220.248' port='25248' />
+    <multicast_group id='38' name='BETA_9' address='233.52.220.249' port='25249' />
+    <multicast_group id='39' name='BETA_10' address='233.52.220.243' port='25243' />
+    <multicast_group id='40' name='TEST_FEED' address='233.52.220.254' port='25254' />
+    <multicast_group id='41' name='*ANY*' address='0.0.0.0' port='0' />
+    <multicast_group id='42' name='RISK_NOTIFICATION' address='233.52.220.31' port='25031' />
+    <multicast_group id='43' name='MNI_INDICATORS' address='233.52.220.27' port='25027' />
+  </multicast_groups>
+  <message_types>
+    <message_type name='release' value='0' />
+    <message_type name='estimate' value='1' />
+    <message_type name='system' value='2' />
+    <message_type name='notification' value='3' />
+    <message_type name='rebroadcast' value='4' />
+  </message_types>
+  <field_types>
+    <field_type name='float' id='0' value='0' length='4' />
+    <field_type name='float-range' id='1' value='0' length='8' />
+    <field_type name='short' id='2' value='0' length='2' />
+    <field_type name='long' id='3' value='0' length='8' />
+    <field_type name='double' id='4' value='0' length='8' />
+    <field_type name='date' id='5' value='0' length='4' />
+    <field_type name='boolean' id='6' value='0' length='1' />
+    <field_type name='yes_no_na' id='7' value='0' length='1' />
+    <field_type name='directional' id='8' value='0' length='1' />
+    <field_type name='int' id='9' value='0' length='4' />
+    <field_type name='time' id='10' value='0' length='3' />
+    <field_type name='timeframe' id='11' value='0' length='4' />
+    <field_type name='enumeration' id='12' value='0' length='1' />
+    <field_type name='iso_country_code' id='13' value='0' length='2' />
+    <field_type name='short_value_enumeration' id='14' value='0' length='2' />
+  </field_types>
+  <data_types>
+    <data_type id='1' name='CAD' display='CAD   ' description='Canadian Dollar' />
+    <data_type id='2' name='DEM' display='DEM   ' description='Deutsche Mark' />
+    <data_type id='3' name='GBP' display='GBP   ' description='Pound Sterling' />
+    <data_type id='4' name='USD' display='USD   ' description='US Dollar' />
+    <data_type id='5' name='Euro' display='EUR   ' description='European Union Currency' />
+    <data_type id='6' name='%' display=' %    ' description='A percentage' />
+    <data_type id='7' name='acres' display='ac   ' description='Acres of land' />
+    <data_type id='8' name='bushels' display='bsh   ' description='A unit of dry volume' />
+    <data_type id='9' name='bales' display='bales ' description='A unit of dry volume' />
+    <data_type id='10' name='cwt' display='Cwt   ' description='Hundred Weight' />
+    <data_type id='11' name='units' display='      ' description='A measurable unit' />
+    <data_type id='12' name='index' display='      ' description='A unit-less Index' />
+    <data_type id='13' name='ratio' display='ratio ' description='A ratio' />
+    <data_type id='14' name='barrels' display='bbl   ' description='A unit of volume equal to 42 U.S. gallons' />
+    <data_type id='15' name='Bcf' display='Bcf   ' description='billions cubic feet' />
+    <data_type id='16' name='weeks' display='weeks ' description='term in weeks' />
+    <data_type id='17' name='days' display='days  ' description='term in days' />
+    <data_type id='18' name='hours' display='hours ' description='term in hours' />
+    <data_type id='19' name='date' display='yyyy-mm-dd' description='yyyy-mm-dd' />
+    <data_type id='20' name='time' display='hh:mm:ss' description='hh:mm:ss' />
+    <data_type id='21' name='time_est' display='hh:mm:ss EST' description='hh:mm:ss EST' />
+    <data_type id='22' name='boolean' display=' t/f  ' description='true/false indicator' />
+    <data_type id='23' name='yes_no_na' display='' description='yes/no/not-applicable' />
+    <data_type id='24' name='directional' display='' description='up/no-change/down' />
+    <data_type id='25' name='AUD' display='AUD' description='Australian Dollar' />
+    <data_type id='26' name='JPY' display='JPY' description='Japanese Yen' />
+    <data_type id='27' name='CNY' display='CNY' description='Chinese Yuan' />
+    <data_type id='28' name='NZD' display='NZD' description='New Zealand Dollar' />
+    <data_type id='29' name='PLN' display='PLN' description='Poland Zloty' />
+    <data_type id='30' name='RUR' display='RUR' description='Russian Rubles' />
+    <data_type id='31' name='year' display='yyyy' description='yyyy' />
+    <data_type id='32' name='CHF' display='CHF' description='Swiss Franc' />
+    <data_type id='33' name='SEK' display='SEK' description='Swedish Krona' />
+    <data_type id='34' name='DKK' display='DKK' description='Danish Krone' />
+    <data_type id='35' name='RUB' display='RUB' description='New Russian Rubles' />
+    <data_type id='36' name='ISO' display='' description='ISO Country Code' />
+    <data_type id='37' name='metric_tons' display='metric tons' description='Metric tons' />
+    <data_type id='38' name='time_utc' display='hh:mm:ss UTC' description='hh:mm:ss UTC' />
+    <data_type id='39' name='basis_points' display='BPS' description='Basis Points' />
+  </data_types>
+  <data_scales>
+    <data_scale id='1' name='K' display='K' description='scale represented in thousands' />
+    <data_scale id='2' name='M' display='M' description='scale represented in millions' />
+    <data_scale id='3' name='B' display='B' description='scale represented in billions' />
+    <data_scale id='4' name='T' display='T' description='scale represented in trillions' />
+  </data_scales>
+  <release_methods>
+    <release_method id='1' name='lockup' display='Lockup' />
+    <release_method id='2' name='office' display='Live release from office' />
+    <release_method id='3' name='embargoed' display='Embargoed release' />
+    <release_method id='4' name='scrape' display='Scrape' />
+  </release_methods>
+  <release_locations>
+    <release_location id='1' name='everywhere' country='ALL' display='All data centers' />
+    <release_location id='2' name='Labor' country='US' display='US Dept. of Labor' />
+    <release_location id='3' name='Commerce' country='US' display='US Dept. of Commerce' />
+    <release_location id='4' name='Treasury' country='US' display='US Treasury Dept.' />
+    <release_location id='5' name='DC_office' country='US' display='Washington, D.C. office' />
+    <release_location id='6' name='CoreSite' country='US' display='Washington, D.C. data center' />
+    <release_location id='7' name='NY2' country='US' display='Equinix NY2 data center' />
+    <release_location id='8' name='Chicago_office' country='US' display='Chicago office' />
+    <release_location id='9' name='CH2' country='US' display='Equiniz CH2 data center' />
+    <release_location id='10' name='London_office' country='UK' display='London office' />
+    <release_location id='11' name='80Clifton' country='UK' display='City Lifeline at 80 Clifton, London' />
+    <release_location id='12' name='BOE' country='UK' display='Bank of England lockup' />
+    <release_location id='13' name='ONS' country='UK' display='UK Office of National Statistics lockup' />
+    <release_location id='14' name='LD4' country='UK' display='Equinix LD4 in Slough, UK' />
+    <release_location id='15' name='Ottawa_office' country='CA' display='Ottawa, Canada office' />
+    <release_location id='16' name='StatsCan' country='CA' display='Statistics Canada' />
+    <release_location id='17' name='BOC' country='CA' display='Bank of Canada' />
+    <release_location id='18' name='SY1' country='AU' display='Equinix SY1 in Sydney' />
+    <release_location id='19' name='KVH' country='JP' display='KVH data center in Tokyo' />
+    <release_location id='20' name='Tokyo_office' country='JP' display='Tokyo office' />
+    <release_location id='21' name='Beijing_office' country='CN' display='Beijing office' />
+    <release_location id='22' name='FR2' country='DE' display='Equinix FR2 data center in Frankfurt' />
+    <release_location id='23' name='Sydney_office' country='AU' display='Sydney office' />
+  </release_locations>
+</validations>

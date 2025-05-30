@@ -1,0 +1,21 @@
+# We will need this project to have dependencies.
+use-project /PDVCC : ../../libdvccode ;
+use-project /PExecLogic : ../../ExecLogicCode ;
+use-project /PInitCommon : ../../InitCommonCode ;
+
+# project : usage-requirements 
+
+
+
+lib TradeVarSetTests
+: # sources
+[ glob *.cpp ] 
+: # requirements
+<link>static <use>/PDVCC//CDef <use>/PDVCC//CommonDataStructures <use>/PExecLogic//ExecLogic <use>/PInitCommon//InitCommon
+: 
+: # usage requirements
+<library>/PDVCC//CDef 
+<library>/PDVCC//CommonDataStructures 
+<library>/PExecLogic//ExecLogic
+<library>/PInitCommon//InitCommon
+; 

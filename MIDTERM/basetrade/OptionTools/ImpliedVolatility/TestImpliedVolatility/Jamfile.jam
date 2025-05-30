@@ -1,0 +1,22 @@
+project : usage-requirements <include>$(PROJECT_INSTALL) ;
+
+use-project /PImpliedVolatility : ../../ImpliedVolatility ;
+
+exe test_implied_volatility
+    : test_implied_volatility.cpp
+      /PImpliedVolatility//libImpliedVolatility
+    :
+    : <variant>debug <variant>release
+      <linkflags>-lpthread
+      <linkflags>-lcppunit
+      <linkflags>-ldl
+      <linkflags>-Wl,--no-as-needed
+    ;
+    
+
+install install-bin
+	: test_implied_volatility
+	: <variant>release:<location>"$(PROJECT_INSTALL)/bin"
+    	<variant>debug:<location>"$(PROJECT_INSTALL)/bindebug"
+  	: release debug
+	;

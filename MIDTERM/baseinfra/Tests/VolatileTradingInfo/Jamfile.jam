@@ -1,0 +1,23 @@
+# We will need this project to have dependencies.
+use-project /PDVCC : ../../libdvccode ;
+
+project : usage-requirements 
+;
+
+lib VolatileTradingInfoTests
+: # sources
+[ glob *.cpp ] 
+: # requirements
+#<link>static <use>/PDVCC//CDef <use>/PDVCC//ExternalData <use>/PDVCC//TradingInfo <use>/PDVCC//CommonDataStructures <use>/PDVCC//Utils <use>/PDVCC//LoggedSources
+
+: 
+: # usage requirements
+#<library>/PDVCC//LoggedSources
+#<library>/PDVCC//boost_filesystem
+#<library>/PDVCC//CDef 
+#<library>/PDVCC//ExternalData
+#<library>/PDVCC//TradingInfo
+#<library>/PDVCC//CommonDataStructures 
+#<library>/PDVCC//OptionsUtils
+#<library>/PDVCC//Utils
+; 

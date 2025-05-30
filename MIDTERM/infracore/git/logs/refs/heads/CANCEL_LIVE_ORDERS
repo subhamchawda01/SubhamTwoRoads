@@ -1,0 +1,8 @@
+0000000000000000000000000000000000000000 0739b8094e82cd05dab9487510fa6cb34fedc3b1 subhamchawda01 <subham.chawda@tworoads-trading.co.in> 1610342509 +0000	branch: Created from HEAD
+0739b8094e82cd05dab9487510fa6cb34fedc3b1 941ecb053f27c96debaa7cae6209d90b08380045 subhamchawda01 <subham.chawda@tworoads-trading.co.in> 1610352596 +0000	commit: added cancel live order control command
+941ecb053f27c96debaa7cae6209d90b08380045 0bdccb3d2485ad266520da2fe444e287a3e3e295 subhamchawda01 <subham.chawda@tworoads-trading.co.in> 1611343784 +0000	commit: cancel live order using shm client receiver
+0bdccb3d2485ad266520da2fe444e287a3e3e295 1000fdc2c09c4b680e2f639964d052c38a675ba9 subhamchawda01 <subham.chawda@tworoads-trading.co.in> 1611680350 +0000	commit: cancel live order changes
+1000fdc2c09c4b680e2f639964d052c38a675ba9 bdf74fb7a62084b2ed104ec11df0c21a1811a396 subhamchawda01 <subham.chawda@tworoads-trading.co.in> 1611725964 +0000	commit: cancel live order changes
+bdf74fb7a62084b2ed104ec11df0c21a1811a396 8625eb16ee4646fb40daf7eccba6ef0240241c1e subhamchawda01 <subham.chawda@tworoads-trading.co.in> 1611802540 +0000	commit: cancel live order changes
+8625eb16ee4646fb40daf7eccba6ef0240241c1e 872c10ac009e7076e8a2c5071916ddbe9bdbb494 subhamchawda01 <subham.chawda@tworoads-trading.co.in> 1614946532 +0000	merge origin/master: Merge made by the 'recursive' strategy.
+872c10ac009e7076e8a2c5071916ddbe9bdbb494 a4bdbf9df49478df80542975173017337e6d8c67 subhamchawda01 <subham.chawda@tworoads-trading.co.in> 1616578715 +0000	merge origin/master: Merge made by the 'recursive' strategy.

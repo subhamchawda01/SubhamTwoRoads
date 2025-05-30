@@ -1,0 +1,29 @@
+# We will need this project to have dependencies.
+use-project /PDVCC : ../libdvccode ;
+
+project : usage-requirements <include>$(PROJECT_INSTALL)
+;
+
+lib VolatileTradingInfo
+: # sources
+[ glob *.cpp ] 
+: # requirements
+<link>static <use>/PDVCC//CDef <use>/PDVCC//CommonDataStructures <use>/PDVCC//Utils 
+: # default-build
+release
+: # usage requirements
+<include>$(PROJECT_INSTALL)
+<library>/PDVCC//CDef 
+<library>/PDVCC//CommonDataStructures 
+<library>/PDVCC//Utils
+;
+
+install libVolatileTradingInfo
+  : VolatileTradingInfo
+  : <install-type>LIB
+    <variant>release:<location>"$(PROJECT_LIB_INSTALL)"
+    <variant>debug:<location>"$(PROJECT_LIB_INSTALL_DEBUG)"
+  : release debug
+  ;
+
+

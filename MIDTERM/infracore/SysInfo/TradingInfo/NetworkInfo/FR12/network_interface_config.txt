@@ -1,0 +1,30 @@
+# APP name
+# MD = raw_mkt_data_receiver   , low_latency
+# MM = processed_mkt_data_mcast_sender , low_latency
+# LS = Live_data or processed_mkt_data_mcast_receiver , low_latency
+# CONTROL
+# ORS = ors bcast, (exchange replies etc..)
+# ORS_LS = ors_livesource, 
+#LOCATION  EXCHANGE  APP_NAME  INTERFACE  
+#CHI
+#FR
+FR2        EUREX     MD_B     eth6.1977
+FR2        EUREX     MD_A     eth7.1976 
+FR2        EUREX     MM       eth6.2489
+FR2        EUREX_NTA MD       eth6.1977
+FR2        EUREX_NTA MM       eth6.2489
+FR2        CME       MD       eth6.2225
+FR2        CME       MD_A     eth6.2225
+FR2        CME       MD_B     eth6.2225
+FR2        CME       MD_C     eth6.2225
+FR2        CMEMDP    MD       eth6.2225
+FR2        CME       LS       eth6.2489
+FR2        CFE       LS       eth6.2489
+FR2        QUINCY    LS       eth6.2489
+FR2        EUREX     LS       eth6.2489
+FR2        EUREX_NTA LS       eth6.2489
+FR2        LIFFE     MD       eth6.2291
+FR2        ICE       MD       eth6.2291
+FR2                  CONTROL  eth1.2488
+FR2                  ORS      eth1.2488
+FR2                  ORS_LS   eth1.2488

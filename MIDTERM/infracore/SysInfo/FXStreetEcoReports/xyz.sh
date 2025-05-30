@@ -1,0 +1,17 @@
+cd ~/infracore/SysInfo/FXStreetEcoReports;
+replace "Korea, Republic of" "Korea Republic of" -- fxstreet_eco_2012.csv ;
+replace "Netherlands, The" "Netherlands" -- fxstreet_eco_2012.csv ;
+~/basetrade/ModelScripts/process_fxstreet_eco.pl fxstreet_eco_2012.csv > fxstreet_eco_2012_processed.txt ;
+replace "Bloomberg_Consumer_Comfort_Index 1" "Bloomberg_Consumer_Comfort_Index 0" -- fxstreet_eco_2012_processed.txt ;
+replace "Bloomberg_Consumer_Comfort_Index 2" "Bloomberg_Consumer_Comfort_Index 0" -- fxstreet_eco_2012_processed.txt ;
+replace "EIA_Crude_Oil_Stocks_change 1" "EIA_Crude_Oil_Stocks_change 0" -- fxstreet_eco_2012_processed.txt ;
+replace "Pending_Home_Sales_(MoM) 1" "Pending_Home_Sales_(MoM) 0" -- fxstreet_eco_2012_processed.txt ;
+replace "IBD/TIPP_Economic_Optimism_(MoM) 1" "IBD/TIPP_Economic_Optimism_(MoM) 0" -- fxstreet_eco_2012_processed.txt ;
+replace "Wholesale_Inventories 1 " "Wholesale_Inventories 0 " -- fxstreet_eco_2012_processed.txt ;
+replace "Wholesale_Inventories 2 " "Wholesale_Inventories 0 " -- fxstreet_eco_2012_processed.txt ;
+replace "Consumer_Credit_Change 2 " "Consumer_Credit_Change 0 " -- fxstreet_eco_2012_processed.txt ;
+replace "USD Housing_Price_Index_(MoM) 1 " "USD Housing_Price_Index_(MoM) 0 " -- fxstreet_eco_2012_processed.txt ;
+replace "USD Housing_Price_Index_(MoM) 2 " "USD Housing_Price_Index_(MoM) 0 " -- fxstreet_eco_2012_processed.txt ;
+#replace "USD Richmond_Fed_Manufacturing_Index 1 " "USD Richmond_Fed_Manufacturing_Index 0 " -- fxstreet_eco_2012_processed.txt ;
+replace "USD Richmond_Fed_Manufacturing_Index 2 " "USD Richmond_Fed_Manufacturing_Index 1 " -- fxstreet_eco_2012_processed.txt ;
+replace "USD EIA_Natural_Gas_Storage_change 1" "USD EIA_Natural_Gas_Storage_change 0" -- fxstreet_eco_2012_processed.txt ;

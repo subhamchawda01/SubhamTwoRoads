@@ -1,0 +1,27 @@
+project : usage-requirements <include>$(PROJECT_INSTALL) ;
+
+use-project /PDVCC : ../libdvccode ;
+
+exe boost_utc_example
+    : boost_utc_example.cpp
+      /PDVCC//CDef 
+      /PDVCC//CommonTradeUtils 
+      /PDVCC//TradeUtils 
+    :
+    : <variant>debug <variant>release
+    ;
+
+exe boost_get_utc_time_midnight
+    : boost_get_utc_time_midnight.cpp
+      /PDVCC//CDef 
+      /PDVCC//CommonTradeUtils 
+    :
+    : <variant>debug <variant>release
+    ;
+
+install install-bin 
+	: boost_utc_example boost_get_utc_time_midnight
+	: <variant>release:<location>"$(PROJECT_INSTALL)/bin"
+    	  <variant>debug:<location>"$(PROJECT_INSTALL)/bindebug"
+  	: release debug
+	;

@@ -1,0 +1,13 @@
+use-project /PDVCC : ../libdvccode ;
+
+project : usage-requirements <include>$(PROJECT_INSTALL) ;
+
+lib MTools : [ glob *.cpp ] : <link>static ;
+
+install libMTools
+  : MTools
+  : <install-type>LIB
+    <variant>release:<location>"$(PROJECT_INSTALL)/lib"
+    <variant>debug:<location>"$(PROJECT_INSTALL)/libdebug"
+  : release debug
+  ;

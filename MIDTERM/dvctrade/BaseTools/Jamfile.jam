@@ -1,0 +1,32 @@
+# We will need this project to have dependencies.
+use-project /PDVCC : ../libdvccode ;
+
+# project : usage-requirements <include>$(PROJECT_INSTALL) ;
+exe get_nse_commission
+    : get_nse_commission.cpp
+      /PDVCC//Utils
+      /PDVCC//CommonTradeUtils
+      /PDVCC//VolatileTradingInfo
+    : 
+    <linkflags>-lboost_date_time
+    : <variant>debug <variant>release
+    ;
+
+exe get_contract_specs
+    : get_contract_specs.cpp
+      /PDVCC//Utils
+      /PDVCC//CommonTradeUtils
+      /PDVCC//VolatileTradingInfo
+    : 
+    <linkflags>-lboost_date_time
+    : <variant>debug <variant>release
+    ;
+
+install install-bin
+    : get_contract_specs
+      get_nse_commission
+    : <variant>release:<location>"$(PROJECT_BIN_INSTALL)"
+      <variant>debug:<location>"$(PROJECT_BIN_INSTALL_DEBUG)"
+        : release debug
+    ;
+

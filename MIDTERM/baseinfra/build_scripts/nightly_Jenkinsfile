@@ -1,0 +1,43 @@
+pipeline {
+    agent any
+
+    environment {
+        WORKDIR="."
+        GCC_ROOT="/apps/gcc_versions/gcc-6_3_install"
+        CURRENT_BOOST_PATH="/apps/boost/boost-git"
+        CURRENT_BOOST_INSTALL_PATH="/apps/boost/boost-install"
+        ZLIB_SOURCE="/apps/zlib"
+        ZLIB_LIBPATH="/apps/zlib/lib"
+        BZIP2_SOURCE="/apps/bzip2"
+        BZIP2_LIBPATH="/apps/bzip2/lib"
+        BOOST_INCLUDE_DIR="/apps/boost/boost-install/include"
+        BOOST_ROOT="/apps/boost/boost-git"
+        BOOST_LIB_INSTALL="/apps/boost/boost-install/lib"
+        LIBRARY_PATH="/apps/boost/boost-install/lib:/usr/lib/x86_64-linux-gnu"
+        LD_RUN_PATH="/apps/boost/boost-install/lib"
+        LD_LIBRARY_PATH="/apps/boost/boost-install/lib:/apps/gcc_versions/gcc-6_3_install/lib64:/usr/lib/x86_64-linux-gnu"
+        PATH=":/apps/boost/boost-git:/apps/gcc_versions/gcc-6_3_install/bin:/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin:/usr/games:/snap/bin"
+        DVC_ARTIFACTORY='s3://dvc-artifactory'
+        SLACK_TOKEN=credentials('slack-token')
+    }
+
+    stages {
+        stage('Build') {
+            steps {
+                sh "/bin/bash -l ./build_scripts/build.sh"
+            }
+        }
+
+        stage('Run Test') {
+            steps {
+                sh '/bin/bash -l ./build_scripts/run_test.sh'
+            }
+        }
+    }
+
+    post {
+        failure {
+            slackSend message: "Build FAILURE: ${env.JOB_NAME} ${env.BUILD_NUMBER} - (<${env.BUILD_URL}|Logs>)", channel: "#ci", token: "${env.SLACK_TOKEN}"
+        }
+    }
+}

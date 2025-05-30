@@ -1,0 +1,80 @@
+#!/bin/bash
+
+cd $HOME
+
+if [ -e $HOME/.gcc_profile ] ; 
+then 
+    source $HOME/.gcc_profile ;
+else
+    export NEW_GCC_LIB=/usr/local/lib
+    export NEW_GCC_LIB64=/usr/local/lib64
+    export LD_LIBRARY_PATH=$NEW_GCC_LIB64:$NEW_GCC_LIB:$LD_LIBRARY_PATH
+fi
+
+CRSOP_SCRIPT=$HOME/LiveExec/scripts/call_run_sim_overnight_perdir.pl ;
+if [ ! -e $CRSOP_SCRIPT ] ; then 
+CRSOP_SCRIPT=$HOME/basetrade_install/scripts/call_run_sim_overnight_perdir.pl ;
+fi
+
+#if [ ! -e $HOME/locks/call_run_sim_overnight.lock ] ; then
+#touch $HOME/locks/call_run_sim_overnight_recent.lock ;
+
+$CRSOP_SCRIPT BR_DOL_0
+
+$CRSOP_SCRIPT NK_0
+$CRSOP_SCRIPT NKM_0
+
+$CRSOP_SCRIPT BR_WIN_0
+$CRSOP_SCRIPT DI1F15
+$CRSOP_SCRIPT DI1F16
+$CRSOP_SCRIPT DI1F17
+$CRSOP_SCRIPT DI1F18
+$CRSOP_SCRIPT DI1F22
+$CRSOP_SCRIPT DI1N14
+$CRSOP_SCRIPT DI1N15
+$CRSOP_SCRIPT DI1J15
+$CRSOP_SCRIPT DI1J16
+
+
+$CRSOP_SCRIPT CGB_0
+$CRSOP_SCRIPT BR_IND_0
+#
+
+#
+$CRSOP_SCRIPT DI1F19
+$CRSOP_SCRIPT DI1F20
+$CRSOP_SCRIPT DI1N16
+$CRSOP_SCRIPT DI1N17
+$CRSOP_SCRIPT DI1N18
+$CRSOP_SCRIPT DI1N19
+$CRSOP_SCRIPT DI1G15
+$CRSOP_SCRIPT DI1G16
+$CRSOP_SCRIPT DI1G17
+$CRSOP_SCRIPT DI1J17
+
+#
+#$CRSOP_SCRIPT FXXP_0
+#$CRSOP_SCRIPT FSTB_0
+#$CRSOP_SCRIPT FSMI_0
+$CRSOP_SCRIPT FGBX_0
+##
+#$CRSOP_SCRIPT BR_WDO_0
+#$CRSOP_SCRIPT ES_0
+#$CRSOP_SCRIPT 6A_0
+#$CRSOP_SCRIPT 6B_0
+#$CRSOP_SCRIPT 6E_0
+#$CRSOP_SCRIPT 6J_0
+#$CRSOP_SCRIPT 6M_0
+#$CRSOP_SCRIPT 6N_0
+#$CRSOP_SCRIPT 6S_0
+#$CRSOP_SCRIPT CL_0
+#$CRSOP_SCRIPT GC_0
+#$CRSOP_SCRIPT NQ_0
+#$CRSOP_SCRIPT YM_0
+
+
+#rm -f $HOME/locks/call_run_sim_overnight_recent.lock ;
+#else
+#    echo "$HOME/locks/call_run_sim_overnight_recent.lock present";
+#fi
+

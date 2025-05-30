@@ -1,0 +1,17 @@
+BidAskToPayGeneralized
+DiffEDAvgTPxBasepx
+DiffEDSizeAvgTPxBasepx
+DiffPairPriceType
+DiffTDAvgTPxBasepx
+DiffTDSizeAvgTPxBasepx
+DiffTRAvgTPxBasepx
+DiffTRSizeAvgTPxBasepx
+EDSumTDiffSqrtTSize
+MultMktComplexPriceTopOff
+MultMktOrderPrice
+MultMktPrice
+TDLvlSumTType
+TDSumTDiffTSize
+TDSumTType
+TSizeTRSqrtAvgTDiff
+L1BidAskSizeFlow

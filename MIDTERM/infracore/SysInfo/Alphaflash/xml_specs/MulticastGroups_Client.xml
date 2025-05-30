@@ -1,0 +1,326 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<?xml-stylesheet type="text/xsl" href="./ClientMulticastDocument.xsl"?><multicast_groups>
+<grouping name="Asia">
+<multicast_group name="ASIAPAC" address="233.52.220.23" port="25023" env="production">
+<source>199.30.153.100</source>
+<source>199.30.153.116</source>
+<source>199.30.153.164</source>
+<source>199.30.153.20</source>
+<source>199.30.153.28</source>
+<source>199.30.153.4</source>
+<source>199.30.153.44</source>
+<source>199.30.153.45</source>
+<source>199.30.153.84</source>
+</multicast_group>
+<multicast_group name="ASIAPAC_ESTIMATES" address="233.52.220.24" port="25024" env="production">
+<source>199.30.153.100</source>
+<source>199.30.153.116</source>
+<source>199.30.153.164</source>
+<source>199.30.153.20</source>
+<source>199.30.153.28</source>
+<source>199.30.153.4</source>
+<source>199.30.153.44</source>
+<source>199.30.153.45</source>
+<source>199.30.153.84</source>
+</multicast_group>
+</grouping>
+<grouping name="Beta">
+<multicast_group name="BETA_1" address="233.52.220.250" port="25250" env="public_test">
+<source>199.30.153.100</source>
+<source>199.30.153.116</source>
+<source>199.30.153.164</source>
+<source>199.30.153.20</source>
+<source>199.30.153.28</source>
+<source>199.30.153.4</source>
+<source>199.30.153.84</source>
+</multicast_group>
+<multicast_group name="BETA_2" address="233.52.220.251" port="25251" env="public_test">
+<source>199.30.153.100</source>
+<source>199.30.153.116</source>
+<source>199.30.153.164</source>
+<source>199.30.153.20</source>
+<source>199.30.153.28</source>
+<source>199.30.153.4</source>
+<source>199.30.153.84</source>
+</multicast_group>
+<multicast_group name="BETA_3" address="233.52.220.252" port="25252" env="public_test">
+<source>199.30.153.100</source>
+<source>199.30.153.116</source>
+<source>199.30.153.164</source>
+<source>199.30.153.20</source>
+<source>199.30.153.28</source>
+<source>199.30.153.4</source>
+<source>199.30.153.84</source>
+</multicast_group>
+<multicast_group name="BETA_4" address="233.52.220.253" port="25253" env="public_test">
+<source>199.30.153.100</source>
+<source>199.30.153.116</source>
+<source>199.30.153.132</source>
+<source>199.30.153.133</source>
+<source>199.30.153.164</source>
+<source>199.30.153.180</source>
+<source>199.30.153.181</source>
+<source>199.30.153.20</source>
+<source>199.30.153.28</source>
+<source>199.30.153.4</source>
+<source>199.30.153.84</source>
+</multicast_group>
+<multicast_group name="BETA_5" address="233.52.220.245" port="25245" env="public_test">
+<source>199.30.153.100</source>
+<source>199.30.153.116</source>
+<source>199.30.153.164</source>
+<source>199.30.153.20</source>
+<source>199.30.153.28</source>
+<source>199.30.153.4</source>
+<source>199.30.153.84</source>
+</multicast_group>
+<multicast_group name="BETA_6" address="233.52.220.246" port="25246" env="public_test">
+<source>199.30.153.100</source>
+<source>199.30.153.116</source>
+<source>199.30.153.164</source>
+<source>199.30.153.20</source>
+<source>199.30.153.28</source>
+<source>199.30.153.4</source>
+<source>199.30.153.84</source>
+</multicast_group>
+<multicast_group name="BETA_7" address="233.52.220.247" port="25247" env="public_test">
+<source>199.30.153.100</source>
+<source>199.30.153.116</source>
+<source>199.30.153.164</source>
+<source>199.30.153.20</source>
+<source>199.30.153.28</source>
+<source>199.30.153.4</source>
+<source>199.30.153.84</source>
+</multicast_group>
+<multicast_group name="BETA_8" address="233.52.220.248" port="25248" env="public_test">
+<source>199.30.153.100</source>
+<source>199.30.153.116</source>
+<source>199.30.153.164</source>
+<source>199.30.153.20</source>
+<source>199.30.153.28</source>
+<source>199.30.153.4</source>
+<source>199.30.153.84</source>
+</multicast_group>
+<multicast_group name="BETA_9" address="233.52.220.249" port="25249" env="public_test">
+<source>199.30.153.100</source>
+<source>199.30.153.116</source>
+<source>199.30.153.164</source>
+<source>199.30.153.20</source>
+<source>199.30.153.28</source>
+<source>199.30.153.4</source>
+<source>199.30.153.84</source>
+</multicast_group>
+<multicast_group name="BETA_10" address="233.52.220.243" port="25243" env="public_test"/>
+</grouping>
+<grouping name="CA">
+<multicast_group name="CA_STATISTICS_CANADA" address="233.52.220.16" port="25016" env="production">
+<source>199.30.153.186</source>
+</multicast_group>
+<multicast_group name="CA_BANK_OF_CANADA" address="233.52.220.17" port="25017" env="production">
+<source>199.30.153.194</source>
+</multicast_group>
+<multicast_group name="CA_ESTIMATES" address="233.52.220.19" port="25019" env="production">
+<source>199.30.153.100</source>
+<source>199.30.153.116</source>
+<source>199.30.153.164</source>
+<source>199.30.153.20</source>
+<source>199.30.153.28</source>
+<source>199.30.153.4</source>
+<source>199.30.153.84</source>
+</multicast_group>
+<multicast_group name="CA_GROUP_2" address="233.52.220.22" port="25022" env="production">
+<source>199.30.153.4</source>
+</multicast_group>
+</grouping>
+<grouping name="EU">
+<multicast_group name="UK_OFC_NATL_STATISTICS" address="233.52.220.9" port="25009" env="production">
+<source>199.30.153.138</source>
+</multicast_group>
+<multicast_group name="UK_BOE" address="233.52.220.25" port="25025" env="production">
+<source>199.30.153.116</source>
+<source>199.30.153.146</source>
+</multicast_group>
+<multicast_group name="EU_GROUP_1" address="233.52.220.10" port="25010" env="production">
+<source>199.30.153.132</source>
+<source>199.30.153.133</source>
+</multicast_group>
+<multicast_group name="EU_GROUP_2" address="233.52.220.11" port="25011" env="production">
+<source>199.30.153.100</source>
+<source>199.30.153.116</source>
+<source>199.30.153.132</source>
+<source>199.30.153.133</source>
+<source>199.30.153.164</source>
+<source>199.30.153.20</source>
+<source>199.30.153.28</source>
+<source>199.30.153.4</source>
+<source>199.30.153.84</source>
+</multicast_group>
+<multicast_group name="EU_GROUP_3" address="233.52.220.12" port="25012" env="production">
+<source>199.30.153.100</source>
+<source>199.30.153.116</source>
+<source>199.30.153.117</source>
+<source>199.30.153.132</source>
+<source>199.30.153.133</source>
+<source>199.30.153.164</source>
+<source>199.30.153.20</source>
+<source>199.30.153.28</source>
+<source>199.30.153.4</source>
+<source>199.30.153.84</source>
+</multicast_group>
+<multicast_group name="EU_ESTIMATES" address="233.52.220.14" port="25014" env="production">
+<source>199.30.153.100</source>
+<source>199.30.153.116</source>
+<source>199.30.153.164</source>
+<source>199.30.153.20</source>
+<source>199.30.153.28</source>
+<source>199.30.153.4</source>
+<source>199.30.153.84</source>
+</multicast_group>
+<multicast_group name="UK_ESTIMATES" address="233.52.220.14" port="25014" env="production">
+<source>199.30.153.100</source>
+<source>199.30.153.116</source>
+<source>199.30.153.164</source>
+<source>199.30.153.20</source>
+<source>199.30.153.28</source>
+<source>199.30.153.4</source>
+<source>199.30.153.84</source>
+</multicast_group>
+<multicast_group name="DE_ESTIMATES" address="233.52.220.15" port="25015" env="production">
+<source>199.30.153.100</source>
+<source>199.30.153.116</source>
+<source>199.30.153.164</source>
+<source>199.30.153.20</source>
+<source>199.30.153.28</source>
+<source>199.30.153.4</source>
+<source>199.30.153.84</source>
+</multicast_group>
+</grouping>
+<grouping name="MNI Indicators">
+<multicast_group name="MNI_INDICATORS" address="233.52.220.27" port="25027" env="public_test">
+<source>199.30.153.100</source>
+<source>199.30.153.116</source>
+<source>199.30.153.164</source>
+<source>199.30.153.20</source>
+<source>199.30.153.28</source>
+<source>199.30.153.4</source>
+<source>199.30.153.84</source>
+</multicast_group>
+</grouping>
+<grouping name="Other">
+<multicast_group name="*ANY*" address="0.0.0.0" port="0" env="public_test"/>
+</grouping>
+<grouping name="Risk Notification">
+<multicast_group name="RISK_NOTIFICATION" address="233.52.220.31" port="25031" env="public_test">
+<source>199.30.153.6</source>
+</multicast_group>
+</grouping>
+<grouping name="System">
+<multicast_group name="SYSTEM_HEARTBEAT" address="233.52.220.1" port="25001" env="production">
+<source>199.30.153.84</source>
+</multicast_group>
+</grouping>
+<grouping name="Test_Feed">
+<multicast_group name="TEST_FEED" address="233.52.220.254" port="25254" env="public_test">
+<source>199.30.153.5</source>
+<source>199.30.153.8</source>
+</multicast_group>
+</grouping>
+<grouping name="US">
+<multicast_group name="US_DEPT_LABOR" address="233.52.220.2" port="25002" env="production">
+<source>199.30.153.28</source>
+<source>199.30.153.30</source>
+</multicast_group>
+<multicast_group name="US_DEPT_COMMERCE" address="233.52.220.3" port="25003" env="production">
+<source>199.30.153.66</source>
+</multicast_group>
+<multicast_group name="US_DEPT_TREASURY" address="233.52.220.4" port="25004" env="production">
+<source>199.30.153.100</source>
+<source>199.30.153.116</source>
+<source>199.30.153.164</source>
+<source>199.30.153.20</source>
+<source>199.30.153.28</source>
+<source>199.30.153.4</source>
+<source>199.30.153.44</source>
+<source>199.30.153.45</source>
+<source>199.30.153.84</source>
+</multicast_group>
+<multicast_group name="US_DEPT_AGRICULTURE" address="233.52.220.6" port="25006" env="production">
+<source>199.30.153.50</source>
+</multicast_group>
+<multicast_group name="US_NATL_ASSOC_REALTORS" address="233.52.220.7" port="25007" env="production">
+<source>199.30.153.28</source>
+</multicast_group>
+<multicast_group name="US_GROUP_1" address="233.52.220.5" port="25005" env="production">
+<source>199.30.153.100</source>
+<source>199.30.153.116</source>
+<source>199.30.153.164</source>
+<source>199.30.153.20</source>
+<source>199.30.153.28</source>
+<source>199.30.153.4</source>
+<source>199.30.153.44</source>
+<source>199.30.153.45</source>
+<source>199.30.153.84</source>
+</multicast_group>
+<multicast_group name="US_GROUP_2" address="233.52.220.8" port="25008" env="production">
+<source>199.30.153.100</source>
+<source>199.30.153.116</source>
+<source>199.30.153.164</source>
+<source>199.30.153.20</source>
+<source>199.30.153.28</source>
+<source>199.30.153.4</source>
+<source>199.30.153.44</source>
+<source>199.30.153.45</source>
+<source>199.30.153.84</source>
+</multicast_group>
+<multicast_group name="US_GROUP_3" address="233.52.220.20" port="25020" env="production">
+<source>199.30.153.28</source>
+<source>199.30.153.4</source>
+</multicast_group>
+<multicast_group name="US_GROUP_4" address="233.52.220.21" port="25021" env="production">
+<source>199.30.153.84</source>
+</multicast_group>
+<multicast_group name="US_ESTIMATES" address="233.52.220.13" port="25013" env="production">
+<source>199.30.153.100</source>
+<source>199.30.153.116</source>
+<source>199.30.153.164</source>
+<source>199.30.153.20</source>
+<source>199.30.153.28</source>
+<source>199.30.153.4</source>
+<source>199.30.153.84</source>
+</multicast_group>
+<multicast_group name="CHI_REPORT" address="233.52.220.29" port="25029" env="production">
+<source>199.30.153.100</source>
+<source>199.30.153.116</source>
+<source>199.30.153.164</source>
+<source>199.30.153.20</source>
+<source>199.30.153.28</source>
+<source>199.30.153.4</source>
+<source>199.30.153.44</source>
+<source>199.30.153.45</source>
+<source>199.30.153.84</source>
+</multicast_group>
+<multicast_group name="FITCH" address="233.52.220.30" port="25030" env="production">
+<source>199.30.153.84</source>
+</multicast_group>
+<multicast_group name="US_FED" address="233.52.220.32" port="25032" env="production">
+<source>199.30.153.100</source>
+<source>199.30.153.116</source>
+<source>199.30.153.164</source>
+<source>199.30.153.20</source>
+<source>199.30.153.28</source>
+<source>199.30.153.4</source>
+<source>199.30.153.84</source>
+</multicast_group>
+<multicast_group name="ISM" address="233.52.220.26" port="25026" env="production">
+<source>199.30.153.100</source>
+<source>199.30.153.116</source>
+<source>199.30.153.164</source>
+<source>199.30.153.20</source>
+<source>199.30.153.28</source>
+<source>199.30.153.4</source>
+<source>199.30.153.44</source>
+<source>199.30.153.45</source>
+<source>199.30.153.84</source>
+</multicast_group>
+</grouping>
+</multicast_groups>

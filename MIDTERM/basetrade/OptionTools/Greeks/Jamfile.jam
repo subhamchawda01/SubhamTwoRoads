@@ -1,0 +1,13 @@
+
+project : usage-requirements <include>$(PROJECT_INSTALL) ;
+
+lib Greeks : [ glob *.cpp ] : <link>static ;
+
+install libGreeks
+  : Greeks
+  : <install-type>LIB
+    <variant>release:<location>"$(PROJECT_INSTALL)/lib"
+    <variant>debug:<location>"$(PROJECT_INSTALL)/libdebug"
+  : release debug
+  ;
+

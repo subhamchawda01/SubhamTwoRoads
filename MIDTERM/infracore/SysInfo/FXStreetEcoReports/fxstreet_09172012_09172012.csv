@@ -1,0 +1,5 @@
+"country","date","name","actual","consensus","previous","volatility"
+"Canada","20120917 12:30:00","Canadian portfolio investment in foreign securities","","","$ -3.940 ","1"
+"Canada","20120917 12:30:00","Foreign portfolio investment in Canadian securities","","","$ -7.890 ","1"
+"United States","20120917 12:30:00","NY Empire State Manufacturing Index",""," -2.000 "," -5.850 ","1"
+"Peru","20120917 14:00:00","Gross Domestic Product","","","7.070  %","1"

@@ -1,0 +1,56 @@
+project : usage-requirements <include>$(PROJECT_INSTALL) ;
+
+use-project /PDVCC : ../../libdvccode ;
+
+use-project /PMinuteBarDispatcher : ../MinuteBarDispatcherCode ;
+
+exe spread_exec
+    : spread_exec.cpp
+      /PDVCC//SimPnls
+     /PDVCC//SimMarketMaker 
+     /PDVCC//LoggedSources
+     /PDVCC//CDef 
+     /PDVCC//CommonDataStructures 
+     /PDVCC//Utils
+     /PDVCC//BaseUtils
+     /PDVCC//Indicators 
+     /PDVCC//OptionsUtils 
+     /PDVCC//ModelMath 
+     /PDVCC//ExternalData 
+     /PDVCC//CommonTradeUtils 
+     /PDVCC//MarketAdapter 
+     /PDVCC//InitCommon
+#      /PDVCC//ExecLogic
+#      /PDVCC//Profiler
+     /PDVCC//OrderRouting
+      /PDVCC//TradeUtils
+#      /PDVCC//TradingInfo
+     /PDVCC//SmartOrderRouting
+#      /PDVCC//RiskManagement
+#      /PDVCC//VolatileTradingInfo
+     /PDVCC//SpreadTrading
+      /PMinuteBarDispatcher//libMbarDispatcher
+      /PDVCC//boost_serialization
+    :
+    : <variant>debug <variant>release
+      <linkflags>-lpthread
+      <linkflags>-lsqlite3
+    ;
+
+exe kalman_exec
+    : kalman_exec.cpp 
+      /PDVCC//SpreadTrading
+     /PDVCC//CDef 
+     /PDVCC//CommonDataStructures 
+    :
+    : <variant>debug <variant>release
+      <linkflags>-lpthread
+    ;
+
+install install-bin
+        : spread_exec kalman_exec
+        : <variant>release:<location>"$(PROJECT_INSTALL)/bin"
+          <variant>debug:<location>"$(PROJECT_INSTALL)/bindebug"
+        : release debug
+        ;
+

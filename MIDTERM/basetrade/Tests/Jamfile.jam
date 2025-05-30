@@ -1,0 +1,47 @@
+project : usage-requirements <include>$(PROJECT_INSTALL) ;
+
+use-project /PDVCC : ../libdvccode ;
+
+use-project /PMTools : ../MToolsCode ;
+
+
+
+# lib ncurses : : <name>ncurses <search>/usr/lib64 ;
+
+lib libcppunit
+:
+: # requirements
+  <name>cppunit 
+  <search>/usr/lib64
+:
+: 
+; 
+
+
+exe run_tests
+    : # sources
+    [ glob *.cpp ]
+    /PDVCC//CommonTradeUtils
+    /PDVCC//CDef
+    /PDVCC//TradeUtils
+    /PDVCC//Utils
+    /PDVCC//CommonDataStructures
+
+#     libcppunit # disable static for now
+    : # requirements
+    : # build options 
+      <variant>release
+      <linkflags>-lcppunit
+      <linkflags>-lpthread
+      <linkflags>-ldl
+      <linkflags>-Wl,--no-as-needed
+#      <linkflags>-fno-lto # trying to disable lto to fix linking problem
+    : # usage requirements
+    ;
+
+install install-bin
+	: run_tests
+	: <variant>release:<location>"$(PROJECT_INSTALL)/bin"
+      	<variant>debug:<location>"$(PROJECT_INSTALL)/bindebug"
+  	: release
+	;

@@ -1,0 +1,31 @@
+# We will need this project to have dependencies.
+use-project /PDVCC : ../../libdvccode ;
+use-project /PExecLogic : ../../ExecLogicCode ;
+use-project /PInitCommon : ../../InitCommonCode ;
+use-project /PIndicators : ../../IndicatorsCode ;
+use-project /PModelMath : ../../ModelMathCode ;
+
+# project : usage-requirements 
+
+lib BaseTradingTests
+: # sources
+[ glob *.cpp ] 
+: # requirements
+<link>static <use>/PDVCC//CDef <use>/PDVCC//CommonDataStructures <use>/PExecLogic//ExecLogic <use>/PInitCommon//InitCommon <use>/PDVCC//Utils <use>/PDVCC//Profiler <use>/PDVCC//VolatileTradingInfo <use>/PIndicators//Indicators <use>/PDVCC//OrderRouting <use>/PDVCC//SmartOrderRouting <use>/PDVCC//Utils <use>/PDVCC//BaseUtils <use>/PModelMath//ModelMath <use>/PDVCC//SimMarketMaker <use>/PDVCC//SimPnls
+: 
+: # usage requirements
+<library>/PDVCC//CDef 
+<library>/PDVCC//CommonDataStructures 
+<library>/PExecLogic//ExecLogic
+<library>/PInitCommon//InitCommon
+<library>/PDVCC//Profiler
+<library>/PDVCC//VolatileTradingInfo
+<library>/PIndicators//Indicators
+<library>/PDVCC//OrderRouting
+<library>/PDVCC//SmartOrderRouting
+<library>/PDVCC//Utils
+<library>/PDVCC//BaseUtils
+<library>/PModelMath//ModelMath
+<library>/PDVCC//SimMarketMaker
+<library>/PDVCC//SimPnls
+; 

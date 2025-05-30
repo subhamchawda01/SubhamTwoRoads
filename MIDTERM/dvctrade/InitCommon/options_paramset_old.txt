@@ -1,0 +1,303 @@
+/**
+ \file InitCommon/options_paramset.hpp
+
+ \author: (c) Copyright Two Roads Technological Solutions Pvt Ltd 2011
+ Address:
+ Suite No 353, Evoma, #14, Bhattarhalli,
+ Old Madras Road, Near Garden City College,
+ KR Puram, Bangalore 560049, India
+ +91 80 4190 3551
+
+ */
+#ifndef BASE_INITCOMMON_OPTIONS_PARAMSET_H
+#define BASE_INITCOMMON_OPTIONS_PARAMSET_H
+
+#include "ORSMessages/control_messages.hpp"
+#include "CommonTradeUtils/economic_events_manager.hpp"
+#include "CommonTradeUtils/sample_data_util.hpp"
+#include "Indicators/positioning.hpp"
+#include "Indicators/recent_simple_volume_measure.hpp"
+
+
+#define EZONE_MAXLEN 5
+
+namespace HFSAT {
+
+struct OptionsParamSet {
+  int tradingdate_;
+
+  int worst_case_position_;  ///< the worst case max position ... never have orders that can let you exceed this
+  int worst_case_unit_ratio_;  ///< either this or worst_case_position can be used to specify worst_case_postion
+  int max_position_;           ///< working max position... used to check position, not orders
+  double max_unit_ratio_;
+  int max_total_unit_ratio_to_place_;
+  int max_total_size_to_place_;
+
+  int unit_trade_size_;              ///< in general we should placing and canceling orders of this size
+  int max_global_position_;
+
+  double highpos_limits_;  ///< above this position ( as a multiple of unit_trade_size_ ), the thresholds have to be adjusted further
+  double highpos_limits_unit_ratio_;
+  double highpos_thresh_factor_;
+  double highpos_thresh_decrease_;
+  double highpos_size_factor_;
+
+  // two ways of specifying params
+  // one each ofthem
+  double increase_place_;
+  double increase_keep_;
+  double zeropos_limits_;
+  double zeropos_limits_unit_ratio_;
+  double zeropos_place_;
+  double zeropos_keep_;
+  double decrease_place_;
+  double decrease_keep_;
+  // two first three principal coefficients :)
+  double place_keep_diff_;
+  double increase_zeropos_diff_;
+  double zeropos_decrease_diff_;
+  double spread_increase_;
+
+  double min_step_increment_;
+  double max_min_diff_;
+  double max_min_diff_order_;
+
+  double thresh_increase_;
+  double thresh_decrease_;
+  double thresh_place_;
+  double thresh_place_keep_diff_;
+
+  int safe_distance_;
+  bool allowed_to_improve_;
+  bool allowed_to_aggress_;
+  double improve_;
+  int improve_ticks_;
+  double aggressive_;
+
+  // settings for aggressive and improve sanity checks
+  int max_position_to_lift_;
+  int max_position_to_bidimprove_;
+  int max_position_to_cancel_on_lift_;
+  int max_size_to_aggress_;  // Maximum size of the side on which we are trying to aggress against
+  int min_position_to_hit_;
+  int min_position_to_askimprove_;
+  int min_position_to_cancel_on_hit_;
+
+  int max_int_spread_to_place_;      ///< if the spread is greater than this then do not place an order at inside market
+  int max_int_level_diff_to_place_;  ///< if (L1 - L2) is greater than this then do not place an order at inside market
+  int max_int_spread_to_cross_;
+  int min_int_spread_to_improve_;
+  unsigned int num_non_best_bid_levels_monitored_;
+  unsigned int num_non_best_ask_levels_monitored_;
+  unsigned int min_distance_for_non_best_;
+  unsigned int max_distance_for_non_best_;
+
+  int max_loss_;
+  int max_pnl_;
+  int short_term_global_max_loss_;
+  int msecs_for_short_term_global_max_loss_;
+  int short_term_global_max_loss_getflat_msecs_;
+  int global_max_loss_;
+  int max_opentrade_loss_;
+  int max_drawdown_;
+  int max_short_term_loss_;
+
+  int cooloff_interval_;
+  int agg_cooloff_interval_;
+  int improve_cooloff_interval_;
+
+  double stdev_fact_;
+  double stdev_cap_;
+  unsigned int stdev_duration_;
+
+  double low_stdev_lvl_;  ///< below this spread checks can be ignored
+  int min_size_to_join_;  ///< the minimum size at a level to place a passive order on
+  double spread_add_;     ///< a factor decreased from passive thresholds and increased in agg thresholds when spread is
+  /// more than 1
+  double severity_to_getflat_on_;
+  EconomicZone_t ezone_traded_;
+
+  // logic to place orders during non normal trading time
+  int agg_closeout_utc_hhmm_;  ///< if after this time then place an aggressive order to close out if spread is 1tick
+  int agg_closeout_max_size_;  ///< if > 0 and if less than this size on other side then aggress and close out
+
+  int break_msecs_on_max_opentrade_loss_;  ///< only if overriding default value
+
+  int max_global_risk_;
+  double max_global_risk_ratio_;
+
+  bool use_stable_bidask_levels_;
+  bool use_stable_book_;
+  bool place_multiple_orders_;
+
+  double max_global_notional_risk_;
+  double self_pos_projection_factor_;
+  double moving_bidask_spread_duration_;
+
+  double max_global_delta_;
+  double max_global_gamma_;
+  double max_global_vega_;
+  double max_global_theta_;
+
+  double delta_hedge_lower_threshold_;
+  double delta_hedge_upper_threshold_;
+  int fractional_second_implied_vol_;
+  int spread_int_to_target_;
+  int spread_int_to_run_dat_;
+
+  double size_disclosed_factor_;
+
+  int flatfok_book_depth_;
+  bool get_flat_by_fok_mode_;
+  bool read_get_flat_by_fok_mode_;
+
+  // flags
+  bool read_worst_case_position_;
+  bool read_worst_case_unit_ratio_;
+  bool read_max_position_;
+  bool read_max_unit_ratio_;
+  bool read_max_total_unit_ratio_to_place_;
+  bool read_max_total_size_to_place_;
+  bool read_unit_trade_size_;
+  bool read_max_global_position_;
+
+  bool read_highpos_limits_;
+  bool read_highpos_limits_unit_ratio_;
+  bool read_highpos_thresh_factor_;
+  bool read_highpos_thresh_decrease_;
+  bool read_highpos_size_factor_;
+  bool read_increase_place_;
+  bool read_increase_keep_;
+  bool read_zeropos_limits_;
+  bool read_zeropos_limits_unit_ratio_;
+  bool read_zeropos_place_;
+  bool read_zeropos_keep_;
+  bool read_decrease_place_;
+  bool read_decrease_keep_;
+
+  bool read_place_keep_diff_;
+  bool read_increase_zeropos_diff_;
+  bool read_zeropos_decrease_diff_;
+  bool read_spread_increase_;
+
+  bool read_min_step_increment_;
+  bool read_max_min_diff_;
+  bool read_max_min_diff_order_;
+
+  bool read_thresh_increase_;
+  bool read_thresh_decrease_;
+  bool read_thresh_place_;
+  bool read_thresh_place_keep_diff_;
+
+  bool read_safe_distance_;
+
+  bool read_allowed_to_improve_;
+  bool read_allowed_to_aggress_;
+  bool read_improve_;
+  bool read_aggressive_;
+
+  bool read_max_position_to_lift_;
+  bool read_max_position_to_bidimprove_;
+  bool read_max_position_to_cancel_on_lift_;
+  bool read_max_size_to_aggress_;
+  bool read_min_position_to_hit_;
+  bool read_min_position_to_askimprove_;
+  bool read_min_position_to_cancel_on_hit_;
+
+  bool read_max_int_spread_to_place_;
+  bool read_max_int_level_diff_to_place_;
+  bool read_max_int_spread_to_cross_;
+  bool read_min_int_spread_to_improve_;
+
+  bool read_num_non_best_bid_levels_monitored_;
+  bool read_num_non_best_ask_levels_monitored_;
+  bool read_min_distance_for_non_best_;
+  bool read_max_distance_for_non_best_;
+
+  bool read_max_loss_;
+  bool read_max_pnl_;
+  bool read_short_term_global_max_loss_;
+  bool read_global_max_loss_;
+  bool read_max_opentrade_loss_;
+  bool read_max_drawdown_;
+  bool read_max_short_term_loss_;
+
+  bool read_cooloff_interval_;
+  bool read_agg_cooloff_interval_;
+  bool read_improve_cooloff_interval_;
+  // bool read_highpos_aversion_msecs_ ;
+
+  bool read_stdev_fact_;
+  bool read_stdev_cap_;
+  bool read_stdev_duration_;
+  bool read_low_stdev_lvl_;
+  bool read_min_size_to_join_;
+  bool read_spread_add_;
+  bool read_ezone_traded_;
+  bool read_severity_to_getflat_on_;
+  bool read_agg_closeout_utc_hhmm_;
+  bool read_agg_closeout_max_size_;
+  bool read_break_msecs_on_max_opentrade_loss_;
+
+  EconomicZone_t ezone_vec_[EZONE_MAXLEN];  ///< in case we want to specifiy which economic zones are important
+
+  bool use_throttle_manager_;
+  int throttle_message_limit_;
+
+  std::string paramfilename_;
+
+  bool read_max_global_risk_;
+  bool read_max_global_risk_ratio_;
+
+  bool read_use_stable_bidask_levels_;
+  bool read_use_stable_book_;
+  bool read_place_multiple_orders_;
+  bool read_size_disclosed_factor_;
+
+  bool read_max_global_delta_;
+  bool read_max_global_gamma_;
+  bool read_max_global_vega_;
+  bool read_max_global_theta_;
+
+  bool read_delta_hedge_lower_threshold_;
+  bool read_delta_hedge_upper_threshold_;
+  bool read_fractional_second_implied_vol_;
+  bool read_spread_int_to_target_;
+  bool read_spread_int_to_run_dat_;
+  // for NSE & BSE we want to make UTS multiple of time varying lot size. We use notional
+  // UTS to get around this problem
+  bool use_notional_uts_;
+  double notional_uts_;
+  bool read_use_notional_uts_;
+  bool read_notional_uts_;
+
+  OptionsParamSet(const std::string& _paramfilename_, const int r_tradingdate_, std::string dep_short_code_);
+
+  void LoadParamSet(std::string dep_short_code);
+
+
+  bool read_moving_bidask_spread_duration_;
+  bool read_max_global_beta_adjusted_notional_risk_;
+  bool read_self_pos_projection_factor_;
+
+  double stdev_fact_ticks_;
+  std::string base_shortcode_structured;
+  std::string price_type_;
+  bool use_pre_getflat_;
+  int pre_getflat_msecs_;
+  double pre_getflat_multiplier_;
+  bool allow_to_aggress_on_getflat_;
+  double getflat_aggress_;
+  double max_spread_getflat_aggress_;
+
+
+  void LoadParamSet();
+  void WriteSendStruct(ParamSetSendStruct& retval) const;
+
+  // there are two ways of specifying params ... building the other one
+  void ReconcileParams(std::string dep_short_code_);
+  int GetAvgL1Size(std::string dep_short_code, int look_back);
+
+};
+}
+#endif  // BASE_INITCOMMON_OPTIONS_PARAMSET_H

@@ -1,0 +1,91 @@
+#Product	StreamType	StreamService	Ip	Port	Details
+1	S	A	233.252.8.1	30001	Market by Order - FX Futures
+101	S	A	233.252.8.4	30101	Market by Price - FX Futures
+201	S	A	233.252.8.7	30201	Top of Book - FX Futures
+2	S	A	233.252.8.10	30002	Market by Order - FX Options
+102	S	A	233.252.8.13	30102	Market by Price - FX Options
+202	S	A	233.252.8.16	30202	Top of Book - FX Options
+3	S	A	233.252.8.19	30003	Market by Order - Interest rate Futures
+103	S	A	233.252.8.22	30103	Market by Price - Interest rate Futures
+203	S	A	233.252.8.25	30203	Top of Book - Interest rate Futures
+4	S	A	233.252.8.28	30004	Market by Order - Interest rate Option
+104	S	A	233.252.8.31	30104	Market by Price - Interest rate Option
+204	S	A	233.252.8.34	30204	Top of Book - Interest rate Option
+5	S	A	233.252.8.37	30005	Market by Order - Commodity Futures
+105	S	A	233.252.8.40	30105	Market by Price - Commodity Futures
+205	S	A	233.252.8.43	30205	Top of Book - Commodity Futures
+6	S	A	233.252.8.46	30006	Market by Order - Commodity Options
+106	S	A	233.252.8.49	30106	Market by Price - Commodity Options
+206	S	A	233.252.8.52	30206	Top of Book - Commodity Options
+7	S	A	233.252.8.55	30007	Market by Order - Equity Index Futures
+107	S	A	233.252.8.58	30107	Market by Price - Equity Index Futures
+207	S	A	233.252.8.61	30207	Top of Book - Equity Index Futures
+8	S	A	233.252.8.64	30008	Market by Order - Equity Index Options
+108	S	A	233.252.8.67	30108	Market by Price - Equity Index Options
+208	S	A	233.252.8.70	30208	Top of Book - Equity Index Options
+9	S	A	233.252.8.73	30009	Market by Order - FX Spot
+109	S	A	233.252.8.76	30109	Market by Price - FX Spot
+209	S	A	233.252.8.79	30209	Top of Book - FX Spot
+10	S	A	233.252.8.82	30010	Market by Order - Equity Index Futures – mini contracts
+110	S	A	233.252.8.85	30110	Market by Price- Equity Index Futures – mini contracts
+210	S	A	233.252.8.88	30210	Top of Book - Equity Index Futures – mini contracts
+1	I	A	233.252.8.2	20001	Market by Order - FX Futures
+101	I	A	233.252.8.5	20101	Market by Price - FX Futures
+201	I	A	233.252.8.8	20201	Top of Book - FX Futures
+2	I	A	233.252.8.11	20002	Market by Order - FX Options
+102	I	A	233.252.8.14	20102	Market by Price - FX Options
+202	I	A	233.252.8.17	20202	Top of Book - FX Options
+3	I	A	233.252.8.20	20003	Market by Order - Interest rate Futures
+103	I	A	233.252.8.23	20103	Market by Price - Interest rate Futures
+203	I	A	233.252.8.26	20203	Top of Book - Interest rate Futures
+4	I	A	233.252.8.29	20004	Market by Order - Interest rate Option
+104	I	A	233.252.8.32	20104	Market by Price - Interest rate Option
+204	I	A	233.252.8.35	20204	Top of Book - Interest rate Option
+5	I	A	233.252.8.38	20005	Market by Order - Commodity Futures
+105	I	A	233.252.8.41	20105	Market by Price - Commodity Futures
+205	I	A	233.252.8.44	20205	Top of Book - Commodity Futures
+6	I	A	233.252.8.47	20006	Market by Order - Commodity Options
+106	I	A	233.252.8.50	20106	Market by Price - Commodity Options
+206	I	A	233.252.8.53	20206	Top of Book - Commodity Options
+7	I	A	233.252.8.56	20007	Market by Order - Equity Index Futures
+107	I	A	233.252.8.59	20107	Market by Price - Equity Index Futures
+207	I	A	233.252.8.62	20207	Top of Book - Equity Index Futures
+8	I	A	233.252.8.65	20008	Market by Order - Equity Index Options
+108	I	A	233.252.8.68	20108	Market by Price - Equity Index Options
+208	I	A	233.252.8.71	20208	Top of Book - Equity Index Options
+9	I	A	233.252.8.74	20009	Market by Order - FX Spot
+109	I	A	233.252.8.77	20109	Market by Price - FX Spot
+209	I	A	233.252.8.80	20209	Top of Book - FX Spot
+10	I	A	233.252.8.83	20010	Market by Order - Equity Index Futures – mini contracts
+110	I	A	233.252.8.86	20110	Market by Price- Equity Index Futures – mini contracts
+210	I	A	233.252.8.89	20210	Top of Book - Equity Index Futures – mini contracts
+1	R	A	233.252.8.3	10001	Market by Order - FX Futures
+101	R	A	233.252.8.6	10101	Market by Price - FX Futures
+201	R	A	233.252.8.9	10201	Top of Book - FX Futures
+2	R	A	233.252.8.12	10002	Market by Order - FX Options
+102	R	A	233.252.8.15	10102	Market by Price - FX Options
+202	R	A	233.252.8.18	10202	Top of Book - FX Options
+3	R	A	233.252.8.21	10003	Market by Order - Interest rate Futures
+103	R	A	233.252.8.24	10103	Market by Price - Interest rate Futures
+203	R	A	233.252.8.27	10203	Top of Book - Interest rate Futures
+4	R	A	233.252.8.30	10004	Market by Order - Interest rate Option
+104	R	A	233.252.8.33	10104	Market by Price - Interest rate Option
+204	R	A	233.252.8.36	10204	Top of Book - Interest rate Option
+5	R	A	233.252.8.39	10005	Market by Order - Commodity Futures
+105	R	A	233.252.8.42	10105	Market by Price - Commodity Futures
+205	R	A	233.252.8.45	10205	Top of Book - Commodity Futures
+6	R	A	233.252.8.48	10006	Market by Order - Commodity Options
+106	R	A	233.252.8.51	10106	Market by Price - Commodity Options
+206	R	A	233.252.8.54	10206	Top of Book - Commodity Options
+7	R	A	233.252.8.57	10007	Market by Order - Equity Index Futures
+107	R	A	233.252.8.60	10107	Market by Price - Equity Index Futures
+207	R	A	233.252.8.63	10207	Top of Book - Equity Index Futures
+8	R	A	233.252.8.66	10008	Market by Order - Equity Index Options
+108	R	A	233.252.8.69	10108	Market by Price - Equity Index Options
+208	R	A	233.252.8.72	10208	Top of Book - Equity Index Options
+9	R	A	233.252.8.75	10009	Market by Order - FX Spot
+109	R	A	233.252.8.78	10109	Market by Price - FX Spot
+209	R	A	233.252.8.81	10209	Top of Book - FX Spot
+10	R	A	233.252.8.84	10010	Market by Order - Equity Index Futures – mini contracts
+110	R	A	233.252.8.87	10110	Market by Price- Equity Index Futures – mini contracts
+210	R	A	233.252.8.90	10210	Top of Book - Equity Index Futures – mini contracts

@@ -1,0 +1,488 @@
+\documentclass[a4paper]{article}
+
+%% Language and font encodings
+\usepackage[english]{babel}
+%\usepackage[utf8x]{inputenc}
+\usepackage[T1]{fontenc}
+%\usepackage{authblk}
+\usepackage[usenames, dvipsnames]{color}
+\usepackage[table]{xcolor}
+%% Sets page size and margins
+\usepackage[a4paper,top=2cm,bottom=2.4cm,left = 2 cm, right =2cm]{geometry}
+
+%% Useful packages
+\usepackage{amsmath}
+\usepackage{graphicx}
+%\usepackage[colorinlistoftodos]{todonotes}
+\usepackage[colorlinks=true, allcolors=blue]{hyperref}
+
+\renewcommand*\familydefault{\sfdefault} 
+\usepackage[scaled = 0.92]{helvet}
+
+
+%% define
+\definecolor{odd_row}{RGB}{250,250,250}
+\definecolor{even_row}{RGB}{217,217,217 }
+\definecolor{header}{RGB}{197,197,197 }
+\definecolor{footer}{RGB}{57,57,57 }
+\font\titlefont=cmr9 at 30pt
+
+%% define header and footer
+\usepackage{fancyhdr}
+\pagestyle{fancy}
+\renewcommand{\headrulewidth}{0.4pt}
+\renewcommand{\footrulewidth}{0.4pt}
+\lhead{qplum Investment Research }
+\rhead{\includegraphics[width=2cm]{qplum_logo.png}}
+\cfoot{\color{footer}\footnotesize  
+\normalsize\thepage
+}
+
+
+\author[1]{Saruchi Goel \thanks{saruchi@qplum.co}}
+\author[1]{Sanchit Gupta\thanks{sanchit@qplum.co}}
+\author[1]{Sanskar Jain\thanks{sanskar@qplum.co}}
+\author[1]{Gaurav Chakravorty\thanks{gchak@qplum.co}}
+
+\affil[1]{qplum Investment Research}
+
+\title{ We can do better than Modern Portfolio Theory!} 
+\date{}
+
+\begin{document}
+\thispagestyle{empty}
+\maketitle
+\thispagestyle{fancy}
+\begin{abstract}
+We show instances where a portfolio allocated according to Modern Portfolio Theory (MPT), i.e. Mean-Variance-Optimization (MVO), achieves significantly lower returns than other baseline strategies like constant-rebalanced portfolios. We talk about the main drawbacks of MVO and how subsequent quantitative approaches have improved upon them. In this paper, we have tried to correct the false messaging that has been proliferated to investors around the optimality of MVO in real-world investing conditions. At the end, we take the beauty of MPT and the rigor of data-science to make a successful, thorough, and yet cost-effective investment management system.
+\end{abstract}
+
+\section{Why should I care?}
+
+Sixty years ago, asking for the volatility of a stock would have resulted in a lot of heads turning your way. Today, you will be considered naive to not consider risks while investing. Modern Portfolio Theory (MPT) has received more recognition in press than any other data-driven investing framework. But did you ever consider the possibility that we could still be as wrong as we were before MPT came along? Maybe it is really not optimal? Perhaps the assumptions made while formulating it take it far away from being successful as an investing strategy?
+
+MPT is one of the most cited, referenced and also criticized works in investment management. It is the world’s first algo-trading strategy and it is still the most popular in financial adviser community. What would you say if we told you that (a) almost no one who claims to use it, really uses it and (b) it doesn’t work as advertised? Doesn’t that make you question the investment advisers administering heavy doses of MPT to all their clients, if they actually know what they are doing?
+
+In this paper, we are speaking to a real investor and not a quant or academic. Our aim is not to write a nice beautiful model and find a new formula. Our aim is to write about what makes more money in practice. We will talk about the real problems in MPT’s Mean-Variance-Optimization a.k.a. MVO, as a robo-advisor strategy i.e. an algorithmic portfolio management strategy, and how we solve them while designing a better investment management system. 
+
+\subsection{Outline of the paper}
+In section \ref{counter-example} we show that MVO underperforms daily-rebalanced-constant-allocation as an investing strategy. We will expand on the intuition behind it in section \ref{intuition}. In section \ref{salient features} we talk about the salient features of MPT. We will want to preserve these in our pursuit of optimal trading strategy construction in section \ref{modern-trading-systems}. We also explain the context in which MVO was developed and why it was revolutionary at the time. Section \ref{portfolio-management-principles} defines the real job of a portfolio manager and the metric that a portfolio manager is judged by. We touch upon some key notions, that will help us understand the weaknesses of MVO in latter sections. Section \ref{what-is-mvo} describes the MVO formula and what one needs to start using it. Section \ref{drawbacks} talks about the major weaknesses of MVO. Section \ref{subsequent-work} mentions some of the subsequent work in the field that tries to correct the failures mentioned in section \ref{itemized-drawbacks}.
+
+
+\section{Let’s see how badly Mean-Variance-Optimization (MVO) fails\label{counter-example}} 
+First we show you how over a ten year period a daily rebalanced portfolio manager would have performed four times better than an MVO-using buy-and-hold investor. \\ Then we look at possible claims of "I could have done better than plain-MVO". For instance, perhaps I have a great model of expected returns. We show that even in that case MVO would have lost out to rebalancing! \\ And then we show that the result doesn't even depend too much on our choice of 80/20 for the rebalanced portfolio. Even a 50/50 allocation and most other daily rebalanced strategies would have done much better than MVO even if MVO had a perfect model of future returns.
+
+The problem at hand is simple, we have two investors Harry and Sally, who want to invest in two securities. Let's call them A and B.\footnote{For reproducibility of results, please reach out to the authors for the data. We have chosen data of two popular indices. They may or may not be investible directly.} The measure of success is whose portfolio grows the most.
+
+Harry decides to use MPT-based Mean Variance Optimization (MVO), and invests such that his return over the period is maximized. We are intentionally skipping the details as to how he did it as we haven’t yet fully explained MVO, but you can safely assume that Harry computed his portfolio allocation as accurately as MVO allows. Sally, on the other hand, simply decides to keep 80 percent of her capital in A and 20 percent in B. She is very diligent at it and makes sure to rebalance her portfolio daily to keep it 80/20.
+
+\subsection{ Performance of MVO against a daily rebalanced portfolio\label{80-20-does-better-than-MVO-buy-and-hold} }
+Let's say at the end of 1999, Harry uses the historical data returns of the previous ten years to compute the MVO portfolio. He then invests in that allocation and does not make any more changes in the next ten years. As you can see in the graph below, Sally's portfolio would have ended up about three times as much as Harry's over the next ten years. In fact, as you can see below, Harry (solid line) is barely breakeven.
+\begin{figure}[h!]
+	\centering
+	\includegraphics[width=0.9\textwidth]{mvo_not_an_optimal_trading_strategy_dir/Harry_Sally_Out_of_sample_v2.png}
+	\caption{\label{fig:Harry_Sally_Out_Of_Sample}Sally's 80/20 daily rebalanced strategy would have had much better returns than Harry's MVO buy-and-hold}
+\end{figure}
+
+\subsection{ What happens if Harry happens to know the future? }
+MVO using portfolio managers will rightly claim that the secret sauce in using MVO is their model of "expected returns". Without wading into the debate of what is the best model, let's assume that Harry happens to know what will happen in future. Harry uses the ensuing twenty years of data starting Jan-1990 and using MVO, he gets an allocation. He invests in that allocation and does not do anything more in that period.
+
+Fast forward, 20 years, and we see in the backtest of both strategies in Figure \ref{fig:mvo_not_an_optimal_trading_strategy_dir/Harry_Sally_20_yr_Performance} that simpleton Sally with her 80/20 daily rebalanced strategy, would have grown her investments much more than Harry who uses the celebrated MVO method.
+
+\begin{figure}[h!]
+\centering
+\includegraphics[width=0.9\textwidth]{mvo_not_an_optimal_trading_strategy_dir/Harry_Sally_20_yr_Performance_v2.png}
+\caption{\label{fig:Harry_Sally_20_yr_Performance} Even with Harry knowing what is coming, Sally does much better}
+\end{figure}
+
+The simple constant weighted strategy, would have outperformed MVO strategy in all the usual metrics for strategy comparison (Check Table \ref{tab:mvo-oracle-80-20}). The 80/20 strategy achieves more than double the returns at a lower risk and almost half maximum drawdown. 
+
+\begin{table}
+	\rowcolors{2}{even_row}{odd_row}
+	\centering
+	\begin{tabular}{l c c}
+		\rowcolor{header}
+		\hline
+		Backtested stats & Harry’s “optimal portfolio” & Sally’s 80/20 portfolio  \\ 
+		\hline
+		Annualized returns & 8.11\% & 17.01\% \\ 
+		Risk (Standard deviation) & 18.73\% & 14.15\% \\
+		Net returns in 20 years & 375.8\% & 2216\% \\
+		Worst drawdown & -55.3\% & -21.7\% \\
+		Worst 12-month return & -47.5\% & -14.5\% \\
+		Sharpe Ratio & 0.430 & 1.201 \\
+		
+	\end{tabular}
+	\caption{\label{tab:mvo-oracle-80-20}Showing how badly MVO fails to compete with just a 80/20 portfolio}
+\end{table} 
+
+
+
+\newpage
+
+\subsubsection{There is nothing special about 80/20. 50/50 would have worked as well.}
+
+It's not that Sally was lucky to have chosen 80/20. If Sally’s weights were something else, say 50/50, her results would similarly be much better than Harry’s. In fact returns with 50/50 are even better than 80/20. In Table \ref{tab:mvo-oracle-50-50} below, we look at the comparison against the 50-50 strategy. 
+
+\begin{table}[h!]
+	\rowcolors{2}{even_row}{odd_row}
+	\centering
+	\begin{tabular}{l c c}
+		\rowcolor{header}
+		\hline
+		Backtested stats &
+		Harry’s“optimal portfolio” &
+		Sally’s 50/50 portfolio \\
+		\hline
+		Annualized returns & 8.11\% & 20.67\% \\
+		Risk (Standard deviation) & 18.73\% & 42.69\% \\
+		Net returns in 20 years & 375.8\% & 4182\% \\
+		Worst drawdown & -55.3\% & -31.2\% \\
+		Worst Year & -47.5\% & -25.2\% \\
+	\end{tabular}
+	\caption{\label{tab:mvo-oracle-50-50}Showing how badly MVO fails to compete with just a 50/50 portfolio}
+\end{table}
+
+\subsubsection{\label{buy-and-hold-not-culprit}Results don't change much if MVO strategy is allowed to rebalance actively}
+It's not that MVO's underperformance in subsection \ref{80-20-does-better-than-MVO-buy-and-hold} was due it not being allowed to rebalance. Even if Harry had recomputed MVO and rebalanced his portfolio every day, Sally would have still done much better.
+
+\subsection{Conclusion: MVO is not always “the optimal portfolio”.}
+The constant rebalanced strategy outperforms the MVO-strategy in returns and drawdown handsomely. One could go into more details here like transactions costs, post-tax returns, risk-management. We have included them and the results don’t change materially. It is important to not lose sight of the main point here, which is MVO does not always output the “optimal portfolio”.  Before trying to understand why and how to fix it, let’s first take time to pay tribute to the legendary theory.
+
+\section{The beauty of Modern Portfolio Theory \label{salient features}} 
+To understand what a beautiful theory MPT is, we need to understand the context. This was 1952. Investing decisions were completely based on gut feeling. Words like risk, reward, volatility, correlation weren’t a part of even the top investment managers workflow. Markowitz’s work brought together all the common sense in this field into one beautiful and interpretable formula. The MVO formula is also mathematically simple enough for people to compute on pen and paper. 
+Markowitz was building on Shannon’s work on signal processing. Shannon in 1948 established how strong a signal should be given the surrounding noise for it to be decipherable at the receiving end. These concepts seem so simple now, but these are the seminal ideas that much of later work has been built on top of. Markowitz interpreted the same for investment management, where volatility is the noise, and the past returns of stock is the signal strength. Correlation between stocks was how Markowitz formalized the benefit of diversification. 
+Prior to development of MPT, asset allocation was about deciding which stock is likely to go up most, and investing in it. The problem with this approach is, that it completely ignores the uncertainty in determining security’s returns. If the return of the securities were known with certainty, it would make sense to simply invest in the maximum return security. But, this is not the situation in which investors find themselves. Past returns are often very different than future returns. This uncertainty in being able to determine the returns is the risk of investing. Markowitz’s work tries to find out the real information in stock-returns and use it to compute “optimal” allocation to them.
+All these ideas are great and timeless. Much of our discussion today centers around implementation details. 
+\section{Portfolio Management : Theory and Practice \label{portfolio-management-principles}}
+In this section we will work from basics to build a timeless framework of estimation and selection of portfolios.
+\subsection{ Why do we need a framework? What are we trying to do? }
+We need a clear way of deciding which investment strategy is the best way to invest for the future. It is worth recounting the three truths of data-science \cite{qpim2016}:\\
+\begin{itemize}
+	\item We care about future investing gains and not the returns we would have attained in the past, when investing in a strategy.
+	\item Unfortunately, we don’t have the data of what's going to happen in future. All we can try to get is clean data of what happened in the past.
+	\item Not all aspects of past data are equally likely to apply to future. We need to be smart about what to learn from past data.
+\end{itemize}
+\subsection{ Returns and not prices }
+One of the first differences you will note when looking at an asset pricing theory like MPT, is that we are not dealing with prices. We are talking about returns. By returns I mean something that is similar to percent change of a price in that period of time. This is quite different than the news you see about stocks, which is most of the time about prices hitting a new high or new low. While this distinction may seem trivial due to the simple relationship between them, the subsequent impact on the choice of statistical model is a lot. It is easier to make a model to describe the evolution of asset returns than one to describe the evolution of asset prices. For instance a simple model like a US stock index moves in the range of up or down 1\% everyday is likely to hold for much of the last hundred years. On the other hand a price based model like a US stock index moves in the range of up or down 100 points everyday will not be true for more than a tenth of that period. Whereas returns may be positive or negative, asset prices are constrained to be non-negative. Something like a Gaussian distribution is thus not a good model for prices.  
+\subsection{ Log returns vs Nominal returns : It makes all the difference }
+The traditional notion of returns is percentage change in portfolio value, or
+\[ nr(t-1,t ) =  (P_t - P_{t-1})/P_{t-1} \]
+
+This notion of returns is also called simple or notional returns. Another notion is the change in the log of prices or log of portfolio value, also called log returns. 
+
+\[lr(t-1,t) = \log{P_t} - \log{ P_{t-1} } \]
+
+Common sense dictates that if I invest a certain fraction of my portfolio in each security, my net return should be the weighted sum of returns of the securities.
+\[ R(t-1,t ) = \sum_{j=1}^N w_j(t-1,t)*r_j(t-1,t) \]
+
+Returns over smaller periods of time should add up to the net return over the period.
+\[ R(1,t ) = \sum_{i=1}^{T-1} R(i,i+1)  \]
+
+
+The reason that these are relevant in this discussion is that most portfolio theory approaches that try to find formulas for optimal allocation assume that,
+\[ R(1,t ) = \sum_{i=1}^{T-1} \sum_{j=1}^N w_j(i,i+1)*r_j(i,i+1)  \]
+
+
+It is clear that none of the above two notions of returns satisfies both. Because of their respective construction, the two definition of returns show different properties. Log returns over multiple periods can be summed to get overall returns, but the weighted sum of a portfolio’s securities’ log returns can’t be summed to get it’s overall returns. The exact opposite is true of nominal returns.
+
+
+\begin{table}[ h! ]
+\rowcolors{2}{even_row}{odd_row}
+\centering
+\begin{tabular}{l || c || c}
+\rowcolor{header}
+\hline
+&
+Can be summed over multiple periods&
+Can be weighted averaged over multiple securities\\
+\hline
+Nominal Returns&
+No&
+Yes\\
+Log Returns&
+Yes&
+No\\
+\end{tabular}
+\end{table}
+
+More recent work on utility of wealth lends more credence to log-returns and most researchers hold common-sense criterion 2 as more important than 1. They use the Taylor series approximation of log-returns, log ( 1 + Rk ) = Rk to pretend that log-returns can satisfy criterion 1 as well.
+I want to digress here to point out how fund managers play with numbers when marketing. Most marketing teams of funds use nominal returns when reporting performance since nominal-returns are always a better number than log-returns. Consider a situation where a fund loses half its money in the financial crisis, 2008, and then takes five years to make it back. Which means that from 2008 beginning to 2013 end it would not have made any money. If I were to describe performance in nominal-returns it would be -50\% in 2008 and then +22.14\% in the next five years. The fund manager will thus claim an average performance of 10.11\%, without actually making any money! Log-returns would not allow this slight of hand. Net log-returns would be 0\%.\\
+You can think of the Log-Returns discussion above as similar to saying ESPN’s Total Quarterback Rating is a better measure of a quarterback than net yardage, and you need to know this if you are playing NFL fantasy.
+\subsection{ Risk and what does it really mean? }
+The definition of risk that Markowitz started with is just standard deviation of returns. It is a direct inference from Shannon’s work on signal processing. It is simple to compute and very intuitive for most pure science measurements. We will elaborate in section 6 some reasons why this measure of risk does leave a few things to be desired but overall this is a very fair measure. Standard deviation is also a very stable measure of risk and one does not need too much data to estimate it. 
+However before we move on, one should take the time to think what is the real risk of investing. We think that the real risk for most investors is of getting in too late and losing a lot of money very fast and losing faith in investing. Markowitz later work in utility theory and Kahneman’s Nobel prize winning work speaks about this. This is one of the ways in which MVO can prove to be deficient in real life implementation.
+\subsection{ Single-stage portfolio choice vs real-life portfolio management }
+MVO is a classic case of a good idea on paper being marketed in a very wrong fashion. MVO is not a way to manage portfolios at all. MVO is just a single-stage portfolio allocation formula. I mean it is just like a calculator that you can use to get weights for the present time. It is a “single-stage” portfolio allocation choice. It isn’t a complete strategy. 
+
+For instance, "Invest in the top 500 stocks in the US" is a popular investment strategy. The part that makes it a complete strategy is the rules around how to implement it. For instance in constructing the S\&P500 index strategy, S\&P recompute their index every three months, and specify an exact allocation to have for the ensuing three months. Portfolio management isn’t just about choosing what to do once. A strategy is only complete if it incorporates the real life aspect of evolution of time, stocks dying and risk events. 
+
+A multi-stage version of MVO will be something like “Use MVO every month with expected returns, correlation and standard deviation computed using all available data. Rebalance to keep the same allocation till the next month.”
+\section{ Formulating mean variance optimization \label{what-is-mvo}}
+In this section we will look at the exact formulation of MVO and how to start using it.
+\subsection{ What’s the formula? }
+MVO says the optimal allocation weights W is such that we can maximize the expected returns while portfolio risk stays below the target risk and we don’t exceed a leverage of 100\%. In other words:
+\[\text{ max( Expected return of portfolio )} = R_p = \mathbf{W}^T\mathbf{R} \\ \]
+Such that,
+\begin{align*}
+\text{Risk of portfolio }  &= \sqrt{ \mathbf{W}^T\mathbf{\Sigma} \mathbf{W }} \leq \text{ target risk} \\
+\mathbf{W}^T \mathbf{1} &= \mathbf{1}
+\end{align*}
+
+\begin{flushleft}
+ Please refer to the \hyperref[notations]{notations} for the explanation of the symbols used above.
+ \end{flushleft} 
+
+\subsection{ What do I need to start using MVO ? \label{how-to-use-MVO}}
+The main reason MVO as an algorithmic portfolio management strategy took over investing in sixties and seventies is that it was simple to implement. Even today a financial advisory firm, with only one serious investment research person, and a hundred marketers perhaps, can use MVO. Apart from CAPM and MVO there is virtually nothing else that can be implemented in finance that has the reputation of being quantitative. It can be solved using excel fairly easily. The other reason is it’s false usage of words like “efficient portfolios” and “optimal portfolio”, none of which are true in a real life multi-period setting. No wonder it isn’t used at all by real traders.
+
+Since it is simple, virtually everyone uses it. Billions and billions of dollars are invested according to it. You need just three things to compute the portfolio to get to :
+What returns should I expect from this asset? MVO’s solution is to use the mean value of past returns as the measure of goodness of an asset. 
+The uncertainty of how well it will do is computed from the variance of its returns.
+Similarity between two products is computed using correlation. 
+While MPT talks about expected returns and stays largely silent about how that is a mammoth undertaking, the way MVO has been adopted by the investing community is to assume that past is indicative of the future, and to use historical data to compute all these three. 
+
+MVO then asks the user one question, “How much risk are you willing to take?” Using that as an input it spits out a portfolio. That’s it. Clear call to action. No mention of how much the results will be affected by errors in these estimates. No guilt for the investment manager!
+
+All things included if one has very little time and one wants to be in the good graces of the marketing team, it is an acceptable approach to use past data to compute mean and standard deviation and correlation and put them into MVO with a client’s risk limit number. Our aim here is to develop something that is better but let’s go through in an itemized fashion why MVO sucks.
+
+
+\section{ Why shouldn’t I use MVO as an investment strategy? \label{drawbacks}}
+We will break this into two stories, one being a conversation of a potential client with a robo-advisor claiming to use MVO, and the second being an itemized list of the failures of MVO, for a real algorithmic way to invest money.
+\subsection{ When Harry met Robo-MVO \label{conversational-drawbacks}}
+Imagine Harry is talking to a Roboadvisor who claims to be using MVO.
+
+
+Harry : I want to invest my IRA. How will you manage it?
+
+
+Robo: Don’t worry about it. Tell me your risk number and we will invest it in the MVO-optimal portfolio. If you want to know why that is the optimal portfolio for you, you can read up all about this work that won Markowitz a Nobel prize.
+
+
+Harry : What do you mean? Will you be computing it today for my account? Or will you invest it in a portfolio you have computed some time back?
+
+
+Robo: If you do manage to get hold of other clients of ours, you will see that we rarely trade. That means we have computed it once two years back.
+
+
+Harry : That means you are using an allocation that might have been optimal for a day after when you recomputed it and you are selling it as if it is pure gold! Okay, no worries. What were the expected returns you used in computing the allocation?
+
+
+Robo : Does it matter? It’s an optimal portfolio right?
+
+
+Harry : Of course it matters. The portfolio is so sensitive to the expected returns you put in that even a 1\% change in expected returns can change more than half the portfolio.
+
+
+Robo: You know, we used Black Litterman\(BL\)\cite{helitterman2002} to back out expected returns from the market capitalizations of countries and sectors.
+
+
+Harry : Hang on! If you took market cap weighted allocations and used BL to get expected returns and fed them into MVO, you will pretty much get back the same market-cap weights right? You could have just told me to invest in a Total Market Allocation Index and my returns would be 99\% correlated to yours!
+
+
+Robo : Harry, I don’t think most people know that. Frankly the weights output by MVO are so concentrated in few stocks that we don’t have any way of using MVO other than to do this. Another way would be to put guard rails around the outputs that constrain the allocation to be far from market-cap weights, but that is pretty much the same thing. We had to use MVO, otherwise people would have pulled us up on not having the “optimal portfolio” you see. 
+
+
+Harry : So you are just a market allocation and you don’t use MVO in a way that matters. You don’t work on finding expected returns that have any success predicting true realized returns in the future. You are asking me where I am on a risk scale, a measure I have no real way to know what it means. There is absolutely nothing data-driven about this. I don’t understand then why you are using my name in all this? You could have just said “Look this is a cool app to buy and hold the index”?
+\subsection{ What are the main drawbacks of MVO? \label{itemized-drawbacks}}
+\subsubsection{ MVO isn’t a complete strategy at all. }
+Portfolio management isn’t about choosing an allocation and sitting on it for fifty years. Simple reason is that stocks die, economies change. When conditions change, we need to as well. Almost all the stocks in the top two thousand index in the US currently are less than fifty years old. An MVO portfolio computed fifty years ago would probably not even have broken even till today.
+ 
+Mathematically, if you want to get an intuition as to why MVO is inherently a single stage optimization, you need not look further than its formulation. MVO calculates the net return of the portfolio from start to finish in these steps:
+
+
+Sum “returns” over the entire period for each asset separately
+Get a weighted average of these “returns”, per the initial weights, W
+
+
+For step 1 to make sense the “returns” have to be log returns. For step 2 to make sense, the returns have to be nominal returns. This contradiction aside, a direct implication of step 2 is that the weights W were never artificially changed during the period of the optimization. They evolved naturally from their initial state, W. It means that no trades were placed and no rebalancing was done. What makes the optimization single period over this duration, is precisely this harmless looking variable W, as it proves that for the optimization to hold, you do not touch your portfolio, ever. 
+
+
+Does this sound practical to you? Far from it, in practice you can do much better than buy and hold.
+\subsubsection{\label{input-senstivity} MVO's allocation is very sensitive to expected returns inputs}
+
+The MVO formula has three inputs, expected returns, expected risk and expected correlation. However, the output is very sensitive to the input expected returns. For instance if we were to use past data to estimate expected returns and if we recompute it every week or so, you will get allocations that are more than 50\% different than the week before. As you can see below, if the past returns of asset-C change by just 1\% the resulting weights change by 59\%!
+
+\begin{table}[h!]
+	\rowcolors{2}{even_row}{odd_row}
+	
+	\centering
+	\begin{tabular}{lcccc}
+		\rowcolor{header}
+		\hline
+		Assets&
+		A&
+		B&
+		C&
+		D\\\hline
+		Expected Returns (\%) &
+		12&
+		12&
+		15&
+		15\\
+		Optimal Weights (\%)&
+		3&
+		47&
+		24&
+		26\\
+		Expected Returns (\%)&
+		12&
+		12&
+		16&
+		15\\
+		Optimal Weights (\%)&
+		-16&
+		60&
+		41&
+		16\\
+		Expected Returns (\%)&
+		12&
+		12&
+		14&
+		15\\
+		Optimal Weights (\%)&
+		22&
+		35&
+		7&
+		37\\\hline
+	\end{tabular}
+	\caption{\label{tab:senstivity-mvo}How just a 1\% change in expected returns can change MVO allocation by 59\%}
+\end{table}
+
+On a daily basis markets usually go up or down about 1\%. That means if we were to use expected returns that depend on the past, we would be trading 60\% of the portfolio on a single day pretty often! It just does not make sense. The inferences is that our main work is still to figure out a great model for expected returns and MVO really does not help with that. On the other hand some new strategies like Risk Parity\cite{RP2016} have directly addressed how to get expected returns.
+
+
+\subsubsection{\label{concentrated-output-allocation}The resulting weights of MVO are very concentrated}
+This is another aspect of MVO that is very counter-intuitive. In the example we studied before, the weights the optimizer gave to security A and B were, 100\% and 0\%. This is not an isolated example. This is one problem, that anyone who has ever tried to apply MVO will resonate with. The problem arises because it literally gives weights to the security which maximizes the return. If we had two securities, very correlated, instead of giving equal weights to both, optimizer simply assigns 100\% allocation to one with higher return. Again, if we have two securities, perfectly uncorrelated, with individual risk less than target risk, optimizer will allocate 100\% to security with maximum return. The instrument of diversification, actually leads to concentration. 
+The analytically inclined would have noted by now that this problem comes from the formula assuming that the inputs to it exactly determine the future. In practice the future is of course unknown. If we have two stocks A and B with returns 7\% and 7.1\% and they are very correlated, then all of us know that there is probably a 50\% chance that B will have a better month going forward. MVO on the other hand will find no reason to allocate to stock B.
+
+\subsubsection{MVO doesn’t say anything about how to compute expected returns}
+As you saw in subsections \ref{input-senstivity} and \ref{concentrated-output-allocation} MVO is almost entirely dependent upon expected returns. And that is the one thing MVO does not talk about. That’s absolutely reasonable if you look at Markowitz original work, since it did not claim that this was in any way a complete trading strategy. However, the way it has been adopted and marketed that if the financial advisor is using MVO, one does not need to worry about anything else. As far as the inputs of the formula, people usually just use past five to seven years of data without doing any tests whether using past five years has a positive Information ratio compared to market cap allocation. In our studies we have found that if one is relying on past data, then very short term histories like past nine months or so have a positive information coefficient. Long term histories actually have a negative information coefficient. We mean buying a Total Market Index like Vanguard Balanced Index Fund is actually better than using MVO with past five to ten years of data to compute expected returns.
+
+\subsubsection{Markowitz subsequent work on utility of wealth}
+Another major limitation in the MVO formulation was the assumption that utility of wealth is proportional to the sum of nominal returns. This was highlighted by Markowitz himself during his Nobel prize lecture\cite{hm90}.In his lecture, he emphasizes that log-returns are a much better formulation of the utility of wealth than nominal returns. Much of his post-MVO work was about a better formulation of the utility of wealth. Intuitively, it is easy to see why log-returns make more sense. Nominal returns would give the same scale of emotion to doubling one’s money and losing it all, +100\% and -100\%. However we know that becoming bankrupt for real money investors is infinitely worse than just doubling our money. Kahneman also describes this fact very nicely in his Nobel prize lecture \cite{dk2002}.
+
+A log utility function is related to the fact that losses hurt more than the satisfaction from earning more. This scale between the two is not linear. But, here we lose much more than just the utility function. We lose the convexity of the optimization problem. With a real utility function we would no longer have a nice formula as output of MVO.
+
+
+\subsubsection{The measure of risk used by MVO, standard deviation, isn’t what investors perceive as risk}
+The use of volatility of portfolio as a measure of its risk isn’t awful from a mathematical perspective. It is a fair criticism that standard deviation laments a large gain as much as a large loss and that does not make sense. Typically by risk we mean losing money!
+
+
+However, our main gripe from MVO is around the way it is used. It puzzles us that we have a proliferation of low innovation robo-advisors who ask their clients for a risk number, just because that is all they need to feed into MVO. Typically investors understand drawdowns and maximum losses given their income and savings. Volatility is a mathematical construct, that is friendly to the optimizer. But it is not at all intuitive for the investor whose mandate we are trying to manage. It’s not just us. You can read fifty years of Berkshire Hathaway reports and you will not find a single mention of targeting a certain standard deviation. You will find ample mention of cutting losses and risk management.
+
+\section{Subsequent work that improves upon MVO\label{subsequent-work}}
+\subsection{Models to compute expected returns like CAPM}
+William Sharpe’s Nobel prize winning work\cite{Shp90}, Capital Asset Pricing Model a.k.a. CAPM, scores much above Markowitz’s MVO in a key aspect. Sharpe was forward looking in his estimates while most practitioners understood MVO to be used with past returns as inputs. The output allocation of both algo-trading strategies depends very much on expected returns. Sharpe found that for perennially alive securities like stock indexes and bonds, the expected returns of the asset in future is somewhat linearly related to the expected return of a risk free asset, asset’s sensitivity to market risk as measured from past data and market’s expected return. This is more forward looking in nature. Simply speaking Sharpe’s work brought credence to the adage “More the risk, more the reward you can expect”, given that the security isn’t going bankrupt! We know this isn’t perfect, but we credit Sharpe for at least trying to address the very difficult problem that consumes real traders, how to predict the future and not the past, a problem that we believe MVO doesn’t tackle at all.
+\subsection{The first complete algo-trading strategy - Kelly}
+Kelly\cite{Kelly90} made what we consider the biggest contribution to algorithmic trading in the fifties. Kelly’s work, inspired by Shannon, shows us how much to invest in each asset, in a multi-period scenario to maximize wealth. Kelly established that the best way to invest is to look at the investments every day and to do the painstaking work of computing the expected reward and the expected risk of investing in that instrument at that time. After that the best way to size bets is to invest in each security proportional to the reward and inversely proportional to the risk. In the real world we don't just invest once and hold on to it. The best portfolio managers rebalance every day and practically every hour. This bet-sizing approach is core to multi-period portfolio optimization. 
+
+\subsection{How good is a manager? QBR = Skill * Breadth - Grinold \& Kahn}
+Grinold and Kahn\cite{GK2000} extended Markowitz work to a setting where the benchmark asset isn’t risk free rate. Their work is used extensively by the investment office and the risk allocation office in quantitative investment funds to measure the productivity of submanagers. They show that the main change is to use a utility function that is related to the skill, which they refer to as information coefficient, of the portfolio manager and how many times it is put to use, which they refer to as breadth. Let’s try to understand the information coefficient. Imagine you make a number of forecasts about assets. Some of them are actually realized and some are not. Information coefficient is essentially a measure of precision of forecasts. Breadth is related to the number of different forecasts made in the investing process. \textbf{Increasing the number of independent bets made is a cornerstone of good portfolio management.} All great investment managers from Warren Buffett to Jim Simons have stressed about this quality.
+
+\section{Intuition behind MVO's strengths and weaknesses\label{intuition}}
+\subsection{Risk aversion nature of MVO\label{risk-aversion}}
+Modern Portfolio Theory was formulated in a period where speculation was rampant. It was a key requirement of the tool to be able to detect investments that are likely to go bust and to get out of them early. In practice, historical returns are usually what are used to figure out the mean expected return of securities going forward and feed them into mean-variance optimization formula. The nature of the formula is such that it tries to pick the best stocks and quickly deallocates from all others. This allows MVO to be not just an allocation computation formula but also a risk management unit.
+
+Risk management is a great goal, and one that is very often only an afterthought like we discovered in the financial crisis. In fact while most other allocation frameworks focus on returns, MVO's risk-management first mindset is laudable. However, in practice the way MVO is applied is often after a pre-screening step where we have clearly discarded investment choices that are too risky. In such a setting using MVO ends up being counter-productive. 
+
+In financial markets, we have seen that the proper way to implement risk management needs to take into account the observed negative skew in investment returns. MVO assumes a normality of distribution that is often too quick to sell out.
+\subsection{Strong correlation to trend-following strategies}
+In practice the most common way to implement mean-variance-optimization \(MVO\) is to derive all the inputs from historical data, and perhaps only a smattering of intuition. Assume that an MVO-using portfolio manager is recomputing the investment every few days or weeks using historical returns as a means of guessing the returns each investment option is likely to yield in future. In this setting, MVO is essentially going to be chasing performance. It tends to have a very high correlation to trend-following strategies.
+\subsection{Financial products tend to have huge swings}
+Look at the ten year treasury rate in the US. It's rate has averaged around 200 basis points in the last four years. Even with an assumed annual standard deviation of 15\%, the probability of it having a 100 basis point swing in a year is less than 1\%. Yet in the last four years it has had four such swings. The probability of that occurrence is $10^{-8}$. That means if financial markets were as random as other sciences like physics, only once in a hundred million years should we have seen what we saw in the last four years.
+
+Statistically speaking financial instruments tend to have very high kurtosis and often a very negative skew in the distribution of returns. I mean financial products like stock market prices are determined more by animal spirits today than by pure mathematical inference based on probability of returns. As a result we see huge swings in returns and we see some years with deep losses where everyone is hurting. 
+
+Mean-Variance Optimization on the other hand was inspired from a model of the world where asset prices are meant to behave only as randomly as quantities in physics or in nature. MVO does not assume kurtosis or skew, or for that matter any higher moment above the second. This single assumption makes it acutely unrealistic in a social science setting. We can thus spend our entire lives chasing the parameters of a model that just does not fit the realities of the scenario it is being used in.
+\subsection{Strategies and not products}
+One way to cure the problems above is to use a method like mean-variance-optimization on investment options that are more long lasting than individual investment products. For instance an index investing strategy is more long lasting than any stock. Speaking more generally, most successful practitioners in quantitative investing, would apply a method like MVO on strategies and not products.
+Applying mean-variance-optimization to come up with an allocation of individual stocks or bonds is largely a thing of the past. We think that switching their thinking from products to strategies is one of the biggest areas where financial advisors can make a leap in their allocation advice to clients.
+
+\subsection{Pre-screening before asset allocation step}
+As we mentioned in subsection \ref{risk-aversion}, most successful practitioners would use a pre-screening step before running an allocation module. If we just don't believe in something then there is no point asking our allocation module to find an allocation to that investment option. \cite{hull2015} shows that just adding a correlation pre-screening before using a linear-regression allocation module, more than doubles the net returns in the backtested period. 
+
+Similarly, on stat-arb trading desks, it is quite common to pre-screen the set of alphas, by eliminating all alphas that are not able to achieve a Sharpe Ratio of 1.5 or so before running the allocation module.
+
+\section{Modern Trading Systems\label{modern-trading-systems}}
+The first generation of quantitative investing was about postulating a model of markets and fitting model parameters to the behavior of markets. Then the quant would try to find optimal pricing formulas under the given distribution. As described by \cite{GK2000} A.I. and data-science have brought about a number of improvements in how quants and data-scientists are approaching trading strategy construction.
+\begin{itemize}
+	\item Embrace all real world complications. The strategies will now be tested with all real world considerations like: 
+	\begin{itemize}
+		\item \makebox[1cm]{risk:} risk-deallocation due to underperformance, and increased risk-allocation after good performance
+		\item \makebox[1cm]{taxes:} for taxable portfolios we need to find trading strategies that maximize post-tax returns.
+		\item \makebox[1cm]{costs:} Taking transaction costs into account. This has been one of the biggest challenges of quant investing. Almost all the work done by quants has had to assume that trading is frictionless.
+	\end{itemize}
+	\item Instead of testing prediction accuracy, we are now testing the trading model for profits / losses. The earlier approach to model validation was to test the explanatory power of the model in terms of out of sample RSquared. However, we have found fleeting correlation between RSquared and real trading profits. Hence trading funds have now graduated to finding trading strategies on the basis of better expected profits and not better expectation of correlation or RSquared.
+	\item Risk management can't be an after thought. The traditional quant approach had no place for risk management. We have a hierarchical risk management. We have a risk response at the level of the individual alpha, at the strategy level where it changes allocations to alphas that are not working and then at investor level where irrespective of what the strategy is doing to respond to losses, the investor will have their own risk management function.
+\end{itemize}
+
+We will elaborate on all the items above in another paper. Each of them merits a detailed discussion.
+
+\section{Conclusion : Quant Investing 2.0 is about searching for Truth}
+Following up from Section \ref{salient features}, we should understand the search for truth that led Markowitz to formulate Modern Portfolio Theory - Mean Variance Optimization. We need to recognize the beauty of Markowitz work\cite{hm90}, Shannon's work, Kelly's work\cite{Kelly90}, Sharpe's work\cite{Shp90}, Kahneman's work\cite{dk2002} and build on that to make investment management a science and not about luck or skill.
+
+There are some key principles of Markowitz’s MPT which have stood the test of time :
+\begin{itemize}
+\item Mean - we want to invest in assets with higher returns in future, if it is within our risk appetite
+\item Risk - between assets with similar returns, the one with lower risk is preferred. Lower risk helps us achieve our investment goals.
+\item Correlation - Between two investments, say Google and Facebook vs Google and US bonds, latter combination is better since they are very different and will probably not be losing money at the same time. It is better to invest in strategies that don't suffer together.
+\end{itemize}
+
+These are great ideas and ideas that should be a part of every personal and institutional investor. The formulaic version of MVO loses out to more computationally superior future-simulation frameworks. However, the formula itself was needed back then to make the theory popular. For instance Keynes theory lost out to subsequent work by Friedman primarily because Keynes’ theory was not formulaic. We recognize the contribution by Markowitz in bringing rigor to a wild west world of investment management. We need to carry the torch and stay true to the same methods. 
+
+Leading investment firms are making a big push to using Big Data technologies and high performance computing architectures to move away from formulas and compute optimal strategies in a multi-period setting complete with transaction costs and taxes. 
+
+The key business drivers behind technology based disruption in investing today are: 
+\begin{itemize}
+	\item \textbf{B}ig Data : Efficient market hypothesis is being disproved by the very fact that was supposed to lead to it, Big Data. With more and more market-impactful data being available in a machine readable manner, there is even greater need to have big complex systems to source alpha from them and to not be picked of by those trades.
+	\item \textbf{R}isk Management : There is increasingly more appreciation of the need for systematic risk management and to make investment less susceptible to behavioral biases.
+	\item \textbf{A}lpha : Search for better performing strategies and alpha is greater than ever
+	\item \textbf{A}ccuracy : There is a greater need for accuracy in trading strategies. With lower returns expectations in traditional strategies, it is not fine any more to ignore minor inaccuracies.
+	\item \textbf{N}eed to know : Real money investors are increasingly demanding that we need to know what is being done to our money and how will it behave in different market situations. We want to know what is happening and what will happen and in a manner that is technologically smooth. By that I mean smartphone apps and APIs
+\end{itemize}
+
+
+There was a time when quant-trading was about making mathematically beautiful models of markets and finding formulas to get trading ideas. As Emanuel Derman describes in "My life as a Quant", this is why Physics PhDs had a lot of success at the quant desks of trading firms. Portfolio managers and traders were handed pricing models and trading strategies that would ignore all the real aspects of trading, and the traders had to deal with all the real-life mess. Hence there was a perennial fight between traders and quants.
+
+That age is now over. The colossal failure of such models in the financial crisis exposed the weaknesses of such models: underlying assumptions that ignored real world possibilities.
+
+On top of that, the explosion of tick-by-tick market data and machine learning technologies that tackle terabytes of data easily have changed the landscape of trading forever. Using map-reduce\cite{mapr2004} and deep-learning\cite{Goodfellow-et-al-2016-Book} on the cloud, one can now learn how markets move in all its complexity without having to set up massive infrastructure in-house for the same. Availability of cheap computing and more importantly, low overhead of maintenance has allowed us to learn a lot more from data without burning a hole in the wallet. We can test a trading strategy using high to low frequency data taking into account every detail like transaction costs, taxes and overcrowding. The best part is that we can achieve all this spending less than twenty thousand dollars a year in infrastructure costs. But we need to cross one major hurdle. We need to move forward from formulas like Mean-Variance-Optimization and follow a more thorough process of knowledge discovery from data.
+
+\newpage
+\appendix
+\section{Notations and Formulas \label{notations} }
+$\mathbf{R}$ : $(n*1)$ dimensional vector containing expected returns of the securities from $( r_1,  \dots ,r_n )$\\
+$\mathbf{W}$ : $(n * 1)$ dimensional vector containing portfolio weights of each security $( w_1, \dots , w_n )$ \\
+Return of the portfolio is defined as :
+\begin{align*}
+r &= \text{expected return of the portfolio} =E(\sum_{i=1}^n w_i x_i) \\
+ &= \sum_{i=1}^n E( w_ix_i ) = \sum_{i=1}^n w_i E(x_i) \\
+  &= \sum_{i=1}^nw_ir_i = \mathbf{W}^T\mathbf{R} 
+\end{align*}
+where, \\
+$w_i(t-1,t ) \text{ : intended portfolio weight of } i^{th}  \text{ security in the time period } ( t, t-1 )$ \\
+$x_i$ : distribution of returns of the security as per the joint distribution $P$ \\ 
+$r_i(t-1,t)$ : expected return of $i^{th}$ security, or $E[x_i]$ \\
+
+Next, we define the variance of the portfolio in terms of covariance of securities and their pairwise correlation.
+\begin{align*}
+\sigma^2 = \text{Variance of the returns of the portfolio} 
+&= \text{cov}(\sum_{i=1}^n w_ix_i, \sum_{i=1}^n w_ix_i ) \\
+&= \sum_{i=1}^n \text{cov}(w_ix_i,w_ix_i) + 2 * \sum_{i,j=1,i\neq j }^n \text{cov}(w_jx_j,w_ix_i) \\
+&= \sum_{i=1}^n w_i^2\sigma_i^2 + 2 *\sum_{i,j=1,i\neq j }^n \rho_{ij}w_iw_j\sigma_i\sigma_j = \mathbf{W}^T\mathbf{\Sigma W }
+\end{align*}
+where,\\
+ $\sigma^2_i$ : Variance of the returns of $i^{th}$ security \\
+$\rho^{ij}$ : Correlation coefficient between the returns of $i^{th}$ and $j^{th}$ security \\
+$\mathbf{\Sigma}$ : $(n * n)$ dimensional matrix with $ij^{th}$ element as the covariance between $i^{th}$ and $j^{th}$ security returns.
+
+
+\bibliographystyle{alpha}
+\bibliography{refs}
+\newpage
+\section{Disclosures \label{disclosures} }
+All investments carry risk. This material is for informational purposes only. The factual information set forth herein has been obtained or derived from sources believed to be reliable but it is not necessarily all-inclusive and is not guaranteed as to its accuracy and is not to be regarded as a representation or warranty, express or implied, as to the information’s accuracy or completeness, nor should the attached information serve as the basis of any investment decision. Past performance is not indicative of future performance. Please visit our website \url{https://www.qplum.co/privacy-terms#disclaimer} for full disclaimer and terms of use.\\
+This document is intended exclusively for the use of the person to whom it has been delivered and it is not to be reproduced or redistributed to any other person.
+
+\end{document}

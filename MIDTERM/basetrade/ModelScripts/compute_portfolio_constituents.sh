@@ -1,0 +1,3 @@
+/home/gchak/basetrade/ModelScripts/compute_portfolio_constituents.pl /spare/local/tradeinfo/PortfolioInfo/eurex_portfolio_constituent_input.txt CET_800 CET_1900
+/home/gchak/basetrade/ModelScripts/compute_portfolio_constituents.pl /spare/local/tradeinfo/PortfolioInfo/tmx_portfolio_constituent_input.txt EST_835 EST_1455
+/home/gchak/basetrade/ModelScripts/compute_portfolio_constituents.pl /spare/local/tradeinfo/PortfolioInfo/cme_portfolio_constituent_input.txt EST_800 EST_1600

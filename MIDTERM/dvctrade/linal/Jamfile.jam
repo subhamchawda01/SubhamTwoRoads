@@ -1,0 +1,5 @@
+
+project : usage-requirements <include>$(PROJECT_INSTALL) 
+<linkflags>-lboost_system
+;
+

@@ -1,0 +1,19 @@
+# We will need this project to have dependencies.
+use-project /PDVCC : ../../libdvccode ;
+use-project /PInitCommon : ../../InitCommonCode ;
+
+# project : usage-requirements 
+
+
+
+lib ParamSetTests
+: # sources
+[ glob *.cpp ] 
+: # requirements
+<link>static <use>/PDVCC//CDef <use>/PDVCC//CommonDataStructures <use>/PInitCommon//InitCommon
+: 
+: # usage requirements
+<library>/PDVCC//CDef 
+<library>/PDVCC//CommonDataStructures 
+<library>/PInitCommon//InitCommon
+; 

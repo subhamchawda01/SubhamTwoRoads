@@ -1,0 +1,101 @@
+#! /bin/bash
+#
+# chkconfig: 2345 95 20
+# description: This application was developed by me and is tested on this server
+# processname: dvc_clm
+# dvcservice Bring up/down custom services 
+# Author : Ravi Parikh (c)
+#
+# description: Custom execs/scripts enabled as service 
+#
+### BEGIN INIT INFO
+# Provides: custom functionality 
+### END INIT INFO
+
+# Source function library.
+. /etc/init.d/functions
+
+PIDFILE="/tmp/centralized_logging_manager.pid"
+RETVAL=0 
+
+start () {
+
+  echo "Starting Up CentralizedLoggingManager..." 
+  sudo runuser -l dvcinfra -c '/usr/bin/centralized_logging_manager >/dev/null 2>/dev/null &' 
+  PID=`ps -ef |grep centralized_logging_manager | grep -v grep | awk '{print $2}'` ; 
+  echo $PID > $PIDFILE ; 
+  is_alive=`ps -ef |grep $PID | grep -v grep | wc -l` ; 
+  action "Checking If Daemon Was Brought Up" [ "$is_alive" != "0" ]
+  return $RETVAL ;
+
+}
+
+stop () {
+
+  echo "Shutting Down CentralizedLoggingManager..."
+
+  PID=`ps -ef |grep centralized_logging_manager | grep -v grep | awk '{print $2}'` 
+
+  if [ -f $PIDFILE ] ; then 
+
+    kill -s SIGINT `cat $PIDFILE` >/dev/null 2>/dev/null
+
+  else 
+
+    #unusual, but we could make sure to terminate all instances 
+    killall -SIGINT centralized_logging_manager >/dev/null 2>/dev/null 
+
+  fi 
+  
+  sleep 5 ; 
+
+  is_alive=`ps -ef |grep centralized_logging_manager | grep -v grep | wc -l` ; 
+
+  if [ $is_alive -gt 0 ] ; then 
+    kill -9 `ps -ef |grep centralized_logging_manager | grep -v grep | awk '{print $2}'` ; 
+  fi 
+
+  is_alive=`ps -ef |grep centralized_logging_manager | grep -v grep | wc -l` ; 
+
+  action "Checking If Daemon Has Been Brought Down" [ "$is_alive" == "0" ]
+  rm -rf $PIDFILE ; 
+  return $RETVAL 
+
+}
+
+dostatus () {
+
+  if [ -f "/etc/init.d/functions" ]; then
+    status centralized_logging_manager
+  fi
+   
+}
+
+restart () {
+
+  stop 
+  start 
+
+}
+
+# See how we were called.
+case "$1" in
+  start)
+        start
+        ;;
+  stop)
+        stop
+        ;;
+  restart)
+    restart
+    ;;
+  status)
+        dostatus
+        ;;
+  *)
+        echo "Usage: centralized_logging_manager {start|stop|restart|status}"
+        exit 1
+esac
+
+exit $RETVAL
+

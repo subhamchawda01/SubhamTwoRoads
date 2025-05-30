@@ -1,0 +1,4 @@
+"country","date","name","actual","consensus","previous","volatility"
+"China","20130101 01:00:00","NBS Manufacturing PMI",""," 51.000 "," 50.600 ","2"
+"Qatar","20130101 22:00:00","Consumer Price Index","","","","1"
+"Australia","20130101 22:30:00","AiG Performance of Mfg Index","",""," 43.600 ","2"

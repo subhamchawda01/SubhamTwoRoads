@@ -1,0 +1,232 @@
+# This variable is being created to allow multiple search paths.
+local boost-lib-search-path =
+		<search>$(BOOST_LIB_INSTALL) # this variable can be used to override the default search path
+		# <search>/apps/boost/boost-install/lib # the default library search path.
+		;
+
+local boost-include-path =
+		<include>$(BOOST_INCLUDE_BASE) # this variable can be used to override the default search path
+		# <include>/apps/boost/boost-install/include # the default search path for header files.
+	;
+
+# Header only boost libraries - start
+lib boost_lockfree 
+: # no sources 
+: # no libpath
+: # default build 
+: # usage requirements
+$(boost-include-path) 
+;
+
+lib boost_algorithm 
+: # no sources 
+: # no libpath
+: # default build 
+: # usage requirements
+$(boost-include-path) 
+;
+# Header only boost libraries - end
+
+# Non header only boost libraries - start
+lib boost_program_options 
+: # no sources 
+: # requirements
+<name>boost_program_options $(boost-lib-search-path) 
+: # building options ... non needed
+: # usage requirements
+$(boost-include-path) 
+;
+
+lib boost_chrono
+: # no sources 
+: <name>boost_chrono $(boost-lib-search-path)
+:
+: # usage requirements
+$(boost-include-path)
+;
+
+lib boost_atomic : : <name>boost_atomic $(boost-lib-search-path) : : $(boost-include-path)
+;
+
+lib boost_thread : : <name>boost_thread $(boost-lib-search-path) : : $(boost-include-path)
+;
+
+lib boost_system : : <name>boost_system $(boost-lib-search-path) : : $(boost-include-path)
+;
+
+lib boost_date_time : : <name>boost_date_time $(boost-lib-search-path) : : $(boost-include-path)
+;
+
+lib boost_iostreams : : <name>boost_iostreams $(boost-lib-search-path) : : $(boost-include-path)
+;
+
+lib boost_filesystem : : <name>boost_filesystem $(boost-lib-search-path) : : $(boost-include-path)
+;
+
+lib boost_serialization : : <name>boost_serialization $(boost-lib-search-path) : : $(boost-include-path)
+;
+# Non header only boost libraries end
+
+lib libmysqlcppconn
+:
+: <name>mysqlcppconn-static <search>$(MYSQLCPP_LIB_PATH)
+:
+: # Needed to add <linkflags>-lmysqlclient but it failed reference: http://stackoverflow.com/questions/27310835/mysql-c-connector
+; 
+
+# Libraries created by us
+# This variable is being created to allow multiple search paths.
+local dvccode-lib-search-path =
+		<variant>release:<search>$(DVCCODE_LIB_INSTALL)
+                <variant>debug:<search>$(DVCCODE_LIB_INSTALL_DEBUG)
+		# Add /apps later
+		;
+
+# This variable is being created to allow multiple search paths.
+local dvctrade-lib-search-path =
+		<variant>release:<search>$(DVCTRADE_LIB_INSTALL)
+                <variant>debug:<search>$(DVCTRADE_LIB_INSTALL_DEBUG)
+		# Add /apps later
+		;
+
+# This variable is being created to allow multiple search paths.
+local baseinfra-lib-search-path =
+		<variant>release:<search>$(BASEINFRA_LIB_INSTALL)
+                <variant>debug:<search>$(BASEINFRA_LIB_INSTALL_DEBUG)
+		# Add /apps later
+		;
+
+
+# This variable is being created to allow multiple search paths.
+local basetrade-lib-search-path =
+		<search>$(BASETRADE_LIB_INSTALL)
+		# Add /apps later
+		;
+
+
+# dvccode libraries - start
+
+# dvccode/CDef
+lib CDef
+:
+: <name>CDef $(dvccode-lib-search-path)
+:
+: <library>boost_system <library>boost_date_time <library>boost_filesystem
+;
+
+# dvccode/CommonDataStructures
+lib CommonDataStructures
+:
+:
+<name>CommonDataStructures $(dvccode-lib-search-path)
+<use>CDef
+:
+: <library>CDef
+;
+
+# dvccode/TradingInfo
+lib TradingInfo
+:
+:
+<name>TradingInfo $(dvccode-lib-search-path)
+<use>CommonDataStructures <use>CDef
+:
+: <library>CDef <library>CommonDataStructures
+;
+
+# dvccode/Utils
+lib Utils
+:
+:
+<name>Utils $(dvccode-lib-search-path)
+<use>CommonDataStructures <use>TradingInfo <use>boost_lockfree
+:
+: <library>boost_iostreams <library>boost_thread 
+;
+
+lib CommonTradeUtils
+:
+:
+<name>CommonTradeUtils $(dvccode-lib-search-path)
+<use>CDef <use>CommonDataStructures <use>Utils
+:
+:
+<library>Utils <library>CommonDataStructures
+;
+
+lib Profiler
+:
+: <name>Profiler $(dvccode-lib-search-path)
+  <use>CommonDataStructures <use>Utils
+;
+
+lib ExternalData
+:
+:
+<name>ExternalData $(dvccode-lib-search-path)
+<use>CommonDataStructures <use>Utils <use>CDef <use>Profiler
+:
+:
+<library>Profiler
+;
+
+# dvccode libraries - end
+
+# Libraries included from BASEINFRA - start
+
+lib BaseUtils : : <name>BaseUtils $(baseinfra-lib-search-path) <use>CommonDataStructures <use>Utils  ;
+
+lib OptionsUtils : : <name>OptionsUtils $(baseinfra-lib-search-path) : : <library>Utils <library>CDef ;
+
+lib SmartOrderRouting : : <name>SmartOrderRouting $(baseinfra-lib-search-path) <use>OrderRouting <use>MarketAdapter <use>CDef ;
+
+lib MarketAdapter : : <name>MarketAdapter $(baseinfra-lib-search-path) <use>CommonDataStructures <use>Utils <use>CDef ;
+
+lib VolatileTradingInfo : : <name>VolatileTradingInfo $(baseinfra-lib-search-path) <use>CommonDataStructures <use>BaseUtils <use>CDef ;
+
+lib TradeUtils : : <name>TradeUtils $(baseinfra-lib-search-path) <use>CommonDataStructures <use>Utils <use>MarketAdapter <use>CDef ;
+
+lib OrderRouting : : <name>OrderRouting $(baseinfra-lib-search-path) <use>CommonDataStructures <use>Utils <use>BaseUtils <use>MarketAdapter ;
+
+lib MinuteBar : : <name>MinuteBar $(baseinfra-lib-search-path) <use>CDef <use>CommonDataStructures <use>CommonTradeUtils <use>OrderRouting : : <library>CDef <library>CommonDataStructures <library>CommonTradeUtils <library>OrderRouting ;
+
+lib LoggedSources : :  <name>LoggedSources $(baseinfra-lib-search-path) : : <use>CommonDataStructures <use>Utils <use>CDef <use>CommonTradeUtils <use>Profiler ;
+
+lib LivePnls : : <name>LivePnls $(baseinfra-lib-search-path) : : <use>Utils ;
+
+lib SimPnls : : <name>SimPnls $(baseinfra-lib-search-path) : : <use>Utils ;
+
+lib SimMarketMaker : : <name>SimMarketMaker $(baseinfra-lib-search-path) : : <use>CommonDataStructures <use>CDef <use>CommonTradeUtils ;
+
+lib FpgaHeader : : <name>FpgaHeader $(baseinfra-lib-search-path) : : <use>CommonDataStructures <use>CDef <use>CommonTradeUtils ;
+
+# baseinfra libraries - end
+
+# dvctrade libraries - start
+
+lib CommonTradeDataStructures
+:
+:
+<name>CommonTradeDataStructures $(dvctrade-lib-search-path)
+<use>CDef <use>CommonDataStructures <use>Utils : : <library>Utils <library>CommonDataStructures
+;
+
+lib OptionsHelper : : <name>OptionsHelper $(dvctrade-lib-search-path) : : <library>SmartOrderRouting <library>Utils <library>CDef ;
+
+lib ModelMath : : <name>ModelMath $(dvctrade-lib-search-path) <use>CommonDataStructures <use>Utils <use>CDef ;
+
+lib Indicators : : <name>Indicators $(dvctrade-lib-search-path) : : <library>CommonDataStructures <library>Utils <library>OptionsUtils <library>BaseUtils <library>ModelMath ;
+
+lib InitCommon : : <name>InitCommon $(dvctrade-lib-search-path) <use>CommonDataStructures <use>Utils <use>CDef <use>CommonTradeUtils <use>ExecLogic <use>Indicators <use>MarketAdapter ;
+
+lib SpreadTrading : : <name>SpreadTrading $(dvctrade-lib-search-path) <use>CommonDataStructures <use>Utils <use>BaseUtils <use>MarketAdapter <library>boost_serialization : : <library>boost_serialization ;
+
+lib RiskManager : : <name>RiskManager $(dvctrade-lib-search-path) <use>CommonDataStructures <use>OrderRouting <use>Indicators <use>CDef ;
+
+lib RiskManagement : : <name>RiskManagement $(dvctrade-lib-search-path) <use>CommonDataStructures <use>OrderRouting <use>Indicators <use>CDef ;
+
+lib ExecLogic : : <name>ExecLogic $(dvctrade-lib-search-path) <use>CommonDataStructures <use>Utils <use>CDef ;
+
+lib Signals : : <name>Signals $(dvctrade-lib-search-path) : : <library>CommonDataStructures <library>Utils <library>BaseUtils <library>ExecLogic ;
+
+# dvctrade libraries - end

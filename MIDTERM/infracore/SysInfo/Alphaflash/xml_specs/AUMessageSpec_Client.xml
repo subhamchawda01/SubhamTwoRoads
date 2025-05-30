@@ -1,0 +1,62 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<?xml-stylesheet type="text/xsl" href="./ClientHTML.xsl"?><protocol>
+<version>351</version>
+<revisions>
+    <revision type="Final" version="351" author="MNI News" date="03/13/2017"/>
+  </revisions>
+<category name="AU_RBA_RATE_DECISION">
+<description>RBA Rate Decision</description>
+<country>AU</country>
+<category_id>61116</category_id>
+<data>
+<datum>
+<short_description>Interest Rate</short_description>
+<description>Interest Rate</description>
+<datum_type>%</datum_type>
+<datum_id>1</datum_id>
+</datum>
+<datum>
+<short_description>Interest Rate Change</short_description>
+<description>Interest Rate Change</description>
+<datum_type>%</datum_type>
+<datum_id>2</datum_id>
+</datum>
+</data>
+<messages>
+<message>
+<message_type>release</message_type>
+<message_version>1</message_version>
+<multicast_group>MNI_INDICATORS</multicast_group>
+<fields>
+<field>
+<datum_id>1</datum_id>
+<field_type>float</field_type>
+<example_value>4.5</example_value>
+</field>
+<field>
+<datum_id>2</datum_id>
+<field_type>float</field_type>
+<example_value>-0.25</example_value>
+</field>
+</fields>
+</message>
+<message>
+<message_type>estimate</message_type>
+<message_version>1</message_version>
+<multicast_group>MNI_INDICATORS</multicast_group>
+<fields>
+<field>
+<datum_id>1</datum_id>
+<field_type>float</field_type>
+<example_value>4.5</example_value>
+</field>
+<field>
+<datum_id>2</datum_id>
+<field_type>float</field_type>
+<example_value>-0.25</example_value>
+</field>
+</fields>
+</message>
+</messages>
+</category>
+</protocol>

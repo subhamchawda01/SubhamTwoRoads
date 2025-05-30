@@ -1,0 +1,15 @@
+
+project : usage-requirements <include>$(PROJECT_INSTALL) ;
+
+lib MidTerm : [ glob *.cpp */*.cpp ] : <link>static ;
+
+install libMidTerm
+  : MidTerm
+  : <install-type>LIB
+    <variant>release:<location>"$(PROJECT_LIB_INSTALL)"
+    <variant>debug:<location>"$(PROJECT_LIB_INSTALL_DEBUG)"
+  : release debug
+  ;
+
+
+

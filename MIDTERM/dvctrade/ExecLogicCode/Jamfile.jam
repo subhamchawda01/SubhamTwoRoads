@@ -1,0 +1,15 @@
+
+project : usage-requirements <include>$(PROJECT_INSTALL) ;
+
+lib ExecLogic : [ glob *.cpp */*.cpp ] : <link>static ;
+
+install libExecLogic
+  : ExecLogic
+  : <install-type>LIB
+    <variant>release:<location>"$(PROJECT_LIB_INSTALL)"
+    <variant>debug:<location>"$(PROJECT_LIB_INSTALL_DEBUG)"
+  : release debug
+  ;
+
+
+

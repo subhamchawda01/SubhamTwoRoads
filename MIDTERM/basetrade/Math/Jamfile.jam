@@ -1,0 +1,14 @@
+
+project : usage-requirements <include>$(PROJECT_INSTALL) ;
+
+lib Math : [ glob *.cpp ] : <link>static ;
+
+install libMath
+  : Math
+  : <install-type>LIB
+    <variant>release:<location>"$(PROJECT_INSTALL)/lib"
+    <variant>debug:<location>"$(PROJECT_INSTALL)/libdebug"
+  : release debug
+  ;
+
+

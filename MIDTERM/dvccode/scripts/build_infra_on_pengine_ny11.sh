@@ -1,0 +1,1 @@
+cd ~/codebase/dvccode ; git reset --hard ; git stash ; git checkout master ; git pull ; b2 release headers ; cd ~/codebase/infracore ; git reset --hard ; git stash ; git checkout master ; git pull; b2 release headers ; cd ~/codebase/dvccode ; bjam release -j24 ; cd ~/codebase/infracore ; bjam release -j24

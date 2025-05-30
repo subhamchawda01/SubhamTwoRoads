@@ -1,0 +1,15 @@
+
+project : usage-requirements <include>$(PROJECT_INSTALL) 
+<linkflags>-lboost_system
+;
+
+lib ImpliedVolatility : [ glob *.cpp ] : <link>static ;
+
+install libImpliedVolatility
+  : ImpliedVolatility
+  : <install-type>LIB
+    <variant>release:<location>"$(PROJECT_INSTALL)/lib"
+    <variant>debug:<location>"$(PROJECT_INSTALL)/libdebug"
+  : release debug
+  ;
+

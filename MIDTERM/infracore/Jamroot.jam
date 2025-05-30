@@ -1,0 +1,267 @@
+import modules ;
+import set ;
+import stage ;
+import package ;
+import path ;
+import common ;
+import os ;
+import regex ;
+import errors ;
+import "class" : new ;
+import common ;
+import sequence ;
+
+if --help in $(ARGV)
+{
+    ECHO "
+Usage:
+    b2 [options] [install|stage]
+
+    * install               Installs to the configured location(s).
+    * stage                 Stages the build products only to common stage location.
+
+Options:
+    --help                  This message.
+    -sTOOLS=<toolsets>      Indicates the tools to build with.
+
+Locations:
+    --prefix=PREFIX         Install architecture independent files here.
+                            Default; C:\\Boost on Win32
+                            Default; /usr/local on Unix. Linux, etc.
+    --exec-prefix=EPREFIX   Install architecture dependent files here.
+                            Default; PREFIX
+    --libdir=DIR            Install libraries here.
+                            Default; EPREFIX/lib
+    --includedir=DIR        Install source headers here.
+                            Default; PREFIX/include
+    --builddir=DIR          Build in this location instead of building
+                            within the distribution tree. Recomended!
+    --stagedir=DIR          When staging only, stage to the location.
+                            Default; ./stage
+
+Features:
+    --without-<library>     Do not build, stage, or install the specified
+                            <library>. By default all libraries attempt to build.
+    --with-python-root[=PYTHON_ROOT]
+                            Build Boost.Python libraries with the Python
+                            devel packages located at PYTHON_ROOT.
+                            Default PYTHON_ROOT; C:\\tools\\python on Win32.
+                            Default PYTHON_ROOT; /usr/local on Unix, Linux, etc.
+                            Default PYTHON_ROOT; /usr on Cygwin.
+    --with-pydebug          Build Boost.Python libraries using the
+                            Python debug runtime.
+" ;
+    EXIT "" ;
+}
+
+path-constant INFRACORE_PROJECT_ROOT : . ;
+path-constant PROJECT_ROOT : $(INFRACORE_PROJECT_ROOT) ;
+
+local set_default_toolset_ = 1 ;
+local only_target = "all" ;
+local install_loc = "../cvquant_install" ;
+
+# Extract build requirements from command line options
+for option in [ modules.peek : ARGV ] {
+  local temporary = [ MATCH ([^=]+)= : $(option) ] ;
+
+  if $(temporary) {
+    value  = [ MATCH [^=]+=([^=]+)$ : $(option) ] ;
+    if $(value) && $(temporary) = "--install_loc" {
+        install_loc = $(value) ;
+        ECHO "Install location changed to $(value)" ;
+    }
+  }
+}
+
+path-constant CVQUANT_INSTALL : $(install_loc) ;
+path-constant DVCCODE_INSTALL : $(CVQUANT_INSTALL)/dvccode ;
+path-constant DVCCODE_LIB_INSTALL : $(DVCCODE_INSTALL)/lib ;
+path-constant DVCCODE_LIB_INSTALL_DEBUG : $(DVCCODE_INSTALL)/libdebug ;
+path-constant INFRACORE_INSTALL : $(CVQUANT_INSTALL)/infracore ;
+path-constant INFRACORE_LIB_INSTALL : $(INFRACORE_INSTALL)/lib ;
+
+# This variable PROJECT_INSTALL is primarily used to get the location
+# of where to install headers, libraries and execs
+path-constant PROJECT_INSTALL : $(INFRACORE_INSTALL) ;
+path-constant PROJECT_BIN_INSTALL : $(PROJECT_INSTALL)/bin ;
+path-constant PROJECT_BIN_INSTALL_DEBUG : $(PROJECT_INSTALL)/bindebug ;
+path-constant PROJECT_LIB_INSTALL : $(PROJECT_INSTALL)/lib ;
+path-constant PROJECT_LIB_INSTALL_DEBUG : $(PROJECT_INSTALL)/libdebug ;
+
+for option in [ modules.peek : ARGV ] {
+  local temporary = [ MATCH ([^=]+)= : $(option) ] ;
+
+  if $(temporary) {
+    value  = [ MATCH [^=]+=([^=]+)$ : $(option) ] ;
+    if $(value) && $(temporary) = "toolset" {
+       set_default_toolset_ = 0 ;
+       if $(value) != "gcc" {
+           path-constant  PROJECT_INSTALL : $(PROJECT_ROOT)_$(value)_install ;
+       }
+    }
+    if $(value) && $(temporary) = "--only_target" {
+      if $(value) != "all" {
+        only_target = $(value) ;
+        ECHO "only target $(only_target)" ;
+      }
+    }
+  }
+}
+
+if $(set_default_toolset_) = 1 {
+    using gcc ;
+}
+
+
+boost_root_ = [ modules.peek : BOOST_ROOT ] ;
+if ! $(boost_root_) {
+   path-constant boost_root_ : /apps/boost/root ; 
+}
+
+path-constant xerces_root_ : /apps/xerces ;
+
+BOOST_LIB_INSTALL = [ modules.peek : BOOST_LIB_INSTALL ] ;
+if ! $(BOOST_LIB_INSTALL) {
+   path-constant BOOST_LIB_INSTALL : /apps/boost/boost-install/lib ;
+}
+ 
+BOOST_INCLUDE_BASE = [ modules.peek : BOOST_INCLUDE_DIR ] ;
+if ! $(BOOST_INCLUDE_BASE) {
+   path-constant BOOST_INCLUDE_BASE : /apps/boost/boost-install/include ;
+}
+
+path-constant XERCES_INCLUDE_BASE : $(xerces_root_)/include/ ;
+
+path-constant XERCES_LIB_BASE : $(xerces_root_)/lib/ ;
+
+path-constant bzip2_root_ : /apps/bzip2 ;
+path-constant BZIP2_INCLUDE_BASE : $(bzip2_root_)/include ;
+path-constant BZIP2_LIB_BASE : $(bzip2_root_)/lib ;
+path-constant LZ4_INCLUDE_BASE : /apps/lz4/include ;
+
+# .cfg files
+local configfiles = [ path.glob-tree $(PROJECT_ROOT) : *.cfg ] ;
+
+install configfiles
+    : $(configfiles)
+    : <location>$(PROJECT_INSTALL)/Configs <install-source-root>$(PROJECT_ROOT)
+    ;
+
+# .csv files
+local boost_csv_files = [ path.glob-tree $(PROJECT_ROOT)/SysInfo/libs/date_time/data : *.csv ] ;
+
+install boost_csv_files
+    : $(boost_csv_files)
+    : <location>$(PROJECT_INSTALL) <install-source-root>$(PROJECT_ROOT)
+    ;
+
+# .xml files
+local xmlfiles = [ path.glob-tree $(PROJECT_ROOT) : *.xml ] ;
+
+install xmlfiles
+    : $(xmlfiles)
+    : <location>$(PROJECT_INSTALL) <install-source-root>$(PROJECT_ROOT)
+    ;
+
+# .txt files
+local txtfiles = [ path.glob-tree $(PROJECT_ROOT) : *.txt ] ;
+
+install txtfiles
+    : $(txtfiles)
+    : <location>$(PROJECT_INSTALL) <install-source-root>$(PROJECT_ROOT)
+    ;
+
+# .sh files
+local shellscripts = [ path.glob-tree $(PROJECT_ROOT) : *.sh ] ;
+
+# .pl files
+local perlscripts = [ path.glob-tree $(PROJECT_ROOT) : *.pl ] ;
+
+install shellscripts
+    : $(shellscripts)
+      $(perlscripts)
+    : <location>$(PROJECT_INSTALL) <install-source-root>$(PROJECT_ROOT)
+    ;
+
+# # .h files
+# local c_headers = [ path.glob-tree $(PROJECT_ROOT) : *.h ] ;
+
+# install c_headers
+#     : $(c_headers)
+#     : <location>$(PROJECT_INSTALL) <install-source-root>$(PROJECT_ROOT)
+#     ;
+
+# hpp files
+local headers = [ path.glob-tree $(PROJECT_ROOT) : *.hpp ] ;
+
+install headers
+    : $(headers)
+    : <location>$(PROJECT_INSTALL) <install-source-root>$(PROJECT_ROOT)
+
+
+    ;
+
+lib boost_chrono : : <name>boost_chrono <search>$(BOOST_LIB_INSTALL) ;
+lib boost_atomic : : <name>boost_atomic <search>$(BOOST_LIB_INSTALL) ;
+lib boost_thread : : <name>boost_thread <search>$(BOOST_LIB_INSTALL) ;
+lib boost_system : : <name>boost_system <search>$(BOOST_LIB_INSTALL) ;
+lib boost_date_time : : <name>boost_date_time <search>$(BOOST_LIB_INSTALL) ;
+lib boost_iostreams : : <name>boost_iostreams <search>$(BOOST_LIB_INSTALL) ;
+lib boost_filesystem : : <name>boost_filesystem <search>$(BOOST_LIB_INSTALL) ;
+
+project infracore
+	: requirements 
+    <include>$(CVQUANT_INSTALL)
+	  <include>$(PROJECT_INSTALL)
+	  # <include>$(BZIP2_INCLUDE_BASE) # this was done in the boost Jamroot
+	  <include>$(BOOST_INCLUDE_BASE)
+	  <include>$(LZ4_INCLUDE_BASE)
+	  <include>$(XERCES_INCLUDE_BASE)
+	  <library>boost_filesystem
+	  <library>boost_chrono
+	  <library>boost_atomic
+	  <library>boost_thread
+	  <library>boost_system
+	  <library>boost_date_time
+	  <library>boost_iostreams
+          <variant>debug:<inlining>off
+	  <variant>debug:<debug-symbols>on
+	  <variant>debug:<optimization>off
+	  <variant>debug:<warnings>on
+	  <variant>debug:<warnings-as-errors>off
+	  <variant>release:<warnings>on
+	  <variant>release:<warnings-as-errors>off
+	  <library-path>/apps/bzip2/lib
+	  <library-path>/apps/zlib/lib
+	  <library-path>/apps/lz4/lib
+	  <linkflags>-lcurl
+	  #<linkflags>-lonload_ext
+	  <link>static
+      <linkflags>-lz
+          <linkflags>-llz4
+	  <linkflags>-llzo2
+	  <toolset>gcc:<cxxflags>-std=gnu++0x 
+	  <toolset>clang:<cxxflags>-std=c++11
+	  <toolset>gcc:<cxxflags>-fdiagnostics-color=always
+      #<toolset>gcc:<cxxflags>-fprofile-generate
+      #<toolset>gcc:<cxxflags>-fprofile-generate=/spare/local/ProfileInfo/infracore
+      #<toolset>gcc:<cxxflags>-fprofile-use
+      #<toolset>gcc:<cxxflags>-fprofile-use=/spare/local/ProfileInfo/infracore
+      #<toolset>gcc:<linkflags>-lgcov
+      #<toolset>gcc:<cxxflags>-Wcoverage-mismatch
+	  <cflags>-isystem$(BOOST_INCLUDE_BASE)
+	: default-build release
+	;
+
+# Executibles
+if $(only_target) = "all" {
+  build-project lwfixfast2 ;
+  build-project lwfixfast ;
+  build-project codegen ;
+  build-project Tools ;
+  build-project OrderRoutingServer ; # u2ic
+}
+else {
+   build-project $(only_target) ;
+}

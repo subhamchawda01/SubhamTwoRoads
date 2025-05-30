@@ -1,0 +1,78 @@
+project : usage-requirements <include>$(PROJECT_INSTALL) ;
+
+use-project /PDVCC : ../libdvccode ;
+
+use-project /PExecLogic : ../ExecLogicCode ;
+
+use-project /PIndicatorsTests : Indicators ;
+use-project /PTradeVarSetTests : TradeVarSets ;
+use-project /PBaseTradingTests : BaseTrading ;
+use-project /PParamSetTests : ParamSet ;
+
+# lib ncurses : : <name>ncurses <search>/usr/lib64 ;
+
+lib libcppunit
+:
+: # requirements
+  <name>cppunit 
+  <search>/usr/lib64
+:
+: 
+; 
+
+
+exe run_tests
+    : # sources
+    [ glob *.cpp ]
+     /PBaseTradingTests//BaseTradingTests
+     /PTradeVarSetTests//TradeVarSetTests
+     /PParamSetTests//ParamSetTests
+     /PIndicatorsTests//IndicatorsTests
+     /PDVCC//MarketAdapter
+     /PDVCC//OrderRouting
+     /PDVCC//VolatileTradingInfo
+     /PDVCC//CommonTradeUtils
+     /PDVCC//CDef
+     /PDVCC//TradeUtils
+     /PDVCC//Utils
+     /PDVCC//CommonDataStructures
+     /PDVCC//ExternalData
+     /PDVCC//Profiler
+     /PDVCC//OptionsUtils
+     /PDVCC//TradingInfo
+     /PDVCC//MarketAdapterTests
+#     libcppunit # disable static for now
+    : # requirements
+    : # build options 
+      <variant>release
+      <linkflags>-lcppunit
+      <linkflags>-lpthread
+      <linkflags>-ldl
+      <linkflags>-Wl,--no-as-needed
+      <linkflags>-fno-lto # trying to disable lto to fix linking problem
+    : # usage requirements
+    ;
+
+install install-bin
+	: run_tests
+	: <variant>release:<location>"$(PROJECT_INSTALL)/bin"
+      	<variant>debug:<location>"$(PROJECT_INSTALL)/bindebug"
+  	: release
+	;
+
+install libIndicatorsTests
+  : /PIndicatorsTests//IndicatorsTests
+  : <install-type>LIB
+    <variant>release:<location>"$(PROJECT_INSTALL)/lib"
+    <variant>debug:<location>"$(PROJECT_INSTALL)/libdebug"
+  : release debug
+  ;
+
+install libTradeVarSetTests
+  : /PTradeVarSetTests//TradeVarSetTests
+  : <install-type>LIB
+    <variant>release:<location>"$(PROJECT_INSTALL)/lib"
+    <variant>debug:<location>"$(PROJECT_INSTALL)/libdebug"
+  : release debug
+  ;
+

@@ -1,0 +1,12 @@
+project : usage-requirements <include>$(PROJECT_INSTALL) ;
+
+lib MbarDispatcher : [ glob *.cpp ] : <link>static ;
+
+install libMbarDispatcher
+  : MbarDispatcher
+  : <install-type>LIB
+    <variant>release:<location>"$(PROJECT_INSTALL)/lib"
+    <variant>debug:<location>"$(PROJECT_INSTALL)/libdebug"
+  : release debug
+  ;
+

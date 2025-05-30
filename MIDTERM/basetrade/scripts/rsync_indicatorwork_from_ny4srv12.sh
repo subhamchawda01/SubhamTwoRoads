@@ -1,0 +1,1 @@
+rsync -avz --delete --quiet gchak@10.1.3.12:~/indicatorwork ~/

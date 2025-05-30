@@ -1,0 +1,56 @@
+use-project /PDVCC : ../libdvccode ;
+
+lib boost_program_options : : <name>boost_program_options <search>$(BOOST_LIB_INSTALL) ;
+
+project : requirements <library>boost_program_options
+	: usage-requirements <include>$(PROJECT_INSTALL) 
+	;
+  
+use-project /PBasicOrderRoutingServer : ../BasicOrderRoutingServer ;
+use-project /PBMFEP : ../BMFEP ;
+use-project /PNSET : ../NSET ;
+use-project /PSimEngine : ../SimEngine ;
+
+use-project /PORSUtils : ../ORSUtilsCode ; 
+
+lib z : : <name>z <search>/apps/zlib/lib ;
+lib xml2 : : <name>xml2 <search>/apps/libxml2/lib ;
+
+exe cme_ilink_ors 
+    : cme_ilink_ors.cpp 
+      /PDVCC//Utils 
+      /PDVCC//CDef 
+      /PDVCC//CommonDataStructures
+      /PDVCC//CommonTradeUtils 
+      /PBasicOrderRoutingServer//libBasicOrderRoutingServer
+      /PDVCC//TradingInfo
+      /PBMFEP//libBMFEP
+      /PNSET//libNSET
+      /PORSUtils//libORSUtils
+      /PSimEngine//libSimEngine
+      /PDVCC//Profiler
+      z
+      xml2
+    :
+    : <variant>debug <variant>release
+      <linkflags>-lpthread 
+      <linkflags>-lrt
+    ;
+
+exe ors_control_exec 
+    : ors_control_exec.cpp 
+      /PBasicOrderRoutingServer//libBasicOrderRoutingServer 
+      /PDVCC//Utils 
+      /PDVCC//CDef 
+      /PDVCC//CommonDataStructures
+    :
+    : <variant>debug <variant>release
+      <linkflags>-lpthread 
+    ;
+
+install install-bin 
+	: cme_ilink_ors ors_control_exec 
+	: <variant>release:<location>"$(PROJECT_INSTALL)/bin"
+    	  <variant>debug:<location>"$(PROJECT_INSTALL)/bindebug"
+  	: release debug
+	;

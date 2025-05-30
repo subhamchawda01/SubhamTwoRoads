@@ -1,0 +1,888 @@
+/**
+ \file InitCommonCode/paramset.cpp
+
+ \author: (c) Copyright Two Roads Technological Solutions Pvt Ltd 2011
+ Address:
+ Suite No 353, Evoma, #14, Bhattarhalli,
+ Old Madras Road, Near Garden City College,
+ KR Puram, Bangalore 560049, India
+ +91 80 4190 3551
+ */
+#include <vector>
+#include <stdlib.h>
+#include <string.h>
+
+#include "CDef/file_utils.hpp"
+#include "CommonDataStructures/perishable_string_tokenizer.hpp"
+#include "InitCommon/strategy_desc.hpp"
+#include "InitCommon/options_paramset.hpp"
+
+namespace HFSAT {
+
+OptionsParamSet::OptionsParamSet(const std::string &_paramfilename_, const int r_tradingdate_, std::string dep12_short_code)
+    : tradingdate_(r_tradingdate_),
+
+      worst_case_position_(0),
+      worst_case_unit_ratio_(0),
+      max_position_(0),
+      max_unit_ratio_(0),
+      max_total_unit_ratio_to_place_(0),
+      max_total_size_to_place_(0),
+      unit_trade_size_(0),
+      max_global_position_(0),
+
+      highpos_limits_(0),
+      highpos_limits_unit_ratio_(0),
+      highpos_thresh_factor_(99),
+      highpos_thresh_decrease_(-99),
+      highpos_size_factor_(99),
+
+      increase_place_(102),
+      increase_keep_(101),
+      zeropos_limits_(0),
+      zeropos_limits_unit_ratio_(0),
+      zeropos_place_(101),
+      zeropos_keep_(100),
+      decrease_place_(100),
+      decrease_keep_(99),
+      place_keep_diff_(0),
+      increase_zeropos_diff_(100),
+      zeropos_decrease_diff_(-100),
+      spread_increase_(0),
+      min_step_increment_(0),
+      max_min_diff_(0),
+      max_min_diff_order_(0),
+      thresh_increase_(100),
+      thresh_decrease_(-100),
+      thresh_place_(100),
+      thresh_place_keep_diff_(100),
+      safe_distance_(900000),
+      allowed_to_improve_(false),
+      allowed_to_aggress_(false),
+      improve_(100),
+      improve_ticks_(100),
+      aggressive_(100),
+      max_position_to_lift_(0),
+      max_position_to_bidimprove_(0),
+      max_position_to_cancel_on_lift_(0),
+      max_size_to_aggress_(0),
+      min_position_to_hit_(0),
+      min_position_to_askimprove_(0),
+      min_position_to_cancel_on_hit_(0),
+      max_int_spread_to_place_(10),
+      max_int_level_diff_to_place_(0),
+      max_int_spread_to_cross_(1),
+      min_int_spread_to_improve_(2),
+      num_non_best_bid_levels_monitored_(0),
+      num_non_best_ask_levels_monitored_(0),
+      min_distance_for_non_best_(10),
+      max_distance_for_non_best_(10),
+      max_loss_(100),
+      max_pnl_(900000),
+      short_term_global_max_loss_(100),                        // default value high
+      msecs_for_short_term_global_max_loss_(30 * 60 * 1000),      // default 30 minutes
+      short_term_global_max_loss_getflat_msecs_(30 * 60 * 1000),  // default 30 minutes
+      global_max_loss_(50),                                   // increased global max loss to $ 500 k
+      max_opentrade_loss_(10),
+      max_drawdown_(30),
+      max_short_term_loss_(10),
+
+      cooloff_interval_(250),
+      agg_cooloff_interval_(1000),     // by default 10 seconds
+      improve_cooloff_interval_(1000),  // by default 1 second
+      // highpos_aversion_msecs_ ( 0 ), // inactive by default
+
+      stdev_fact_(0),
+      stdev_cap_(1),
+      stdev_duration_(100),
+      low_stdev_lvl_(0),
+      min_size_to_join_(0),
+      spread_add_(0),
+      severity_to_getflat_on_(1.00),
+      ezone_traded_(EZ_MAX),
+      agg_closeout_utc_hhmm_(-1),
+      agg_closeout_max_size_(-1),
+
+      break_msecs_on_max_opentrade_loss_(15 * 60 * 1000),
+      max_global_risk_(0),
+      max_global_risk_ratio_(1),
+
+      use_stable_bidask_levels_(false),
+      use_stable_book_(false),
+      place_multiple_orders_(false),
+      max_global_notional_risk_(100),
+      self_pos_projection_factor_(1),
+      moving_bidask_spread_duration_(300),
+
+      max_global_delta_(500),
+      max_global_gamma_(10),
+      max_global_vega_(100),
+      max_global_theta_(100),
+
+      delta_hedge_lower_threshold_(2000),
+      delta_hedge_upper_threshold_(1000),
+      fractional_second_implied_vol_(300),
+      spread_int_to_target_(0),
+      spread_int_to_run_dat_(5),
+
+      size_disclosed_factor_(1.0),
+      flatfok_book_depth_(1),
+      get_flat_by_fok_mode_(false),
+      read_get_flat_by_fok_mode_(false),
+
+      read_worst_case_position_(false),
+      read_worst_case_unit_ratio_(false),
+      read_max_position_(false),
+      read_max_unit_ratio_(false),
+      read_max_total_unit_ratio_to_place_(false),
+      read_max_total_size_to_place_(false),
+      read_unit_trade_size_(false),
+      read_max_global_position_(false),
+
+      read_highpos_limits_(false),
+      read_highpos_limits_unit_ratio_(false),
+      read_highpos_thresh_factor_(false),
+      read_highpos_thresh_decrease_(false),
+      read_highpos_size_factor_(false),
+      read_increase_place_(false),
+      read_increase_keep_(false),
+      read_zeropos_limits_(false),
+      read_zeropos_limits_unit_ratio_(false),
+      read_zeropos_place_(false),
+      read_zeropos_keep_(false),
+      read_decrease_place_(false),
+      read_decrease_keep_(false),
+      read_place_keep_diff_(false),
+      read_increase_zeropos_diff_(false),
+      read_zeropos_decrease_diff_(false),
+      read_spread_increase_(false),
+      read_min_step_increment_(false),
+      read_max_min_diff_(false),
+      read_max_min_diff_order_(false),
+      read_thresh_increase_(false),
+      read_thresh_decrease_(false),
+      read_thresh_place_(false),
+      read_thresh_place_keep_diff_(false),
+      read_safe_distance_(false),
+      read_allowed_to_improve_(false),
+      read_allowed_to_aggress_(false),
+      read_improve_(false),
+      read_aggressive_(false),
+      read_max_position_to_lift_(false),
+      read_max_position_to_bidimprove_(false),
+      read_max_position_to_cancel_on_lift_(false),
+      read_max_size_to_aggress_(false),
+      read_min_position_to_hit_(false),
+      read_min_position_to_askimprove_(false),
+      read_min_position_to_cancel_on_hit_(false),
+      read_max_int_spread_to_place_(false),
+      read_max_int_level_diff_to_place_(false),
+      read_max_int_spread_to_cross_(false),
+      read_min_int_spread_to_improve_(false),
+      read_num_non_best_bid_levels_monitored_(false),
+      read_num_non_best_ask_levels_monitored_(false),
+      read_min_distance_for_non_best_(false),
+      read_max_distance_for_non_best_(false),
+      read_max_loss_(false),
+      read_max_pnl_(false),
+      read_short_term_global_max_loss_(false),
+      read_global_max_loss_(false),
+      read_max_opentrade_loss_(false),
+      read_max_drawdown_(false),
+      read_max_short_term_loss_(false),
+      read_cooloff_interval_(false),
+      read_agg_cooloff_interval_(false),
+      read_improve_cooloff_interval_(false),
+      // read_highpos_aversion_msecs_ ( false ),
+      read_stdev_fact_(false),
+      read_stdev_cap_(false),
+      read_stdev_duration_(false),
+      read_low_stdev_lvl_(false),
+      read_min_size_to_join_(false),
+      read_spread_add_(false),
+      read_ezone_traded_(false),
+      read_severity_to_getflat_on_(false),
+      read_agg_closeout_utc_hhmm_(false),
+      read_agg_closeout_max_size_(false),
+      read_break_msecs_on_max_opentrade_loss_(false),
+      use_throttle_manager_(false),
+      throttle_message_limit_(135),
+      paramfilename_(StrategyDesc::GetRollParam(_paramfilename_, r_tradingdate_)),
+      read_max_global_risk_(false),
+      read_max_global_risk_ratio_(false),
+      read_use_stable_bidask_levels_(false),
+      read_use_stable_book_(false),
+      read_place_multiple_orders_(false),
+      read_size_disclosed_factor_(false),
+      read_max_global_delta_(false),
+      read_max_global_gamma_(false),
+      read_max_global_vega_(false),
+      read_max_global_theta_(false),
+
+      read_delta_hedge_lower_threshold_(false),
+      read_delta_hedge_upper_threshold_(false),
+      read_fractional_second_implied_vol_(false),
+      read_spread_int_to_target_(false),
+      read_spread_int_to_run_dat_(false),
+      use_notional_uts_(false),
+      notional_uts_(0.0),
+      read_use_notional_uts_(false),
+      read_notional_uts_(false),
+      read_moving_bidask_spread_duration_(false),
+      read_max_global_beta_adjusted_notional_risk_(false),
+      read_self_pos_projection_factor_(false),
+      stdev_fact_ticks_(1),
+      base_shortcode_structured(dep12_short_code),
+      price_type_("Midprice"),
+      use_pre_getflat_(false),
+      pre_getflat_msecs_(300 * 1000),
+      pre_getflat_multiplier_(0),
+      allow_to_aggress_on_getflat_(false),
+      getflat_aggress_(1),
+      max_spread_getflat_aggress_(1) {
+  for (size_t i = 0; i < EZONE_MAXLEN; i++) {
+    ezone_vec_[i] = EZ_MAX;  // undef
+  }
+  LoadParamSet(dep12_short_code);
+}
+
+void OptionsParamSet::LoadParamSet(std::string dep_short_code) {
+  std::ifstream paramfile_;
+  paramfile_.open(paramfilename_.c_str(), std::ifstream::in);
+  if (paramfile_.is_open()) {
+    const int kParamFileLineBufferLen = 1024;
+    char readline_buffer_[kParamFileLineBufferLen];
+    bzero(readline_buffer_, kParamFileLineBufferLen);
+
+    while (paramfile_.good()) {
+      bzero(readline_buffer_, kParamFileLineBufferLen);
+      paramfile_.getline(readline_buffer_, kParamFileLineBufferLen);
+      std::string param_line(readline_buffer_);
+      PerishableStringTokenizer st_(readline_buffer_, kParamFileLineBufferLen);
+      const std::vector<const char *> &tokens_ = st_.GetTokens();
+      if (tokens_.size() < 1) continue;
+
+      // look at the second token and depending on string fill in the appropriate variable from the third token
+      // example :
+      // PARAMVALUE WORST_CASE_POSITION 60 # comments ...
+      // PARAMVALUE MAX_POSITION 30 # comments ...
+      // PARAMVALUE UNIT_TRADE_SIZE 5 # comments ...
+      if ((strcmp(tokens_[0], "PARAMVALUE") == 0) && (tokens_.size() >= 3)) {
+        if (strcmp(tokens_[1], "WORST_CASE_POSITION") == 0) {
+          worst_case_position_ = atoi(tokens_[2]);
+          read_worst_case_position_ = true;
+        } else if (strcmp(tokens_[1], "WORST_CASE_UNIT_RATIO") == 0) {
+          worst_case_unit_ratio_ = atoi(tokens_[2]);
+          read_worst_case_unit_ratio_ = true;
+        } else if (strcmp(tokens_[1], "MAX_POSITION") == 0) {
+          max_position_ = atoi(tokens_[2]);
+          read_max_position_ = true;
+        } else if (strcmp(tokens_[1], "MAX_GLOBAL_POSITION") == 0) {
+          max_global_position_ = atoi(tokens_[2]);
+          read_max_global_position_ = true;
+        } else if (strcmp(tokens_[1], "MAX_UNIT_RATIO") == 0) {
+          max_unit_ratio_ = atof(tokens_[2]);
+          read_max_unit_ratio_ = true;
+        } else if (strcmp(tokens_[1], "MAX_TOTAL_UNIT_RATIO_TO_PLACE") == 0) {
+          max_total_unit_ratio_to_place_ = atof(tokens_[2]);
+          read_max_total_unit_ratio_to_place_ = true;
+        } else if (strcmp(tokens_[1], "MAX_TOTAL_SIZE_TO_PLACE") == 0) {
+          max_total_size_to_place_ = atof(tokens_[2]);
+          read_max_total_size_to_place_ = true;
+        } else if (strcmp(tokens_[1], "UNIT_TRADE_SIZE") == 0) {
+          unit_trade_size_ = atoi(tokens_[2]);
+          read_unit_trade_size_ = true;
+        } else if (strcmp(tokens_[1], "HIGHPOS_LIMITS") == 0) {
+          highpos_limits_ = atof(tokens_[2]);
+          read_highpos_limits_ = true;
+        } else if (strcmp(tokens_[1], "HIGHPOS_LIMITS_UNIT_RATIO") == 0) {
+          highpos_limits_unit_ratio_ = atof(tokens_[2]);
+          read_highpos_limits_unit_ratio_ = true;
+        } else if (strcmp(tokens_[1], "HIGHPOS_THRESH_FACTOR") == 0) {
+          highpos_thresh_factor_ = atof(tokens_[2]);
+          read_highpos_thresh_factor_ = true;
+        } else if (strcmp(tokens_[1], "HIGHPOS_THRESH_DECREASE") == 0) {
+          highpos_thresh_decrease_ = atof(tokens_[2]);
+          read_highpos_thresh_decrease_ = true;
+        } else if (strcmp(tokens_[1], "HIGHPOS_SIZE_FACTOR") == 0) {
+          highpos_size_factor_ = std::max(0.0, std::min(1.0, atof(tokens_[2])));
+          read_highpos_size_factor_ = true;
+        } else if (strcmp(tokens_[1], "INCREASE_PLACE") == 0) {
+          increase_place_ = atof(tokens_[2]);
+          read_increase_place_ = true;
+        } else if (strcmp(tokens_[1], "INCREASE_KEEP") == 0) {
+          increase_keep_ = atof(tokens_[2]);
+          read_increase_keep_ = true;
+        } else if (strcmp(tokens_[1], "ZEROPOS_LIMITS") == 0) {
+          zeropos_limits_ = atof(tokens_[2]);
+          read_zeropos_limits_ = true;
+        } else if (strcmp(tokens_[1], "ZEROPOS_LIMITS_UNIT_RATIO") == 0) {
+          zeropos_limits_unit_ratio_ = atof(tokens_[2]);
+          read_zeropos_limits_unit_ratio_ = true;
+        } else if (strcmp(tokens_[1], "ZEROPOS_PLACE") == 0) {
+          zeropos_place_ = atof(tokens_[2]);
+          read_zeropos_place_ = true;
+        } else if (strcmp(tokens_[1], "ZEROPOS_KEEP") == 0) {
+          zeropos_keep_ = atof(tokens_[2]);
+          read_zeropos_keep_ = true;
+        } else if (strcmp(tokens_[1], "DECREASE_PLACE") == 0) {
+          decrease_place_ = atof(tokens_[2]);
+          read_decrease_place_ = true;
+        } else if (strcmp(tokens_[1], "DECREASE_KEEP") == 0) {
+          decrease_keep_ = atof(tokens_[2]);
+          read_decrease_keep_ = true;
+        } else if (strcmp(tokens_[1], "SAFE_DISTANCE") == 0) {
+          safe_distance_ = std::max(0.0, atof(tokens_[2]));
+          read_safe_distance_ = true;
+        } else if (strcmp(tokens_[1], "SPREAD_INCREASE") == 0) {
+          spread_increase_ = std::max(0.0, atof(tokens_[2]));
+          read_spread_increase_ = true;
+        } else if (strcmp(tokens_[1], "MAX_STEP_INCREMENT_") == 0) {
+           min_step_increment_ = std::max(0.0, atof(tokens_[2]));
+           read_min_step_increment_ = true;
+        } else if (strcmp(tokens_[1], "MAX_MIN_DIFF") == 0) {
+           max_min_diff_ = std::max(0.0, atof(tokens_[2]));
+           read_max_min_diff_ = true;
+        } else if (strcmp(tokens_[1], "MAX_MIN_DIFF_ORDER") == 0) {
+           max_min_diff_order_ = std::max(0.0, atof(tokens_[2]));
+           read_max_min_diff_order_ = true;
+        } else if (strcmp(tokens_[1], "THRESH_INCREASE") == 0) {
+          thresh_increase_ = std::max(0.0, atof(tokens_[2]));
+          read_thresh_increase_ = true;
+        } else if (strcmp(tokens_[1], "THRESH_DECREASE") == 0) {
+          thresh_decrease_ = std::max(0.0, atof(tokens_[2]));
+          read_thresh_decrease_ = true;
+        } else if (strcmp(tokens_[1], "THRESH_PLACE") == 0) {
+          thresh_place_ = std::max(0.0, atof(tokens_[2]));
+          read_thresh_place_ = true;
+        } else if (strcmp(tokens_[1], "THRESH_PLACE_KEEP_DIFF") == 0) {
+          thresh_place_keep_diff_ = std::max(0.0, atof(tokens_[2]));
+          read_thresh_place_keep_diff_ = true;
+        } else if (strcmp(tokens_[1], "PLACE_KEEP_DIFF") == 0) {
+          place_keep_diff_ = std::max(0.0, atof(tokens_[2]));
+          read_place_keep_diff_ = true;
+        } else if (strcmp(tokens_[1], "INCREASE_ZEROPOS_DIFF") == 0) {
+          increase_zeropos_diff_ = atof(tokens_[2]);
+          read_increase_zeropos_diff_ = true;
+        } else if (strcmp(tokens_[1], "ZEROPOS_DECREASE_DIFF") == 0) {
+          zeropos_decrease_diff_ = atof(tokens_[2]);
+          read_zeropos_decrease_diff_ = true;
+        } else if (strcmp(tokens_[1], "ALLOWED_TO_IMPROVE") == 0) {
+          allowed_to_improve_ = (atoi(tokens_[2]) != 0);
+          read_allowed_to_improve_ = true;
+        } else if (strcmp(tokens_[1], "ALLOWED_TO_AGGRESS") == 0) {
+          allowed_to_aggress_ = (atoi(tokens_[2]) != 0);
+          read_allowed_to_aggress_ = true;
+        } else if (strcmp(tokens_[1], "IMPROVE") == 0) {
+          improve_ = atof(tokens_[2]);
+          read_improve_ = true;
+        } else if (strcmp(tokens_[1], "AGGRESSIVE") == 0) {
+          aggressive_ = atof(tokens_[2]);
+          read_aggressive_ = true;
+        } else if (strcmp(tokens_[1], "MAX_POSITION_TO_AGGRESS_UNIT_RATIO") == 0) {
+          if (read_unit_trade_size_) {
+            max_position_to_lift_ = atoi(tokens_[2]) * unit_trade_size_;
+            min_position_to_hit_ = -max_position_to_lift_;
+            read_max_position_to_lift_ = true;
+            read_min_position_to_hit_ = true;
+          }
+        } else if (strcmp(tokens_[1], "MAX_POSITION_TO_AGGRESS") == 0) {
+          max_position_to_lift_ = atoi(tokens_[2]);
+          min_position_to_hit_ = -max_position_to_lift_;
+          read_max_position_to_lift_ = true;
+          read_min_position_to_hit_ = true;
+        } else if (strcmp(tokens_[1], "MAX_POSITION_TO_IMPROVE_UNIT_RATIO") == 0) {
+          if (read_unit_trade_size_) {
+            max_position_to_bidimprove_ = atoi(tokens_[2]) * unit_trade_size_;
+            min_position_to_askimprove_ = -max_position_to_bidimprove_;
+            read_min_position_to_askimprove_ = true;
+            read_max_position_to_bidimprove_ = true;
+          }
+        } else if (strcmp(tokens_[1], "MAX_POSITION_TO_IMPROVE") == 0) {
+          max_position_to_bidimprove_ = atoi(tokens_[2]);
+          min_position_to_askimprove_ = -max_position_to_bidimprove_;
+          read_min_position_to_askimprove_ = true;
+          read_max_position_to_bidimprove_ = true;
+        } else if (strcmp(tokens_[1], "MAX_POSITION_TO_LIFT") == 0) {
+          max_position_to_lift_ = atoi(tokens_[2]);
+          read_max_position_to_lift_ = true;
+        } else if (strcmp(tokens_[1], "MAX_POSITION_TO_BIDIMPROVE") == 0) {
+          max_position_to_bidimprove_ = atoi(tokens_[2]);
+          read_max_position_to_bidimprove_ = true;
+        } else if (strcmp(tokens_[1], "MAX_POSITION_TO_CANCEL_ON_AGGRESS_UNIT_RATIO") == 0) {
+          if (read_unit_trade_size_) {
+            max_position_to_cancel_on_lift_ = atoi(tokens_[2]) * unit_trade_size_;
+            min_position_to_cancel_on_hit_ = -max_position_to_cancel_on_lift_;
+            read_min_position_to_cancel_on_hit_ = true;
+            read_max_position_to_cancel_on_lift_ = true;
+          }
+        } else if (strcmp(tokens_[1], "MAX_POSITION_TO_CANCEL_ON_AGGRESS") == 0) {
+          max_position_to_cancel_on_lift_ = atoi(tokens_[2]);
+          min_position_to_cancel_on_hit_ = -max_position_to_cancel_on_lift_;
+          read_min_position_to_cancel_on_hit_ = true;
+          read_max_position_to_cancel_on_lift_ = true;
+        } else if (strcmp(tokens_[1], "MAX_POSITION_TO_CANCEL_ON_LIFT") == 0) {
+          max_position_to_cancel_on_lift_ = atoi(tokens_[2]);
+          read_max_position_to_cancel_on_lift_ = true;
+        } else if (strcmp(tokens_[1], "MAX_SIZE_TO_AGGRESS") == 0) {
+          max_size_to_aggress_ = atoi(tokens_[2]);
+          read_max_size_to_aggress_ = true;
+        } else if (strcmp(tokens_[1], "MIN_POSITION_TO_HIT") == 0) {
+          min_position_to_hit_ = atoi(tokens_[2]);
+          read_min_position_to_hit_ = true;
+        } else if (strcmp(tokens_[1], "MIN_POSITION_TO_ASKIMPROVE") == 0) {
+          min_position_to_askimprove_ = atoi(tokens_[2]);
+          read_min_position_to_askimprove_ = true;
+        } else if (strcmp(tokens_[1], "MIN_POSITION_TO_CANCEL_ON_HIT") == 0) {
+          min_position_to_cancel_on_hit_ = atoi(tokens_[2]);
+          read_min_position_to_cancel_on_hit_ = true;
+        } else if (strcmp(tokens_[1], "MAX_INT_SPREAD_TO_PLACE") == 0) {
+          max_int_spread_to_place_ = atoi(tokens_[2]);
+          read_max_int_spread_to_place_ = true;
+        } else if (strcmp(tokens_[1], "MAX_INT_LEVEL_DIFF_TO_PLACE") == 0) {
+          max_int_level_diff_to_place_ = atoi(tokens_[2]);
+          read_max_int_level_diff_to_place_ = true;
+        } else if (strcmp(tokens_[1], "MAX_INT_SPREAD_TO_CROSS") == 0) {
+          max_int_spread_to_cross_ = atoi(tokens_[2]);
+          read_max_int_spread_to_cross_ = true;
+        } else if (strcmp(tokens_[1], "MIN_INT_SPREAD_TO_IMPROVE") == 0) {
+          min_int_spread_to_improve_ = atoi(tokens_[2]);
+          read_min_int_spread_to_improve_ = true;
+        } else if (strcmp(tokens_[1], "NUM_NON_BEST_LEVELS_MONITORED") == 0) {
+          unsigned int num_non_best_levels_monitored_ = atoi(tokens_[2]);
+
+          if (!read_num_non_best_bid_levels_monitored_) {
+            num_non_best_bid_levels_monitored_ = num_non_best_levels_monitored_;
+            read_num_non_best_bid_levels_monitored_ = true;
+          }
+          if (!read_num_non_best_ask_levels_monitored_) {
+            num_non_best_ask_levels_monitored_ = num_non_best_levels_monitored_;
+            read_num_non_best_ask_levels_monitored_ = true;
+          }
+        } else if (strcmp(tokens_[1], "NUM_NON_BEST_BID_LEVELS_MONITORED") == 0) {
+          num_non_best_bid_levels_monitored_ = atoi(tokens_[2]);
+          read_num_non_best_bid_levels_monitored_ = true;
+        } else if (strcmp(tokens_[1], "NUM_NON_BEST_ASK_LEVELS_MONITORED") == 0) {
+          num_non_best_ask_levels_monitored_ = atoi(tokens_[2]);
+          read_num_non_best_ask_levels_monitored_ = true;
+        } else if (strcmp(tokens_[1], "MIN_DISTANCE_FOR_NON_BEST") == 0) {
+          min_distance_for_non_best_ = atoi(tokens_[2]);
+          read_min_distance_for_non_best_ = true;
+          if (!read_max_distance_for_non_best_) {
+            max_distance_for_non_best_ = min_distance_for_non_best_ + 4;
+          }
+        } else if (strcmp(tokens_[1], "MAX_DISTANCE_FOR_NON_BEST") == 0) {
+          max_distance_for_non_best_ = atoi(tokens_[2]);
+          read_max_distance_for_non_best_ = true;
+        } else if (strcmp(tokens_[1], "MAX_LOSS") == 0) {
+          max_loss_ = atoi(tokens_[2]);
+          read_max_loss_ = true;
+          if (!read_max_opentrade_loss_) {
+            max_opentrade_loss_ = max_loss_;
+            if (!read_max_short_term_loss_) {  // for current params ... just assume SHORT_TERM = 1.5 * OPENTRADE
+              max_short_term_loss_ = 1.5 * max_opentrade_loss_;
+            }
+            // if ( ! read_max_pertrade_loss_ )
+            // 	{ // assume PERTRADE = OPENTRADE
+            // 	  max_pertrade_loss_ = max_opentrade_loss_;
+            // 	}
+          }
+        } else if (strcmp(tokens_[1], "MAX_PNL") == 0) {
+          max_pnl_ = atoi(tokens_[2]);
+          read_max_pnl_ = true;
+        } else if (strcmp(tokens_[1], "GLOBAL_MAX_LOSS") == 0) {
+          global_max_loss_ = atoi(tokens_[2]);
+          read_global_max_loss_ = true;
+        } else if (strcmp(tokens_[1], "SHORT_TERM_GLOBAL_MAX_LOSS") == 0) {
+          short_term_global_max_loss_ = atoi(tokens_[2]);
+          read_short_term_global_max_loss_ = true;
+        } else if (strcmp(tokens_[1], "MAX_OPENTRADE_LOSS") == 0) {
+          max_opentrade_loss_ = atoi(tokens_[2]);
+          read_max_opentrade_loss_ = true;
+          if (!read_max_short_term_loss_) {  // for current params ... just assume SHORT_TERM = 1.5 * OPENTRADE
+            max_short_term_loss_ = 1.5 * max_opentrade_loss_;
+          }
+          // if ( ! read_max_pertrade_loss_ )
+          //   { // assume PERTRADE = OPENTRADE
+          //     max_pertrade_loss_ = max_opentrade_loss_;
+          //   }
+        } else if (strcmp(tokens_[1], "MAX_SHORT_TERM_LOSS") == 0) {
+          max_short_term_loss_ = atoi(tokens_[2]);
+          read_max_short_term_loss_ = true;
+          // if ( ! read_max_pertrade_loss_ )
+          //   { // assume PERTRADE = SHORT_TERM
+          //     max_pertrade_loss_ = max_short_term_loss_;
+          //   }
+          // } else if ( strcmp ( tokens_ [ 1 ] , "MAX_PERTRADE_LOSS" ) == 0 ) {
+          //   max_pertrade_loss_ = atoi ( tokens_ [ 2 ] );
+          //   read_max_pertrade_loss_ = true;
+        } else if (strcmp(tokens_[1], "MAX_DRAWDOWN") == 0) {
+          max_drawdown_ = atoi(tokens_[2]);
+          read_max_drawdown_ = true;
+          // if ( ! read_max_pertrade_loss_ )
+          //   { // assume PERTRADE = SHORT_TERM
+          //     max_pertrade_loss_ = max_short_term_loss_;
+          //   }
+          // } else if ( strcmp ( tokens_ [ 1 ] , "MAX_PERTRADE_LOSS" ) == 0 ) {
+          //   max_pertrade_loss_ = atoi ( tokens_ [ 2 ] );
+          //   read_max_pertrade_loss_ = true;
+        } else if (strcmp(tokens_[1], "COOLOFF_INTERVAL") == 0) {
+          cooloff_interval_ = atoi(tokens_[2]);
+          read_cooloff_interval_ = true;
+        } else if (strcmp(tokens_[1], "AGG_COOLOFF_INTERVAL") == 0) {
+          agg_cooloff_interval_ = atoi(tokens_[2]);
+          read_agg_cooloff_interval_ = true;
+          // } else if ( strcmp ( tokens_[1], "HIGHPOS_AVERSION_MSECS" ) == 0 ) {
+          //   highpos_aversion_msecs_ = atoi ( tokens_[2] );
+          //   read_highpos_aversion_msecs_ = true;
+        } else if (strcmp(tokens_[1], "IMPROVE_COOLOFF_INTERVAL") == 0) {
+          improve_cooloff_interval_ = atoi(tokens_[2]);
+          read_improve_cooloff_interval_ = true;
+        } else if (strcmp(tokens_[1], "STDEV_FACT") == 0) {
+          stdev_fact_ = std::max(0.0, atof(tokens_[2]));
+          read_stdev_fact_ = true;
+        } else if (strcmp(tokens_[1], "STDEV_CAP") == 0) {
+          stdev_cap_ = std::max(0.0, atof(tokens_[2]));
+          read_stdev_cap_ = true;
+        } else if (strcmp(tokens_[1], "STDEV_DURATION") == 0) {
+          stdev_duration_ = std::max(1, atoi(tokens_[2]));
+          read_stdev_duration_ = true;
+        } else if (strcmp(tokens_[1], "LOW_STDEV_LVL") == 0) {
+          low_stdev_lvl_ = atof(tokens_[2]);
+          read_low_stdev_lvl_ = true;
+        } else if (strcmp(tokens_[1], "MIN_SIZE_TO_JOIN") == 0) {
+          min_size_to_join_ = atoi(tokens_[2]);
+          read_min_size_to_join_ = true;
+        } else if (strcmp(tokens_[1], "THROTTLE_MSGS_PER_SEC") == 0) {
+          throttle_message_limit_ = atoi(tokens_[2]);
+          use_throttle_manager_ = true;
+        } else if (strcmp(tokens_[1], "EZONE_ADD") == 0) {
+          for (unsigned int ez_idx = 2; ez_idx < tokens_.size(); ez_idx++) {
+            EconomicZone_t this_ez = GetEZFromStr(tokens_[ez_idx]);
+            if (this_ez < EZ_MAX) {
+              for (size_t i = 0; i < EZONE_MAXLEN; i++) {
+                if (ezone_vec_[i] == EZ_MAX) {
+                  ezone_vec_[i] = this_ez;
+                  break;
+                }
+                if (ezone_vec_[i] == this_ez) {
+                  break;
+                }
+              }
+            }
+          }
+        } else if (strcmp(tokens_[1], "SPREAD_ADD") == 0) {
+          spread_add_ = atof(tokens_[2]);
+          read_spread_add_ = true;
+        } else if (strcmp(tokens_[1], "SEVERITY_TO_GETFLAT_ON") == 0) {
+          severity_to_getflat_on_ = atof(tokens_[2]);
+          read_severity_to_getflat_on_ = true;
+        } else if (strcmp(tokens_[1], "EZONE_TRADED") == 0) {
+          ezone_traded_ = GetEZFromStr(tokens_[2]);
+          read_ezone_traded_ = true;
+        } else if (strcmp(tokens_[1], "AGG_CLOSEOUT_TIME") == 0) {
+          if ((strncmp(tokens_[2], "EST_", 4) == 0) || (strncmp(tokens_[2], "CST_", 4) == 0) ||
+              (strncmp(tokens_[2], "CET_", 4) == 0) || (strncmp(tokens_[2], "BRT_", 4) == 0) ||
+              (strncmp(tokens_[2], "UTC_", 4) == 0) || (strncmp(tokens_[2], "KST_", 4) == 0) ||
+              (strncmp(tokens_[2], "HKT_", 4) == 0) || (strncmp(tokens_[2], "MSK_", 4) == 0) ||
+              (strncmp(tokens_[2], "IST_", 4) == 0) || (strncmp(tokens_[2], "JST_", 4) == 0) ||
+              (strncmp(tokens_[2], "BST_", 4) == 0)) {
+            agg_closeout_utc_hhmm_ =
+                HFSAT::DateTime::GetUTCHHMMFromTZHHMM(tradingdate_, atoi(tokens_[2] + 4), tokens_[2]);
+          } else {
+            agg_closeout_utc_hhmm_ = atoi(tokens_[2]);
+          }
+
+          read_agg_closeout_utc_hhmm_ = true;
+        } else if (strcmp(tokens_[1], "ALLOW_AGG_CLOSEOUT_ON_MKT_TILT") == 0) {
+          agg_closeout_max_size_ = atoi(tokens_[2]);
+          read_agg_closeout_max_size_ = true;
+        } else if (strcmp(tokens_[1], "BREAK_MSECS_ON_OPENTRADE_LOSS") == 0) {
+          break_msecs_on_max_opentrade_loss_ = std::max(60 * 1000, atoi(tokens_[2]));
+          read_break_msecs_on_max_opentrade_loss_ = true;
+        } else if (strcmp(tokens_[1], "USE_STABLE_BIDASK_LEVELS") == 0) {
+          use_stable_bidask_levels_ = (atoi(tokens_[2]) != 0);
+          read_use_stable_bidask_levels_ = true;
+        } else if (strcmp(tokens_[1], "USE_STABLE_BOOK") == 0) {
+          use_stable_book_ = (atoi(tokens_[2]) != 0);
+          read_use_stable_book_ = true;
+        } else if (strcmp(tokens_[1], "MAX_GLOBAL_RISK") == 0) {
+          max_global_risk_ = atoi(tokens_[2]);
+          read_max_global_risk_ = true;
+        } else if (strcmp(tokens_[1], "MAX_GLOBAL_RISK_RATIO") == 0) {
+          max_global_risk_ratio_ = atof(tokens_[2]);
+          read_max_global_risk_ratio_ = true;
+        } else if (strcmp(tokens_[1], "PLACE_MULTIPLE_ORDERS") == 0) {
+          place_multiple_orders_ = (atoi(tokens_[2]) != 0);
+          read_place_multiple_orders_ = true;
+        } else if (strcmp(tokens_[1], "GET_FLAT_BY_FOK_MODE") == 0) {
+          get_flat_by_fok_mode_ = bool(atoi(tokens_[2]));
+          read_get_flat_by_fok_mode_ = true;
+        } else if (strcmp(tokens_[1], "FLATFOK_BOOK_DEPTH") == 0) {
+          flatfok_book_depth_ = atoi(tokens_[2]);
+        } else if (strcmp(tokens_[1], "MAX_GLOBAL_NOTIONAL_RISK") == 0) {
+          max_global_notional_risk_ = atof(tokens_[2]);
+          read_max_global_beta_adjusted_notional_risk_ = true;
+        } else if (strcmp(tokens_[1], "SELF_POS_PROJECTION_FACTOR") == 0) {
+          self_pos_projection_factor_ = atof(tokens_[2]);
+          read_self_pos_projection_factor_ = true;
+        } else if (strcmp(tokens_[1], "MOVING_BIDASK_SPREAD_DURATION") == 0) {
+          moving_bidask_spread_duration_ = atof(tokens_[2]);
+        } else if (strcmp(tokens_[1], "PRICE_TYPE") == 0) {
+          price_type_ = tokens_[2];
+        } else if (strcmp(tokens_[1], "USE_PRE_GETFLAT") == 0) {
+          use_pre_getflat_ = (atoi(tokens_[2]) != 0);
+        } else if (strcmp(tokens_[1], "PRE_GETFLAT_SECS") == 0) {
+          pre_getflat_msecs_ = atoi(tokens_[2]) * 1000;
+        } else if (strcmp(tokens_[1], "PRE_GETFLAT_MULTIPLIER") == 0) {
+          pre_getflat_multiplier_ = atof(tokens_[2]);
+        } else if (strcmp(tokens_[1], "GETFLAT_AGGRESS") == 0) {
+          allow_to_aggress_on_getflat_ = true;
+          getflat_aggress_ = atof(tokens_[2]);
+        } else if (strcmp(tokens_[1], "MAX_SPREAD_GETFLAT_AGGRESS") == 0) {
+          max_spread_getflat_aggress_ = atof(tokens_[2]);
+        } else if (strcmp(tokens_[1], "SIZE_DISCLOSED_FACTOR") == 0) {
+          size_disclosed_factor_ = atof(tokens_[2]);
+          read_size_disclosed_factor_ = true;
+        } else if (strcmp(tokens_[1], "USE_NOTIONAL_UTS") == 0) {
+          use_notional_uts_ = (atoi(tokens_[2]) != 0);
+          read_use_notional_uts_ = true;
+        } else if (strcmp(tokens_[1], "NOTIONAL_UTS") == 0) {
+          notional_uts_ = atof(tokens_[2]);
+          read_notional_uts_ = true;
+        } else if (strcmp(tokens_[1], "MAX_GLOBAL_DELTA") == 0) {
+          max_global_delta_ = atof(tokens_[2]);
+          read_max_global_delta_ = true;
+        } else if (strcmp(tokens_[1], "MAX_GLOBAL_GAMMA") == 0) {
+          max_global_gamma_ = atof(tokens_[2]);
+          read_max_global_gamma_ = true;
+        } else if (strcmp(tokens_[1], "MAX_GLOBAL_THETA") == 0) {
+          max_global_theta_ = atof(tokens_[2]);
+          read_max_global_theta_ = true;
+        } else if (strcmp(tokens_[1], "MAX_GLOBAL_VEGA") == 0) {
+          max_global_vega_ = atof(tokens_[2]);
+          read_max_global_vega_ = true;
+        } else if (strcmp(tokens_[1], "DELTA_HEDGE_LOWER_THRESHOLD") == 0) {
+          delta_hedge_lower_threshold_ = atof(tokens_[2]);
+          read_delta_hedge_lower_threshold_ = true;
+        } else if (strcmp(tokens_[1], "DELTA_HEDGE_UPPER_THRESHOLD") == 0) {
+          delta_hedge_upper_threshold_ = atof(tokens_[2]);
+          read_delta_hedge_upper_threshold_ = true;
+       } else if (strcmp(tokens_[1], "FRACTIONAL_SECOND_IMPLIED_VOL") == 0) {
+          fractional_second_implied_vol_ = atof(tokens_[2]);
+          read_fractional_second_implied_vol_ = true;
+        } else if (strcmp(tokens_[1], "SPREAD_INT_TO_TARGET") == 0) {
+          spread_int_to_target_ = atof(tokens_[2]);
+          read_spread_int_to_target_ = true;
+        } else if (strcmp(tokens_[1], "SPREAD_INT_TO_RUN_DAT") == 0) {
+          spread_int_to_run_dat_ = atof(tokens_[2]);
+          read_spread_int_to_run_dat_ = true;        }
+      }
+    }
+    paramfile_.close();
+  }
+
+  // there are two ways of specifying params ... building the other one
+  ReconcileParams(base_shortcode_structured);
+}
+
+void OptionsParamSet::WriteSendStruct(ParamSetSendStruct &retval) const {
+  retval.worst_case_position_ = worst_case_position_;
+  retval.max_position_ = max_position_;
+  retval.unit_trade_size_ = unit_trade_size_;
+  retval.max_global_position_ = max_global_position_;
+
+  retval.highpos_limits_ = highpos_limits_;
+  retval.highpos_thresh_factor_ = highpos_thresh_factor_;
+  retval.highpos_thresh_decrease_ = highpos_thresh_decrease_;
+  retval.highpos_size_factor_ = highpos_size_factor_;
+  retval.increase_place_ = increase_place_;
+  retval.increase_keep_ = increase_keep_;
+  retval.zeropos_limits_ = zeropos_limits_;
+  retval.zeropos_place_ = zeropos_place_;
+  retval.zeropos_keep_ = zeropos_keep_;
+  retval.decrease_place_ = decrease_place_;
+  retval.decrease_keep_ = decrease_keep_;
+
+  retval.place_keep_diff_ = place_keep_diff_;
+  retval.increase_zeropos_diff_ = increase_zeropos_diff_;
+  retval.zeropos_decrease_diff_ = zeropos_decrease_diff_;
+
+  retval.safe_distance_ = safe_distance_;
+
+  retval.allowed_to_improve_ = allowed_to_improve_;
+  retval.allowed_to_aggress_ = allowed_to_aggress_;
+  retval.improve_ = improve_;
+  retval.aggressive_ = aggressive_;
+
+  retval.max_position_to_lift_ = max_position_to_lift_;
+  retval.max_position_to_bidimprove_ = max_position_to_bidimprove_;
+  retval.max_position_to_cancel_on_lift_ = max_position_to_cancel_on_lift_;
+  retval.max_size_to_aggress_ = max_size_to_aggress_;
+  retval.min_position_to_hit_ = min_position_to_hit_;
+  retval.min_position_to_askimprove_ = min_position_to_askimprove_;
+  retval.min_position_to_cancel_on_hit_ = min_position_to_cancel_on_hit_;
+
+  retval.max_int_spread_to_place_ = max_int_spread_to_place_;
+  retval.max_int_level_diff_to_place_ = max_int_level_diff_to_place_;
+  retval.max_int_spread_to_cross_ = max_int_spread_to_cross_;
+  retval.min_int_spread_to_improve_ = min_int_spread_to_improve_;
+  retval.num_non_best_bid_levels_monitored_ = num_non_best_bid_levels_monitored_;
+  retval.num_non_best_ask_levels_monitored_ = num_non_best_ask_levels_monitored_;
+
+  retval.max_loss_ = max_loss_;
+  retval.max_pnl_ = max_pnl_;
+  retval.global_max_loss_ = global_max_loss_;
+  retval.max_opentrade_loss_ = max_opentrade_loss_;
+  retval.max_drawdown_ = max_drawdown_;
+  retval.max_short_term_loss_ = max_short_term_loss_;
+
+  retval.cooloff_interval_ = cooloff_interval_;
+  retval.agg_cooloff_interval_ = agg_cooloff_interval_;
+  // retval.highpos_aversion_msecs_ = highpos_aversion_msecs_ ;
+
+  retval.stdev_fact_ = stdev_fact_;
+  retval.stdev_cap_ = stdev_cap_;
+  retval.low_stdev_lvl_ = low_stdev_lvl_;
+  retval.min_size_to_join_ = min_size_to_join_;
+  retval.spread_add_ = spread_add_;
+
+  retval.use_throttle_manager_ = use_throttle_manager_;
+  retval.throttle_message_limit_ = throttle_message_limit_;
+}
+
+void OptionsParamSet::ReconcileParams(std::string dep_short_code) {
+  // Return for regime params as no fields will be set.
+
+  if (!read_max_unit_ratio_ && !read_max_position_) {
+    return;
+  }
+
+  // for NSE & BSE make notional UTS mandatory
+/*  if (strncmp(dep_short_code.c_str(), "NSE_", 4) == 0 || strncmp(dep_short_code.c_str(), "BSE_", 4) == 0) {
+    if ((!read_use_notional_uts_ || !read_notional_uts_ || !use_notional_uts_) && !is_common_param_) {
+      std::cerr << "NSE & BSE require Notional UTS .. Exiting\n";
+      exit(-1);
+    } else {
+      int t_min_lotsize_ = HFSAT::SecurityDefinitions::GetContractMinOrderSize(dep_short_code, tradingdate_);
+      double t_last_close_ =
+          HFSAT::NSESecurityDefinitions::GetUniqueInstance(tradingdate_).GetLastClose(dep_short_code);
+      unit_trade_size_ = (int)(std::ceil(notional_uts_ / (t_last_close_ * t_min_lotsize_ *
+                                                          HFSAT::NSESecurityDefinitions::GetUniqueInstance(tradingdate_)
+                                                              .GetContractMultiplier(dep_short_code))) *
+                               t_min_lotsize_);
+      // OBSERVE that there is no support for scaling explcitly provided Max pos, worst case pos, since
+      // we have no sematic way of scaling those values. Hence max, worst positions should always
+      // be provided as ratios for NSE & BSE products.
+      read_unit_trade_size_ = true;
+    }
+  }*/
+
+  if (!allowed_to_improve_) {
+    improve_ = 100;
+  }
+
+  if (read_worst_case_unit_ratio_ && (!read_worst_case_position_)) {
+    worst_case_position_ = unit_trade_size_ * worst_case_unit_ratio_;
+    read_worst_case_position_ = true;
+  }
+
+  if (read_max_unit_ratio_ && (!read_max_position_)) {
+    max_position_ = (int)(unit_trade_size_ * max_unit_ratio_ + 0.5);
+    read_max_position_ = true;
+  }
+
+  if ((!read_max_total_size_to_place_) && (!read_max_total_unit_ratio_to_place_)) {
+    max_total_unit_ratio_to_place_ = max_unit_ratio_;
+    max_total_size_to_place_ = max_position_;
+    read_max_total_unit_ratio_to_place_ = true;
+    read_max_total_size_to_place_ = true;
+  }
+
+  if (read_max_total_unit_ratio_to_place_ && (!read_max_total_size_to_place_)) {
+    max_total_size_to_place_ = max_total_unit_ratio_to_place_ * unit_trade_size_;
+    read_max_total_size_to_place_ = true;
+  }
+
+  // from A to B
+  if (read_zeropos_place_ && read_zeropos_keep_ && (!read_place_keep_diff_)) {
+    place_keep_diff_ = std::max(0.0, zeropos_place_ - zeropos_keep_);
+    read_place_keep_diff_ = true;
+  }
+  if (read_zeropos_keep_ && read_increase_keep_ && (!read_increase_zeropos_diff_)) {
+    increase_zeropos_diff_ = increase_keep_ - zeropos_keep_;
+    read_increase_zeropos_diff_ = true;
+  }
+  if (read_decrease_keep_ && read_zeropos_keep_ && (!read_zeropos_decrease_diff_)) {
+    zeropos_decrease_diff_ = zeropos_keep_ - decrease_keep_;
+    read_zeropos_decrease_diff_ = true;
+  }
+  if (read_zeropos_place_ && read_place_keep_diff_ && (!read_zeropos_keep_)) {
+    zeropos_keep_ = zeropos_place_ - place_keep_diff_;
+    read_zeropos_keep_ = true;
+  }
+
+  // from B to A
+  if (read_zeropos_keep_ && read_place_keep_diff_ && (!read_zeropos_place_)) {
+    zeropos_place_ = zeropos_keep_ + place_keep_diff_;
+    read_zeropos_place_ = true;
+  }
+  if (read_increase_zeropos_diff_ && !read_zeropos_decrease_diff_) {
+    zeropos_decrease_diff_ = increase_zeropos_diff_;
+    read_zeropos_decrease_diff_ = true;
+  }
+  if (read_zeropos_decrease_diff_ && !read_increase_zeropos_diff_) {
+    increase_zeropos_diff_ = zeropos_decrease_diff_;
+    read_increase_zeropos_diff_ = true;
+  }
+  if (read_zeropos_keep_ && read_increase_zeropos_diff_ && (!read_increase_keep_)) {
+    increase_keep_ = zeropos_keep_ + increase_zeropos_diff_;
+    read_increase_keep_ = true;
+  }
+  if (read_zeropos_place_ && read_increase_zeropos_diff_ && (!read_increase_place_)) {
+    if (read_zeropos_keep_ && read_increase_zeropos_diff_ &&
+        read_place_keep_diff_) {  // scale place_keep_diff_ by ik / zk
+      if (((increase_keep_ <= 0) || (zeropos_keep_ <= 0)) &&
+          ((increase_keep_ + 0.5 > 0) || (zeropos_keep_ + 0.5 > 0))) {  // maybe in DAT these values are -ve
+        increase_place_ =
+            zeropos_keep_ + increase_zeropos_diff_ +
+            std::max(place_keep_diff_, (place_keep_diff_ * (0.5 + increase_keep_) / (0.5 + zeropos_keep_)));
+      } else {
+        increase_place_ = zeropos_keep_ + increase_zeropos_diff_ +
+                          std::max(place_keep_diff_, (place_keep_diff_ * increase_keep_ / zeropos_keep_));
+      }
+    } else {  // just take it from place
+      increase_place_ = zeropos_place_ + increase_zeropos_diff_;
+    }
+    read_increase_place_ = true;
+  }
+  if (read_zeropos_keep_ && read_zeropos_decrease_diff_ && (!read_decrease_keep_)) {
+    decrease_keep_ = zeropos_keep_ - zeropos_decrease_diff_;
+    read_decrease_keep_ = true;
+  }
+  if (read_zeropos_place_ && read_zeropos_decrease_diff_ && (!read_decrease_place_)) {
+    if (read_zeropos_keep_ && read_zeropos_decrease_diff_ &&
+        read_place_keep_diff_) {  // scale place_keep_diff_ by dk / zk
+      if (((decrease_keep_ <= 0) || (zeropos_keep_ <= 0)) &&
+          ((decrease_keep_ + 0.5 > 0) || (zeropos_keep_ + 0.5 > 0))) {  // maybe in DAT these values are -ve
+        decrease_place_ = zeropos_keep_ - zeropos_decrease_diff_ +
+                          std::max(0.0, std::min(place_keep_diff_,
+                                                 (place_keep_diff_ * (0.5 + decrease_keep_) / (0.5 + zeropos_keep_))));
+      } else {
+        decrease_place_ =
+            zeropos_keep_ - zeropos_decrease_diff_ +
+            std::max(0.0, std::min(place_keep_diff_, (place_keep_diff_ * decrease_keep_ / zeropos_keep_)));
+      }
+    } else {  // just take it from place
+      decrease_place_ = zeropos_place_ - zeropos_decrease_diff_;
+    }
+    read_decrease_place_ = true;
+  }
+
+  // initialise max_global_risk_ to max_position_
+  if (!read_max_global_risk_) {
+    max_global_risk_ = max_position_;
+  }
+}
+
+}

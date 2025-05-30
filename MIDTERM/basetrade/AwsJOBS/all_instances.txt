@@ -1,0 +1,7 @@
+i-5616f432 running (nil) 10.0.1.53
+i-5c873621 running (nil) 10.0.1.52
+i-d08637ad running (nil) 10.0.1.54
+i-67ecdb1f running (nil) 10.0.1.45
+i-236b1a59 running (nil) 10.0.1.51
+i-19929e60 running 54.208.92.178 10.0.0.11
+i-057f8a7d running (nil) 10.0.1.110

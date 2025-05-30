@@ -1,0 +1,320 @@
+project : usage-requirements <include>$(PROJECT_INSTALL) ;
+
+use-project /PDVCC : ../libdvccode ;
+
+use-project /PMTools : ../MToolsCode ;
+use-project /PDMMinuteBar : ../MinuteBarCode ;
+use-project /PBTUtils : ../BTUtilsCode ;
+
+# cpp-pch pch 
+# 	: $(PROJECT_INSTALL)/pch.hpp ;
+# 
+# explicit pch ;
+
+exe sim_strategy
+    :
+#     pch 
+      sim_strategy.cpp 
+      /PDVCC//SimPnls
+      /PDVCC//SimMarketMaker 
+      /PDVCC//LoggedSources
+      /PDVCC//CDef 
+      /PDVCC//CommonDataStructures 
+      /PDVCC//Utils
+      /PDVCC//BaseUtils
+      /PDVCC//Indicators 
+      /PDVCC//Signals 
+      /PDVCC//OptionsUtils 
+      /PDVCC//OptionsHelper 
+      /PDVCC//ModelMath 
+      /PDVCC//ExternalData 
+      /PDVCC//CommonTradeUtils
+      /PDVCC//MarketAdapter 
+      /PDVCC//InitCommon
+      /PDVCC//ExecLogic
+      /PDVCC//Profiler
+      /PDVCC//OrderRouting
+      /PDVCC//TradeUtils
+      /PDVCC//TradingInfo
+      /PDVCC//SmartOrderRouting
+      /PDVCC//RiskManagement
+      /PDVCC//RiskManager
+      /PDVCC//VolatileTradingInfo
+      /PDVCC//FpgaHeader
+    :
+    : <variant>release
+      <linkflags>-lsqlite3
+      <linkflags>-lpthread
+      <linkflags>-lnsmsg
+    ;
+    
+exe exchange_simulator
+    : 
+#     pch 
+      exchange_simulator.cpp 
+      /PBTUtils//libBTUtils 
+      /PDVCC//SimMarketMaker 
+      /PDVCC//TradeUtils 
+      /PDVCC//Utils 
+      /PDVCC//CDef 
+      /PDVCC//Profiler
+      /PDVCC//CommonDataStructures 
+      /PDVCC//VolatileTradingInfo 
+      /PDVCC//TradingInfo 
+      /PDVCC//CommonTradeUtils 
+      /PDVCC//LoggedSources
+      /PDVCC//ExternalData 
+      /PDVCC//MarketAdapter 
+      /PDVCC//OrderRouting 
+      /PDVCC//Indicators
+      /PDVCC//ModelMath 
+      /PDVCC//InitCommon 
+      /PDVCC//ExecLogic
+      /PDVCC//OptionsUtils
+      /PDVCC//OptionsHelper 
+      /PDVCC//BaseUtils
+      /PDVCC//FpgaHeader
+    :
+    : <variant>release
+      <linkflags>-lpthread
+      <linkflags>-lnsmsg
+    ;
+    
+exe sim_strategy_mb
+    : 
+#     pch 
+      sim_strategy_mb.cpp 
+      /PDVCC//LoggedSources
+      /PDMMinuteBar//libDMMinuteBar
+      /PDVCC//MinuteBar
+      /PDVCC//CDef 
+      /PDVCC//CommonDataStructures 
+      /PDVCC//Utils 
+      /PDVCC//VolatileTradingInfo 
+      /PDVCC//TradingInfo 
+      /PDVCC//CommonTradeUtils 
+      /PDVCC//ExternalData 
+      /PDVCC//OrderRouting 
+    :
+    : <variant>release
+    ;
+
+
+exe indicator_price_printer
+    : indicator_price_printer.cpp
+      /PDVCC//SimPnls
+      /PDVCC//SimMarketMaker 
+      /PDVCC//LoggedSources
+      /PDVCC//CDef 
+      /PDVCC//CommonDataStructures 
+      /PDVCC//Utils 
+      /PDVCC//Profiler
+      /PDVCC//VolatileTradingInfo 
+      /PDVCC//TradingInfo 
+      /PDVCC//CommonTradeUtils 
+      /PDVCC//OptionsUtils 
+      /PDVCC//OptionsHelper 
+      /PDVCC//TradeUtils 
+      /PDVCC//ExternalData 
+      /PDVCC//MarketAdapter 
+      /PDVCC//OrderRouting 
+      /PDVCC//Indicators 
+      /PDVCC//ModelMath 
+      /PDVCC//SmartOrderRouting 
+      /PDVCC//InitCommon 
+      /PDVCC//ExecLogic
+      /PDVCC//BaseUtils
+    :
+    : <variant>release
+    ;
+
+exe datagen 
+    : base_data_gen.cpp
+      /PDVCC//SimPnls
+      /PDVCC//SimMarketMaker 
+      /PDVCC//LoggedSources
+      /PDVCC//Profiler
+      /PDVCC//TradingInfo 
+      /PDVCC//CommonTradeUtils 
+      /PDVCC//OptionsUtils 	      
+      /PDVCC//OptionsHelper 
+      /PDVCC//TradeUtils 
+      /PDVCC//ExternalData 
+      /PDVCC//MarketAdapter 
+      /PDVCC//OrderRouting 
+      /PDVCC//Indicators 
+      /PDVCC//ModelMath 
+      /PDVCC//SmartOrderRouting 
+      /PDVCC//InitCommon 
+      /PDVCC//ExecLogic
+      /PDVCC//BaseUtils
+      /PDVCC//FpgaHeader
+    :
+    : <variant>release 
+      <linkflags>-lpthread
+      <linkflags>-lnsmsg
+    ;
+
+exe datagen_online
+    : base_data_gen_online.cpp
+      /PDVCC//SimPnls
+      /PDVCC//SimMarketMaker 
+      /PDVCC//LoggedSources
+      /PDVCC//Profiler
+      /PDVCC//TradingInfo 
+      /PDVCC//CommonTradeUtils 
+      /PDVCC//OptionsUtils 	      
+      /PDVCC//OptionsHelper 
+      /PDVCC//TradeUtils 
+      /PDVCC//ExternalData 
+      /PDVCC//MarketAdapter 
+      /PDVCC//OrderRouting 
+      /PDVCC//Indicators 
+      /PDVCC//ModelMath 
+      /PDVCC//SmartOrderRouting 
+      /PDVCC//InitCommon 
+      /PDVCC//ExecLogic
+      /PDVCC//BaseUtils
+      /PDVCC//FpgaHeader
+    :
+    : <variant>release 
+      <linkflags>-lpthread
+      <linkflags>-lnsmsg
+    ;
+
+exe sim_real_packet_order_mismatch_detector 
+    : sim_real_packet_order_mismatch_detector.cpp
+      /PDVCC//CDef 
+      /PDVCC//CommonDataStructures 
+      /PDVCC//Utils 
+      /PDVCC//SimPnls
+      /PDVCC//SimMarketMaker 
+      /PDVCC//LoggedSources
+      /PDVCC//Profiler
+      /PDVCC//TradingInfo 
+      /PDVCC//CommonTradeUtils 
+      /PDVCC//OptionsUtils 	      
+      /PDVCC//OptionsHelper 
+      /PDVCC//TradeUtils 
+      /PDVCC//ExternalData 
+      /PDVCC//MarketAdapter 
+      /PDVCC//OrderRouting 
+      /PDVCC//Indicators 
+      /PDVCC//ModelMath 
+      /PDVCC//SmartOrderRouting 
+      /PDVCC//InitCommon 
+      /PDVCC//ExecLogic
+      /PDVCC//BaseUtils
+    :
+    : <variant>release 
+    ;
+
+exe artificial_mds_simulator 
+    : artificial_mds_simulator.cpp
+      /PDVCC//CDef 
+      /PDVCC//CommonDataStructures 
+      /PDVCC//Utils 
+      /PDVCC//SimPnls
+      /PDVCC//SimMarketMaker 
+      /PDVCC//LoggedSources
+      /PDVCC//Profiler
+      /PDVCC//TradingInfo 
+      /PDVCC//CommonTradeUtils 
+      /PDVCC//OptionsUtils 	      
+      /PDVCC//TradeUtils 
+      /PDVCC//ExternalData 
+      /PDVCC//MarketAdapter 
+      /PDVCC//OrderRouting 
+      /PDVCC//Indicators 
+      /PDVCC//ModelMath 
+      /PDVCC//SmartOrderRouting 
+      /PDVCC//InitCommon 
+      /PDVCC//ExecLogic
+      /PDVCC//BaseUtils
+    :
+    : <variant>release 
+    ;
+
+exe md_simulator
+    : md_simulator.cpp
+      /PDVCC//LoggedSources
+      /PMTools//libMTools
+      /PDVCC//ModelMath 
+      /PDVCC//CommonTradeUtils 
+      /PDVCC//OptionsUtils	      
+      /PDVCC//OptionsHelper 
+      /PDVCC//TradeUtils 
+      /PDVCC//ExternalData 
+      /PDVCC//MarketAdapter 
+      /PDVCC//Indicators 
+      /PDVCC//BaseUtils
+      /PDVCC//TradingInfo 
+      /PDVCC//OrderRouting 
+      /PDVCC//Profiler
+    :
+    : <variant>release 
+    ;
+
+exe sim_strategy_options
+    : 
+#     pch 
+      sim_strategy_options.cpp 
+      /PDVCC//SimPnls
+      /PDVCC//SimMarketMaker 
+      /PDVCC//LoggedSources
+      /PDVCC//Profiler
+      /PDVCC//VolatileTradingInfo 
+      /PDVCC//TradingInfo 
+      /PDVCC//CommonTradeUtils 
+      /PDVCC//OptionsUtils 
+      /PDVCC//OptionsHelper 
+      /PDVCC//TradeUtils 
+      /PDVCC//ExternalData 
+      /PDVCC//MarketAdapter 
+      /PDVCC//OrderRouting 
+      /PDVCC//Indicators 
+      /PDVCC//ModelMath 
+      /PDVCC//SmartOrderRouting 
+      /PDVCC//InitCommon 
+      /PDVCC//ExecLogic
+      /PDVCC//RiskManagement
+      /PDVCC//BaseUtils
+    :
+    : <variant>release
+    ;
+
+exe simulate_signals
+    : simulate_signals.cpp
+      /PDVCC//SimPnls
+      /PDVCC//SimMarketMaker
+      /PDVCC//TradingInfo
+      /PDVCC//LoggedSources
+      /PDVCC//Indicators
+      /PDVCC//InitCommon
+      /PDVCC//ExecLogic
+      /PDVCC//ModelMath
+      /PDVCC//BaseUtils
+     /PDVCC//CDef
+     /PDVCC//Utils
+     /PDVCC//TradeUtils
+     /PDVCC//CommonDataStructures
+      /PDVCC//TradingInfo
+      /PDVCC//OptionsUtils 
+      /PDVCC//CommonTradeUtils
+      /PDVCC//ExternalData
+      /PDVCC//MarketAdapter
+      /PDVCC//OrderRouting
+      /PDVCC//VolatileTradingInfo
+      /PDVCC//SmartOrderRouting
+    :
+    : <variant>debug <variant>release
+      <linkflags>-lpthread
+    ;
+
+
+install install-bin 
+	: datagen datagen_online sim_strategy exchange_simulator indicator_price_printer md_simulator sim_strategy_options sim_strategy_mb artificial_mds_simulator sim_real_packet_order_mismatch_detector simulate_signals
+	: <variant>release:<location>"$(PROJECT_INSTALL)/bin"
+	  <variant>debug:<location>"$(PROJECT_INSTALL)/bindebug"
+	: release debug
+	;

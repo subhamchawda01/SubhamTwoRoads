@@ -1,0 +1,20 @@
+project : usage-requirements <include>$(PROJECT_INSTALL) ;
+
+use-project /PDVCC : ../libdvccode ;
+
+exe AWSScheduler
+     : AWSScheduler.cpp 
+       /PDVCC//CDef
+       /PDVCC//Utils
+       /PDVCC//CommonDataStructures
+     :
+     : <variant>debug <variant>release
+       <linkflags>-lrt
+     ;
+
+install install-bin
+        : AWSScheduler 
+        : <variant>release:<location>"$(PROJECT_INSTALL)/bin"
+          <variant>debug:<location>"$(PROJECT_INSTALL)/bindebug"
+        : release debug
+        ;

@@ -1,0 +1,85 @@
+project : usage-requirements <include>$(PROJECT_INSTALL) ;
+
+use-project /PDVCC : ../libdvccode ;
+
+use-project /PMarketAdapter : ../MarketAdapterCode ;
+use-project /POrderRouting : ../OrderRoutingCode ;
+use-project /PSmartOrderRouting : ../SmartOrderRoutingCode ;
+use-project /PVolatileTradingInfo : ../VolatileTradingInfo ;
+
+use-project /POrderRoutingTests : OrderRouting ;
+use-project /PMarketAdapterTests : MarketAdapter ;
+use-project /PVolatileTradingInfoTests : VolatileTradingInfo ;
+
+
+
+# lib ncurses : : <name>ncurses <search>/usr/lib64 ;
+
+lib libcppunit
+:
+: # requirements
+  <name>cppunit 
+  <search>/usr/lib64
+:
+: 
+; 
+
+
+exe run_tests
+    : # sources
+    [ glob *.cpp ]
+     /PMarketAdapterTests//MarketAdapterTests
+     /POrderRoutingTests//OrderRoutingTests
+     /PVolatileTradingInfoTests//VolatileTradingInfoTests
+     /PMarketAdapter//MarketAdapter
+     /PSmartOrderRouting//SmartOrderRouting
+     /POrderRouting//OrderRouting
+     /PVolatileTradingInfo//VolatileTradingInfo
+     /PDVCC//CommonTradeUtils
+     /PDVCC//CDef
+     /PDVCC//Utils
+     /PDVCC//CommonDataStructures
+#     libcppunit # disable static for now
+    : # requirements
+    : # build options 
+      <variant>release
+      <linkflags>-lcppunit
+      <linkflags>-lpthread
+      <linkflags>-ldl
+      <linkflags>-Wl,--no-as-needed
+      <linkflags>-fno-lto # trying to disable lto to fix linking problem
+    : # usage requirements
+    ;
+
+install install-bin
+	: run_tests
+	: <variant>release:<location>"$(PROJECT_INSTALL)/bin"
+      	<variant>debug:<location>"$(PROJECT_INSTALL)/bindebug"
+  	: release
+	;
+
+install libMarketAdapterTests
+  : /PMarketAdapterTests//MarketAdapterTests
+  : <install-type>LIB
+    <variant>release:<location>"$(PROJECT_INSTALL)/lib"
+    <variant>debug:<location>"$(PROJECT_INSTALL)/libdebug"
+  : release debug
+  ;
+
+install libOrderRoutingTests
+  : /POrderRoutingTests//OrderRoutingTests
+  : <install-type>LIB
+    <variant>release:<location>"$(PROJECT_INSTALL)/lib"
+    <variant>debug:<location>"$(PROJECT_INSTALL)/libdebug"
+  : release debug
+  ;
+
+install libVolatileTradingInfoTests
+  : /PVolatileTradingInfoTests//VolatileTradingInfoTests
+  : <install-type>LIB
+    <variant>release:<location>"$(PROJECT_INSTALL)/lib"
+    <variant>debug:<location>"$(PROJECT_INSTALL)/libdebug"
+  : release debug
+  ;
+
+

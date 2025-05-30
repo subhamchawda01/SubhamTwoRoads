@@ -1,0 +1,4 @@
+0000000000000000000000000000000000000000 7a5d5381af9de579bdf4444fca70596970ed9a15 subhamchawda01 <subham.chawda@tworoads-trading.co.in> 1612944418 +0000	branch: Created from HEAD
+7a5d5381af9de579bdf4444fca70596970ed9a15 27d63cbf375fccaa8c28129f5d882be009034c09 subhamchawda01 <subham.chawda@tworoads-trading.co.in> 1612971363 +0000	commit: added nnf error handling
+27d63cbf375fccaa8c28129f5d882be009034c09 e47fdc9bc9c253098c8520030057e819dd9d480e subhamchawda01 <subham.chawda@tworoads-trading.co.in> 1613023959 +0000	commit: added nnf error handling
+e47fdc9bc9c253098c8520030057e819dd9d480e 05dc835f70d9a1fed13f89ab6985b181946dc702 subhamchawda01 <subham.chawda@tworoads-trading.co.in> 1613628373 +0000	commit: nnf error handling for batch reject

@@ -1,0 +1,6 @@
+logs/tradelogs -atime +2
+logs/tradelogs -name log.\* -mtime +1
+logs/datalogs -atime +1
+DailyTimedDataDir
+DailyRegDataDir
+RegDataDir

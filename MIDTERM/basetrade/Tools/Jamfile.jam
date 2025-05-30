@@ -1,0 +1,2613 @@
+use-project /PDVCC : ../libdvccode ;
+
+project : usage-requirements ;
+
+use-project /PBTUtils : ../BTUtilsCode ;
+use-project /PSqlCpp : ../SqlCppCode ;
+use-project /PMTools : ../MToolsCode ;
+use-project /PNSESpan : ../NSESpan ;
+use-project /PImpliedVolatility : ../OptionTools/ImpliedVolatility ;
+
+# lib ncurses : : <name>ncurses <search>/usr/lib64 ;
+
+exe get_option_greeks
+    : get_option_greeks.cpp
+     /PDVCC//Utils
+     /PDVCC//TradeUtils
+     /PDVCC//OptionsUtils
+     /PDVCC//OptionsHelper
+    :
+    : <variant>debug <variant>release
+    ;
+
+exe calc_nse_span 
+   : calc_nse_span.cpp 
+     /PNSESpan//libNSESpan
+     /PDVCC//CDef
+     /PDVCC//CommonDataStructures
+   :
+   : <variant>debug <variant>release
+   ;
+
+exe calc_nse_span_multi_products
+   : calc_nse_span_multi_products.cpp
+     /PNSESpan//libNSESpan
+     /PDVCC//CDef
+     /PDVCC//CommonDataStructures
+   :
+   : <variant>debug <variant>release
+   ;
+
+exe get_nse_spl_days
+   : get_nse_spl_days.cpp 
+     /PDVCC//CDef
+     /PDVCC//Utils
+     /PDVCC//CommonDataStructures
+     /PDVCC//CommonTradeUtils
+   :
+   : <variant>debug <variant>release
+   ;
+
+exe print_lrdb_values
+    : print_lrdb_values.cpp
+     /PDVCC//CDef
+     /PDVCC//Utils
+     /PDVCC//CommonDataStructures
+     /PDVCC//CommonTradeUtils
+    :
+    : <variant>debug <variant>release
+    ;
+    
+exe remove_indicators_from_model
+    : remove_indicators_from_model.cpp
+      /PDVCC//CommonTradeUtils
+      /PDVCC//CommonTradeDataStructures
+      /PDVCC//Indicators
+     /PDVCC//CDef
+     /PDVCC//Utils
+     /PDVCC//CommonDataStructures
+      /PDVCC//OptionsUtils
+      /PDVCC//OptionsHelper
+    :
+    : <variant>debug <variant>release
+    ;
+
+exe get_implied_volatility
+    : get_implied_volatility.cpp
+      /PImpliedVolatility//libImpliedVolatility
+     /PDVCC//Utils
+    :
+    : <variant>debug <variant>release
+    ;
+
+exe production_risk_manager
+    : production_risk_manager.cpp
+      /PDVCC//CommonTradeUtils
+      /PDVCC//VolatileTradingInfo
+     /PDVCC//CDef
+     /PDVCC//Utils
+     /PDVCC//CommonDataStructures
+     /PDVCC//OptionsUtils
+      /PDVCC//OptionsHelper
+     /PDVCC//RiskManager
+    :
+     <linkflags>-lpthread
+    : <variant>debug <variant>release
+    ;
+
+exe collect_features
+    : collect_features.cpp
+     /PDVCC//CDef
+     /PDVCC//Utils
+     /PDVCC//CommonDataStructures
+    :
+    : <variant>debug <variant>release
+    ;
+
+exe read_feature
+    : read_feature.cpp
+      /PDVCC//OptionsUtils
+      /PDVCC//OptionsHelper
+      /PDVCC//CommonTradeUtils
+     /PDVCC//CDef
+     /PDVCC//Utils
+     /PDVCC//CommonDataStructures
+    :
+    : <variant>debug <variant>release
+    ;
+
+exe collect_features_samples
+    : collect_features_samples.cpp
+      /PDVCC//TradingInfo
+      /PDVCC//OptionsUtils
+      /PDVCC//OptionsHelper
+      /PDVCC//CommonTradeUtils
+      /PDVCC//ExternalData
+      /PDVCC//MarketAdapter
+      /PDVCC//OrderRouting
+      /PDVCC//Profiler
+      /PDVCC//ModelMath
+      /PDVCC//Indicators
+      /PDVCC//TradeUtils 
+      /PDVCC//BaseUtils
+     /PDVCC//CDef
+     /PDVCC//Utils
+     /PDVCC//CommonDataStructures
+    :
+    : <variant>release
+#      <linkflags>-fno-lto # disable lto to fix gcc6.3 error
+    ;
+
+exe check_samplefeatures_presence
+    : check_samplefeatures_presence.cpp
+      /PDVCC//CommonTradeUtils
+     /PDVCC//CDef
+     /PDVCC//Utils
+     /PDVCC//CommonDataStructures
+    :
+    : <variant>debug <variant>release
+    ;
+
+exe collect_shortcodes_from_model
+    : collect_shortcodes_from_model.cpp
+      /PDVCC//BaseUtils
+      /PDVCC//TradingInfo
+      /PDVCC//CommonTradeUtils
+      /PDVCC//OptionsUtils
+      /PDVCC//OptionsHelper
+      /PDVCC//ExternalData
+      /PDVCC//TradeUtils 
+      /PDVCC//MarketAdapter
+      /PDVCC//OrderRouting
+      /PDVCC//Profiler
+      /PDVCC//ModelMath
+      /PDVCC//Indicators
+     /PDVCC//CDef
+     /PDVCC//Utils
+     /PDVCC//CommonDataStructures
+    :
+    : <variant>debug <variant>release
+    ;
+
+exe controlscreen
+    : control_screen.cpp
+     /PDVCC//CDef
+     /PDVCC//Utils
+    :
+    : <variant>debug <variant>release
+    ;
+
+exe mcast_bw_simple_tool
+    : mcast_bw_simple_tool.cpp
+     /PDVCC//CDef
+     /PDVCC//Utils
+     /PDVCC//CommonDataStructures
+    :
+    : <variant>debug <variant>release
+      <linkflags>-lncurses
+      <linkflags>-ltinfo
+    ;
+
+exe simple_multicast_receiver
+    : simple_multicast_receiver.cpp
+     /PDVCC//CDef
+     /PDVCC//Utils
+    :
+    : <variant>debug <variant>release
+    ;
+
+exe mcast_data_writer
+    : mcast_data_writer.cpp
+     /PDVCC//CDef
+     /PDVCC//Utils
+     /PDVCC//CommonDataStructures
+    :
+    : <variant>debug <variant>release
+    ;
+
+
+exe simple_multicast_sender
+    : simple_multicast_sender.cpp
+      /PDVCC//Profiler
+     /PDVCC//CDef
+     /PDVCC//Utils
+    :
+    : <variant>debug <variant>release
+    ;
+
+exe realign_to_quantiles
+     : realign_to_quantiles.cpp
+       /PDVCC//Profiler
+     /PDVCC//CDef
+     /PDVCC//Utils
+     /PDVCC//CommonDataStructures
+     :
+     : <variant>debug <variant>release
+     ;
+
+exe quantile_filter
+     : quantile_filter.cpp
+       /PDVCC//Profiler
+     /PDVCC//CDef
+     /PDVCC//Utils
+     /PDVCC//CommonDataStructures
+     :
+     : <variant>debug <variant>release
+     ;
+
+exe quantile_summary
+     : quantile_summary.cpp
+       /PDVCC//Profiler
+     /PDVCC//CDef
+     /PDVCC//Utils
+     /PDVCC//CommonDataStructures
+     :
+     : <variant>debug <variant>release
+     ;
+
+exe aws_job_scheduler
+    : aws_job_scheduler.cpp
+      /PDVCC//Profiler
+     /PDVCC//CDef
+     /PDVCC//Utils
+     /PDVCC//CommonDataStructures
+    :
+    : <variant>debug <variant>release
+    ;
+
+exe timed_data_to_reg_data
+    : timed_data_to_reg_data.cpp
+      /PMTools//libMTools
+      /PDVCC//Profiler
+     /PDVCC//CDef
+     /PDVCC//Utils
+     /PDVCC//CommonDataStructures
+    :
+    : <variant>debug <variant>release
+    ;
+
+exe scale_reg_data_udm
+    : scale_reg_data_udm.cpp
+      /PMTools//libMTools
+      /PDVCC//Profiler
+     /PDVCC//CDef
+     /PDVCC//Utils
+     /PDVCC//CommonDataStructures
+    :
+    : <variant>debug <variant>release
+    ;
+
+exe timed_data_to_reg_data_bd
+    : timed_data_to_reg_data_bd.cpp
+      /PMTools//libMTools
+     /PDVCC//CDef
+     /PDVCC//Utils
+     /PDVCC//CommonDataStructures
+    :
+    : <variant>debug <variant>release
+    ;
+
+
+exe print_paramset
+    : print_paramset.cpp
+      /PDVCC//InitCommon
+      /PMTools//libMTools
+      /PDVCC//OptionsUtils
+      /PDVCC//OptionsHelper
+      /PDVCC//CommonTradeUtils
+     /PDVCC//CDef
+     /PDVCC//Utils
+     /PDVCC//CommonDataStructures
+    :
+    : <variant>debug <variant>release
+    ;
+
+exe timed_data_to_multiple_reg_data
+    : timed_data_to_multiple_reg_data.cpp
+      /PMTools//libMTools
+      /PDVCC//Profiler
+     /PDVCC//CDef
+     /PDVCC//Utils
+     /PDVCC//CommonDataStructures
+    :
+    : <variant>debug <variant>release
+    ;
+
+exe timed_data_to_corr_record
+    : timed_data_to_corr_record.cpp
+      /PMTools//libMTools
+      /PDVCC//Profiler
+     /PDVCC//CDef
+     /PDVCC//Utils
+     /PDVCC//CommonDataStructures
+    :
+    : <variant>debug <variant>release
+    ;
+
+exe timed_data_to_stats_record
+    : timed_data_to_stats_record.cpp
+      /PMTools//libMTools
+      /PDVCC//CDef
+      /PDVCC//Profiler
+     /PDVCC//Utils
+     /PDVCC//CommonDataStructures
+    :
+    : <variant>debug <variant>release
+    ;
+
+exe filter_indicators
+    : filter_indicators.cpp
+      /PMTools//libMTools
+      /PDVCC//CDef
+      /PDVCC//OptionsUtils
+      /PDVCC//OptionsHelper
+      /PDVCC//CommonTradeUtils
+     /PDVCC//Utils
+     /PDVCC//CommonDataStructures
+    :
+    : <variant>debug <variant>release
+    ;
+
+exe make_indicator_list
+    : make_indicator_list.cpp
+      /PMTools//libMTools
+      /PDVCC//CDef
+      /PDVCC//OptionsUtils
+      /PDVCC//OptionsHelper
+      /PDVCC//CommonTradeUtils
+      /PDVCC//Indicators
+      /PDVCC//MarketAdapter
+      /PDVCC//ModelMath
+     /PDVCC//Utils
+     /PDVCC//CommonDataStructures
+    :
+    : <variant>debug <variant>release
+    ;
+
+exe make_indicator_list_extended
+    : make_indicator_list_extended.cpp
+      /PMTools//libMTools
+      /PDVCC//CDef
+      /PDVCC//OptionsUtils
+      /PDVCC//OptionsHelper
+      /PDVCC//CommonTradeUtils
+      /PDVCC//MarketAdapter
+      /PDVCC//Indicators
+      /PDVCC//ModelMath
+     /PDVCC//Utils
+     /PDVCC//CommonDataStructures
+    :
+    : <variant>debug <variant>release
+    ;
+
+exe get_volume_on_day
+    : get_volume_on_day.cpp
+      /PDVCC//CDef
+      /PDVCC//Utils 
+      /PBTUtils//libBTUtils
+      /PDVCC//OptionsUtils
+      /PDVCC//OptionsHelper
+      /PDVCC//LoggedSources
+      /PDVCC//CommonTradeUtils
+      /PDVCC//CommonDataStructures
+    :
+    : <variant>debug <variant>release
+    ;
+
+exe get_all_mds_stats_for_day
+    : get_all_mds_stats_for_day.cpp
+      /PDVCC//CDef
+      /PDVCC//Utils 
+      /PBTUtils//libBTUtils
+      /PDVCC//OptionsUtils
+      /PDVCC//OptionsHelper
+      /PDVCC//CommonTradeUtils
+      /PDVCC//LoggedSources
+      /PDVCC//CommonDataStructures
+    :
+    : <variant>debug <variant>release
+    ;
+
+exe get_exch_from_shortcode
+    : get_exch_from_shortcode.cpp
+      /PDVCC//OptionsUtils 
+      /PDVCC//OptionsHelper
+      /PDVCC//CommonTradeUtils
+     /PDVCC//CDef
+     /PDVCC//Utils
+     /PDVCC//CommonDataStructures
+    :
+    : <variant>debug <variant>release
+    ;
+
+exe get_all_securities
+    : get_all_securities.cpp
+      /PDVCC//OptionsUtils 
+      /PDVCC//OptionsHelper
+      /PDVCC//CommonTradeUtils
+     /PDVCC//CDef
+     /PDVCC//Utils
+     /PDVCC//CommonDataStructures
+    :
+    : <variant>debug <variant>release
+    ;
+
+exe get_volume_on_day_2
+    : get_volume_on_day_2.cpp
+      /PDVCC//CDef
+      /PDVCC//OptionsUtils 
+      /PDVCC//OptionsHelper
+      /PDVCC//CommonTradeUtils
+      /PDVCC//LoggedSources
+      /PDVCC//Utils
+      /PDVCC//CommonDataStructures
+    :
+    : <variant>debug <variant>release
+    ;
+
+exe get_di_pos_for_risk
+    : get_di_pos_for_risk.cpp
+      /PDVCC//CDef
+      /PDVCC//OptionsUtils 
+      /PDVCC//OptionsHelper
+      /PDVCC//CommonTradeUtils
+     /PDVCC//Utils
+     /PDVCC//CommonDataStructures
+    :
+    : <variant>debug <variant>release
+    ;
+   
+exe get_di_dv01
+    : get_di_dv01.cpp
+      /PDVCC//CDef
+      /PDVCC//OptionsUtils 
+      /PDVCC//OptionsHelper
+      /PDVCC//CommonTradeUtils
+     /PDVCC//Utils
+     /PDVCC//CommonDataStructures
+    :
+    : <variant>debug <variant>release
+    ;
+ 
+
+exe af_save_mdslogs_fx
+    : af_save_mdslogs_fx.cpp
+      /PDVCC//CDef
+      /PDVCC//OptionsUtils 
+      /PDVCC//OptionsHelper
+      /PDVCC//CommonTradeUtils
+     /PDVCC//Utils
+      :
+      : <variant>debug <variant>release
+        <linkflags>-lpthread
+    ;
+
+exe af_save_estimates_fx
+    : af_save_estimates_fx.cpp
+      /PDVCC//CDef
+      /PDVCC//OptionsUtils 
+      /PDVCC//OptionsHelper
+      /PDVCC//CommonTradeUtils
+     /PDVCC//Utils
+      :
+      : <variant>debug <variant>release
+        <linkflags>-lpthread
+    ;
+
+exe af_print_xmlspecs
+    : af_print_xmlspecs.cpp
+      /PDVCC//CDef
+      /PDVCC//OptionsUtils 
+      /PDVCC//OptionsHelper
+      /PDVCC//CommonTradeUtils
+      :
+      : <variant>debug <variant>release
+        <linkflags>-lpthread
+    ;
+
+exe aflash_decode_category
+    : aflash_decode_category.cpp
+      /PDVCC//CommonTradeUtils
+      /PDVCC//CDef
+     /PDVCC//Utils
+    :
+    : <variant>debug <variant>release
+      <linkflags>-lpthread
+    ;
+
+exe daily_trade_aggregator
+    : daily_trade_aggregator.cpp
+      /PDVCC//CDef
+      /PDVCC//TradingInfo
+      /PDVCC//OptionsUtils 
+      /PDVCC//OptionsHelper
+      /PDVCC//CommonTradeUtils
+      /PDVCC//LoggedSources
+      /PDVCC//ExternalData
+      /PDVCC//MarketAdapter
+      /PDVCC//OrderRouting
+      /PDVCC//Indicators
+      /PDVCC//ModelMath
+      /PDVCC//Utils
+      /PDVCC//CommonDataStructures
+    :
+    : <variant>debug <variant>release
+      <linkflags>-lpthread
+    ;
+
+exe compute_pca_coefficients
+    : compute_pca_coefficients.cpp
+      /PDVCC//Utils
+      /PDVCC//CommonDataStructures
+    : 
+    : <variant>debug <variant>release
+    ;
+
+exe get_periodic_volume_on_day
+    : get_periodic_volume_on_day.cpp
+      /PDVCC//CDef
+      /PBTUtils//libBTUtils
+      /PDVCC//OptionsUtils 
+      /PDVCC//CommonTradeUtils
+      /PDVCC//Profiler
+      /PDVCC//LoggedSources
+      /PDVCC//Utils
+      /PDVCC//CommonDataStructures
+    :
+    : <variant>debug <variant>release
+    ;
+
+exe get_periodic_volume_on_day_utc
+    : get_periodic_volume_on_day_utc.cpp
+      /PDVCC//CDef
+      /PDVCC//OptionsUtils 
+      /PDVCC//CommonTradeUtils
+      /PDVCC//LoggedSources
+      /PBTUtils//libBTUtils 
+      /PDVCC//Profiler
+      /PDVCC//Utils
+      /PDVCC//CommonDataStructures
+    :
+    : <variant>debug <variant>release
+    ;
+
+exe get_avg_volume_for_shortcode
+    : get_avg_volume_for_shortcode.cpp
+      /PDVCC//CDef
+      /PDVCC//OptionsUtils 
+      /PDVCC//CommonTradeUtils
+      /PDVCC//LoggedSources
+      /PDVCC//Profiler
+      /PDVCC//Utils
+      /PDVCC//CommonDataStructures
+      /PDVCC//LoggedSources
+    :
+    : <variant>debug <variant>release
+    ;
+
+exe get_periodic_trades_on_day
+    : get_periodic_trades_on_day.cpp
+      /PDVCC//CDef
+      /PBTUtils//libBTUtils
+      /PDVCC//OptionsUtils 
+      /PDVCC//CommonTradeUtils
+      /PDVCC//LoggedSources
+      /PDVCC//Profiler
+      /PDVCC//Utils
+      /PDVCC//CommonDataStructures
+    :
+    : <variant>debug <variant>release
+    ;
+
+exe all_volumes_on_day
+    : all_volumes_on_day.cpp
+      /PDVCC//CDef
+      /PDVCC//OptionsUtils 
+      /PDVCC//CommonTradeUtils
+      /PDVCC//LoggedSources
+      /PDVCC//Profiler
+      /PDVCC//Utils
+    :
+    : <variant>debug <variant>release
+    ;
+
+exe get_eurex_product_expiry
+    : get_eurex_product_expiry.cpp
+      /PDVCC//CDef
+      /PDVCC//OptionsUtils 
+      /PDVCC//CommonTradeUtils
+      /PDVCC//Profiler
+    :
+    : <variant>debug <variant>release
+    ;
+
+exe get_shortcode_expiry_date
+    : get_shortcode_expiry_date.cpp
+      /PDVCC//CDef
+      /PDVCC//Utils
+      /PDVCC//CommonTradeUtils
+      /PDVCC//Profiler
+      /PDVCC//CommonDataStructures
+    :
+    : <variant>debug <variant>release
+    ;
+
+exe get_expiry_nse
+    : get_expiry_nse.cpp
+      /PDVCC//CDef
+      /PDVCC//OptionsUtils 
+      /PDVCC//CommonTradeUtils
+      /PDVCC//Profiler
+      /PDVCC//Utils
+      /PDVCC//CommonDataStructures
+    :
+    : <variant>debug <variant>release
+    ;
+
+exe notional_to_uts_nse
+    : notional_to_uts_nse.cpp
+      /PDVCC//CDef
+      /PDVCC//CommonTradeUtils
+      /PDVCC//Profiler
+      /PDVCC//Utils
+      /PDVCC//CommonDataStructures
+    :
+    : <variant>debug <variant>release
+    ;
+
+exe all_volumes_on_day_new_handler
+    : all_volumes_on_day_new_handler.cpp
+      /PDVCC//CDef
+      /PDVCC//OptionsUtils 
+      /PDVCC//CommonTradeUtils
+      /PDVCC//LoggedSources
+      /PDVCC//Profiler
+      /PDVCC//Utils
+    :
+    : <variant>debug <variant>release
+    ;
+
+
+exe fix_bin_reader
+    : fix_binary_reader.cpp
+      /PDVCC//CDef
+      /PDVCC//OptionsUtils 
+      /PDVCC//CommonTradeUtils
+      /PDVCC//Profiler
+      /PDVCC//Utils
+    :
+    : <variant>debug <variant>release
+    ;
+
+exe GC_volume_reader
+    : GC_volume_reader.cpp
+      /PDVCC//CDef
+      /PDVCC//Utils 
+      /PDVCC//OptionsUtils 
+      /PDVCC//CommonTradeUtils
+      /PDVCC//LoggedSources
+      /PDVCC//Profiler
+      /PDVCC//CommonDataStructures
+    :
+    : <variant>debug <variant>release
+    ;
+
+exe symbol_driver_main
+    : symbol_driver_main.cpp symbol_allocator.cpp
+      /PDVCC//CDef
+      /PDVCC//OptionsUtils 
+      /PDVCC//CommonTradeUtils
+      /PDVCC//LoggedSources
+      /PDVCC//Profiler
+      /PDVCC//Utils
+      /PDVCC//CommonDataStructures
+    :
+    : <variant>debug <variant>release
+    ;
+
+
+exe exchange_symbol_vomapper
+    : exchange_symbol_vomapper.cpp
+      /PDVCC//CDef
+      /PDVCC//OptionsUtils 
+      /PDVCC//CommonTradeUtils
+      /PDVCC//Profiler
+      /PDVCC//Utils
+      /PDVCC//CommonDataStructures
+    :
+    : <variant>debug <variant>release
+    ;
+
+exe all_exchanges_volume_reconciliation
+    : all_exchanges_volume_symbol_reconciliation.cpp
+      /PDVCC//CDef
+      /PDVCC//OptionsUtils 
+      /PDVCC//CommonTradeUtils
+      /PDVCC//Profiler
+      /PDVCC//Utils
+      /PDVCC//CommonDataStructures
+    :
+    : <variant>debug <variant>release
+    ;
+
+exe get_num_trades_on_day
+    : get_num_trades_on_day.cpp
+      /PDVCC//CDef
+      /PBTUtils//libBTUtils 
+      /PDVCC//OptionsUtils 
+      /PDVCC//CommonTradeUtils
+      /PDVCC//LoggedSources
+      /PDVCC//Profiler
+      /PDVCC//Utils
+      /PDVCC//CommonDataStructures
+    :
+    : <variant>debug <variant>release
+    ;
+
+exe get_latency_stats
+    : get_latency_stats.cpp
+      /PDVCC//CDef
+      /PDVCC//OptionsUtils 
+      /PDVCC//CommonTradeUtils
+      /PDVCC//LoggedSources
+      /PDVCC//Profiler
+      /PDVCC//Utils
+      /PDVCC//CommonDataStructures
+    :
+    : <variant>debug <variant>release
+    ;
+
+exe get_data_verification_stats
+    : get_data_verification_stats.cpp
+      /PDVCC//CDef
+      /PDVCC//OptionsUtils 
+      /PDVCC//CommonTradeUtils
+      /PDVCC//LoggedSources
+      /PDVCC//Profiler
+      /PDVCC//Utils
+      /PDVCC//CommonDataStructures
+    :
+    : <variant>debug <variant>release
+    ;
+
+exe get_l1events_on_day_using_mds_data
+    : get_l1events_on_day_using_mds_data.cpp
+      /PDVCC//CDef
+      /PDVCC//OptionsUtils 
+      /PDVCC//CommonTradeUtils
+      /PDVCC//LoggedSources
+      /PBTUtils//libBTUtils
+      /PDVCC//Profiler
+      /PDVCC//Utils
+      /PDVCC//CommonDataStructures
+    :
+    : <variant>debug <variant>release
+    ;
+
+exe get_avg_l1sz_on_day_using_mds_data
+    : get_avg_l1sz_on_day_using_mds_data.cpp
+      /PDVCC//CDef
+      /PDVCC//OptionsUtils 
+      /PDVCC//CommonTradeUtils
+      /PDVCC//LoggedSources
+      /PDVCC//Profiler
+      /PBTUtils//libBTUtils
+      /PDVCC//TradingInfo
+      /PDVCC//ExternalData
+      /PDVCC//MarketAdapter
+      /PDVCC//OrderRouting
+      /PDVCC//BaseUtils
+      /PDVCC//Indicators
+      /PDVCC//ModelMath
+      /PDVCC//Utils
+      /PDVCC//CommonDataStructures
+    :
+    <linkflags>-lpthread
+    : <variant>debug <variant>release
+    ;
+
+exe get_avg_l1sz_on_day
+    : get_avg_l1sz_on_day.cpp
+      /PDVCC//CDef
+      /PDVCC//OptionsUtils 
+      /PDVCC//CommonTradeUtils
+      /PDVCC//LoggedSources
+      /PDVCC//Profiler
+      /PDVCC//TradingInfo
+      /PDVCC//ExternalData
+      /PDVCC//MarketAdapter
+      /PDVCC//OrderRouting
+      /PDVCC//BaseUtils
+      /PDVCC//Indicators
+      /PDVCC//ModelMath
+      /PDVCC//Utils
+      /PDVCC//CommonDataStructures
+    :
+    <linkflags>-lpthread
+    : <variant>debug <variant>release
+    ;
+
+exe get_price_info_for_day
+    : get_price_info_for_day.cpp
+      /PDVCC//CDef
+      /PDVCC//OptionsUtils 
+      /PDVCC//CommonTradeUtils
+      /PDVCC//LoggedSources
+      /PDVCC//Profiler
+      /PDVCC//TradingInfo
+      /PDVCC//ExternalData
+      /PDVCC//MarketAdapter
+      /PDVCC//OrderRouting
+      /PDVCC//BaseUtils
+      /PDVCC//Indicators
+      /PDVCC//ModelMath
+      /PDVCC//Utils
+      /PDVCC//CommonDataStructures
+    :
+    <linkflags>-lpthread
+    : <variant>debug <variant>release
+    ;
+
+exe get_avg_l1ord_on_day
+    : get_avg_l1ord_on_day.cpp
+      /PDVCC//CDef
+      /PDVCC//OptionsUtils 
+      /PDVCC//CommonTradeUtils
+      /PDVCC//Profiler
+      /PDVCC//LoggedSources
+      /PDVCC//TradingInfo
+      /PDVCC//ExternalData
+      /PDVCC//MarketAdapter
+      /PDVCC//OrderRouting
+      /PDVCC//BaseUtils
+      /PDVCC//Indicators
+      /PDVCC//ModelMath
+    :
+    <linkflags>-lpthread
+    : <variant>debug <variant>release
+    ;
+
+
+exe get_avg_spread_on_day
+    : get_avg_spread_on_day.cpp
+      /PDVCC//CDef
+      /PDVCC//OptionsUtils 
+      /PDVCC//CommonTradeUtils
+      /PDVCC//Profiler
+      /PDVCC//LoggedSources
+      /PDVCC//TradingInfo
+      /PDVCC//ExternalData
+      /PDVCC//MarketAdapter
+      /PDVCC//OrderRouting
+      /PDVCC//BaseUtils
+      /PDVCC//Indicators
+      /PDVCC//ModelMath
+      /PDVCC//Utils
+      /PDVCC//CommonDataStructures
+    :
+    <linkflags>-lpthread
+    : <variant>debug <variant>release
+    ;
+
+
+exe get_l1events_on_day
+    : get_l1events_on_day.cpp
+      /PDVCC//CDef
+      /PDVCC//LoggedSources
+      /PDVCC//OptionsUtils 
+      /PDVCC//CommonTradeUtils
+      /PDVCC//Profiler
+      /PDVCC//TradingInfo
+      /PDVCC//ExternalData
+      /PDVCC//MarketAdapter
+      /PDVCC//OrderRouting
+      /PDVCC//BaseUtils
+      /PDVCC//Indicators
+      /PDVCC//ModelMath
+      /PDVCC//Utils
+      /PDVCC//CommonDataStructures
+    :
+    <linkflags>-lpthread
+    : <variant>debug <variant>release
+    ;
+
+exe get_periodic_l1events_on_day
+    : get_periodic_l1events_on_day.cpp
+      /PDVCC//CDef
+      /PDVCC//LoggedSources
+      /PDVCC//OptionsUtils 
+      /PDVCC//CommonTradeUtils
+      /PDVCC//Profiler
+      /PDVCC//TradingInfo
+      /PDVCC//ExternalData
+      /PDVCC//MarketAdapter
+      /PDVCC//OrderRouting
+      /PDVCC//BaseUtils
+      /PDVCC//Indicators
+      /PDVCC//ModelMath
+      /PDVCC//Utils
+      /PDVCC//CommonDataStructures
+    :
+    <linkflags>-lpthread
+    : <variant>debug <variant>release
+    ;
+
+exe get_periodic_numtrades_on_day
+    : get_periodic_numtrades_on_day.cpp
+      /PDVCC//CDef
+      /PDVCC//LoggedSources
+      /PDVCC//OptionsUtils 
+      /PDVCC//CommonTradeUtils
+      /PDVCC//Profiler
+      /PDVCC//TradingInfo
+      /PDVCC//ExternalData
+      /PDVCC//MarketAdapter
+      /PDVCC//OrderRouting
+      /PDVCC//BaseUtils
+      /PDVCC//Indicators
+      /PDVCC//ModelMath
+      /PDVCC//Utils
+      /PDVCC//CommonDataStructures
+    :
+    <linkflags>-lpthread
+    : <variant>debug <variant>release
+    ;
+
+exe get_timeavg_l1sz_on_day
+    : get_timeavg_l1sz_on_day.cpp
+      /PDVCC//CDef
+      /PDVCC//OptionsUtils 
+      /PDVCC//CommonTradeUtils
+      /PDVCC//LoggedSources
+      /PDVCC//Profiler
+      /PDVCC//Utils
+      /PDVCC//CommonDataStructures
+    :
+    : <variant>debug <variant>release
+    ;
+ 
+exe get_numbers_to_dollars
+    : get_numbers_to_dollars.cpp
+      /PDVCC//CDef
+      /PDVCC//OptionsUtils 
+      /PDVCC//CommonTradeUtils
+      /PDVCC//Profiler
+      /PDVCC//Utils
+      /PDVCC//CommonDataStructures
+    :
+    : <variant>debug <variant>release
+    ;
+
+exe get_di_numbers_to_dollars
+    : get_di_numbers_to_dollars.cpp
+      /PDVCC//CDef
+      /PDVCC//OptionsUtils 
+      /PDVCC//CommonTradeUtils
+      /PDVCC//Profiler
+      /PDVCC//Utils
+      /PDVCC//CommonDataStructures
+    :
+    : <variant>debug <variant>release
+    ;
+
+exe get_asx_numbers_to_dollars
+    : get_asx_numbers_to_dollars.cpp
+      /PDVCC//CDef
+      /PDVCC//OptionsUtils 
+      /PDVCC//CommonTradeUtils
+      /PDVCC//Profiler
+      /PDVCC//Utils
+      /PDVCC//CommonDataStructures
+    :
+    : <variant>debug <variant>release
+    ;
+
+exe get_di_pnl
+    : get_di_pnl.cpp
+      /PDVCC//CDef
+      /PDVCC//OptionsUtils 
+      /PDVCC//CommonTradeUtils
+      /PDVCC//Profiler
+    :
+    : <variant>debug <variant>release
+    ;
+
+exe check_currency_data
+    : check_currency_data.cpp
+      /PDVCC//CDef
+      /PDVCC//OptionsUtils 
+      /PDVCC//CommonTradeUtils
+      /PDVCC//Profiler
+      /PDVCC//Utils
+      /PDVCC//CommonDataStructures
+    :
+    : <variant>debug <variant>release
+    ;
+
+exe get_min_price_increment
+    : get_min_price_increment.cpp
+      /PDVCC//CDef
+      /PDVCC//OptionsUtils 
+      /PDVCC//CommonTradeUtils
+      /PDVCC//Profiler
+      /PDVCC//Utils
+      /PDVCC//CommonDataStructures
+    :
+    : <variant>debug <variant>release
+    ;
+
+exe get_utc_hhmm_str
+    : get_utc_hhmm_str.cpp
+      /PDVCC//CDef
+      /PDVCC//OptionsUtils 
+      /PDVCC//CommonTradeUtils
+      /PDVCC//Profiler
+    :
+    : <variant>debug <variant>release
+    ;
+
+exe get_msecs_from_midnight
+    : get_msecs_from_midnight.cpp
+      /PDVCC//CDef
+      /PDVCC//OptionsUtils 
+      /PDVCC//CommonTradeUtils
+      /PDVCC//Profiler
+    :
+    : <variant>debug <variant>release
+    ;
+
+exe get_utc_hhmmss_str
+    : get_utc_hhmmss_str.cpp
+      /PDVCC//CDef
+      /PDVCC//OptionsUtils 
+      /PDVCC//CommonTradeUtils
+      /PDVCC//Profiler
+    :
+    : <variant>debug <variant>release
+    ;
+
+exe time_converter
+    : time_converter.cpp
+      /PDVCC//CDef
+      /PDVCC//OptionsUtils 
+      /PDVCC//CommonTradeUtils
+      /PDVCC//Profiler
+    :
+    : <variant>debug <variant>release
+    ;
+
+exe get_mfm_from_utc_time
+    : get_mfm_from_utc_time.cpp
+      /PDVCC//CDef
+      /PDVCC//OptionsUtils 
+      /PDVCC//CommonTradeUtils
+    :
+    : <variant>debug <variant>release
+    ;
+
+exe split_eurex_logged_message_file
+    : split_eurex_logged_message_file.cpp
+      /PDVCC//CDef
+      /PDVCC//OptionsUtils 
+      /PDVCC//CommonTradeUtils
+      /PDVCC//Profiler
+      /PDVCC//Utils
+    :
+    : <variant>debug <variant>release
+    ;
+
+exe split_cme_logged_message_file
+    : split_cme_logged_message_file.cpp
+      /PDVCC//CDef
+      /PDVCC//OptionsUtils 
+      /PDVCC//CommonTradeUtils
+      /PDVCC//Profiler
+      /PDVCC//Utils
+    :
+    : <variant>debug <variant>release
+    ;
+
+
+exe retail_logger
+    : retail_logger.cpp
+      /PDVCC//CDef
+      /PDVCC//OptionsUtils 
+      /PDVCC//CommonTradeUtils
+      /PDVCC//CommonDataStructures
+    :
+    : <variant>debug <variant>release
+      <linkflags>-lpthread
+    ;
+
+
+exe ors_binary_reader
+    : ors_binary_reader.cpp
+      /PDVCC//CDef
+      /PDVCC//Profiler
+      /PDVCC//OptionsUtils 
+      /PDVCC//CommonTradeUtils
+      /PDVCC//LoggedSources
+      /PDVCC//Utils
+      /PDVCC//CommonDataStructures
+    ;
+
+exe ors_binary_reader_stats
+    : ors_binary_reader_stats.cpp
+      /PDVCC//CDef
+      /PDVCC//Profiler
+      /PDVCC//OptionsUtils 
+      /PDVCC//CommonTradeUtils
+      /PDVCC//LoggedSources
+      /PDVCC//Utils
+      /PDVCC//CommonDataStructures
+    ;
+
+exe ors_binary_reader_stats_saci_filter
+    : ors_binary_reader_stats_saci_filter.cpp
+      /PDVCC//CDef
+      /PDVCC//Profiler
+      /PDVCC//OptionsUtils 
+      /PDVCC//CommonTradeUtils
+      /PDVCC//LoggedSources
+      /PDVCC//Utils
+      /PDVCC//CommonDataStructures
+    ;
+
+
+exe ors_binary_reader_stats_exchange
+    : ors_binary_reader_stats_exchange.cpp
+      /PDVCC//CDef
+      /PDVCC//Profiler
+      /PDVCC//OptionsUtils 
+      /PDVCC//CommonTradeUtils
+      /PDVCC//LoggedSources
+      /PDVCC//Utils
+      /PDVCC//CommonDataStructures
+    ;
+exe ors_binary_reader_stats_exchange_with_saci_filter
+   : ors_binary_reader_stats_exchange_with_saci_filter.cpp
+      /PDVCC//CDef
+      /PDVCC//Profiler
+      /PDVCC//OptionsUtils
+      /PDVCC//CommonTradeUtils
+      /PDVCC//LoggedSources
+      /PDVCC//Utils
+      /PDVCC//CommonDataStructures
+    ;
+
+exe ors_binary_reader_from_file
+    : ors_binary_reader_from_file.cpp
+      /PDVCC//CDef
+      /PDVCC//Profiler
+      /PDVCC//OptionsUtils 
+      /PDVCC//CommonTradeUtils
+      /PDVCC//Utils
+    ;
+
+exe ors_delay_calc
+    : ors_delay_calc.cpp
+      /PDVCC//CDef
+      /PDVCC//Profiler
+      /PDVCC//OptionsUtils 
+      /PDVCC//CommonTradeUtils
+      /PDVCC//Utils
+      /PDVCC//CommonDataStructures
+      /PDVCC//LoggedSources
+      /PDVCC//MarketAdapter
+    ;
+
+
+exe ors_delay_calc_new
+    : ors_delay_calc_new.cpp
+      /PDVCC//CDef
+      /PDVCC//Profiler
+      /PDVCC//OptionsUtils 
+      /PDVCC//LoggedSources
+      /PDVCC//CommonTradeUtils
+      /PDVCC//SimMarketMaker
+      /PDVCC//Utils
+      /PDVCC//CommonDataStructures
+      /PDVCC//MarketAdapter
+      /PDVCC//OrderRouting
+    ;
+
+
+exe mcast_status_logger
+    : mcast_status_logger.cpp
+      /PDVCC//CDef
+      /PDVCC//CommonDataStructures
+    ;
+
+
+exe mkt_book_viewer
+    : mkt_book_viewer.cpp
+      /PDVCC//CDef
+      /PDVCC//LoggedSources
+      /PDVCC//TradingInfo
+      /PDVCC//OptionsUtils 
+      /PDVCC//CommonTradeUtils
+      /PDVCC//ExternalData
+      /PDVCC//MarketAdapter
+      /PDVCC//OrderRouting
+      /PDVCC//Profiler
+      /PDVCC//BaseUtils
+      /PDVCC//Indicators
+      /PDVCC//ModelMath
+      /PDVCC//Utils
+      /PDVCC//CommonDataStructures
+    :
+    : <variant>debug <variant>release
+      <linkflags>-lpthread
+    ;
+exe nse_historical_bar_data_generator_Weekly
+    : nse_historical_bar_data_generator_Weekly.cpp
+      /PDVCC//CDef
+      /PDVCC//TradingInfo
+      /PDVCC//OptionsUtils
+      /PDVCC//CommonTradeUtils
+      /PDVCC//ExternalData
+      /PDVCC//LoggedSources
+      /PDVCC//MarketAdapter
+      /PDVCC//OrderRouting
+      /PDVCC//Profiler
+      /PDVCC//BaseUtils
+      /PDVCC//Utils
+      /PDVCC//CommonDataStructures
+    :
+    : <variant>debug <variant>release
+      <linkflags>-lpthread
+    ;
+
+exe nse_historical_bar_data_generator
+    : nse_historical_bar_data_generator.cpp
+      /PDVCC//CDef
+      /PDVCC//TradingInfo
+      /PDVCC//OptionsUtils 
+      /PDVCC//CommonTradeUtils
+      /PDVCC//ExternalData
+      /PDVCC//LoggedSources
+      /PDVCC//MarketAdapter
+      /PDVCC//OrderRouting
+      /PDVCC//Profiler
+      /PDVCC//BaseUtils
+      /PDVCC//Utils
+      /PDVCC//CommonDataStructures
+    :
+    : <variant>debug <variant>release
+      <linkflags>-lpthread
+    ;
+exe mkt_trade_logger
+    : mkt_trade_logger.cpp
+      /PDVCC//CDef
+      /PDVCC//TradingInfo
+      /PDVCC//OptionsUtils 
+      /PDVCC//CommonTradeUtils
+      /PDVCC//ExternalData
+      /PDVCC//LoggedSources
+      /PDVCC//MarketAdapter
+      /PDVCC//OrderRouting
+      /PDVCC//Profiler
+      /PDVCC//BaseUtils
+      /PDVCC//Utils
+      /PDVCC//CommonDataStructures
+    :
+    : <variant>debug <variant>release
+      <linkflags>-lpthread
+    ;
+
+exe multi_mkt_trade_logger
+    : multi_mkt_trade_logger.cpp
+      /PDVCC//CDef
+      /PDVCC//TradingInfo
+      /PDVCC//OptionsUtils 
+      /PDVCC//CommonTradeUtils
+      /PDVCC//ExternalData
+      /PDVCC//LoggedSources
+      /PDVCC//MarketAdapter
+      /PDVCC//OrderRouting
+      /PDVCC//Profiler
+      /PDVCC//BaseUtils
+      /PDVCC//Utils
+      /PDVCC//CommonDataStructures
+    :
+    : <variant>debug <variant>release
+      <linkflags>-lpthread
+    ;
+
+
+
+exe generate_bardata
+    : generate_bardata.cpp
+      /PDVCC//CDef
+      /PDVCC//TradingInfo
+      /PDVCC//OptionsUtils 
+      /PDVCC//CommonTradeUtils
+      /PDVCC//ExternalData
+      /PDVCC//MarketAdapter
+      /PDVCC//OrderRouting
+      /PDVCC//Profiler
+      /PDVCC//LoggedSources
+      /PDVCC//BaseUtils
+      /PDVCC//Indicators
+      /PDVCC//ModelMath
+      /PDVCC//Utils
+      /PDVCC//CommonDataStructures
+    :
+    : <variant>debug <variant>release
+      <linkflags>-lpthread
+    ;
+
+
+exe generate_bardata_extended
+    : generate_bardata_extended.cpp
+      /PDVCC//CDef
+      /PDVCC//TradingInfo
+      /PDVCC//OptionsUtils 
+      /PDVCC//CommonTradeUtils
+      /PDVCC//ExternalData
+      /PDVCC//MarketAdapter
+      /PDVCC//OrderRouting
+      /PDVCC//Profiler
+      /PDVCC//LoggedSources
+      /PDVCC//BaseUtils
+      /PDVCC//Indicators
+      /PDVCC//ModelMath
+      /PDVCC//Utils
+      /PDVCC//CommonDataStructures
+    :
+    : <variant>debug <variant>release
+      <linkflags>-lpthread
+    ;
+
+
+exe price_diff
+    : price_diff.cpp
+      /PDVCC//CDef
+      /PDVCC//TradingInfo
+      /PDVCC//LoggedSources
+      /PDVCC//OptionsUtils 
+      /PDVCC//CommonTradeUtils
+      /PDVCC//ExternalData
+      /PDVCC//MarketAdapter
+      /PDVCC//OrderRouting
+      /PDVCC//Profiler
+      /PDVCC//BaseUtils
+      /PDVCC//Indicators
+      /PDVCC//ModelMath
+      /PDVCC//Utils
+      /PDVCC//CommonDataStructures
+    :
+    : <variant>debug <variant>release
+      <linkflags>-lpthread
+    ;
+
+exe price_diff_new
+    : price_diff_new.cpp
+      /PDVCC//boost_system
+    :
+    : <variant>debug <variant>release
+      <linkflags>-lpthread
+    ;
+
+exe generate_sec_data
+    : generate_sec_data.cpp
+      /PDVCC//CDef
+      /PDVCC//TradingInfo
+      /PDVCC//OptionsUtils 
+      /PDVCC//CommonTradeUtils
+      /PDVCC//ExternalData
+      /PDVCC//MarketAdapter
+      /PDVCC//OrderRouting
+      /PDVCC//Profiler
+      /PDVCC//LoggedSources
+      /PDVCC//BaseUtils
+      /PDVCC//Indicators
+      /PDVCC//ModelMath
+      /PDVCC//Utils
+      /PDVCC//CommonDataStructures
+    :
+    : <variant>debug <variant>release
+      <linkflags>-lpthread
+    ;
+
+exe print_scaled_volume_for_day
+    : print_scaled_volume_for_day.cpp
+      /PDVCC//CDef
+      /PDVCC//TradingInfo
+      /PDVCC//LoggedSources
+      /PDVCC//OptionsUtils 
+      /PDVCC//CommonTradeUtils
+      /PDVCC//ExternalData
+      /PDVCC//MarketAdapter
+      /PDVCC//OrderRouting
+      /PDVCC//Profiler
+      /PDVCC//Indicators
+      /PDVCC//BaseUtils
+      /PDVCC//ModelMath
+      /PDVCC//Utils
+      /PDVCC//CommonDataStructures
+    :
+    : <variant>debug <variant>release
+      <linkflags>-lpthread
+    ;
+    
+exe print_moving_correlation_for_day
+    : print_moving_correlation_for_day.cpp
+      /PDVCC//CDef
+      /PDVCC//TradingInfo
+      /PDVCC//OptionsUtils 
+      /PDVCC//CommonTradeUtils
+      /PDVCC//LoggedSources
+      /PDVCC//ExternalData
+      /PDVCC//MarketAdapter
+      /PDVCC//OrderRouting
+      /PDVCC//Profiler
+      /PDVCC//Indicators
+      /PDVCC//BaseUtils
+      /PDVCC//ModelMath
+      /PDVCC//Utils
+      /PDVCC//CommonDataStructures
+    :
+    : <variant>debug <variant>release
+      <linkflags>-lpthread
+    ;
+    
+exe print_volume_ratio_for_day
+    : print_volume_ratio_for_day.cpp
+      /PDVCC//CDef
+      /PDVCC//LoggedSources
+      /PDVCC//TradingInfo
+      /PDVCC//OptionsUtils 
+      /PDVCC//CommonTradeUtils
+      /PDVCC//ExternalData
+      /PDVCC//MarketAdapter
+      /PDVCC//OrderRouting
+      /PDVCC//Profiler
+      /PDVCC//Indicators
+      /PDVCC//BaseUtils
+      /PDVCC//ModelMath
+      /PDVCC//Utils
+      /PDVCC//CommonDataStructures
+    :
+    : <variant>debug <variant>release
+      <linkflags>-lpthread
+    ;
+
+exe nse_opt_mkt_info
+    : nse_opt_mkt_info.cpp
+      /PDVCC//CDef
+      /PDVCC//Utils 
+      /PDVCC//LoggedSources
+      /PDVCC//Indicators
+      /PDVCC//TradingInfo
+      /PDVCC//OptionsUtils 
+      /PDVCC//CommonTradeUtils
+      /PDVCC//OrderRouting
+      /PDVCC//ExternalData
+      /PDVCC//MarketAdapter
+      /PDVCC//BaseUtils
+      /PDVCC//ModelMath
+      /PDVCC//CommonDataStructures
+      /PDVCC//Profiler
+    :
+    : <variant>debug <variant>release
+      <linkflags>-lpthread
+    ;
+
+exe compute_realized_volatility
+    : compute_realized_volatility.cpp
+      /PDVCC//CDef
+      /PDVCC//TradingInfo
+      /PDVCC//CommonTradeUtils
+      /PDVCC//Utils
+      /PDVCC//CommonDataStructures
+    :
+    : <variant>debug <variant>release
+      <linkflags>-lpthread
+    ;
+
+exe print_trend_mean_reversion_ind_for_day
+    : print_trend_mean_reversion_ind_for_day.cpp
+      /PDVCC//CDef
+      /PDVCC//LoggedSources
+      /PDVCC//TradingInfo
+      /PDVCC//OptionsUtils 
+      /PDVCC//CommonTradeUtils
+      /PDVCC//ExternalData
+      /PDVCC//MarketAdapter
+      /PDVCC//OrderRouting
+      /PDVCC//Profiler
+      /PDVCC//Indicators
+      /PDVCC//BaseUtils
+      /PDVCC//ModelMath
+      /PDVCC//Utils
+      /PDVCC//CommonDataStructures
+    :
+    : <variant>debug <variant>release
+      <linkflags>-lpthread
+    ;
+
+
+exe generate_price_data
+    : generate_price_data.cpp
+      /PDVCC//CDef
+      /PDVCC//TradingInfo
+      /PDVCC//OptionsUtils 
+      /PDVCC//CommonTradeUtils
+      /PDVCC//ExternalData
+      /PDVCC//LoggedSources
+      /PDVCC//MarketAdapter
+      /PDVCC//OrderRouting
+      /PDVCC//Profiler
+      /PDVCC//Indicators
+      /PDVCC//BaseUtils
+      /PDVCC//ModelMath
+      /PDVCC//Utils
+      /PDVCC//CommonDataStructures
+    :
+    : <variant>debug <variant>release
+      <linkflags>-lpthread
+    ;
+
+exe bandwidth_monitor
+    : bandwidth_monitor.cpp
+      /PDVCC//CommonDataStructures
+    :
+    : <variant>debug <variant>release
+    ;
+
+
+
+exe check_indicator_data
+    : check_indicator_data.cpp
+      /PDVCC//CDef
+      /PDVCC//TradingInfo
+      /PDVCC//OptionsUtils 
+      /PDVCC//CommonTradeUtils
+      /PDVCC//LoggedSources
+      /PDVCC//Profiler
+      /PDVCC//Indicators
+      /PDVCC//Utils
+      /PDVCC//CommonDataStructures
+
+    :
+    : <variant>debug <variant>release
+      <linkflags>-lpthread
+    ;
+
+
+exe mds_log_l1_trade
+    : mds_log_l1_trade.cpp
+      /PDVCC//CDef
+      /PDVCC//TradingInfo
+      /PDVCC//OptionsUtils 
+      /PDVCC//CommonTradeUtils
+      /PDVCC//LoggedSources
+      /PDVCC//ExternalData
+      /PDVCC//MarketAdapter
+      /PDVCC//OrderRouting
+      /PDVCC//Profiler
+      /PDVCC//Indicators
+      /PDVCC//ModelMath
+      /PDVCC//Utils
+      /PDVCC//CommonDataStructures
+    :
+    : <variant>debug <variant>release
+      <linkflags>-lpthread
+    ;
+
+exe mds_log_l1_mid_per_min
+    : mds_log_l1_mid_per_min.cpp
+      /PDVCC//CDef
+      /PDVCC//TradingInfo
+      /PDVCC//OptionsUtils 
+      /PDVCC//CommonTradeUtils
+      /PDVCC//LoggedSources
+      /PDVCC//ExternalData
+      /PDVCC//MarketAdapter
+      /PDVCC//OrderRouting
+      /PDVCC//Profiler
+      /PDVCC//Indicators
+      /PDVCC//ModelMath
+      /PDVCC//Utils
+      /PDVCC//CommonDataStructures
+    :
+    : <variant>debug <variant>release
+      <linkflags>-lpthread
+    ;
+
+exe mds_log_bcaster
+    : mds_log_bcaster.cpp
+      /PDVCC//CDef
+      /PDVCC//TradingInfo
+      /PDVCC//OptionsUtils 
+      /PDVCC//CommonTradeUtils
+      /PDVCC//ExternalData
+      /PDVCC//MarketAdapter
+      /PDVCC//OrderRouting
+      /PDVCC//Profiler
+      /PDVCC//Indicators
+      /PDVCC//ModelMath
+      /PDVCC//Utils
+    :
+    : <variant>debug <variant>release
+      <linkflags>-lpthread
+    ;
+
+
+exe risk_monitor_client
+    : risk_monitor_client.cpp
+      /PDVCC//CDef
+      /PDVCC//TradingInfo
+      /PDVCC//CommonTradeUtils
+      /PDVCC//ExternalData
+      /PDVCC//MarketAdapter
+      /PDVCC//OrderRouting
+      /PDVCC//VolatileTradingInfo
+      /PDVCC//SmartOrderRouting
+      /PDVCC//SimPnls
+      /PDVCC//Profiler
+      /PDVCC//TradingInfo
+      /PImpliedVolatility//libImpliedVolatility
+      /PDVCC//OptionsUtils
+      /PDVCC//BaseUtils
+      /PDVCC//Indicators
+      /PDVCC//ModelMath
+      /PDVCC//RiskManager
+      /PDVCC//Utils
+      /PDVCC//CommonDataStructures
+      /PDVCC//FpgaHeader
+    :
+    : <variant>debug <variant>release
+      <linkflags>-lpthread
+      <linkflags>-lnsmsg
+    ;
+
+exe risk_control
+    : risk_control.cpp
+      /PDVCC//CDef
+      /PDVCC//Utils
+      /PDVCC//CommonTradeUtils
+      /PDVCC//TradingInfo
+      /PDVCC//VolatileTradingInfo
+      /PDVCC//CommonDataStructures
+      /PDVCC//RiskManager
+    :
+    : <variant>debug <variant>release
+      <linkflags>-lpthread
+    ;
+
+exe our_extended_bidask_mkt_book_util
+    : our_extended_bidask_mkt_book_util.cpp
+      /PDVCC//CDef
+      /PDVCC//TradingInfo
+      /PDVCC//OptionsUtils 
+      /PDVCC//CommonTradeUtils
+      /PDVCC//ExternalData
+      /PDVCC//MarketAdapter
+      /PDVCC//OrderRouting
+      /PDVCC//VolatileTradingInfo
+      /PDVCC//SmartOrderRouting
+      /PDVCC//SimPnls
+      /PDVCC//Profiler
+      /PDVCC//TradingInfo
+      /PDVCC//BaseUtils
+      /PDVCC//Indicators
+      /PDVCC//ModelMath
+      /PDVCC//Utils
+      /PDVCC//CommonDataStructures
+      /PDVCC//FpgaHeader
+    :
+    : <variant>debug <variant>release
+      <linkflags>-lpthread
+      <linkflags>-lnsmsg
+    ;
+    
+exe combined_source_book_viewer
+    : combined_source_book_viewer.cpp
+      /PDVCC//CDef
+      /PDVCC//TradingInfo
+      /PDVCC//OptionsUtils 
+      /PDVCC//CommonTradeUtils
+      /PDVCC//ExternalData
+      /PDVCC//MarketAdapter
+      /PDVCC//OrderRouting
+      /PDVCC//VolatileTradingInfo
+      /PDVCC//SmartOrderRouting
+      /PDVCC//SimPnls
+      /PDVCC//Profiler
+      /PDVCC//TradingInfo
+      /PDVCC//BaseUtils
+      /PDVCC//Indicators
+      /PDVCC//ModelMath
+      /PDVCC//Utils
+      /PDVCC//CommonDataStructures
+      /PDVCC//FpgaHeader
+    :
+    : <variant>debug <variant>release
+      <linkflags>-lpthread
+      <linkflags>-lnsmsg
+    ;
+
+exe our_extended_bidask_mkt_book_util_options
+    : our_extended_bidask_mkt_book_util_options.cpp
+      /PDVCC//CDef
+      /PDVCC//TradingInfo
+      /PDVCC//OptionsUtils 
+      /PDVCC//CommonTradeUtils
+      /PDVCC//ExternalData
+      /PDVCC//MarketAdapter
+      /PDVCC//OrderRouting
+      /PDVCC//VolatileTradingInfo
+      /PDVCC//SmartOrderRouting
+      /PDVCC//SimPnls
+      /PDVCC//Profiler
+      /PDVCC//TradingInfo
+      /PDVCC//BaseUtils
+      /PDVCC//Indicators
+      /PDVCC//ModelMath
+      /PDVCC//Utils
+      /PDVCC//CommonDataStructures
+      /PDVCC//FpgaHeader
+    :
+    : <variant>debug <variant>release
+      <linkflags>-lpthread
+      <linkflags>-lnsmsg
+    ;
+
+exe our_extended_bidask_mkt_book_util_nse
+    : our_extended_bidask_mkt_book_util_nse.cpp
+      /PDVCC//CDef
+      /PDVCC//TradingInfo
+      /PDVCC//OptionsUtils
+      /PDVCC//CommonTradeUtils
+      /PDVCC//ExternalData
+      /PDVCC//MarketAdapter
+      /PDVCC//OrderRouting
+      /PDVCC//VolatileTradingInfo
+      /PDVCC//SmartOrderRouting
+      /PDVCC//SimPnls
+      /PDVCC//Profiler
+      /PDVCC//TradingInfo
+      /PDVCC//BaseUtils
+      /PDVCC//Indicators
+      /PDVCC//ModelMath
+      /PDVCC//Utils
+      /PDVCC//CommonDataStructures
+      /PDVCC//FpgaHeader
+    :
+    : <variant>debug <variant>release
+      <linkflags>-lpthread
+      <linkflags>-lnsmsg
+    ;
+
+exe our_extended_bidask_mkt_book_util_web
+    : our_extended_bidask_mkt_book_util_web.cpp
+      /PDVCC//CDef
+      /PDVCC//TradingInfo
+      /PDVCC//OptionsUtils
+      /PDVCC//CommonTradeUtils
+      /PDVCC//ExternalData
+      /PDVCC//MarketAdapter
+      /PDVCC//OrderRouting
+      /PDVCC//VolatileTradingInfo
+      /PDVCC//SmartOrderRouting
+      /PDVCC//SimPnls
+      /PDVCC//Profiler
+      /PDVCC//TradingInfo
+      /PDVCC//BaseUtils
+      /PDVCC//Indicators
+      /PDVCC//Utils
+      /PDVCC//CommonDataStructures
+      /PDVCC//FpgaHeader
+    :
+    : <variant>debug <variant>release
+      <linkflags>-lpthread
+      <linkflags>-lnsmsg
+    ;
+
+exe our_extended_bidask_mkt_book_util_nse_web
+    : our_extended_bidask_mkt_book_util_nse_web.cpp
+      /PDVCC//CDef
+      /PDVCC//TradingInfo
+      /PDVCC//OptionsUtils
+      /PDVCC//CommonTradeUtils
+      /PDVCC//ExternalData
+      /PDVCC//MarketAdapter
+      /PDVCC//OrderRouting
+      /PDVCC//VolatileTradingInfo
+      /PDVCC//SmartOrderRouting
+      /PDVCC//SimPnls
+      /PDVCC//Profiler
+      /PDVCC//TradingInfo
+      /PDVCC//BaseUtils
+      /PDVCC//Utils
+      /PDVCC//CommonDataStructures
+      /PDVCC//FpgaHeader
+    :
+    : <variant>debug <variant>release
+      <linkflags>-lpthread
+      <linkflags>-lnsmsg
+    ;
+
+exe our_extended_bidask_mkt_book_util_nse_web_multishm
+    : our_extended_bidask_mkt_book_util_nse_web_multishm.cpp
+      /PDVCC//CDef
+      /PDVCC//TradingInfo
+      /PDVCC//OptionsUtils
+      /PDVCC//CommonTradeUtils
+      /PDVCC//ExternalData
+      /PDVCC//MarketAdapter
+      /PDVCC//OrderRouting
+      /PDVCC//VolatileTradingInfo
+      /PDVCC//SmartOrderRouting
+      /PDVCC//SimPnls
+      /PDVCC//Profiler
+      /PDVCC//TradingInfo
+      /PDVCC//BaseUtils
+      /PDVCC//Utils
+      /PDVCC//CommonDataStructures
+      /PDVCC//FpgaHeader
+    :
+    : <variant>debug <variant>release
+      <linkflags>-lpthread
+      <linkflags>-lnsmsg
+    ;
+
+
+exe print_queue_pos
+    : print_queue_pos.cpp
+      /PDVCC//CDef
+      /PDVCC//TradingInfo
+      /PDVCC//OptionsUtils 
+      /PDVCC//CommonTradeUtils
+      /PDVCC//LoggedSources
+      /PDVCC//ExternalData
+      /PDVCC//MarketAdapter
+      /PDVCC//OrderRouting
+      /PDVCC//VolatileTradingInfo
+      /PDVCC//SmartOrderRouting
+      /PDVCC//SimPnls
+      /PDVCC//Profiler
+      /PDVCC//BaseUtils
+      /PDVCC//Indicators
+      /PDVCC//ModelMath
+      /PDVCC//Utils
+      /PDVCC//CommonDataStructures
+    :
+    : <variant>debug <variant>release
+      <linkflags>-lpthread
+    ;
+
+exe print_queue_stats
+    : print_queue_stats.cpp
+      /PDVCC//CDef
+      /PDVCC//TradingInfo
+      /PDVCC//OptionsUtils 
+      /PDVCC//CommonTradeUtils
+      /PDVCC//LoggedSources
+      /PDVCC//ExternalData
+      /PDVCC//MarketAdapter
+      /PDVCC//OrderRouting
+      /PDVCC//VolatileTradingInfo
+      /PDVCC//SmartOrderRouting
+      /PDVCC//SimPnls
+      /PDVCC//Profiler
+      /PDVCC//BaseUtils
+      /PDVCC//Indicators
+      /PDVCC//ModelMath
+      /PDVCC//Utils
+      /PDVCC//CommonDataStructures
+    :
+    : <variant>debug <variant>release
+      <linkflags>-lpthread
+    ;
+
+exe volume_monitor
+    : volume_monitor.cpp
+      /PDVCC//CDef
+      /PDVCC//TradingInfo
+      /PDVCC//OptionsUtils 
+      /PDVCC//CommonTradeUtils
+      /PDVCC//ExternalData
+      /PDVCC//MarketAdapter
+      /PDVCC//OrderRouting
+      /PDVCC//VolatileTradingInfo
+      /PDVCC//Profiler
+      /PDVCC//BaseUtils
+      /PDVCC//Indicators
+      /PDVCC//ModelMath
+      /PDVCC//Utils
+      /PDVCC//CommonDataStructures
+      /PDVCC//FpgaHeader
+    :
+    : <variant>debug <variant>release
+      <linkflags>-lpthread
+      <linkflags>-lnsmsg
+    ;
+
+exe economic_events_of_the_day
+    : economic_events_of_the_day.cpp
+      /PDVCC//CDef
+      /PDVCC//OptionsUtils 
+      /PDVCC//CommonTradeUtils
+      /PDVCC//Profiler
+      /PDVCC//Utils
+      /PDVCC//CommonDataStructures
+    :
+    : <variant>debug <variant>release
+    ;
+
+exe get_economic_events_of_the_day_for_shortcode
+    : get_economic_events_of_the_day_for_shortcode.cpp
+      /PDVCC//CDef
+      /PDVCC//OptionsUtils 
+      /PDVCC//CommonTradeUtils
+      /PDVCC//Profiler
+      /PDVCC//Utils
+      /PDVCC//CommonDataStructures
+    :
+    : <variant>debug <variant>release
+    ;
+
+exe user_msg
+    : user_msg.cpp
+      /PDVCC//CDef
+      /PDVCC//TradingInfo
+      /PDVCC//OptionsUtils 
+      /PDVCC//CommonTradeUtils
+      /PDVCC//Profiler
+      /PDVCC//Utils
+      /PDVCC//CommonDataStructures
+    :
+    : <variant>debug <variant>release
+    ;
+
+exe get_our_presence_in_market_stats
+    : get_our_presence_in_market_stats.cpp
+      /PDVCC//CDef
+      /PBTUtils//libBTUtils
+      /PDVCC//OptionsUtils 
+      /PDVCC//CommonTradeUtils
+      /PDVCC//LoggedSources
+      /PDVCC//Utils
+      /PDVCC//CommonDataStructures
+    :
+    : <variant>debug <variant>release
+    ;
+
+exe get_rejection_periods
+    : get_rejection_periods.cpp
+      /PDVCC//CDef
+      /PDVCC//Profiler
+      /PDVCC//TradingInfo
+      /PDVCC//VolatileTradingInfo
+      /PDVCC//OptionsUtils 
+      /PDVCC//CommonTradeUtils
+      /PDVCC//ExternalData
+      /PDVCC//MarketAdapter
+      /PDVCC//OrderRouting
+      /PDVCC//LoggedSources
+      /PDVCC//Indicators
+      /PDVCC//ModelMath
+      /PDVCC//Utils
+      /PDVCC//CommonDataStructures
+    :
+    : <variant>debug <variant>release
+    ;
+
+exe get_cxl_rejection_periods
+    : get_cxl_rejection_periods.cpp
+      /PDVCC//CDef
+      /PDVCC//Profiler
+      /PDVCC//TradingInfo
+      /PDVCC//VolatileTradingInfo
+      /PDVCC//OptionsUtils 
+      /PDVCC//CommonTradeUtils
+      /PDVCC//ExternalData
+      /PDVCC//MarketAdapter
+      /PDVCC//OrderRouting
+      /PDVCC//LoggedSources
+      /PDVCC//Indicators
+      /PDVCC//ModelMath
+      /PDVCC//Utils
+      /PDVCC//CommonDataStructures
+    :
+    : <variant>debug <variant>release
+    ;
+
+exe get_seqd_to_conf
+    : get_seqd_to_conf.cpp
+      /PDVCC//CDef
+      /PDVCC//Profiler
+      /PDVCC//TradingInfo
+      /PDVCC//VolatileTradingInfo
+      /PDVCC//OptionsUtils 
+      /PDVCC//CommonTradeUtils
+      /PDVCC//ExternalData
+      /PDVCC//MarketAdapter
+      /PDVCC//OrderRouting
+      /PDVCC//LoggedSources
+      /PDVCC//Indicators
+      /PDVCC//ModelMath
+      /PDVCC//Utils
+      /PDVCC//CommonDataStructures
+    :
+    : <variant>debug <variant>release
+    ;
+
+exe get_cxl_seqd_to_conf
+    : get_cxl_seqd_to_conf.cpp
+      /PDVCC//CDef
+      /PDVCC//Profiler
+      /PDVCC//TradingInfo
+      /PDVCC//VolatileTradingInfo
+      /PDVCC//OptionsUtils 
+      /PDVCC//CommonTradeUtils
+      /PDVCC//ExternalData
+      /PDVCC//MarketAdapter
+      /PDVCC//OrderRouting
+      /PDVCC//LoggedSources
+      /PDVCC//Indicators
+      /PDVCC//ModelMath
+      /PDVCC//Utils
+      /PDVCC//CommonDataStructures
+    :
+    : <variant>debug <variant>release
+    ;
+
+exe get_sim_config_description_from_file
+    : get_sim_config_description_from_file.cpp
+      /PDVCC//CDef
+      /PDVCC//CommonTradeUtils
+      /PDVCC//Utils
+      /PDVCC//CommonDataStructures
+    :
+    : <variant>debug <variant>release
+    ;
+
+
+exe ors_msg_stats_computer
+    : ors_msg_stats_computer.cpp
+      /PDVCC//CDef
+      /PDVCC//Profiler
+      /PDVCC//TradingInfo
+      /PDVCC//OptionsUtils 
+      /PDVCC//CommonTradeUtils
+      /PDVCC//ExternalData
+      /PDVCC//MarketAdapter
+      /PMTools//libMTools
+      /PDVCC//OrderRouting
+      /PDVCC//LoggedSources
+      /PDVCC//Indicators
+      /PDVCC//ModelMath
+      /PDVCC//Utils
+      /PDVCC//CommonDataStructures
+    :
+    : <variant>debug <variant>release
+    ;
+
+
+exe generate_ors_mktdata_delays_stats
+   : generate_ors_mktdata_delays_stats.cpp
+     /PDVCC//CDef
+     /PDVCC//Profiler
+     /PDVCC//OptionsUtils 
+     /PDVCC//CommonTradeUtils
+     /PDVCC//LoggedSources
+     /PDVCC//Utils
+     /PDVCC//CommonDataStructures
+   ;
+
+exe generate_ors_conf_mktdata_delays_stats
+   : generate_ors_conf_mktdata_delays_stats.cpp
+     /PDVCC//CDef
+     /PDVCC//Profiler
+     /PDVCC//OptionsUtils 
+     /PDVCC//CommonTradeUtils
+     /PDVCC//LoggedSources
+     /PDVCC//Utils
+     /PDVCC//CommonDataStructures
+   ;
+
+exe get_trades_within_time_frame
+   : get_trades_within_time_frame.cpp
+     /PDVCC//CommonDataStructures
+   ;
+
+exe sim_ors_binary_reader
+   : sim_ors_binary_reader.cpp
+     /PDVCC//CDef
+     /PDVCC//Utils
+     /PDVCC//Profiler
+      /PDVCC//OptionsUtils 
+     /PDVCC//CommonTradeUtils
+     /PDVCC//CommonDataStructures
+   ;
+
+exe get_pnl_for_shortcode_bytime_stats
+    : get_pnl_for_shortcode_bytime_stats.cpp
+      /PDVCC//CDef
+      /PDVCC//Profiler
+      /PDVCC//OptionsUtils 
+      /PDVCC//CommonTradeUtils
+      /PDVCC//Utils
+      /PDVCC//CommonDataStructures
+    ;
+
+
+exe get_fillratio_for_shortcode_by_saci
+    : get_fillratio_for_shortcode_by_saci.cpp
+      /PDVCC//CDef
+      /PDVCC//Profiler
+      /PDVCC//OptionsUtils 
+      /PDVCC//CommonTradeUtils
+      /PDVCC//Utils
+      /PDVCC//CommonDataStructures
+    ;
+
+exe retrieve_eurex_trades
+    : retrieve_eurex_trades.cpp
+      /PDVCC//CDef
+      /PDVCC//Profiler
+      /PDVCC//CommonTradeUtils
+    ;
+
+exe retrieve_eurex_trades_v1
+    : retrieve_eurex_trades_v1.cpp
+      /PDVCC//CDef
+      /PDVCC//Profiler
+      /PDVCC//CommonTradeUtils
+    ;
+
+exe retrieve_eurex_MatDat
+    : retrieve_eurex_MatDat.cpp
+      /PDVCC//CDef
+      /PDVCC//Profiler
+      /PDVCC//CommonTradeUtils
+    ;
+
+exe get_di_term
+    : get_di_term.cpp
+      /PDVCC//CDef
+      /PDVCC//OptionsUtils 
+      /PDVCC//CommonTradeUtils
+      /PDVCC//Profiler
+      /PDVCC//Utils
+      /PDVCC//CommonDataStructures
+    :
+    : <variant>debug <variant>release
+    ;      
+
+exe p2y
+    : p2y.cpp
+      /PDVCC//CDef
+      /PDVCC//OptionsUtils 
+      /PDVCC//CommonTradeUtils
+      /PDVCC//Profiler
+      /PDVCC//Utils
+      /PDVCC//CommonDataStructures
+    :
+    : <variant>debug <variant>release
+    ;
+
+exe get_dv01_for_shortcode
+    : get_dv01_for_shortcode.cpp
+      /PDVCC//CDef
+      /PDVCC//OptionsUtils 
+      /PDVCC//CommonTradeUtils
+      /PDVCC//Profiler
+      /PDVCC//Utils
+      /PDVCC//CommonDataStructures
+    :
+    : <variant>debug <variant>release
+    ;
+
+exe get_term
+    : get_term.cpp
+      /PDVCC//CDef
+      /PDVCC//OptionsUtils 
+      /PDVCC//CommonTradeUtils
+      /PDVCC//Profiler
+      /PDVCC//Utils
+      /PDVCC//CommonDataStructures
+    :
+    : <variant>debug <variant>release
+    ;
+    
+exe search_exec
+    : search_exec.cpp
+    : 
+    : <variant>debug <variant>release
+    <linkflags>-lboost_system
+    ;
+
+exe check_product_data
+    : check_product_data.cpp
+      /PDVCC//CDef
+      /PDVCC//TradingInfo
+      /PDVCC//OptionsUtils 
+      /PDVCC//CommonTradeUtils
+      /PDVCC//LoggedSources
+      /PDVCC//Profiler
+      /PDVCC//Utils
+      /PDVCC//CommonDataStructures
+
+    :
+    : <variant>debug <variant>release
+      <linkflags>-lpthread
+    ;
+
+exe get_periodic_price_stdev_on_day
+    : get_periodic_price_stdev_on_day.cpp
+      /PDVCC//CDef
+      /PBTUtils//libBTUtils 
+      /PDVCC//OptionsUtils 
+      /PDVCC//CommonTradeUtils
+      /PDVCC//LoggedSources
+      /PDVCC//Utils
+      /PDVCC//CommonDataStructures
+    :
+    : <variant>debug <variant>release
+    ;
+exe get_periodic_price_stdev_on_day_V1
+    : get_periodic_price_stdev_on_day_V1.cpp
+      /PDVCC//CDef
+      /PDVCC//Utils 
+      /PDVCC//OptionsUtils 
+      /PDVCC//CommonTradeUtils
+      /PDVCC//LoggedSources
+      /PDVCC//Utils
+      /PDVCC//CommonDataStructures
+    :
+    : <variant>debug <variant>release
+    ;
+
+exe calculate_median_delay_per_day
+    : calculate_median_delay_per_day.cpp
+      /PDVCC//CDef
+      /PDVCC//Profiler
+      /PDVCC//OptionsUtils 
+      /PDVCC//CommonTradeUtils
+      /PDVCC//LoggedSources
+      /PDVCC//Utils
+      /PDVCC//CommonDataStructures
+    ;
+
+exe option_details
+    : option_details.cpp
+      /PDVCC//CDef
+      /PDVCC//OptionsUtils 
+      /PDVCC//CommonTradeUtils
+      /PDVCC//Profiler
+      /PDVCC//Utils
+      /PDVCC//CommonDataStructures
+    :
+    : <variant>debug <variant>release
+    ;
+
+exe nse_details
+    : nse_details.cpp
+      /PDVCC//CDef
+      /PDVCC//OptionsUtils 
+      /PDVCC//CommonTradeUtils
+      /PDVCC//Profiler
+      /PDVCC//Utils
+      /PDVCC//CommonDataStructures
+    :
+    : <variant>debug <variant>release
+    ;
+
+exe get_options
+    : get_options.cpp
+      /PDVCC//CDef
+      /PDVCC//TradingInfo
+      /PDVCC//OptionsUtils
+      /PDVCC//CommonTradeUtils
+      /PDVCC//ExternalData
+      /PDVCC//MarketAdapter
+      /PDVCC//OrderRouting
+      /PDVCC//Profiler
+      /PDVCC//ModelMath
+      /PDVCC//Indicators
+      /PDVCC//BaseUtils
+      /PDVCC//Utils
+      /PDVCC//CommonDataStructures
+    :
+    : <variant>debug <variant>release
+    ;
+
+exe option_volume_check
+    : option_volume_check.cpp
+      /PDVCC//CDef
+      /PDVCC//OptionsUtils
+      /PDVCC//CommonTradeUtils
+      /PDVCC//Utils
+      /PDVCC//CommonDataStructures
+    :
+    : <variant>debug <variant>release
+    ;
+
+exe get_exchanges
+		: get_exchanges.cpp
+		  /PDVCC//Utils 
+      /PDVCC//CDef 
+      /PDVCC//Profiler
+      /PDVCC//CommonDataStructures 
+      /PDVCC//VolatileTradingInfo 
+      /PDVCC//TradingInfo 
+      /PDVCC//CommonTradeUtils 
+      /PDVCC//OptionsUtils 
+      /PDVCC//TradeUtils 
+      /PDVCC//ExternalData 
+      /PDVCC//LoggedSources
+      /PDVCC//MarketAdapter 
+      /PDVCC//OrderRouting 
+      /PDVCC//Indicators 
+      /PDVCC//ModelMath 
+      /PDVCC//SmartOrderRouting 
+      /PDVCC//SimPnls
+      /PDVCC//SimMarketMaker 
+      /PDVCC//InitCommon 
+      /PDVCC//ExecLogic
+      /PDVCC//RiskManagement
+      /PDVCC//OptionsUtils
+    :
+    : <variant>debug <variant>release 
+    ;
+
+exe get_aws_path
+    : get_aws_path.cpp
+    :
+    : <variant>debug <variant>release 
+    ;
+
+
+exe get_path
+    : get_path.cpp
+		  /PDVCC//Utils 
+      /PDVCC//CDef 
+      /PDVCC//Profiler
+      /PDVCC//CommonDataStructures 
+      /PDVCC//VolatileTradingInfo 
+      /PDVCC//TradingInfo 
+      /PDVCC//CommonTradeUtils 
+      /PDVCC//OptionsUtils 
+      /PDVCC//TradeUtils 
+      /PDVCC//ExternalData 
+      /PDVCC//LoggedSources
+      /PDVCC//MarketAdapter 
+      /PDVCC//OrderRouting 
+      /PDVCC//Indicators 
+      /PDVCC//ModelMath 
+      /PDVCC//SmartOrderRouting 
+      /PDVCC//SimPnls
+      /PDVCC//SimMarketMaker 
+      /PDVCC//InitCommon 
+      /PDVCC//ExecLogic
+      /PDVCC//RiskManagement
+      /PDVCC//OptionsUtils
+    :
+    : <variant>debug <variant>release 
+    ;
+    
+exe l1_data_generator
+	: l1_data_generator_exec.cpp l1_data_generator.cpp l1_data_logger.cpp  
+      /PDVCC//Profiler
+      /PDVCC//VolatileTradingInfo 
+      /PDVCC//TradingInfo 
+      /PDVCC//CommonTradeUtils 
+      /PDVCC//OptionsUtils 
+      /PDVCC//TradeUtils 
+      /PDVCC//ExternalData 
+      /PDVCC//LoggedSources
+      /PDVCC//MarketAdapter 
+      /PDVCC//OrderRouting 
+      /PDVCC//Indicators 
+      /PDVCC//ModelMath 
+      /PDVCC//SmartOrderRouting 
+      /PDVCC//SimPnls
+      /PDVCC//SimMarketMaker 
+      /PDVCC//InitCommon 
+      /PDVCC//ExecLogic
+      /PDVCC//RiskManagement
+      /PDVCC//OptionsUtils
+      /PDVCC//OptionsHelper
+      /PDVCC//BaseUtils
+      /PDVCC//CDef
+      /PDVCC//Utils
+      /PDVCC//CommonDataStructures
+    :
+    : <variant>debug <variant>release 
+    ;
+
+exe delay_stats
+    : delay_stats.cpp
+      /PDVCC//SimPnls
+      /PDVCC//SimMarketMaker 
+      /PDVCC//LoggedSources
+      /PDVCC//CDef 
+      /PDVCC//CommonDataStructures 
+      /PDVCC//Utils
+      /PDVCC//BaseUtils
+      /PDVCC//Indicators 
+      /PDVCC//OptionsUtils 
+      /PDVCC//OptionsHelper 
+      /PDVCC//ModelMath 
+      /PDVCC//ExternalData 
+      /PDVCC//CommonTradeUtils
+      /PDVCC//MarketAdapter 
+      /PDVCC//InitCommon
+      /PDVCC//ExecLogic
+      /PDVCC//Profiler
+      /PDVCC//OrderRouting
+      /PDVCC//TradeUtils
+      /PDVCC//TradingInfo
+      /PDVCC//SmartOrderRouting
+      /PDVCC//RiskManagement
+      /PDVCC//RiskManager
+      /PDVCC//VolatileTradingInfo
+    :
+    : <variant>debug <variant>release
+      <linkflags>-lpthread
+    ;
+
+# These will be build only if mysql is present on the machine
+if $(build-mysqlclient) {
+
+exe time_shift_mdsfile
+    : time_shift_mdsfile.cpp
+      /PDVCC//CDef
+      /PDVCC//TradingInfo
+      /PDVCC//OptionsUtils 
+      /PDVCC//OptionsHelper
+      /PDVCC//CommonTradeUtils
+      /PDVCC//ExternalData
+      /PDVCC//MarketAdapter
+      /PDVCC//OrderRouting
+      /PDVCC//Profiler
+      /PDVCC//Indicators
+      /PDVCC//ModelMath
+      /PDVCC//libmysqlcppconn
+      /PDVCC//Utils
+    :
+    : <variant>debug <variant>release
+      <linkflags>-lpthread
+    ;
+
+exe test_results_db_access_manager
+    : test_results_db_access_manager.cpp
+      /PSqlCpp//libSqlCpp
+      /PDVCC//CommonDataStructures
+    :
+    : <variant>debug <variant>release
+    ;
+# Needed to add <linkflags>-lmysqlclient http://stackoverflow.com/questions/27310835/mysql-c-connector
+
+install install-sql-dep-bin
+	: time_shift_mdsfile
+	test_results_db_access_manager
+	: <variant>release:<location>"$(PROJECT_INSTALL)/bin"
+    	  <variant>debug:<location>"$(PROJECT_INSTALL)/bindebug"
+  	: release debug
+	;
+
+}
+
+install install-bin
+	: get_option_greeks
+        calc_nse_span
+        calc_nse_span_multi_products
+    	calculate_median_delay_per_day
+    generate_sec_data
+    price_diff_new
+	print_lrdb_values
+	collect_features
+	read_feature
+	collect_features_samples
+	check_samplefeatures_presence
+	collect_shortcodes_from_model
+        retail_logger
+	controlscreen
+	mcast_bw_simple_tool
+        timed_data_to_multiple_reg_data
+        timed_data_to_reg_data
+	timed_data_to_reg_data_bd
+        timed_data_to_corr_record
+        timed_data_to_stats_record
+        scale_reg_data_udm get_shortcode_expiry_date
+        nse_historical_bar_data_generator
+        nse_historical_bar_data_generator_Weekly
+	get_volume_on_day daily_trade_aggregator GC_volume_reader symbol_driver_main get_volume_on_day_2 get_exch_from_shortcode get_all_securities get_all_mds_stats_for_day
+	get_num_trades_on_day  get_l1events_on_day  get_periodic_l1events_on_day get_periodic_numtrades_on_day get_l1events_on_day_using_mds_data get_avg_l1sz_on_day_using_mds_data get_avg_l1sz_on_day get_price_info_for_day get_avg_l1ord_on_day get_avg_spread_on_day get_timeavg_l1sz_on_day  get_numbers_to_dollars get_di_numbers_to_dollars  get_di_pnl get_latency_stats get_data_verification_stats
+	get_min_price_increment  get_utc_hhmm_str get_msecs_from_midnight get_utc_hhmmss_str get_mfm_from_utc_time time_converter
+	split_eurex_logged_message_file  split_cme_logged_message_file 
+	mkt_book_viewer mkt_trade_logger multi_mkt_trade_logger generate_bardata generate_bardata_extended print_scaled_volume_for_day print_volume_ratio_for_day nse_opt_mkt_info generate_price_data print_trend_mean_reversion_ind_for_day print_moving_correlation_for_day price_diff compute_realized_volatility
+	economic_events_of_the_day
+	get_economic_events_of_the_day_for_shortcode
+	mcast_status_logger get_expiry_nse
+	user_msg search_exec
+	p2y 
+	get_di_term
+  get_term
+        remove_indicators_from_model
+        get_dv01_for_shortcode
+        get_di_pos_for_risk
+        get_di_dv01
+	check_indicator_data
+	ors_binary_reader
+	ors_binary_reader_stats
+	ors_binary_reader_stats_saci_filter
+        ors_binary_reader_from_file
+	ors_delay_calc ors_delay_calc_new
+	our_extended_bidask_mkt_book_util
+	our_extended_bidask_mkt_book_util_options
+	our_extended_bidask_mkt_book_util_nse
+	our_extended_bidask_mkt_book_util_web
+	combined_source_book_viewer
+	all_volumes_on_day
+	all_volumes_on_day_new_handler
+	mds_log_l1_trade fix_bin_reader mds_log_bcaster
+	get_periodic_volume_on_day
+	get_periodic_volume_on_day_utc
+        get_avg_volume_for_shortcode
+	get_periodic_trades_on_day
+	exchange_symbol_vomapper
+        all_exchanges_volume_reconciliation
+	compute_pca_coefficients
+	volume_monitor
+        print_queue_pos
+	print_queue_stats
+	bandwidth_monitor
+	filter_indicators
+	make_indicator_list
+	make_indicator_list_extended
+	print_paramset
+	get_our_presence_in_market_stats
+	get_rejection_periods get_cxl_rejection_periods get_seqd_to_conf get_cxl_seqd_to_conf
+#get_volatile_periods_shortcode
+	get_sim_config_description_from_file
+        generate_ors_mktdata_delays_stats
+        generate_ors_conf_mktdata_delays_stats
+        get_trades_within_time_frame
+	get_nse_spl_days
+        sim_ors_binary_reader
+        get_pnl_for_shortcode_bytime_stats
+        get_fillratio_for_shortcode_by_saci
+	get_eurex_product_expiry
+	notional_to_uts_nse
+	retrieve_eurex_trades
+	retrieve_eurex_trades_v1
+	retrieve_eurex_MatDat
+	realign_to_quantiles
+        quantile_summary
+        quantile_filter
+        aws_job_scheduler
+        af_save_mdslogs_fx
+        af_save_estimates_fx
+        af_print_xmlspecs
+        aflash_decode_category
+        check_product_data
+        get_periodic_price_stdev_on_day
+        get_periodic_price_stdev_on_day_V1
+	nse_details
+        option_details
+	get_options
+	option_volume_check
+	get_aws_path
+        get_path
+        l1_data_generator
+        get_exchanges
+        risk_monitor_client
+        risk_control
+        production_risk_manager
+        our_extended_bidask_mkt_book_util_nse_web 
+        our_extended_bidask_mkt_book_util_nse_web_multishm
+	delay_stats
+	ors_binary_reader_stats_exchange
+	ors_binary_reader_stats_exchange_with_saci_filter
+	: <variant>release:<location>"$(PROJECT_INSTALL)/bin"
+    	  <variant>debug:<location>"$(PROJECT_INSTALL)/bindebug"
+  	: release debug
+	;
+

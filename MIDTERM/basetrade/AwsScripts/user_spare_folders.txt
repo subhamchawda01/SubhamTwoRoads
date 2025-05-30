@@ -1,0 +1,14 @@
+RS
+RSM
+ParamRolls
+FBPA 
+PerturbedModelTests
+PerturbAddedIndicator
+lrdbdata
+pnltemp
+CombineIndicators -mmin +4320
+DailyTimedDataDir
+DailyRegDataDir
+RegDataDir
+DataGenOut -mtime +10 #See if below two can be merged
+DataGenOut -atime +5

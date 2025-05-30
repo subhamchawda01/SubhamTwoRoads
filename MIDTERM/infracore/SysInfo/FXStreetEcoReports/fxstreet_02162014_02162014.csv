@@ -1,0 +1,6 @@
+"country","date","name","actual","consensus","previous","volatility"
+"New Zealand","20140216 21:45:00","Retail Sales (QoQ)","","1.600  %","0.300  %","1"
+"New Zealand","20140216 21:45:00","Retail Sales ex Autos (QoQ)","","","-0.100  %","2"
+"Japan","20140216 23:50:00","Gross Domestic Product (QoQ)","","0.700  %","0.500  %","3"
+"Japan","20140216 23:50:00","Gross Domestic Product Annualized","","2.800  %","1.100  %","2"
+"Japan","20140216 23:50:00","Gross Domestic Product Deflator (YoY)","","","-0.300  %","1"

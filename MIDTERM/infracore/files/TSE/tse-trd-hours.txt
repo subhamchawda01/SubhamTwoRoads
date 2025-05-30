@@ -1,0 +1,8 @@
+#GMT Timings
+#prod  #open #close #TimeZone
+JGB_0  00:01  01:55  UTC
+JGB_0  03:35  05:55  UTC
+JGB_0  06:35  14:25  UTC
+TPX_0  00:05  02:20  UTC
+TPX_0  02:50  06:10  UTC
+TPX_0  07:35  14:25  UTC

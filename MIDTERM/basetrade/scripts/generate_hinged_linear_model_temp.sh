@@ -1,0 +1,1 @@
+cat $1 | sed 's/V/VOutCoeff /g' | awk -F"(" '{print $2}' | awk -F")" '{print $1 " " $2 }' | awk -F"-V" '{print $1 " " $2}' | awk -F"V" '{print $1 " " $2}' | sed 's/- -/ - /g' | tr '\n' '~' | sed 's/ - / /g' | sed 's/-/ -/g' | tr '~' '\n' | sed 's/e -/e-/g' > $2 

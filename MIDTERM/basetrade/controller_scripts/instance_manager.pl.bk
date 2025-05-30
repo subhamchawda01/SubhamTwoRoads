@@ -1,0 +1,218 @@
+#!/usr/bin/perl
+
+# this scripts aim to automatically start and stop instances
+# We devide all worker instances into 2 categories
+#   i) temporary (This is described by the presence of its ip in a text file)
+#   ii) permanent
+# Depending on size of job_queue.txt and all_instances.txt we do
+# if #job_queue.txt > 0 and #free_cores = 0, we create more cores by one of the following:
+#    if a permanent instance is stopped, we start it
+#    if all permanent instances are running, we launch a new instance subject to a MAX_ALLOWED contraint
+# if #job_queue.txt = 0 and #free_cores >0 , we terminate all free temporary instances and stop all free permanent instances
+
+use strict;
+use warnings;
+
+my $work_dir="/mnt/sdf/JOBS/";
+my $SCRIPTS_HOME="/home/dvctrader/controller_scripts/";
+my $instance_lock="/home/dvctrader/locks/instance_update.lock";
+
+my $locked = 1;
+
+my $MAX_RUNNING=1;
+
+sub acquire_instance_lock{
+    $locked = `mkdir $instance_lock 2>/dev/null ; echo \$?`;
+    $locked = int ( $locked );
+    return ;
+#DO not sleep and retry
+    if ($locked != 0) {
+        sleep 10;
+        $locked = `mkdir $instance_lock 2>/dev/null ; echo \$?`;
+    }
+    $locked = int ( $locked );
+    if ($locked != 0) {
+        sleep 10;
+        $locked = `mkdir $instance_lock 2>/dev/null ; echo \$?`;
+    }
+    $locked = int ( $locked );
+    if ($locked != 0) {
+        sleep 10;
+        $locked = `mkdir $instance_lock 2>/dev/null ; echo \$?`;
+    }
+    $locked = int ( $locked );
+    #tried 4 times
+}
+
+sub free_instance_lock{
+    if ( $locked == 0 ){
+        `rmdir $instance_lock `; 
+    }
+}
+
+sub free_computing_resource {
+  my @running_resources=`grep running $work_dir"all_instances.txt"  | grep -v "10.0.0." | awk '{print \$1,\$4}'`;
+  for my $instance(@running_resources) {
+    (my$id, my$ip) = split /\s+/,  $instance ;
+    my $cmd = "ls ".$work_dir."job_desc/COMMAND_".$ip."* 2>/dev/null | wc -l ";
+    my $num_running=`$cmd`;
+    $cmd = "ls ".$work_dir."job_desc/DONE_".$ip."* 2>/dev/null | wc -l ";
+    my $num_done=`$cmd`;
+    chomp ( $num_running );
+    chomp ( $num_done );
+    if ( $num_running <=  $num_done ) {
+        print "stopping instance,ip $id, $ip\n";
+        `$SCRIPTS_HOME/instance_init.sh  $id STOP `;
+    }
+  }
+}
+
+sub add_computing_resource {
+  my $num_reqd = $_[0];
+  $num_reqd = 1; # add no more than one instance at a time. 
+  #adding many at a time may be risky if there is a bug in the code. we could launch many useless instances
+  # also, adding one instance will ensure that in the next chance, a task is assigned to some core rather than all tasks waitin
+  # for a huge number of machines to be launches simultaneously
+
+  my $all_instance_count = `grep -v "10.0.0" $work_dir"all_instances.txt" | wc -l  | awk '{print \$1}'`;
+    chomp ( $all_instance_count );
+    if ( $all_instance_count >= $MAX_RUNNING ) {
+      print "already running max number of instances($all_instance_count >= $MAX_RUNNING)\n";
+      return;
+    }
+
+  my @stopped_resources=`grep stop $work_dir"all_instances.txt" | awk '{print \$1,\$4}'`;
+  if ( $num_reqd > 0 && $#stopped_resources >= 0 ) {
+    foreach my$instance(@stopped_resources){
+      (my$id, my$ip) = split /\s+/,  $instance ;
+      
+      print "$SCRIPTS_HOME/instance_init.sh  $id START \n";
+      `$SCRIPTS_HOME/instance_init.sh  $id START `;
+      my$num_cores=`ssh -o UserKnownHostsFile=/dev/null -o StrictHostKeyChecking=no $ip nproc`;
+      $num_cores=int ($num_cores);
+      $num_reqd -= $num_cores;
+      return; #unconditionally return
+    }
+  }
+  if ( $num_reqd > 0 ) {
+    #launch a new one
+    my $all_instance_count = `grep -v "10.0.0" $work_dir"all_instances.txt" | wc -l  | awk '{print \$1}'`;
+    chomp ( $all_instance_count );
+    if ( $all_instance_count >= $MAX_RUNNING ) {
+      print "already running max number of instances($all_instance_count >= $MAX_RUNNING)\n";
+      return;
+    }
+    #for (my$i=0;$i<$MAX_RUNNING ; $i=$i+1)  #at most one in one loop
+    {
+      print "launching a new instance...\n";
+      my $ip=`$SCRIPTS_HOME/instance_launch.sh | grep "ping successful" | awk '{print \$1}' `;
+      chomp ( $ip ) ;
+
+      my$num_cores=`ssh -o UserKnownHostsFile=/dev/null -o StrictHostKeyChecking=no $ip nproc`;
+      $num_cores=int ($num_cores);
+      $num_reqd -= $num_cores;
+      return; #unconditionally return
+    }
+    return ;
+  }
+}
+
+sub assign_tasks{
+	    #`perl /home/dvctrader/controller_scripts/run_jobq.pl`; #TODO make this a function
+	my $lock_file="/mnt/sdf/JOBS/job_q.lock";
+	my @ip = ();
+	my @job = ();
+
+	my $num_free_cores=`grep -c ^ /mnt/sdf/JOBS/free_instances.txt`;
+	my $num_jobs=`grep -c ^ /mnt/sdf/JOBS/job_q.txt`;
+	chomp($num_free_cores);
+	chomp($num_jobs);
+	my $lines_to_read=$num_free_cores;
+	if ( $num_free_cores > $num_jobs )
+	{
+	    $lines_to_read = $num_jobs;
+	} 
+	if ( $lines_to_read > 0 )  {
+		print "num jobs in this batch ".$lines_to_read."\n";
+
+		my $cmd = "head -n $lines_to_read /mnt/sdf/JOBS/free_instances.txt";
+		print "Executing: $cmd";
+		@ip=`$cmd`;
+		$cmd="head -n $lines_to_read /mnt/sdf/JOBS/job_q.txt";
+		print "Executing: $cmd";
+		@job=`$cmd`;
+
+		my $delete_top_lines_cmd="sed -i '1,".$lines_to_read."d' /mnt/sdf/JOBS/job_q.txt /mnt/sdf/JOBS/free_instances.txt";
+		print "deleting top $lines_to_read lines \n Exec: $delete_top_lines_cmd \n";
+		`$delete_top_lines_cmd`;
+                print "lines deleted from job q ::\n\t".join("\n\t",@job)."\n";
+
+		foreach my $i ( 0..$#ip) {
+		    my $this_ip=$ip[$i];
+		    chomp($this_ip);
+		    my $this_job=$job[$i];
+		    chomp($this_job);
+                    my $cmd="";
+		    if ( $this_job =~ /^tag:/ ) {
+			my ($first, $rest)= split /\s+/ , $this_job, 2 ;
+                        $first=~s/tag://;
+		        $cmd="perl /home/dvctrader/controller_scripts/run_cmd.pl $this_ip -t $first $rest ";
+                    }
+		    else {
+		        $cmd="perl /home/dvctrader/controller_scripts/run_cmd.pl $this_ip $this_job ";
+                    }
+		    print "running: $cmd\n";
+		    `$cmd `;
+		}
+	}
+
+}
+
+#main task
+sub main {
+    acquire_instance_lock();
+    ` $SCRIPTS_HOME/update_free_cores.sh `;
+
+    if ( $locked != 0 ) {
+        print "lock was not aquired, exiting..\n";
+        return 0; #lock was not acquired
+    }
+    my $free_core_count = ` grep -vc "10.0.0." $work_dir"free_instances.txt" | awk '{print \$1}' `;
+    my $task_count = `wc -l $work_dir"job_q.txt" | awk '{print \$1}' `;
+    chomp ( $free_core_count );
+    chomp ( $task_count );
+    if ( $task_count == 0 ) {
+        print "task count is 0. find next highest priority task\n";
+        ` perl $SCRIPTS_HOME/find_next_task.pl `;
+    }
+    $task_count = `wc -l $work_dir"job_q.txt" | awk '{print \$1}' `;
+    chomp ( $task_count );
+    
+    if ( $task_count > 0 && $free_core_count > 0 ) {
+        print "assign_tasks called. freecores:$free_core_count numtasks:$task_count\n";
+        assign_tasks();
+    } 
+    elsif ( $task_count > 0 ) {
+        print "add_computing_resource called. freecores:$free_core_count numtasks:$task_count\n";
+        add_computing_resource ( $task_count-$free_core_count);
+        ` $SCRIPTS_HOME/update_instances.sh `;
+        ` $SCRIPTS_HOME/update_free_cores.sh `;
+    }
+    elsif ( $free_core_count > 0 ){
+        print "free_computing_resource called. freecores:$free_core_count numtasks:$task_count\n";
+        free_computing_resource();
+        ` $SCRIPTS_HOME/update_instances.sh `;
+        ` $SCRIPTS_HOME/update_free_cores.sh `;
+    }
+    print "free_instance_lock...";
+    if ( $locked == 0 ) {
+        free_instance_lock();
+	print "...success\n";
+    }
+    else
+    {
+	print "..failed\n";
+    }
+}
+
+main(); #called main

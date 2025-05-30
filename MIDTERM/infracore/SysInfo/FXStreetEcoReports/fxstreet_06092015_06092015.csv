@@ -1,0 +1,5 @@
+"country","date","name","actual","consensus","previous","volatility"
+"United States","20150609 15:00:00","JOLTS Job Openings","",""," 4.994 ","1"
+"Japan","20150609 23:50:00","Gross Domestic Product (QoQ)","","","0.400  %","3"
+"Japan","20150609 23:50:00","Gross Domestic Product Annualized","","","1.500  %","2"
+"Japan","20150609 23:50:00","Gross Domestic Product Deflator (YoY)","","","2.400  %","1"

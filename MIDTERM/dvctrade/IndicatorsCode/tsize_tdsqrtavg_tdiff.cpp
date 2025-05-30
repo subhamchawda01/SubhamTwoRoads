@@ -1,0 +1,133 @@
+/**
+    \file IndicatorsCode/tsize_tdsqrtavg_tdiff.cpp
+
+    \author: (c) Copyright Two Roads Technological Solutions Pvt Ltd 2011
+     Address:
+         Suite No 353, Evoma, #14, Bhattarhalli,
+         Old Madras Road, Near Garden City College,
+         KR Puram, Bangalore 560049, India
+         +91 80 4190 3551
+*/
+#include "dvccode/CDef/math_utils.hpp"
+
+#include "dvctrade/Indicators/indicator_util.hpp"
+#include "dvctrade/Indicators/tsize_tdsqrtavg_tdiff.hpp"
+
+namespace HFSAT {
+
+void TSizeTDSqrtAvgTDiff::CollectShortCodes(std::vector<std::string>& _shortcodes_affecting_this_indicator_,
+                                            std::vector<std::string>& _ors_source_needed_vec_,
+                                            const std::vector<const char*>& r_tokens_) {
+  VectorUtils::UniqueVectorAdd(_shortcodes_affecting_this_indicator_, (std::string)r_tokens_[3]);
+}
+
+TSizeTDSqrtAvgTDiff* TSizeTDSqrtAvgTDiff::GetUniqueInstance(DebugLogger& t_dbglogger_, const Watch& r_watch_,
+                                                            const std::vector<const char*>& r_tokens_,
+                                                            PriceType_t _basepx_pxtype_) {
+  // INDICATOR _this_weight_ _indicator_string_ _indep_market_view_ _fractional_seconds_
+  return GetUniqueInstance(t_dbglogger_, r_watch_,
+                           *(ShortcodeSecurityMarketViewMap::StaticGetSecurityMarketView(r_tokens_[3])),
+                           atof(r_tokens_[4]), _basepx_pxtype_);
+}
+
+TSizeTDSqrtAvgTDiff* TSizeTDSqrtAvgTDiff::GetUniqueInstance(DebugLogger& t_dbglogger_, const Watch& r_watch_,
+                                                            SecurityMarketView& _indep_market_view_,
+                                                            double _fractional_seconds_, PriceType_t _basepx_pxtype_) {
+  std::ostringstream t_temp_oss_;
+  t_temp_oss_ << VarName() << ' ' << _indep_market_view_.secname() << ' ' << _fractional_seconds_ << " "
+              << PriceType_t_To_String(_basepx_pxtype_);
+
+  std::string concise_indicator_description_(t_temp_oss_.str());
+
+  static std::map<std::string, TSizeTDSqrtAvgTDiff*> concise_indicator_description_map_;
+
+  if (concise_indicator_description_map_.find(concise_indicator_description_) ==
+      concise_indicator_description_map_.end()) {
+    concise_indicator_description_map_[concise_indicator_description_] = new TSizeTDSqrtAvgTDiff(
+        t_dbglogger_, r_watch_, concise_indicator_description_, _indep_market_view_, _fractional_seconds_);
+  }
+  return concise_indicator_description_map_[concise_indicator_description_];
+}
+
+TSizeTDSqrtAvgTDiff::TSizeTDSqrtAvgTDiff(DebugLogger& t_dbglogger_, const Watch& r_watch_,
+                                         const std::string& concise_indicator_description_,
+                                         SecurityMarketView& _indep_market_view_, double _fractional_seconds_)
+    : CommonIndicator(t_dbglogger_, r_watch_, concise_indicator_description_),
+      indep_market_view_(_indep_market_view_),
+      time_decayed_trade_info_manager_(*(TimeDecayedTradeInfoManager::GetUniqueInstance(
+          t_dbglogger_, r_watch_, _indep_market_view_, _fractional_seconds_))) {
+  time_decayed_trade_info_manager_.compute_sumtdiffsz();
+  time_decayed_trade_info_manager_.compute_sumsqrtsz();
+  _indep_market_view_.subscribe_tradeprints(this);
+}
+
+void TSizeTDSqrtAvgTDiff::OnMarketUpdate(const unsigned int _security_id_,
+                                         const MarketUpdateInfo& _market_update_info_) {
+#define MIN_SIGNIFICANT_SUM_SQRT_SZ_TRADED 0.10
+  // need to compare against a low value since otherwise there would be weird values as the denominator recedes in value
+  if (time_decayed_trade_info_manager_.sumsqrtsz_ >= MIN_SIGNIFICANT_SUM_SQRT_SZ_TRADED) {
+    indicator_value_ = time_decayed_trade_info_manager_.sumtdiffsz_ / time_decayed_trade_info_manager_.sumsqrtsz_;
+  } else {
+    indicator_value_ = 0;
+  }
+#undef MIN_SIGNIFICANT_SUM_SQRT_SZ_TRADED
+
+  //     if ( isnan ( indicator_value_ ) )
+  //       {
+  // #ifdef EXIT_ON_NAN_IV
+  // 	std::cerr << __PRETTY_FUNCTION__ << " nan " << std::endl;
+  // 	exit ( 1 );
+  // #else
+  // 	indicator_value_ = 0;
+  // #endif
+  //       }
+
+  if (data_interrupted_) indicator_value_ = 0;
+
+  NotifyIndicatorListeners(indicator_value_);
+}
+
+void TSizeTDSqrtAvgTDiff::OnTradePrint(const unsigned int _security_id_, const TradePrintInfo& _trade_print_info_,
+                                       const MarketUpdateInfo& _market_update_info_) {
+#define MIN_SIGNIFICANT_SUM_SQRT_SZ_TRADED 0.10
+  // need to compare against a low value since otherwise there would be weird values as the denominator recedes in value
+  if (time_decayed_trade_info_manager_.sumsqrtsz_ >= MIN_SIGNIFICANT_SUM_SQRT_SZ_TRADED) {
+    indicator_value_ = time_decayed_trade_info_manager_.sumtdiffsz_ / time_decayed_trade_info_manager_.sumsqrtsz_;
+  } else {
+    indicator_value_ = 0;
+  }
+#undef MIN_SIGNIFICANT_SUM_SQRT_SZ_TRADED
+
+  //     if ( isnan ( indicator_value_ ) )
+  //       {
+  // #ifdef EXIT_ON_NAN_IV
+  // 	std::cerr << __PRETTY_FUNCTION__ << " nan " << std::endl;
+  // 	exit ( 1 );
+  // #else
+  // 	indicator_value_ = 0;
+  // #endif
+  //       }
+
+  if (data_interrupted_) indicator_value_ = 0;
+
+  NotifyIndicatorListeners(indicator_value_);
+}
+
+void TSizeTDSqrtAvgTDiff::OnMarketDataInterrupted(const unsigned int _security_id_,
+                                                  const int msecs_since_last_receive_) {
+  if (indep_market_view_.security_id() == _security_id_) {
+    data_interrupted_ = true;
+    indicator_value_ = 0;
+    NotifyIndicatorListeners(indicator_value_);
+  } else
+    return;
+}
+
+void TSizeTDSqrtAvgTDiff::OnMarketDataResumed(const unsigned int _security_id_) {
+  if (indep_market_view_.security_id() == _security_id_) {
+    data_interrupted_ = false;
+    time_decayed_trade_info_manager_.InitializeValues();
+  } else
+    return;
+}
+}

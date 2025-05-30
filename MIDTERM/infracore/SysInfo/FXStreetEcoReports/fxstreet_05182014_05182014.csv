@@ -1,0 +1,7 @@
+"country","date","name","actual","consensus","previous","volatility"
+"New Zealand","20140518 22:45:00","Producer Price Index - Output (QoQ)","","0.700  %","-0.400  %","1"
+"New Zealand","20140518 22:45:00","Producer Price Index - Input (QoQ)","","0.400  %","-0.700  %","1"
+"United Kingdom","20140518 23:01:00","Rightmove House Price Index (YoY)","","","7.300  %","1"
+"United Kingdom","20140518 23:01:00","Rightmove House Price Index (MoM)","","","2.600  %","1"
+"Japan","20140518 23:50:00","Machinery Orders (YoY)","","4.200  %","10.800  %","1"
+"Japan","20140518 23:50:00","Machinery Orders (MoM)","","6.000  %","-8.800  %","1"

@@ -1,0 +1,3 @@
+#!/bin/bash
+
+shc=$1; tp=$2 ; n2d=`~/basetrade_install/bin/get_numbers_to_dollars $shc 20150112`; mpi=`~/basetrade_install/bin/get_min_price_increment $shc 20150112`; tick=`python -c "print $n2d*$mpi"`; for i in `awk '{print $5}' ~/modelling/*strats/$shc/$tp/* | grep -v "ROLL:" | sort | uniq`; do uts=`grep UNIT_TRADE_SIZE $i | awk '{print $3}'`; max_pos=`grep MAX_UNIT_RATIO $i | awk '{print $3}'`; otl=`grep MAX_OPENTRADE_LOSS $i | awk '{print $3}'`; if [ $uts -gt 0 ] || [ $max_pos -gt 0 ]; then otl_puts=`python -c "print $otl/($uts*$tick)"`; otl_muts=`python -c "print $otl/($uts*$max_pos*$tick)"`; echo $otl_puts $otl_muts; fi; done 2>/dev/null | sort | uniq -c | sort -nrk3

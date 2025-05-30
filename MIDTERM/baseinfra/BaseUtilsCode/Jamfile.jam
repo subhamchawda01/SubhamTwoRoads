@@ -1,0 +1,31 @@
+# We will need this project to have dependencies.
+use-project /PDVCC : ../libdvccode ;
+
+project
+: usage-requirements <include>$(PROJECT_INSTALL)
+;
+
+lib BaseUtils
+: # sources
+[ glob *.cpp ] 
+: # requirements
+<link>static <use>/PDVCC//CDef <use>/PDVCC//CommonDataStructures <use>/PDVCC//CommonTradeUtils <use>/PDVCC//Utils 
+: # default-build
+release
+: # usage requirements
+<library>/PDVCC//boost_filesystem
+<library>/PDVCC//CDef 
+<library>/PDVCC//CommonDataStructures 
+<library>/PDVCC//CommonTradeUtils
+<library>/PDVCC//Utils 
+; 
+
+
+install libBaseUtils
+  : BaseUtils
+  : <install-type>LIB
+    <variant>release:<location>"$(PROJECT_LIB_INSTALL)"
+    <variant>debug:<location>"$(PROJECT_LIB_INSTALL_DEBUG)"
+  : release debug
+  ;
+

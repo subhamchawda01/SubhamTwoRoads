@@ -1,0 +1,23 @@
+0000000000000000000000000000000000000000 a1b87e6c72e0bc781d143a7e497f707e9ad805d4 subhamchawda01 <subham.chawda@tworoads-trading.co.in> 1614050247 +0000	clone: from https://github.com/two-roads-trading-pvt-ltd/midterm.git
+a1b87e6c72e0bc781d143a7e497f707e9ad805d4 09e38ec4336ae81cc09529b368ac79d625f83696 subhamchawda01 <subham.chawda@tworoads-trading.co.in> 1615169492 +0000	pull: Fast-forward
+09e38ec4336ae81cc09529b368ac79d625f83696 b16f8730e069a6a60d3dcf1a815124da8391dba6 subhamchawda01 <subham.chawda@tworoads-trading.co.in> 1616233147 +0000	pull: Fast-forward
+b16f8730e069a6a60d3dcf1a815124da8391dba6 b16f8730e069a6a60d3dcf1a815124da8391dba6 subhamchawda01 <subham.chawda@tworoads-trading.co.in> 1617244921 +0000	checkout: moving from master to NOTIONAL_EXEC_STUCK
+b16f8730e069a6a60d3dcf1a815124da8391dba6 c07f6839fbfeb3a33f691fe96ef1ae5891770208 subhamchawda01 <subham.chawda@tworoads-trading.co.in> 1617245054 +0000	commit: added force cancel functionality
+c07f6839fbfeb3a33f691fe96ef1ae5891770208 b16f8730e069a6a60d3dcf1a815124da8391dba6 subhamchawda01 <subham.chawda@tworoads-trading.co.in> 1617469766 +0000	checkout: moving from NOTIONAL_EXEC_STUCK to master
+b16f8730e069a6a60d3dcf1a815124da8391dba6 16820a6a7d9c7010e1a7ccb2198929c8f64cb837 subhamchawda01 <subham.chawda@tworoads-trading.co.in> 1617472341 +0000	checkout: moving from master to master_FINNIFTY
+16820a6a7d9c7010e1a7ccb2198929c8f64cb837 c07f6839fbfeb3a33f691fe96ef1ae5891770208 subhamchawda01 <subham.chawda@tworoads-trading.co.in> 1617599571 +0000	checkout: moving from master_FINNIFTY to NOTIONAL_EXEC_STUCK
+c07f6839fbfeb3a33f691fe96ef1ae5891770208 1debd143a5f7cfe5bd9ed81d312df71a006ed80e subhamchawda01 <subham.chawda@tworoads-trading.co.in> 1617599924 +0000	commit: jam file and sim changes
+1debd143a5f7cfe5bd9ed81d312df71a006ed80e b16f8730e069a6a60d3dcf1a815124da8391dba6 subhamchawda01 <subham.chawda@tworoads-trading.co.in> 1621796717 +0000	checkout: moving from NOTIONAL_EXEC_STUCK to master
+b16f8730e069a6a60d3dcf1a815124da8391dba6 caadf4893f65adef5396a29d5d31b4340f671b7c subhamchawda01 <subham.chawda@tworoads-trading.co.in> 1621796919 +0000	pull: Fast-forward
+caadf4893f65adef5396a29d5d31b4340f671b7c ae2e5db55fa2a296396436375324c25e271d2577 subhamchawda01 <subham.chawda@tworoads-trading.co.in> 1621796982 +0000	checkout: moving from master to Notional_ForceCancel
+ae2e5db55fa2a296396436375324c25e271d2577 caadf4893f65adef5396a29d5d31b4340f671b7c subhamchawda01 <subham.chawda@tworoads-trading.co.in> 1621796996 +0000	checkout: moving from Notional_ForceCancel to master
+caadf4893f65adef5396a29d5d31b4340f671b7c 1debd143a5f7cfe5bd9ed81d312df71a006ed80e subhamchawda01 <subham.chawda@tworoads-trading.co.in> 1621797965 +0000	checkout: moving from master to NOTIONAL_EXEC_STUCK
+1debd143a5f7cfe5bd9ed81d312df71a006ed80e c07f6839fbfeb3a33f691fe96ef1ae5891770208 subhamchawda01 <subham.chawda@tworoads-trading.co.in> 1621798168 +0000	reset: moving to HEAD~1
+c07f6839fbfeb3a33f691fe96ef1ae5891770208 1debd143a5f7cfe5bd9ed81d312df71a006ed80e subhamchawda01 <subham.chawda@tworoads-trading.co.in> 1621798317 +0000	pull: Fast-forward
+1debd143a5f7cfe5bd9ed81d312df71a006ed80e c07f6839fbfeb3a33f691fe96ef1ae5891770208 subhamchawda01 <subham.chawda@tworoads-trading.co.in> 1621798608 +0000	reset: moving to HEAD~1
+c07f6839fbfeb3a33f691fe96ef1ae5891770208 1debd143a5f7cfe5bd9ed81d312df71a006ed80e subhamchawda01 <subham.chawda@tworoads-trading.co.in> 1621798679 +0000	pull: Fast-forward
+1debd143a5f7cfe5bd9ed81d312df71a006ed80e c07f6839fbfeb3a33f691fe96ef1ae5891770208 subhamchawda01 <subham.chawda@tworoads-trading.co.in> 1621799148 +0000	reset: moving to HEAD~1
+c07f6839fbfeb3a33f691fe96ef1ae5891770208 caadf4893f65adef5396a29d5d31b4340f671b7c subhamchawda01 <subham.chawda@tworoads-trading.co.in> 1627465375 +0000	checkout: moving from NOTIONAL_EXEC_STUCK to master
+caadf4893f65adef5396a29d5d31b4340f671b7c b61efcfa882b894a05ce557b38374c5cfc0c628e subhamchawda01 <subham.chawda@tworoads-trading.co.in> 1627465398 +0000	pull: Fast-forward
+b61efcfa882b894a05ce557b38374c5cfc0c628e 9216b016ee7079d147ffcabeecf39b4f4c290c90 subhamchawda01 <subham.chawda@tworoads-trading.co.in> 1638232473 +0000	pull: Fast-forward
+9216b016ee7079d147ffcabeecf39b4f4c290c90 2b54a1da56b6445446588b3bfa412e3eaad516b0 subhamchawda01 <subham.chawda@tworoads-trading.co.in> 1673853963 +0000	pull: Fast-forward

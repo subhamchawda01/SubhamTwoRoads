@@ -1,0 +1,163 @@
+project : usage-requirements ;
+
+use-project /PUtils : ../UtilsCode ;
+use-project /PCDef : ../CDefCode ;
+use-project /PProfiler : ../ProfilerCode ;
+use-project /PCommonDataStructures : ../CommonDataStructuresCode ;
+use-project /PCommonTradeUtils : ../CommonTradeUtilsCode ;
+use-project /PExternalData : ../ExternalDataCode ;
+
+exe mds_log_reader
+    : mds_log_reader.cpp
+      /PCDef//libCDef
+      /PCommonDataStructures//libCommonDataStructures
+      /PUtils//libUtils
+      /PCommonTradeUtils//libCommonTradeUtils
+      /PExternalData//libExternalData
+      /PProfiler//libProfiler
+    :
+    : <variant>debug <variant>release
+      <linkflags>-lpthread
+    ;
+    
+exe get_shortCode_from_strike_price
+    : get_shortCode_from_strike_price.cpp
+      /PCDef//libCDef
+      /PUtils//libUtils
+      /PCommonTradeUtils//libCommonTradeUtils
+      /PCommonDataStructures//libCommonDataStructures
+      /PProfiler//libProfiler
+    :
+    : <variant>debug <variant>release
+    ; 
+
+exe fix_cme_log_data
+    : fix_cme_log_data.cpp
+      /PCDef//libCDef
+      /PCommonDataStructures//libCommonDataStructures
+      /PUtils//libUtils
+      /PCommonTradeUtils//libCommonTradeUtils
+      /PExternalData//libExternalData
+      /PProfiler//libProfiler
+    :
+    : <variant>debug <variant>release
+      <linkflags>-lpthread
+    ;
+    
+
+exe get_exchange_symbol
+    : get_exchange_symbol.cpp
+      /PCDef//libCDef
+      /PUtils//libUtils
+      /PCommonDataStructures//libCommonDataStructures
+      /PCommonTradeUtils//libCommonTradeUtils
+      /PProfiler//libProfiler
+    :
+    : <variant>debug <variant>release
+    ;
+
+exe get_option_shortcodes
+    : get_option_shortcodes.cpp
+      /PCDef//libCDef
+      /PUtils//libUtils
+      /PCommonDataStructures//libCommonDataStructures
+      /PCommonTradeUtils//libCommonTradeUtils
+      /PProfiler//libProfiler
+    :
+    : <variant>debug <variant>release
+    ;
+
+exe get_shortcode_for_symbol
+    : get_shortcode_for_symbol.cpp
+      /PCDef//libCDef
+      /PCommonTradeUtils//libCommonTradeUtils
+      /PUtils//libUtils
+      /PCommonDataStructures//libCommonDataStructures
+      :
+      : <variant>debug <variant>release
+      ;
+
+exe update_date
+    : update_date.cpp
+      /PCDef//libCDef
+      /PCommonTradeUtils//libCommonTradeUtils
+    :
+    : <variant>debug <variant>release
+    ;
+
+exe dump_raw_multicast_data_using_config
+    : dump_raw_multicast_data_using_config.cpp
+      /PCDef//libCDef
+      /PCommonTradeUtils//libCommonTradeUtils
+      /PCommonDataStructures//libCommonDataStructures
+      /PExternalData//libExternalData
+      /PUtils//libUtils
+      /PProfiler//libProfiler
+    :
+    : <variant>debug <variant>release
+    ;
+    
+exe calc_next_day
+    : calc_next_day.cpp
+      /PUtils//libUtils
+      /PCDef//libCDef
+      /PCommonTradeUtils//libCommonTradeUtils
+      /PProfiler//libProfiler
+    :
+    : <variant>debug <variant>release
+    ;
+
+exe calc_next_week_day
+    : calc_next_week_day.cpp
+      /PUtils//libUtils
+      /PCDef//libCDef
+      /PCommonTradeUtils//libCommonTradeUtils
+      /PProfiler//libProfiler
+    :
+    : <variant>debug <variant>release
+    ;
+
+exe calc_prev_day
+    : calc_prev_day.cpp
+      /PCDef//libCDef
+      /PUtils//libUtils
+      /PCommonTradeUtils//libCommonTradeUtils
+    :
+    : <variant>debug <variant>release
+    ;
+
+exe calc_prev_week_day
+    : calc_prev_week_day.cpp
+      /PCDef//libCDef
+      /PUtils//libUtils
+      /PCommonTradeUtils//libCommonTradeUtils
+    :
+    : <variant>debug <variant>release
+    ;
+
+exe holiday_manager
+    : holiday_manager_exec.cpp
+      /PCDef//libCDef
+      /PUtils//libUtils
+      /PCommonDataStructures//libCommonDataStructures
+       /PCommonTradeUtils//libCommonTradeUtils
+    :
+    : <variant>debug <variant>release
+    ;
+
+
+install install-bin
+    : mds_log_reader
+      fix_cme_log_data
+      get_exchange_symbol
+      get_option_shortcodes
+      get_shortcode_for_symbol
+      update_date
+      dump_raw_multicast_data_using_config
+      get_shortCode_from_strike_price
+      calc_next_day  calc_next_week_day  calc_prev_day  calc_prev_week_day
+      holiday_manager
+    : <variant>release:<location>"$(PROJECT_BIN_INSTALL)"
+      <variant>debug:<location>"$(PROJECT_BIN_INSTALL_DEBUG)"
+  	: release debug
+    ;

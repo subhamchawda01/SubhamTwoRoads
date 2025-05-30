@@ -1,0 +1,6 @@
+server waiting for client connection on port 7777
+connection from 208.92.144.130:41902
+[SERVERLOG] [RCVD] SUBMIT_JOB ps -efH
+flock() on closed filehandle $lock_fh at /home/dvctrader/controller_scripts/ec2_job_server.pl line 10.
+flock() on closed filehandle $lock_fh at /home/dvctrader/controller_scripts/ec2_job_server.pl line 17.
+Cannot unlock mailbox - Bad file descriptor

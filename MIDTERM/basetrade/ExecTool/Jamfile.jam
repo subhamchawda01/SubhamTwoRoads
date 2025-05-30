@@ -1,0 +1,39 @@
+project : usage-requirements <include>$(PROJECT_INSTALL) ;
+
+use-project /PDVCC : ../libdvccode ;
+
+exe nse_simple_trader_sim
+    : nse_trade_given_notional.cpp
+      /PDVCC//SimPnls
+      /PDVCC//SimMarketMaker
+      /PDVCC//TradingInfo
+      /PDVCC//LoggedSources
+      /PDVCC//Indicators
+      /PDVCC//InitCommon
+      /PDVCC//ExecLogic
+      /PDVCC//ModelMath
+      /PDVCC//BaseUtils
+     /PDVCC//CDef
+     /PDVCC//Utils
+     /PDVCC//TradeUtils
+     /PDVCC//CommonDataStructures
+      /PDVCC//TradingInfo
+      /PDVCC//OptionsUtils 
+      /PDVCC//CommonTradeUtils
+      /PDVCC//ExternalData
+      /PDVCC//MarketAdapter
+      /PDVCC//OrderRouting
+      /PDVCC//VolatileTradingInfo
+      /PDVCC//SmartOrderRouting
+    :
+    : <variant>debug <variant>release
+      <linkflags>-lpthread
+    ;
+
+install install-bin
+        : nse_simple_trader_sim
+        : <variant>release:<location>"$(PROJECT_INSTALL)/bin"
+          <variant>debug:<location>"$(PROJECT_INSTALL)/bindebug"
+        : release debug
+        ;
+

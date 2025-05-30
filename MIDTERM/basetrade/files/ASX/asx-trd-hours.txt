@@ -1,0 +1,10 @@
+#AST
+#prod  #open #close #TimeZone #fbreak_start #fbreak_end	
+XT_0   8:32  7:00    AST       16:30           17:12
+YT_0   8:30  7:00    AST       16:30           17:10
+AP_0   9:50  7:00    AST       16:30           17:10
+IR_0   8:28  7:00    AST       16:30           17:08
+IR_1   8:28  7:00    AST       16:30           17:08
+IR_2   8:28  7:00    AST       16:30           17:08
+IR_3   8:28  7:00    AST       16:30           17:08
+IR_4   8:28  7:00    AST       16:30           17:08

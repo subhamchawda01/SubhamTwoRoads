@@ -1,0 +1,29 @@
+# We will need this project to have dependencies.
+use-project /PDVCC : ../../libdvccode ;
+
+use-project /PIndicators : ../../IndicatorsCode ;
+
+project : usage-requirements 
+;
+
+lib IndicatorsTests
+: # sources
+[ glob *.cpp ] 
+: # requirements
+<link>static <use>/PDVCC//SmartOrderRouting <use>/PDVCC//CDef <use>/PDVCC//CommonDataStructures <use>/PDVCC//Utils <use>/PDVCC//TradeUtils <use>/PDVCC//LoggedSources <use>/PIndicators//Indicators <use>/PDVCC//ExternalData <use>/PDVCC//Profiler <use>/PDVCC//OptionsUtils <use>/PDVCC//TradingInfo <use>/PDVCC//MarketAdapterTests
+: 
+: # usage requirements
+<library>/PDVCC//SmartOrderRouting
+<library>/PDVCC//boost_filesystem
+<library>/PDVCC//CDef 
+<library>/PDVCC//CommonDataStructures 
+<library>/PDVCC//Utils
+<library>/PDVCC//LoggedSources
+<library>/PDVCC//TradeUtils
+<library>/PIndicators//Indicators
+<library>/PDVCC//ExternalData
+<library>/PDVCC//Profiler
+<library>/PDVCC//OptionsUtils
+<library>/PDVCC//TradingInfo
+<library>/PDVCC//MarketAdapterTests
+; 

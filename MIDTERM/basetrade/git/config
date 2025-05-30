@@ -1,0 +1,41 @@
+[core]
+	repositoryformatversion = 0
+	filemode = true
+	bare = false
+	logallrefupdates = true
+[remote "origin"]
+	url = git+ssh://git@github.com/two-roads-trading-pvt-ltd/basetrade.git
+	fetch = +refs/heads/*:refs/remotes/origin/*
+[branch "devmodel"]
+	remote = origin
+	merge = refs/heads/devmodel
+[branch "OEBU_BOOK_CHANGE"]
+	remote = origin
+	merge = refs/heads/OEBU_BOOK_CHANGE
+[branch "NET_GROSS_EXPOSURE_CHANGE"]
+	remote = origin
+	merge = refs/heads/NET_GROSS_EXPOSURE_CHANGE
+[branch "ORS_SACI_BINARY_READER"]
+	remote = origin
+	merge = refs/heads/ORS_SACI_BINARY_READER
+[branch "ORS_SACI_BINARY_READER_EXCHANGE"]
+	remote = origin
+	merge = refs/heads/ORS_SACI_BINARY_READER_EXCHANGE
+[branch "TIME_STAMP_LATENCY"]
+	remote = origin
+	merge = refs/heads/TIME_STAMP_LATENCY
+[branch "OEBU_BOOK_CHANGE_ASM_COLUMN"]
+	remote = origin
+	merge = refs/heads/OEBU_BOOK_CHANGE_ASM_COLUMN
+[branch "devtrade"]
+	remote = origin
+	merge = refs/heads/devtrade
+[branch "ORS_BINARY_READER_EXCHANGE"]
+	remote = origin
+	merge = refs/heads/ORS_BINARY_READER_EXCHANGE
+[branch "OEBU_BOOK_CHANGE_PRICE_COLUMN"]
+	remote = origin
+	merge = refs/heads/OEBU_BOOK_CHANGE_PRICE_COLUMN
+[branch "SmartConsoleTrader"]
+	remote = origin
+	merge = refs/heads/SmartConsoleTrader

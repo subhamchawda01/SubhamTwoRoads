@@ -1,0 +1,184 @@
+#file format
+#  1st word : machine ip
+#  2nd word : start time, MM:HH
+#  3rd word : end time, MM:HH
+#  4th word : regex for process . We expect exactly one match
+#  5th word : _ALERT_MSG_ <alert_message>  
+#  nth word : _RECO_MSG <recovery message>
+
+
+#CHI
+10.23.82.51	00:03	47:21	cme_ilink_ors.*HC0/ors.cfg	_ALERT_MSG_ ORS HC0 on chicago-11 alert _RECO_MSG_ ORS HC0 on chicago-11 recovery
+
+10.23.82.51	30:00	10:20	mktDD_lbw.*DATA.*CME		_ALERT_MSG_ MKTDD_LBW on chicago-11 alert _RECO_MSG_ MKTDD_LBW on chicago-11 recovery
+10.23.82.51	04:04	03:22	ors_binary_logger.*CME		_ALERT_MSG_ ORS binary logger on chicago-11 alert _RECO_MSG_ ORS binary logger on chicago-11 recovery
+
+10.23.82.52     00:02   47:20   cme_ilink_ors.*J55/ors.cfg      _ALERT_MSG_ ORS J55 on chicago-12 alert _RECO_MSG_ ORS J55 on chicago-12 recovery
+10.23.82.52     11:00   10:20   mktDD.*LOGGER.*CME              _ALERT_MSG_ CME data daemon on chicago-12 alert _RECO_MSG_ CME data daemon on chicago-12 recovery
+10.23.82.52     15:01   00:21   mktDD.*LOGGER.*LIFFE            _ALERT_MSG_ LIFFE data daemon on chicago-12 alert _RECO_MSG_ LIFFE data daemon on chicago-12 recovery
+10.23.82.52     49:06   01:21   eurex_lowbw_live_source_shm_data_logger _ALERT_MSG_ EUREx data daemon on chicago-12 alert _RECO_MSG_ EUREX data daemon on chicago-12 recovery
+
+10.23.82.53     00:02   47:20   cme_ilink_ors.*G52/ors.cfg      _ALERT_MSG_ ORS G52 on chicago-13 alert _RECO_MSG_ ORS G52 on chicago-13 recovery
+10.23.82.54     00:02   47:20   cme_ilink_ors.*VD4/ors.cfg      _ALERT_MSG_ ORS VD4 on chicago-14 alert _RECO_MSG_ ORS VD4 on chicago-14 recovery
+
+10.23.82.54     30:00   10:20   mktDD.*LOGGER.*CME              _ALERT_MSG_ CME data daemon on chicago-14 alert _RECO_MSG_ CME data daemon on chicago-14 recovery
+##10.23.82.54     15:00   00:21   mktDD_Liffe                     _ALERT_MSG_ LIFFE data daemon on chicago-14 alert _RECO_MSG_ LIFFE data daemon on chicago-14 recovery
+
+10.23.82.51	00:07	30:22	eurex_shm_mds_logger.*EUREX	_ALERT_MSG_ EUREX shm writer on chi-11 alert _RECO_MSG_ EUREX shm writer on chi-11 recovery
+10.23.82.52	45:06	30:22	eurex_shm_mds_logger.*EUREX	_ALERT_MSG_ EUREX shm writer on chi-12 alert _RECO_MSG_ EUREX shm writer on chi-12 recovery
+10.23.82.53	00:07	30:22	eurex_shm_mds_logger.*EUREX	_ALERT_MSG_ EUREX shm writer on chi-13 alert _RECO_MSG_ EUREX shm writer on chi-13 recovery
+10.23.82.51	59:01	00:21	mktDD_shm.*CME                 	_ALERT_MSG_ CME Shm data logger on chi-11 alert _RECO_MSG_ CME Shm data logger on chi-11 recovery
+10.23.82.52	59:01	00:21	mktDD_shm.*CME                 	_ALERT_MSG_ CME Shm data logger on chi-12 alert _RECO_MSG_ CME Shm data logger on chi-12 recovery
+10.23.82.53	59:01	00:21	mktDD_shm.*CME                 	_ALERT_MSG_ CME Shm data logger on chi-13 alert _RECO_MSG_ CME Shm data logger on chi-13 recovery
+10.23.82.54	59:01	00:21	mktDD_shm.*CME                 	_ALERT_MSG_ CME Shm data logger on chi-14 alert _RECO_MSG_ CME Shm data logger on chi-14 recovery
+10.23.182.51	30:08	30:21	mktDD_shm.*CME                 	_ALERT_MSG_ CME Shm data logger on tor-11 alert _RECO_MSG_ CME Shm data logger on tor-11 recovery
+10.23.182.52	30:08	30:21	mktDD_shm.*CME                 	_ALERT_MSG_ CME Shm data logger on tor-12 alert _RECO_MSG_ CME Shm data logger on tor-12 recovery
+10.23.82.54	00:07	30:22	eurex_shm_mds_logger.*EUREX	_ALERT_MSG_ EUREX shm writer on chi-14 alert _RECO_MSG_ EUREX shm writer on chi-14 recovery
+10.23.82.51	00:03	00:21	mktDD_shm.*LIFFE                 	_ALERT_MSG_ LIFFE Shm data logger on chi-11 alert _RECO_MSG_ LIFFE Shm data logger on chi-11 recovery
+10.23.82.52	00:03	00:21	mktDD_shm.*LIFFE                 	_ALERT_MSG_ LIFFE Shm data logger on chi-12 alert _RECO_MSG_ LIFFE Shm data logger on chi-12 recovery
+10.23.82.53	00:03	00:21	mktDD_shm.*LIFFE                 	_ALERT_MSG_ LIFFE Shm data logger on chi-13 alert _RECO_MSG_ LIFFE Shm data logger on chi-13 recovery
+10.23.82.54	00:03	00:21	mktDD_shm.*LIFFE                 	_ALERT_MSG_ LIFFE Shm data logger on chi-14 alert _RECO_MSG_ LIFFE Shm data logger on chi-14 recovery
+
+#FR2
+10.23.102.51	58:10	01:20	mds_logger_MCAST.*NASDAQ_L1	_ALERT_MSG_ NASDAQ_L1 data logger on frankfurt-12 alert _RECO_MSG_ NASDAQ_L1 data logger on frankfurt-12 recovery
+10.23.102.51    59:07   30:16   chiXDD.*LOGGER.*CHIX            _ALERT_MSG_ CHIX Logger on FR 11 alert _RECO_MSG_ CHIX Logger on FR 11 recovery
+
+
+10.23.102.52    00:06   50:20   cme_ilink_ors.*UTE003/ors.cfg   _ALERT_MSG_ ORS U-T-E-003 on frankfurt-12 alert _RECO_MSG_ ORS U-T-E-003 on frankfurt-12 recovery
+
+10.23.102.52    49:06   00:21   mktDD_lbw.*DATA.*EUREX          _ALERT_MSG_ EUREX live data daemon on Frankfurt-12 alert _RECO_MSG_ EUREX live data daemon on Frankfurt-12 recovery
+10.23.102.52    30:00   10:20   mktDD.*LOGGER.*CME              _ALERT_MSG_ CME data daemon on Frankfurt-12 alert _RECO_MSG_ CME data daemon on Frankfurt-12 recovery
+10.23.102.52    50:06   00:21   mktDD.*LOGGER.*EUREX		_ALERT_MSG_ EUREX data daemon on Frankfurt-12 alert _RECO_MSG_ EUREX data daemon on Frankfurt-12 recovery
+10.23.102.52    15:01   00:21   mktDD.*LOGGER.*LIFFE                    _ALERT_MSG_ LIFFE data daemon on frankfurt-12 alert _RECO_MSG_ LIFFE data daemon on frunkfurt-12 recovery
+10.23.102.52    05:05   47:21   ors_binary_logger               _ALERT_MSG_ ORS binary logger on frankfurt-12 alert _RECO_MSG_ ORS binary logger on frankfurt-12 recovery
+
+10.23.102.53    00:06   00:21   cme_ilink_ors.*UTE002/ors.cfg   _ALERT_MSG_ ORS U-T-E-002 on frankfurt-13 alert _RECO_MSG_ ORS U-T-E-002 on frankfurt-13 recovery
+
+10.23.102.54    00:06   50:20   cme_ilink_ors.*UTE001/ors.cfg   _ALERT_MSG_ ORS U-T-E-001 on frankfurt-14 alert _RECO_MSG_ ORS U-T-E-001 on frankfurt-14 recovery
+10.23.102.54    50:06   00:21   mktDD.*LOGGER.*EUREX		_ALERT_MSG_ EUREX data daemon on Frankfurt-14 alert _RECO_MSG_ EUREX data daemon on Frankfurt-14 recovery
+10.23.102.54    05:05   47:21   ors_binary_logger               _ALERT_MSG_ ORS binary logger on frankfurt-14 alert _RECO_MSG_ ORS binary logger on frankfurt-14 recovery
+
+##10.23.102.51	01:03	01:21	mktDD_shm.*LIFFE                 	_ALERT_MSG_ LIFFE Shm data logger on fr-11 alert _RECO_MSG_ LIFFE Shm data logger on fr-11 recovery
+10.23.102.52	01:03	01:21	mktDD_shm.*LIFFE                 	_ALERT_MSG_ LIFFE Shm data logger on fr-12 alert _RECO_MSG_ LIFFE Shm data logger on fr-12 recovery
+10.23.102.53	01:03	01:21	mktDD_shm.*LIFFE                 	_ALERT_MSG_ LIFFE Shm data logger on fr-13 alert _RECO_MSG_ LIFFE Shm data logger on fr-13 recovery
+10.23.102.54	01:03	01:21	mktDD_shm.*LIFFE                 	_ALERT_MSG_ LIFFE Shm data logger on fr-14 alert _RECO_MSG_ LIFFE Shm data logger on fr-14 recovery
+
+##10.23.102.51	00:03	00:22	mktDD_shm.*CME                 	_ALERT_MSG_ CME Shm data logger on fr-11 alert _RECO_MSG_ CME Shm data logger on fr-11 recovery
+10.23.102.52	59:01	00:21	mktDD_shm.*CME                 	_ALERT_MSG_ CME Shm data logger on fr-12 alert _RECO_MSG_ CME Shm data logger on fr-12 recovery
+10.23.102.53	59:01	00:21	mktDD_shm.*CME                 	_ALERT_MSG_ CME Shm data logger on fr-13 alert _RECO_MSG_ CME Shm data logger on fr-13 recovery
+10.23.102.54	59:01	00:21	mktDD_shm.*CME                 	_ALERT_MSG_ CME Shm data logger on fr-14 alert _RECO_MSG_ CME Shm data logger on fr-14 recovery
+
+##10.23.102.51	01:07	01:21	mktDD_shm.*EUREX                 	_ALERT_MSG_ EUREX Shm data logger on fr-11 alert _RECO_MSG_ EUREX Shm data logger on fr-11 recovery
+10.23.102.52	01:07	01:21	mktDD_shm.*EUREX                 	_ALERT_MSG_ EUREX Shm data logger on fr-12 alert _RECO_MSG_ EUREX Shm data logger on fr-12 recovery
+10.23.102.53	01:07	01:21	mktDD_shm.*EUREX                 	_ALERT_MSG_ EUREX Shm data logger on fr-13 alert _RECO_MSG_ EUREX Shm data logger on fr-13 recovery
+10.23.102.54	01:07	01:21	mktDD_shm.*EUREX                 	_ALERT_MSG_ EUREX Shm data logger on fr-14 alert _RECO_MSG_ EUREX Shm data logger on fr-14 recovery
+
+#TOR
+10.23.182.51	30:10	23:21	cme_ilink_ors.*BDMA/ors.cfg	_ALERT_MSG_ ORS B-D-M-A on toronto-11 alert _RECO_MSG_ ORS B-D-M-A on toronto-11 recovery
+10.23.182.51	30:09	20:21	TMX-mds.*--mode.*SHMWRITER      _ALERT_MSG_ TMX data daemon on toronto-11 alert _RECO_MSG_ TMX data daemon on toronto-11 recovery
+10.23.182.51	29:09	21:21	tmx_mds_data_logger_via_shm_source  _ALERT_MSG_ TMX shm mds data logger on toronto-11 alert _RECO_MSG_ TMX shm mds data logger on toronto-11 recovery
+10.23.182.51	32:09	21:21	fetch_mx_shm_data_and_bcast      _ALERT_MSG_ TMX shm data bcaster on toronto-11 alert _RECO_MSG_ TMX shm data bcaster on toronto-11 recovery
+10.23.182.51	30:00	01:20	mktDD.*LOGGER.*CME      	_ALERT_MSG_ CME data daemon on toronto-11 alert _RECO_MSG_ CME data daemon on toronto-11 recovery
+10.23.182.51	05:02	10:22	ors_binary_logger		_ALERT_MSG_ ors binary logger on toronto-11 alert _RECO_MSG_ ORS binary logger on toronto-11 recovery
+
+10.23.182.52    30:10   23:22   cme_ilink_ors.*BDMB/ors.cfg     _ALERT_MSG_ ORS B-D-M-B on toronto-12 alert _RECO_MSG_ ORS B-D-M-B on toronto-12 recovery
+10.23.182.52    30:09   20:22   TMX-mds.*--mode.*SHMWRITER      _ALERT_MSG_ TMX data daemon on toronto-12 alert _RECO_MSG_ TMX data daemon on toronto-12 recovery      
+10.23.182.52    29:09   21:21   tmx_mds_data_logger_via_shm_source _ALERT_MSG_ TMX shm mds data logger on toronto-12 alert _RECO_MSG_ TMX shm mds data logger on toronto-12 recovery
+10.23.182.52	32:09	21:21	fetch_mx_shm_data_and_bcast      _ALERT_MSG_ TMX shm data bcaster on toronto-12 alert _RECO_MSG_ TMX shm data bcaster on toronto-12 recovery
+
+#BRZ
+10.23.23.11	00:11	00:23	cme_ilink_ors.*XALP0038/ors.cfg	_ALERT_MSG_ ORS X-A-L-P-38 on Brazil-11 alert _RECO_MSG_ ORS X-A-L-P-38 on Brazil-11 recovery
+10.23.23.11	20:01	00:21	mds_logger_MCAST.*LIFFE		_ALERT_MSG_ LIFFE data logger on brazil-11 alert _RECO_MSG_ LIFFE data logger on brazil-11 recovery
+10.23.23.11	30:00	10:21	cme_live_source_logger.*CME	_ALERT_MSG_ CME Low Bandwidth live data logger on brazil-11 alert _RECO_MSG_ CME Low Badnwidth live data logger on brazil-11 recovery
+10.23.23.11	50:06	00:21	eurex_live_source_logger.*EUREX	_ALERT_MSG_ EUREX data daemon on brazil-11 alert _RECO_MSG_ EUREX data daemon on brazil-11 recovery
+10.23.23.11	30:10	30:22	eurex_shm_mds_logger.*EUREX	_ALERT_MSG_ EUREX shm writer on brazil-11 alert _RECO_MSG_ EUREX shm writer on brazil-11 recovery
+10.23.23.11	30:09	30:22	cme_shm_mds_logger.*CME		_ALERT_MSG_ CME	shm writer on brazil-11 alert _RECO_MSG_ CME shm writer on brazil-11 recovery
+10.23.23.11	58:10	01:20	mds_logger_MCAST.*NASDAQ_L1	_ALERT_MSG_ NASDAQ_L1 data logger on bmf-11 alert _RECO_MSG_ NASDAQ_L1 data logger on bmf-11 recovery
+
+10.23.23.11	54:11	01:21	mktDD_shm                 	_ALERT_MSG_ NTP Shm data logger on bmf-11 alert _RECO_MSG_ NTP Shm data logger on bmf-11 recovery
+
+10.23.23.11	54:11	01:21	mktDD.*LOGGER.*NTP              _ALERT_MSG_ NTP data daemon on bmf-11 alert _RECO_MSG_ NTP data daemon on bmf-11 recovery
+10.23.23.11	10:13	54:19	mktDD.*LOGGER.*BMF             	_ALERT_MSG_ Equity data daemon on bmf-11 alert _RECO_MSG_ Equity data daemon on bmf-11 recovery
+10.23.23.12	54:11	01:21	mktDD_shm                 	_ALERT_MSG_ NTP Shm data logger on bmf-12 alert _RECO_MSG_ NTP Shm data logger on bmf-12 recovery
+10.23.23.13	54:11	01:21	mktDD_shm                 	_ALERT_MSG_ NTP Shm data logger on bmf-13 alert _RECO_MSG_ NTP Shm data logger on bmf-13 recovery
+
+
+10.23.23.12	00:11	00:23	cme_ilink_ors.*XALP0037/ors.cfg	_ALERT_MSG_ ORS X-A-L-P-0037 on Alpes-12 alert _RECO_MSG_ ORS X-A-L-P-0037 on Alpes-12 recovery
+10.23.23.12	07:11	00:23	cme_ilink_ors_dropcopy.*DALP0012/ors.cfg	_ALERT_MSG_ ORS D-A-L-P-0012 on Alpes-12 alert _RECO_MSG_ ORS D-A-L-P-0012 on Alpes-12 recovery
+10.23.23.13	30:09	30:22	cme_shm_mds_logger.*CME		_ALERT_MSG_ CME	shm writer on alpes-12 alert _RECO_MSG_ CME shm writer on alpes-12 recovery
+
+10.23.23.13     00:11   00:23   cme_ilink_ors.*XALP0036/ors.cfg _ALERT_MSG_ ORS X-A-L-P-0036 on Alpes-13 alert _RECO_MSG_ ORS X-A-L-P-0036 on Alpes-13 recovery
+10.23.23.13	05:06	47:22	ors_binary_logger		_ALERT_MSG_ ors binary logger on alpes-13 alert _RECO_MSG_ ORS binary logger on alpes-13 recovery
+10.23.23.13	30:10	30:22	eurex_shm_mds_logger.*EUREX	_ALERT_MSG_ EUREX shm writer on alpes-13 alert _RECO_MSG_ EUREX shm writer on alpes-13 recovery
+10.23.23.13	30:09	30:22	cme_shm_mds_logger.*CME		_ALERT_MSG_ CME	shm writer on alpes-13 alert _RECO_MSG_ CME shm writer on alpes-13 recovery
+
+#NY
+10.23.74.51	05:02	47:20	ors_binary_logger.*BMF		_ALERT_MSG_ ors binary logger BMF on ny-11 alert _RECO_MSG_ ORS binary logger BMF on ny-11 recovery
+10.23.74.51	05:01	47:21	ors_binary_logger.*CME		_ALERT_MSG_ ors binary logger CME on ny-11 alert _RECO_MSG_ ORS binary logger CME on ny-11 recovery
+10.23.74.51	05:02	47:20	ors_binary_logger.*TMX		_ALERT_MSG_ ors binary logger TMX on ny-11 alert _RECO_MSG_ ORS binary logger TMX on ny-11 recovery
+10.23.74.51	05:02	47:21	ors_binary_logger.*EUREX	_ALERT_MSG_ ors binary logger EUREX on ny-11 alert _RECO_MSG_ ORS binary logger EUREX on ny-11 recovery
+
+10.23.74.51	03:00	25:21	our_extended_bidask_mkt_book_util	_ALERT_MSG_ OEBU on ny-11 alert _RECO_MSG_ OEBU on ny-11 recovery
+10.23.74.51	03:00	25:21	volume_monitor			_ALERT_MSG_ volume monitor on ny-11 alert _RECO_MSG_ volume monitor on ny-11 recovery
+10.23.74.51	05:00	30:21	margin_server.*config		_ALERT_MSG_ margin server on ny-11 alert _RECO_MSG_ margin server on ny-11 recovery
+
+10.23.74.55	30:01	10:21	mktDD_lbw.*DATA.*CME		_ALERT_MSG_ CME Low Bandwidth live data logger on ny-15 alert _RECO_MSG_ CME Low Badnwidth live data logger on ny-15 recovery
+10.23.74.55	-10:00	69:23	apache.*tomcat			_ALERT_MSG_ Alert Server on ny-15 alert _RECO_MSG_ Alert Server on ny-15 recovery
+
+10.23.74.51      -10:00           69:23             ntpd                                          _ALERT_MSG_ ntp daemon on NY 11 is down  _RECO_MSG_ ntp daemon on NY 11 is up
+10.23.74.52      -10:00           69:23             ntpd                                          _ALERT_MSG_ ntp daemon on NY 12 is down  _RECO_MSG_ ntp daemon on NY 12 is up
+10.23.74.53      -10:00           69:23             ntpd                                          _ALERT_MSG_ ntp daemon on NY 13 is down  _RECO_MSG_ ntp daemon on NY 13 is up
+#10.23.74.54      -10:00           69:23             ntpd                                          _ALERT_MSG_ ntp daemon on NY 14 is down  _RECO_MSG_ ntp daemon on NY 14 is up
+10.23.74.55      -10:00           69:23             ntpd                                          _ALERT_MSG_ ntp daemon on NY 15 is down  _RECO_MSG_ ntp daemon on NY 15 is up
+
+#CRT-11
+10.23.142.51	30:01	10:21	mktDD_lbw.*DATA.*CME		_ALERT_MSG_ CME Low Bandwidth live data logger on CRT 11 alert _RECO_MSG_ CME Low Badnwidth live data logger on CRT 11 recovery
+10.23.142.51	58:10	00:20	nasdaqDD.*LOGGER.*NASDAQ	_ALERT_MSG_ NASDAQ Logger on CRT 11 alert _RECO_MSG_ NASDAQ Logger on CRT 11 recovery
+10.23.142.51	19:01	00:21	mktDD.*DATA.*LIFFE		_ALERT_MSG_ LIFFE data daemon on CRT 11 alert _RECO_MSG_ LIFFE data daemon on CRT-11 recovery
+10.23.142.51	58:11	00:21	nasdaqL1DD.*DATA.*25701		_ALERT_MSG_ nasdaq L1 data daemon for FR2 on CRT 11 alert _RECO_MSG_ nasdaq L1 data daemon for FR2 on CRT 11 recovery
+10.23.142.51	58:11	00:21	nasdaqL1DD.*DATA.*25702		_ALERT_MSG_ nasdaq L1 data daemon for BMF on CRT 11 alert _RECO_MSG_ nasdaq L1 data daemon for BMF on CRT 11 recovery
+10.23.142.51	58:10	00:20	mds_logger_MCAST.*NASDAQ_L1 	_ALERT_MSG_ nasdaq L1 data logger on CRT 11 alert _RECO_MSG_ nasdaq L1 data logger on CRT 11 recovery
+
+#BSL
+10.23.52.51	00:07	50:20	cme_ilink_ors.*4M0/ors.cfg	_ALERT_MSG_ ORS 4-M-0 on basildon-11 alert _RECO_MSG_ ORS 4-M-0 on basildon-11 recovery
+10.23.52.51	58:07	30:16	chiXDD.*DATAL1.*CHIX_L1		_ALERT_MSG_ CHIX_L1 data daemon on basildon-11 alert _RECO_MSG_ CHIX_L1 data daemon on basildon-11 recovery
+10.23.52.51	58:07	30:16	mds_logger_MCAST.*CHIX_L1	_ALERT_MSG_ CHIX_L1 data logger on basildon-11 alert _RECO_MSG_ CHIX_L1 data logger on basildon-11 recovery
+
+10.23.52.52	10:01	00:21	mktDD.*LOGGER.*LIFFE		_ALERT_MSG_ LIFFE Data Logger on basildon-12 alert _RECO_MSG_ LIFFE Data Logger on basildon-12 recovery
+10.23.52.52	30:00	10:20	mktDD.*LOGGER.*CME		_ALERT_MSG_ CME Data Logger on basildon-12 alert _RECO_MSG_ CME Data Logger on basildon-12 recovery
+10.23.52.52	49:06	01:21	eurex_live_source_logger.*EUREX	_ALERT_MSG_ EUREX data daemon on basildon-12 alert _RECO_MSG_ EUREX data daemon on basildon-12 recovery
+10.23.52.52	58:10	01:20	mds_logger_MCAST.*NASDAQ_L1	_ALERT_MSG_ NASDAQ_L1 data logger on basildon-12 alert _RECO_MSG_ NASDAQ_L1 data logger on basildon-12 recovery
+10.23.52.52     59:07   30:16   chiXDD.*LOGGER.*CHIX            _ALERT_MSG_ CHIX Logger on BSL 12 alert _RECO_MSG_ CHIX Logger on BSL 12 recovery
+
+10.23.52.52	00:07	52:20	liffe_dropcopy_ors.*EJG9/ors.cfg	_ALERT_MSG_ ORS E-J-G-9 on basildon-12 alert _RECO_MSG_ ORS E-J-G-9 on basildon-12 recovery
+10.23.52.52	00:07	50:20	cme_ilink_ors.*EGA4/ors.cfg	_ALERT_MSG_ ORS E-G-A-4 on basildon-12 alert _RECO_MSG_ ORS E-G-A-4 on basildon-12 recovery
+10.23.52.52	00:05	02:22	ors_binary_logger.*LIFFE	_ALERT_MSG_ ors binary logger LIFFE on basildon-12 alert _RECO_MSG_ ORS binary logger on basildon-12 recovery
+
+10.23.52.53	45:06	52:20	liffe_dropcopy_ors.*JG9/ors.cfg	_ALERT_MSG_ ORS J-G-9 on basildon-13 alert _RECO_MSG_ ORS J-G-9 on basildon-13 recovery
+10.23.52.53	30:06	50:20	cme_ilink_ors.*GA4/ors.cfg	_ALERT_MSG_ ORS G-A-4 on basildon-13 alert _RECO_MSG_ ORS G-A-4 on basildon-13 recovery
+10.23.52.53	00:05	02:22	ors_binary_logger.*LIFFE	_ALERT_MSG_ ors binary logger LIFFE on basildon-13 alert _RECO_MSG_ ORS binary logger on basildon-13 recovery
+
+
+#10.23.52.53     59:07   30:16   chiXDD.*SHMWRITER                   _ALERT_MSG_ CHIX Shm Writer on BSL 13 alert _RECO_MSG_ CHIX Shm Writer on BSL 13 recovery
+#10.23.52.53     59:07   30:16   chix_l1_live_source_shm_data_logger _ALERT_MSG_ CHIX shm data logger on BSL 13 alert _RECO_MSG_ CHIX shm data logger on BSL 13 recovery
+
+#TOK
+10.134.210.184  00:23  00:18   OSE-mds.*DATA.*OSE.*27711             _ALERT_MSG_ OSE data daemon on TOK11 alert _RECO_MSG_ OSE data daemon on TOK11 recovery
+10.134.210.184  00:23  00:18   OSE-mds-ravi.*DATAPL.*OSE               _ALERT_MSG_ OSEPL data daemon on TOK11 alert _RECO_MSG_ OSEPL data daemon on TOK11 recovery
+10.134.210.184  00:23  00:18   mds_logger_MCAST.*OSE               _ALERT_MSG_ OSE data logger on TOK11 alert _RECO_MSG_ OSE data logger on TOK11 recovery
+10.134.210.184  00:01  30:08   mds_logger_MCAST.*HKEX            _ALERT_MSG_ HKEX data logger on  TOK11 alert _RECO_MSG_ OSE data logger on TOK11 recovery
+
+#HK
+10.152.224.145  00:23  00:18   mds_logger_MCAST.*OSE_L1               _ALERT_MSG_ OSE data logger on  HK11 alert _RECO_MSG_ OSE data logger on HK11 recovery
+10.152.224.145  00:01  30:08   HKEX-mds.*SHMWRITER.*HKEX              _ALERT_MSG_ HKEX data daemon on  HK11 alert _RECO_MSG_ HKEX data daemon on HK11 recovery
+10.152.224.145  00:01  30:08   HKEX-mds.*SHMWRITER.*HKEX              _ALERT_MSG_ HKEX data daemon on  HK11 alert _RECO_MSG_ HKEX data daemon on HK11 recovery
+10.152.224.145  00:01  30:08   hkex_shm_data_logger              _ALERT_MSG_ HKEX shm data logger on  HK11 alert _RECO_MSG_ HKEX shm data logger on HK11 recovery
+10.152.224.145  00:01  30:08   fetch_hkex_shm_data_and_bcast     _ALERT_MSG_ HKEX shm data read-bcast on  HK11 alert _RECO_MSG_ HKEX shm data read-bcast on HK11 recovery
+
+10.152.224.145  00:01 32:08   cme_ilink_ors.*FITII/ors.cfg               _ALERT_MSG_ ORS FITII on HK11 alert _RECO_MSG_ ORS FITII on HK11 recovery
+
+#RTS/MICEX - OTK
+circulumvite@10.53.129.162 48:05 56:05 mktDD.*REFERENCE.*RTS	     _ALERT_MSG_ RTS mktDD REFERENCE on OTK alert _RECO_MSG_ RTS mktDD REFERENCE on OTK recovery
+circulumvite@10.53.129.162 58:05 50:19 mktDD.*LOGGER.*RTS	     _ALERT_MSG_ RTS mktDD LOGGER on OTK alert _RECO_MSG_ RTS mktDD LOGGER on OTK recovery
+circulumvite@10.53.129.162 58:05 15:15 mktDD.*MICEX_EQ		     _ALERT_MSG_ MICEX_EQ mktDD on OTK alert _RECO_MSG_ MICEX_EQ mktDD on OTK recovery
+circulumvite@10.53.129.162 58:05 00:15 mktDD.*MICEX_CR		     _ALERT_MSG_ MICEX_CR mktDD on OTK alert _RECO_MSG_ MICEX_EQ mktDD on OTK recovery

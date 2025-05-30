@@ -1,0 +1,1 @@
+find /NAS1/data -type f -mtime +12 -exec gzip '{}' \; 

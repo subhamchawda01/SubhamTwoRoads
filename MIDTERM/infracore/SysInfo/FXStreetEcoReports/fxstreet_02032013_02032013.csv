@@ -1,0 +1,4 @@
+"country","date","name","actual","consensus","previous","volatility"
+"Australia","20130203 23:30:00","TD Securities Inflation (YoY)","","","2.400  %","2"
+"Australia","20130203 23:30:00","TD Securities Inflation (MoM)","","","0.400  %","1"
+"Japan","20130203 23:50:00","Monetary Base (YoY)","","13.200  %","11.800  %","1"

@@ -1,0 +1,35 @@
+project : usage-requirements <include>$(PROJECT_INSTALL) 
+	;
+
+exe pinv
+    : pinv.cpp 
+    :
+    <linkflags>-lboost_system
+    : 
+      <variant>debug <variant>release
+    ;
+    
+exe lin_mod
+    : LinearModel.cpp 
+    :
+    <linkflags>-lboost_system
+    : 
+      <variant>debug <variant>release
+    ;
+    
+
+exe pca
+    : pca_test.cpp 
+    :
+    <linkflags>-lboost_system
+    : 
+      <variant>debug <variant>release
+    ;
+    
+    
+install install-bin
+	: pinv lin_mod pca
+	: <variant>release:<location>"$(PROJECT_INSTALL)/bin"
+    	  <variant>debug:<location>"$(PROJECT_INSTALL)/bindebug"
+  	: release debug 
+	;

@@ -1,0 +1,149 @@
+                                         Tentative Auction Schedule of U.S. Treasury Securities
+     Security Type                    Announcement Date                     Auction Date                                  Settlement Date
+               4-Week BILL                   Monday, November 03, 2014                     Tuesday, November 04, 2014        Thursday, November 06, 2014
+3-Year NOTE                              Wednesday, November 05, 2014                     Monday, November 10, 2014          Monday, November 17, 2014
+10-Year NOTE                             Wednesday, November 05, 2014                  Wednesday, November 12, 2014          Monday, November 17, 2014
+30-Year BOND                             Wednesday, November 05, 2014                    Thursday, November 13, 2014         Monday, November 17, 2014
+               13-Week BILL                 Thursday, November 06, 2014                    Monday, November 10, 2014         Thursday, November 13, 2014
+               26-Week BILL                 Thursday, November 06, 2014                    Monday, November 10, 2014         Thursday, November 13, 2014
+               52-Week BILL                 Thursday, November 06, 2014                 Wednesday, November 12, 2014         Thursday, November 13, 2014
+               4-Week BILL                   Monday, November 10, 2014                  Wednesday, November 12, 2014         Thursday, November 13, 2014
+                                                  Holiday - Tuesday, November 11, 2014 - Veterans Day
+               13-Week BILL                 Thursday, November 13, 2014                    Monday, November 17, 2014         Thursday, November 20, 2014
+               26-Week BILL                 Thursday, November 13, 2014                    Monday, November 17, 2014         Thursday, November 20, 2014
+10-Year TIPS                  R T          Thursday, November 13, 2014                   Thursday, November 20, 2014           Friday, November 28, 2014
+               4-Week BILL                   Monday, November 17, 2014                     Tuesday, November 18, 2014        Thursday, November 20, 2014
+               13-Week BILL                 Thursday, November 20, 2014                    Monday, November 24, 2014            Friday, November 28, 2014
+               26-Week BILL                 Thursday, November 20, 2014                    Monday, November 24, 2014            Friday, November 28, 2014
+2-Year FRN                    R            Thursday, November 20, 2014                    Tuesday, November 25, 2014           Friday, November 28, 2014
+2-Year NOTE                                Thursday, November 20, 2014                    Monday, November 24, 2014          Monday, December 01, 2014
+5-Year NOTE                                Thursday, November 20, 2014                    Tuesday, November 25, 2014         Monday, December 01, 2014
+7-Year NOTE                                Thursday, November 20, 2014                 Wednesday, November 26, 2014          Monday, December 01, 2014
+               4-Week BILL                   Monday, November 24, 2014                     Tuesday, November 25, 2014           Friday, November 28, 2014
+               13-Week BILL               Wednesday, November 26, 2014                      Monday, December 01, 2014        Thursday, December 04, 2014
+               26-Week BILL               Wednesday, November 26, 2014                      Monday, December 01, 2014        Thursday, December 04, 2014
+                                                Holiday - Thursday, November 27, 2014 - Thanksgiving Day
+               4-Week BILL                    Monday, December 01, 2014                     Tuesday, December 02, 2014       Thursday, December 04, 2014
+               13-Week BILL                  Thursday, December 04, 2014                    Monday, December 08, 2014        Thursday, December 11, 2014
+               26-Week BILL                  Thursday, December 04, 2014                    Monday, December 08, 2014        Thursday, December 11, 2014
+               52-Week BILL                  Thursday, December 04, 2014                    Tuesday, December 09, 2014       Thursday, December 11, 2014
+3-Year NOTE                                Thursday, December 04, 2014                     Tuesday, December 09, 2014        Monday, December 15, 2014
+10-Year NOTE                  R            Thursday, December 04, 2014                  Wednesday, December 10, 2014         Monday, December 15, 2014
+30-Year BOND                  R            Thursday, December 04, 2014                   Thursday, December 11, 2014         Monday, December 15, 2014
+               4-Week BILL                    Monday, December 08, 2014                     Tuesday, December 09, 2014       Thursday, December 11, 2014
+               13-Week BILL                  Thursday, December 11, 2014                    Monday, December 15, 2014        Thursday, December 18, 2014
+               26-Week BILL                  Thursday, December 11, 2014                    Monday, December 15, 2014        Thursday, December 18, 2014
+5-Year TIPS                   R T          Thursday, December 11, 2014                   Thursday, December 18, 2014       Wednesday, December 31, 2014
+               4-Week BILL                    Monday, December 15, 2014                     Tuesday, December 16, 2014       Thursday, December 18, 2014
+               13-Week BILL                  Thursday, December 18, 2014                    Monday, December 22, 2014           Friday, December 26, 2014
+               26-Week BILL                  Thursday, December 18, 2014                    Monday, December 22, 2014           Friday, December 26, 2014
+2-Year FRN                    R            Thursday, December 18, 2014                     Tuesday, December 23, 2014          Friday, December 26, 2014
+2-Year NOTE                                Thursday, December 18, 2014                     Monday, December 22, 2014       Wednesday, December 31, 2014
+5-Year NOTE                                Thursday, December 18, 2014                     Tuesday, December 23, 2014      Wednesday, December 31, 2014
+7-Year NOTE                                Thursday, December 18, 2014                  Wednesday, December 24, 2014       Wednesday, December 31, 2014
+               4-Week BILL                    Monday, December 22, 2014                     Tuesday, December 23, 2014          Friday, December 26, 2014
+               13-Week BILL                Wednesday, December 24, 2014                     Monday, December 29, 2014             Friday, January 02, 2015
+               26-Week BILL                Wednesday, December 24, 2014                     Monday, December 29, 2014             Friday, January 02, 2015
+                                                 Holiday - Thursday, December 25, 2014 - Christmas Day
+               4-Week BILL                    Monday, December 29, 2014                     Tuesday, December 30, 2014            Friday, January 02, 2015
+               13-Week BILL                Wednesday, December 31, 2014                       Monday, January 05, 2015         Thursday, January 08, 2015
+               26-Week BILL                Wednesday, December 31, 2014                       Monday, January 05, 2015         Thursday, January 08, 2015
+               52-Week BILL                Wednesday, December 31, 2014                       Tuesday, January 06, 2015        Thursday, January 08, 2015
+                                                  Holiday - Thursday, January 01, 2015 - New Year's Day
+               4-Week BILL                      Monday, January 05, 2015                      Tuesday, January 06, 2015        Thursday, January 08, 2015
+               13-Week BILL                    Thursday, January 08, 2015                     Monday, January 12, 2015         Thursday, January 15, 2015
+               26-Week BILL                    Thursday, January 08, 2015                     Monday, January 12, 2015         Thursday, January 15, 2015
+3-Year NOTE                                  Thursday, January 08, 2015                     Monday, January 12, 2015          Thursday, January 15, 2015
+10-Year NOTE                  R              Thursday, January 08, 2015                     Tuesday, January 13, 2015         Thursday, January 15, 2015
+30-Year BOND                  R              Thursday, January 08, 2015                  Wednesday, January 14, 2015          Thursday, January 15, 2015
+               4-Week BILL                      Monday, January 12, 2015                      Tuesday, January 13, 2015        Thursday, January 15, 2015
+               13-Week BILL                    Thursday, January 15, 2015                     Tuesday, January 20, 2015        Thursday, January 22, 2015
+               26-Week BILL                    Thursday, January 15, 2015                     Tuesday, January 20, 2015        Thursday, January 22, 2015
+10-Year TIPS                      T          Thursday, January 15, 2015                    Thursday, January 22, 2015           Friday, January 30, 2015
+                                         Holiday - Monday, January 19, 2015 - Birthday of Martin Luther King, Jr.
+               4-Week BILL                      Tuesday, January 20, 2015                  Wednesday, January 21, 2015         Thursday, January 22, 2015
+               13-Week BILL                    Thursday, January 22, 2015                     Monday, January 26, 2015         Thursday, January 29, 2015
+               26-Week BILL                    Thursday, January 22, 2015                     Monday, January 26, 2015         Thursday, January 29, 2015
+2-Year FRN                                   Thursday, January 22, 2015                     Tuesday, January 27, 2015         Monday, February 02, 2015
+2-Year NOTE                                  Thursday, January 22, 2015                     Tuesday, January 27, 2015         Monday, February 02, 2015
+5-Year NOTE                                  Thursday, January 22, 2015                  Wednesday, January 28, 2015          Monday, February 02, 2015
+7-Year NOTE                                  Thursday, January 22, 2015                    Thursday, January 29, 2015         Monday, February 02, 2015
+               4-Week BILL                      Monday, January 26, 2015                      Tuesday, January 27, 2015        Thursday, January 29, 2015
+               13-Week BILL                    Thursday, January 29, 2015                    Monday, February 02, 2015        Thursday, February 05, 2015
+               26-Week BILL                    Thursday, January 29, 2015                    Monday, February 02, 2015        Thursday, February 05, 2015
+               52-Week BILL                    Thursday, January 29, 2015                    Tuesday, February 03, 2015       Thursday, February 05, 2015
+               4-Week BILL                     Monday, February 02, 2015                     Tuesday, February 03, 2015       Thursday, February 05, 2015
+3-Year NOTE                               Wednesday, February 04, 2015                     Tuesday, February 10, 2015         Tuesday, February 17, 2015
+                                                    Tentative Auction Schedule of U.S. Treasury Securities
+      Security Type                              Announcement Date                     Auction Date                                  Settlement Date
+10-Year NOTE                                          Wednesday, February 04, 2015                 Wednesday, February 11, 2015          Tuesday, February 17, 2015
+30-Year BOND                                          Wednesday, February 04, 2015                   Thursday, February 12, 2015         Tuesday, February 17, 2015
+                   13-Week BILL                           Thursday, February 05, 2015                   Monday, February 09, 2015        Thursday, February 12, 2015
+                   26-Week BILL                           Thursday, February 05, 2015                   Monday, February 09, 2015        Thursday, February 12, 2015
+                   4-Week BILL                             Monday, February 09, 2015                    Tuesday, February 10, 2015       Thursday, February 12, 2015
+                   13-Week BILL                           Thursday, February 12, 2015                   Tuesday, February 17, 2015       Thursday, February 19, 2015
+                   26-Week BILL                           Thursday, February 12, 2015                   Tuesday, February 17, 2015       Thursday, February 19, 2015
+30-Year TIPS                          T                 Thursday, February 12, 2015                  Thursday, February 19, 2015          Friday, February 27, 2015
+                                                           Holiday - Monday, February 16, 2015 - Washington's Birthday
+                   4-Week BILL                             Tuesday, February 17, 2015                Wednesday, February 18, 2015        Thursday, February 19, 2015
+                   13-Week BILL                           Thursday, February 19, 2015                   Monday, February 23, 2015        Thursday, February 26, 2015
+                   26-Week BILL                           Thursday, February 19, 2015                   Monday, February 23, 2015        Thursday, February 26, 2015
+2-Year FRN                        R                     Thursday, February 19, 2015                Wednesday, February 25, 2015           Friday, February 27, 2015
+2-Year NOTE                                             Thursday, February 19, 2015                   Tuesday, February 24, 2015           Monday, March 02, 2015
+5-Year NOTE                                             Thursday, February 19, 2015                Wednesday, February 25, 2015            Monday, March 02, 2015
+7-Year NOTE                                             Thursday, February 19, 2015                  Thursday, February 26, 2015           Monday, March 02, 2015
+                   4-Week BILL                             Monday, February 23, 2015                    Tuesday, February 24, 2015       Thursday, February 26, 2015
+                   13-Week BILL                           Thursday, February 26, 2015                     Monday, March 02, 2015           Thursday, March 05, 2015
+                   26-Week BILL                           Thursday, February 26, 2015                     Monday, March 02, 2015           Thursday, March 05, 2015
+                   52-Week BILL                           Thursday, February 26, 2015                     Tuesday, March 03, 2015          Thursday, March 05, 2015
+                   4-Week BILL                               Monday, March 02, 2015                       Tuesday, March 03, 2015          Thursday, March 05, 2015
+                   13-Week BILL                             Thursday, March 05, 2015                      Monday, March 09, 2015           Thursday, March 12, 2015
+                   26-Week BILL                             Thursday, March 05, 2015                      Monday, March 09, 2015           Thursday, March 12, 2015
+3-Year NOTE                                                Thursday, March 05, 2015                      Tuesday, March 10, 2015           Monday, March 16, 2015
+10-Year NOTE                      R                        Thursday, March 05, 2015                   Wednesday, March 11, 2015            Monday, March 16, 2015
+30-Year BOND                      R                        Thursday, March 05, 2015                     Thursday, March 12, 2015           Monday, March 16, 2015
+                   4-Week BILL                               Monday, March 09, 2015                       Tuesday, March 10, 2015          Thursday, March 12, 2015
+                   13-Week BILL                             Thursday, March 12, 2015                      Monday, March 16, 2015           Thursday, March 19, 2015
+                   26-Week BILL                             Thursday, March 12, 2015                      Monday, March 16, 2015           Thursday, March 19, 2015
+10-Year TIPS                      R T                      Thursday, March 12, 2015                     Thursday, March 19, 2015           Tuesday, March 31, 2015
+                   4-Week BILL                               Monday, March 16, 2015                       Tuesday, March 17, 2015          Thursday, March 19, 2015
+                   13-Week BILL                             Thursday, March 19, 2015                      Monday, March 23, 2015           Thursday, March 26, 2015
+                   26-Week BILL                             Thursday, March 19, 2015                      Monday, March 23, 2015           Thursday, March 26, 2015
+2-Year FRN                        R                        Thursday, March 19, 2015                   Wednesday, March 25, 2015              Friday, March 27, 2015
+2-Year NOTE                                                Thursday, March 19, 2015                      Tuesday, March 24, 2015           Tuesday, March 31, 2015
+5-Year NOTE                                                Thursday, March 19, 2015                   Wednesday, March 25, 2015            Tuesday, March 31, 2015
+7-Year NOTE                                                Thursday, March 19, 2015                     Thursday, March 26, 2015           Tuesday, March 31, 2015
+                   4-Week BILL                               Monday, March 23, 2015                       Tuesday, March 24, 2015          Thursday, March 26, 2015
+                   13-Week BILL                             Thursday, March 26, 2015                      Monday, March 30, 2015            Thursday, April 02, 2015
+                   26-Week BILL                             Thursday, March 26, 2015                      Monday, March 30, 2015            Thursday, April 02, 2015
+                   52-Week BILL                             Thursday, March 26, 2015                      Tuesday, March 31, 2015           Thursday, April 02, 2015
+                   4-Week BILL                               Monday, March 30, 2015                       Tuesday, March 31, 2015           Thursday, April 02, 2015
+                   13-Week BILL                              Thursday, April 02, 2015                      Monday, April 06, 2015           Thursday, April 09, 2015
+                   26-Week BILL                              Thursday, April 02, 2015                      Monday, April 06, 2015           Thursday, April 09, 2015
+3-Year NOTE                                                 Thursday, April 02, 2015                      Tuesday, April 07, 2015        Wednesday, April 15, 2015
+10-Year NOTE                      R                         Thursday, April 02, 2015                   Wednesday, April 08, 2015         Wednesday, April 15, 2015
+30-Year BOND                      R                         Thursday, April 02, 2015                     Thursday, April 09, 2015        Wednesday, April 15, 2015
+                   4-Week BILL                                 Monday, April 06, 2015                      Tuesday, April 07, 2015          Thursday, April 09, 2015
+                   13-Week BILL                              Thursday, April 09, 2015                      Monday, April 13, 2015           Thursday, April 16, 2015
+                   26-Week BILL                              Thursday, April 09, 2015                      Monday, April 13, 2015           Thursday, April 16, 2015
+                   4-Week BILL                                 Monday, April 13, 2015                      Tuesday, April 14, 2015          Thursday, April 16, 2015
+                   13-Week BILL                              Thursday, April 16, 2015                      Monday, April 20, 2015           Thursday, April 23, 2015
+                   26-Week BILL                              Thursday, April 16, 2015                      Monday, April 20, 2015           Thursday, April 23, 2015
+5-Year TIPS                           T                     Thursday, April 16, 2015                     Thursday, April 23, 2015          Thursday, April 30, 2015
+                   4-Week BILL                                 Monday, April 20, 2015                      Tuesday, April 21, 2015          Thursday, April 23, 2015
+                   13-Week BILL                              Thursday, April 23, 2015                      Monday, April 27, 2015           Thursday, April 30, 2015
+                   26-Week BILL                              Thursday, April 23, 2015                      Monday, April 27, 2015           Thursday, April 30, 2015
+2-Year NOTE                                                 Thursday, April 23, 2015                      Monday, April 27, 2015           Thursday, April 30, 2015
+                   52-Week BILL                              Thursday, April 23, 2015                      Tuesday, April 28, 2015          Thursday, April 30, 2015
+5-Year NOTE                                                 Thursday, April 23, 2015                      Tuesday, April 28, 2015          Thursday, April 30, 2015
+2-Year FRN                                                  Thursday, April 23, 2015                   Wednesday, April 29, 2015           Thursday, April 30, 2015
+7-Year NOTE                                                 Thursday, April 23, 2015                   Wednesday, April 29, 2015           Thursday, April 30, 2015
+                   4-Week BILL                                 Monday, April 27, 2015                      Tuesday, April 28, 2015          Thursday, April 30, 2015
+                   13-Week BILL                              Thursday, April 30, 2015                       Monday, May 04, 2015             Thursday, May 07, 2015
+                   26-Week BILL                              Thursday, April 30, 2015                       Monday, May 04, 2015             Thursday, May 07, 2015
+
+T --denotes TIPS
+R --denotes reopening
+For additional information regarding Treasury auction announcements and results please see web address below:
+http://www.treasurydirect.gov/instit/annceresult/press/press.htm
+

@@ -1,0 +1,32 @@
+#futures channel
+#OBR: Order Book Incremental
+#OBS: Order Book Snapshot
+#MSR: Statisctics Incremental
+#MSS: Statisctics Snapshot
+#OLR: Orders Incremental
+#OLS: Orders Snapshot
+#TLR Trades Incremental
+#TLS Trades Snapshot
+#IDF Instrument Replay
+#H Historical Replay
+
+#desc #service-type #stream #ip #port
+OBR I A 239.195.1.23 16023 
+OBR I B 239.195.1.151 17023 
+OBS S A 239.195.1.24 16024 
+OBS S B 239.195.1.152 17024 
+MSR I A 239.195.1.27 16027 
+MSR I B 239.195.1.155 17027 
+MSS S A 239.195.1.28 16028 
+MSS S B 239.195.1.156 17028 
+OLR I A 239.195.1.21 16021 
+OLR I B 239.195.1.149 17021 
+OLS S A 239.195.1.22 16022 
+OLS S B 239.195.1.150 17022 
+TLR I A 239.195.1.25 16025 
+TLR I B 239.195.1.153 17025 
+TLS S A 239.195.1.26 16026 
+TLS S B 239.195.1.154 17026 
+IDF N A 239.195.1.29 16029 
+IDF N B 239.195.1.157 17029 
+

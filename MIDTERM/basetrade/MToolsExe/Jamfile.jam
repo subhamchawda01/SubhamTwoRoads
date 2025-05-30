@@ -1,0 +1,463 @@
+project : usage-requirements <include>$(PROJECT_INSTALL) ;
+
+use-project /PDVCC : ../libdvccode ;
+use-project /PSqlCpp : ../SqlCppCode ;
+use-project /PMTools : ../MToolsCode ;
+
+# Given a matrix-data-file remove mean
+# and print stats of cols 
+exe remove_mean_reg_data
+    : remove_mean_reg_data.cpp
+     /PDVCC//CDef
+     /PDVCC//CommonDataStructures
+    :
+    : <variant>debug <variant>release 
+    ;
+
+# ???
+exe get_UTS_for_a_day
+    : get_UTS_for_a_day.cpp
+     /PDVCC//CDef
+     /PDVCC//Utils
+     /PDVCC//CommonDataStructures
+     /PDVCC//CommonTradeUtils
+     /PDVCC//InitCommon
+    :
+    : <variant>debug <variant>release 
+    ;
+
+# Given a file with dependant and variables
+# the correlations with the dependant
+exe get_dep_corr
+    : get_dep_corr.cpp 
+     /PDVCC//CDef
+     /PDVCC//Utils
+     /PDVCC//CommonDataStructures
+    :
+    : <variant>debug <variant>release 
+    ;
+
+# Given a file with dependant and variables
+# othe median correlations with the dependant on num_folds
+exe get_dep_median_corr
+    : get_dep_median_corr.cpp 
+      /PMTools//libMTools 
+     /PDVCC//CDef
+     /PDVCC//Utils
+     /PDVCC//CommonDataStructures
+    :
+    : <variant>debug <variant>release 
+    ;
+
+# Given a file with data and NA returns the Covariance matrix
+exe calc_na_adjusted_covariance_matrix 
+    : calc_na_adjusted_covariance_matrix.cpp 
+      /PMTools//libMTools 
+     /PDVCC//CDef
+     /PDVCC//Utils
+     /PDVCC//CommonDataStructures
+    :
+    : <variant>debug <variant>release 
+    ;
+
+# Given a file with data returns the Covariance matrix
+exe get_covariance_matrix 
+    : get_covariance_matrix.cpp 
+      /PMTools//libMTools 
+     /PDVCC//CDef
+     /PDVCC//Utils
+     /PDVCC//CommonDataStructures
+    :
+    : <variant>debug <variant>release 
+    ;
+
+# Given a file with data returns the correlation matrix
+exe get_correlation_matrix 
+    : get_correlation_matrix.cpp 
+      /PMTools//libMTools 
+     /PDVCC//CommonDataStructures
+    :
+    : <variant>debug <variant>release 
+    ;
+
+# Given a file with data returns the stdev-vector and correlation-matrix
+exe get_stdev_correlation_matrix 
+    : get_stdev_correlation_matrix.cpp 
+      /PMTools//libMTools 
+    /PDVCC//CDef
+     /PDVCC//Utils
+     /PDVCC//CommonDataStructures
+    :
+    : <variant>debug <variant>release 
+    ;
+
+# Given a file with data returns the stdev-vector and correlation-matrix
+exe get_rep_matrix 
+    : get_rep_matrix.cpp 
+      /PMTools//libMTools 
+    /PDVCC//CDef
+     /PDVCC//Utils
+     /PDVCC//CommonDataStructures
+    :
+    : <variant>debug <variant>release 
+    ;
+
+# Given a file with reg_data remove the lines with values far from normal
+# and print rest to the given file
+exe remove_outliers
+    : remove_outliers.cpp 
+      /PMTools//libMTools 
+    /PDVCC//CDef
+     /PDVCC//Utils
+     /PDVCC//CommonDataStructures
+    :
+    : <variant>debug <variant>release 
+    ;
+
+# Given a file with reg_data replace values far from normal
+# with plausible values and print to new file
+exe clip_outliers
+    : clip_outliers.cpp 
+      /PMTools//libMTools 
+    /PDVCC//CDef
+     /PDVCC//Utils
+     /PDVCC//CommonDataStructures
+    :
+    : <variant>debug <variant>release 
+    ;
+
+#Calls forward stagewise linear regression
+exe callFSLR 
+    : call_FSLR.cpp 
+      /PMTools//libMTools 
+    /PDVCC//CDef
+     /PDVCC//Utils
+     /PDVCC//CommonDataStructures
+    :
+    : <variant>debug <variant>release 
+    ;
+
+#calls Multiple Adaptive Stagewise Splines
+exe callMARS
+    : call_MARS.cpp 
+      /PMTools//libMTools 
+    /PDVCC//CDef
+     /PDVCC//Utils
+     /PDVCC//CommonDataStructures
+    :
+    : <variant>debug <variant>release 
+    ;
+
+#Calls forward stagewise linear regression with backpass
+exe callFSLRbackpass
+    : call_FSLR_backpass.cpp
+      /PMTools//libMTools
+    /PDVCC//CDef
+     /PDVCC//Utils
+     /PDVCC//CommonDataStructures
+    :
+    : <variant>debug <variant>release
+    ;
+
+#Calls forward stagewise linear regression, but does not store any memory
+exe callFSLRnomem 
+    : call_FSLR_nomem.cpp 
+      /PMTools//libMTools 
+    /PDVCC//CDef
+     /PDVCC//Utils
+     /PDVCC//CommonDataStructures
+    :
+    : <variant>debug <variant>release 
+    ;
+
+#Calls forward stagewise high-value linear regression
+exe callFSHLR 
+    : call_FSHLR.cpp 
+      /PMTools//libMTools 
+    /PDVCC//CDef
+     /PDVCC//Utils
+     /PDVCC//CommonDataStructures
+    :
+    : <variant>debug <variant>release 
+    ;
+
+#Calls forward stagewise high-value linear regression
+exe callFSVLR 
+    : call_FSVLR.cpp 
+      /PMTools//libMTools 
+    /PDVCC//CDef
+     /PDVCC//Utils
+     /PDVCC//CommonDataStructures
+    :
+    : <variant>debug <variant>release 
+    ;
+
+#Calls forward stagewise high-value linear regression ( only high dep value lines )
+exe callFSHDVLR 
+    : call_FSHDVLR.cpp 
+      /PMTools//libMTools 
+    /PDVCC//CDef
+     /PDVCC//Utils
+     /PDVCC//CommonDataStructures
+    :
+    : <variant>debug <variant>release 
+    ;
+    
+#Calls forward stagewise high-value linear regression ( only high dep value lines ) with backpass
+exe callFSHDVLRbackpass
+    : call_FSHDVLR_backpass.cpp 
+      /PMTools//libMTools 
+    /PDVCC//CDef
+     /PDVCC//Utils
+     /PDVCC//CommonDataStructures
+    :
+    : <variant>debug <variant>release 
+    ;
+
+#Calls forward stagewise linear regression ( inefficient computation )
+exe callFSLR_inef 
+    : call_FSLR_inef.cpp 
+      /PMTools//libMTools 
+    /PDVCC//CDef
+     /PDVCC//Utils
+     /PDVCC//CommonDataStructures
+    :
+    : <variant>debug <variant>release 
+    ;
+
+# Calls forward stagewise ridge regression
+exe callFSRR 
+    : call_FSRR.cpp 
+      /PMTools//libMTools 
+    /PDVCC//CDef
+     /PDVCC//Utils
+     /PDVCC//CommonDataStructures
+    :
+    : <variant>debug <variant>release
+    ;
+
+exe call_fslogr
+    : call_fslogr.cpp
+      /PMTools//libMTools
+    /PDVCC//CDef
+     /PDVCC//Utils
+     /PDVCC//CommonDataStructures
+    :
+    : <variant>debug <variant>release
+    ;
+
+# Performs PCA based regression on eigen vectorized data
+exe callPCAREG
+    : call_PCAREG.cpp
+      /PMTools//libMTools
+    /PDVCC//CDef
+     /PDVCC//Utils
+     /PDVCC//CommonDataStructures
+    :
+    : <variant>debug <variant>release
+    ;
+
+# Performace PCA regression on original data ( smilar to ModelScripts/call_pcareg.pl )
+exe call_pca_reg
+    : call_pca_reg.cpp
+      /PMTools//libMTools
+    /PDVCC//CDef
+     /PDVCC//Utils
+     /PDVCC//CommonDataStructures
+    :
+    : <variant>debug <variant>release
+    ;
+    
+#Calls forward stagewise regression with median correlation
+exe callFSRLM
+    : call_FSRLM.cpp 
+      /PMTools//libMTools 
+    /PDVCC//CDef
+     /PDVCC//Utils
+     /PDVCC//CommonDataStructures
+    :
+    : <variant>debug <variant>release 
+    ;
+
+#Calls forward stagewise regression with median correlation
+exe callfsr_mean_sharpe_corr
+    : call_fsr_mean_sharpe_corr.cpp 
+      /PMTools//libMTools 
+    /PDVCC//CDef
+     /PDVCC//Utils
+     /PDVCC//CommonDataStructures
+    :
+    : <variant>debug <variant>release 
+    ;
+
+#Calls forward stagewise regression with prod mean sharpe of variance reduction
+exe callfsr_sharpe_rsq
+    : call_fsr_sharpe_rsq.cpp
+      /PMTools//libMTools 
+    /PDVCC//CDef
+     /PDVCC//Utils
+     /PDVCC//CommonDataStructures
+    :
+    : <variant>debug <variant>release 
+    ;
+
+#Calls forward stagewise regression with median correlation
+exe callfsr_mean_fss_corr
+    : call_fsr_mean_fss_corr.cpp 
+      /PMTools//libMTools 
+    /PDVCC//CDef
+     /PDVCC//Utils
+     /PDVCC//CommonDataStructures
+    :
+    : <variant>debug <variant>release 
+    ;
+
+#Calls forward stagewise regression with multiple dependants
+exe call_multiple_fslr
+    : call_multiple_fslr.cpp
+      /PMTools//libMTools 
+    /PDVCC//CDef
+     /PDVCC//Utils
+     /PDVCC//CommonDataStructures
+    :
+    : <variant>debug <variant>release 
+    ;
+
+#Calls forward stagewise linear regression
+exe closed_form_lr 
+    : closed_form_lr.cpp 
+      /PMTools//libMTools 
+    /PDVCC//CDef
+     /PDVCC//Utils
+     /PDVCC//CommonDataStructures
+    :
+    : <variant>debug <variant>release 
+    ;
+
+# Calls forward stagewise ridge regression
+exe closed_form_rr
+    : closed_form_rr.cpp 
+      /PMTools//libMTools 
+     /PDVCC//CDef
+     /PDVCC//Utils
+     /PDVCC//CommonDataStructures
+    :
+    : <variant>debug <variant>release
+    ;
+
+exe choose_strategy_set_by_algo
+    : choose_strategy_set_by_algo.cpp
+     /PDVCC//CDef
+     /PDVCC//Utils
+     /PDVCC//CommonDataStructures
+    :
+    : <variant>debug <variant>release
+    ;
+
+exe summarize_local_results_and_choose_by_algo_extended_checks
+    : summarize_local_results_and_choose_by_algo_extended_checks.cpp 
+     /PDVCC//CDef
+     /PDVCC//CommonDataStructures
+     /PDVCC//CommonTradeUtils
+    :
+    : <variant>debug <variant>release
+    ;
+    
+exe summarize_local_results_dir_and_choose_by_algo
+    : summarize_local_results_dir_and_choose_by_algo.cpp 
+     /PDVCC//CDef
+     /PDVCC//CommonDataStructures
+     /PDVCC//CommonTradeUtils
+    :
+    : <variant>debug <variant>release
+    ;
+
+exe summarize_local_results_by_timeperiod
+    : summarize_local_results_by_timeperiod.cpp
+     /PDVCC//CDef
+     /PDVCC//Utils
+     /PDVCC//CommonDataStructures
+     /PDVCC//InitCommon
+     /PDVCC//CommonTradeUtils
+    :
+    : <variant>debug <variant>release
+    ;
+
+exe summarize_strategy_results
+    : summarize_strategy_results.cpp 
+      /PSqlCpp//libSqlCpp
+     /PDVCC//CDef
+     /PDVCC//Utils
+     /PDVCC//CommonDataStructures
+     /PDVCC//InitCommon
+     /PDVCC//CommonTradeUtils
+    :
+    : <variant>debug <variant>release
+    ;
+
+if $(build-mysqlclient) {
+exe analyse_strategy_results
+    : analyse_strategy_results.cpp 
+      /PSqlCpp//libSqlCpp
+     /PDVCC//CDef
+     /PDVCC//Utils
+     /PDVCC//CommonDataStructures
+     /PDVCC//InitCommon
+     /PDVCC//CommonTradeUtils
+    :
+    : <variant>debug <variant>release
+    ;
+
+exe summarize_single_strategy_results
+    : summarize_single_strategy_results.cpp 
+      /PSqlCpp//libSqlCpp
+     /PDVCC//CDef
+     /PDVCC//Utils
+     /PDVCC//CommonDataStructures
+     /PDVCC//InitCommon
+     /PDVCC//CommonTradeUtils
+    :
+    : <variant>debug <variant>release
+    ;
+
+exe get_global_dates
+    : get_global_dates.cpp
+      /PSqlCpp//libSqlCpp
+     /PDVCC//CDef
+     /PDVCC//Utils
+     /PDVCC//CommonDataStructures
+     /PDVCC//InitCommon
+     /PDVCC//CommonTradeUtils
+    :
+    : <variant>debug <variant>release
+    ;
+
+install install-sql-dep-bin
+	: analyse_strategy_results summarize_single_strategy_results get_global_dates
+	: <variant>release:<location>"$(PROJECT_INSTALL)/bin"
+    	  <variant>debug:<location>"$(PROJECT_INSTALL)/bindebug"
+  	: release debug
+	;
+
+}
+
+install install-bin 
+	: remove_mean_reg_data   get_UTS_for_a_day get_dep_corr  get_dep_median_corr  get_covariance_matrix  calc_na_adjusted_covariance_matrix  get_correlation_matrix  get_stdev_correlation_matrix  get_rep_matrix   
+	  remove_outliers clip_outliers     
+          callFSLR callFSLRbackpass callFSLR_inef callFSLRnomem 
+	  callFSRR callFSHLR callFSVLR callFSHDVLR callFSHDVLRbackpass 
+	  call_fslogr 
+	  callMARS 
+	  callPCAREG call_pca_reg
+	  callFSRLM callfsr_mean_fss_corr callfsr_mean_sharpe_corr callfsr_sharpe_rsq
+	  call_multiple_fslr 
+	  closed_form_lr  closed_form_rr  
+	  choose_strategy_set_by_algo
+	  summarize_local_results_and_choose_by_algo_extended_checks
+	  summarize_local_results_dir_and_choose_by_algo 
+          summarize_local_results_by_timeperiod
+	  summarize_strategy_results
+	: <variant>release:<location>"$(PROJECT_INSTALL)/bin"
+    	  <variant>debug:<location>"$(PROJECT_INSTALL)/bindebug"
+  	: release debug
+	;

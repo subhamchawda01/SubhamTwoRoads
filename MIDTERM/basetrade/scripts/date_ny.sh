@@ -1,0 +1,1 @@
+sh -c 'TZ=America/New_York date'

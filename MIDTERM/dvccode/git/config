@@ -1,0 +1,41 @@
+[core]
+	repositoryformatversion = 0
+	filemode = true
+	bare = false
+	logallrefupdates = true
+[remote "origin"]
+	url = git+ssh://git@github.com/two-roads-trading-pvt-ltd/dvccode.git
+	fetch = +refs/heads/*:refs/remotes/origin/*
+[branch "master"]
+	remote = origin
+	merge = refs/heads/master
+[branch "GENERATE_TRADE_LOG_SUMMARY"]
+	remote = origin
+	merge = refs/heads/GENERATE_TRADE_LOG_SUMMARY
+[branch "TCP_DIRECT_MULTICAST"]
+	remote = origin
+	merge = refs/heads/TCP_DIRECT_MULTICAST
+[branch "ORS_COMPATIBILITY_OTHER_SERIES"]
+	remote = origin
+	merge = refs/heads/ORS_COMPATIBILITY_OTHER_SERIES
+[branch "STRAT_END_CHANGES"]
+	remote = origin
+	merge = refs/heads/STRAT_END_CHANGES
+[branch "INTRO_FINNIFTY"]
+	remote = origin
+	merge = refs/heads/INTRO_FINNIFTY
+[branch "UPDATE_DATE_HOLIDAY"]
+	remote = origin
+	merge = refs/heads/UPDATE_DATE_HOLIDAY
+[branch "POST_MARKET_EXEC_WATCH"]
+	remote = origin
+	merge = refs/heads/POST_MARKET_EXEC_WATCH
+[branch "MIDTERM_MASTER"]
+	remote = origin
+	merge = refs/heads/MIDTERM_MASTER
+[branch "ORS_REPORT_FO"]
+	remote = origin
+	merge = refs/heads/ORS_REPORT_FO
+[branch "T2T_2020"]
+	remote = origin
+	merge = refs/heads/T2T_2020

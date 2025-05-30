@@ -1,0 +1,27 @@
+cd ~/infracore/testbed 
+g++ -o timer_profile_tt_0 timer_profile.cpp -I"~/infracore_install/" -L"~/infracore_install/libdebug/" -lProfiler
+g++ -DABC_ -o timer_profile_tv_0 timer_profile.cpp -I"~/infracore_install/" -L"~/infracore_install/libdebug/" -lProfiler
+g++ -O2 -o timer_profile_tt_2 timer_profile.cpp -I"~/infracore_install/" -L"~/infracore_install/libdebug/" -lProfiler
+g++ -O2 -DABC_ -o timer_profile_tv_2 timer_profile.cpp -I"~/infracore_install/" -L"~/infracore_install/libdebug/" -lProfiler
+
+# Timestamp 0: gettimeofday
+# Timestamp 1: comparison
+
+[ gchak@cvlinux1 ~/infracore/testbed ] ./timer_profile_tt_0 ; ./timer_profile_tv_0 ; ./timer_profile_tt_2 ; ./timer_profile_tv_2 
+using ttime_t
+0:       Min:176         Max:352374      Mean:192 Median:187
+1:       Min:66  Max:13024       Mean:74 Median:77
+using timeval
+0:       Min:165         Max:16709       Mean:172 Median:176
+1:       Min:66  Max:16753       Mean:72 Median:77
+using ttime_t
+0:       Min:143         Max:58102       Mean:158 Median:154
+1:       Min:33  Max:45859       Mean:40 Median:33
+using timeval
+0:       Min:143         Max:407165      Mean:152 Median:143
+1:       Min:33  Max:99  Mean:39 Median:44
+
+Summary :
+under optimization
+gettimeofday takes 14 cycles more in ttime_t
+and comparison takes 11 cycles less

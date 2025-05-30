@@ -1,0 +1,216 @@
+import modules ;
+import set ;
+import stage ;
+import package ;
+import path ;
+import common ;
+import os ;
+import regex ;
+import errors ;
+import "class" : new ;
+import common ;
+import sequence ;
+import pch ;
+
+if --bhelp in $(ARGV)
+{
+    ECHO "
+Usage:
+    b2 [options] [install|stage]
+
+    * install               Installs to the configured location(s).
+    * stage                 Stages the build products only to common stage location.
+
+Options:
+    --bhelp                  This message.
+
+Locations:
+
+Features:
+    --without-<library>     Do not build, stage, or install the specified
+                            <library>. By default all libraries attempt to build.
+    --build-mysqlclient      Build libraries and execs that depend on mysqlclient
+" ;
+    EXIT "" ;
+}
+
+local only_target = "all" ;
+local install_loc = "../cvquant_install" ;
+
+# Extract build requirements from command line options
+for option in [ modules.peek : ARGV ] {
+  local temporary = [ MATCH ([^=]+)= : $(option) ] ;
+
+  if $(temporary) {
+    value  = [ MATCH [^=]+=([^=]+)$ : $(option) ] ;
+    if $(value) && $(temporary) = "--only_target" {
+       if $(value) != "all" {
+           only_target = $(value) ;
+           ECHO "only target $(only_target)" ;
+       }
+    }
+    if $(value) && $(temporary) = "--mysqlclient" {
+       if $(value) = "needed" {
+           path-constant build-mysqlclient : true ;
+           ECHO "building sql execs too" ;
+       }
+    }
+    if $(value) && $(temporary) = "--install_loc" {
+       install_loc = $(value) ;
+       ECHO "Install location changed to $(value)" ;
+    }    
+  }
+}
+
+# libraries to disable building, etc.
+local without-libraries = [ MATCH "^--without-(.*)" : $(ARGV) ] ;
+
+using gcc ;
+
+path-constant BASETRADE_PROJECT_ROOT : . ;
+path-constant PROJECT_ROOT : $(BASETRADE_PROJECT_ROOT) ;
+
+path-constant CVQUANT_INSTALL : $(install_loc) ;
+path-constant DVCCODE_INSTALL : $(CVQUANT_INSTALL)/dvccode ;
+path-constant DVCCODE_LIB_INSTALL : $(DVCCODE_INSTALL)/lib ;
+path-constant DVCCODE_LIB_INSTALL_DEBUG : $(DVCCODE_INSTALL)/libdebug ;
+path-constant DVCTRADE_INSTALL : $(CVQUANT_INSTALL)/dvctrade ;
+path-constant DVCTRADE_LIB_INSTALL : $(DVCTRADE_INSTALL)/lib ;
+path-constant DVCTRADE_LIB_INSTALL_DEBUG : $(DVCTRADE_INSTALL)/libdebug ;
+path-constant BASEINFRA_INSTALL : $(CVQUANT_INSTALL)/baseinfra ;
+path-constant BASEINFRA_LIB_INSTALL : $(BASEINFRA_INSTALL)/lib ;
+path-constant BASEINFRA_LIB_INSTALL_DEBUG : $(BASEINFRA_INSTALL)/libdebug ;
+path-constant BASETRADE_INSTALL : $(CVQUANT_INSTALL)/basetrade ;
+path-constant BASETRADE_LIB_INSTALL : $(BASETRADE_INSTALL)/lib ;
+path-constant EXANIC_INCLUDE_BASE : /apps/exanic/libs/ ;
+
+# This variable PROJECT_INSTALL is primarily used to get the location
+# of where to install headers, libraries and execs
+path-constant PROJECT_INSTALL : $(BASETRADE_INSTALL) ;
+path-constant PROJECT_BIN_INSTALL : $(PROJECT_INSTALL)/bin ;
+path-constant PROJECT_BIN_INSTALL_DEBUG : $(PROJECT_INSTALL)/bindebug ;
+path-constant PROJECT_LIB_INSTALL : $(PROJECT_INSTALL)/lib ;
+path-constant PROJECT_LIB_INSTALL_DEBUG : $(PROJECT_INSTALL)/libdebug ;
+
+BOOST_LIB_INSTALL = [ modules.peek : BOOST_LIB_INSTALL ] ;
+if ! $(BOOST_LIB_INSTALL) {
+   path-constant BOOST_LIB_INSTALL : /apps/boost/boost-install/lib ;
+} else {
+   path-constant BOOST_LIB_INSTALL : $(BOOST_LIB_INSTALL) ;
+}
+ 
+BOOST_INCLUDE_BASE = [ modules.peek : BOOST_INCLUDE_DIR ] ;
+if ! $(BOOST_INCLUDE_BASE) {
+   path-constant BOOST_INCLUDE_BASE : /apps/boost/boost-install/include ;
+} else {
+   path-constant BOOST_INCLUDE_BASE : $(BOOST_INCLUDE_BASE) ;
+}
+
+path-constant xerces_root_ : /apps/xerces ;
+path-constant XERCES_INCLUDE_BASE : $(xerces_root_)/include/ ;
+path-constant XERCES_LIB_BASE : $(xerces_root_)/lib/ ;
+
+path-constant bzip2_root_ : /apps/bzip2 ;
+path-constant BZIP2_INCLUDE_BASE : $(bzip2_root_)/include ;
+path-constant BZIP2_LIB_BASE : $(bzip2_root_)/lib ;
+
+path-constant MYSQLCPP_BASE : /apps/mysqlcpp/mysql-connector-c++-1.1.5_install ;
+path-constant MYSQLCPP_INCLUDE_PATH : $(MYSQLCPP_BASE)/include ;
+path-constant MYSQLCPP_LIB_PATH : $(MYSQLCPP_BASE)/lib ;
+
+# # Copy the pch file before compilation for creation of pre compiled headers
+# Echo [ SHELL "[ -f $(PROJECT_INSTALL)/pch.hpp.gch ] || ( mkdir -p $(PROJECT_INSTALL) && cp $(PROJECT_ROOT)/pch.hpp $(PROJECT_INSTALL)/pch.hpp )" ] ;
+
+# .cfg files
+local configfiles = [ path.glob-tree $(PROJECT_ROOT) : *.cfg ] ;
+
+install configfiles
+    : $(configfiles)
+    : <location>$(PROJECT_INSTALL)/Configs <install-source-root>$(PROJECT_ROOT)
+    ;
+
+local pythonscripts = [ path.glob-tree $(PROJECT_ROOT) : *.py ] ;
+
+install pythonscripts
+    : $(pythonscripts)
+    : <location>$(PROJECT_INSTALL) <install-source-root>$(PROJECT_ROOT)
+    ;
+
+local shellscripts = [ path.glob-tree $(PROJECT_ROOT) : *.sh ] ;
+
+install shellscripts
+    : $(shellscripts)
+    : <location>$(PROJECT_INSTALL) <install-source-root>$(PROJECT_ROOT)
+    ;
+
+local perlscripts = [ path.glob-tree $(PROJECT_ROOT) : *.pl ] ;
+
+install perlscripts
+    : $(perlscripts)
+    : <location>$(PROJECT_INSTALL) <install-source-root>$(PROJECT_ROOT)
+    ;
+
+local headers = [ path.glob-tree $(PROJECT_ROOT) : *.hpp ] ;
+
+install headers
+    : $(headers)
+    : <location>$(PROJECT_INSTALL) <install-source-root>$(PROJECT_ROOT)
+    ;
+
+local Rscripts = [ path.glob-tree $(PROJECT_ROOT) : *.R ] ;
+
+install Rscripts
+    : $(Rscripts)
+    : <location>$(PROJECT_INSTALL) <install-source-root>$(PROJECT_ROOT)
+    ;
+
+project basetrade
+	: requirements 
+	  <include>$(CVQUANT_INSTALL)
+	  <include>$(BOOST_INCLUDE_BASE)
+	  <include>$(XERCES_INCLUDE_BASE)
+          <include>$(MYSQLCPP_INCLUDE_PATH)
+	  <include>$(EXANIC_INCLUDE_BASE)
+	  <architecture>x86
+	  <address-model>64
+	  <variant>debug:<inlining>off
+	  <variant>debug:<debug-symbols>on
+	  <variant>debug:<optimization>off
+	  <variant>debug:<warnings>on
+	  <variant>debug:<warnings-as-errors>on
+	  <variant>release:<warnings>on
+	  <variant>release:<warnings-as-errors>on
+	  <library-path>$(BZIP2_LIB_BASE)
+	  <library-path>$(BOOST_LIB_INSTALL)
+	  <library-path>/apps/nsmsg/
+	  <library-path>/apps/exanic/libs/exanic
+          <linkflags>-lcurl
+          <linkflags>-lcrypto
+          <linkflags>-lz
+	  <linkflags>-lexanic
+          <toolset>gcc:<cxxflags>-std=gnu++14 # changed to this from -std=gnu++0x to work with C++14
+          <toolset>gcc:<cxxflags>-fdiagnostics-color=always
+	  <cflags>-isystem$(BOOST_INCLUDE_BASE)
+	  <cflags>-Wunused-local-typedefs
+# 	  <cflags>"-D BOOST_BUILD_PCH_ENABLED"
+#     	  <cflags>"-include $(PROJECT_INSTALL)/pch.hpp"
+#	  <variant>release:<cflags>-flto # Link time optimization has been enabled I think
+          <link>static
+	: default-build release
+	;
+
+# Executibles 
+if $(only_target) = "all" {
+   build-project InitLogic ;
+   build-project linalexe ;
+   build-project MToolsExe ;
+   build-project Tools ;
+   build-project hftrap/Tools ;
+   build-project AWS ;
+   build-project Tests ;
+   build-project ExecTool ;
+   build-project OptionTools/ImpliedVolatility/TestImpliedVolatility ;
+}
+else {
+   build-project $(only_target) ;
+}

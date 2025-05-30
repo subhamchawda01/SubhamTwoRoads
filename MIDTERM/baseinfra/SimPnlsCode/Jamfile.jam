@@ -1,0 +1,13 @@
+project : usage-requirements <include>$(PROJECT_INSTALL) ;
+
+use-project /PDVCC : ../libdvccode ;
+
+lib SimPnls : [ glob *.cpp ] : <link>static <use>/PDVCC//CDef <use>/PDVCC//Utils ;
+
+install libSimPnls
+  : SimPnls
+  : <install-type>LIB
+    <variant>release:<location>"$(PROJECT_INSTALL)/lib"
+    <variant>debug:<location>"$(PROJECT_INSTALL)/libdebug"
+  : release debug
+  ;

@@ -1,0 +1,17 @@
+
+project : usage-requirements
+;
+
+lib Papi : [ glob *.cpp ] :
+   <library>/spare/local/lib/papi/libpapi.a
+   <link>static ;
+
+install libPapi
+  : Papi
+  : <install-type>LIB
+    <library>/spare/local/lib/papi/libpapi.a
+    <variant>release:<location>"$(PROJECT_LIB_INSTALL)"
+    <variant>debug:<location>"$(PROJECT_LIB_INSTALL_DEBUG)"
+  : release debug
+  ;
+ 

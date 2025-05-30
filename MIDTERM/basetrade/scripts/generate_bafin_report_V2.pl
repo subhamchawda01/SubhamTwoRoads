@@ -1,0 +1,602 @@
+#!/usr/bin/perl
+
+
+use strict;
+use List::Util qw[min max];
+use warnings;
+use POSIX qw(strtod setlocale LC_NUMERIC);
+#use File::Basename; # for basename and dirname
+#use File::Copy; # for copy
+#use List::Util qw/max min/; # for max
+#use FileHandle;
+
+my $HOME_DIR=$ENV{'HOME'}; 
+my $REPO="basetrade";
+my $GENPERLLIB_DIR=$HOME_DIR."/".$REPO."_install/GenPerlLib";
+my $BIN_DIR=$HOME_DIR."/".$REPO."_install/bin";
+my $eurex_dir = "/NAS1/data/MFGlobalTrades/EUREX810";
+
+
+require "$GENPERLLIB_DIR/exists_with_size.pl"; # ExistsWithSize
+require "$GENPERLLIB_DIR/calc_next_business_day.pl"; # ExistsWithSize
+
+sub MakeReport ( ) ;
+sub SendReportMail ( ) ;
+
+my $USAGE = "$0 from_date to_date <output_dir>";
+
+
+if ( $#ARGV < 1 )
+{
+    print ( $USAGE."\n" );
+    exit ( 0 );
+}
+
+#hacky helpers
+my %product_list_ = ( "FESX", "FGBS", "FGBM", "FGBL", "FDAX", "FBTP", "FOAT", "FVS" );
+
+my @pad_len_ = ( 1, 34, 1, 34, 1, 34, 1, 34, 1, 34,
+		 1, 34, 8, 6, 40, 16, 1, 2, 1, 1, 
+		 1, 2, 11, 3, 16, 3, 18, 6, 6, 6,
+		 12, 2, 12, 6, 70, 1, 10, 8, 1, 2,
+		 12, 18, 2, 3, 18, 1, 8, 8, 1, 1,
+		 8, 5, 8, 6, 12, 8, 6, 16, 1, 1,
+		 8 ) ;
+
+my @type_ = ( 'A', 'A', 'A', 'A', 'A', 'A', 'A', 'A', 'A', 'A', 
+	      'A', 'A', 'N', 'N', 'A', 'A', 'A', 'N', 'A', 'A', 
+	      'A', 'A', 'A', 'A', 'A', 'A', 'N', 'N', 'N', 'A',
+	      'A', 'A', 'A', 'N', 'A', 'N', 'N', 'N', 'A', 'A', 
+	      'A', 'N', 'N', 'A', 'N', 'N', 'N', 'N', 'A', 'A', 
+	      'N', 'A', 'N', 'N', 'A', 'N', 'N', 'A', 'A', 'A',
+	      'N' ) ;
+
+my %mon2num = qw(
+              Jan 01  Feb 02  Mar 03  Apr 04  May 05  Jun 06
+              Jul 07  Aug 08  Sep 09  Oct 10 Nov 11 Dec 12
+    );
+
+my %newedge_symbol_ = qw( 
+     FESX SF
+     FDAX FE
+     FGBS SD
+     FGBM BC
+     FGBL BM
+     FOAT I*
+     FBTP F7
+    );
+
+
+# The twelve-digit ISIN consists of a two-digit country code, a nine-digit national identification code as well as a check digit. The sixth to eleventh digits represent the WKN.
+
+my %product_isin = qw(
+      FESX DE0009652388
+      FGBS DE0009652669
+      FGBM DE0009652651
+      FGBL DE0009652644
+      FDAX DE0008469594
+      FBTP DE000A0ZW3V8
+      FOAT DE000A1MAPW3
+      FVS DE000A0Z3CW9
+    ); 
+
+my %underlying_isin = qw(
+      FESX EU0009658145
+      FDAX DE0008469008
+      FVS DE000A0C3QF1
+    );
+
+#http://www.onixs.biz/fix-dictionary/4.4/app_6_d.html
+# FFDPSX # Futures FinancialFutures InterestRate/Debt Physical StandardizedTerms N/A
+# FFICSX # Futures FinancialFutures Indices Cash StandardizedTerms N/A
+# for futures F F 1# 2# 3# X   * == 
+#1st attribute: Underlying assets (Indicates the type of underlying assets that the futures buyer receives, respectively
+#				  that the seller delivers; see also Entitlements (Rights), Warrants)
+#B = Basket -F-F-B-*-*-*-
+#S = Stock-Equities -F-F-S-*-*-*-
+#D = Debt Instruments/Interest -F-F-D-*-*-*-
+#C = Currencies -F-F-C-*-*-*-
+#I = Indices -F-F-I-*-*-*-*-
+#O = Options (The option gives the right to buy, respectively to sell options.) -F-F-O-*-*-*-
+#F = Futures (The option gives the right to buy, respectively to sell futures.) -F-F-F-*-*-*-
+#W = Swaps (The option gives the right to buy, respectively to sell swaps.) -F-F-W-*-*-*-
+#N = Interest rates -F-F-N-*-*-*-
+#M = Others (Miscellaneous) -F-F-M-*-*-*-
+
+#2nd attribute: Delivery(see also Options, Call options)
+#P = Physical -F-F-*-P-*-*-
+#C = Cash -F-F-*-C-*-*-
+#N = Non-delivering -F-F-*-N-*-*-
+
+#3rd attribute: Standardized/non-standardized (see also Options, Call options)
+#S = Standardized -F-F-*-*-S-*-
+#N = Non-standardized -F-F-*-*-N-*-
+#F = Flexible -F-F-*-*-F-*-
+
+my %iso_10962 = qw(
+       FESX FFICSX
+       FDAX FFICSX
+       FVS FFICSX
+       FGBS FFDPSX
+       FGBM FFDPSX
+       FGBL FFDPSX
+       FBTP FFDPSX
+       FOAT FFDPSX
+
+    );
+
+my %sec_identification = (
+    "FESX", "FUT ON EURO STOXX 50",
+    "FDAX", "FUT ON DAX",
+    "FVS", "FUT ON VSTOXX",
+    "FGBS", "FUT 1 3/4-2 1/4Y.GOV.BONDS 6%",
+    "FGBM", "FUT 4 1/2-5 1/2Y.GOV.BONDS 6%",
+    "FGBL", "FUT 8 1/2-10 1/2Y.GOV.BONDS 6%",
+    "FBTP", "FUT 8 1/2-11Y.GOV.BONDS 6%",
+    "FOAT", "FUT 8 1/2-10 1/2.GOV.BONDS 6%"
+    );
+
+
+# 1 = unit 2 = percent 3 = pro mill 4 = points 9 = other
+my %unit_of_security = qw(
+      FESX 4
+      FDAX 4
+      FVS 4
+      FGBS 2
+      FGBM 2
+      FGBL 2
+      FBTP 2
+      FOAT 2
+    );
+
+# security type F/O/P
+my %sec_type = qw(
+      FESX F
+      FDAX F
+      FVS F
+      FGBS F
+      FGBM F
+      FGBL F
+      FOAT F
+      FBTP F
+  
+    );
+
+# price multiplier ## value of 1.0 point
+my %price_multiplier = qw(
+      FESX 10
+      FDAX 25
+      FVS 100  
+      FGBS 1000
+      FGBM 1000
+      FGBL 1000
+      FOAT 1000
+      FBTP 1000
+    );
+
+## XXP currency for points !!!
+## XXX no currency !!!
+my %price_curr_iso4217 = qw(
+      FESX XXP
+      FDAX XXP
+      FVS XXP
+      FGBS XXX
+      FGBM XXX
+      FGBL XXX
+      FOAT XXX
+      FBTP XXX
+    );
+
+my $to_address_ = "NA" ;
+my $msg = "";
+
+my $USER = `echo \$USER`;
+chomp ( $USER );
+
+if ( $USER eq "dvctrader" && $USER eq "dvcinfra" )
+{
+    $to_address_ = "kputta\@circulumvite.com";
+}
+
+
+my $dstr = `env TZ=Europe/Berlin date +%Y%m%d`;
+my $tstr = `env TZ=Europe/Berlin date +%H%M%S`;
+
+
+chomp ( $dstr );
+chomp ( $tstr );
+
+my $nstr = "DV$tstr";
+my $header_ = "echo -n \"$nstr;$dstr;$tstr\r\n\"" ;
+my $trecords_ = 2 ;
+
+my $fdate_ = $ARGV [ 0 ] ;
+my $tdate_ = $ARGV [ 1 ] ;
+
+my $output_dir = "/spare/local/$USER/BafinReports";
+
+if ( $#ARGV == 2 )
+{
+    $output_dir = $ARGV [ 2 ];
+}
+
+
+if ( ! -d $output_dir )
+{
+    `mkdir -p $output_dir` ;
+}
+if ( ! -d $output_dir )
+{
+    $msg = $msg."cannot create output_dir $output_dir \n" ;
+    SendReportMail ( ) ;
+    exit ( 0 ) ;
+}
+
+
+my $serial_no_ = 1 ;
+my $counter_ = 0 ;
+my $shc_ = "NA" ;
+my $yyyymmdd_ =  $fdate_  ;
+my $trades_file_name_ = "NA" ;
+my $newedge_file_ = "NA" ;
+my $output_filename_ = "NA" ;
+
+my $cat_string_ = "cat ";
+
+for ( $yyyymmdd_ = $fdate_ ; $yyyymmdd_ <= $tdate_  ;  $yyyymmdd_ = CalcNextBusinessDay ( $yyyymmdd_ ) )
+{
+
+    print STDERR $yyyymmdd_,"\n" ;
+
+    my $newedge_count_ = 0;
+    
+    $trades_file_name_ = "00RPTTC810DVCNJ".$yyyymmdd_."FIMFR.XML.gz";
+    if ( ExistsWithSize ( "$eurex_dir/$trades_file_name_" ) )
+    {
+	`cp $eurex_dir"/"$trades_file_name_ $output_dir"/"`;
+	`gunzip -f $output_dir"/"$trades_file_name_` ;
+	$trades_file_name_ = "00RPTTC810DVCNJ".$yyyymmdd_."FIMFR.XML";
+	
+    }
+    else 
+    {
+	$trades_file_name_ = "00RPTTC810DVCNJ".$yyyymmdd_."FIMFR.XML";
+	if ( -s ( "$eurex_dir/$trades_file_name_" ) )
+	{
+	    `cp $eurex_dir"/"$trades_file_name_ $output_dir"/"`;
+	}
+	else 
+	{
+	    $msg = $msg."couldnt find file $trades_file_name_ in $eurex_dir for $yyyymmdd_ \n";
+	    next ;
+#	    SendReportMail ( ) ;
+#	    exit  ( 0 ) ;
+	}
+	
+    }
+    
+    $newedge_file_ = "/NAS1/data/MFGlobalTrades/MFGFiles/GMITRN_".$yyyymmdd_.".csv";
+    
+    my @p_list_ = `grep prodId $output_dir"/"$trades_file_name_ \| sort \| uniq | awk -F"\>" '{print \$2}' | awk -F"<" '{print \$1}'`;
+    
+    if ( scalar ( @p_list_ ) <= 0 ) 
+    { 
+	$msg = $msg."no trasactions found in $trades_file_name_ in $eurex_dir \n";
+	next ;
+#	SendReportMail ( ) ;
+#	exit  ( 0 ) ;
+    }
+    
+    $shc_ = "NA";
+    
+    for ( my $idx_ = 0 ; $idx_ < scalar ( @p_list_ ) ; $idx_ ++ )
+    {
+	$newedge_count_ = 0 ; 
+	$shc_ =  $p_list_[ $idx_ ] ;
+	chomp ( $shc_ );
+	
+	$output_filename_  = "$output_dir/bfr_".$shc_."_".$yyyymmdd_;
+	$msg = $msg."shortcode $shc_\ndate $yyyymmdd_\n";
+	
+	MakeReport ( ) ;
+	
+	
+	if ( -e $output_filename_ )
+	{
+	    $cat_string_ = $cat_string_.$output_filename_." ";
+	    
+	    my $result_ =  `wc -l $output_filename_ | awk '{print \$1}'`;
+	    chomp ( $result_ ) ;
+	    $trecords_ = $trecords_ + $result_ ;
+	    $msg = $msg. $yyyymmdd_." Bafin $result_ ";
+	    
+	    if ( -e $newedge_file_ )
+	    {
+		$newedge_count_ = `awk -F\, '{ if ( \$24 == \"\\\"27\\\"\"  && \$25 == \"\\\"$newedge_symbol_{ $shc_}\\\"\" && \$1 == \"\\\"T\\\"\" ) print \$23 ;  }'  $newedge_file_ | wc -l`;
+
+		if ( $newedge_count_ == 0 )
+		{
+		    $newedge_count_ = `awk -F\, '{ if ( \$24 == 27  && \$25 == \"$newedge_symbol_{ $shc_}\" && \$1 == \"T\" ) print \$23 ;  }'  $newedge_file_ | wc -l`;
+		}
+	    }
+	    $msg = $msg."Newedge $newedge_count_ \n" ;
+	}
+	else
+	{
+	    my $result_ = "no report file created\n";
+	    $msg = $msg. $result_;
+	}
+	
+    }
+}
+
+
+my $bafin_report_ = $nstr;
+my $tail_ = "echo -n \"$dstr;$tstr;$trecords_\"";
+
+
+`$header_ > $output_dir/$bafin_report_`;
+`$cat_string_ >> $output_dir/$bafin_report_`;
+`$tail_ >> $output_dir/$bafin_report_`;
+
+
+SendReportMail ( ) ;
+
+exit ( 0 );
+
+
+
+
+sub MakeReport ( )
+{
+
+
+#decode eurex eod file 
+    `$BIN_DIR/retrieve_eurex_trades  $output_dir/$trades_file_name_ $shc_ > $output_dir/$shc_.eurex.trades` ;
+
+
+
+#grep time date tranid orderno buysell qty price
+    my @trades_ = `awk  '{ FS  = \"|\"; print \$20 " " \$19  " " \$2 " " \$3 " " \$4 " " \$6  " " \$8 }' $output_dir/$shc_.eurex.trades`;
+
+
+#common fields
+
+    my $NF = 61;
+    my @flds_ = ( ("") x $NF ) ;
+    
+
+    $flds_[ 0 ] = "M" ;
+    $flds_[ 1 ] = "DVCNJ" ;
+    $flds_[ 6 ] = "M" ;
+    $flds_[ 7 ] = "EUREX" ;
+    $flds_[ 17 ] = "1" ;  # 1 = gross 3 = agrregrate
+    $flds_[ 18 ] = "J" ;
+    $flds_[ 19 ] = "E" ;
+    $flds_[ 21 ] = "DE" ;
+    $flds_[ 22 ] = "XEUR" ;
+    $flds_[ 23 ] = "XXK" ; # for all traded on EUREX
+    
+    if ( exists ( $price_curr_iso4217 { $shc_ } ) )
+    {
+	$flds_[ 25 ] = $price_curr_iso4217 { $shc_ }  ;
+	
+    }
+    else 
+    {
+	
+	$msg = $msg."there is no price_currency iso4127 for $shc_ \n" ;
+	SendReportMail ( ) ;
+	exit  ( 0 ) ;
+	
+    }
+    
+    
+    if ( exists ( $iso_10962 { $shc_ } ) )
+    {
+	$flds_[ 29 ] = $iso_10962 { $shc_ } ; 
+	
+    }
+    else 
+    {
+	$msg = $msg."there is no iso 10962  for $shc_ \n" ;
+	SendReportMail ( ) ;
+	exit ( 0 ) ;
+    }
+
+    $flds_[ 31 ] = "XP" ;
+    
+    if ( exists ( $sec_identification { $shc_ } ) )
+    {
+	$flds_[ 34 ] = $sec_identification { $shc_  } ; 
+
+    }
+    else 
+    {
+	
+	$msg = $msg."there is no security idenfitification for $shc_ \n" ;
+	SendReportMail ( ) ;
+	exit ( 0 ) ;
+    }
+    
+    
+    if ( exists ( $unit_of_security { $shc_ } ) )
+    {
+	$flds_[ 35 ] = $unit_of_security { $shc_  } ; 
+	
+    }
+    else 
+    {
+	$msg = $msg. "there is no unit of security for $shc_ \n" ;
+	SendReportMail ( ) ; exit ( 0 ) ;
+    }
+    
+    if ( exists ( $sec_type { $shc_ } ) )
+    {
+	$flds_[ 38 ] = $sec_type { $shc_ } ; 
+	
+    }
+    else 
+    {
+	$msg = $msg. "there is no sec_type for $shc_ \n" ;
+	SendReportMail ( ) ; exit ( 0 ) ;
+    }
+    
+    
+    if ( exists ( $underlying_isin { $shc_ } ) )
+    {
+	$flds_[ 40 ] = $underlying_isin { $shc_ } ;
+    }
+    elsif ( exists ( $product_isin { $shc_ } ) )
+    {
+	$flds_[ 40 ] = $product_isin { $shc_ } ;
+    }
+    else 
+    {
+	$msg = $msg. "there is no product isin for $shc_ \n" ;
+	SendReportMail ( ) ; exit ( 0 ) ;
+    }
+    
+    
+    $flds_[ 41 ] = $price_multiplier { $shc_ }  ;
+    $flds_[ 41 ] =~ s/\./\,/g ;
+    
+    
+    if ( $flds_[ 38 ] eq "F" )
+    {
+	$flds_[ 43 ] = "" ;
+	$flds_[ 44 ] = 0 ;
+	$flds_[ 44 ] =~ s/\./\,/g ;
+
+    }
+    else
+    {
+	$msg = $msg.  "write code to get option underlying price \n" ;
+	SendReportMail ( ) ; exit ( 0 );
+    }
+    
+# N = normal A = already reported
+    $flds_ [ 49 ] = "N" ;
+    
+    
+    $flds_[50] = CalcNextBusinessDay ( $yyyymmdd_ );
+    
+
+    my $key_ = `grep $shc_ $output_dir/$shc_.eurex.trades | awk -F\"\|\" '{ if ( \$1 eq 'PRODMMYYYY' ) print  \$2 " " \$3 " " \$4 }'`;
+    my @keys_ = split (' ', $key_) ;
+    
+    my $y_ = $keys_[ 2 ];
+    my $m_ = $keys_[ 1 ] ;
+    my $exp_ = `$BIN_DIR/get_eurex_product_expiry  $shc_ $m_ $y_ ` ;
+    chomp ( $exp_ );
+    
+#"FLTDAT" "FSDSC1" "FATYPE" "FFC"
+# 27 corresponds to EUREX exchange 
+#my @newedge_rec_ =  `awk -F\, '{ if ( \$24 == \"\\\"27\\\"\" ) print \$23 " " \$19 " " \$5 " " \$25;  }'  /NAS1/data/MFGlobalTrades/MFGFiles/GMITRN_20121121.csv   | uniq`;
+    
+    my $nexp_ = $exp_;
+    if ( -r $newedge_file_ )
+    {
+	$nexp_ =  `awk -F\, '{ if ( \$1 == \"\\\"T\\\"\" && \$24 == \"\\\"27\\\"\"  && \$25 == \"\\\"$newedge_symbol_{ $shc_}\\\"\" ) print \$23 ;  }'  $newedge_file_  | uniq`;
+	chomp ( $nexp_ ) ;
+	$nexp_ =~ s/\"//g;
+
+	if ( length ( $nexp_ ) != 8 )
+	{
+	    $nexp_ =  `awk -F\, '{ if ( \$1 == \"T\" && \$24 == 27  && \$25 == \"$newedge_symbol_{ $shc_}\" ) print \$23 ;  }'  $newedge_file_  | uniq`;
+	    chomp ( $nexp_ ) ;
+	    $nexp_ =~ s/\"//g;
+
+	    if ( length ( $nexp_ ) != 8 )
+	    {
+		$msg = $msg."couldnt retreive expiry from newedge file in correct format, using get_eurex_product_expiry :: $nexp_ :: \n";
+		$nexp_ = $exp_;
+	    }
+	    
+	}
+
+    }
+    else
+    {
+	$msg = $msg."couldn't find the newedge file or it is unreadable, $newedge_file_ , calculating expiry using get_eurex_product_expiry\n";
+    }
+    
+    
+    $flds_[ 32 ] = $shc_ ;
+    
+    $flds_[ 46 ] = $nexp_ ;
+
+    $flds_ [ 51 ] = "MBOX" ;
+    
+    $flds_ [ 54 ] = "40014504" ;  # replace with SWIFT-BIC 
+    
+    open FHW, "> $output_filename_";
+  
+    for ( my $i = 0 ; $i < scalar ( @trades_ )  ; $i++ )
+    {
+	my @tks_ = split (' ' , $trades_ [ $i ] ) ;
+    
+	next if ( scalar ( @tks_ )  != 7 );
+	
+	
+	#date format and time format
+	$tks_[ 1 ] =~ s/-//g;
+	$flds_ [ 12 ] = $tks_[ 1 ];
+	
+	my @t_ = split('\.',$tks_[0] );
+	$t_[0] =~ s/://g;
+	$flds_ [ 13 ] = $t_[ 0 ];
+	
+	
+	#buysell format
+	$flds_[ 16 ] = ( ( $tks_[ 4 ] =~ 'B' )? 'K' : 'V' ) ;
+	
+	# transaction ID
+	$flds_[ 14 ] = $tks_[ 2 ]." 00000 ".$flds_[ 49 ]." ".$tks_[ 3 ]." ".$flds_[ 16 ] ;
+	
+	#qty format 
+	$flds_[ 24 ] = $tks_[ 5 ] ;
+	$flds_[ 24 ] =~ s/\./\,/g ;
+	
+	#price format
+	$tks_[ 6 ] =~ s/\+//g ; 
+	$flds_[ 26 ] = $tks_ [ 6 ] ;
+	$flds_[ 26 ] =~ s/\./\,/g ;
+
+	
+	$flds_ [ 53 ] = $serial_no_ + $counter_ ; # serial number starting from 1 for each report per person per day
+	$counter_ ++ ;
+	
+
+	print FHW join(';', @flds_ ),"\r\n" ;
+	
+    }
+    
+    close FHW ;
+
+}
+
+
+sub SendReportMail ( )
+{
+    if ( $to_address_ eq "NA" )
+    {
+	print STDOUT $msg;
+	return;
+    }
+    else
+    {
+	if ( $to_address_ && $msg )
+	{
+	    open ( MAIL , "|/usr/sbin/sendmail -t" );
+	    
+	    print MAIL "To: $to_address_\n";
+	    print MAIL "From: $to_address_\n";
+	    print MAIL "Subject: Daily Job Report : generate_bafin_report_from_eurex810.pl  $yyyymmdd_  \n\n";
+	    print MAIL $msg ;
+	    
+	    close(MAIL);
+	}
+    }
+}
+

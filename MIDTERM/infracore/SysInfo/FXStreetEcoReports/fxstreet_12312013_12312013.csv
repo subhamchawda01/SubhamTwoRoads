@@ -1,0 +1,7 @@
+"country","date","name","actual","consensus","previous","volatility"
+"Australia","20131231 00:30:00","Private Sector Credit (YoY)","","","3.500  %","2"
+"United States","20131231 13:55:00","Redbook index (MoM)","","","-1.000  %","1"
+"United States","20131231 13:55:00","Redbook index (YoY)","","","3.900  %","1"
+"United States","20131231 14:00:00","S&P/Case-Shiller Home Price Indices (YoY)","","13.000  %","13.300  %","1"
+"United States","20131231 14:45:00","Chicago Purchasing Managers' Index",""," 61.000 "," 63.000 ","2"
+"United States","20131231 15:00:00","Consumer Confidence",""," 76.000 "," 70.400 ","2"

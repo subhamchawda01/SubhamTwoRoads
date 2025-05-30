@@ -1,0 +1,282 @@
+project : usage-requirements <include>$(PROJECT_INSTALL) ;
+
+use-project /PDVCC : ../libdvccode ;
+use-project /PGeneralizedLogic : ../GeneralizedLogicCode ;
+use-project /PMidTerm : ../MidTermCode ;
+
+exe backadjustment_exec
+    : backadjustment_exec.cpp
+      /PDVCC//CDef
+      /PDVCC//Utils
+      /PDVCC//TradingInfo
+      /PDVCC//CommonTradeUtils
+      /PDVCC//ExternalData
+      /PDVCC//MarketAdapter
+      /PDVCC//OrderRouting
+      /PDVCC//Profiler
+      /PMidTerm//libMidTerm
+      /PDVCC//CommonDataStructures
+      /PDVCC//BaseUtils
+      /PDVCC//OptionsUtils
+      /PDVCC//FpgaHeader
+    :
+    : <variant>debug <variant>release
+      <linkflags>-lpthread
+      <linkflags>-lnsmsg
+    ;
+
+exe mid_term_data_server
+    : midterm_data_server.cpp
+      /PDVCC//CDef
+      /PDVCC//Utils
+      /PDVCC//TradingInfo
+      /PDVCC//CommonTradeUtils
+      /PDVCC//ExternalData
+      /PDVCC//MarketAdapter
+      /PDVCC//OrderRouting
+      /PDVCC//Profiler
+      /PMidTerm//libMidTerm
+      /PDVCC//CommonDataStructures
+      /PDVCC//BaseUtils
+      /PDVCC//OptionsUtils
+      /PDVCC//FpgaHeader
+    :
+    : <variant>debug <variant>release
+      <linkflags>-lpthread
+      <linkflags>-lnsmsg
+    ;
+
+exe option_data_and_order_server
+    : option_data_and_order_server.cpp
+      /PDVCC//CDef
+      /PDVCC//Utils
+      /PDVCC//TradingInfo
+      /PDVCC//CommonTradeUtils
+      /PDVCC//ExternalData
+      /PDVCC//MarketAdapter
+      /PDVCC//OrderRouting
+      /PDVCC//Profiler
+      /PMidTerm//libMidTerm
+      /PDVCC//CommonDataStructures
+      /PDVCC//BaseUtils
+      /PDVCC//OptionsUtils
+      /PDVCC//FpgaHeader
+    :
+    : <variant>debug <variant>release
+      <linkflags>-lpthread
+      <linkflags>-lnsmsg
+    ;
+
+exe nse_given_notional_tradeinit
+    : 
+      nse_given_notional_tradeinit.cpp
+      /PDVCC//Utils
+      /PDVCC//BaseUtils
+      /PDVCC//CDef
+      /PDVCC//Profiler
+      /PDVCC//CommonDataStructures
+      /PDVCC//VolatileTradingInfo
+      /PDVCC//TradingInfo
+      /PDVCC//CommonTradeUtils
+      /PDVCC//TradeUtils
+      /PDVCC//ExternalData
+      /PDVCC//MarketAdapter
+      /PDVCC//OrderRouting
+      /PDVCC//SmartOrderRouting
+      /PDVCC//LivePnls
+      /PDVCC//InitCommon
+      /PDVCC//OptionsUtils
+      /PGeneralizedLogic//libGeneralizedLogic
+      /PDVCC//FpgaHeader
+    :
+    : <variant>debug <variant>release
+      <linkflags>-lpthread
+      <linkflags>-lcurl
+      <linkflags>-lnsmsg
+    ;
+
+exe nse_simple_trader_sim
+    : 
+      nse_trade_given_notional.cpp
+      /PDVCC//Utils
+      /PDVCC//BaseUtils
+      /PDVCC//CDef
+      /PDVCC//Profiler
+      /PDVCC//CommonDataStructures
+      /PDVCC//VolatileTradingInfo
+      /PDVCC//TradingInfo
+      /PDVCC//CommonTradeUtils
+      /PDVCC//TradeUtils
+      /PDVCC//ExternalData
+      /PDVCC//MarketAdapter
+      /PDVCC//OrderRouting
+      /PDVCC//SmartOrderRouting
+      /PDVCC//SimPnls
+      /PDVCC//SimMarketMaker
+      /PDVCC//InitCommon
+      /PDVCC//ExecLogic
+      /PDVCC//OptionsUtils
+      /PDVCC//LoggedSources
+      /PGeneralizedLogic//libGeneralizedLogic
+      /PDVCC//FpgaHeader
+    :
+    : <variant>debug <variant>release
+      <linkflags>-lpthread
+      <linkflags>-lcurl
+      <linkflags>-lnsmsg
+    ;
+
+exe nse_historical_data_generator_fut
+    :
+      historical_data_generator_fut.cpp
+      /PDVCC//Utils
+    :
+    : <variant>debug <variant>release
+      <linkflags>-lpthread
+      <linkflags>-lcurl
+      <linkflags>-lnsmsg
+    ;
+
+exe nse_historical_data_generator_options
+    :
+      historical_data_generator_options.cpp
+      /PDVCC//Utils
+      /PDVCC//CDef
+    :
+    : <variant>debug <variant>release
+      <linkflags>-lpthread
+      <linkflags>-lcurl
+      <linkflags>-lnsmsg
+    ;
+
+exe nse_historical_data_generator_weeklyoptions
+    :
+      historical_data_generator_weeklyoptions.cpp
+      /PDVCC//Utils
+    :
+    : <variant>debug <variant>release
+      <linkflags>-lpthread
+      <linkflags>-lcurl
+      <linkflags>-lnsmsg
+    ;
+
+exe nse_historical_data_generator_cash
+    :
+      historical_data_generator_cash.cpp
+      /PDVCC//Utils
+    :
+    : <variant>debug <variant>release
+      <linkflags>-lpthread
+      <linkflags>-lcurl
+      <linkflags>-lnsmsg
+    ;
+
+exe historical_data_generator_cash_new
+    :
+      historical_data_generator_cash_new.cpp
+      /PDVCC//Utils
+    :
+    : <variant>debug <variant>release
+      <linkflags>-lpthread
+      <linkflags>-lcurl
+      <linkflags>-lnsmsg
+    ;
+
+exe historical_data_generator_cash_new_adjust_bhavcopy
+    :
+     historical_data_generator_cash_new_adjust_bhavcopy.cpp
+     /PDVCC//OrderRouting
+      /PDVCC//CommonTradeUtils
+      /PDVCC//CDef
+      /PDVCC//CommonDataStructures
+      /PDVCC//ExternalData
+      /PDVCC//TradingInfo
+      /PDVCC//Profiler
+      /PDVCC//Utils
+      /PDVCC//BaseUtils
+      /PDVCC//OptionsUtils
+      /PDVCC//BaseUtils
+      /PDVCC//MarketAdapter
+      /PDVCC//VolatileTradingInfo
+      /PDVCC//FpgaHeader
+    :
+    : <variant>debug <variant>release
+      <linkflags>-lpthread
+      <linkflags>-lcurl
+      <linkflags>-lnsmsg
+    ;
+
+exe console_trader_midterm_old
+    : console_trader_midterm.cpp
+      /PDVCC//OrderRouting
+      /PDVCC//CommonTradeUtils
+      /PDVCC//CDef
+      /PDVCC//CommonDataStructures
+      /PDVCC//ExternalData
+      /PDVCC//TradingInfo
+      /PDVCC//Profiler
+      /PDVCC//Utils
+      /PDVCC//BaseUtils
+      /PDVCC//OptionsUtils
+      /PDVCC//BaseUtils
+      /PDVCC//MarketAdapter
+      /PDVCC//VolatileTradingInfo
+      /PDVCC//FpgaHeader
+    :
+    : <variant>debug <variant>release
+      <linkflags>-lpthread
+      <linkflags>-lnsmsg
+    ;
+
+exe console_trader
+    : smart_console_trader.cpp
+      /PDVCC//OrderRouting
+      /PDVCC//CommonTradeUtils
+      /PDVCC//CDef
+      /PDVCC//CommonDataStructures
+      /PDVCC//ExternalData
+      /PDVCC//TradingInfo
+      /PDVCC//Profiler
+      /PDVCC//Utils
+      /PDVCC//BaseUtils
+      /PDVCC//OptionsUtils
+      /PDVCC//BaseUtils
+      /PDVCC//MarketAdapter
+      /PDVCC//VolatileTradingInfo
+      /PDVCC//FpgaHeader
+    :
+    : <variant>debug <variant>release
+      <linkflags>-lpthread
+      <linkflags>-lnsmsg
+    ;
+
+exe console_multi_product_expiry
+    : console_multi_product_expiry.cpp
+      /PDVCC//OrderRouting
+      /PDVCC//CommonTradeUtils
+      /PDVCC//CDef
+      /PDVCC//CommonDataStructures
+      /PDVCC//ExternalData
+      /PDVCC//TradingInfo
+      /PDVCC//Profiler
+      /PDVCC//Utils
+      /PDVCC//BaseUtils
+      /PDVCC//OptionsUtils
+      /PDVCC//BaseUtils
+      /PDVCC//MarketAdapter
+      /PDVCC//VolatileTradingInfo
+      /PDVCC//FpgaHeader
+    :
+    : <variant>debug <variant>release
+      <linkflags>-lpthread
+      <linkflags>-lnsmsg
+    ;
+
+
+
+install install-bin 
+	: mid_term_data_server historical_data_generator_cash_new  nse_given_notional_tradeinit nse_simple_trader_sim nse_historical_data_generator_fut  nse_historical_data_generator_options	nse_historical_data_generator_weeklyoptions	nse_historical_data_generator_cash console_multi_product_expiry console_trader_midterm_old console_trader historical_data_generator_cash_new_adjust_bhavcopy
+	: <variant>release:<location>"$(PROJECT_INSTALL)/bin"
+	  <variant>debug:<location>"$(PROJECT_INSTALL)/bindebug"
+	: release debug
+	;

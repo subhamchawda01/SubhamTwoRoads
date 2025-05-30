@@ -1,0 +1,12 @@
+
+project : usage-requirements <include>$(PROJECT_INSTALL) ;
+
+lib ORSUtils : [ glob *.cpp ] : <link>static ;
+
+install libORSUtils
+  : ORSUtils
+  : <install-type>LIB
+    <variant>release:<location>"$(PROJECT_INSTALL)/lib"
+    <variant>debug:<location>"$(PROJECT_INSTALL)/libdebug"
+  : release debug
+  ;

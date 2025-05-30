@@ -1,0 +1,20 @@
+[core]
+	repositoryformatversion = 0
+	filemode = true
+	bare = false
+	logallrefupdates = true
+[remote "origin"]
+	url = git+ssh://git@github.com/two-roads-trading-pvt-ltd/midterm.git
+	fetch = +refs/heads/*:refs/remotes/origin/*
+[branch "master"]
+	remote = origin
+	merge = refs/heads/master
+[branch "NOTIONAL_EXEC_STUCK"]
+	remote = origin
+	merge = refs/heads/NOTIONAL_EXEC_STUCK
+[branch "master_FINNIFTY"]
+	remote = origin
+	merge = refs/heads/master_FINNIFTY
+[branch "Notional_ForceCancel"]
+	remote = origin
+	merge = refs/heads/Notional_ForceCancel

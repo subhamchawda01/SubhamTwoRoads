@@ -1,0 +1,2 @@
+#ip		port interface
+233.54.12.50 26477

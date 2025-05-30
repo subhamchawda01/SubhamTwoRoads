@@ -1,0 +1,69 @@
+project : usage-requirements <include>$(PROJECT_INSTALL) ;
+
+use-project /PDVCC : ../libdvccode ;
+use-project /PFPGA : ../FPGA ;
+use-project /PBMFFPGA : ../FPGA/BMF_FPGA ;
+
+exe bmf_fpga_data_daemon
+    : # sources
+      bmf_fpga_data_daemon.cpp
+      /PDVCC//Utils
+      /PDVCC//CDef
+      /PDVCC//CommonTradeUtils
+      /PDVCC//Profiler
+      /PBMFFPGA//BmfFpgaHeader
+    :
+    : <variant>debug <variant>release
+      <linkflags>-lpthread
+      <linkflags>-lnsmsg
+      <linkflags>-lsqlite3
+    ;
+
+exe cme_fpga_data_logger
+    : # sources
+      fpga_data_logger.cpp
+      /PDVCC//Utils
+      /PDVCC//CDef
+      /PDVCC//CommonTradeUtils
+      /PFPGA//FpgaHeader
+    :
+    : <variant>debug <variant>release
+      <linkflags>-lpthread
+      <linkflags>-lnsmsg
+      <linkflags>-lsqlite3
+    ;
+
+exe check_cme_ors_mkt_arb_instances
+    : check_cme_ors_mkt_arb_instances.cpp
+      /PDVCC//CDef
+      /PDVCC//ExternalData
+      /PDVCC//CommonTradeUtils
+      /PDVCC//CommonDataStructures
+      /PMarketAdapter//libMarketAdapter
+      /PLoggedSources//libLoggedSources
+    : 
+    <linkflags>-lboost_date_time
+    : <variant>debug <variant>release
+    ;
+
+exe cme_ors_mkt_arb
+    : cme_ors_mkt_arb.cpp
+      /PDVCC//CDef
+      /PDVCC//ExternalData
+      /PDVCC//CommonTradeUtils
+      /PDVCC//CommonDataStructures
+      /PDVCC//TradingInfo
+      /PDVCC//Profiler
+      /PMarketAdapter//libMarketAdapter
+      /PLoggedSources//libLoggedSources
+    : 
+    <linkflags>-lboost_date_time
+    : <variant>debug <variant>release
+    ;
+
+install install-bin
+    : check_cme_ors_mkt_arb_instances cme_fpga_data_logger cme_ors_mkt_arb 
+    : <variant>release:<location>"$(PROJECT_BIN_INSTALL)"
+      <variant>debug:<location>"$(PROJECT_BIN_INSTALL_DEBUG)"
+        : release debug
+    ;

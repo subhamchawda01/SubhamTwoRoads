@@ -1,0 +1,9 @@
+0000000000000000000000000000000000000000 ad821b122ab44c5b3b57e35c0edbcf12545c7a78 subham <subham@sdv-ny4-srv50.dvcap.local> 1596626001 +0000	branch: Created from refs/remotes/origin/IMPORTANT_SCRIPTS
+ad821b122ab44c5b3b57e35c0edbcf12545c7a78 1f79c4f255fc482360748fdf5570fdd2b7b594de subhamchawda01 <subham.chawda@tworoads-trading.co.in> 1602673545 +0000	pull: Fast-forward
+1f79c4f255fc482360748fdf5570fdd2b7b594de 5f3da3cc1818e8aa8b525f1fc8e1cf42a6809419 subhamchawda01 <subham.chawda@tworoads-trading.co.in> 1602674161 +0000	commit: midterm reject handling script
+5f3da3cc1818e8aa8b525f1fc8e1cf42a6809419 adec55d9927d36201e937188f31156dba584b1f4 subhamchawda01 <subham.chawda@tworoads-trading.co.in> 1603335888 +0000	commit: midterm reject handling script
+adec55d9927d36201e937188f31156dba584b1f4 19b51b6ff339453418e0f976aae8af161ac38120 subhamchawda01 <subham.chawda@tworoads-trading.co.in> 1607626068 +0000	pull: Fast-forward
+19b51b6ff339453418e0f976aae8af161ac38120 3d37a5a74144688a845759ddda069c9f91661e68 subhamchawda01 <subham.chawda@tworoads-trading.co.in> 1607626190 +0000	commit: midterm reject handling script updated
+3d37a5a74144688a845759ddda069c9f91661e68 a4c80ae9f3c921d56485020f739f0ab16f599a23 subhamchawda01 <subham.chawda@tworoads-trading.co.in> 1617095919 +0000	commit: get swap usage script
+a4c80ae9f3c921d56485020f739f0ab16f599a23 a767995828ec5b173af427da88572cec5d33003f subhamchawda01 <subham.chawda@tworoads-trading.co.in> 1621579160 +0000	pull: Fast-forward
+a767995828ec5b173af427da88572cec5d33003f 68f9a6935983c64ddbc84eadfda8986770d81985 subhamchawda01 <subham.chawda@tworoads-trading.co.in> 1621579223 +0000	commit: liver order check script

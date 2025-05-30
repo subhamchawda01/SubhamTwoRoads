@@ -1,0 +1,6 @@
+"country","date","name","actual","consensus","previous","volatility"
+"New Zealand","20130825 22:45:00","Trade Balance (MoM)","","$ 50.000 ","$ 414.000 ","2"
+"New Zealand","20130825 22:45:00","Exports","","$ 3.920 ","$ 4.020 ","1"
+"New Zealand","20130825 22:45:00","Imports","","$ 3.950 ","$ 3.600 ","1"
+"New Zealand","20130825 22:45:00","Trade Balance (YoY)","","$ -0.830 ","$ -0.780 ","1"
+"Japan","20130825 23:50:00","Corporate Service Price (YoY)","","0.400  %","0.400  %","1"

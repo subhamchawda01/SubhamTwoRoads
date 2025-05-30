@@ -1,0 +1,19 @@
+use-project /PDVCC : ../libdvccode ;
+use-project /PCommonDataStructures : ../CommonDataStructuresCode ;
+
+project : usage-requirements 
+<linkflags>-lboost_system
+<linkflags>-lboost_filesystem 
+;
+
+lib MidTerm : [ glob *.cpp ] : <link>static : : <library>/PDVCC//boost_system <library>/PDVCC//boost_date_time <library>/PDVCC//boost_filesystem ;
+
+
+install libMidTerm
+  : MidTerm
+  : 
+  <install-type>LIB
+  <variant>release:<location>"$(PROJECT_LIB_INSTALL)"
+  <variant>debug:<location>"$(PROJECT_LIB_INSTALL_DEBUG)"
+  : release debug
+  ;

@@ -1,0 +1,5 @@
+1. Add ideas around the problems due to convergence in typ4 strategies - done in the discussion of type 4 configs
+2. elaborate on divyanshu's point, that wf strats cannot be obtained by conversion from typ 3. They infact require a lot more throught.
+3. WF strats need not necessarily be better
+4. Hrishav's results to be discussed.
+5. More belief based strat making needs to be adopted.

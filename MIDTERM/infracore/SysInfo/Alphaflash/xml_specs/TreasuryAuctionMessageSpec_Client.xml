@@ -1,0 +1,2653 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<?xml-stylesheet type="text/xsl" href="./ClientHTML.xsl"?><protocol>
+<version>351</version>
+<revisions>
+    <revision type="Final" version="351" author="MNI News" date="03/13/2017"/>
+  </revisions>
+<category name="US_Note_02_Year_Treasury_Auction_Result">
+<description>US Treasury Auction Result for 2 Year Note</description>
+<country>US</country>
+<category_id>400</category_id>
+<data>
+<datum>
+<short_description>High Yield</short_description>
+<description>High Yield</description>
+<datum_type>%</datum_type>
+<datum_id>1</datum_id>
+</datum>
+<datum>
+<short_description>Bid to Cover Ratio</short_description>
+<description>Bid to Cover Ratio</description>
+<datum_type>%</datum_type>
+<datum_id>2</datum_id>
+</datum>
+<datum>
+<short_description>Primary Dealer Accepted</short_description>
+<description>Primary Dealer Accepted</description>
+<datum_type>USD</datum_type>
+<datum_id>3</datum_id>
+</datum>
+<datum>
+<short_description>Indirect Bidder Accepted</short_description>
+<description>Indirect Bidder Accepted</description>
+<datum_type>USD</datum_type>
+<datum_id>4</datum_id>
+</datum>
+<datum>
+<short_description>Direct Bidder Accepted</short_description>
+<description>Direct Bidder Accepted</description>
+<datum_type>USD</datum_type>
+<datum_id>5</datum_id>
+</datum>
+<datum>
+<short_description>Indirect Bidder Percentage</short_description>
+<description>Indirect Bidder Percentage</description>
+<datum_type>%</datum_type>
+<datum_id>6</datum_id>
+</datum>
+<datum>
+<short_description>Reopen Indicator</short_description>
+<description>Reopen Indicator</description>
+<datum_type>boolean</datum_type>
+<datum_id>7</datum_id>
+</datum>
+</data>
+<messages>
+<message>
+<message_type>release</message_type>
+<message_version>1</message_version>
+<multicast_group>US_GROUP_4</multicast_group>
+<fields>
+<field>
+<datum_id>1</datum_id>
+<field_type>float</field_type>
+<example_value>2.748</example_value>
+</field>
+<field>
+<datum_id>2</datum_id>
+<field_type>float</field_type>
+<example_value>2.11</example_value>
+</field>
+<field>
+<datum_id>3</datum_id>
+<field_type>double</field_type>
+<example_value>12616000000</example_value>
+</field>
+<field>
+<datum_id>4</datum_id>
+<field_type>double</field_type>
+<example_value>8472525000</example_value>
+</field>
+<field>
+<datum_id>5</datum_id>
+<field_type>double</field_type>
+<example_value>804494000</example_value>
+</field>
+<field>
+<datum_id>6</datum_id>
+<field_type>float</field_type>
+<example_value>38.7</example_value>
+</field>
+<field>
+<datum_id>7</datum_id>
+<field_type>boolean</field_type>
+<example_value>0</example_value>
+</field>
+</fields>
+</message>
+</messages>
+</category>
+<category name="US_Note_03_Year_Treasury_Auction_Result">
+<description>US Treasury Auction Result for 3 Year Note</description>
+<country>US</country>
+<category_id>401</category_id>
+<data>
+<datum>
+<short_description>High Yield</short_description>
+<description>High Yield</description>
+<datum_type>%</datum_type>
+<datum_id>1</datum_id>
+</datum>
+<datum>
+<short_description>Bid to Cover Ratio</short_description>
+<description>Bid to Cover Ratio</description>
+<datum_type>%</datum_type>
+<datum_id>2</datum_id>
+</datum>
+<datum>
+<short_description>Primary Dealer Accepted</short_description>
+<description>Primary Dealer Accepted</description>
+<datum_type>USD</datum_type>
+<datum_id>3</datum_id>
+</datum>
+<datum>
+<short_description>Indirect Bidder Accepted</short_description>
+<description>Indirect Bidder Accepted</description>
+<datum_type>USD</datum_type>
+<datum_id>4</datum_id>
+</datum>
+<datum>
+<short_description>Direct Bidder Accepted</short_description>
+<description>Direct Bidder Accepted</description>
+<datum_type>USD</datum_type>
+<datum_id>5</datum_id>
+</datum>
+<datum>
+<short_description>Indirect Bidder Percentage</short_description>
+<description>Indirect Bidder Percentage</description>
+<datum_type>%</datum_type>
+<datum_id>6</datum_id>
+</datum>
+<datum>
+<short_description>Reopen Indicator</short_description>
+<description>Reopen Indicator</description>
+<datum_type>boolean</datum_type>
+<datum_id>7</datum_id>
+</datum>
+</data>
+<messages>
+<message>
+<message_type>release</message_type>
+<message_version>1</message_version>
+<multicast_group>US_GROUP_4</multicast_group>
+<fields>
+<field>
+<datum_id>1</datum_id>
+<field_type>float</field_type>
+<example_value>2.748</example_value>
+</field>
+<field>
+<datum_id>2</datum_id>
+<field_type>float</field_type>
+<example_value>2.11</example_value>
+</field>
+<field>
+<datum_id>3</datum_id>
+<field_type>double</field_type>
+<example_value>12616000000</example_value>
+</field>
+<field>
+<datum_id>4</datum_id>
+<field_type>double</field_type>
+<example_value>8472525000</example_value>
+</field>
+<field>
+<datum_id>5</datum_id>
+<field_type>double</field_type>
+<example_value>804494000</example_value>
+</field>
+<field>
+<datum_id>6</datum_id>
+<field_type>float</field_type>
+<example_value>38.7</example_value>
+</field>
+<field>
+<datum_id>7</datum_id>
+<field_type>boolean</field_type>
+<example_value>0</example_value>
+</field>
+</fields>
+</message>
+</messages>
+</category>
+<category name="US_Note_05_Year_Treasury_Auction_Result">
+<description>US Treasury Auction Result for 5 Year Note</description>
+<country>US</country>
+<category_id>402</category_id>
+<data>
+<datum>
+<short_description>High Yield</short_description>
+<description>High Yield</description>
+<datum_type>%</datum_type>
+<datum_id>1</datum_id>
+</datum>
+<datum>
+<short_description>Bid to Cover Ratio</short_description>
+<description>Bid to Cover Ratio</description>
+<datum_type>%</datum_type>
+<datum_id>2</datum_id>
+</datum>
+<datum>
+<short_description>Primary Dealer Accepted</short_description>
+<description>Primary Dealer Accepted</description>
+<datum_type>USD</datum_type>
+<datum_id>3</datum_id>
+</datum>
+<datum>
+<short_description>Indirect Bidder Accepted</short_description>
+<description>Indirect Bidder Accepted</description>
+<datum_type>USD</datum_type>
+<datum_id>4</datum_id>
+</datum>
+<datum>
+<short_description>Direct Bidder Accepted</short_description>
+<description>Direct Bidder Accepted</description>
+<datum_type>USD</datum_type>
+<datum_id>5</datum_id>
+</datum>
+<datum>
+<short_description>Indirect Bidder Percentage</short_description>
+<description>Indirect Bidder Percentage</description>
+<datum_type>%</datum_type>
+<datum_id>6</datum_id>
+</datum>
+<datum>
+<short_description>Reopen Indicator</short_description>
+<description>Reopen Indicator</description>
+<datum_type>boolean</datum_type>
+<datum_id>7</datum_id>
+</datum>
+</data>
+<messages>
+<message>
+<message_type>release</message_type>
+<message_version>1</message_version>
+<multicast_group>US_GROUP_4</multicast_group>
+<fields>
+<field>
+<datum_id>1</datum_id>
+<field_type>float</field_type>
+<example_value>2.748</example_value>
+</field>
+<field>
+<datum_id>2</datum_id>
+<field_type>float</field_type>
+<example_value>2.11</example_value>
+</field>
+<field>
+<datum_id>3</datum_id>
+<field_type>double</field_type>
+<example_value>12616000000</example_value>
+</field>
+<field>
+<datum_id>4</datum_id>
+<field_type>double</field_type>
+<example_value>8472525000</example_value>
+</field>
+<field>
+<datum_id>5</datum_id>
+<field_type>double</field_type>
+<example_value>804494000</example_value>
+</field>
+<field>
+<datum_id>6</datum_id>
+<field_type>float</field_type>
+<example_value>38.7</example_value>
+</field>
+<field>
+<datum_id>7</datum_id>
+<field_type>boolean</field_type>
+<example_value>0</example_value>
+</field>
+</fields>
+</message>
+</messages>
+</category>
+<category name="US_Note_07_Year_Treasury_Auction_Result">
+<description>US Treasury Auction Result for 7 Year Note</description>
+<country>US</country>
+<category_id>403</category_id>
+<data>
+<datum>
+<short_description>High Yield</short_description>
+<description>High Yield</description>
+<datum_type>%</datum_type>
+<datum_id>1</datum_id>
+</datum>
+<datum>
+<short_description>Bid to Cover Ratio</short_description>
+<description>Bid to Cover Ratio</description>
+<datum_type>%</datum_type>
+<datum_id>2</datum_id>
+</datum>
+<datum>
+<short_description>Primary Dealer Accepted</short_description>
+<description>Primary Dealer Accepted</description>
+<datum_type>USD</datum_type>
+<datum_id>3</datum_id>
+</datum>
+<datum>
+<short_description>Indirect Bidder Accepted</short_description>
+<description>Indirect Bidder Accepted</description>
+<datum_type>USD</datum_type>
+<datum_id>4</datum_id>
+</datum>
+<datum>
+<short_description>Direct Bidder Accepted</short_description>
+<description>Direct Bidder Accepted</description>
+<datum_type>USD</datum_type>
+<datum_id>5</datum_id>
+</datum>
+<datum>
+<short_description>Indirect Bidder Percentage</short_description>
+<description>Indirect Bidder Percentage</description>
+<datum_type>%</datum_type>
+<datum_id>6</datum_id>
+</datum>
+<datum>
+<short_description>Reopen Indicator</short_description>
+<description>Reopen Indicator</description>
+<datum_type>boolean</datum_type>
+<datum_id>7</datum_id>
+</datum>
+</data>
+<messages>
+<message>
+<message_type>release</message_type>
+<message_version>1</message_version>
+<multicast_group>US_GROUP_4</multicast_group>
+<fields>
+<field>
+<datum_id>1</datum_id>
+<field_type>float</field_type>
+<example_value>2.748</example_value>
+</field>
+<field>
+<datum_id>2</datum_id>
+<field_type>float</field_type>
+<example_value>2.11</example_value>
+</field>
+<field>
+<datum_id>3</datum_id>
+<field_type>double</field_type>
+<example_value>12616000000</example_value>
+</field>
+<field>
+<datum_id>4</datum_id>
+<field_type>double</field_type>
+<example_value>8472525000</example_value>
+</field>
+<field>
+<datum_id>5</datum_id>
+<field_type>double</field_type>
+<example_value>804494000</example_value>
+</field>
+<field>
+<datum_id>6</datum_id>
+<field_type>float</field_type>
+<example_value>38.7</example_value>
+</field>
+<field>
+<datum_id>7</datum_id>
+<field_type>boolean</field_type>
+<example_value>0</example_value>
+</field>
+</fields>
+</message>
+</messages>
+</category>
+<category name="US_Note_10_Year_Treasury_Auction_Result">
+<description>US Treasury Auction Result for 10 Year Note</description>
+<country>US</country>
+<category_id>404</category_id>
+<data>
+<datum>
+<short_description>High Yield</short_description>
+<description>High Yield</description>
+<datum_type>%</datum_type>
+<datum_id>1</datum_id>
+</datum>
+<datum>
+<short_description>Bid to Cover Ratio</short_description>
+<description>Bid to Cover Ratio</description>
+<datum_type>%</datum_type>
+<datum_id>2</datum_id>
+</datum>
+<datum>
+<short_description>Primary Dealer Accepted</short_description>
+<description>Primary Dealer Accepted</description>
+<datum_type>USD</datum_type>
+<datum_id>3</datum_id>
+</datum>
+<datum>
+<short_description>Indirect Bidder Accepted</short_description>
+<description>Indirect Bidder Accepted</description>
+<datum_type>USD</datum_type>
+<datum_id>4</datum_id>
+</datum>
+<datum>
+<short_description>Direct Bidder Accepted</short_description>
+<description>Direct Bidder Accepted</description>
+<datum_type>USD</datum_type>
+<datum_id>5</datum_id>
+</datum>
+<datum>
+<short_description>Indirect Bidder Percentage</short_description>
+<description>Indirect Bidder Percentage</description>
+<datum_type>%</datum_type>
+<datum_id>6</datum_id>
+</datum>
+<datum>
+<short_description>Reopen Indicator</short_description>
+<description>Reopen Indicator</description>
+<datum_type>boolean</datum_type>
+<datum_id>7</datum_id>
+</datum>
+</data>
+<messages>
+<message>
+<message_type>release</message_type>
+<message_version>1</message_version>
+<multicast_group>US_GROUP_4</multicast_group>
+<fields>
+<field>
+<datum_id>1</datum_id>
+<field_type>float</field_type>
+<example_value>2.748</example_value>
+</field>
+<field>
+<datum_id>2</datum_id>
+<field_type>float</field_type>
+<example_value>2.11</example_value>
+</field>
+<field>
+<datum_id>3</datum_id>
+<field_type>double</field_type>
+<example_value>12616000000</example_value>
+</field>
+<field>
+<datum_id>4</datum_id>
+<field_type>double</field_type>
+<example_value>8472525000</example_value>
+</field>
+<field>
+<datum_id>5</datum_id>
+<field_type>double</field_type>
+<example_value>804494000</example_value>
+</field>
+<field>
+<datum_id>6</datum_id>
+<field_type>float</field_type>
+<example_value>38.7</example_value>
+</field>
+<field>
+<datum_id>7</datum_id>
+<field_type>boolean</field_type>
+<example_value>0</example_value>
+</field>
+</fields>
+</message>
+</messages>
+</category>
+<category name="US_Bond_30_Year_Treasury_Auction_Result">
+<description>US Treasury Auction Result for 30 Year Bond</description>
+<country>US</country>
+<category_id>405</category_id>
+<data>
+<datum>
+<short_description>High Yield</short_description>
+<description>High Yield</description>
+<datum_type>%</datum_type>
+<datum_id>1</datum_id>
+</datum>
+<datum>
+<short_description>Bid to Cover Ratio</short_description>
+<description>Bid to Cover Ratio</description>
+<datum_type>%</datum_type>
+<datum_id>2</datum_id>
+</datum>
+<datum>
+<short_description>Primary Dealer Accepted</short_description>
+<description>Primary Dealer Accepted</description>
+<datum_type>USD</datum_type>
+<datum_id>3</datum_id>
+</datum>
+<datum>
+<short_description>Indirect Bidder Accepted</short_description>
+<description>Indirect Bidder Accepted</description>
+<datum_type>USD</datum_type>
+<datum_id>4</datum_id>
+</datum>
+<datum>
+<short_description>Direct Bidder Accepted</short_description>
+<description>Direct Bidder Accepted</description>
+<datum_type>USD</datum_type>
+<datum_id>5</datum_id>
+</datum>
+<datum>
+<short_description>Indirect Bidder Percentage</short_description>
+<description>Indirect Bidder Percentage</description>
+<datum_type>%</datum_type>
+<datum_id>6</datum_id>
+</datum>
+<datum>
+<short_description>Reopen Indicator</short_description>
+<description>Reopen Indicator</description>
+<datum_type>boolean</datum_type>
+<datum_id>7</datum_id>
+</datum>
+</data>
+<messages>
+<message>
+<message_type>release</message_type>
+<message_version>1</message_version>
+<multicast_group>US_GROUP_4</multicast_group>
+<fields>
+<field>
+<datum_id>1</datum_id>
+<field_type>float</field_type>
+<example_value>2.748</example_value>
+</field>
+<field>
+<datum_id>2</datum_id>
+<field_type>float</field_type>
+<example_value>2.11</example_value>
+</field>
+<field>
+<datum_id>3</datum_id>
+<field_type>double</field_type>
+<example_value>12616000000</example_value>
+</field>
+<field>
+<datum_id>4</datum_id>
+<field_type>double</field_type>
+<example_value>8472525000</example_value>
+</field>
+<field>
+<datum_id>5</datum_id>
+<field_type>double</field_type>
+<example_value>804494000</example_value>
+</field>
+<field>
+<datum_id>6</datum_id>
+<field_type>float</field_type>
+<example_value>38.7</example_value>
+</field>
+<field>
+<datum_id>7</datum_id>
+<field_type>boolean</field_type>
+<example_value>0</example_value>
+</field>
+</fields>
+</message>
+</messages>
+</category>
+<category name="US_TIPS_Note_05_Year_Treasury_Auction_Result">
+<description>US Treasury Auction Result for TIPS 5 Year Note</description>
+<country>US</country>
+<category_id>425</category_id>
+<data>
+<datum>
+<short_description>High Yield</short_description>
+<description>High Yield</description>
+<datum_type>%</datum_type>
+<datum_id>1</datum_id>
+</datum>
+<datum>
+<short_description>Bid to Cover Ratio</short_description>
+<description>Bid to Cover Ratio</description>
+<datum_type>%</datum_type>
+<datum_id>2</datum_id>
+</datum>
+<datum>
+<short_description>Primary Dealer Accepted</short_description>
+<description>Primary Dealer Accepted</description>
+<datum_type>USD</datum_type>
+<datum_id>3</datum_id>
+</datum>
+<datum>
+<short_description>Indirect Bidder Accepted</short_description>
+<description>Indirect Bidder Accepted</description>
+<datum_type>USD</datum_type>
+<datum_id>4</datum_id>
+</datum>
+<datum>
+<short_description>Direct Bidder Accepted</short_description>
+<description>Direct Bidder Accepted</description>
+<datum_type>USD</datum_type>
+<datum_id>5</datum_id>
+</datum>
+<datum>
+<short_description>Indirect Bidder Percentage</short_description>
+<description>Indirect Bidder Percentage</description>
+<datum_type>%</datum_type>
+<datum_id>6</datum_id>
+</datum>
+<datum>
+<short_description>Reopen Indicator</short_description>
+<description>Reopen Indicator</description>
+<datum_type>boolean</datum_type>
+<datum_id>7</datum_id>
+</datum>
+</data>
+<messages>
+<message>
+<message_type>release</message_type>
+<message_version>1</message_version>
+<multicast_group>US_GROUP_4</multicast_group>
+<fields>
+<field>
+<datum_id>1</datum_id>
+<field_type>float</field_type>
+<example_value>2.748</example_value>
+</field>
+<field>
+<datum_id>2</datum_id>
+<field_type>float</field_type>
+<example_value>2.11</example_value>
+</field>
+<field>
+<datum_id>3</datum_id>
+<field_type>double</field_type>
+<example_value>12616000000</example_value>
+</field>
+<field>
+<datum_id>4</datum_id>
+<field_type>double</field_type>
+<example_value>8472525000</example_value>
+</field>
+<field>
+<datum_id>5</datum_id>
+<field_type>double</field_type>
+<example_value>804494000</example_value>
+</field>
+<field>
+<datum_id>6</datum_id>
+<field_type>float</field_type>
+<example_value>38.7</example_value>
+</field>
+<field>
+<datum_id>7</datum_id>
+<field_type>boolean</field_type>
+<example_value>0</example_value>
+</field>
+</fields>
+</message>
+</messages>
+</category>
+<category name="US_TIPS_Note_10_Year_Treasury_Auction_Result">
+<description>US Treasury Auction Result for TIPS 10 Year Note</description>
+<country>US</country>
+<category_id>426</category_id>
+<data>
+<datum>
+<short_description>High Yield</short_description>
+<description>High Yield</description>
+<datum_type>%</datum_type>
+<datum_id>1</datum_id>
+</datum>
+<datum>
+<short_description>Bid to Cover Ratio</short_description>
+<description>Bid to Cover Ratio</description>
+<datum_type>%</datum_type>
+<datum_id>2</datum_id>
+</datum>
+<datum>
+<short_description>Primary Dealer Accepted</short_description>
+<description>Primary Dealer Accepted</description>
+<datum_type>USD</datum_type>
+<datum_id>3</datum_id>
+</datum>
+<datum>
+<short_description>Indirect Bidder Accepted</short_description>
+<description>Indirect Bidder Accepted</description>
+<datum_type>USD</datum_type>
+<datum_id>4</datum_id>
+</datum>
+<datum>
+<short_description>Direct Bidder Accepted</short_description>
+<description>Direct Bidder Accepted</description>
+<datum_type>USD</datum_type>
+<datum_id>5</datum_id>
+</datum>
+<datum>
+<short_description>Indirect Bidder Percentage</short_description>
+<description>Indirect Bidder Percentage</description>
+<datum_type>%</datum_type>
+<datum_id>6</datum_id>
+</datum>
+<datum>
+<short_description>Reopen Indicator</short_description>
+<description>Reopen Indicator</description>
+<datum_type>boolean</datum_type>
+<datum_id>7</datum_id>
+</datum>
+</data>
+<messages>
+<message>
+<message_type>release</message_type>
+<message_version>1</message_version>
+<multicast_group>US_GROUP_4</multicast_group>
+<fields>
+<field>
+<datum_id>1</datum_id>
+<field_type>float</field_type>
+<example_value>2.748</example_value>
+</field>
+<field>
+<datum_id>2</datum_id>
+<field_type>float</field_type>
+<example_value>2.11</example_value>
+</field>
+<field>
+<datum_id>3</datum_id>
+<field_type>double</field_type>
+<example_value>12616000000</example_value>
+</field>
+<field>
+<datum_id>4</datum_id>
+<field_type>double</field_type>
+<example_value>8472525000</example_value>
+</field>
+<field>
+<datum_id>5</datum_id>
+<field_type>double</field_type>
+<example_value>804494000</example_value>
+</field>
+<field>
+<datum_id>6</datum_id>
+<field_type>float</field_type>
+<example_value>38.7</example_value>
+</field>
+<field>
+<datum_id>7</datum_id>
+<field_type>boolean</field_type>
+<example_value>0</example_value>
+</field>
+</fields>
+</message>
+</messages>
+</category>
+<category name="US_TIPS_Bond_20_Year_Treasury_Auction_Result">
+<description>US Treasury Auction Result for TIPS 20 Year Bond</description>
+<country>US</country>
+<category_id>427</category_id>
+<data>
+<datum>
+<short_description>High Yield</short_description>
+<description>High Yield</description>
+<datum_type>%</datum_type>
+<datum_id>1</datum_id>
+</datum>
+<datum>
+<short_description>Bid to Cover Ratio</short_description>
+<description>Bid to Cover Ratio</description>
+<datum_type>%</datum_type>
+<datum_id>2</datum_id>
+</datum>
+<datum>
+<short_description>Primary Dealer Accepted</short_description>
+<description>Primary Dealer Accepted</description>
+<datum_type>USD</datum_type>
+<datum_id>3</datum_id>
+</datum>
+<datum>
+<short_description>Indirect Bidder Accepted</short_description>
+<description>Indirect Bidder Accepted</description>
+<datum_type>USD</datum_type>
+<datum_id>4</datum_id>
+</datum>
+<datum>
+<short_description>Direct Bidder Accepted</short_description>
+<description>Direct Bidder Accepted</description>
+<datum_type>USD</datum_type>
+<datum_id>5</datum_id>
+</datum>
+<datum>
+<short_description>Indirect Bidder Percentage</short_description>
+<description>Indirect Bidder Percentage</description>
+<datum_type>%</datum_type>
+<datum_id>6</datum_id>
+</datum>
+<datum>
+<short_description>Reopen Indicator</short_description>
+<description>Reopen Indicator</description>
+<datum_type>boolean</datum_type>
+<datum_id>7</datum_id>
+</datum>
+</data>
+<messages>
+<message>
+<message_type>release</message_type>
+<message_version>1</message_version>
+<multicast_group>US_GROUP_4</multicast_group>
+<fields>
+<field>
+<datum_id>1</datum_id>
+<field_type>float</field_type>
+<example_value>2.748</example_value>
+</field>
+<field>
+<datum_id>2</datum_id>
+<field_type>float</field_type>
+<example_value>2.11</example_value>
+</field>
+<field>
+<datum_id>3</datum_id>
+<field_type>double</field_type>
+<example_value>12616000000</example_value>
+</field>
+<field>
+<datum_id>4</datum_id>
+<field_type>double</field_type>
+<example_value>8472525000</example_value>
+</field>
+<field>
+<datum_id>5</datum_id>
+<field_type>double</field_type>
+<example_value>804494000</example_value>
+</field>
+<field>
+<datum_id>6</datum_id>
+<field_type>float</field_type>
+<example_value>38.7</example_value>
+</field>
+<field>
+<datum_id>7</datum_id>
+<field_type>boolean</field_type>
+<example_value>0</example_value>
+</field>
+</fields>
+</message>
+</messages>
+</category>
+<category name="US_TIPS_Bond_30_Year_Treasury_Auction_Result">
+<description>US Treasury Auction Result for TIPS 30 Year Bond</description>
+<country>US</country>
+<category_id>428</category_id>
+<data>
+<datum>
+<short_description>High Yield</short_description>
+<description>High Yield</description>
+<datum_type>%</datum_type>
+<datum_id>1</datum_id>
+</datum>
+<datum>
+<short_description>Bid to Cover Ratio</short_description>
+<description>Bid to Cover Ratio</description>
+<datum_type>%</datum_type>
+<datum_id>2</datum_id>
+</datum>
+<datum>
+<short_description>Primary Dealer Accepted</short_description>
+<description>Primary Dealer Accepted</description>
+<datum_type>USD</datum_type>
+<datum_id>3</datum_id>
+</datum>
+<datum>
+<short_description>Indirect Bidder Accepted</short_description>
+<description>Indirect Bidder Accepted</description>
+<datum_type>USD</datum_type>
+<datum_id>4</datum_id>
+</datum>
+<datum>
+<short_description>Direct Bidder Accepted</short_description>
+<description>Direct Bidder Accepted</description>
+<datum_type>USD</datum_type>
+<datum_id>5</datum_id>
+</datum>
+<datum>
+<short_description>Indirect Bidder Percentage</short_description>
+<description>Indirect Bidder Percentage</description>
+<datum_type>%</datum_type>
+<datum_id>6</datum_id>
+</datum>
+<datum>
+<short_description>Reopen Indicator</short_description>
+<description>Reopen Indicator</description>
+<datum_type>boolean</datum_type>
+<datum_id>7</datum_id>
+</datum>
+</data>
+<messages>
+<message>
+<message_type>release</message_type>
+<message_version>1</message_version>
+<multicast_group>US_GROUP_4</multicast_group>
+<fields>
+<field>
+<datum_id>1</datum_id>
+<field_type>float</field_type>
+<example_value>2.748</example_value>
+</field>
+<field>
+<datum_id>2</datum_id>
+<field_type>float</field_type>
+<example_value>2.11</example_value>
+</field>
+<field>
+<datum_id>3</datum_id>
+<field_type>double</field_type>
+<example_value>12616000000</example_value>
+</field>
+<field>
+<datum_id>4</datum_id>
+<field_type>double</field_type>
+<example_value>8472525000</example_value>
+</field>
+<field>
+<datum_id>5</datum_id>
+<field_type>double</field_type>
+<example_value>804494000</example_value>
+</field>
+<field>
+<datum_id>6</datum_id>
+<field_type>float</field_type>
+<example_value>38.7</example_value>
+</field>
+<field>
+<datum_id>7</datum_id>
+<field_type>boolean</field_type>
+<example_value>0</example_value>
+</field>
+</fields>
+</message>
+</messages>
+</category>
+<category name="US_Floating_Rate_Note_2_Year_Treasury_Auction_Result">
+<description>US Treasury Auction Result for 2 Year Floating Rate Note</description>
+<country>US</country>
+<category_id>429</category_id>
+<data>
+<datum>
+<short_description>Spread</short_description>
+<description>Spread</description>
+<datum_type>%</datum_type>
+<datum_id>1</datum_id>
+</datum>
+<datum>
+<short_description>Bid to Cover Ratio</short_description>
+<description>Bid to Cover Ratio</description>
+<datum_type>%</datum_type>
+<datum_id>2</datum_id>
+</datum>
+<datum>
+<short_description>Primary Dealer Accepted</short_description>
+<description>Primary Dealer Accepted</description>
+<datum_type>USD</datum_type>
+<datum_id>3</datum_id>
+</datum>
+<datum>
+<short_description>Indirect Bidder Accepted</short_description>
+<description>Indirect Bidder Accepted</description>
+<datum_type>USD</datum_type>
+<datum_id>4</datum_id>
+</datum>
+<datum>
+<short_description>Direct Bidder Accepted</short_description>
+<description>Direct Bidder Accepted</description>
+<datum_type>USD</datum_type>
+<datum_id>5</datum_id>
+</datum>
+<datum>
+<short_description>Indirect Bidder Percentage</short_description>
+<description>Indirect Bidder Percentage</description>
+<datum_type>%</datum_type>
+<datum_id>6</datum_id>
+</datum>
+<datum>
+<short_description>Reopen Indicator</short_description>
+<description>Reopen Indicator</description>
+<datum_type>boolean</datum_type>
+<datum_id>7</datum_id>
+</datum>
+<datum>
+<short_description>High Discount Margin</short_description>
+<description>High Discount Margin</description>
+<datum_type>%</datum_type>
+<datum_id>8</datum_id>
+</datum>
+</data>
+<messages>
+<message>
+<message_type>release</message_type>
+<message_version>2</message_version>
+<multicast_group>US_GROUP_4</multicast_group>
+<fields>
+<field>
+<datum_id>1</datum_id>
+<field_type>float</field_type>
+<example_value>1.000</example_value>
+</field>
+<field>
+<datum_id>2</datum_id>
+<field_type>float</field_type>
+<example_value>1.46</example_value>
+</field>
+<field>
+<datum_id>3</datum_id>
+<field_type>double</field_type>
+<example_value>40686000000</example_value>
+</field>
+<field>
+<datum_id>4</datum_id>
+<field_type>double</field_type>
+<example_value>3976333000</example_value>
+</field>
+<field>
+<datum_id>5</datum_id>
+<field_type>double</field_type>
+<example_value>185620000</example_value>
+</field>
+<field>
+<datum_id>6</datum_id>
+<field_type>float</field_type>
+<example_value>40.16</example_value>
+</field>
+<field>
+<datum_id>7</datum_id>
+<field_type>boolean</field_type>
+<example_value>0</example_value>
+</field>
+<field>
+<datum_id>8</datum_id>
+<field_type>float</field_type>
+<example_value>1.000</example_value>
+</field>
+</fields>
+</message>
+</messages>
+</category>
+<category name="US_Bill_04_Week_Treasury_Auction_Result">
+<description>US Treasury Auction Result for 4 Week Bill</description>
+<country>US</country>
+<category_id>450</category_id>
+<data>
+<datum>
+<short_description>Term</short_description>
+<description>Term in days</description>
+<datum_type>days</datum_type>
+<datum_id>1</datum_id>
+</datum>
+<datum>
+<short_description>High Equivalent Yield</short_description>
+<description>High Equivalent Yield</description>
+<datum_type>%</datum_type>
+<datum_id>2</datum_id>
+</datum>
+<datum>
+<short_description>Bid to Cover Ratio</short_description>
+<description>Bid to Cover Ratio</description>
+<datum_type>%</datum_type>
+<datum_id>3</datum_id>
+</datum>
+<datum>
+<short_description>Primary Dealer Accepted</short_description>
+<description>Primary Dealer Accepted</description>
+<datum_type>USD</datum_type>
+<datum_id>4</datum_id>
+</datum>
+<datum>
+<short_description>Indirect Bidder Accepted</short_description>
+<description>Indirect Bidder Accepted</description>
+<datum_type>USD</datum_type>
+<datum_id>5</datum_id>
+</datum>
+<datum>
+<short_description>Direct Bidder Accepted</short_description>
+<description>Direct Bidder Accepted</description>
+<datum_type>USD</datum_type>
+<datum_id>6</datum_id>
+</datum>
+<datum>
+<short_description>Indirect Bidder Percentage</short_description>
+<description>Indirect Bidder Percentage</description>
+<datum_type>%</datum_type>
+<datum_id>7</datum_id>
+</datum>
+</data>
+<messages>
+<message>
+<message_type>release</message_type>
+<message_version>1</message_version>
+<multicast_group>US_GROUP_4</multicast_group>
+<fields>
+<field>
+<datum_id>1</datum_id>
+<field_type>short</field_type>
+<example_value>182</example_value>
+</field>
+<field>
+<datum_id>2</datum_id>
+<field_type>float</field_type>
+<example_value>0.203</example_value>
+</field>
+<field>
+<datum_id>3</datum_id>
+<field_type>float</field_type>
+<example_value>2.49</example_value>
+</field>
+<field>
+<datum_id>4</datum_id>
+<field_type>double</field_type>
+<example_value>22833755000</example_value>
+</field>
+<field>
+<datum_id>5</datum_id>
+<field_type>double</field_type>
+<example_value>14688683000</example_value>
+</field>
+<field>
+<datum_id>6</datum_id>
+<field_type>double</field_type>
+<example_value>30000000</example_value>
+</field>
+<field>
+<datum_id>7</datum_id>
+<field_type>float</field_type>
+<example_value>39.12</example_value>
+</field>
+</fields>
+</message>
+</messages>
+</category>
+<category name="US_Bill_13_Week_Treasury_Auction_Result">
+<description>US Treasury Auction Result for 13 Week Bill</description>
+<country>US</country>
+<category_id>451</category_id>
+<data>
+<datum>
+<short_description>Term</short_description>
+<description>Term in days</description>
+<datum_type>days</datum_type>
+<datum_id>1</datum_id>
+</datum>
+<datum>
+<short_description>High Equivalent Yield</short_description>
+<description>High Equivalent Yield</description>
+<datum_type>%</datum_type>
+<datum_id>2</datum_id>
+</datum>
+<datum>
+<short_description>Bid to Cover Ratio</short_description>
+<description>Bid to Cover Ratio</description>
+<datum_type>%</datum_type>
+<datum_id>3</datum_id>
+</datum>
+<datum>
+<short_description>Primary Dealer Accepted</short_description>
+<description>Primary Dealer Accepted</description>
+<datum_type>USD</datum_type>
+<datum_id>4</datum_id>
+</datum>
+<datum>
+<short_description>Indirect Bidder Accepted</short_description>
+<description>Indirect Bidder Accepted</description>
+<datum_type>USD</datum_type>
+<datum_id>5</datum_id>
+</datum>
+<datum>
+<short_description>Direct Bidder Accepted</short_description>
+<description>Direct Bidder Accepted</description>
+<datum_type>USD</datum_type>
+<datum_id>6</datum_id>
+</datum>
+<datum>
+<short_description>Indirect Bidder Percentage</short_description>
+<description>Indirect Bidder Percentage</description>
+<datum_type>%</datum_type>
+<datum_id>7</datum_id>
+</datum>
+</data>
+<messages>
+<message>
+<message_type>release</message_type>
+<message_version>1</message_version>
+<multicast_group>US_GROUP_4</multicast_group>
+<fields>
+<field>
+<datum_id>1</datum_id>
+<field_type>short</field_type>
+<example_value>182</example_value>
+</field>
+<field>
+<datum_id>2</datum_id>
+<field_type>float</field_type>
+<example_value>0.203</example_value>
+</field>
+<field>
+<datum_id>3</datum_id>
+<field_type>float</field_type>
+<example_value>2.49</example_value>
+</field>
+<field>
+<datum_id>4</datum_id>
+<field_type>double</field_type>
+<example_value>22833755000</example_value>
+</field>
+<field>
+<datum_id>5</datum_id>
+<field_type>double</field_type>
+<example_value>14688683000</example_value>
+</field>
+<field>
+<datum_id>6</datum_id>
+<field_type>double</field_type>
+<example_value>30000000</example_value>
+</field>
+<field>
+<datum_id>7</datum_id>
+<field_type>float</field_type>
+<example_value>39.12</example_value>
+</field>
+</fields>
+</message>
+</messages>
+</category>
+<category name="US_Bill_26_Week_Treasury_Auction_Result">
+<description>US Treasury Auction Result for 26 Week Bill</description>
+<country>US</country>
+<category_id>452</category_id>
+<data>
+<datum>
+<short_description>Term</short_description>
+<description>Term in days</description>
+<datum_type>days</datum_type>
+<datum_id>1</datum_id>
+</datum>
+<datum>
+<short_description>High Equivalent Yield</short_description>
+<description>High Equivalent Yield</description>
+<datum_type>%</datum_type>
+<datum_id>2</datum_id>
+</datum>
+<datum>
+<short_description>Bid to Cover Ratio</short_description>
+<description>Bid to Cover Ratio</description>
+<datum_type>%</datum_type>
+<datum_id>3</datum_id>
+</datum>
+<datum>
+<short_description>Primary Dealer Accepted</short_description>
+<description>Primary Dealer Accepted</description>
+<datum_type>USD</datum_type>
+<datum_id>4</datum_id>
+</datum>
+<datum>
+<short_description>Indirect Bidder Accepted</short_description>
+<description>Indirect Bidder Accepted</description>
+<datum_type>USD</datum_type>
+<datum_id>5</datum_id>
+</datum>
+<datum>
+<short_description>Direct Bidder Accepted</short_description>
+<description>Direct Bidder Accepted</description>
+<datum_type>USD</datum_type>
+<datum_id>6</datum_id>
+</datum>
+<datum>
+<short_description>Indirect Bidder Percentage</short_description>
+<description>Indirect Bidder Percentage</description>
+<datum_type>%</datum_type>
+<datum_id>7</datum_id>
+</datum>
+</data>
+<messages>
+<message>
+<message_type>release</message_type>
+<message_version>1</message_version>
+<multicast_group>US_GROUP_4</multicast_group>
+<fields>
+<field>
+<datum_id>1</datum_id>
+<field_type>short</field_type>
+<example_value>182</example_value>
+</field>
+<field>
+<datum_id>2</datum_id>
+<field_type>float</field_type>
+<example_value>0.203</example_value>
+</field>
+<field>
+<datum_id>3</datum_id>
+<field_type>float</field_type>
+<example_value>2.49</example_value>
+</field>
+<field>
+<datum_id>4</datum_id>
+<field_type>double</field_type>
+<example_value>22833755000</example_value>
+</field>
+<field>
+<datum_id>5</datum_id>
+<field_type>double</field_type>
+<example_value>14688683000</example_value>
+</field>
+<field>
+<datum_id>6</datum_id>
+<field_type>double</field_type>
+<example_value>30000000</example_value>
+</field>
+<field>
+<datum_id>7</datum_id>
+<field_type>float</field_type>
+<example_value>39.12</example_value>
+</field>
+</fields>
+</message>
+</messages>
+</category>
+<category name="US_Bill_52_Week_Treasury_Auction_Result">
+<description>US Treasury Auction Result for 52 Week Bill</description>
+<country>US</country>
+<category_id>453</category_id>
+<data>
+<datum>
+<short_description>Term</short_description>
+<description>Term in days</description>
+<datum_type>days</datum_type>
+<datum_id>1</datum_id>
+</datum>
+<datum>
+<short_description>High Equivalent Yield</short_description>
+<description>High Equivalent Yield</description>
+<datum_type>%</datum_type>
+<datum_id>2</datum_id>
+</datum>
+<datum>
+<short_description>Bid to Cover Ratio</short_description>
+<description>Bid to Cover Ratio</description>
+<datum_type>%</datum_type>
+<datum_id>3</datum_id>
+</datum>
+<datum>
+<short_description>Primary Dealer Accepted</short_description>
+<description>Primary Dealer Accepted</description>
+<datum_type>USD</datum_type>
+<datum_id>4</datum_id>
+</datum>
+<datum>
+<short_description>Indirect Bidder Accepted</short_description>
+<description>Indirect Bidder Accepted</description>
+<datum_type>USD</datum_type>
+<datum_id>5</datum_id>
+</datum>
+<datum>
+<short_description>Direct Bidder Accepted</short_description>
+<description>Direct Bidder Accepted</description>
+<datum_type>USD</datum_type>
+<datum_id>6</datum_id>
+</datum>
+<datum>
+<short_description>Indirect Bidder Percentage</short_description>
+<description>Indirect Bidder Percentage</description>
+<datum_type>%</datum_type>
+<datum_id>7</datum_id>
+</datum>
+</data>
+<messages>
+<message>
+<message_type>release</message_type>
+<message_version>1</message_version>
+<multicast_group>US_GROUP_4</multicast_group>
+<fields>
+<field>
+<datum_id>1</datum_id>
+<field_type>short</field_type>
+<example_value>182</example_value>
+</field>
+<field>
+<datum_id>2</datum_id>
+<field_type>float</field_type>
+<example_value>0.203</example_value>
+</field>
+<field>
+<datum_id>3</datum_id>
+<field_type>float</field_type>
+<example_value>2.49</example_value>
+</field>
+<field>
+<datum_id>4</datum_id>
+<field_type>double</field_type>
+<example_value>22833755000</example_value>
+</field>
+<field>
+<datum_id>5</datum_id>
+<field_type>double</field_type>
+<example_value>14688683000</example_value>
+</field>
+<field>
+<datum_id>6</datum_id>
+<field_type>double</field_type>
+<example_value>30000000</example_value>
+</field>
+<field>
+<datum_id>7</datum_id>
+<field_type>float</field_type>
+<example_value>39.12</example_value>
+</field>
+</fields>
+</message>
+</messages>
+</category>
+<category name="US_Bill_Cash_Management_Treasury_Auction_Result">
+<description>US Treasury Auction Result for Cash Management Bill</description>
+<country>US</country>
+<category_id>454</category_id>
+<data>
+<datum>
+<short_description>Term</short_description>
+<description>Term in days</description>
+<datum_type>days</datum_type>
+<datum_id>1</datum_id>
+</datum>
+<datum>
+<short_description>High Equivalent Yield</short_description>
+<description>High Equivalent Yield</description>
+<datum_type>%</datum_type>
+<datum_id>2</datum_id>
+</datum>
+<datum>
+<short_description>Bid to Cover Ratio</short_description>
+<description>Bid to Cover Ratio</description>
+<datum_type>%</datum_type>
+<datum_id>3</datum_id>
+</datum>
+<datum>
+<short_description>Primary Dealer Accepted</short_description>
+<description>Primary Dealer Accepted</description>
+<datum_type>USD</datum_type>
+<datum_id>4</datum_id>
+</datum>
+<datum>
+<short_description>Indirect Bidder Accepted</short_description>
+<description>Indirect Bidder Accepted</description>
+<datum_type>USD</datum_type>
+<datum_id>5</datum_id>
+</datum>
+<datum>
+<short_description>Direct Bidder Accepted</short_description>
+<description>Direct Bidder Accepted</description>
+<datum_type>USD</datum_type>
+<datum_id>6</datum_id>
+</datum>
+<datum>
+<short_description>Indirect Bidder Percentage</short_description>
+<description>Indirect Bidder Percentage</description>
+<datum_type>%</datum_type>
+<datum_id>7</datum_id>
+</datum>
+</data>
+<messages>
+<message>
+<message_type>release</message_type>
+<message_version>1</message_version>
+<multicast_group>US_GROUP_4</multicast_group>
+<fields>
+<field>
+<datum_id>1</datum_id>
+<field_type>short</field_type>
+<example_value>182</example_value>
+</field>
+<field>
+<datum_id>2</datum_id>
+<field_type>float</field_type>
+<example_value>0.203</example_value>
+</field>
+<field>
+<datum_id>3</datum_id>
+<field_type>float</field_type>
+<example_value>2.49</example_value>
+</field>
+<field>
+<datum_id>4</datum_id>
+<field_type>double</field_type>
+<example_value>22833755000</example_value>
+</field>
+<field>
+<datum_id>5</datum_id>
+<field_type>double</field_type>
+<example_value>14688683000</example_value>
+</field>
+<field>
+<datum_id>6</datum_id>
+<field_type>double</field_type>
+<example_value>30000000</example_value>
+</field>
+<field>
+<datum_id>7</datum_id>
+<field_type>float</field_type>
+<example_value>39.12</example_value>
+</field>
+</fields>
+</message>
+</messages>
+</category>
+<category name="US_Note_02_Year_Treasury_Auction_Announcement">
+<description>US Treasury Auction Announcement for 2 Year Note</description>
+<country>US</country>
+<category_id>500</category_id>
+<data>
+<datum>
+<short_description>Auction Date</short_description>
+<description>Auction Date</description>
+<datum_type>date</datum_type>
+<datum_id>1</datum_id>
+</datum>
+<datum>
+<short_description>Announcement Date</short_description>
+<description>Announcement Date</description>
+<datum_type>date</datum_type>
+<datum_id>2</datum_id>
+</datum>
+<datum>
+<short_description>Offering Amount</short_description>
+<description>Offering Amount</description>
+<datum_type>USD</datum_type>
+<datum_id>3</datum_id>
+</datum>
+<datum>
+<short_description>Reopening Indicator</short_description>
+<description>Reopening Indicator</description>
+<datum_type>boolean</datum_type>
+<datum_id>4</datum_id>
+</datum>
+<datum>
+<short_description>Auction Time</short_description>
+<description>Auction Time</description>
+<datum_type>time_est</datum_type>
+<datum_id>5</datum_id>
+</datum>
+</data>
+<messages>
+<message>
+<message_type>release</message_type>
+<message_version>1</message_version>
+<multicast_group>US_GROUP_4</multicast_group>
+<fields>
+<field>
+<datum_id>1</datum_id>
+<field_type>date</field_type>
+<example_value>2009-03-02</example_value>
+</field>
+<field>
+<datum_id>2</datum_id>
+<field_type>date</field_type>
+<example_value>2009-02-26</example_value>
+</field>
+<field>
+<datum_id>3</datum_id>
+<field_type>double</field_type>
+<example_value>29000000000.0</example_value>
+</field>
+<field>
+<datum_id>4</datum_id>
+<field_type>boolean</field_type>
+<example_value>0</example_value>
+</field>
+<field>
+<datum_id>5</datum_id>
+<field_type>time</field_type>
+<example_value>11:30:00</example_value>
+</field>
+</fields>
+</message>
+</messages>
+</category>
+<category name="US_Note_03_Year_Treasury_Auction_Announcement">
+<description>US Treasury Auction Announcement for 3 Year Note</description>
+<country>US</country>
+<category_id>501</category_id>
+<data>
+<datum>
+<short_description>Auction Date</short_description>
+<description>Auction Date</description>
+<datum_type>date</datum_type>
+<datum_id>1</datum_id>
+</datum>
+<datum>
+<short_description>Announcement Date</short_description>
+<description>Announcement Date</description>
+<datum_type>date</datum_type>
+<datum_id>2</datum_id>
+</datum>
+<datum>
+<short_description>Offering Amount</short_description>
+<description>Offering Amount</description>
+<datum_type>USD</datum_type>
+<datum_id>3</datum_id>
+</datum>
+<datum>
+<short_description>Reopening Indicator</short_description>
+<description>Reopening Indicator</description>
+<datum_type>boolean</datum_type>
+<datum_id>4</datum_id>
+</datum>
+<datum>
+<short_description>Auction Time</short_description>
+<description>Auction Time</description>
+<datum_type>time_est</datum_type>
+<datum_id>5</datum_id>
+</datum>
+</data>
+<messages>
+<message>
+<message_type>release</message_type>
+<message_version>1</message_version>
+<multicast_group>US_GROUP_4</multicast_group>
+<fields>
+<field>
+<datum_id>1</datum_id>
+<field_type>date</field_type>
+<example_value>2009-03-02</example_value>
+</field>
+<field>
+<datum_id>2</datum_id>
+<field_type>date</field_type>
+<example_value>2009-02-26</example_value>
+</field>
+<field>
+<datum_id>3</datum_id>
+<field_type>double</field_type>
+<example_value>29000000000.0</example_value>
+</field>
+<field>
+<datum_id>4</datum_id>
+<field_type>boolean</field_type>
+<example_value>0</example_value>
+</field>
+<field>
+<datum_id>5</datum_id>
+<field_type>time</field_type>
+<example_value>11:30:00</example_value>
+</field>
+</fields>
+</message>
+</messages>
+</category>
+<category name="US_Note_05_Year_Treasury_Auction_Announcement">
+<description>US Treasury Auction Announcement for 5 Year Note</description>
+<country>US</country>
+<category_id>502</category_id>
+<data>
+<datum>
+<short_description>Auction Date</short_description>
+<description>Auction Date</description>
+<datum_type>date</datum_type>
+<datum_id>1</datum_id>
+</datum>
+<datum>
+<short_description>Announcement Date</short_description>
+<description>Announcement Date</description>
+<datum_type>date</datum_type>
+<datum_id>2</datum_id>
+</datum>
+<datum>
+<short_description>Offering Amount</short_description>
+<description>Offering Amount</description>
+<datum_type>USD</datum_type>
+<datum_id>3</datum_id>
+</datum>
+<datum>
+<short_description>Reopening Indicator</short_description>
+<description>Reopening Indicator</description>
+<datum_type>boolean</datum_type>
+<datum_id>4</datum_id>
+</datum>
+<datum>
+<short_description>Auction Time</short_description>
+<description>Auction Time</description>
+<datum_type>time_est</datum_type>
+<datum_id>5</datum_id>
+</datum>
+</data>
+<messages>
+<message>
+<message_type>release</message_type>
+<message_version>1</message_version>
+<multicast_group>US_GROUP_4</multicast_group>
+<fields>
+<field>
+<datum_id>1</datum_id>
+<field_type>date</field_type>
+<example_value>2009-03-02</example_value>
+</field>
+<field>
+<datum_id>2</datum_id>
+<field_type>date</field_type>
+<example_value>2009-02-26</example_value>
+</field>
+<field>
+<datum_id>3</datum_id>
+<field_type>double</field_type>
+<example_value>29000000000.0</example_value>
+</field>
+<field>
+<datum_id>4</datum_id>
+<field_type>boolean</field_type>
+<example_value>0</example_value>
+</field>
+<field>
+<datum_id>5</datum_id>
+<field_type>time</field_type>
+<example_value>11:30:00</example_value>
+</field>
+</fields>
+</message>
+</messages>
+</category>
+<category name="US_Note_07_Year_Treasury_Auction_Announcement">
+<description>US Treasury Auction Announcement for 7 Year Note</description>
+<country>US</country>
+<category_id>503</category_id>
+<data>
+<datum>
+<short_description>Auction Date</short_description>
+<description>Auction Date</description>
+<datum_type>date</datum_type>
+<datum_id>1</datum_id>
+</datum>
+<datum>
+<short_description>Announcement Date</short_description>
+<description>Announcement Date</description>
+<datum_type>date</datum_type>
+<datum_id>2</datum_id>
+</datum>
+<datum>
+<short_description>Offering Amount</short_description>
+<description>Offering Amount</description>
+<datum_type>USD</datum_type>
+<datum_id>3</datum_id>
+</datum>
+<datum>
+<short_description>Reopening Indicator</short_description>
+<description>Reopening Indicator</description>
+<datum_type>boolean</datum_type>
+<datum_id>4</datum_id>
+</datum>
+<datum>
+<short_description>Auction Time</short_description>
+<description>Auction Time</description>
+<datum_type>time_est</datum_type>
+<datum_id>5</datum_id>
+</datum>
+</data>
+<messages>
+<message>
+<message_type>release</message_type>
+<message_version>1</message_version>
+<multicast_group>US_GROUP_4</multicast_group>
+<fields>
+<field>
+<datum_id>1</datum_id>
+<field_type>date</field_type>
+<example_value>2009-03-02</example_value>
+</field>
+<field>
+<datum_id>2</datum_id>
+<field_type>date</field_type>
+<example_value>2009-02-26</example_value>
+</field>
+<field>
+<datum_id>3</datum_id>
+<field_type>double</field_type>
+<example_value>29000000000.0</example_value>
+</field>
+<field>
+<datum_id>4</datum_id>
+<field_type>boolean</field_type>
+<example_value>0</example_value>
+</field>
+<field>
+<datum_id>5</datum_id>
+<field_type>time</field_type>
+<example_value>11:30:00</example_value>
+</field>
+</fields>
+</message>
+</messages>
+</category>
+<category name="US_Note_10_Year_Treasury_Auction_Announcement">
+<description>US Treasury Auction Announcement for 10 Year Note</description>
+<country>US</country>
+<category_id>504</category_id>
+<data>
+<datum>
+<short_description>Auction Date</short_description>
+<description>Auction Date</description>
+<datum_type>date</datum_type>
+<datum_id>1</datum_id>
+</datum>
+<datum>
+<short_description>Announcement Date</short_description>
+<description>Announcement Date</description>
+<datum_type>date</datum_type>
+<datum_id>2</datum_id>
+</datum>
+<datum>
+<short_description>Offering Amount</short_description>
+<description>Offering Amount</description>
+<datum_type>USD</datum_type>
+<datum_id>3</datum_id>
+</datum>
+<datum>
+<short_description>Reopening Indicator</short_description>
+<description>Reopening Indicator</description>
+<datum_type>boolean</datum_type>
+<datum_id>4</datum_id>
+</datum>
+<datum>
+<short_description>Auction Time</short_description>
+<description>Auction Time</description>
+<datum_type>time_est</datum_type>
+<datum_id>5</datum_id>
+</datum>
+</data>
+<messages>
+<message>
+<message_type>release</message_type>
+<message_version>1</message_version>
+<multicast_group>US_GROUP_4</multicast_group>
+<fields>
+<field>
+<datum_id>1</datum_id>
+<field_type>date</field_type>
+<example_value>2009-03-02</example_value>
+</field>
+<field>
+<datum_id>2</datum_id>
+<field_type>date</field_type>
+<example_value>2009-02-26</example_value>
+</field>
+<field>
+<datum_id>3</datum_id>
+<field_type>double</field_type>
+<example_value>29000000000.0</example_value>
+</field>
+<field>
+<datum_id>4</datum_id>
+<field_type>boolean</field_type>
+<example_value>0</example_value>
+</field>
+<field>
+<datum_id>5</datum_id>
+<field_type>time</field_type>
+<example_value>11:30:00</example_value>
+</field>
+</fields>
+</message>
+</messages>
+</category>
+<category name="US_Bond_30_Year_Treasury_Auction_Announcement">
+<description>US Treasury Auction Announcement for 30 Year Bond</description>
+<country>US</country>
+<category_id>505</category_id>
+<data>
+<datum>
+<short_description>Auction Date</short_description>
+<description>Auction Date</description>
+<datum_type>date</datum_type>
+<datum_id>1</datum_id>
+</datum>
+<datum>
+<short_description>Announcement Date</short_description>
+<description>Announcement Date</description>
+<datum_type>date</datum_type>
+<datum_id>2</datum_id>
+</datum>
+<datum>
+<short_description>Offering Amount</short_description>
+<description>Offering Amount</description>
+<datum_type>USD</datum_type>
+<datum_id>3</datum_id>
+</datum>
+<datum>
+<short_description>Reopening Indicator</short_description>
+<description>Reopening Indicator</description>
+<datum_type>boolean</datum_type>
+<datum_id>4</datum_id>
+</datum>
+<datum>
+<short_description>Auction Time</short_description>
+<description>Auction Time</description>
+<datum_type>time_est</datum_type>
+<datum_id>5</datum_id>
+</datum>
+</data>
+<messages>
+<message>
+<message_type>release</message_type>
+<message_version>1</message_version>
+<multicast_group>US_GROUP_4</multicast_group>
+<fields>
+<field>
+<datum_id>1</datum_id>
+<field_type>date</field_type>
+<example_value>2009-03-02</example_value>
+</field>
+<field>
+<datum_id>2</datum_id>
+<field_type>date</field_type>
+<example_value>2009-02-26</example_value>
+</field>
+<field>
+<datum_id>3</datum_id>
+<field_type>double</field_type>
+<example_value>29000000000.0</example_value>
+</field>
+<field>
+<datum_id>4</datum_id>
+<field_type>boolean</field_type>
+<example_value>0</example_value>
+</field>
+<field>
+<datum_id>5</datum_id>
+<field_type>time</field_type>
+<example_value>11:30:00</example_value>
+</field>
+</fields>
+</message>
+</messages>
+</category>
+<category name="US_TIPS_Note_05_Year_Treasury_Auction_Announcement">
+<description>US Treasury Auction Announcement for TIPS 5 Year Note</description>
+<country>US</country>
+<category_id>506</category_id>
+<data>
+<datum>
+<short_description>Auction Date</short_description>
+<description>Auction Date</description>
+<datum_type>date</datum_type>
+<datum_id>1</datum_id>
+</datum>
+<datum>
+<short_description>Announcement Date</short_description>
+<description>Announcement Date</description>
+<datum_type>date</datum_type>
+<datum_id>2</datum_id>
+</datum>
+<datum>
+<short_description>Offering Amount</short_description>
+<description>Offering Amount</description>
+<datum_type>USD</datum_type>
+<datum_id>3</datum_id>
+</datum>
+<datum>
+<short_description>Reopening Indicator</short_description>
+<description>Reopening Indicator</description>
+<datum_type>boolean</datum_type>
+<datum_id>4</datum_id>
+</datum>
+<datum>
+<short_description>Auction Time</short_description>
+<description>Auction Time</description>
+<datum_type>time_est</datum_type>
+<datum_id>5</datum_id>
+</datum>
+</data>
+<messages>
+<message>
+<message_type>release</message_type>
+<message_version>1</message_version>
+<multicast_group>US_GROUP_4</multicast_group>
+<fields>
+<field>
+<datum_id>1</datum_id>
+<field_type>date</field_type>
+<example_value>2009-03-02</example_value>
+</field>
+<field>
+<datum_id>2</datum_id>
+<field_type>date</field_type>
+<example_value>2009-02-26</example_value>
+</field>
+<field>
+<datum_id>3</datum_id>
+<field_type>double</field_type>
+<example_value>29000000000.0</example_value>
+</field>
+<field>
+<datum_id>4</datum_id>
+<field_type>boolean</field_type>
+<example_value>0</example_value>
+</field>
+<field>
+<datum_id>5</datum_id>
+<field_type>time</field_type>
+<example_value>11:30:00</example_value>
+</field>
+</fields>
+</message>
+</messages>
+</category>
+<category name="US_TIPS_Note_10_Year_Treasury_Auction_Announcement">
+<description>US Treasury Auction Announcement for TIPS 10 Year Note</description>
+<country>US</country>
+<category_id>507</category_id>
+<data>
+<datum>
+<short_description>Auction Date</short_description>
+<description>Auction Date</description>
+<datum_type>date</datum_type>
+<datum_id>1</datum_id>
+</datum>
+<datum>
+<short_description>Announcement Date</short_description>
+<description>Announcement Date</description>
+<datum_type>date</datum_type>
+<datum_id>2</datum_id>
+</datum>
+<datum>
+<short_description>Offering Amount</short_description>
+<description>Offering Amount</description>
+<datum_type>USD</datum_type>
+<datum_id>3</datum_id>
+</datum>
+<datum>
+<short_description>Reopening Indicator</short_description>
+<description>Reopening Indicator</description>
+<datum_type>boolean</datum_type>
+<datum_id>4</datum_id>
+</datum>
+<datum>
+<short_description>Auction Time</short_description>
+<description>Auction Time</description>
+<datum_type>time_est</datum_type>
+<datum_id>5</datum_id>
+</datum>
+</data>
+<messages>
+<message>
+<message_type>release</message_type>
+<message_version>1</message_version>
+<multicast_group>US_GROUP_4</multicast_group>
+<fields>
+<field>
+<datum_id>1</datum_id>
+<field_type>date</field_type>
+<example_value>2009-03-02</example_value>
+</field>
+<field>
+<datum_id>2</datum_id>
+<field_type>date</field_type>
+<example_value>2009-02-26</example_value>
+</field>
+<field>
+<datum_id>3</datum_id>
+<field_type>double</field_type>
+<example_value>29000000000.0</example_value>
+</field>
+<field>
+<datum_id>4</datum_id>
+<field_type>boolean</field_type>
+<example_value>0</example_value>
+</field>
+<field>
+<datum_id>5</datum_id>
+<field_type>time</field_type>
+<example_value>11:30:00</example_value>
+</field>
+</fields>
+</message>
+</messages>
+</category>
+<category name="US_TIPS_Bond_20_Year_Treasury_Auction_Announcement">
+<description>US Treasury Auction Announcement for TIPS 20 Year Bond</description>
+<country>US</country>
+<category_id>508</category_id>
+<data>
+<datum>
+<short_description>Auction Date</short_description>
+<description>Auction Date</description>
+<datum_type>date</datum_type>
+<datum_id>1</datum_id>
+</datum>
+<datum>
+<short_description>Announcement Date</short_description>
+<description>Announcement Date</description>
+<datum_type>date</datum_type>
+<datum_id>2</datum_id>
+</datum>
+<datum>
+<short_description>Offering Amount</short_description>
+<description>Offering Amount</description>
+<datum_type>USD</datum_type>
+<datum_id>3</datum_id>
+</datum>
+<datum>
+<short_description>Reopening Indicator</short_description>
+<description>Reopening Indicator</description>
+<datum_type>boolean</datum_type>
+<datum_id>4</datum_id>
+</datum>
+<datum>
+<short_description>Auction Time</short_description>
+<description>Auction Time</description>
+<datum_type>time_est</datum_type>
+<datum_id>5</datum_id>
+</datum>
+</data>
+<messages>
+<message>
+<message_type>release</message_type>
+<message_version>1</message_version>
+<multicast_group>US_GROUP_4</multicast_group>
+<fields>
+<field>
+<datum_id>1</datum_id>
+<field_type>date</field_type>
+<example_value>2009-03-02</example_value>
+</field>
+<field>
+<datum_id>2</datum_id>
+<field_type>date</field_type>
+<example_value>2009-02-26</example_value>
+</field>
+<field>
+<datum_id>3</datum_id>
+<field_type>double</field_type>
+<example_value>29000000000.0</example_value>
+</field>
+<field>
+<datum_id>4</datum_id>
+<field_type>boolean</field_type>
+<example_value>0</example_value>
+</field>
+<field>
+<datum_id>5</datum_id>
+<field_type>time</field_type>
+<example_value>11:30:00</example_value>
+</field>
+</fields>
+</message>
+</messages>
+</category>
+<category name="US_TIPS_Bond_30_Year_Treasury_Auction_Announcement">
+<description>US Treasury Auction Announcement for TIPS 30 Year Bond</description>
+<country>US</country>
+<category_id>509</category_id>
+<data>
+<datum>
+<short_description>Auction Date</short_description>
+<description>Auction Date</description>
+<datum_type>date</datum_type>
+<datum_id>1</datum_id>
+</datum>
+<datum>
+<short_description>Announcement Date</short_description>
+<description>Announcement Date</description>
+<datum_type>date</datum_type>
+<datum_id>2</datum_id>
+</datum>
+<datum>
+<short_description>Offering Amount</short_description>
+<description>Offering Amount</description>
+<datum_type>USD</datum_type>
+<datum_id>3</datum_id>
+</datum>
+<datum>
+<short_description>Reopening Indicator</short_description>
+<description>Reopening Indicator</description>
+<datum_type>boolean</datum_type>
+<datum_id>4</datum_id>
+</datum>
+<datum>
+<short_description>Auction Time</short_description>
+<description>Auction Time</description>
+<datum_type>time_est</datum_type>
+<datum_id>5</datum_id>
+</datum>
+</data>
+<messages>
+<message>
+<message_type>release</message_type>
+<message_version>1</message_version>
+<multicast_group>US_GROUP_4</multicast_group>
+<fields>
+<field>
+<datum_id>1</datum_id>
+<field_type>date</field_type>
+<example_value>2009-03-02</example_value>
+</field>
+<field>
+<datum_id>2</datum_id>
+<field_type>date</field_type>
+<example_value>2009-02-26</example_value>
+</field>
+<field>
+<datum_id>3</datum_id>
+<field_type>double</field_type>
+<example_value>29000000000.0</example_value>
+</field>
+<field>
+<datum_id>4</datum_id>
+<field_type>boolean</field_type>
+<example_value>0</example_value>
+</field>
+<field>
+<datum_id>5</datum_id>
+<field_type>time</field_type>
+<example_value>11:30:00</example_value>
+</field>
+</fields>
+</message>
+</messages>
+</category>
+<category name="US_Floating_Rate_Note_2_Year_Treasury_Auction_Announcement">
+<description>US Treasury Auction Announcement for 2 Year Floating Rate Note</description>
+<country>US</country>
+<category_id>510</category_id>
+<data>
+<datum>
+<short_description>Auction Date</short_description>
+<description>Auction Date</description>
+<datum_type>date</datum_type>
+<datum_id>1</datum_id>
+</datum>
+<datum>
+<short_description>Announcement Date</short_description>
+<description>Announcement Date</description>
+<datum_type>date</datum_type>
+<datum_id>2</datum_id>
+</datum>
+<datum>
+<short_description>Offering Amount</short_description>
+<description>Offering Amount</description>
+<datum_type>USD</datum_type>
+<datum_id>3</datum_id>
+</datum>
+<datum>
+<short_description>Reopening Indicator</short_description>
+<description>Reopening Indicator</description>
+<datum_type>boolean</datum_type>
+<datum_id>4</datum_id>
+</datum>
+<datum>
+<short_description>Auction Time</short_description>
+<description>Auction Time</description>
+<datum_type>time_est</datum_type>
+<datum_id>5</datum_id>
+</datum>
+</data>
+<messages>
+<message>
+<message_type>release</message_type>
+<message_version>1</message_version>
+<multicast_group>US_GROUP_4</multicast_group>
+<fields>
+<field>
+<datum_id>1</datum_id>
+<field_type>date</field_type>
+<example_value>2014-01-29</example_value>
+</field>
+<field>
+<datum_id>2</datum_id>
+<field_type>date</field_type>
+<example_value>2014-01-24</example_value>
+</field>
+<field>
+<datum_id>3</datum_id>
+<field_type>double</field_type>
+<example_value>10000000000.0</example_value>
+</field>
+<field>
+<datum_id>4</datum_id>
+<field_type>boolean</field_type>
+<example_value>0</example_value>
+</field>
+<field>
+<datum_id>5</datum_id>
+<field_type>time</field_type>
+<example_value>16:20:00</example_value>
+</field>
+</fields>
+</message>
+</messages>
+</category>
+<category name="US_Bill_04_Week_Treasury_Auction_Announcement">
+<description>US Treasury Auction Announcement for 4 Week Bill</description>
+<country>US</country>
+<category_id>550</category_id>
+<data>
+<datum>
+<short_description>Auction Date</short_description>
+<description>Auction Date</description>
+<datum_type>date</datum_type>
+<datum_id>1</datum_id>
+</datum>
+<datum>
+<short_description>Announcement Date</short_description>
+<description>Announcement Date</description>
+<datum_type>date</datum_type>
+<datum_id>2</datum_id>
+</datum>
+<datum>
+<short_description>Offering Amount</short_description>
+<description>Offering Amount</description>
+<datum_type>USD</datum_type>
+<datum_id>3</datum_id>
+</datum>
+<datum>
+<short_description>Reopening Indicator</short_description>
+<description>Reopening Indicator</description>
+<datum_type>boolean</datum_type>
+<datum_id>4</datum_id>
+</datum>
+<datum>
+<short_description>Auction Time</short_description>
+<description>Auction Time</description>
+<datum_type>time_est</datum_type>
+<datum_id>5</datum_id>
+</datum>
+</data>
+<messages>
+<message>
+<message_type>release</message_type>
+<message_version>1</message_version>
+<multicast_group>US_GROUP_4</multicast_group>
+<fields>
+<field>
+<datum_id>1</datum_id>
+<field_type>date</field_type>
+<example_value>2009-03-02</example_value>
+</field>
+<field>
+<datum_id>2</datum_id>
+<field_type>date</field_type>
+<example_value>2009-02-26</example_value>
+</field>
+<field>
+<datum_id>3</datum_id>
+<field_type>double</field_type>
+<example_value>29000000000.0</example_value>
+</field>
+<field>
+<datum_id>4</datum_id>
+<field_type>boolean</field_type>
+<example_value>0</example_value>
+</field>
+<field>
+<datum_id>5</datum_id>
+<field_type>time</field_type>
+<example_value>11:30:00</example_value>
+</field>
+</fields>
+</message>
+</messages>
+</category>
+<category name="US_Bill_13_Week_Treasury_Auction_Announcement">
+<description>US Treasury Auction Announcement for 13 Week Bill</description>
+<country>US</country>
+<category_id>551</category_id>
+<data>
+<datum>
+<short_description>Auction Date</short_description>
+<description>Auction Date</description>
+<datum_type>date</datum_type>
+<datum_id>1</datum_id>
+</datum>
+<datum>
+<short_description>Announcement Date</short_description>
+<description>Announcement Date</description>
+<datum_type>date</datum_type>
+<datum_id>2</datum_id>
+</datum>
+<datum>
+<short_description>Offering Amount</short_description>
+<description>Offering Amount</description>
+<datum_type>USD</datum_type>
+<datum_id>3</datum_id>
+</datum>
+<datum>
+<short_description>Reopening Indicator</short_description>
+<description>Reopening Indicator</description>
+<datum_type>boolean</datum_type>
+<datum_id>4</datum_id>
+</datum>
+<datum>
+<short_description>Auction Time</short_description>
+<description>Auction Time</description>
+<datum_type>time_est</datum_type>
+<datum_id>5</datum_id>
+</datum>
+</data>
+<messages>
+<message>
+<message_type>release</message_type>
+<message_version>1</message_version>
+<multicast_group>US_GROUP_4</multicast_group>
+<fields>
+<field>
+<datum_id>1</datum_id>
+<field_type>date</field_type>
+<example_value>2009-03-02</example_value>
+</field>
+<field>
+<datum_id>2</datum_id>
+<field_type>date</field_type>
+<example_value>2009-02-26</example_value>
+</field>
+<field>
+<datum_id>3</datum_id>
+<field_type>double</field_type>
+<example_value>29000000000.0</example_value>
+</field>
+<field>
+<datum_id>4</datum_id>
+<field_type>boolean</field_type>
+<example_value>0</example_value>
+</field>
+<field>
+<datum_id>5</datum_id>
+<field_type>time</field_type>
+<example_value>11:30:00</example_value>
+</field>
+</fields>
+</message>
+</messages>
+</category>
+<category name="US_Bill_26_Week_Treasury_Auction_Announcement">
+<description>US Treasury Auction Announcement for 26 Week Bill</description>
+<country>US</country>
+<category_id>552</category_id>
+<data>
+<datum>
+<short_description>Auction Date</short_description>
+<description>Auction Date</description>
+<datum_type>date</datum_type>
+<datum_id>1</datum_id>
+</datum>
+<datum>
+<short_description>Announcement Date</short_description>
+<description>Announcement Date</description>
+<datum_type>date</datum_type>
+<datum_id>2</datum_id>
+</datum>
+<datum>
+<short_description>Offering Amount</short_description>
+<description>Offering Amount</description>
+<datum_type>USD</datum_type>
+<datum_id>3</datum_id>
+</datum>
+<datum>
+<short_description>Reopening Indicator</short_description>
+<description>Reopening Indicator</description>
+<datum_type>boolean</datum_type>
+<datum_id>4</datum_id>
+</datum>
+<datum>
+<short_description>Auction Time</short_description>
+<description>Auction Time</description>
+<datum_type>time_est</datum_type>
+<datum_id>5</datum_id>
+</datum>
+</data>
+<messages>
+<message>
+<message_type>release</message_type>
+<message_version>1</message_version>
+<multicast_group>US_GROUP_4</multicast_group>
+<fields>
+<field>
+<datum_id>1</datum_id>
+<field_type>date</field_type>
+<example_value>2009-03-02</example_value>
+</field>
+<field>
+<datum_id>2</datum_id>
+<field_type>date</field_type>
+<example_value>2009-02-26</example_value>
+</field>
+<field>
+<datum_id>3</datum_id>
+<field_type>double</field_type>
+<example_value>29000000000.0</example_value>
+</field>
+<field>
+<datum_id>4</datum_id>
+<field_type>boolean</field_type>
+<example_value>0</example_value>
+</field>
+<field>
+<datum_id>5</datum_id>
+<field_type>time</field_type>
+<example_value>11:30:00</example_value>
+</field>
+</fields>
+</message>
+</messages>
+</category>
+<category name="US_Bill_52_Week_Treasury_Auction_Announcement">
+<description>US Treasury Auction Announcement for 52 Week Bill</description>
+<country>US</country>
+<category_id>553</category_id>
+<data>
+<datum>
+<short_description>Auction Date</short_description>
+<description>Auction Date</description>
+<datum_type>date</datum_type>
+<datum_id>1</datum_id>
+</datum>
+<datum>
+<short_description>Announcement Date</short_description>
+<description>Announcement Date</description>
+<datum_type>date</datum_type>
+<datum_id>2</datum_id>
+</datum>
+<datum>
+<short_description>Offering Amount</short_description>
+<description>Offering Amount</description>
+<datum_type>USD</datum_type>
+<datum_id>3</datum_id>
+</datum>
+<datum>
+<short_description>Reopening Indicator</short_description>
+<description>Reopening Indicator</description>
+<datum_type>boolean</datum_type>
+<datum_id>4</datum_id>
+</datum>
+<datum>
+<short_description>Auction Time</short_description>
+<description>Auction Time</description>
+<datum_type>time_est</datum_type>
+<datum_id>5</datum_id>
+</datum>
+</data>
+<messages>
+<message>
+<message_type>release</message_type>
+<message_version>1</message_version>
+<multicast_group>US_GROUP_4</multicast_group>
+<fields>
+<field>
+<datum_id>1</datum_id>
+<field_type>date</field_type>
+<example_value>2009-03-02</example_value>
+</field>
+<field>
+<datum_id>2</datum_id>
+<field_type>date</field_type>
+<example_value>2009-02-26</example_value>
+</field>
+<field>
+<datum_id>3</datum_id>
+<field_type>double</field_type>
+<example_value>29000000000.0</example_value>
+</field>
+<field>
+<datum_id>4</datum_id>
+<field_type>boolean</field_type>
+<example_value>0</example_value>
+</field>
+<field>
+<datum_id>5</datum_id>
+<field_type>time</field_type>
+<example_value>11:30:00</example_value>
+</field>
+</fields>
+</message>
+</messages>
+</category>
+<category name="US_Bill_Cash_Management_Treasury_Auction_Announcement">
+<description>US Treasury Auction Announcement for Cash Management Bill</description>
+<country>US</country>
+<category_id>554</category_id>
+<data>
+<datum>
+<short_description>Auction Date</short_description>
+<description>Auction Date</description>
+<datum_type>date</datum_type>
+<datum_id>1</datum_id>
+</datum>
+<datum>
+<short_description>Announcement Date</short_description>
+<description>Announcement Date</description>
+<datum_type>date</datum_type>
+<datum_id>2</datum_id>
+</datum>
+<datum>
+<short_description>Offering Amount</short_description>
+<description>Offering Amount</description>
+<datum_type>USD</datum_type>
+<datum_id>3</datum_id>
+</datum>
+<datum>
+<short_description>Reopening Indicator</short_description>
+<description>Reopening Indicator</description>
+<datum_type>boolean</datum_type>
+<datum_id>4</datum_id>
+</datum>
+<datum>
+<short_description>Auction Time</short_description>
+<description>Auction Time</description>
+<datum_type>time_est</datum_type>
+<datum_id>5</datum_id>
+</datum>
+<datum>
+<short_description>Term</short_description>
+<description>Term in days</description>
+<datum_type>days</datum_type>
+<datum_id>6</datum_id>
+</datum>
+</data>
+<messages>
+<message>
+<message_type>release</message_type>
+<message_version>2</message_version>
+<multicast_group>US_GROUP_4</multicast_group>
+<fields>
+<field>
+<datum_id>1</datum_id>
+<field_type>date</field_type>
+<example_value>2009-03-02</example_value>
+</field>
+<field>
+<datum_id>2</datum_id>
+<field_type>date</field_type>
+<example_value>2009-02-26</example_value>
+</field>
+<field>
+<datum_id>3</datum_id>
+<field_type>double</field_type>
+<example_value>29000000000.0</example_value>
+</field>
+<field>
+<datum_id>4</datum_id>
+<field_type>boolean</field_type>
+<example_value>0</example_value>
+</field>
+<field>
+<datum_id>5</datum_id>
+<field_type>time</field_type>
+<example_value>11:30:00</example_value>
+</field>
+<field>
+<datum_id>6</datum_id>
+<field_type>short</field_type>
+<example_value>182</example_value>
+</field>
+</fields>
+</message>
+</messages>
+</category>
+</protocol>

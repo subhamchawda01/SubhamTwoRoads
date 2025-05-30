@@ -1,0 +1,1 @@
+for name in `grep GetUnique ~/basetrade/ModelMathCode/model_creator.cpp | awk '{print $2}' | awk -F\: '{print $1}'` ; do ls ~/indicatorwork/indicator_list_$name"_"* ; done

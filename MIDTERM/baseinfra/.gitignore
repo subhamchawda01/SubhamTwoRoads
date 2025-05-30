@@ -1,0 +1,8 @@
+bin
+*/bin
+*~
+.project
+.pydevproject
+.cproject
+.clang-format
+ALL.xml

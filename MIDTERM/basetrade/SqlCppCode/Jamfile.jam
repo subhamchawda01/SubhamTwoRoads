@@ -1,0 +1,20 @@
+use-project /PDVCC : ../libdvccode ;
+
+project : usage-requirements 
+          <include>$(PROJECT_INSTALL) 
+          <library-path>$(MYSQLCPP_LIB_PATH)
+          <linkflags>-lmysqlcppconn
+   
+        ;
+
+# TODO change to library from <linkflags>-lmysqlcppconn 
+
+lib SqlCpp : [ glob *.cpp ] : : : <library>/PDVCC//CommonDataStructures <library>/PDVCC//libmysqlcppconn ;
+
+install libSqlCpp
+  : SqlCpp
+  : <install-type>LIB
+    <variant>release:<location>"$(PROJECT_INSTALL)/lib"
+    <variant>debug:<location>"$(PROJECT_INSTALL)/libdebug"
+  : release debug
+  ;
